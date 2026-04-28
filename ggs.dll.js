@@ -1058,9 +1058,9 @@ and limitations under the License.
                   }
                   (this._gc && this._enabled(!0, !1),
                     (this._totalTime === e && 0 !== this._duration) ||
-                      (F.length && Q(),
+                      (U.length && Q(),
                       this.render(e, t, !1),
-                      F.length && Q()));
+                      U.length && Q()));
                 }
                 return this;
               }),
@@ -1336,8 +1336,8 @@ and limitations under the License.
                             )
                         : t);
                 }));
-            var F = [],
-              U = {},
+            var U = [],
+              F = {},
               G = /(?:(-|-=|\+=)?\d*\.?\d*(?:e[\-+]?\d+)?)[0-9]/gi,
               k = /[\+-]=-?[\.\d]/,
               w = function (e) {
@@ -1492,7 +1492,7 @@ and limitations under the License.
               H = (B._internals = {
                 isArray: g,
                 isSelector: M,
-                lazyTweens: F,
+                lazyTweens: U,
                 blobDif: x,
               }),
               V = (B._plugins = {}),
@@ -1551,12 +1551,12 @@ and limitations under the License.
               X = 30,
               Q = (H.lazyRender = function () {
                 var e,
-                  t = F.length;
-                for (U = {}; --t > -1; )
-                  (e = F[t]) &&
+                  t = U.length;
+                for (F = {}; --t > -1; )
+                  (e = U[t]) &&
                     !1 !== e._lazy &&
                     (e.render(e._lazy[0], e._lazy[1], !0), (e._lazy = !1));
-                F.length = 0;
+                U.length = 0;
               });
             ((Z._startTime = l.time),
               (z._startTime = l.frame),
@@ -1566,10 +1566,10 @@ and limitations under the License.
                 function () {
                   var e, t, n;
                   if (
-                    (F.length && Q(),
+                    (U.length && Q(),
                     Z.render((l.time - Z._startTime) * Z._timeScale, !1, !1),
                     z.render((l.frame - z._startTime) * z._timeScale, !1, !1),
-                    F.length && Q(),
+                    U.length && Q(),
                     l.frame >= X)
                   ) {
                     for (n in ((X =
@@ -1769,7 +1769,7 @@ and limitations under the License.
               (o._initProps = function (t, n, i, a, s) {
                 var r, o, l, u, _, c;
                 if (null == t) return !1;
-                for (r in (U[t._gsTweenID] && Q(),
+                for (r in (F[t._gsTweenID] && Q(),
                 this.vars.css ||
                   (t.style &&
                     t !== e &&
@@ -1848,7 +1848,7 @@ and limitations under the License.
                     : (this._firstPT &&
                         ((!1 !== this.vars.lazy && this._duration) ||
                           (this.vars.lazy && !this._duration)) &&
-                        (U[t._gsTweenID] = !0),
+                        (F[t._gsTweenID] = !0),
                       l);
               }),
               (o.render = function (e, t, n) {
@@ -1931,7 +1931,7 @@ and limitations under the License.
                       return (
                         (this._time = this._totalTime = o),
                         (this._rawPrevTime = u),
-                        F.push(this),
+                        U.push(this),
                         void (this._lazy = [e, t])
                       );
                     this._time && !i
@@ -2421,10 +2421,10 @@ and limitations under the License.
     t.PixelSnapping = B.PixelSnapping;
     var M = n(574);
     t.SpreadMethod = M.SpreadMethod;
-    var F = n(575);
-    t.StageDisplayState = F.StageDisplayState;
-    var U = n(576);
-    t.StageScaleMode = U.StageScaleMode;
+    var U = n(575);
+    t.StageDisplayState = U.StageDisplayState;
+    var F = n(576);
+    t.StageScaleMode = F.StageScaleMode;
     var G = n(225);
     t.Transform = G.Transform;
     var k = n(88);
@@ -6185,10 +6185,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicConnectionFailedCommand = B.BasicConnectionFailedCommand;
     var M = n(787);
     t.BasicConnectionTimeoutCommand = M.BasicConnectionTimeoutCommand;
-    var F = n(788);
-    t.BasicDestroyGameCommand = F.BasicDestroyGameCommand;
-    var U = n(789);
-    t.BasicExtensionResponseCommand = U.BasicExtensionResponseCommand;
+    var U = n(788);
+    t.BasicDestroyGameCommand = U.BasicDestroyGameCommand;
+    var F = n(789);
+    t.BasicExtensionResponseCommand = F.BasicExtensionResponseCommand;
     var G = n(366);
     t.BasicHandleIdentityManagementErrorCommand =
       G.BasicHandleIdentityManagementErrorCommand;
@@ -6309,10 +6309,10 @@ PERFORMANCE OF THIS SOFTWARE.
     var Me = n(397);
     t.BasicWorldAssignmentTrackingCommand =
       Me.BasicWorldAssignmentTrackingCommand;
-    var Fe = n(177);
-    t.BasicFirstSessionTrackingCommand = Fe.BasicFirstSessionTrackingCommand;
-    var Ue = n(52);
-    t.BasicTrackingCommand = Ue.BasicTrackingCommand;
+    var Ue = n(177);
+    t.BasicFirstSessionTrackingCommand = Ue.BasicFirstSessionTrackingCommand;
+    var Fe = n(52);
+    t.BasicTrackingCommand = Fe.BasicTrackingCommand;
     var Ge = n(423);
     t.BasicPaymentShopClickTrackingVO = Ge.BasicPaymentShopClickTrackingVO;
     var ke = n(824);
@@ -6423,10 +6423,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.LiveBranchingLiveEnvironment = Bt.LiveBranchingLiveEnvironment;
     var Mt = n(838);
     t.LiveBranchingPreClientEnvironment = Mt.LiveBranchingPreClientEnvironment;
-    var Ft = n(839);
-    t.LiveBranchingTestEnvironment = Ft.LiveBranchingTestEnvironment;
-    var Ut = n(58);
-    t.LiveEnvironment = Ut.LiveEnvironment;
+    var Ut = n(839);
+    t.LiveBranchingTestEnvironment = Ut.LiveBranchingTestEnvironment;
+    var Ft = n(58);
+    t.LiveEnvironment = Ft.LiveEnvironment;
     var Gt = n(840);
     t.LiveTestEnvironment = Gt.LiveTestEnvironment;
     var kt = n(841);
@@ -6530,11 +6530,11 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicWodData = Bn.BasicWodData;
     var Mn = n(330);
     t.ForumData = Mn.ForumData;
-    var Fn = n(332);
+    var Un = n(332);
     t.JavascriptCallOnSetForumHashFactory =
-      Fn.JavascriptCallOnSetForumHashFactory;
-    var Un = n(333);
-    t.JavascriptCallSetForumHashVO = Un.JavascriptCallSetForumHashVO;
+      Un.JavascriptCallOnSetForumHashFactory;
+    var Fn = n(333);
+    t.JavascriptCallSetForumHashVO = Fn.JavascriptCallSetForumHashVO;
     var Gn = n(854);
     t.Siren24ViewUtil = Gn.Siren24ViewUtil;
     var kn = n(439);
@@ -6646,11 +6646,11 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicDialogVO = Bi.BasicDialogVO;
     var Mi = n(869);
     t.BasicDragVO = Mi.BasicDragVO;
-    var Fi = n(870);
+    var Ui = n(870);
     t.IdentitiyManagementLicenseTableRegistrationVO =
-      Fi.IdentitiyManagementLicenseTableRegistrationVO;
-    var Ui = n(871);
-    t.BasicEnvironmentGlobals = Ui.BasicEnvironmentGlobals;
+      Ui.IdentitiyManagementLicenseTableRegistrationVO;
+    var Fi = n(871);
+    t.BasicEnvironmentGlobals = Fi.BasicEnvironmentGlobals;
     var Gi = n(78);
     t.commentedOut = Gi.commentedOut;
     var ki = n(78);
@@ -6759,10 +6759,10 @@ PERFORMANCE OF THIS SOFTWARE.
       Ba.TrackingVerificationErrorLOFactory;
     var Ma = n(885);
     t.UncaughtExceptionErrorLOFactory = Ma.UncaughtExceptionErrorLOFactory;
-    var Fa = n(447);
-    t.VersionErrorLOFactory = Fa.VersionErrorLOFactory;
-    var Ua = n(284);
-    t.AbstractLogObject = Ua.AbstractLogObject;
+    var Ua = n(447);
+    t.VersionErrorLOFactory = Ua.VersionErrorLOFactory;
+    var Fa = n(284);
+    t.AbstractLogObject = Fa.AbstractLogObject;
     var Ga = n(886);
     t.ColorMatrix = Ga.ColorMatrix;
     var ka = n(189);
@@ -6870,10 +6870,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.OfferDescriptionCostC2 = Bs.OfferDescriptionCostC2;
     var Ms = n(913);
     t.OfferDescriptionCostResources = Ms.OfferDescriptionCostResources;
-    var Fs = n(914);
-    t.OfferDescriptionRewards = Fs.OfferDescriptionRewards;
-    var Us = n(915);
-    t.OfferDescriptionVisuals = Us.OfferDescriptionVisuals;
+    var Us = n(914);
+    t.OfferDescriptionRewards = Us.OfferDescriptionRewards;
+    var Fs = n(915);
+    t.OfferDescriptionVisuals = Fs.OfferDescriptionVisuals;
     var Gs = n(465);
     t.BasicOfferRewardFactory = Gs.BasicOfferRewardFactory;
     var ks = n(464);
@@ -6991,10 +6991,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BooleanSignal = Br.BooleanSignal;
     var Mr = n(51);
     t.GoodgameSignal = Mr.GoodgameSignal;
-    var Fr = n(411);
-    t.IntSignal = Fr.IntSignal;
-    var Ur = n(82);
-    t.NoneValueSignal = Ur.NoneValueSignal;
+    var Ur = n(411);
+    t.IntSignal = Ur.IntSignal;
+    var Fr = n(82);
+    t.NoneValueSignal = Fr.NoneValueSignal;
     var Gr = n(935);
     t.NumberSignal = Gr.NumberSignal;
     var kr = n(199);
@@ -7099,10 +7099,10 @@ PERFORMANCE OF THIS SOFTWARE.
       Bo.BrowserStateFullscreenTrackingEvent;
     var Mo = n(300);
     t.FacebookConnectionTrackingEvent = Mo.FacebookConnectionTrackingEvent;
-    var Fo = n(948);
-    t.FacebookInteractionTrackingEvent = Fo.FacebookInteractionTrackingEvent;
-    var Uo = n(301);
-    t.FacebookUserDataTrackingEvent = Uo.FacebookUserDataTrackingEvent;
+    var Uo = n(948);
+    t.FacebookInteractionTrackingEvent = Uo.FacebookInteractionTrackingEvent;
+    var Fo = n(301);
+    t.FacebookUserDataTrackingEvent = Fo.FacebookUserDataTrackingEvent;
     var Go = n(949);
     t.FirstLoaderEvent = Go.FirstLoaderEvent;
     var ko = n(295);
@@ -7209,10 +7209,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.ValueChangerController = Bl.ValueChangerController;
     var Ml = n(503);
     t.BasicButtonValueContainer = Ml.BasicButtonValueContainer;
-    var Fl = n(504);
-    t.BasicSliderValueContainer = Fl.BasicSliderValueContainer;
-    var Ul = n(505);
-    t.BasicTextfieldValueContainer = Ul.BasicTextfieldValueContainer;
+    var Ul = n(504);
+    t.BasicSliderValueContainer = Ul.BasicSliderValueContainer;
+    var Fl = n(505);
+    t.BasicTextfieldValueContainer = Fl.BasicTextfieldValueContainer;
     var Gl = n(506);
     t.AValueWrapper = Gl.AValueWrapper;
     var kl = n(973);
@@ -8094,10 +8094,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.ClientFunnel = B;
     var M = n(683);
     t.GuestRegistration = M;
-    var F = n(684);
-    t.MvTestDisplay = F;
-    var U = n(685);
-    t.Connection = U;
+    var U = n(684);
+    t.MvTestDisplay = U;
+    var F = n(685);
+    t.Connection = F;
     var G = n(686);
     t.MvTestConversion = G;
     var k = n(687);
@@ -17717,8 +17717,8 @@ PERFORMANCE OF THIS SOFTWARE.
           P = /progid\:DXImageTransform\.Microsoft\.Matrix\(.+?\)/i,
           B = /,(?=[^\)]*(?:\(|$))/gi,
           M = /[\s,\(]/i,
-          F = Math.PI / 180,
-          U = 180 / Math.PI,
+          U = Math.PI / 180,
+          F = 180 / Math.PI,
           G = {},
           k = { style: {} },
           w = i._gsScope.document || {
@@ -18033,7 +18033,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         ? parseInt(e.charAt(0) + "1", 10) *
                           parseFloat(s[0].substr(2))
                         : parseFloat(s[0])) *
-                        (-1 === e.indexOf("rad") ? 1 : U) -
+                        (-1 === e.indexOf("rad") ? 1 : F) -
                       (l ? 0 : t)),
                     s.length &&
                       (i && (i[n] = t + r),
@@ -18638,14 +18638,14 @@ PERFORMANCE OF THIS SOFTWARE.
           Pe = z + "transform",
           Be = X("transformOrigin"),
           Me = null !== X("perspective"),
-          Fe = (V.Transform = function () {
+          Ue = (V.Transform = function () {
             ((this.perspective =
               parseFloat(s.defaultTransformPerspective) || 0),
               (this.force3D =
                 !(!1 === s.defaultForce3D || !Me) &&
                 (s.defaultForce3D || "auto")));
           }),
-          Ue = i._gsScope.SVGElement,
+          Fe = i._gsScope.SVGElement,
           Ge = function (e, t, n) {
             var i,
               a = w.createElementNS("http://www.w3.org/2000/svg", e),
@@ -18778,7 +18778,7 @@ PERFORMANCE OF THIS SOFTWARE.
           },
           He = function (e) {
             return !(
-              !Ue ||
+              !Fe ||
               !e.getCTM ||
               (e.parentNode && !e.ownerSVGElement) ||
               !(function (e) {
@@ -18798,7 +18798,7 @@ PERFORMANCE OF THIS SOFTWARE.
               s,
               r,
               o,
-              l = e._gsTransform || new Fe(),
+              l = e._gsTransform || new Ue(),
               u = e.style;
             if (
               (Re
@@ -18868,7 +18868,7 @@ PERFORMANCE OF THIS SOFTWARE.
               u,
               _,
               c,
-              m = (n && e._gsTransform) || new Fe(),
+              m = (n && e._gsTransform) || new Ue(),
               d = m.scaleX < 0,
               h =
                 (Me &&
@@ -18908,13 +18908,13 @@ PERFORMANCE OF THIS SOFTWARE.
                   P = r[12],
                   B = r[13],
                   M = r[14],
-                  F = r[11],
+                  U = r[11],
                   G = Math.atan2(L, R);
                 (m.zOrigin &&
                   ((P = b * (M = -m.zOrigin) - r[12]),
                   (B = N * M - r[13]),
                   (M = R * M + m.zOrigin - r[14])),
-                  (m.rotationX = G * U),
+                  (m.rotationX = G * F),
                   G &&
                     ((g = A * (f = Math.cos(-G)) + b * (T = Math.sin(-G))),
                     (E = O * f + N * T),
@@ -18922,23 +18922,23 @@ PERFORMANCE OF THIS SOFTWARE.
                     (b = A * -T + b * f),
                     (N = O * -T + N * f),
                     (R = L * -T + R * f),
-                    (F = D * -T + F * f),
+                    (U = D * -T + U * f),
                     (A = g),
                     (O = E),
                     (L = C)),
                   (G = Math.atan2(-I, R)),
-                  (m.rotationY = G * U),
+                  (m.rotationY = G * F),
                   G &&
                     ((E = y * (f = Math.cos(-G)) - N * (T = Math.sin(-G))),
                     (C = I * f - R * T),
                     (N = y * T + N * f),
                     (R = I * T + R * f),
-                    (F = v * T + F * f),
+                    (U = v * T + U * f),
                     (S = g = S * f - b * T),
                     (y = E),
                     (I = C)),
                   (G = Math.atan2(y, S)),
-                  (m.rotation = G * U),
+                  (m.rotation = G * F),
                   G &&
                     ((g = S * (f = Math.cos(G)) + y * (T = Math.sin(G))),
                     (E = A * f + O * T),
@@ -18965,11 +18965,11 @@ PERFORMANCE OF THIS SOFTWARE.
                   (y /= m.scaleX),
                   (O /= m.scaleY),
                   Math.abs(G) > 2e-5
-                    ? ((m.skewX = G * U),
+                    ? ((m.skewX = G * F),
                       (A = 0),
                       "simple" !== m.skewType && (m.scaleY *= 1 / Math.cos(G)))
                     : (m.skewX = 0),
-                  (m.perspective = F ? 1 / (F < 0 ? -F : F) : 0),
+                  (m.perspective = U ? 1 / (U < 0 ? -U : U) : 0),
                   (m.x = P),
                   (m.y = B),
                   (m.z = M),
@@ -18993,8 +18993,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   (m.y = r[5] || 0),
                   (l = Math.sqrt(w * w + x * x)),
                   (u = Math.sqrt(H * H + W * W)),
-                  (_ = w || x ? Math.atan2(x, w) * U : m.rotation || 0),
-                  (c = W || H ? Math.atan2(W, H) * U + _ : m.skewX || 0),
+                  (_ = w || x ? Math.atan2(x, w) * F : m.rotation || 0),
+                  (c = W || H ? Math.atan2(W, H) * F + _ : m.skewX || 0),
                   (m.scaleX = l),
                   (m.scaleY = u),
                   (m.rotation = _),
@@ -19038,8 +19038,8 @@ PERFORMANCE OF THIS SOFTWARE.
             var t,
               n,
               i = this.data,
-              a = -i.rotation * F,
-              s = a + i.skewX * F,
+              a = -i.rotation * U,
+              s = a + i.skewX * U,
               r = ((Math.cos(a) * i.scaleX * 1e5) | 0) / 1e5,
               o = ((Math.sin(a) * i.scaleX * 1e5) | 0) / 1e5,
               l = ((Math.sin(s) * -i.scaleY * 1e5) | 0) / 1e5,
@@ -19167,7 +19167,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   P = I.y,
                   B = I.z,
                   M = I.svg,
-                  U = I.perspective,
+                  F = I.perspective,
                   G = I.force3D,
                   k = I.skewY,
                   w = I.skewX;
@@ -19180,7 +19180,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         this.tween._totalTime)) &&
                       G) ||
                     B ||
-                    U ||
+                    F ||
                     L ||
                     O ||
                     1 !== N
@@ -19189,8 +19189,8 @@ PERFORMANCE OF THIS SOFTWARE.
                     !Me)
                 )
                   A || w || M
-                    ? ((A *= F),
-                      (S = w * F),
+                    ? ((A *= U),
+                      (S = w * U),
                       (y = 1e5),
                       (n = Math.cos(A) * D),
                       (s = Math.sin(A) * D),
@@ -19198,11 +19198,11 @@ PERFORMANCE OF THIS SOFTWARE.
                       (r = Math.cos(A - S) * b),
                       S &&
                         "simple" === I.skewType &&
-                        ((t = Math.tan(S - k * F)),
+                        ((t = Math.tan(S - k * U)),
                         (i *= t = Math.sqrt(1 + t * t)),
                         (r *= t),
                         k &&
-                          ((t = Math.tan(k * F)),
+                          ((t = Math.tan(k * U)),
                           (n *= t = Math.sqrt(1 + t * t)),
                           (s *= t))),
                       M &&
@@ -19265,28 +19265,28 @@ PERFORMANCE OF THIS SOFTWARE.
                     (m &&
                       (D < (g = 1e-4) && D > -g && (D = N = 2e-5),
                       b < g && b > -g && (b = N = 2e-5),
-                      !U || I.z || I.rotationX || I.rotationY || (U = 0)),
+                      !F || I.z || I.rotationX || I.rotationY || (F = 0)),
                     A || w)
                   )
-                    ((A *= F),
+                    ((A *= U),
                       (E = n = Math.cos(A)),
                       (C = s = Math.sin(A)),
                       w &&
-                        ((A -= w * F),
+                        ((A -= w * U),
                         (E = Math.cos(A)),
                         (C = Math.sin(A)),
                         "simple" === I.skewType &&
-                          ((t = Math.tan((w - k) * F)),
+                          ((t = Math.tan((w - k) * U)),
                           (E *= t = Math.sqrt(1 + t * t)),
                           (C *= t),
                           I.skewY &&
-                            ((t = Math.tan(k * F)),
+                            ((t = Math.tan(k * U)),
                             (n *= t = Math.sqrt(1 + t * t)),
                             (s *= t)))),
                       (i = -C),
                       (r = E));
                   else {
-                    if (!(L || O || 1 !== N || U || M))
+                    if (!(L || O || 1 !== N || F || M))
                       return void (v[Re] =
                         (I.xPercent || I.yPercent
                           ? "translate(" +
@@ -19308,12 +19308,12 @@ PERFORMANCE OF THIS SOFTWARE.
                   }
                   ((_ = 1),
                     (a = o = l = u = c = d = 0),
-                    (h = U ? -1 / U : 0),
+                    (h = F ? -1 / F : 0),
                     (p = I.zOrigin),
                     (g = 1e-6),
                     ",",
                     "0",
-                    (A = L * F) &&
+                    (A = L * U) &&
                       ((E = Math.cos(A)),
                       (l = -(C = Math.sin(A))),
                       (c = h * -C),
@@ -19323,7 +19323,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       (h *= E),
                       (n *= E),
                       (s *= E)),
-                    (A = O * F) &&
+                    (A = O * U) &&
                       ((t = i * (E = Math.cos(A)) + a * (C = Math.sin(A))),
                       (f = r * E + o * C),
                       (u = _ * C),
@@ -19390,11 +19390,11 @@ PERFORMANCE OF THIS SOFTWARE.
                           ","))
                       : (T += ",0,0,0,0,1,0,"),
                     (T +=
-                      R + "," + P + "," + B + "," + (U ? 1 + -B / U : 1) + ")"),
+                      R + "," + P + "," + B + "," + (F ? 1 + -B / F : 1) + ")"),
                     (v[Re] = T));
                 }
               });
-        (((l = Fe.prototype).x =
+        (((l = Ue.prototype).x =
           l.y =
           l.z =
           l.skewX =
@@ -19453,7 +19453,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     w.body.appendChild(W),
                     (c = qe(W, null, !1)),
                     "simple" === L.skewType &&
-                      (c.scaleY *= Math.cos(c.skewX * F)),
+                      (c.scaleY *= Math.cos(c.skewX * U)),
                     L.svg &&
                       ((C = L.xOrigin),
                       (f = L.yOrigin),
@@ -53693,6 +53693,8 @@ and limitations under the License.
         (InterfaceVersions.prototype.fill = function () {
           ((this.assets.CastleInterfaceElements =
             "interface/CastleInterfaceElements/CastleInterfaceElements--1758627650671"),
+            (this.assets.CastleStartscreen5 =
+              "interface/CastleStartscreen5/CastleStartscreen5--1776346071201"),
             (this.assets.CastleStartscreen4 =
               "interface/CastleStartscreen4/CastleStartscreen4--1750923294631"),
             (this.assets.CastleStartscreen3 =
@@ -53702,7 +53704,7 @@ and limitations under the License.
             (this.assets.CastleStartscreen_O =
               "interface/CastleStartscreen_O/CastleStartscreen_O--1651238657710"),
             (this.assets.CastleInterfaceElements_Icons =
-              "interface/CastleInterfaceElements_Icons/CastleInterfaceElements_Icons--1774598494172"),
+              "interface/CastleInterfaceElements_Icons/CastleInterfaceElements_Icons--1776067692899"),
             (this.assets.CastleInterfaceElements_Shared =
               "interface/CastleInterfaceElements_Shared/CastleInterfaceElements_Shared--1710420450312"),
             (this.assets.CastleStartscreen =
@@ -53741,6 +53743,150 @@ and limitations under the License.
         (ItemVersions.prototype.fill = function () {
           ((this.assets.Deco_Building_springBonfire =
             "itemassets/Building/Deco/Deco_Building_springBonfire/Deco_Building_springBonfire--1616681902168"),
+            (this.assets.Icon_ARE_BossID_3 =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/Icons/Icon_ARE_BossID_3/Icon_ARE_BossID_3--1776256990109"),
+            (this.assets.AllianceRaidEventMainExt_Apr26 =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/AllianceRaidEventMainExt_Apr26/AllianceRaidEventMainExt_Apr26--1776244761311"),
+            (this.assets.AttackScreen_APR2026 =
+              "itemassets/Dialogs/AttackScreen_APR2026/AttackScreen_APR2026--1776244761311"),
+            (this.assets.Item_Unique_1524 =
+              "itemassets/Equipment/Uniques/Item_Unique_1524/Item_Unique_1524--1776182367657"),
+            (this.assets.Item_Unique_1523 =
+              "itemassets/Equipment/Uniques/Item_Unique_1523/Item_Unique_1523--1776182367657"),
+            (this.assets.Item_Unique_1522 =
+              "itemassets/Equipment/Uniques/Item_Unique_1522/Item_Unique_1522--1776182367657"),
+            (this.assets.Item_Unique_1521 =
+              "itemassets/Equipment/Uniques/Item_Unique_1521/Item_Unique_1521--1776182367657"),
+            (this.assets.Item_Unique_1519 =
+              "itemassets/Equipment/Uniques/Item_Unique_1519/Item_Unique_1519--1776182367657"),
+            (this.assets.Item_Unique_1518 =
+              "itemassets/Equipment/Uniques/Item_Unique_1518/Item_Unique_1518--1776182367657"),
+            (this.assets.Item_Unique_1517 =
+              "itemassets/Equipment/Uniques/Item_Unique_1517/Item_Unique_1517--1776182367657"),
+            (this.assets.Item_Unique_1516 =
+              "itemassets/Equipment/Uniques/Item_Unique_1516/Item_Unique_1516--1776182367657"),
+            (this.assets.Item_Unique_1514 =
+              "itemassets/Equipment/Uniques/Item_Unique_1514/Item_Unique_1514--1776182367657"),
+            (this.assets.Item_Unique_1513 =
+              "itemassets/Equipment/Uniques/Item_Unique_1513/Item_Unique_1513--1776182367657"),
+            (this.assets.Item_Unique_1512 =
+              "itemassets/Equipment/Uniques/Item_Unique_1512/Item_Unique_1512--1776679947889"),
+            (this.assets.Item_Unique_1511 =
+              "itemassets/Equipment/Uniques/Item_Unique_1511/Item_Unique_1511--1776182367657"),
+            (this.assets.Hero_Unique_1525 =
+              "itemassets/Equipment/Uniques/Hero_Unique_1525/Hero_Unique_1525--1776182367657"),
+            (this.assets.Hero_Unique_1520 =
+              "itemassets/Equipment/Uniques/Hero_Unique_1520/Hero_Unique_1520--1776182367657"),
+            (this.assets.Hero_Unique_1515 =
+              "itemassets/Equipment/Uniques/Hero_Unique_1515/Hero_Unique_1515--1776182367657"),
+            (this.assets.Item_Gem_Unique_513 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_513/Item_Gem_Unique_513--1776182367657"),
+            (this.assets.Item_Gem_Unique_512 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_512/Item_Gem_Unique_512--1776182367657"),
+            (this.assets.Item_Gem_Unique_511 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_511/Item_Gem_Unique_511--1776182367657"),
+            (this.assets.Item_Gem_Unique_510 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_510/Item_Gem_Unique_510--1776182367657"),
+            (this.assets.Item_Gem_Unique_509 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_509/Item_Gem_Unique_509--1776182367657"),
+            (this.assets.Item_Gem_Unique_508 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_508/Item_Gem_Unique_508--1776182367657"),
+            (this.assets.Item_Gem_Unique_507 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_507/Item_Gem_Unique_507--1776182367657"),
+            (this.assets.Item_Gem_Unique_506 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_506/Item_Gem_Unique_506--1776182367657"),
+            (this.assets.Item_Gem_Unique_505 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_505/Item_Gem_Unique_505--1776182367657"),
+            (this.assets.Item_Gem_Unique_504 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_504/Item_Gem_Unique_504--1776182367657"),
+            (this.assets.Item_Gem_Unique_503 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_503/Item_Gem_Unique_503--1776182367657"),
+            (this.assets.Item_Gem_Unique_502 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_502/Item_Gem_Unique_502--1776182367657"),
+            (this.assets.CastleStartscreenBackground_BG_ARE3 =
+              "itemassets/CastleStartscreenBackground_BG_ARE3/CastleStartscreenBackground_BG_ARE3--1776262387106"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWeakeningToolRangedWeak =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWeakeningToolRangedWeak/Eventtool_Unit_ARELegendaryDragonWeakeningToolRangedWeak--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWeakeningToolRangedStrong =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWeakeningToolRangedStrong/Eventtool_Unit_ARELegendaryDragonWeakeningToolRangedStrong--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWeakeningToolRangedMedium =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWeakeningToolRangedMedium/Eventtool_Unit_ARELegendaryDragonWeakeningToolRangedMedium--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWeakeningToolMeleeWeak =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWeakeningToolMeleeWeak/Eventtool_Unit_ARELegendaryDragonWeakeningToolMeleeWeak--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWeakeningToolMeleeStrong =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWeakeningToolMeleeStrong/Eventtool_Unit_ARELegendaryDragonWeakeningToolMeleeStrong--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWeakeningToolMeleeMedium =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWeakeningToolMeleeMedium/Eventtool_Unit_ARELegendaryDragonWeakeningToolMeleeMedium--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseRightWeak =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseRightWeak/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseRightWeak--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseRightStrong =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseRightStrong/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseRightStrong--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseRightNormal =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseRightNormal/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseRightNormal--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseLeftWeak =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseLeftWeak/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseLeftWeak--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseLeftStrong =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseLeftStrong/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseLeftStrong--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseLeftNormal =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseLeftNormal/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseLeftNormal--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseFrontWeak =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseFrontWeak/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseFrontWeak--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseFrontStrong =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseFrontStrong/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseFrontStrong--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseFrontNormal =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseFrontNormal/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseFrontNormal--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseAllWeak =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseAllWeak/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseAllWeak--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseAllStrong =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseAllStrong/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseAllStrong--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseAllNormal =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseAllNormal/Eventtool_Unit_ARELegendaryDragonWallDelayIncreaseAllNormal--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonHatchlingKillingToolWeak =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonHatchlingKillingToolWeak/Eventtool_Unit_ARELegendaryDragonHatchlingKillingToolWeak--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonHatchlingKillingToolStrong =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonHatchlingKillingToolStrong/Eventtool_Unit_ARELegendaryDragonHatchlingKillingToolStrong--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonHatchlingKillingToolMedium =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonHatchlingKillingToolMedium/Eventtool_Unit_ARELegendaryDragonHatchlingKillingToolMedium--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonEggKillingToolWeak =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonEggKillingToolWeak/Eventtool_Unit_ARELegendaryDragonEggKillingToolWeak--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonEggKillingToolStrong =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonEggKillingToolStrong/Eventtool_Unit_ARELegendaryDragonEggKillingToolStrong--1776167986831"),
+            (this.assets.Eventtool_Unit_ARELegendaryDragonEggKillingToolMedium =
+              "itemassets/Units/Eventtool/Eventtool_Unit_ARELegendaryDragonEggKillingToolMedium/Eventtool_Unit_ARELegendaryDragonEggKillingToolMedium--1776167986831"),
+            (this.assets.GeneralIcon_136 =
+              "itemassets/Dialogs/Generals/GeneralIcons/GeneralIcon_136/GeneralIcon_136--1776068816605"),
+            (this.assets.GeneralIcon_135 =
+              "itemassets/Dialogs/Generals/GeneralIcons/GeneralIcon_135/GeneralIcon_135--1776068816605"),
+            (this.assets.GeneralIcon_134 =
+              "itemassets/Dialogs/Generals/GeneralIcons/GeneralIcon_134/GeneralIcon_134--1776068816605"),
+            (this.assets.GeneralPortrait_136 =
+              "itemassets/General/Portrait/GeneralPortrait_136/GeneralPortrait_136--1776067692899"),
+            (this.assets.GeneralPortrait_135 =
+              "itemassets/General/Portrait/GeneralPortrait_135/GeneralPortrait_135--1776067692899"),
+            (this.assets.GeneralPortrait_134 =
+              "itemassets/General/Portrait/GeneralPortrait_134/GeneralPortrait_134--1776067692899"),
+            (this.assets.ARE_EndTeaser_BossDefeated_3 =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/BossDefeatTeasers/ARE_EndTeaser_BossDefeated_3/ARE_EndTeaser_BossDefeated_3--1776067692899"),
+            (this.assets.ARE_EndTeaser_BossDefeated_3_Final =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/BossDefeatTeasers/ARE_EndTeaser_BossDefeated_3_Final/ARE_EndTeaser_BossDefeated_3_Final--1776067692899"),
+            (this.assets.AllianceRaidEventBG_Victory_LegendaryDragon =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/Backgrounds/AllianceRaidEventBG_Victory_LegendaryDragon/AllianceRaidEventBG_Victory_LegendaryDragon--1776067692899"),
+            (this.assets.AllianceRaidEventBG_LegendaryDragon =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/Backgrounds/AllianceRaidEventBG_LegendaryDragon/AllianceRaidEventBG_LegendaryDragon--1776067692899"),
+            (this.assets.Collectable_Currency_RiftShard_DropShadow =
+              "itemassets/Collectables/Collectable_Currency_RiftShard_DropShadow/Collectable_Currency_RiftShard_DropShadow--1776067692899"),
+            (this.assets.Eventunit_Unit_ARELegendaryDragonYoungling =
+              "itemassets/Units/Eventunit/Eventunit_Unit_ARELegendaryDragonYoungling/Eventunit_Unit_ARELegendaryDragonYoungling--1775818364253"),
+            (this.assets.Eventunit_Unit_ARELegendaryDragonRangedDefender =
+              "itemassets/Units/Eventunit/Eventunit_Unit_ARELegendaryDragonRangedDefender/Eventunit_Unit_ARELegendaryDragonRangedDefender--1775818364253"),
+            (this.assets.Eventunit_Unit_ARELegendaryDragonMeleeDefender =
+              "itemassets/Units/Eventunit/Eventunit_Unit_ARELegendaryDragonMeleeDefender/Eventunit_Unit_ARELegendaryDragonMeleeDefender--1775818364253"),
+            (this.assets.Eventunit_Unit_ARELegendaryDragonHatchling =
+              "itemassets/Units/Eventunit/Eventunit_Unit_ARELegendaryDragonHatchling/Eventunit_Unit_ARELegendaryDragonHatchling--1775818364253"),
+            (this.assets.Eventunit_Unit_ARELegendaryDragonEgg =
+              "itemassets/Units/Eventunit/Eventunit_Unit_ARELegendaryDragonEgg/Eventunit_Unit_ARELegendaryDragonEgg--1775818364253"),
+            (this.assets.Eventunit_Unit_ARELegendaryDragonAdult =
+              "itemassets/Units/Eventunit/Eventunit_Unit_ARELegendaryDragonAdult/Eventunit_Unit_ARELegendaryDragonAdult--1775818364253"),
             (this.assets.ConstructionItem_HoL8TradeDistrictNightTier3 =
               "itemassets/ConstructionItems/ConstructionItem_HoL8TradeDistrictNightTier3/ConstructionItem_HoL8TradeDistrictNightTier3--1775729803521"),
             (this.assets.ConstructionItem_HoL8TradeDistrictNightTier2 =
@@ -53864,7 +54010,7 @@ and limitations under the License.
             (this.assets.FoodDistrict_Building_HoL8FoodDistrictDayTier1 =
               "itemassets/Building/FoodDistrict/FoodDistrict_Building_HoL8FoodDistrictDayTier1/FoodDistrict_Building_HoL8FoodDistrictDayTier1--1775656492819"),
             (this.assets.DetailView_RaidBoss_3 =
-              "itemassets/CastleDetailView/AllianceRaidBossEvent/DetailView_RaidBoss_3/DetailView_RaidBoss_3--1775656492819"),
+              "itemassets/CastleDetailView/AllianceRaidBossEvent/DetailView_RaidBoss_3/DetailView_RaidBoss_3--1776070877092"),
             (this.assets.CastleEquipment_ARE3 =
               "itemassets/Dialogs/Equipment/CastleEquipment_ARE3/CastleEquipment_ARE3--1773318989615"),
             (this.assets.ConstructionItem_TradeDistrict =
@@ -54134,7 +54280,7 @@ and limitations under the License.
             (this.assets.ARE_EndTeaser_BossDefeated_2_Final =
               "itemassets/Dialogs/Events/AllianceRaidEvent/BossDefeatTeasers/ARE_EndTeaser_BossDefeated_2_Final/ARE_EndTeaser_BossDefeated_2_Final--1770040338308"),
             (this.assets.AttackScreen_FEB2026 =
-              "itemassets/Dialogs/AttackScreen_FEB2026/AttackScreen_FEB2026--1770040338308"),
+              "itemassets/Dialogs/AttackScreen_FEB2026/AttackScreen_FEB2026--1776067692899"),
             (this.assets.Eventunit_Unit_FungalStrongRanged =
               "itemassets/Units/Eventunit/Eventunit_Unit_FungalStrongRanged/Eventunit_Unit_FungalStrongRanged--1769771377029"),
             (this.assets.Eventunit_Unit_FungalStrongMelee =
@@ -55194,9 +55340,9 @@ and limitations under the License.
             (this.assets.General_122_Animated =
               "itemassets/General/Generals_Animated/General_122_Animated/General_122_Animated--1744639420823"),
             (this.assets.General_121_Animated =
-              "itemassets/General/Generals_Animated/General_121_Animated/General_121_Animated--1744639420823"),
-            (this.assets.GeneralsBackground_122 =
-              "itemassets/General/Background/GeneralsBackground_122/GeneralsBackground_122--1744639420823"),
+              "itemassets/General/Generals_Animated/General_121_Animated/General_121_Animated--1744639420823"));
+          ((this.assets.GeneralsBackground_122 =
+            "itemassets/General/Background/GeneralsBackground_122/GeneralsBackground_122--1744639420823"),
             (this.assets.GeneralsBackground_121 =
               "itemassets/General/Background/GeneralsBackground_121/GeneralsBackground_121--1744639420823"),
             (this.assets.GeneralsBackground_122_BW =
@@ -55338,9 +55484,9 @@ and limitations under the License.
             (this.assets.Deco_Building_ExaltedGreenEasterHotspring =
               "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedGreenEasterHotspring/Deco_Building_ExaltedGreenEasterHotspring--1742483399185"),
             (this.assets.NomadAdvisorOverviewCancelExt =
-              "itemassets/Dialogs/AttackAdvisor/NomadAdvisorOverviewCancelExt/NomadAdvisorOverviewCancelExt--1741942239999"));
-          ((this.assets.GeneralsBackground_121_BW =
-            "itemassets/General/Background_BW/GeneralsBackground_121_BW/GeneralsBackground_121_BW--1741786819184"),
+              "itemassets/Dialogs/AttackAdvisor/NomadAdvisorOverviewCancelExt/NomadAdvisorOverviewCancelExt--1741942239999"),
+            (this.assets.GeneralsBackground_121_BW =
+              "itemassets/General/Background_BW/GeneralsBackground_121_BW/GeneralsBackground_121_BW--1741786819184"),
             (this.assets.GeneralIcon_121_Preview =
               "itemassets/Dialogs/Generals/GeneralIcons/GeneralIcon_121_Preview/GeneralIcon_121_Preview--1741786819184"),
             (this.assets.GeneralPortrait_120 =
@@ -56794,9 +56940,9 @@ and limitations under the License.
             (this.assets.GeneralsAbilities2 =
               "itemassets/Dialogs/Generals/GeneralsAbilities2/GeneralsAbilities2--1680253961012"),
             (this.assets.Animation_SpringBox2023 =
-              "itemassets/Dialogs/RewardHub/MysteryBox/Animation_SpringBox2023/Animation_SpringBox2023--1679906988214"),
-            (this.assets.Collectable_SpringBox2023 =
-              "itemassets/Collectables/MysteryBoxes/Collectable_SpringBox2023/Collectable_SpringBox2023--1679906988214"),
+              "itemassets/Dialogs/RewardHub/MysteryBox/Animation_SpringBox2023/Animation_SpringBox2023--1679906988214"));
+          ((this.assets.Collectable_SpringBox2023 =
+            "itemassets/Collectables/MysteryBoxes/Collectable_SpringBox2023/Collectable_SpringBox2023--1679906988214"),
             (this.assets.Deco_Building_SpringTower2 =
               "itemassets/Building/Deco/Deco_Building_SpringTower2/Deco_Building_SpringTower2--1678700511819"),
             (this.assets.Skin_Mapmovement_SnakeGeneral_Eiland =
@@ -56938,9 +57084,9 @@ and limitations under the License.
             (this.assets.PivatePrimeDayDynamicDialog_TeaserImage_34 =
               "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TeaserImages/PivatePrimeDayDynamicDialog_TeaserImage_34/PivatePrimeDayDynamicDialog_TeaserImage_34--1668163086001"),
             (this.assets.ConstructionItem_XmasBakery =
-              "itemassets/ConstructionItems/ConstructionItem_XmasBakery/ConstructionItem_XmasBakery--1668068185492"));
-          ((this.assets.Deco_Building_xmasUnicorn =
-            "itemassets/Building/Deco/Deco_Building_xmasUnicorn/Deco_Building_xmasUnicorn--1668068185492"),
+              "itemassets/ConstructionItems/ConstructionItem_XmasBakery/ConstructionItem_XmasBakery--1668068185492"),
+            (this.assets.Deco_Building_xmasUnicorn =
+              "itemassets/Building/Deco/Deco_Building_xmasUnicorn/Deco_Building_xmasUnicorn--1668068185492"),
             (this.assets.Deco_Building_SnowflakeLake =
               "itemassets/Building/Deco/Deco_Building_SnowflakeLake/Deco_Building_SnowflakeLake--1668068185492"),
             (this.assets.Deco_Building_christmashut =
@@ -58394,9 +58540,9 @@ and limitations under the License.
             (this.assets.Icon_Research_38 =
               "itemassets/Dialogs/Research/Icons/Icon_Research_38/Icon_Research_38--1626078187556"),
             (this.assets.Icon_Research_37 =
-              "itemassets/Dialogs/Research/Icons/Icon_Research_37/Icon_Research_37--1626078187556"),
-            (this.assets.Icon_Research_36 =
-              "itemassets/Dialogs/Research/Icons/Icon_Research_36/Icon_Research_36--1626078187556"),
+              "itemassets/Dialogs/Research/Icons/Icon_Research_37/Icon_Research_37--1626078187556"));
+          ((this.assets.Icon_Research_36 =
+            "itemassets/Dialogs/Research/Icons/Icon_Research_36/Icon_Research_36--1626078187556"),
             (this.assets.Icon_Research_35 =
               "itemassets/Dialogs/Research/Icons/Icon_Research_35/Icon_Research_35--1626078187556"),
             (this.assets.Icon_Research_34 =
@@ -58538,9 +58684,9 @@ and limitations under the License.
             (this.assets.ConstructionItem_TropicalSummerKiwiEstate =
               "itemassets/ConstructionItems/ConstructionItem_TropicalSummerKiwiEstate/ConstructionItem_TropicalSummerKiwiEstate--1623236917400"),
             (this.assets.ConstructionItem_TropicalSummerBananaLegendtemple =
-              "itemassets/ConstructionItems/ConstructionItem_TropicalSummerBananaLegendtemple/ConstructionItem_TropicalSummerBananaLegendtemple--1623236917400"));
-          ((this.assets.LegendTemple_Building_tropicalSummerBananaLegendtemple =
-            "itemassets/Building/LegendTemple/LegendTemple_Building_tropicalSummerBananaLegendtemple/LegendTemple_Building_tropicalSummerBananaLegendtemple--1623409456956"),
+              "itemassets/ConstructionItems/ConstructionItem_TropicalSummerBananaLegendtemple/ConstructionItem_TropicalSummerBananaLegendtemple--1623236917400"),
+            (this.assets.LegendTemple_Building_tropicalSummerBananaLegendtemple =
+              "itemassets/Building/LegendTemple/LegendTemple_Building_tropicalSummerBananaLegendtemple/LegendTemple_Building_tropicalSummerBananaLegendtemple--1623409456956"),
             (this.assets.Estate_Building_tropicalSummerKiwiEstate =
               "itemassets/Building/Estate/Estate_Building_tropicalSummerKiwiEstate/Estate_Building_tropicalSummerKiwiEstate--1623236917400"),
             (this.assets.Toolsmith_Building_Level4 =
@@ -59994,9 +60140,9 @@ and limitations under the License.
             (this.assets.Achievement_10 =
               "itemassets/Achievements/Economy/Achievement_10/Achievement_10--1573584429307"),
             (this.assets.Achievement_2 =
-              "itemassets/Achievements/Economy/Achievement_2/Achievement_2--1573584429307"),
-            (this.assets.Achievement_3 =
-              "itemassets/Achievements/Economy/Achievement_3/Achievement_3--1573584429307"),
+              "itemassets/Achievements/Economy/Achievement_2/Achievement_2--1573584429307"));
+          ((this.assets.Achievement_3 =
+            "itemassets/Achievements/Economy/Achievement_3/Achievement_3--1573584429307"),
             (this.assets.Achievement_4 =
               "itemassets/Achievements/Economy/Achievement_4/Achievement_4--1573584429307"),
             (this.assets.Achievement_5 =
@@ -60138,9 +60284,9 @@ and limitations under the License.
             (this.assets.Achievement_115 =
               "itemassets/Achievements/Military/Achievement_115/Achievement_115--1573584429307"),
             (this.assets.Achievement_116 =
-              "itemassets/Achievements/Military/Achievement_116/Achievement_116--1573584429307"));
-          ((this.assets.Achievement_117 =
-            "itemassets/Achievements/Military/Achievement_117/Achievement_117--1573584429307"),
+              "itemassets/Achievements/Military/Achievement_116/Achievement_116--1573584429307"),
+            (this.assets.Achievement_117 =
+              "itemassets/Achievements/Military/Achievement_117/Achievement_117--1573584429307"),
             (this.assets.Achievement_118 =
               "itemassets/Achievements/Military/Achievement_118/Achievement_118--1573584429307"),
             (this.assets.Achievement_119 =
@@ -61594,9 +61740,9 @@ and limitations under the License.
             (this.assets.Market_Building_Level7 =
               "itemassets/Building/Market/Market_Building_Level7/Market_Building_Level7--1573584429307"),
             (this.assets.Market_Building_Level8 =
-              "itemassets/Building/Market/Market_Building_Level8/Market_Building_Level8--1573584429307"),
-            (this.assets.Market_Building_treeVillageMarket =
-              "itemassets/Building/Market/Market_Building_treeVillageMarket/Market_Building_treeVillageMarket--1573584429307"),
+              "itemassets/Building/Market/Market_Building_Level8/Market_Building_Level8--1573584429307"));
+          ((this.assets.Market_Building_treeVillageMarket =
+            "itemassets/Building/Market/Market_Building_treeVillageMarket/Market_Building_treeVillageMarket--1573584429307"),
             (this.assets.Market_Building_winterMarket =
               "itemassets/Building/Market/Market_Building_winterMarket/Market_Building_winterMarket--1573584429307"),
             (this.assets.Marketplace_Building_Marketplace =
@@ -61738,9 +61884,9 @@ and limitations under the License.
             (this.assets.Psoldiertent_Building_Level1 =
               "itemassets/Building/Psoldiertent/Psoldiertent_Building_Level1/Psoldiertent_Building_Level1--1573584429307"),
             (this.assets.PUnittent_Building_Level1 =
-              "itemassets/Building/PUnittent/PUnittent_Building_Level1/PUnittent_Building_Level1--1573584429307"));
-          ((this.assets.PUnittent_Building_Level2 =
-            "itemassets/Building/PUnittent/PUnittent_Building_Level2/PUnittent_Building_Level2--1573584429307"),
+              "itemassets/Building/PUnittent/PUnittent_Building_Level1/PUnittent_Building_Level1--1573584429307"),
+            (this.assets.PUnittent_Building_Level2 =
+              "itemassets/Building/PUnittent/PUnittent_Building_Level2/PUnittent_Building_Level2--1573584429307"),
             (this.assets.PUnittent_Building_Level3 =
               "itemassets/Building/PUnittent/PUnittent_Building_Level3/PUnittent_Building_Level3--1573584429307"),
             (this.assets.PUnittent_Building_Level4 =
@@ -63194,9 +63340,9 @@ and limitations under the License.
             (this.assets.CastleCoinColossusDonateDialog =
               "itemassets/Dialogs/Events/Colossus/CastleCoinColossusDonateDialog/CastleCoinColossusDonateDialog--1573584429307"),
             (this.assets.CastleColossusChar =
-              "itemassets/Dialogs/Events/Colossus/CastleColossusChar/CastleColossusChar--1573584429307"),
-            (this.assets.CastleColossusCoinChar =
-              "itemassets/Dialogs/Events/Colossus/CastleColossusCoinChar/CastleColossusCoinChar--1573584429307"),
+              "itemassets/Dialogs/Events/Colossus/CastleColossusChar/CastleColossusChar--1573584429307"));
+          ((this.assets.CastleColossusCoinChar =
+            "itemassets/Dialogs/Events/Colossus/CastleColossusCoinChar/CastleColossusCoinChar--1573584429307"),
             (this.assets.CastleColossusDonateDialog =
               "itemassets/Dialogs/Events/Colossus/CastleColossusDonateDialog/CastleColossusDonateDialog--1573584429307"),
             (this.assets.CastleColossusEvent =
@@ -63338,9 +63484,9 @@ and limitations under the License.
             (this.assets.LongTermPointEventReward =
               "itemassets/Dialogs/Events/LongTermPointEvent/LongTermPointEventReward/LongTermPointEventReward--1627659688198"),
             (this.assets.LongTermPointEventRewardsList =
-              "itemassets/Dialogs/Events/LongTermPointEvent/LongTermPointEventRewardsList/LongTermPointEventRewardsList--1697642269637"));
-          ((this.assets.LongTermPointEventDefaultSkinComponent =
-            "itemassets/Dialogs/Events/LongTermPointEvent/seasonSkins/LongTermPointEventDefaultSkinComponent/LongTermPointEventDefaultSkinComponent--1573584429307"),
+              "itemassets/Dialogs/Events/LongTermPointEvent/LongTermPointEventRewardsList/LongTermPointEventRewardsList--1697642269637"),
+            (this.assets.LongTermPointEventDefaultSkinComponent =
+              "itemassets/Dialogs/Events/LongTermPointEvent/seasonSkins/LongTermPointEventDefaultSkinComponent/LongTermPointEventDefaultSkinComponent--1573584429307"),
             (this.assets.LongTermPointEventHalloweenSkinComponent =
               "itemassets/Dialogs/Events/LongTermPointEvent/seasonSkins/LongTermPointEventHalloweenSkinComponent/LongTermPointEventHalloweenSkinComponent--1573584429307"),
             (this.assets.LongTermPointEventIndiaSkinComponent =
@@ -64794,9 +64940,9 @@ and limitations under the License.
             (this.assets.CastlePremiumMarketplaceExternal =
               "itemassets/Dialogs/PremiumMarketplace/CastlePremiumMarketplaceExternal/CastlePremiumMarketplaceExternal--1714462826108"),
             (this.assets.CastlePremiumPaymentExternal =
-              "itemassets/Dialogs/PremiumPayment/CastlePremiumPaymentExternal/CastlePremiumPaymentExternal--1573584429307"),
-            (this.assets.CastleKongregateNotification =
-              "itemassets/Dialogs/PrivateOffer/CastleKongregateNotification/CastleKongregateNotification--1573584429307"),
+              "itemassets/Dialogs/PremiumPayment/CastlePremiumPaymentExternal/CastlePremiumPaymentExternal--1573584429307"));
+          ((this.assets.CastleKongregateNotification =
+            "itemassets/Dialogs/PrivateOffer/CastleKongregateNotification/CastleKongregateNotification--1573584429307"),
             (this.assets.CastleKongregateRating =
               "itemassets/Dialogs/PrivateOffer/CastleKongregateRating/CastleKongregateRating--1573584429307"),
             (this.assets.CastlePOMultiChest =
@@ -64938,9 +65084,9 @@ and limitations under the License.
             (this.assets.PivatePrimeDayDynamicDialog_TopEyeCatcher_7_fr =
               "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TopEyeCatcher/PivatePrimeDayDynamicDialog_TopEyeCatcher_7_fr/PivatePrimeDayDynamicDialog_TopEyeCatcher_7_fr--1573584429307"),
             (this.assets.PivatePrimeDayDynamicDialog_TopEyeCatcher_8_de =
-              "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TopEyeCatcher/PivatePrimeDayDynamicDialog_TopEyeCatcher_8_de/PivatePrimeDayDynamicDialog_TopEyeCatcher_8_de--1573584429307"));
-          ((this.assets.PivatePrimeDayDynamicDialog_TopEyeCatcher_8_en =
-            "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TopEyeCatcher/PivatePrimeDayDynamicDialog_TopEyeCatcher_8_en/PivatePrimeDayDynamicDialog_TopEyeCatcher_8_en--1573584429307"),
+              "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TopEyeCatcher/PivatePrimeDayDynamicDialog_TopEyeCatcher_8_de/PivatePrimeDayDynamicDialog_TopEyeCatcher_8_de--1573584429307"),
+            (this.assets.PivatePrimeDayDynamicDialog_TopEyeCatcher_8_en =
+              "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TopEyeCatcher/PivatePrimeDayDynamicDialog_TopEyeCatcher_8_en/PivatePrimeDayDynamicDialog_TopEyeCatcher_8_en--1573584429307"),
             (this.assets.PivatePrimeDayDynamicDialog_TopEyeCatcher_8_es =
               "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TopEyeCatcher/PivatePrimeDayDynamicDialog_TopEyeCatcher_8_es/PivatePrimeDayDynamicDialog_TopEyeCatcher_8_es--1573584429307"),
             (this.assets.PivatePrimeDayDynamicDialog_TopEyeCatcher_8_fr =
@@ -66394,9 +66540,9 @@ and limitations under the License.
             (this.assets.Item_Unique_35 =
               "itemassets/Equipment/Uniques/Item_Unique_35/Item_Unique_35--1573584429307"),
             (this.assets.Item_Unique_350 =
-              "itemassets/Equipment/Uniques/Item_Unique_350/Item_Unique_350--1573584429307"),
-            (this.assets.Item_Unique_351 =
-              "itemassets/Equipment/Uniques/Item_Unique_351/Item_Unique_351--1573584429307"),
+              "itemassets/Equipment/Uniques/Item_Unique_350/Item_Unique_350--1573584429307"));
+          ((this.assets.Item_Unique_351 =
+            "itemassets/Equipment/Uniques/Item_Unique_351/Item_Unique_351--1573584429307"),
             (this.assets.Item_Unique_352 =
               "itemassets/Equipment/Uniques/Item_Unique_352/Item_Unique_352--1573584429307"),
             (this.assets.Item_Unique_353 =
@@ -66538,9 +66684,9 @@ and limitations under the License.
             (this.assets.Item_Unique_46 =
               "itemassets/Equipment/Uniques/Item_Unique_46/Item_Unique_46--1573584429307"),
             (this.assets.Item_Unique_460 =
-              "itemassets/Equipment/Uniques/Item_Unique_460/Item_Unique_460--1573584429307"));
-          ((this.assets.Item_Unique_461 =
-            "itemassets/Equipment/Uniques/Item_Unique_461/Item_Unique_461--1573584429307"),
+              "itemassets/Equipment/Uniques/Item_Unique_460/Item_Unique_460--1573584429307"),
+            (this.assets.Item_Unique_461 =
+              "itemassets/Equipment/Uniques/Item_Unique_461/Item_Unique_461--1573584429307"),
             (this.assets.Item_Unique_462 =
               "itemassets/Equipment/Uniques/Item_Unique_462/Item_Unique_462--1573584429307"),
             (this.assets.Item_Unique_464 =
@@ -67994,9 +68140,9 @@ and limitations under the License.
             (this.assets.Eventtool_Unit_SamuraiPointBoost =
               "itemassets/Units/Eventtool/Eventtool_Unit_SamuraiPointBoost/Eventtool_Unit_SamuraiPointBoost--1573584429307"),
             (this.assets.Eventtool_Unit_SeaqueenBallista =
-              "itemassets/Units/Eventtool/Eventtool_Unit_SeaqueenBallista/Eventtool_Unit_SeaqueenBallista--1573584429307"),
-            (this.assets.Eventtool_Unit_SeaqueenBanner =
-              "itemassets/Units/Eventtool/Eventtool_Unit_SeaqueenBanner/Eventtool_Unit_SeaqueenBanner--1573584429307"),
+              "itemassets/Units/Eventtool/Eventtool_Unit_SeaqueenBallista/Eventtool_Unit_SeaqueenBallista--1573584429307"));
+          ((this.assets.Eventtool_Unit_SeaqueenBanner =
+            "itemassets/Units/Eventtool/Eventtool_Unit_SeaqueenBanner/Eventtool_Unit_SeaqueenBanner--1573584429307"),
             (this.assets.Eventtool_Unit_SeaqueenLadder =
               "itemassets/Units/Eventtool/Eventtool_Unit_SeaqueenLadder/Eventtool_Unit_SeaqueenLadder--1573584429307"),
             (this.assets.Eventtool_Unit_SeaqueenShields =
@@ -68138,9 +68284,9 @@ and limitations under the License.
             (this.assets.Eventunit_Unit_Fireeventrange =
               "itemassets/Units/Eventunit/Eventunit_Unit_Fireeventrange/Eventunit_Unit_Fireeventrange--1573584429307"),
             (this.assets.Eventunit_Unit_Firewitch =
-              "itemassets/Units/Eventunit/Eventunit_Unit_Firewitch/Eventunit_Unit_Firewitch--1573584429307"));
-          ((this.assets.Eventunit_Unit_HalloweenMelee =
-            "itemassets/Units/Eventunit/Eventunit_Unit_HalloweenMelee/Eventunit_Unit_HalloweenMelee--1573584429307"),
+              "itemassets/Units/Eventunit/Eventunit_Unit_Firewitch/Eventunit_Unit_Firewitch--1573584429307"),
+            (this.assets.Eventunit_Unit_HalloweenMelee =
+              "itemassets/Units/Eventunit/Eventunit_Unit_HalloweenMelee/Eventunit_Unit_HalloweenMelee--1573584429307"),
             (this.assets.Eventunit_Unit_HalloweenRange =
               "itemassets/Units/Eventunit/Eventunit_Unit_HalloweenRange/Eventunit_Unit_HalloweenRange--1573584429307"),
             (this.assets.Eventunit_Unit_Iceeventmelee =
@@ -73778,9 +73924,9 @@ and limitations under the License.
       P = n(606),
       B = createjs.GlowFilter,
       M = createjs.DropShadowFilter,
-      F = n(229),
-      U = n(16),
-      G = m.getLogger(U.TEXT_FIELDS_LOGGER);
+      U = n(229),
+      F = n(16),
+      G = m.getLogger(F.TEXT_FIELDS_LOGGER);
     R.insertInputFieldElementCSS();
     var k,
       w = 0;
@@ -73874,7 +74020,7 @@ and limitations under the License.
               a &&
                 (G.debug("link clicked", a.linkId),
                 a.isAnchorLink
-                  ? F.navigateToURL(a.linkId)
+                  ? U.navigateToURL(a.linkId)
                   : t.dispatchEvent(new D(D.LINK, !0, !1, a.linkId)));
             }
           }),
@@ -75770,9 +75916,9 @@ and limitations under the License.
         P = "object" == typeof self && self && self.Object === Object && self,
         B = R || P || Function("return this")(),
         M = "object" == typeof t && t && !t.nodeType && t,
-        F = M && "object" == typeof n && n && !n.nodeType && n,
-        U = F && F.exports === M,
-        G = U && R.process,
+        U = M && "object" == typeof n && n && !n.nodeType && n,
+        F = U && U.exports === M,
+        G = F && R.process,
         k = (function () {
           try {
             return G && G.binding && G.binding("util");
@@ -75826,7 +75972,7 @@ and limitations under the License.
               ) +
             "$",
         ),
-        X = U ? B.Buffer : void 0,
+        X = F ? B.Buffer : void 0,
         Q = B.Symbol,
         $ = B.Uint8Array,
         J = V.propertyIsEnumerable,
@@ -76703,10 +76849,10 @@ and limitations under the License.
                   }, [])));
               for (var P = 0, B = R; P < B.length; P++) {
                 var M = B[P],
-                  F = e.measureText(M).width;
-                I + F > _ && " " != M && ((S = []), y.push(S), (I = 0));
-                var U = { type: "plain", text: M, width: F };
-                (S.push(U), (I += U.width));
+                  U = e.measureText(M).width;
+                I + U > _ && " " != M && ((S = []), y.push(S), (I = 0));
+                var F = { type: "plain", text: M, width: U };
+                (S.push(F), (I += F.width));
               }
             } else (S.push({ type: "plain", text: b, width: N }), (I += N));
             break;
@@ -81729,8 +81875,8 @@ and limitations under the License.
             D[N] || (d[N]++, L--, (D[N] = m[N] + d[N] === u[N]));
           for (
             var M = 2 * n.getUnitTypeCount(),
-              F = new Ae(M),
-              U = 0,
+              U = new Ae(M),
+              F = 0,
               G = n.getSoldierMeleeDefenseOrder(),
               k = 0;
             k < G.length;
@@ -81748,13 +81894,13 @@ and limitations under the License.
                   0 |
                   Math.round((1 * H * m[DefenseConst.SIDE_RIGHT]) / W - 1e-4));
               (n.removeItem(w, H),
-                (F.leftSide[U] = w),
-                (F.leftSide[U + 1] = K),
-                (F.middleSide[U] = w),
-                (F.middleSide[U + 1] = V),
-                (F.rightSide[U] = w),
-                (F.rightSide[U + 1] = Y),
-                (U += 2),
+                (U.leftSide[F] = w),
+                (U.leftSide[F + 1] = K),
+                (U.middleSide[F] = w),
+                (U.middleSide[F + 1] = V),
+                (U.rightSide[F] = w),
+                (U.rightSide[F + 1] = Y),
+                (F += 2),
                 (m[DefenseConst.SIDE_LEFT] -= K),
                 (m[DefenseConst.SIDE_MIDDLE] -= V),
                 (m[DefenseConst.SIDE_RIGHT] -= Y));
@@ -81778,23 +81924,23 @@ and limitations under the License.
                   0 |
                   Math.round((1 * H * d[DefenseConst.SIDE_RIGHT]) / W - 1e-4));
               (n.removeItem(w, H),
-                (F.leftSide[U] = w),
-                (F.leftSide[U + 1] = K),
-                (F.middleSide[U] = w),
-                (F.middleSide[U + 1] = V),
-                (F.rightSide[U] = w),
-                (F.rightSide[U + 1] = Y),
-                (U += 2),
+                (U.leftSide[F] = w),
+                (U.leftSide[F + 1] = K),
+                (U.middleSide[F] = w),
+                (U.middleSide[F + 1] = V),
+                (U.rightSide[F] = w),
+                (U.rightSide[F + 1] = Y),
+                (F += 2),
                 (d[DefenseConst.SIDE_LEFT] -= K),
                 (d[DefenseConst.SIDE_MIDDLE] -= V),
                 (d[DefenseConst.SIDE_RIGHT] -= Y));
             }
           }
-          for (var z = U; z < M; z++)
-            ((F.leftSide[z] = -1),
-              (F.middleSide[z] = -1),
-              (F.rightSide[z] = -1));
-          return F;
+          for (var z = F; z < M; z++)
+            ((U.leftSide[z] = -1),
+              (U.middleSide[z] = -1),
+              (U.rightSide[z] = -1));
+          return U;
         }),
         DefenseConst
       );
@@ -82921,7 +83067,7 @@ and limitations under the License.
       (M.FACTION_ACTIVE_THRESHOLD = 250),
       (t.FactionConst = M),
       (M.__class = "FactionConst"));
-    var F = (function () {
+    var U = (function () {
       function FusionConst() {}
       return (
         (FusionConst.getPremiumFusionC2Cost = function (e) {
@@ -83066,96 +83212,96 @@ and limitations under the License.
         FusionConst
       );
     })();
-    ((F.DECORATION_FORGE_ID = 1),
-      (t.FusionConst = F),
-      (F.__class = "FusionConst"));
-    var U = (function () {
+    ((U.DECORATION_FORGE_ID = 1),
+      (t.FusionConst = U),
+      (U.__class = "FusionConst"));
+    var F = (function () {
       return function GameConst() {};
     })();
-    ((U.GAME_ID = 12),
-      (U.IS_EMPIRE = !0),
-      (U.IS_E4K = !1),
-      (U.GAME_NAME_SHORT = "EP"),
-      (U.ALLIANCE_FORGE_ACTIVATED = !0),
-      (U.JUDGMENT_CITIZEN_ACTIVATED = !0),
-      (U.LOOKING_FOR_MEMBERS_ACTIVATED = !0),
-      (U.MAIN_QUESTS_ACTIVATED = !0),
-      (U.PROMO_MAILS_ACTIVATED = !0),
-      (U.WORLD_LOOP_ACTIVATED = !0),
-      (U.ALLI_FORUM_ACTIVATED = !0),
-      (U.COMEBACK_BONUS_ACTIVATED = !0),
-      (U.EXPANSION_TREASURE_CHEST = !0),
-      (U.EMPTY_DEFAULT_EMBLEM = !0),
-      (U.RESOURCE_CARTS = !0),
-      (U.ALLIANCE_TRIBUTE = !0),
-      (U.LABORATORY_ACTIVATED = !0),
-      (U.SEND_ALLIANCE_WAR_MESSAGE = !0),
-      (U.WEB_RESOURCE_PACKAGE = !0),
-      (U.WEB_USE_ROUNDING = !0),
-      (U.WEB_AUTO_RETREAT = !0),
-      (U.KINGDOM_RESOURCES_IMMEDIATELY_LOOTABLE = !1),
-      (U.WEB_REGISTER = !0),
-      (U.WEB_COLOSSUS = !0),
-      (U.WEB_WISHING_WELL = !0),
-      (U.WEB_TUTORIAL = !0),
-      (U.WEB_FACTION = !0),
-      (U.WEB_ARCHIVE_MESSAGE = !0),
-      (U.WEB_PARAGON = !0),
-      (U.WEB_SEARCH_MAP = !0),
-      (U.WEB_ALIEN = !0),
-      (U.WEB_STORM_ISLAND = !0),
-      (U.WEB_GEMS = !0),
-      (U.REG_MGR_USE_EMPIRE_ERROR_CODES = !0),
-      (U.LP_LOGINREWARD = !0),
-      (U.CORE_LOGIN = !1),
-      (U.PRIVATE_OFFER_EMPIRE_STILE = !0),
-      (U.LEVEL_ZERO_EMBLEM = !0),
-      (U.SET_PLAYER_PW_HASH_IN_FACADE = !1),
-      (U.VERIFY_PLAYER_MAIL_EVENT = !0),
-      (U.SIMPLE_RANDOM = !0),
-      (U.WEB_DEFAULT_NETWORK = !0),
-      (U.BUGGY_ADDITIONAL_ICE_KINGDOM_CASTLES = !0),
-      (U.ALIEN_INVASION_USE_RANDOM_TOOL_AMOUNTS = !1),
-      (U.ALIEN_HERO_EFFECTS = !0),
-      (U.WEB_MOVEMENT_VISIBILITY = !0),
-      (U.WEB_NPC_ATTACKS = !0),
-      (U.PRIME_SALE_FILL_ALL_STORAGES = !1),
-      (U.SLIM_BASIC_DATA = !1),
-      (U.UNLOCK_EVENT_ERROR_RESPONSE = !1),
-      (U.SEND_OUT_ACHIEVEMENT_LIST = !0),
-      (U.QUEST_CAN_BE_UNREAD = !1),
-      (U.ALLIANCE_MINI_CHAT = !1),
-      (U.SPYLOG_TOOLS_AMOUNT = !1),
-      (U.SEND_ALLIANCE_WAR_ENEMY_SABOTAGE_MESSAGE = !1),
-      (U.ALLI_AUTOWAR_ON_CHANGE_NOTIFY_ALL = !1),
-      (U.DETAIL_CASTLE_LIST_WITH_PACKAGE_LIST_OVERVIEW = !1),
-      (U.E4K_TUTORIAL_AB = !1),
-      (U.INVALIDATE_USER_KINGDOM = !1),
-      (U.SEND_AQUA_RANK_IN_ALLIANCE_INFO = !1),
-      (U.SEND_FULL_GBC = !1),
-      (U.DISTINGUISH_SHADOW_ATTACKS = !0),
-      (U.FACEBOOK_USE_MAPPING_PROVIDER = !1),
-      (U.FACEBOOK_FRIENDINVITE = !1),
-      (U.SEND_DAMAGE_AND_RUBBLE = !1),
-      (U.REGISTRATION_EMAIL_WITH_WEBSITE_ID_ENABLED = !0),
-      (U.PING_PONG = !1),
-      (U.MOBILE_CORE_EVENTSTUFF = !1),
-      (U.FREE_PLAYER_RENAME = !1),
-      (U.PUSH_NOTIFICATIONS_ACTIVATED = !1),
-      (U.MOBILE_LOGIN_ADDITIONAL_DATA = !1),
-      (U.FACEBOOK_EMPIRE_STYLE = !0),
-      (U.WEB_LTPE = !0),
-      (U.RATING_EVENT_ENABLED = !1),
-      (U.ANNOUNCEMENT_ENABLED = !1),
-      (U.EXPIRED_EQUIPMENT_MESSAGE_ENABLED = !0),
-      (U.HAS_LOGIN_TOKEN = !0),
-      (U.GAME_SHORT_NAME = "Empire"),
-      (U.ITEM_XML_NAME = "items.xml"),
-      (U.GAME_TRACKING_PREFIX = "empire_"),
-      (U.DEFAULT_URL = "empire.goodgamestudios.com"),
-      (U.AWS_PROJECT_NAME = "ep"),
-      (t.GameConst = U),
-      (U.__class = "GameConst"));
+    ((F.GAME_ID = 12),
+      (F.IS_EMPIRE = !0),
+      (F.IS_E4K = !1),
+      (F.GAME_NAME_SHORT = "EP"),
+      (F.ALLIANCE_FORGE_ACTIVATED = !0),
+      (F.JUDGMENT_CITIZEN_ACTIVATED = !0),
+      (F.LOOKING_FOR_MEMBERS_ACTIVATED = !0),
+      (F.MAIN_QUESTS_ACTIVATED = !0),
+      (F.PROMO_MAILS_ACTIVATED = !0),
+      (F.WORLD_LOOP_ACTIVATED = !0),
+      (F.ALLI_FORUM_ACTIVATED = !0),
+      (F.COMEBACK_BONUS_ACTIVATED = !0),
+      (F.EXPANSION_TREASURE_CHEST = !0),
+      (F.EMPTY_DEFAULT_EMBLEM = !0),
+      (F.RESOURCE_CARTS = !0),
+      (F.ALLIANCE_TRIBUTE = !0),
+      (F.LABORATORY_ACTIVATED = !0),
+      (F.SEND_ALLIANCE_WAR_MESSAGE = !0),
+      (F.WEB_RESOURCE_PACKAGE = !0),
+      (F.WEB_USE_ROUNDING = !0),
+      (F.WEB_AUTO_RETREAT = !0),
+      (F.KINGDOM_RESOURCES_IMMEDIATELY_LOOTABLE = !1),
+      (F.WEB_REGISTER = !0),
+      (F.WEB_COLOSSUS = !0),
+      (F.WEB_WISHING_WELL = !0),
+      (F.WEB_TUTORIAL = !0),
+      (F.WEB_FACTION = !0),
+      (F.WEB_ARCHIVE_MESSAGE = !0),
+      (F.WEB_PARAGON = !0),
+      (F.WEB_SEARCH_MAP = !0),
+      (F.WEB_ALIEN = !0),
+      (F.WEB_STORM_ISLAND = !0),
+      (F.WEB_GEMS = !0),
+      (F.REG_MGR_USE_EMPIRE_ERROR_CODES = !0),
+      (F.LP_LOGINREWARD = !0),
+      (F.CORE_LOGIN = !1),
+      (F.PRIVATE_OFFER_EMPIRE_STILE = !0),
+      (F.LEVEL_ZERO_EMBLEM = !0),
+      (F.SET_PLAYER_PW_HASH_IN_FACADE = !1),
+      (F.VERIFY_PLAYER_MAIL_EVENT = !0),
+      (F.SIMPLE_RANDOM = !0),
+      (F.WEB_DEFAULT_NETWORK = !0),
+      (F.BUGGY_ADDITIONAL_ICE_KINGDOM_CASTLES = !0),
+      (F.ALIEN_INVASION_USE_RANDOM_TOOL_AMOUNTS = !1),
+      (F.ALIEN_HERO_EFFECTS = !0),
+      (F.WEB_MOVEMENT_VISIBILITY = !0),
+      (F.WEB_NPC_ATTACKS = !0),
+      (F.PRIME_SALE_FILL_ALL_STORAGES = !1),
+      (F.SLIM_BASIC_DATA = !1),
+      (F.UNLOCK_EVENT_ERROR_RESPONSE = !1),
+      (F.SEND_OUT_ACHIEVEMENT_LIST = !0),
+      (F.QUEST_CAN_BE_UNREAD = !1),
+      (F.ALLIANCE_MINI_CHAT = !1),
+      (F.SPYLOG_TOOLS_AMOUNT = !1),
+      (F.SEND_ALLIANCE_WAR_ENEMY_SABOTAGE_MESSAGE = !1),
+      (F.ALLI_AUTOWAR_ON_CHANGE_NOTIFY_ALL = !1),
+      (F.DETAIL_CASTLE_LIST_WITH_PACKAGE_LIST_OVERVIEW = !1),
+      (F.E4K_TUTORIAL_AB = !1),
+      (F.INVALIDATE_USER_KINGDOM = !1),
+      (F.SEND_AQUA_RANK_IN_ALLIANCE_INFO = !1),
+      (F.SEND_FULL_GBC = !1),
+      (F.DISTINGUISH_SHADOW_ATTACKS = !0),
+      (F.FACEBOOK_USE_MAPPING_PROVIDER = !1),
+      (F.FACEBOOK_FRIENDINVITE = !1),
+      (F.SEND_DAMAGE_AND_RUBBLE = !1),
+      (F.REGISTRATION_EMAIL_WITH_WEBSITE_ID_ENABLED = !0),
+      (F.PING_PONG = !1),
+      (F.MOBILE_CORE_EVENTSTUFF = !1),
+      (F.FREE_PLAYER_RENAME = !1),
+      (F.PUSH_NOTIFICATIONS_ACTIVATED = !1),
+      (F.MOBILE_LOGIN_ADDITIONAL_DATA = !1),
+      (F.FACEBOOK_EMPIRE_STYLE = !0),
+      (F.WEB_LTPE = !0),
+      (F.RATING_EVENT_ENABLED = !1),
+      (F.ANNOUNCEMENT_ENABLED = !1),
+      (F.EXPIRED_EQUIPMENT_MESSAGE_ENABLED = !0),
+      (F.HAS_LOGIN_TOKEN = !0),
+      (F.GAME_SHORT_NAME = "Empire"),
+      (F.ITEM_XML_NAME = "items.xml"),
+      (F.GAME_TRACKING_PREFIX = "empire_"),
+      (F.DEFAULT_URL = "empire.goodgamestudios.com"),
+      (F.AWS_PROJECT_NAME = "ep"),
+      (t.GameConst = F),
+      (F.__class = "GameConst"));
     var G = (function () {
       function GemConst() {}
       return (
@@ -85961,19 +86107,19 @@ and limitations under the License.
       (Me.PLATFORM_GAME_CENTER = "gamecenter"),
       (t.ThirdPartyAuthConst = Me),
       (Me.__class = "ThirdPartyAuthConst"));
-    var Fe = (function () {
+    var Ue = (function () {
       return function TimeConst() {};
     })();
-    ((Fe.SUNDAY = 1),
-      (Fe.MONDAY = 2),
-      (Fe.TUESDAY = 3),
-      (Fe.WEDNESDAY = 4),
-      (Fe.THURSDAY = 5),
-      (Fe.FRIDAY = 6),
-      (Fe.SATURDAY = 7),
-      (t.TimeConst = Fe),
-      (Fe.__class = "TimeConst"));
-    var Ue = (function () {
+    ((Ue.SUNDAY = 1),
+      (Ue.MONDAY = 2),
+      (Ue.TUESDAY = 3),
+      (Ue.WEDNESDAY = 4),
+      (Ue.THURSDAY = 5),
+      (Ue.FRIDAY = 6),
+      (Ue.SATURDAY = 7),
+      (t.TimeConst = Ue),
+      (Ue.__class = "TimeConst"));
+    var Fe = (function () {
       function TimeLimitedCampaignConst() {}
       return (
         (TimeLimitedCampaignConst.calculateEndRewardPurchaseCost = function (
@@ -85990,15 +86136,15 @@ and limitations under the License.
         TimeLimitedCampaignConst
       );
     })();
-    ((Ue.NO_SKIN = -1),
-      (Ue.QUEST_STATUS_NEW = "N"),
-      (Ue.QUEST_STATUS_INPROGRESS = "I"),
-      (Ue.QUEST_STATUS_FAILED = "F"),
-      (Ue.QUEST_STATUS_COMPLETE = "C"),
-      (Ue.DEFAULT_END_REWARD_VALUE = 1e6),
-      (Ue.END_REWARD_VALUE_REMAINDER_DIVISOR = 1e4),
-      (t.TimeLimitedCampaignConst = Ue),
-      (Ue.__class = "TimeLimitedCampaignConst"));
+    ((Fe.NO_SKIN = -1),
+      (Fe.QUEST_STATUS_NEW = "N"),
+      (Fe.QUEST_STATUS_INPROGRESS = "I"),
+      (Fe.QUEST_STATUS_FAILED = "F"),
+      (Fe.QUEST_STATUS_COMPLETE = "C"),
+      (Fe.DEFAULT_END_REWARD_VALUE = 1e6),
+      (Fe.END_REWARD_VALUE_REMAINDER_DIVISOR = 1e4),
+      (t.TimeLimitedCampaignConst = Fe),
+      (Fe.__class = "TimeLimitedCampaignConst"));
     var Ge = (function () {
       return function TombolaConst() {};
     })();
@@ -118609,10 +118755,10 @@ and limitations under the License.
                               pluralForms: e,
                             };
                           },
-                          F = function (e) {
+                          U = function (e) {
                             return e;
                           },
-                          U = "#",
+                          F = "#",
                           G = {
                             type: "literal",
                             value: "#",
@@ -119111,7 +119257,7 @@ and limitations under the License.
                                 peg$parse_() !== i &&
                                 (s = peg$parseid()) !== i &&
                                 peg$parse_() !== i
-                                  ? ((n = F(s)), (t = n))
+                                  ? ((n = U(s)), (t = n))
                                   : ((Te = t), (t = o)))
                               : ((Te = t), (t = o)),
                             t
@@ -119122,7 +119268,7 @@ and limitations under the License.
                           return (
                             Te,
                             35 === e.charCodeAt(Te)
-                              ? ((t = U), Te++)
+                              ? ((t = F), Te++)
                               : ((t = i), 0 === Ae && peg$fail(G)),
                             t !== i && (t = k()),
                             t
@@ -120233,7 +120379,7 @@ and limitations under the License.
               M = function (e) {
                 return B.indexOf(e.supplemental.weekData.firstDay());
               },
-              F = function (e, t, n, i) {
+              U = function (e, t, n, i) {
                 var a, s;
                 if (n)
                   return (s = i.main([
@@ -120256,7 +120402,7 @@ and limitations under the License.
                         t,
                       ]));
               },
-              U = function (e) {
+              F = function (e) {
                 return e
                   .split(";")
                   .map(function (e) {
@@ -120628,13 +120774,13 @@ and limitations under the License.
                                   t.supplemental.timeData.preferred()),
                               "Z" === u && 4 === d && ((u = "O"), (d = 4)),
                               "z" === u &&
-                                ((h = F(d, "standard", n, t)),
-                                (_ = F(d, "daylight", n, t)),
+                                ((h = U(d, "standard", n, t)),
+                                (_ = U(d, "daylight", n, t)),
                                 h && (s.standardTzName = h),
                                 _ && (s.daylightTzName = _),
                                 (h && _) || ((u = "O"), d < 4 && (d = 1))),
                               "v" === u &&
-                                ((m = F(d, "generic", n, t)) ||
+                                ((m = U(d, "generic", n, t)) ||
                                   ((u = "V"), (d = 4))),
                               u)
                             ) {
@@ -120803,7 +120949,7 @@ and limitations under the License.
                                     "dates/timeZoneNames/hourFormat",
                                   )),
                                   (s.hourFormat =
-                                    d < 4 ? [U(l), G(l, "H")] : G(l, "HH")));
+                                    d < 4 ? [F(l), G(l, "H")] : G(l, "HH")));
                               case "Z":
                               case "X":
                               case "x":
@@ -121107,8 +121253,8 @@ and limitations under the License.
                                   ? ((l = "O"), (g = 4))
                                   : ((l = "X"), (g = 5))),
                               "z" === l &&
-                                ((E = F(g, "standard", n, t)),
-                                (h = F(g, "daylight", n, t)),
+                                ((E = U(g, "standard", n, t)),
+                                (h = U(g, "daylight", n, t)),
                                 E && (E = c(r(E))),
                                 h && (h = c(r(h))),
                                 (E || h) &&
@@ -121135,7 +121281,7 @@ and limitations under the License.
                                 throw i({
                                   feature: "timezone pattern `" + e + "`",
                                 });
-                              var C = F(g, "generic", n, t);
+                              var C = U(g, "generic", n, t);
                               C
                                 ? ((_.genericTzName = new RegExp(
                                     "^" + c(r(C)),
@@ -121257,7 +121403,7 @@ and limitations under the License.
                                     )),
                                   (o = _["timeZoneNames/hourFormat"]),
                                   (_["timeZoneNames/hourFormat"] = (
-                                    g < 4 ? [G(o, "H"), U(o)] : [G(o, "HH")]
+                                    g < 4 ? [G(o, "H"), F(o)] : [G(o, "HH")]
                                   ).map(function (e) {
                                     return hourFormatRe(e, p, u, m);
                                   })));
@@ -122617,8 +122763,8 @@ and limitations under the License.
         P = /^\s+|\s+$/g,
         B = /\\(\\)?/g,
         M = /^[-+]0x[0-9a-f]+$/i,
-        F = /^0b[01]+$/i,
-        U = /^\[object .+?Constructor\]$/,
+        U = /^0b[01]+$/i,
+        F = /^\[object .+?Constructor\]$/,
         G = /^0o[0-7]+$/i,
         k = /^(?:0|[1-9]\d*)$/,
         w = {};
@@ -122930,7 +123076,7 @@ and limitations under the License.
             (function isMasked(e) {
               return !!ee && ee in e;
             })(e)
-          ) && (isFunction(e) || isHostObject(e) ? ae : U).test(toSource(e))
+          ) && (isFunction(e) || isHostObject(e) ? ae : F).test(toSource(e))
         );
       }
       function baseIteratee(e) {
@@ -123329,7 +123475,7 @@ and limitations under the License.
                         }
                         if ("string" != typeof e) return 0 === e ? e : +e;
                         e = e.replace(P, "");
-                        var n = F.test(e);
+                        var n = U.test(e);
                         return n || G.test(e)
                           ? x(e.slice(2), n ? 2 : 8)
                           : M.test(e)
@@ -123786,8 +123932,8 @@ and limitations under the License.
       P = n(385),
       B = n(387),
       M = n(388),
-      F = n(389),
-      U = n(390),
+      U = n(389),
+      F = n(390),
       G = n(391),
       k = n(392),
       w = n(393),
@@ -124004,7 +124150,7 @@ and limitations under the License.
               h.CommandController.instance.registerCommand(
                 C.BasicController
                   .COMMAND_TRACK_DESKTOP_DEVICE_INFORMATION_EVENT,
-                F.BasicDesktopDeviceInformationTrackingCommand,
+                U.BasicDesktopDeviceInformationTrackingCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_TRACK_BROWSER_STATE_EVENT,
@@ -124020,7 +124166,7 @@ and limitations under the License.
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_TRACK_FACEBOOK_CONNECTION,
-                U.BasicFacebookConnectionTrackingCommand,
+                F.BasicFacebookConnectionTrackingCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_TRACK_FACEBOOK_USERDATA,
@@ -142413,13 +142559,13 @@ and limitations under the License.
         P = "object" == typeof window ? window : self,
         B = 0;
       for (var M in P) Object.hasOwnProperty.call(P, M) && B++;
-      var F = navigator.mimeTypes ? navigator.mimeTypes.length : 0,
-        U = R(
-          (F + navigator.userAgent.length).toString(36) + B.toString(36),
+      var U = navigator.mimeTypes ? navigator.mimeTypes.length : 0,
+        F = R(
+          (U + navigator.userAgent.length).toString(36) + B.toString(36),
           4,
         ),
         G = function fingerprint() {
-          return U;
+          return F;
         },
         k = 0,
         w = 4,
@@ -143141,8 +143287,8 @@ and limitations under the License.
           } catch (e) {}
         },
         Me = {},
-        Fe = "request",
-        Ue = "BS~~U",
+        Ue = "request",
+        Fe = "BS~~U",
         Ge = "BS~~M",
         ke = a.includes,
         we = void 0,
@@ -143165,7 +143311,7 @@ and limitations under the License.
         if ("addEventListener" in window.XMLHttpRequest.prototype) {
           var e = window.XMLHttpRequest.prototype.open;
           window.XMLHttpRequest.prototype.open = function open(t, n) {
-            ((this[Ue] = n),
+            ((this[Fe] = n),
               (this[Ge] = t),
               this["BS~~S"] &&
                 (this.removeEventListener("load", handleXHRLoad),
@@ -143178,19 +143324,19 @@ and limitations under the License.
         }
       };
       function handleXHRLoad() {
-        if (!ke(xe(), this[Ue])) {
-          var e = { status: this.status, request: this[Ge] + " " + this[Ue] };
+        if (!ke(xe(), this[Fe])) {
+          var e = { status: this.status, request: this[Ge] + " " + this[Fe] };
           this.status >= 400
-            ? we.leaveBreadcrumb("XMLHttpRequest failed", e, Fe)
-            : we.leaveBreadcrumb("XMLHttpRequest succeeded", e, Fe);
+            ? we.leaveBreadcrumb("XMLHttpRequest failed", e, Ue)
+            : we.leaveBreadcrumb("XMLHttpRequest succeeded", e, Ue);
         }
       }
       function handleXHRError() {
-        ke(xe(), this[Ue]) ||
+        ke(xe(), this[Fe]) ||
           we.leaveBreadcrumb(
             "XMLHttpRequest error",
-            { request: this[Ge] + " " + this[Ue] },
-            Fe,
+            { request: this[Ge] + " " + this[Fe] },
+            Ue,
           );
       }
       var He = function () {
@@ -143220,11 +143366,11 @@ and limitations under the License.
         Ve = function (e, t, n) {
           var i = { status: e.status, request: t + " " + n };
           e.status >= 400
-            ? we.leaveBreadcrumb("fetch() failed", i, Fe)
-            : we.leaveBreadcrumb("fetch() succeeded", i, Fe);
+            ? we.leaveBreadcrumb("fetch() failed", i, Ue)
+            : we.leaveBreadcrumb("fetch() succeeded", i, Ue);
         },
         je = function (e, t) {
-          we.leaveBreadcrumb("fetch() error", { request: e + " " + t }, Fe);
+          we.leaveBreadcrumb("fetch() error", { request: e + " " + t }, Ue);
         },
         qe =
           Object.assign ||
@@ -145461,8 +145607,8 @@ and limitations under the License.
         P = b.peek,
         B = b.skip,
         M = b.cmnt,
-        F = !0,
-        U = !1,
+        U = !0,
+        F = !1,
         G = t,
         k = n.keepCase
           ? function (e) {
@@ -145581,7 +145727,7 @@ and limitations under the License.
       }
       function parseSyntax() {
         if (
-          (B("="), (L = readString()), !(U = "proto3" === L) && "proto2" !== L)
+          (B("="), (L = readString()), !(F = "proto3" === L) && "proto2" !== L)
         )
           throw illegal(L, "syntax");
         B(";");
@@ -145648,7 +145794,7 @@ and limitations under the License.
                         readRanges(n.reserved || (n.reserved = []), !0);
                         break;
                       default:
-                        if (!U || !y.test(e)) throw illegal(e);
+                        if (!F || !y.test(e)) throw illegal(e);
                         (R(e), parseField(n, "optional"));
                     }
                 }),
@@ -145744,7 +145890,7 @@ and limitations under the License.
                       parseField(e, t, n);
                       break;
                     default:
-                      if (!U || !y.test(t)) throw illegal(t);
+                      if (!F || !y.test(t)) throw illegal(t);
                       (R(t), parseField(e, "optional", n));
                   }
                 });
@@ -145785,7 +145931,7 @@ and limitations under the License.
             },
           ),
             e.add(o),
-            U ||
+            F ||
               !o.repeated ||
               (void 0 === m.packed[i] && void 0 !== m.basic[i]) ||
               o.setOption("packed", !1, !0));
@@ -145859,24 +146005,24 @@ and limitations under the License.
       for (; null !== (D = N()); )
         switch (D) {
           case "package":
-            if (!F) throw illegal(D);
+            if (!U) throw illegal(D);
             parsePackage();
             break;
           case "import":
-            if (!F) throw illegal(D);
+            if (!U) throw illegal(D);
             parseImport();
             break;
           case "syntax":
-            if (!F) throw illegal(D);
+            if (!U) throw illegal(D);
             parseSyntax();
             break;
           case "option":
-            if (!F) throw illegal(D);
+            if (!U) throw illegal(D);
             (parseOption(G, D), B(";"));
             break;
           default:
             if (parseCommon(G, D)) {
-              F = !1;
+              U = !1;
               continue;
             }
             throw illegal(D);
@@ -145968,4 +146114,4 @@ and limitations under the License.
       }));
   },
 ]);
-//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/dll/ggs.dll.1761a1c6368aee4f332f.js.map
+//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/dll/ggs.dll.23cd48d8ea2b38c29b6e.js.map
