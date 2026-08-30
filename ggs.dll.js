@@ -255,7 +255,7 @@ and limitations under the License.
         return function (o) {
           return (function step(s) {
             if (n) throw new TypeError("Generator is already executing.");
-            for (; r; )
+            for (; r;)
               try {
                 if (
                   ((n = 1),
@@ -342,7 +342,7 @@ and limitations under the License.
         s = n.call(e),
         r = [];
       try {
-        for (; (void 0 === t || t-- > 0) && !(i = s.next()).done; )
+        for (; (void 0 === t || t-- > 0) && !(i = s.next()).done;)
           r.push(i.value);
       } catch (e) {
         a = { error: e };
@@ -595,7 +595,7 @@ and limitations under the License.
                   (this.func = i));
                 var r = [];
                 ((this.check = function (o) {
-                  for (var l, u, _, c, d = t.length, h = d; --d > -1; )
+                  for (var l, u, _, c, d = t.length, h = d; --d > -1;)
                     (l = E[t[d]] || new C(t[d], [])).gsClass
                       ? ((r[d] = l.gsClass), h--)
                       : o && l.sc.push(this);
@@ -732,7 +732,7 @@ and limitations under the License.
                 var n,
                   i = this._listeners[e];
                 if (i)
-                  for (n = i.length; --n > -1; )
+                  for (n = i.length; --n > -1;)
                     if (i[n].c === t) return void i.splice(n, 1);
               }),
               (o.dispatchEvent = function (e) {
@@ -759,10 +759,7 @@ and limitations under the License.
                   return new Date().getTime();
                 },
               b = D();
-            for (
-              r = (s = ["ms", "moz", "webkit", "o"]).length;
-              --r > -1 && !O;
-            )
+            for (r = (s = ["ms", "moz", "webkit", "o"]).length; --r > -1 && !O;)
               ((O = e[s[r] + "RequestAnimationFrame"]),
                 (L =
                   e[s[r] + "CancelAnimationFrame"] ||
@@ -953,12 +950,12 @@ and limitations under the License.
                 return (this._kill(e, t), this);
               }),
               (o._uncache = function (e) {
-                for (var t = e ? this : this.timeline; t; )
+                for (var t = e ? this : this.timeline; t;)
                   ((t._dirty = !0), (t = t.timeline));
                 return this;
               }),
               (o._swapSelfInParams = function (e) {
-                for (var t = e.length, n = e.concat(); --t > -1; )
+                for (var t = e.length, n = e.concat(); --t > -1;)
                   "{self}" === e[t] && (n[t] = this);
                 return n;
               }),
@@ -1050,7 +1047,7 @@ and limitations under the License.
                       a._dirty || this._uncache(!1),
                       a._timeline)
                     )
-                      for (; a._timeline; )
+                      for (; a._timeline;)
                         (a._timeline._time !==
                           (a._startTime + a._totalTime) / a._timeScale &&
                           a.totalTime(a._totalTime, !0),
@@ -1151,11 +1148,11 @@ and limitations under the License.
                   this
                 );
               }));
-            var P = T("core.SimpleTimeline", function (e) {
+            var B = T("core.SimpleTimeline", function (e) {
               (R.call(this, 0, e),
                 (this.autoRemoveChildren = this.smoothChildTiming = !0));
             });
-            (((o = P.prototype = new R()).constructor = P),
+            (((o = B.prototype = new R()).constructor = B),
               (o.kill()._gc = !1),
               (o._first = o._last = o._recent = null),
               (o._sortChildren = !1),
@@ -1175,7 +1172,7 @@ and limitations under the License.
                     (a = this._last),
                     this._sortChildren)
                   )
-                    for (s = e._startTime; a && a._startTime > s; ) a = a._prev;
+                    for (s = e._startTime; a && a._startTime > s;) a = a._prev;
                   return (
                     a
                       ? ((e._next = a._next), (a._next = e))
@@ -1206,7 +1203,7 @@ and limitations under the License.
               (o.render = function (e, t, n) {
                 var i,
                   a = this._first;
-                for (this._totalTime = this._time = this._rawPrevTime = e; a; )
+                for (this._totalTime = this._time = this._rawPrevTime = e; a;)
                   ((i = a._next),
                     (a._active ||
                       (e >= a._startTime && !a._paused && !a._gc)) &&
@@ -1223,17 +1220,17 @@ and limitations under the License.
               (o.rawTime = function () {
                 return (u || l.wake(), this._totalTime);
               }));
-            var B = T(
+            var P = T(
                 "TweenLite",
                 function (t, n, i) {
                   if (
                     (R.call(this, n, i),
-                    (this.render = B.prototype.render),
+                    (this.render = P.prototype.render),
                     null == t)
                   )
                     throw "Cannot tween a null target.";
                   this.target = t =
-                    "string" != typeof t ? t : B.selector(t) || t;
+                    "string" != typeof t ? t : P.selector(t) || t;
                   var a,
                     s,
                     r,
@@ -1248,7 +1245,7 @@ and limitations under the License.
                   if (
                     ((this._overwrite = l =
                       null == l
-                        ? Y[B.defaultOverwrite]
+                        ? Y[P.defaultOverwrite]
                         : "number" == typeof l
                           ? l >> 0
                           : Y[l]),
@@ -1276,7 +1273,7 @@ and limitations under the License.
                               1 === l &&
                                 this._siblings[a].length > 1 &&
                                 ee(s, this, null, 1, this._siblings[a]))
-                          : "string" == typeof (s = r[a--] = B.selector(s)) &&
+                          : "string" == typeof (s = r[a--] = P.selector(s)) &&
                             r.splice(a + 1, 1)
                         : r.splice(a--, 1);
                   else
@@ -1303,7 +1300,7 @@ and limitations under the License.
                   (t[0] === e || (t[0].nodeType && t[0].style && !t.nodeType))
                 );
               };
-            (((o = B.prototype = new R()).constructor = B),
+            (((o = P.prototype = new R()).constructor = P),
               (o.kill()._gc = !1),
               (o.ratio = 0),
               (o._firstPT =
@@ -1312,21 +1309,21 @@ and limitations under the License.
                 o._startAt =
                   null),
               (o._notifyPluginsOfEnabled = o._lazy = !1),
-              (B.version = "2.0.2"),
-              (B.defaultEase = o._ease = new y(null, null, 1, 1)),
-              (B.defaultOverwrite = "auto"),
-              (B.ticker = l),
-              (B.autoSleep = 120),
-              (B.lagSmoothing = function (e, t) {
+              (P.version = "2.0.2"),
+              (P.defaultEase = o._ease = new y(null, null, 1, 1)),
+              (P.defaultOverwrite = "auto"),
+              (P.ticker = l),
+              (P.autoSleep = 120),
+              (P.lagSmoothing = function (e, t) {
                 l.lagSmoothing(e, t);
               }),
-              (B.selector =
+              (P.selector =
                 e.$ ||
                 e.jQuery ||
                 function (t) {
                   var n = e.$ || e.jQuery;
                   return n
-                    ? ((B.selector = n), n(t))
+                    ? ((P.selector = n), n(t))
                     : (i || (i = e.document),
                       i
                         ? i.querySelectorAll
@@ -1341,7 +1338,7 @@ and limitations under the License.
               G = /(?:(-|-=|\+=)?\d*\.?\d*(?:e[\-+]?\d+)?)[0-9]/gi,
               k = /[\+-]=-?[\.\d]/,
               w = function (e) {
-                for (var t, n = this._firstPT; n; )
+                for (var t, n = this._firstPT; n;)
                   ((t = n.blob
                     ? 1 === e && null != this.end
                       ? this.end
@@ -1467,7 +1464,7 @@ and limitations under the License.
                                   d.c +
                                   (d.s + "").replace(/[0-9\-\.]/g, "")
                               : i,
-                            o || B.defaultStringFilter,
+                            o || P.defaultStringFilter,
                             d,
                           ),
                           p: "setRatio",
@@ -1489,13 +1486,13 @@ and limitations under the License.
                     d
                   );
               },
-              H = (B._internals = {
+              H = (P._internals = {
                 isArray: g,
                 isSelector: M,
                 lazyTweens: U,
                 blobDif: x,
               }),
-              V = (B._plugins = {}),
+              V = (P._plugins = {}),
               j = (H.tweenLookup = {}),
               q = 0,
               K = (H.reservedProps = {
@@ -1546,13 +1543,13 @@ and limitations under the License.
                 true: 1,
                 false: 0,
               },
-              z = (R._rootFramesTimeline = new P()),
-              Z = (R._rootTimeline = new P()),
+              z = (R._rootFramesTimeline = new B()),
+              Z = (R._rootTimeline = new B()),
               X = 30,
               Q = (H.lazyRender = function () {
                 var e,
                   t = U.length;
-                for (F = {}; --t > -1; )
+                for (F = {}; --t > -1;)
                   (e = U[t]) &&
                     !1 !== e._lazy &&
                     (e.render(e._lazy[0], e._lazy[1], !0), (e._lazy = !1));
@@ -1562,7 +1559,7 @@ and limitations under the License.
               (z._startTime = l.frame),
               (Z._active = z._active = !0),
               setTimeout(Q, 1),
-              (R._updateRoot = B.render =
+              (R._updateRoot = P.render =
                 function () {
                   var e, t, n;
                   if (
@@ -1573,19 +1570,19 @@ and limitations under the License.
                     l.frame >= X)
                   ) {
                     for (n in ((X =
-                      l.frame + (parseInt(B.autoSleep, 10) || 120)),
+                      l.frame + (parseInt(P.autoSleep, 10) || 120)),
                     j)) {
-                      for (e = (t = j[n].tweens).length; --e > -1; )
+                      for (e = (t = j[n].tweens).length; --e > -1;)
                         t[e]._gc && t.splice(e, 1);
                       0 === t.length && delete j[n];
                     }
                     if (
                       (!(n = Z._first) || n._paused) &&
-                      B.autoSleep &&
+                      P.autoSleep &&
                       !z._first &&
                       1 === l._listeners.tick.length
                     ) {
-                      for (; n && n._paused; ) n = n._next;
+                      for (; n && n._paused;) n = n._next;
                       n || l.sleep();
                     }
                   }
@@ -1600,7 +1597,7 @@ and limitations under the License.
                     (j[s] = { target: e, tweens: [] }),
                   t && (((i = j[s].tweens)[(a = i.length)] = t), n))
                 )
-                  for (; --a > -1; ) i[a] === t && i.splice(a, 1);
+                  for (; --a > -1;) i[a] === t && i.splice(a, 1);
                 return j[s].tweens;
               },
               J = function (e, t, n, i) {
@@ -1609,7 +1606,7 @@ and limitations under the License.
                   r = e.vars.onOverwrite;
                 return (
                   r && (a = r(e, t, n, i)),
-                  (r = B.onOverwrite) && (s = r(e, t, n, i)),
+                  (r = P.onOverwrite) && (s = r(e, t, n, i)),
                   !1 !== a && !1 !== s
                 );
               },
@@ -1627,7 +1624,7 @@ and limitations under the License.
                   c = [],
                   m = 0,
                   d = 0 === t._duration;
-                for (s = a.length; --s > -1; )
+                for (s = a.length; --s > -1;)
                   (o = a[s]) === t ||
                     o._gc ||
                     o._paused ||
@@ -1638,7 +1635,7 @@ and limitations under the License.
                         o._startTime + o.totalDuration() / o._timeScale > _ &&
                         (((d || !o._initted) && _ - o._startTime <= 2e-10) ||
                           (c[m++] = o)));
-                for (s = m; --s > -1; )
+                for (s = m; --s > -1;)
                   if (
                     ((l = (o = c[s])._firstPT),
                     2 === i && o._kill(n, e, t) && (r = !0),
@@ -1694,7 +1691,7 @@ and limitations under the License.
                   (a.onUpdateParams = r.onUpdateParams),
                   (a.onUpdateScope =
                     r.onUpdateScope || r.callbackScope || this),
-                  (this._startAt = B.to(this.target || {}, 0, a)),
+                  (this._startAt = P.to(this.target || {}, 0, a)),
                   u)
                 )
                   if (this._time > 0) this._startAt = null;
@@ -1712,7 +1709,7 @@ and limitations under the License.
                     (n.data = "isFromStart"),
                     (n.lazy = u && !1 !== r.lazy),
                     (n.immediateRender = u),
-                    (this._startAt = B.to(this.target, 0, n)),
+                    (this._startAt = P.to(this.target, 0, n)),
                     u)
                   ) {
                     if (0 === this._time) return;
@@ -1728,8 +1725,8 @@ and limitations under the License.
                       ? _
                       : "function" == typeof _
                         ? new y(_, r.easeParams)
-                        : I[_] || B.defaultEase
-                    : B.defaultEase),
+                        : I[_] || P.defaultEase
+                    : P.defaultEase),
                 r.easeParams instanceof Array &&
                   _.config &&
                   (this._ease = _.config.apply(_, r.easeParams)),
@@ -1755,14 +1752,14 @@ and limitations under the License.
                   0,
                 );
               if (
-                (t && B._onPluginEvent("_onInitAllProps", this),
+                (t && P._onPluginEvent("_onInitAllProps", this),
                 o &&
                   (this._firstPT ||
                     ("function" != typeof this.target &&
                       this._enabled(!1, !1))),
                 r.runBackwards)
               )
-                for (n = this._firstPT; n; )
+                for (n = this._firstPT; n;)
                   ((n.s += n.c), (n.c = -n.c), (n = n._next));
               ((this._onUpdate = r.onUpdate), (this._initted = !0));
             }),
@@ -2000,7 +1997,7 @@ and limitations under the License.
                 t =
                   "string" != typeof t
                     ? t || this._targets || this.target
-                    : B.selector(t) || t;
+                    : P.selector(t) || t;
                 var i,
                   a,
                   s,
@@ -2017,11 +2014,11 @@ and limitations under the License.
                     this._timeline === n._timeline,
                   d = this._firstPT;
                 if ((g(t) || M(t)) && "number" != typeof t[0])
-                  for (i = t.length; --i > -1; )
+                  for (i = t.length; --i > -1;)
                     this._kill(e, t[i], n) && (l = !0);
                 else {
                   if (this._targets) {
-                    for (i = this._targets.length; --i > -1; )
+                    for (i = this._targets.length; --i > -1;)
                       if (t === this._targets[i]) {
                         ((o = this._propLookup[i] || {}),
                           (this._overwrittenProps =
@@ -2044,7 +2041,7 @@ and limitations under the License.
                         "all" !== a &&
                         e !== o &&
                         ("object" != typeof e || !e._tempKill)),
-                      n && (B.onOverwrite || this.vars.onOverwrite))
+                      n && (P.onOverwrite || this.vars.onOverwrite))
                     ) {
                       for (s in u) o[s] && (c || (c = []), c.push(s));
                       if ((c || !e) && !J(this, n, t, c)) return !1;
@@ -2073,7 +2070,7 @@ and limitations under the License.
               (o.invalidate = function () {
                 return (
                   this._notifyPluginsOfEnabled &&
-                    B._onPluginEvent("_onDisable", this),
+                    P._onPluginEvent("_onDisable", this),
                   (this._firstPT =
                     this._overwrittenProps =
                     this._startAt =
@@ -2096,36 +2093,36 @@ and limitations under the License.
                   var n,
                     i = this._targets;
                   if (i)
-                    for (n = i.length; --n > -1; )
+                    for (n = i.length; --n > -1;)
                       this._siblings[n] = $(i[n], this, !0);
                   else this._siblings = $(this.target, this, !0);
                 }
                 return (
                   R.prototype._enabled.call(this, e, t),
                   !(!this._notifyPluginsOfEnabled || !this._firstPT) &&
-                    B._onPluginEvent(e ? "_onEnable" : "_onDisable", this)
+                    P._onPluginEvent(e ? "_onEnable" : "_onDisable", this)
                 );
               }),
-              (B.to = function (e, t, n) {
-                return new B(e, t, n);
+              (P.to = function (e, t, n) {
+                return new P(e, t, n);
               }),
-              (B.from = function (e, t, n) {
+              (P.from = function (e, t, n) {
                 return (
                   (n.runBackwards = !0),
                   (n.immediateRender = 0 != n.immediateRender),
-                  new B(e, t, n)
+                  new P(e, t, n)
                 );
               }),
-              (B.fromTo = function (e, t, n, i) {
+              (P.fromTo = function (e, t, n, i) {
                 return (
                   (i.startAt = n),
                   (i.immediateRender =
                     0 != i.immediateRender && 0 != n.immediateRender),
-                  new B(e, t, i)
+                  new P(e, t, i)
                 );
               }),
-              (B.delayedCall = function (e, t, n, i, a) {
-                return new B(t, 0, {
+              (P.delayedCall = function (e, t, n, i, a) {
+                return new P(t, 0, {
                   delay: e,
                   onComplete: t,
                   onCompleteParams: n,
@@ -2138,30 +2135,30 @@ and limitations under the License.
                   overwrite: 0,
                 });
               }),
-              (B.set = function (e, t) {
-                return new B(e, 0, t);
+              (P.set = function (e, t) {
+                return new P(e, 0, t);
               }),
-              (B.getTweensOf = function (e, t) {
+              (P.getTweensOf = function (e, t) {
                 if (null == e) return [];
                 var n, i, a, s;
                 if (
-                  ((e = "string" != typeof e ? e : B.selector(e) || e),
+                  ((e = "string" != typeof e ? e : P.selector(e) || e),
                   (g(e) || M(e)) && "number" != typeof e[0])
                 ) {
-                  for (n = e.length, i = []; --n > -1; )
-                    i = i.concat(B.getTweensOf(e[n], t));
-                  for (n = i.length; --n > -1; )
-                    for (s = i[n], a = n; --a > -1; )
+                  for (n = e.length, i = []; --n > -1;)
+                    i = i.concat(P.getTweensOf(e[n], t));
+                  for (n = i.length; --n > -1;)
+                    for (s = i[n], a = n; --a > -1;)
                       s === i[a] && i.splice(n, 1);
                 } else if (e._gsTweenID)
-                  for (n = (i = $(e).concat()).length; --n > -1; )
+                  for (n = (i = $(e).concat()).length; --n > -1;)
                     (i[n]._gc || (t && !i[n].isActive())) && i.splice(n, 1);
                 return i || [];
               }),
-              (B.killTweensOf = B.killDelayedCallsTo =
+              (P.killTweensOf = P.killDelayedCallsTo =
                 function (e, t, n) {
                   "object" == typeof t && ((n = t), (t = !1));
-                  for (var i = B.getTweensOf(e, t), a = i.length; --a > -1; )
+                  for (var i = P.getTweensOf(e, t), a = i.length; --a > -1;)
                     i[a]._kill(n, e);
                 }));
             var ne = T(
@@ -2187,9 +2184,9 @@ and limitations under the License.
                   i = this._firstPT;
                 if (null != e[this._propName]) this._overwriteProps = [];
                 else
-                  for (t = n.length; --t > -1; )
+                  for (t = n.length; --t > -1;)
                     null != e[n[t]] && n.splice(t, 1);
-                for (; i; )
+                for (; i;)
                   (null != e[i.n] &&
                     (i._next && (i._next._prev = i._prev),
                     i._prev
@@ -2200,7 +2197,7 @@ and limitations under the License.
               }),
               (o._mod = o._roundProps =
                 function (e) {
-                  for (var t, n = this._firstPT; n; )
+                  for (var t, n = this._firstPT; n;)
                     ((t =
                       e[this._propName] ||
                       (null != n.n &&
@@ -2209,7 +2206,7 @@ and limitations under the License.
                       (2 === n.f ? (n.t._applyPT.m = t) : (n.m = t)),
                       (n = n._next));
                 }),
-              (B._onPluginEvent = function (e, t) {
+              (P._onPluginEvent = function (e, t) {
                 var n,
                   i,
                   a,
@@ -2217,8 +2214,8 @@ and limitations under the License.
                   r,
                   o = t._firstPT;
                 if ("_onInitAllProps" === e) {
-                  for (; o; ) {
-                    for (r = o._next, i = a; i && i.pr > o.pr; ) i = i._next;
+                  for (; o;) {
+                    for (r = o._next, i = a; i && i.pr > o.pr;) i = i._next;
                     ((o._prev = i ? i._prev : s)
                       ? (o._prev._next = o)
                       : (a = o),
@@ -2227,13 +2224,13 @@ and limitations under the License.
                   }
                   o = t._firstPT = a;
                 }
-                for (; o; )
+                for (; o;)
                   (o.pg && "function" == typeof o.t[e] && o.t[e]() && (n = !0),
                     (o = o._next));
                 return n;
               }),
               (ne.activate = function (e) {
-                for (var t = e.length; --t > -1; )
+                for (var t = e.length; --t > -1;)
                   e[t].API === ne.API && (V[new e[t]()._propName] = e[t]);
                 return !0;
               }),
@@ -2274,7 +2271,7 @@ and limitations under the License.
                 E[o].func ||
                   e.console.log("GSAP encountered missing dependency: " + o);
             }
-            return ((u = !1), B);
+            return ((u = !1), P);
           })(a),
           r = a.GreenSockGlobals,
           o = r.com.greensock,
@@ -2415,10 +2412,10 @@ and limitations under the License.
     t.LineScaleMode = R.LineScaleMode;
     var N = n(572);
     t.InterpolationMethod = N.InterpolationMethod;
-    var P = n(573);
-    t.GradientType = P.GradientType;
-    var B = n(227);
-    t.PixelSnapping = B.PixelSnapping;
+    var B = n(573);
+    t.GradientType = B.GradientType;
+    var P = n(227);
+    t.PixelSnapping = P.PixelSnapping;
     var M = n(574);
     t.SpreadMethod = M.SpreadMethod;
     var U = n(575);
@@ -3587,9 +3584,9 @@ and limitations under the License.
             (E.getRatio = function (e) {
               var t = this._prev;
               if (e > t.t) {
-                for (; t.next && e >= t.t; ) t = t.next;
+                for (; t.next && e >= t.t;) t = t.next;
                 t = t.prev;
-              } else for (; t.prev && e <= t.t; ) t = t.prev;
+              } else for (; t.prev && e <= t.t;) t = t.prev;
               return ((this._prev = t), t.v + ((e - t.t) / t.gap) * t.c);
             }),
             (E.config = function (e) {
@@ -4181,8 +4178,8 @@ and limitations under the License.
       b = n(293),
       R = n(306),
       N = n(728),
-      P = I.getLogger("Tracking.TrackingCache"),
-      B = (function () {
+      B = I.getLogger("Tracking.TrackingCache"),
+      P = (function () {
         function TrackingCache(e, t) {
           (void 0 === e && (e = new a.TrackingVerifier()),
             void 0 === t && (t = new Map()),
@@ -4292,7 +4289,7 @@ and limitations under the License.
           }),
           (TrackingCache.prototype.sendEvent = function (e) {
             if (!this.isInitialized)
-              return (P.warn("tracking cache is not initalized"), !1);
+              return (B.warn("tracking cache is not initalized"), !1);
             var t = this.prepareEvent(e),
               n = JSON.stringify(t);
             if (this.validateTests) {
@@ -4328,25 +4325,25 @@ and limitations under the License.
             return (
               t.eventId
                 ? e !== t.eventId &&
-                  P.warn(
+                  B.warn(
                     "Expected event with with eventId " +
                       e +
                       ", but found " +
                       t.eventId,
                   )
                 : ((t.eventId = e),
-                  P.warn("assigning ID to tracking event ", e)),
+                  B.warn("assigning ID to tracking event ", e)),
               (t.gameId = this._gameId),
               (t.networkId = this._networkId),
               (t.accountId = this._accountId),
               ((t.hasOwnProperty("playerId") &&
                 O.isNullOrUndefined(t.playerId)) ||
                 0 == t.playerId) &&
-                P.warn("we are sending an event without playerID", t),
+                B.warn("we are sending an event without playerID", t),
               this.currentInstance
                 ? ((t.instanceId = this.currentInstance.instanceId),
                   (t.zoneId = this.currentInstance.zoneId))
-                : (P.warn(
+                : (B.warn(
                     "sending tracking " +
                       e +
                       " but currentInstance is null will try to use networkCookie",
@@ -4363,7 +4360,7 @@ and limitations under the License.
             var t = function (t, n) {
               ((e.hasOwnProperty(t) && O.isNullOrUndefined(e[t])) ||
                 0 == e[t]) &&
-                (P.warn(
+                (B.warn(
                   "event " +
                     e.eventId +
                     ": autofilling property " +
@@ -4407,7 +4404,7 @@ and limitations under the License.
           TrackingCache
         );
       })();
-    t.TrackingCache = B;
+    t.TrackingCache = P;
   },
   function (e, t, n) {
     "use strict";
@@ -5569,7 +5566,7 @@ and limitations under the License.
         return [];
       }),
       (s.toObject = function toObject(e) {
-        for (var t = {}, n = 0; n < e.length; ) {
+        for (var t = {}, n = 0; n < e.length;) {
           var i = e[n++],
             a = e[n++];
           void 0 !== a && (t[i] = a);
@@ -5857,7 +5854,7 @@ PERFORMANCE OF THIS SOFTWARE.
         return function (o) {
           return (function step(s) {
             if (n) throw new TypeError("Generator is already executing.");
-            for (; r; )
+            for (; r;)
               try {
                 if (
                   ((n = 1),
@@ -5951,7 +5948,7 @@ PERFORMANCE OF THIS SOFTWARE.
         s = n.call(e),
         r = [];
       try {
-        for (; (void 0 === t || t-- > 0) && !(i = s.next()).done; )
+        for (; (void 0 === t || t-- > 0) && !(i = s.next()).done;)
           r.push(i.value);
       } catch (e) {
         a = { error: e };
@@ -6179,10 +6176,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicClientCommand = R.BasicClientCommand;
     var N = n(410);
     t.BasicConnectClientCommand = N.BasicConnectClientCommand;
-    var P = n(785);
-    t.BasicConnectToInstanceVOCommand = P.BasicConnectToInstanceVOCommand;
-    var B = n(786);
-    t.BasicConnectionFailedCommand = B.BasicConnectionFailedCommand;
+    var B = n(785);
+    t.BasicConnectToInstanceVOCommand = B.BasicConnectToInstanceVOCommand;
+    var P = n(786);
+    t.BasicConnectionFailedCommand = P.BasicConnectionFailedCommand;
     var M = n(787);
     t.BasicConnectionTimeoutCommand = M.BasicConnectionTimeoutCommand;
     var U = n(788);
@@ -6302,10 +6299,10 @@ PERFORMANCE OF THIS SOFTWARE.
     var Ne = n(393);
     t.BasicPaymentShopClickTrackingCommand =
       Ne.BasicPaymentShopClickTrackingCommand;
-    var Pe = n(394);
-    t.BasicProfilingTrackingCommand = Pe.BasicProfilingTrackingCommand;
-    var Be = n(395);
-    t.BasicVerifyTrackingCommand = Be.BasicVerifyTrackingCommand;
+    var Be = n(394);
+    t.BasicProfilingTrackingCommand = Be.BasicProfilingTrackingCommand;
+    var Pe = n(395);
+    t.BasicVerifyTrackingCommand = Pe.BasicVerifyTrackingCommand;
     var Me = n(397);
     t.BasicWorldAssignmentTrackingCommand =
       Me.BasicWorldAssignmentTrackingCommand;
@@ -6416,11 +6413,11 @@ PERFORMANCE OF THIS SOFTWARE.
     t.ConcreteEnvironment = Rt.ConcreteEnvironment;
     var Nt = n(836);
     t.DevTestEnvironment = Nt.DevTestEnvironment;
-    var Pt = n(837);
+    var Bt = n(837);
     t.FeatureBranchQualityAssuranceEnvironment =
-      Pt.FeatureBranchQualityAssuranceEnvironment;
-    var Bt = n(186);
-    t.LiveBranchingLiveEnvironment = Bt.LiveBranchingLiveEnvironment;
+      Bt.FeatureBranchQualityAssuranceEnvironment;
+    var Pt = n(186);
+    t.LiveBranchingLiveEnvironment = Pt.LiveBranchingLiveEnvironment;
     var Mt = n(838);
     t.LiveBranchingPreClientEnvironment = Mt.LiveBranchingPreClientEnvironment;
     var Ut = n(839);
@@ -6524,10 +6521,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicSharedObject = Rn.BasicSharedObject;
     var Nn = n(121);
     t.BasicSmartfoxClient = Nn.BasicSmartfoxClient;
-    var Pn = n(329);
-    t.BasicUserData = Pn.BasicUserData;
-    var Bn = n(853);
-    t.BasicWodData = Bn.BasicWodData;
+    var Bn = n(329);
+    t.BasicUserData = Bn.BasicUserData;
+    var Pn = n(853);
+    t.BasicWodData = Pn.BasicWodData;
     var Mn = n(330);
     t.ForumData = Mn.ForumData;
     var Un = n(332);
@@ -6640,10 +6637,10 @@ PERFORMANCE OF THIS SOFTWARE.
       Ri.BasicGGSTextFieldMouseOverBehaviour;
     var Ni = n(867);
     t.AnimatedSpeechTextField = Ni.AnimatedSpeechTextField;
-    var Pi = n(868);
-    t.AgeGateValidationVO = Pi.AgeGateValidationVO;
-    var Bi = n(368);
-    t.BasicDialogVO = Bi.BasicDialogVO;
+    var Bi = n(868);
+    t.AgeGateValidationVO = Bi.AgeGateValidationVO;
+    var Pi = n(368);
+    t.BasicDialogVO = Pi.BasicDialogVO;
     var Mi = n(869);
     t.BasicDragVO = Mi.BasicDragVO;
     var Ui = n(870);
@@ -6752,11 +6749,11 @@ PERFORMANCE OF THIS SOFTWARE.
     t.SocketErrorLOFactory = Ra.SocketErrorLOFactory;
     var Na = n(287);
     t.TrackingIOErrorLOFactory = Na.TrackingIOErrorLOFactory;
-    var Pa = n(288);
-    t.TrackingSecurityErrorLOFactory = Pa.TrackingSecurityErrorLOFactory;
-    var Ba = n(283);
+    var Ba = n(288);
+    t.TrackingSecurityErrorLOFactory = Ba.TrackingSecurityErrorLOFactory;
+    var Pa = n(283);
     t.TrackingVerificationErrorLOFactory =
-      Ba.TrackingVerificationErrorLOFactory;
+      Pa.TrackingVerificationErrorLOFactory;
     var Ma = n(885);
     t.UncaughtExceptionErrorLOFactory = Ma.UncaughtExceptionErrorLOFactory;
     var Ua = n(447);
@@ -6864,10 +6861,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicOfferDescriptionFactory = Rs.BasicOfferDescriptionFactory;
     var Ns = n(470);
     t.OfferDescriptionAutoAccept = Ns.OfferDescriptionAutoAccept;
-    var Ps = n(471);
-    t.OfferDescriptionCostC1 = Ps.OfferDescriptionCostC1;
-    var Bs = n(472);
-    t.OfferDescriptionCostC2 = Bs.OfferDescriptionCostC2;
+    var Bs = n(471);
+    t.OfferDescriptionCostC1 = Bs.OfferDescriptionCostC1;
+    var Ps = n(472);
+    t.OfferDescriptionCostC2 = Ps.OfferDescriptionCostC2;
     var Ms = n(913);
     t.OfferDescriptionCostResources = Ms.OfferDescriptionCostResources;
     var Us = n(914);
@@ -6985,10 +6982,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BitmapClipContainer = Rr.BitmapClipContainer;
     var Nr = n(496);
     t.DisplayObjectClipContainer = Nr.DisplayObjectClipContainer;
-    var Pr = n(933);
-    t.ArraySignal = Pr.ArraySignal;
-    var Br = n(934);
-    t.BooleanSignal = Br.BooleanSignal;
+    var Br = n(933);
+    t.ArraySignal = Br.ArraySignal;
+    var Pr = n(934);
+    t.BooleanSignal = Pr.BooleanSignal;
     var Mr = n(51);
     t.GoodgameSignal = Mr.GoodgameSignal;
     var Ur = n(411);
@@ -7091,12 +7088,12 @@ PERFORMANCE OF THIS SOFTWARE.
     t.ClientFunnelGameStates = Ro.ClientFunnelGameStates;
     var No = n(290);
     t.ConnectionTrackingEvent = No.ConnectionTrackingEvent;
-    var Po = n(296);
+    var Bo = n(296);
     t.DesktopDeviceInformationTrackingEvent =
-      Po.DesktopDeviceInformationTrackingEvent;
-    var Bo = n(306);
+      Bo.DesktopDeviceInformationTrackingEvent;
+    var Po = n(306);
     t.BrowserStateFullscreenTrackingEvent =
-      Bo.BrowserStateFullscreenTrackingEvent;
+      Po.BrowserStateFullscreenTrackingEvent;
     var Mo = n(300);
     t.FacebookConnectionTrackingEvent = Mo.FacebookConnectionTrackingEvent;
     var Uo = n(948);
@@ -7203,10 +7200,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.ButtonsValueComponent = Rl.ButtonsValueComponent;
     var Nl = n(501);
     t.InputTextfieldValueComponent = Nl.InputTextfieldValueComponent;
-    var Pl = n(502);
-    t.SliderValueComponent = Pl.SliderValueComponent;
-    var Bl = n(972);
-    t.ValueChangerController = Bl.ValueChangerController;
+    var Bl = n(502);
+    t.SliderValueComponent = Bl.SliderValueComponent;
+    var Pl = n(972);
+    t.ValueChangerController = Pl.ValueChangerController;
     var Ml = n(503);
     t.BasicButtonValueContainer = Ml.BasicButtonValueContainer;
     var Ul = n(504);
@@ -7568,7 +7565,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 !this._paused &&
                 this._duration < this.duration())
             )
-              for (m = (c = this).rawTime() > t._startTime; c._timeline; )
+              for (m = (c = this).rawTime() > t._startTime; c._timeline;)
                 (m && c._timeline.smoothChildTiming
                   ? c.totalTime(c._totalTime, !0)
                   : c._gc && c._enabled(!0, !1),
@@ -7592,7 +7589,7 @@ PERFORMANCE OF THIS SOFTWARE.
               );
             }
             if (e instanceof Array || (e && e.push && s(e))) {
-              for (var n = e.length; --n > -1; ) this.remove(e[n]);
+              for (var n = e.length; --n > -1;) this.remove(e[n]);
               return this;
             }
             return "string" == typeof e
@@ -7646,7 +7643,7 @@ PERFORMANCE OF THIS SOFTWARE.
             var r, o;
             if (a instanceof i.Animation && a.timeline === this) this.remove(a);
             else if (a && (a instanceof Array || (a.push && s(a))))
-              for (o = a.length; --o > -1; )
+              for (o = a.length; --o > -1;)
                 a[o] instanceof i.Animation &&
                   a[o].timeline === this &&
                   this.remove(a[o]);
@@ -7763,14 +7760,14 @@ PERFORMANCE OF THIS SOFTWARE.
                       : 1e-10),
                   0 === e && a)
                 )
-                  for (i = this._first; i && 0 === i._startTime; )
+                  for (i = this._first; i && 0 === i._startTime;)
                     (i._duration || (a = !1), (i = i._next));
                 ((e = 0), this._initted || (u = !0));
               }
             else {
               if (this._hasPause && !this._forcingPlayhead && !t) {
                 if (e >= m)
-                  for (i = this._first; i && i._startTime <= e && !_; )
+                  for (i = this._first; i && i._startTime <= e && !_;)
                     (i._duration ||
                       "isPause" !== i.data ||
                       i.ratio ||
@@ -7778,7 +7775,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       (_ = i),
                       (i = i._next));
                 else
-                  for (i = this._last; i && i._startTime >= e && !_; )
+                  for (i = this._last; i && i._startTime >= e && !_;)
                     (i._duration ||
                       ("isPause" === i.data && i._rawPrevTime > 0 && (_ = i)),
                       (i = i._prev));
@@ -7832,7 +7829,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     (i._startTime <= m && !i._paused && !i._gc)
                   ) {
                     if (_ === i) {
-                      for (_ = i._prev; _ && _.endTime() > this._time; )
+                      for (_ = i._prev; _ && _.endTime() > this._time;)
                         (_.render(
                           _._reversed
                             ? _.totalDuration() -
@@ -7870,7 +7867,7 @@ PERFORMANCE OF THIS SOFTWARE.
             }
           }),
           (d._hasPausedChild = function () {
-            for (var t = this._first; t; ) {
+            for (var t = this._first; t;) {
               if (t._paused || (t instanceof e && t._hasPausedChild()))
                 return !0;
               t = t._next;
@@ -7879,7 +7876,7 @@ PERFORMANCE OF THIS SOFTWARE.
           }),
           (d.getChildren = function (e, t, n, a) {
             a = a || -9999999999;
-            for (var s = [], r = this._first, o = 0; r; )
+            for (var s = [], r = this._first, o = 0; r;)
               (r._startTime < a ||
                 (r instanceof i.default
                   ? !1 !== t && (s[o++] = r)
@@ -7908,7 +7905,7 @@ PERFORMANCE OF THIS SOFTWARE.
             return this._recent;
           }),
           (d._contains = function (e) {
-            for (var t = e.timeline; t; ) {
+            for (var t = e.timeline; t;) {
               if (t === this) return !0;
               t = t.timeline;
             }
@@ -7916,7 +7913,7 @@ PERFORMANCE OF THIS SOFTWARE.
           }),
           (d.shiftChildren = function (e, t, n) {
             n = n || 0;
-            for (var i, a = this._first, s = this._labels; a; )
+            for (var i, a = this._first, s = this._labels; a;)
               (a._startTime >= n && (a._startTime += e), (a = a._next));
             if (t) for (i in s) s[i] >= n && (s[i] += e);
             return this._uncache(!0);
@@ -7935,17 +7932,17 @@ PERFORMANCE OF THIS SOFTWARE.
           (d.clear = function (e) {
             var t = this.getChildren(!1, !0, !0),
               n = t.length;
-            for (this._time = this._totalTime = 0; --n > -1; )
+            for (this._time = this._totalTime = 0; --n > -1;)
               t[n]._enabled(!1, !1);
             return (!1 !== e && (this._labels = {}), this._uncache(!0));
           }),
           (d.invalidate = function () {
-            for (var e = this._first; e; ) (e.invalidate(), (e = e._next));
+            for (var e = this._first; e;) (e.invalidate(), (e = e._next));
             return i.Animation.prototype.invalidate.call(this);
           }),
           (d._enabled = function (e, t) {
             if (e === this._gc)
-              for (var n = this._first; n; ) (n._enabled(e, !0), (n = n._next));
+              for (var n = this._first; n;) (n._enabled(e, !0), (n = n._next));
             return i.SimpleTimeline.prototype._enabled.call(this, e, t);
           }),
           (d.totalTime = function (e, t, n) {
@@ -7964,7 +7961,7 @@ PERFORMANCE OF THIS SOFTWARE.
           (d.totalDuration = function (e) {
             if (!arguments.length) {
               if (this._dirty) {
-                for (var t, n, i = 0, a = this._last, s = 999999999999; a; )
+                for (var t, n, i = 0, a = this._last, s = 999999999999; a;)
                   ((t = a._prev),
                     a._dirty && a.totalDuration(),
                     a._startTime > s &&
@@ -7999,7 +7996,7 @@ PERFORMANCE OF THIS SOFTWARE.
           }),
           (d.paused = function (e) {
             if (!e)
-              for (var t = this._first, n = this._time; t; )
+              for (var t = this._first, n = this._time; t;)
                 (t._startTime === n &&
                   "isPause" === t.data &&
                   (t._rawPrevTime = 0),
@@ -8007,7 +8004,7 @@ PERFORMANCE OF THIS SOFTWARE.
             return i.Animation.prototype.paused.apply(this, arguments);
           }),
           (d.usesFrames = function () {
-            for (var e = this._timeline; e._timeline; ) e = e._timeline;
+            for (var e = this._timeline; e._timeline;) e = e._timeline;
             return e === i.Animation._rootFramesTimeline;
           }),
           (d.rawTime = function (e) {
@@ -8088,10 +8085,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.UnitsDismissed = R;
     var N = n(680);
     t.UnitsStarving = N;
-    var P = n(681);
-    t.WishingWellCoins = P;
-    var B = n(682);
-    t.ClientFunnel = B;
+    var B = n(681);
+    t.WishingWellCoins = B;
+    var P = n(682);
+    t.ClientFunnel = P;
     var M = n(683);
     t.GuestRegistration = M;
     var U = n(684);
@@ -9394,8 +9391,8 @@ PERFORMANCE OF THIS SOFTWARE.
       if (!o) {
         var e = runTimeout(cleanUpNextTick);
         o = !0;
-        for (var t = r.length; t; ) {
-          for (s = r, r = []; ++l < t; ) s && s[l].run();
+        for (var t = r.length; t;) {
+          for (s = r, r = []; ++l < t;) s && s[l].run();
           ((l = -1), (t = r.length));
         }
         ((s = null),
@@ -11155,7 +11152,7 @@ PERFORMANCE OF THIS SOFTWARE.
         return function (o) {
           return (function step(s) {
             if (n) throw new TypeError("Generator is already executing.");
-            for (; r; )
+            for (; r;)
               try {
                 if (
                   ((n = 1),
@@ -11249,7 +11246,7 @@ PERFORMANCE OF THIS SOFTWARE.
         s = n.call(e),
         r = [];
       try {
-        for (; (void 0 === t || t-- > 0) && !(i = s.next()).done; )
+        for (; (void 0 === t || t-- > 0) && !(i = s.next()).done;)
           r.push(i.value);
       } catch (e) {
         a = { error: e };
@@ -11543,7 +11540,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 var e = EventEmitter.prototype,
                   t = {};
                 function indexOfListener(e, t) {
-                  for (var n = e.length; n--; )
+                  for (var n = e.length; n--;)
                     if (e[n].listener === t) return n;
                   return -1;
                 }
@@ -11624,7 +11621,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       s = e ? this.removeListener : this.addListener,
                       r = e ? this.removeListeners : this.addListeners;
                     if ("object" != typeof t || t instanceof RegExp)
-                      for (i = n.length; i--; ) s.call(this, t, n[i]);
+                      for (i = n.length; i--;) s.call(this, t, n[i]);
                     else
                       for (i in t)
                         t.hasOwnProperty(i) &&
@@ -11653,7 +11650,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       s = this.getListenersAsObject(e);
                     for (a in s)
                       if (s.hasOwnProperty(a))
-                        for (i = s[a].length; i--; )
+                        for (i = s[a].length; i--;)
                           (!0 === (n = s[a][i]).once &&
                             this.removeListener(e, n.listener),
                             n.listener.apply(this, t || []) ===
@@ -13614,13 +13611,13 @@ PERFORMANCE OF THIS SOFTWARE.
     (Object.defineProperties(ReflectionObject.prototype, {
       root: {
         get: function () {
-          for (var e = this; null !== e.parent; ) e = e.parent;
+          for (var e = this; null !== e.parent;) e = e.parent;
           return e;
         },
       },
       fullName: {
         get: function () {
-          for (var e = [this.name], t = this.parent; t; )
+          for (var e = [this.name], t = this.parent; t;)
             (e.unshift(t.name), (t = t.parent));
           return e.join(".");
         },
@@ -13696,7 +13693,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function bake(e, t) {
       var n = 0,
         i = {};
-      for (t |= 0; n < e.length; ) i[s[n + t]] = e[n++];
+      for (t |= 0; n < e.length;) i[s[n + t]] = e[n++];
       return i;
     }
     ((i.basic = bake([1, 5, 0, 0, 0, 5, 5, 0, 0, 0, 1, 1, 0, 2, 2])),
@@ -14510,7 +14507,7 @@ PERFORMANCE OF THIS SOFTWARE.
         "string" != typeof e && (e = "" + e);
         var n = e.length;
         if (0 === n) return 0;
-        for (var i = !1; ; )
+        for (var i = !1; ;)
           switch (t) {
             case "ascii":
             case "latin1":
@@ -14670,7 +14667,7 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       function utf8Slice(e, t, n) {
         n = Math.min(e.length, n);
-        for (var i = [], a = t; a < n; ) {
+        for (var i = [], a = t; a < n;) {
           var s,
             o,
             l,
@@ -14727,7 +14724,7 @@ PERFORMANCE OF THIS SOFTWARE.
           if (t <= r) return String.fromCharCode.apply(String, e);
           var n = "",
             i = 0;
-          for (; i < t; )
+          for (; i < t;)
             n += String.fromCharCode.apply(String, e.slice(i, (i += r)));
           return n;
         })(i);
@@ -14896,7 +14893,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   )
                     return "";
                   if ((n >>>= 0) <= (t >>>= 0)) return "";
-                  for (e || (e = "utf8"); ; )
+                  for (e || (e = "utf8"); ;)
                     switch (e) {
                       case "hex":
                         return hexSlice(this, t, n);
@@ -14998,7 +14995,7 @@ PERFORMANCE OF THIS SOFTWARE.
           )
             throw new RangeError("Attempt to write outside buffer bounds");
           i || (i = "utf8");
-          for (var s = !1; ; )
+          for (var s = !1; ;)
             switch (i) {
               case "hex":
                 return hexWrite(this, e, t, n);
@@ -15114,13 +15111,13 @@ PERFORMANCE OF THIS SOFTWARE.
       }),
         (Buffer.prototype.readUIntLE = function readUIntLE(e, t, n) {
           ((e |= 0), (t |= 0), n || checkOffset(e, t, this.length));
-          for (var i = this[e], a = 1, s = 0; ++s < t && (a *= 256); )
+          for (var i = this[e], a = 1, s = 0; ++s < t && (a *= 256);)
             i += this[e + s] * a;
           return i;
         }),
         (Buffer.prototype.readUIntBE = function readUIntBE(e, t, n) {
           ((e |= 0), (t |= 0), n || checkOffset(e, t, this.length));
-          for (var i = this[e + --t], a = 1; t > 0 && (a *= 256); )
+          for (var i = this[e + --t], a = 1; t > 0 && (a *= 256);)
             i += this[e + --t] * a;
           return i;
         }),
@@ -15155,13 +15152,13 @@ PERFORMANCE OF THIS SOFTWARE.
         }),
         (Buffer.prototype.readIntLE = function readIntLE(e, t, n) {
           ((e |= 0), (t |= 0), n || checkOffset(e, t, this.length));
-          for (var i = this[e], a = 1, s = 0; ++s < t && (a *= 256); )
+          for (var i = this[e], a = 1, s = 0; ++s < t && (a *= 256);)
             i += this[e + s] * a;
           return (i >= (a *= 128) && (i -= Math.pow(2, 8 * t)), i);
         }),
         (Buffer.prototype.readIntBE = function readIntBE(e, t, n) {
           ((e |= 0), (t |= 0), n || checkOffset(e, t, this.length));
-          for (var i = t, a = 1, s = this[e + --i]; i > 0 && (a *= 256); )
+          for (var i = t, a = 1, s = this[e + --i]; i > 0 && (a *= 256);)
             s += this[e + --i] * a;
           return (s >= (a *= 128) && (s -= Math.pow(2, 8 * t)), s);
         }),
@@ -15228,7 +15225,7 @@ PERFORMANCE OF THIS SOFTWARE.
             checkInt(this, e, t, n, Math.pow(2, 8 * n) - 1, 0);
           var a = 1,
             s = 0;
-          for (this[t] = 255 & e; ++s < n && (a *= 256); )
+          for (this[t] = 255 & e; ++s < n && (a *= 256);)
             this[t + s] = (e / a) & 255;
           return t + n;
         }),
@@ -15237,7 +15234,7 @@ PERFORMANCE OF THIS SOFTWARE.
             checkInt(this, e, t, n, Math.pow(2, 8 * n) - 1, 0);
           var a = n - 1,
             s = 1;
-          for (this[t + a] = 255 & e; --a >= 0 && (s *= 256); )
+          for (this[t + a] = 255 & e; --a >= 0 && (s *= 256);)
             this[t + a] = (e / s) & 255;
           return t + n;
         }),
@@ -15309,7 +15306,7 @@ PERFORMANCE OF THIS SOFTWARE.
           var s = 0,
             r = 1,
             o = 0;
-          for (this[t] = 255 & e; ++s < n && (r *= 256); )
+          for (this[t] = 255 & e; ++s < n && (r *= 256);)
             (e < 0 && 0 === o && 0 !== this[t + s - 1] && (o = 1),
               (this[t + s] = (((e / r) >> 0) - o) & 255));
           return t + n;
@@ -15322,7 +15319,7 @@ PERFORMANCE OF THIS SOFTWARE.
           var s = n - 1,
             r = 1,
             o = 0;
-          for (this[t + s] = 255 & e; --s >= 0 && (r *= 256); )
+          for (this[t + s] = 255 & e; --s >= 0 && (r *= 256);)
             (e < 0 && 0 === o && 0 !== this[t + s + 1] && (o = 1),
               (this[t + s] = (((e / r) >> 0) - o) & 255));
           return t + n;
@@ -15521,7 +15518,7 @@ PERFORMANCE OF THIS SOFTWARE.
               })(e).replace(o, "")).length < 2
             )
               return "";
-            for (; e.length % 4 != 0; ) e += "=";
+            for (; e.length % 4 != 0;) e += "=";
             return e;
           })(e),
         );
@@ -15893,8 +15890,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   "standard",
                 ]);
               },
-              P = /^([^0]*)(0+)([^0]*)$/,
-              B = function (e, t, n) {
+              B = /^([^0]*)(0+)([^0]*)$/,
+              P = function (e, t, n) {
                 var i;
                 return 0 === e
                   ? e
@@ -16091,8 +16088,8 @@ PERFORMANCE OF THIS SOFTWARE.
                                             var a, s;
                                             if (
                                               (t > n && (n = t),
-                                              (a = B(e, t, i)),
-                                              (s = B(e, n, i)),
+                                              (a = P(e, t, i)),
+                                              (s = P(e, n, i)),
                                               (e = (+(e =
                                                 +a == +s ? a : s)).toString(
                                                 10,
@@ -16123,7 +16120,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                         O &&
                                         ((M = n ? n(+e) : "other"),
                                         (O = s[N][M] || O),
-                                        (D = O.match(P)),
+                                        (D = O.match(B)),
                                         (i = function (e) {
                                           var t = [];
                                           return (
@@ -17042,15 +17039,13 @@ PERFORMANCE OF THIS SOFTWARE.
         throw Error("no such enum: " + e);
       }),
       (Namespace.prototype.add = function add(e) {
-        if (
-          !(
-            (e instanceof o && void 0 !== e.extend) ||
-            e instanceof a ||
-            e instanceof r ||
-            e instanceof s ||
-            e instanceof Namespace
-          )
-        )
+        if (!(
+          (e instanceof o && void 0 !== e.extend) ||
+          e instanceof a ||
+          e instanceof r ||
+          e instanceof s ||
+          e instanceof Namespace
+        ))
           throw TypeError("object must be a valid nested object");
         if (this.nested) {
           var t = this.get(e.name);
@@ -17084,7 +17079,7 @@ PERFORMANCE OF THIS SOFTWARE.
         if (l.isString(e)) e = e.split(".");
         else if (!Array.isArray(e)) throw TypeError("illegal path");
         if (e && e.length && "" === e[0]) throw Error("path must be relative");
-        for (var n = this; e.length > 0; ) {
+        for (var n = this; e.length > 0;) {
           var i = e.shift();
           if (n.nested && n.nested[i]) {
             if (!((n = n.nested[i]) instanceof Namespace))
@@ -17094,7 +17089,7 @@ PERFORMANCE OF THIS SOFTWARE.
         return (t && n.addJSON(t), n);
       }),
       (Namespace.prototype.resolveAll = function resolveAll() {
-        for (var e = this.nestedArray, t = 0; t < e.length; )
+        for (var e = this.nestedArray, t = 0; t < e.length;)
           e[t] instanceof Namespace ? e[t++].resolveAll() : e[t++].resolve();
         return this.resolve();
       }),
@@ -17345,7 +17340,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       p || !t || e || this._rawPrevTime === e ? e : 1e-10),
                     0 === e && r)
                   )
-                    for (a = this._first; a && 0 === a._startTime; )
+                    for (a = this._first; a && 0 === a._startTime;)
                       (a._duration || (r = !1), (a = a._next));
                   ((e = 0), this._initted || (u = !0));
                 }
@@ -17376,7 +17371,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   (e = this._time) >= d ||
                   (this._repeat && S !== this._cycle)
                 )
-                  for (a = this._first; a && a._startTime <= e && !c; )
+                  for (a = this._first; a && a._startTime <= e && !c;)
                     (a._duration ||
                       "isPause" !== a.data ||
                       a.ratio ||
@@ -17384,7 +17379,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       (c = a),
                       (a = a._next));
                 else
-                  for (a = this._last; a && a._startTime >= e && !c; )
+                  for (a = this._last; a && a._startTime >= e && !c;)
                     (a._duration ||
                       ("isPause" === a.data && a._rawPrevTime > 0 && (c = a)),
                       (a = a._prev));
@@ -17478,7 +17473,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       (a._startTime <= d && !a._paused && !a._gc)
                     ) {
                       if (c === a) {
-                        for (c = a._prev; c && c.endTime() > this._time; )
+                        for (c = a._prev; c && c.endTime() > this._time;)
                           (c.render(
                             c._reversed
                               ? c.totalDuration() -
@@ -17542,7 +17537,7 @@ PERFORMANCE OF THIS SOFTWARE.
             }),
             (l.getLabelBefore = function (e) {
               null == e && (e = this._time);
-              for (var t = this.getLabelsArray(), n = t.length; --n > -1; )
+              for (var t = this.getLabelsArray(), n = t.length; --n > -1;)
                 if (t[n].time < e) return t[n].name;
               return null;
             }),
@@ -17714,8 +17709,8 @@ PERFORMANCE OF THIS SOFTWARE.
           },
           R = /(?:Left|Right|Width)/i,
           N = /(M11|M12|M21|M22)=[\d\-\.e]+/gi,
-          P = /progid\:DXImageTransform\.Microsoft\.Matrix\(.+?\)/i,
-          B = /,(?=[^\)]*(?:\(|$))/gi,
+          B = /progid\:DXImageTransform\.Microsoft\.Matrix\(.+?\)/i,
+          P = /,(?=[^\)]*(?:\(|$))/gi,
           M = /[\s,\(]/i,
           U = Math.PI / 180,
           F = 180 / Math.PI,
@@ -17876,8 +17871,8 @@ PERFORMANCE OF THIS SOFTWARE.
               s = {};
             if ((t = t || Q(e, null)))
               if ((n = t.length))
-                for (; --n > -1; )
-                  (-1 !== (a = t[n]).indexOf("-transform") && Pe !== a) ||
+                for (; --n > -1;)
+                  (-1 !== (a = t[n]).indexOf("-transform") && Be !== a) ||
                     (s[a.replace(L, b)] = t.getPropertyValue(a));
               else
                 for (n in t)
@@ -17939,7 +17934,7 @@ PERFORMANCE OF THIS SOFTWARE.
             var i = parseFloat("width" === t ? e.offsetWidth : e.offsetHeight),
               a = ie[t],
               s = a.length;
-            for (n = n || Q(e, null); --s > -1; )
+            for (n = n || Q(e, null); --s > -1;)
               ((i -= parseFloat($(e, "padding" + a[s], n, !0)) || 0),
                 (i -= parseFloat($(e, "border" + a[s] + "Width", n, !0)) || 0));
             return i;
@@ -18209,9 +18204,9 @@ PERFORMANCE OF THIS SOFTWARE.
                   ? function (e) {
                       var t, m, d, h;
                       if ("number" == typeof e) e += c;
-                      else if (i && B.test(e)) {
+                      else if (i && P.test(e)) {
                         for (
-                          h = e.replace(B, "|").split("|"), d = 0;
+                          h = e.replace(P, "|").split("|"), d = 0;
                           d < h.length;
                           d++
                         )
@@ -18223,8 +18218,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         (d = (m = e.split(t).join("").match(f) || []).length),
                         _ > d--)
                       )
-                        for (; ++d < _; )
-                          m[d] = n ? m[((d - 1) / 2) | 0] : r[d];
+                        for (; ++d < _;) m[d] = n ? m[((d - 1) / 2) | 0] : r[d];
                       return (
                         o +
                         m.join(u) +
@@ -18237,9 +18231,9 @@ PERFORMANCE OF THIS SOFTWARE.
                   : function (e) {
                       var t, s, m;
                       if ("number" == typeof e) e += c;
-                      else if (i && B.test(e)) {
+                      else if (i && P.test(e)) {
                         for (
-                          s = e.replace(B, "|").split("|"), m = 0;
+                          s = e.replace(P, "|").split("|"), m = 0;
                           m < s.length;
                           m++
                         )
@@ -18247,8 +18241,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         return s.join(",");
                       }
                       if (((m = (t = e.match(f) || []).length), _ > m--))
-                        for (; ++m < _; )
-                          t[m] = n ? t[((m - 1) / 2) | 0] : r[m];
+                        for (; ++m < _;) t[m] = n ? t[((m - 1) / 2) | 0] : r[m];
                       return o + t.join(u) + l;
                     })
               : function (e) {
@@ -18285,7 +18278,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     : o.rotation),
                 1 === e || 0 === e)
               )
-                for (l = r.firstMPT, s = 1 === e ? "e" : "b"; l; ) {
+                for (l = r.firstMPT, s = 1 === e ? "e" : "b"; l;) {
                   if ((n = l.t).type) {
                     if (1 === n.type) {
                       for (a = n.xs0 + n.s + n.xs1, i = 1; i < n.l; i++)
@@ -18332,7 +18325,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   s || ((u = new Ee(i, "s", o, u, i.r)), (i.c = 0)),
                   1 === i.type)
                 )
-                  for (r = i.l; --r > 0; )
+                  for (r = i.l; --r > 0;)
                     ((l = "xn" + r),
                       (d[(o = i.p + "_" + l)] = i.data[l]),
                       (m[o] = i[l]),
@@ -18383,12 +18376,12 @@ PERFORMANCE OF THIS SOFTWARE.
               b = n.split(", ").join(",").split(" "),
               R = i.split(", ").join(",").split(" "),
               N = b.length,
-              P = !1 !== u;
+              B = !1 !== u;
             for (
               (-1 === i.indexOf(",") && -1 === n.indexOf(",")) ||
                 (-1 !== (i + n).indexOf("rgb") || -1 !== (i + n).indexOf("hsl")
-                  ? ((b = b.join(" ").replace(B, ", ").split(" ")),
-                    (R = R.join(" ").replace(B, ", ").split(" ")))
+                  ? ((b = b.join(" ").replace(P, ", ").split(" ")),
+                    (R = R.join(" ").replace(P, ", ").split(" ")))
                   : ((b = b.join(" ").split(",").join(", ").split(" ")),
                     (R = R.join(" ").split(",").join(", ").split(" "))),
                 (N = b.length)),
@@ -18406,7 +18399,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   I,
                   oe(T, I),
                   T.replace(C, ""),
-                  !(!P || -1 === T.indexOf("px")) && Math.round,
+                  !(!B || -1 === T.indexOf("px")) && Math.round,
                   !0,
                 );
               else if (a && he.test(f))
@@ -18476,7 +18469,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       Number(O),
                       oe(y[d], O),
                       "",
-                      !(!P || "px" !== f.substr(A + O.length, 2)) && Math.round,
+                      !(!B || "px" !== f.substr(A + O.length, 2)) && Math.round,
                       0 === d,
                     ),
                     (h = A + O.length));
@@ -18490,7 +18483,7 @@ PERFORMANCE OF THIS SOFTWARE.
             return (o.l || ((o.type = -1), (o.xs0 = o.e)), o.xfirst || o);
           }),
           Se = 9;
-        for ((l = Ce.prototype).l = l.pr = 0; --Se > 0; )
+        for ((l = Ce.prototype).l = l.pr = 0; --Se > 0;)
           ((l["xn" + Se] = 0), (l["xs" + Se] = ""));
         ((l.xs0 = ""),
           (l._next =
@@ -18584,9 +18577,9 @@ PERFORMANCE OF THIS SOFTWARE.
             m = this.keyword;
           if (
             (this.multi &&
-              (B.test(n) || B.test(t)
-                ? ((o = t.replace(B, "|").split("|")),
-                  (l = n.replace(B, "|").split("|")))
+              (P.test(n) || P.test(t)
+                ? ((o = t.replace(P, "|").split("|")),
+                  (l = n.replace(P, "|").split("|")))
                 : m && ((o = [t]), (l = [n]))),
             l)
           ) {
@@ -18635,8 +18628,8 @@ PERFORMANCE OF THIS SOFTWARE.
               ",",
             ),
           Ne = X("transform"),
-          Pe = z + "transform",
-          Be = X("transformOrigin"),
+          Be = z + "transform",
+          Pe = X("transformOrigin"),
           Me = null !== X("perspective"),
           Ue = (V.Transform = function () {
             ((this.perspective =
@@ -18665,7 +18658,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 height: 50,
                 x: 100,
               })).getBoundingClientRect().width),
-              (Le.style[Be] = "50% 50%"),
+              (Le.style[Pe] = "50% 50%"),
               (Le.style[Ne] = "scaleX(0.5)"),
               (be = De === Le.getBoundingClientRect().width && !(m && Me)),
               ke.removeChild(Oe)),
@@ -18802,7 +18795,7 @@ PERFORMANCE OF THIS SOFTWARE.
               u = e.style;
             if (
               (Ne
-                ? (i = $(e, Pe, null, !0))
+                ? (i = $(e, Be, null, !0))
                 : e.currentStyle &&
                   (i =
                     (i = e.currentStyle.filter.match(N)) && 4 === i.length
@@ -18821,7 +18814,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 (o && ((s = u.display), (u.display = "block")),
                 e.parentNode || ((r = 1), ke.appendChild(e)),
                 (n =
-                  !(i = $(e, Pe, null, !0)) ||
+                  !(i = $(e, Be, null, !0)) ||
                   "none" === i ||
                   "matrix(1, 0, 0, 1, 0, 0)" === i),
                 s ? (u.display = s) : o && Ze(u, "display"),
@@ -18851,7 +18844,7 @@ PERFORMANCE OF THIS SOFTWARE.
               n)
             )
               return Ve;
-            for (a = (i || "").match(E) || [], Se = a.length; --Se > -1; )
+            for (a = (i || "").match(E) || [], Se = a.length; --Se > -1;)
               ((s = Number(a[Se])),
                 (a[Se] = (r = s - (s |= 0))
                   ? ((1e5 * r + (r < 0 ? -0.5 : 0.5)) | 0) / 1e5 + s
@@ -18872,7 +18865,7 @@ PERFORMANCE OF THIS SOFTWARE.
               d = m.scaleX < 0,
               h =
                 (Me &&
-                  (parseFloat($(e, Be, t, !1, "0 0 0").split(" ")[2]) ||
+                  (parseFloat($(e, Pe, t, !1, "0 0 0").split(" ")[2]) ||
                     m.zOrigin)) ||
                 0,
               p = parseFloat(s.defaultTransformPerspective) || 0;
@@ -18881,7 +18874,7 @@ PERFORMANCE OF THIS SOFTWARE.
               m.svg &&
                 (xe(
                   e,
-                  $(e, Be, t, !1, "50% 50%") + "",
+                  $(e, Pe, t, !1, "50% 50%") + "",
                   m,
                   e.getAttribute("data-svg-origin"),
                 ),
@@ -18905,14 +18898,14 @@ PERFORMANCE OF THIS SOFTWARE.
                   b = r[8],
                   R = r[9],
                   N = r[10],
-                  P = r[12],
-                  B = r[13],
+                  B = r[12],
+                  P = r[13],
                   M = r[14],
                   U = r[11],
                   G = Math.atan2(L, N);
                 (m.zOrigin &&
-                  ((P = b * (M = -m.zOrigin) - r[12]),
-                  (B = R * M - r[13]),
+                  ((B = b * (M = -m.zOrigin) - r[12]),
+                  (P = R * M - r[13]),
                   (M = N * M + m.zOrigin - r[14])),
                   (m.rotationX = G * F),
                   G &&
@@ -18970,8 +18963,8 @@ PERFORMANCE OF THIS SOFTWARE.
                       "simple" !== m.skewType && (m.scaleY *= 1 / Math.cos(G)))
                     : (m.skewX = 0),
                   (m.perspective = U ? 1 / (U < 0 ? -U : U) : 0),
-                  (m.x = P),
-                  (m.y = B),
+                  (m.x = B),
+                  (m.y = P),
                   (m.z = M),
                   m.svg &&
                     ((m.x -= m.xOrigin - (m.xOrigin * S - m.yOrigin * A)),
@@ -19079,7 +19072,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     ")"
                   : ", sizingMethod='auto expand')"),
                 -1 !== t.indexOf("DXImageTransform.Microsoft.Matrix(")
-                  ? (_.filter = t.replace(P, C))
+                  ? (_.filter = t.replace(B, C))
                   : (_.filter = C + " " + t),
                 (0 !== e && 1 !== e) ||
                   (1 === r &&
@@ -19164,8 +19157,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   b = I.scaleY,
                   R = I.scaleZ,
                   N = I.x,
-                  P = I.y,
-                  B = I.z,
+                  B = I.y,
+                  P = I.z,
                   M = I.svg,
                   F = I.perspective,
                   G = I.force3D,
@@ -19179,7 +19172,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       (this.tween._totalTime !== this.tween._totalDuration &&
                         this.tween._totalTime)) &&
                       G) ||
-                    B ||
+                    P ||
                     F ||
                     L ||
                     O ||
@@ -19210,7 +19203,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           I.xOrigin -
                           (I.xOrigin * n + I.yOrigin * i) +
                           I.xOffset),
-                        (P +=
+                        (B +=
                           I.yOrigin -
                           (I.xOrigin * s + I.yOrigin * r) +
                           I.yOffset),
@@ -19218,9 +19211,9 @@ PERFORMANCE OF THIS SOFTWARE.
                           (I.xPercent || I.yPercent) &&
                           ((g = this.t.getBBox()),
                           (N += 0.01 * I.xPercent * g.width),
-                          (P += 0.01 * I.yPercent * g.height)),
+                          (B += 0.01 * I.yPercent * g.height)),
                         N < (g = 1e-6) && N > -g && (N = 0),
-                        P < g && P > -g && (P = 0)),
+                        B < g && B > -g && (B = 0)),
                       (T =
                         ((n * y) | 0) / y +
                         "," +
@@ -19232,7 +19225,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         "," +
                         N +
                         "," +
-                        P +
+                        B +
                         ")"),
                       M && Ae
                         ? this.t.setAttribute("transform", "matrix(" + T)
@@ -19258,7 +19251,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         "," +
                         N +
                         "," +
-                        P +
+                        B +
                         ")");
                 else {
                   if (
@@ -19297,9 +19290,9 @@ PERFORMANCE OF THIS SOFTWARE.
                           : "translate3d(") +
                         N +
                         "px," +
-                        P +
-                        "px," +
                         B +
+                        "px," +
+                        P +
                         "px)" +
                         (1 !== D || 1 !== b
                           ? " scale(" + D + "," + b + ")"
@@ -19338,19 +19331,19 @@ PERFORMANCE OF THIS SOFTWARE.
                     1 !== b && ((i *= b), (r *= b), (u *= b), (d *= b)),
                     1 !== D && ((n *= D), (s *= D), (l *= D), (c *= D)),
                     (p || M) &&
-                      (p && ((N += a * -p), (P += o * -p), (B += _ * -p + p)),
+                      (p && ((N += a * -p), (B += o * -p), (P += _ * -p + p)),
                       M &&
                         ((N +=
                           I.xOrigin -
                           (I.xOrigin * n + I.yOrigin * i) +
                           I.xOffset),
-                        (P +=
+                        (B +=
                           I.yOrigin -
                           (I.xOrigin * s + I.yOrigin * r) +
                           I.yOffset)),
                       N < g && N > -g && (N = "0"),
-                      P < g && P > -g && (P = "0"),
-                      B < g && B > -g && (B = 0)),
+                      B < g && B > -g && (B = "0"),
+                      P < g && P > -g && (P = 0)),
                     (T =
                       I.xPercent || I.yPercent
                         ? "translate(" +
@@ -19390,7 +19383,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           ","))
                       : (T += ",0,0,0,0,1,0,"),
                     (T +=
-                      N + "," + P + "," + B + "," + (F ? 1 + -B / F : 1) + ")"),
+                      N + "," + B + "," + P + "," + (F ? 1 + -P / F : 1) + ")"),
                     (v[Ne] = T));
                 }
               });
@@ -19617,7 +19610,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   (D || (Me && d && L.zOrigin)) &&
                     (Ne
                       ? ((h = !0),
-                        (S = Be),
+                        (S = Pe),
                         (D = (D || $(e, S, n, !1, "50% 50%")) + ""),
                         ((r = new Ce(I, S, 0, 0, r, -1, "transformOrigin")).b =
                           I[S]),
@@ -19970,7 +19963,7 @@ PERFORMANCE OF THIS SOFTWARE.
           Xe = function (e) {
             if (((this.t._gsClassPT = this), 1 === e || 0 === e)) {
               this.t.setAttribute("class", 0 === e ? this.b : this.e);
-              for (var t = this.data, n = this.t.style; t; )
+              for (var t = this.data, n = this.t.style; t;)
                 (t.v ? (n[t.p] = t.v) : Ze(n, t.p), (t = t._next));
               1 === e &&
                 this.t._gsClassPT === this &&
@@ -19996,7 +19989,7 @@ PERFORMANCE OF THIS SOFTWARE.
               (_ = te(t, n)),
               (c = t._gsClassPT))
             ) {
-              for (m = {}, d = c.data; d; ) ((m[d.p] = 1), (d = d._next));
+              for (m = {}, d = c.data; d;) ((m[d.p] = 1), (d = d._next));
               c.setRatio(1);
             }
             return (
@@ -20040,7 +20033,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   o[n] &&
                     (o[n].parse === l
                       ? (a = !0)
-                      : (n = "transformOrigin" === n ? Be : o[n].p)),
+                      : (n = "transformOrigin" === n ? Pe : o[n].p)),
                   Ze(r, n));
             a &&
               (Ze(r, Ne),
@@ -20150,8 +20143,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 a.pop());
             }
             if (e) {
-              for (; E; ) {
-                for (S = E._next, C = f; C && C.pr > E.pr; ) C = C._next;
+              for (; E;) {
+                for (S = E._next, C = f; C && C.pr > E.pr;) C = C._next;
                 ((E._prev = C ? C._prev : T) ? (E._prev._next = E) : (f = E),
                   (E._next = C) ? (C._prev = E) : (T = E),
                   (E = S));
@@ -20297,7 +20290,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   0 !== this._tween._time) ||
                 -1e-6 === this._tween._rawPrevTime
               )
-                for (; a; ) {
+                for (; a;) {
                   if (
                     ((t = a.c * e + a.s),
                     a.r ? (t = a.r(t)) : t < 1e-6 && t > -1e-6 && (t = 0),
@@ -20346,11 +20339,11 @@ PERFORMANCE OF THIS SOFTWARE.
                   a = a._next;
                 }
               else
-                for (; a; )
+                for (; a;)
                   (2 !== a.type ? (a.t[a.p] = a.b) : a.setRatio(e),
                     (a = a._next));
             else
-              for (; a; ) {
+              for (; a;) {
                 if (2 !== a.type)
                   if (a.r && -1 !== a.type)
                     if (((t = a.r(a.s + a.c)), a.type)) {
@@ -20402,7 +20395,7 @@ PERFORMANCE OF THIS SOFTWARE.
             );
           }),
           (l._mod = function (e) {
-            for (var t = this._firstPT; t; )
+            for (var t = this._firstPT; t;)
               ("function" == typeof e[t.p] && (t.r = e[t.p]), (t = t._next));
           }),
           (l._kill = function (e) {
@@ -20434,9 +20427,9 @@ PERFORMANCE OF THIS SOFTWARE.
           }));
         var Je = function (e, t, n) {
           var i, a, s, r;
-          if (e.slice) for (a = e.length; --a > -1; ) Je(e[a], t, n);
+          if (e.slice) for (a = e.length; --a > -1;) Je(e[a], t, n);
           else
-            for (a = (i = e.childNodes).length; --a > -1; )
+            for (a = (i = e.childNodes).length; --a > -1;)
               ((r = (s = i[a]).type),
                 s.style && (t.push(te(s)), n && n.push(s)),
                 (1 !== r && 9 !== r && 11 !== r) ||
@@ -20638,7 +20631,7 @@ PERFORMANCE OF THIS SOFTWARE.
           m,
           d = [];
         if (i)
-          for (o = (e = [i].concat(e)).length; --o > -1; )
+          for (o = (e = [i].concat(e)).length; --o > -1;)
             "string" == typeof (m = e[o][t]) &&
               "=" === m.charAt(1) &&
               (e[o][t] = i[t] + Number(m.charAt(0) + m.substr(2)));
@@ -20674,7 +20667,7 @@ PERFORMANCE OF THIS SOFTWARE.
         e[0]))
           S.push(c);
         if (e.length > 1) {
-          for (f = e[e.length - 1], C = !0, _ = S.length; --_ > -1; )
+          for (f = e[e.length - 1], C = !0, _ = S.length; --_ > -1;)
             if (((c = S[_]), Math.abs(y[c] - f[c]) > 0.05)) {
               C = !1;
               break;
@@ -20685,21 +20678,21 @@ PERFORMANCE OF THIS SOFTWARE.
             e.push(e[1]),
             (u = e[e.length - 3]));
         }
-        for (s.length = r.length = o.length = 0, _ = S.length; --_ > -1; )
+        for (s.length = r.length = o.length = 0, _ = S.length; --_ > -1;)
           ((c = S[_]),
             (l[c] = -1 !== a.indexOf("," + c + ",")),
             (T[c] = d(e, c, l[c], u)));
-        for (_ = s.length; --_ > -1; )
+        for (_ = s.length; --_ > -1;)
           ((s[_] = Math.sqrt(s[_])), (r[_] = Math.sqrt(r[_])));
         if (!i) {
-          for (_ = S.length; --_ > -1; )
+          for (_ = S.length; --_ > -1;)
             if (l[c])
               for (E = (h = T[S[_]]).length - 1, p = 0; p < E; p++)
                 ((g = h[p + 1].da / r[p] + h[p].da / s[p] || 0),
                   (o[p] = (o[p] || 0) + g * g));
-          for (_ = o.length; --_ > -1; ) o[_] = Math.sqrt(o[_]);
+          for (_ = o.length; --_ > -1;) o[_] = Math.sqrt(o[_]);
         }
-        for (_ = S.length, p = n ? 4 : 1; --_ > -1; )
+        for (_ = S.length, p = n ? 4 : 1; --_ > -1;)
           ((h = T[(c = S[_])]),
             m(h, t, n, i, l[c]),
             C && (h.splice(0, p), h.splice(h.length - p, p)));
@@ -20756,7 +20749,7 @@ PERFORMANCE OF THIS SOFTWARE.
             : null),
           c))
             this._props.push(i);
-          for (s = this._props.length; --s > -1; )
+          for (s = this._props.length; --s > -1;)
             ((i = this._props[s]),
               this._overwriteProps.push(i),
               (a = this._func[i] = "function" == typeof e[i]),
@@ -20802,7 +20795,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     )
                       throw "invalid Bezier data";
                     for (m in e[0]) C.push(m);
-                    for (l = C.length; --l > -1; ) {
+                    for (l = C.length; --l > -1;) {
                       for (
                         p[(m = C[l])] = o = [], d = 0, c = e.length, u = 0;
                         u < c;
@@ -20918,13 +20911,13 @@ PERFORMANCE OF THIS SOFTWARE.
               (i = this._li),
               e > this._l2 && i < m - 1)
             ) {
-              for (u = m - 1; i < u && (this._l2 = _[++i]) <= e; );
+              for (u = m - 1; i < u && (this._l2 = _[++i]) <= e;);
               ((this._l1 = _[i - 1]),
                 (this._li = i),
                 (this._curSeg = c = this._segments[i]),
                 (this._s2 = c[(this._s1 = this._si = 0)]));
             } else if (e < this._l1 && i > 0) {
-              for (; i > 0 && (this._l1 = _[--i]) >= e; );
+              for (; i > 0 && (this._l1 = _[--i]) >= e;);
               (0 === i && e < this._l1 ? (this._l1 = 0) : i++,
                 (this._l2 = _[i]),
                 (this._li = i),
@@ -20938,10 +20931,10 @@ PERFORMANCE OF THIS SOFTWARE.
               (i = this._si),
               e > this._s2 && i < c.length - 1)
             ) {
-              for (u = c.length - 1; i < u && (this._s2 = c[++i]) <= e; );
+              for (u = c.length - 1; i < u && (this._s2 = c[++i]) <= e;);
               ((this._s1 = c[i - 1]), (this._si = i));
             } else if (e < this._s1 && i > 0) {
-              for (; i > 0 && (this._s1 = c[--i]) >= e; );
+              for (; i > 0 && (this._s1 = c[--i]) >= e;);
               (0 === i && e < this._s1 ? (this._s1 = 0) : i++,
                 (this._s2 = c[i]),
                 (this._si = i));
@@ -20951,7 +20944,7 @@ PERFORMANCE OF THIS SOFTWARE.
             o =
               (e - (t = e < 0 ? 0 : e >= 1 ? m - 1 : (m * e) >> 0) * (1 / m)) *
               m;
-          for (n = 1 - o, i = this._props.length; --i > -1; )
+          for (n = 1 - o, i = this._props.length; --i > -1;)
             ((s = this._props[i]),
               (l =
                 (o * o * (r = this._beziers[s][t]).da +
@@ -20969,7 +20962,7 @@ PERFORMANCE OF THIS SOFTWARE.
               S,
               y,
               I = this._autoRotate;
-            for (i = I.length; --i > -1; )
+            for (i = I.length; --i > -1;)
               ((s = I[i][2]),
                 (S = I[i][3] || 0),
                 (y = !0 === I[i][4] ? 1 : a),
@@ -21057,7 +21050,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }
       }),
       (E._mod = function (e) {
-        for (var t, n = this._overwriteProps, i = n.length; --i > -1; )
+        for (var t, n = this._overwriteProps, i = n.length; --i > -1;)
           (t = e[n[i]]) && "function" == typeof t && (this._mod[n[i]] = t);
       }),
       (E._kill = function (e) {
@@ -21072,7 +21065,7 @@ PERFORMANCE OF THIS SOFTWARE.
             )
               i[n] === t && i.splice(n, 1);
         if ((i = this._autoRotate))
-          for (n = i.length; --n > -1; ) e[i[n][2]] && i.splice(n, 1);
+          for (n = i.length; --n > -1;) e[i[n][2]] && i.splice(n, 1);
         return this._super._kill.call(this, e);
       }));
   },
@@ -21110,7 +21103,7 @@ PERFORMANCE OF THIS SOFTWARE.
         };
       },
       s = function (e, t) {
-        for (; e; ) (e.f || e.blob || (e.m = t || Math.round), (e = e._next));
+        for (; e;) (e.f || e.blob || (e.m = t || Math.round), (e = e._next));
       },
       r = i.prototype;
     /*!
@@ -21140,7 +21133,7 @@ PERFORMANCE OF THIS SOFTWARE.
           l[o[n]] = Math.round;
       else for (i in o) l[i] = a(o[i]);
       for (i in l)
-        for (e = r._firstPT; e; )
+        for (e = r._firstPT; e;)
           ((t = e._next),
             e.pg
               ? e.t._mod(l)
@@ -21221,7 +21214,7 @@ PERFORMANCE OF THIS SOFTWARE.
         var t;
         if (1 !== e) this._super.setRatio.call(this, e);
         else
-          for (t = this._firstPT; t; )
+          for (t = this._firstPT; t;)
             (t.f ? t.t[t.p](this.finals[t.p]) : (t.t[t.p] = this.finals[t.p]),
               (t = t._next));
       },
@@ -21331,7 +21324,7 @@ PERFORMANCE OF THIS SOFTWARE.
               );
             }),
           (CountriesManager.prototype.initNotSupportedCountries = function () {
-            for (var e = this.allCountries.length, t = 0; t < e; )
+            for (var e = this.allCountries.length, t = 0; t < e;)
               (-1 === this.activeCountries.indexOf(this.allCountries[t]) &&
                 this.allCountries[t].ggsCountryCode !==
                   a.CountryCodes.INTERNATIONAL &&
@@ -21340,7 +21333,7 @@ PERFORMANCE OF THIS SOFTWARE.
           }),
           (CountriesManager.prototype.removeDuplicatedActiveCountries =
             function () {
-              for (var e = [], t = this.activeCountries.length, n = 0; n < t; )
+              for (var e = [], t = this.activeCountries.length, n = 0; n < t;)
                 (-1 === e.indexOf(this.activeCountries[n]) &&
                   e.push(this.activeCountries[n]),
                   n++);
@@ -23356,8 +23349,8 @@ PERFORMANCE OF THIS SOFTWARE.
         }),
         (MathBase.limit = function (e, t, n, i) {
           if ((void 0 === i && (i = !1), !i)) return MathBase.clamp(e, t, n);
-          for (; e > n; ) e -= n - t;
-          for (; e < t; ) e += n - t;
+          for (; e > n;) e -= n - t;
+          for (; e < t;) e += n - t;
           return e;
         }),
         (MathBase.distance = function (e, t, n, i) {
@@ -23394,7 +23387,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }),
         (MathBase.factorial = function (e) {
           if (0 == e) return 1;
-          for (var t = e.valueOf(), n = t - 1; n; ) ((t *= n), n--);
+          for (var t = e.valueOf(), n = t - 1; n;) ((t *= n), n--);
           return t;
         }),
         (MathBase.getDivisors = function (e) {
@@ -23956,7 +23949,7 @@ PERFORMANCE OF THIS SOFTWARE.
         i.prototype.onRemove.call(this, e);
       }),
       (OneOf.d = function decorateOneOf() {
-        for (var e = new Array(arguments.length), t = 0; t < arguments.length; )
+        for (var e = new Array(arguments.length), t = 0; t < arguments.length;)
           e[t] = arguments[t++];
         return function oneOfDecorator(t, n) {
           (s.decorateType(t.constructor).add(new OneOf(n, e)),
@@ -24599,7 +24592,7 @@ PERFORMANCE OF THIS SOFTWARE.
         (t.inherits = n(542)),
         (t._extend = function (e, t) {
           if (!t || !isObject(t)) return e;
-          for (var n = Object.keys(t), i = n.length; i--; ) e[n[i]] = t[n[i]];
+          for (var n = Object.keys(t), i = n.length; i--;) e[n[i]] = t[n[i]];
           return e;
         }));
     }).call(this, n(24), n(47));
@@ -24737,16 +24730,16 @@ PERFORMANCE OF THIS SOFTWARE.
                 if (O) {
                   ((S *= Math.abs(v.a)), (y *= Math.abs(v.d)));
                   var N,
-                    P,
-                    B =
+                    B,
+                    P =
                       void 0 !== E.customCenterHittestArea
                         ? E.customCenterHittestArea
                         : s.defaultCenterHittestArea;
                   if (
                     ((N = Math.abs(v.tx + 0.5 * S * Math.sign(v.a) - r)),
-                    (P = Math.abs(v.ty + 0.5 * y * Math.sign(v.d) - o)),
-                    (L = N < S * B && P < y * B),
-                    !(N < 0.5 * S && P < 0.5 * y))
+                    (B = Math.abs(v.ty + 0.5 * y * Math.sign(v.d) - o)),
+                    (L = N < S * P && B < y * P),
+                    !(N < 0.5 * S && B < 0.5 * y))
                   )
                     continue;
                   if (
@@ -25316,7 +25309,7 @@ PERFORMANCE OF THIS SOFTWARE.
             },
             set: function (e) {
               this._valueClasses = e ? e.slice() : [];
-              for (var t = this._valueClasses.length; t--; )
+              for (var t = this._valueClasses.length; t--;)
                 if (!(this._valueClasses[t] instanceof Object))
                   throw new Error(
                     "Invalid valueClasses argument: item at index " +
@@ -25361,13 +25354,11 @@ PERFORMANCE OF THIS SOFTWARE.
                   ".",
               );
             for (var a = 0; a < n; a++)
-              if (
-                !(
-                  null === e[a] ||
-                  e[a] instanceof this._valueClasses[a] ||
-                  e[a].constructor === this._valueClasses[a]
-                )
-              )
+              if (!(
+                null === e[a] ||
+                e[a] instanceof this._valueClasses[a] ||
+                e[a].constructor === this._valueClasses[a]
+              ))
                 throw new Error(
                   "Value object <" +
                     e[a] +
@@ -25377,7 +25368,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 );
             var s = this.slots;
             if (s.nonEmpty)
-              for (; s.nonEmpty; ) (s.head.execute(e), (s = s.tail));
+              for (; s.nonEmpty;) (s.head.execute(e), (s = s.tail));
           }),
           (OnceSignal.prototype.registerListener = function (e, t) {
             if ((void 0 === t && (t = !1), this.registrationPossible(e, t))) {
@@ -28978,13 +28969,13 @@ PERFORMANCE OF THIS SOFTWARE.
               (e.scaleX = e.scaleY = s));
           }),
           (MovieClipHelper.isChildrenOf = function (e, t) {
-            for (var n = e, i = !1; !i && n.parent; )
+            for (var n = e, i = !1; !i && n.parent;)
               n.parent == t ? (i = !0) : (n = n.parent);
             return i;
           }),
           (MovieClipHelper.clearMovieClip = function (e) {
             if (e)
-              for (; e.numChildren > 0; ) {
+              for (; e.numChildren > 0;) {
                 var t = e.children[0];
                 (e.removeChildAt(0),
                   t instanceof c.AbstractDisplayObjectClip && t.dispose());
@@ -29085,7 +29076,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     ? MovieClipHelper.dissolveDisplayObjectContainer(r)
                     : t.push(r);
                 }
-                for (; n.numChildren > 0; ) n.removeChildAt(0);
+                for (; n.numChildren > 0;) n.removeChildAt(0);
                 n.numChildren > 0 && i.error("ERROR");
               }
             }
@@ -29304,7 +29295,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 (n.y = -r.registrationPointY),
                 s.push(n));
             } else {
-              for (var o = Math.ceil(e.length / t), l = []; e.length > 0; )
+              for (var o = Math.ceil(e.length / t), l = []; e.length > 0;)
                 l.push(e.splice(0, o));
               l.forEach(function (e) {
                 var t = e.reduce(ClipSourceOptimizer.findFlattenedImageInfo, {
@@ -30462,11 +30453,11 @@ PERFORMANCE OF THIS SOFTWARE.
       ((this.len = e), (this.next = void 0), (this.val = t));
     }
     function writeVarint64(e, t, n) {
-      for (; e.hi; )
+      for (; e.hi;)
         ((t[n++] = (127 & e.lo) | 128),
           (e.lo = ((e.lo >>> 7) | (e.hi << 25)) >>> 0),
           (e.hi >>>= 7));
-      for (; e.lo > 127; ) ((t[n++] = (127 & e.lo) | 128), (e.lo = e.lo >>> 7));
+      for (; e.lo > 127;) ((t[n++] = (127 & e.lo) | 128), (e.lo = e.lo >>> 7));
       t[n++] = e.lo;
     }
     function writeFixed32(e, t, n) {
@@ -30498,7 +30489,7 @@ PERFORMANCE OF THIS SOFTWARE.
       }),
       (VarintOp.prototype = Object.create(Op.prototype)),
       (VarintOp.prototype.fn = function writeVarint32(e, t, n) {
-        for (; e > 127; ) ((t[n++] = (127 & e) | 128), (e >>>= 7));
+        for (; e > 127;) ((t[n++] = (127 & e) | 128), (e >>>= 7));
         t[n] = e;
       }),
       (Writer.prototype.uint32 = function write_uint32(e) {
@@ -30818,7 +30809,7 @@ PERFORMANCE OF THIS SOFTWARE.
             this.skip(this.uint32());
             break;
           case 3:
-            for (; 4 != (e = 7 & this.uint32()); ) this.skipType(e);
+            for (; 4 != (e = 7 & this.uint32());) this.skipType(e);
             break;
           case 5:
             this.skip(4);
@@ -31021,9 +31012,9 @@ PERFORMANCE OF THIS SOFTWARE.
         ]);
       }),
       (Type.prototype.resolveAll = function resolveAll() {
-        for (var e = this.fieldsArray, t = 0; t < e.length; ) e[t++].resolve();
+        for (var e = this.fieldsArray, t = 0; t < e.length;) e[t++].resolve();
         var n = this.oneofsArray;
-        for (t = 0; t < n.length; ) n[t++].resolve();
+        for (t = 0; t < n.length;) n[t++].resolve();
         return i.prototype.resolveAll.call(this);
       }),
       (Type.prototype.get = function get(e) {
@@ -31525,7 +31516,7 @@ PERFORMANCE OF THIS SOFTWARE.
       else if (e instanceof l) c.test(e.name) && (e.parent[e.name] = e.values);
       else if (!(e instanceof u)) {
         if (e instanceof a)
-          for (var t = 0; t < this.deferred.length; )
+          for (var t = 0; t < this.deferred.length;)
             tryHandleExtension(0, this.deferred[t])
               ? this.deferred.splice(t, 1)
               : ++t;
@@ -33271,7 +33262,7 @@ and limitations under the License.
       function Hash(e) {
         var t = -1,
           n = e ? e.length : 0;
-        for (this.clear(); ++t < n; ) {
+        for (this.clear(); ++t < n;) {
           var i = e[t];
           this.set(i[0], i[1]);
         }
@@ -33279,7 +33270,7 @@ and limitations under the License.
       function ListCache(e) {
         var t = -1,
           n = e ? e.length : 0;
-        for (this.clear(); ++t < n; ) {
+        for (this.clear(); ++t < n;) {
           var i = e[t];
           this.set(i[0], i[1]);
         }
@@ -33287,13 +33278,13 @@ and limitations under the License.
       function MapCache(e) {
         var t = -1,
           n = e ? e.length : 0;
-        for (this.clear(); ++t < n; ) {
+        for (this.clear(); ++t < n;) {
           var i = e[t];
           this.set(i[0], i[1]);
         }
       }
       function assocIndexOf(e, t) {
-        for (var n, i, a = e.length; a--; )
+        for (var n, i, a = e.length; a--;)
           if ((n = e[a][0]) === (i = t) || (n != n && i != i)) return a;
         return -1;
       }
@@ -33632,7 +33623,7 @@ and limitations under the License.
             window.addEventListener(i.wheel, s);
           }));
         var s = function (e) {
-          for (var i = t; i; ) {
+          for (var i = t; i;) {
             if (i.hasEventListener(n.MOUSE_WHEEL) && i.dispatchEvent) {
               i.dispatchEvent(convertEvent(e));
               break;
@@ -34244,7 +34235,7 @@ and limitations under the License.
         o = "object" == typeof self && self && self.Object === Object && self,
         l = r || o || Function("return this")();
       function arrayPush(e, t) {
-        for (var n = -1, i = t.length, a = e.length; ++n < i; ) e[a + n] = t[n];
+        for (var n = -1, i = t.length, a = e.length; ++n < i;) e[a + n] = t[n];
         return e;
       }
       var u = Object.prototype,
@@ -34297,7 +34288,7 @@ and limitations under the License.
           ? (function baseFlatten(e, t, n, i, a) {
               var s = -1,
                 r = e.length;
-              for (n || (n = isFlattenable), a || (a = []); ++s < r; ) {
+              for (n || (n = isFlattenable), a || (a = []); ++s < r;) {
                 var o = e[s];
                 t > 0 && n(o)
                   ? t > 1
@@ -35819,7 +35810,7 @@ and limitations under the License.
                   : this.verifyTracking()));
           }),
           (TrackingVerifier.prototype.verifyTracking = function () {
-            for (var e = []; 0 != this._currentTrackingPattern.length; ) {
+            for (var e = []; 0 != this._currentTrackingPattern.length;) {
               var t = this._currentTrackingPattern.pop();
               this.eventWasNotFired(t) && e.push(t);
             }
@@ -36034,7 +36025,7 @@ and limitations under the License.
           get: function () {
             if (!this.nonEmpty) return 0;
             if (this.tail == SlotList.NIL) return 1;
-            for (var e = 0, t = this; t.nonEmpty; ) (++e, (t = t.tail));
+            for (var e = 0, t = this; t.nonEmpty;) (++e, (t = t.tail));
             return e;
           },
           enumerable: !0,
@@ -36082,7 +36073,7 @@ and limitations under the License.
         }),
         (SlotList.prototype.contains = function (e) {
           if (!this.nonEmpty) return !1;
-          for (var t = this; t.nonEmpty; ) {
+          for (var t = this; t.nonEmpty;) {
             if (t.head.listener == e) return !0;
             t = t.tail;
           }
@@ -36090,14 +36081,14 @@ and limitations under the License.
         }),
         (SlotList.prototype.find = function (e) {
           if (!this.nonEmpty) return null;
-          for (var t = this; t.nonEmpty; ) {
+          for (var t = this; t.nonEmpty;) {
             if (t.head.listener == e) return t.head;
             t = t.tail;
           }
           return null;
         }),
         (SlotList.prototype.toString = function () {
-          for (var e = "", t = this; t.nonEmpty; )
+          for (var e = "", t = this; t.nonEmpty;)
             ((e += t.head + " -> "), (t = t.tail));
           return "[List " + (e += "NIL") + "]";
         }),
@@ -36360,7 +36351,7 @@ and limitations under the License.
           ((this._readableState.decoder = t),
             (this._readableState.encoding =
               this._readableState.decoder.encoding));
-          for (var i = this._readableState.buffer.head, a = ""; null !== i; )
+          for (var i = this._readableState.buffer.head, a = ""; null !== i;)
             ((a += t.write(i.data)), (i = i.next));
           return (
             this._readableState.buffer.clear(),
@@ -36455,7 +36446,7 @@ and limitations under the License.
       }
       function flow(e) {
         var t = e._readableState;
-        for (u("flow", t.flowing); t.flowing && null !== e.read(); );
+        for (u("flow", t.flowing); t.flowing && null !== e.read(););
       }
       function fromList(e, t) {
         return 0 === t.length
@@ -36934,7 +36925,7 @@ and limitations under the License.
           (delete this._events[e],
             this._events.removeListener && this.emit("removeListener", e, t));
         else if (isObject(n)) {
-          for (s = a; s-- > 0; )
+          for (s = a; s-- > 0;)
             if (n[s] === t || (n[s].listener && n[s].listener === t)) {
               i = s;
               break;
@@ -36967,7 +36958,7 @@ and limitations under the License.
           );
         }
         if (isFunction((n = this._events[e]))) this.removeListener(e, n);
-        else if (n) for (; n.length; ) this.removeListener(e, n[n.length - 1]);
+        else if (n) for (; n.length;) this.removeListener(e, n[n.length - 1]);
         return (delete this._events[e], this);
       }),
       (EventEmitter.prototype.listeners = function (e) {
@@ -37090,7 +37081,7 @@ and limitations under the License.
             !(function onCorkedFinish(e, t, n) {
               var i = e.entry;
               e.entry = null;
-              for (; i; ) {
+              for (; i;) {
                 var a = i.callback;
                 (t.pendingcb--, a(n), (i = i.next));
               }
@@ -37234,7 +37225,7 @@ and limitations under the License.
             a = new Array(i),
             s = t.corkedRequestsFree;
           s.entry = n;
-          for (var r = 0, o = !0; n; )
+          for (var r = 0, o = !0; n;)
             ((a[r] = n), n.isBuf || (o = !1), (n = n.next), (r += 1));
           ((a.allBuffers = o),
             doWrite(e, t, !0, t.length, a, "", s.finish),
@@ -37245,7 +37236,7 @@ and limitations under the License.
               : (t.corkedRequestsFree = new CorkedRequest(t)),
             (t.bufferedRequestCount = 0));
         } else {
-          for (; n; ) {
+          for (; n;) {
             var l = n.chunk,
               u = n.encoding,
               _ = n.callback;
@@ -37302,7 +37293,7 @@ and limitations under the License.
       }
       (n(94)(Writable, r),
         (WritableState.prototype.getBuffer = function getBuffer() {
-          for (var e = this.bufferedRequest, t = []; e; )
+          for (var e = this.bufferedRequest, t = []; e;)
             (t.push(e), (e = e.next));
           return t;
         }),
@@ -37532,7 +37523,7 @@ and limitations under the License.
         ((this.encoding = (function normalizeEncoding(e) {
           var t = (function _normalizeEncoding(e) {
             if (!e) return "utf8";
-            for (var t; ; )
+            for (var t; ;)
               switch (e) {
                 case "utf8":
                 case "utf-8":
@@ -39994,7 +39985,7 @@ and limitations under the License.
               s = u + (_.length ? e("generic_comma") + _ : "");
             }
             if (this._width)
-              for (var c = Number(this._width) - s.length; c-- > 0; )
+              for (var c = Number(this._width) - s.length; c-- > 0;)
                 s = this._fill + s;
             return s;
           }),
@@ -40062,7 +40053,7 @@ and limitations under the License.
         function DurationFormatUtils() {}
         return (
           (DurationFormatUtils.placeholderReplacementsFrom = function (e) {
-            for (var t, n = {}, i = /\{(.*?)\}/g; null !== (t = i.exec(e)); )
+            for (var t, n = {}, i = /\{(.*?)\}/g; null !== (t = i.exec(e));)
               n[t[1]] = t[0];
             return n;
           }),
@@ -42778,7 +42769,7 @@ and limitations under the License.
           },
         ),
         (PerformanceMonitoringProxy.prototype.resetMeasurements = function () {
-          for (; this.measuredFpsList.length > 0; ) this.measuredFpsList.pop();
+          for (; this.measuredFpsList.length > 0;) this.measuredFpsList.pop();
         }),
         Object.defineProperty(
           PerformanceMonitoringProxy.prototype,
@@ -43274,7 +43265,7 @@ and limitations under the License.
       return (
         (VectorSortHelper.sort = function (e, t) {
           for (var n = 1; n < e.length; n++) {
-            for (var i = e[n], a = n - 1; a >= 0 && 1 == t(e[a], i); )
+            for (var i = e[n], a = n - 1; a >= 0 && 1 == t(e[a], i);)
               ((e[a + 1] = e[a]), a--);
             e[a + 1] = i;
           }
@@ -52189,7 +52180,7 @@ and limitations under the License.
         i = 0,
         a = 2,
         s = !0;
-      for (; a < arguments.length; ) n[i++] = arguments[a++];
+      for (; a < arguments.length;) n[i++] = arguments[a++];
       return new Promise(function executor(a, r) {
         n[i] = function callback(e) {
           if (s)
@@ -52915,7 +52906,7 @@ and limitations under the License.
         return /^\s*\/{1,2}/.test(i);
       }
       function findEndOfLine(e) {
-        for (var t = e; t < _ && "\n" !== charAt(t); ) t++;
+        for (var t = e; t < _ && "\n" !== charAt(t);) t++;
         return t;
       }
       function next() {
@@ -52931,7 +52922,7 @@ and limitations under the License.
         var r, o, l, m, d;
         do {
           if (n === _) return null;
-          for (r = !1; u.test((l = charAt(n))); )
+          for (r = !1; u.test((l = charAt(n)));)
             if (("\n" === l && ++c, ++n === _)) return null;
           if ("/" === charAt(n)) {
             if (++n === _) throw illegal("comment");
@@ -52946,7 +52937,7 @@ and limitations under the License.
                 } else n = Math.min(_, findEndOfLine(n) + 1);
                 (d && setComment(m, n), c++, (r = !0));
               } else {
-                for (d = "/" === charAt((m = n + 1)); "\n" !== charAt(++n); )
+                for (d = "/" === charAt((m = n + 1)); "\n" !== charAt(++n);)
                   if (n === _) return null;
                 (++n, d && setComment(m, n - 1), ++c, (r = !0));
               }
@@ -52963,7 +52954,7 @@ and limitations under the License.
         } while (r);
         var h = n;
         if (((i.lastIndex = 0), !i.test(charAt(h++))))
-          for (; h < _ && !i.test(charAt(h)); ) ++h;
+          for (; h < _ && !i.test(charAt(h));) ++h;
         var p = e.substring(n, (n = h));
         return (('"' !== p && "'" !== p) || (E = p), p);
       }
@@ -53140,7 +53131,7 @@ and limitations under the License.
                 } else if (
                   ((this._initted = !1), this._init(), this._time > 0 || s)
                 )
-                  for (var o, l = 1 / (1 - a), u = this._firstPT; u; )
+                  for (var o, l = 1 / (1 - a), u = this._firstPT; u;)
                     ((o = u.s + u.c),
                       (u.c *= l),
                       (u.s = o - u.c),
@@ -53450,7 +53441,7 @@ and limitations under the License.
               return i.default.getTweensOf(e, !0).length > 0;
             }));
           var u = function (e, t) {
-              for (var n = [], a = 0, s = e._first; s; )
+              for (var n = [], a = 0, s = e._first; s;)
                 (s instanceof i.default
                   ? (n[a++] = s)
                   : (t && (n[a++] = s), (a = (n = n.concat(u(s, t))).length)),
@@ -53493,10 +53484,10 @@ and limitations under the License.
                   s(t) && (t = e(t)),
                   r(t))
                 )
-                  for (c = t.length; --c > -1; ) n.killChildTweensOf(t[c], o);
+                  for (c = t.length; --c > -1;) n.killChildTweensOf(t[c], o);
                 else {
                   for (_ in ((l = []), d))
-                    for (u = d[_].target.parentNode; u; )
+                    for (u = d[_].target.parentNode; u;)
                       (u === t && (l = l.concat(d[_].tweens)),
                         (u = u.parentNode));
                   for (m = l.length, c = 0; c < m; c++)
@@ -53743,8 +53734,144 @@ and limitations under the License.
         (ItemVersions.prototype.fill = function () {
           ((this.assets.Deco_Building_springBonfire =
             "itemassets/Building/Deco/Deco_Building_springBonfire/Deco_Building_springBonfire--1616681902168"),
+            (this.assets.WorldmapAssets_Classic_Jade =
+              "itemassets/Worldmap/Events/WorldmapAssets_Classic_Jade/WorldmapAssets_Classic_Jade--1787049958841"),
+            (this.assets.Dummy_Mapobject =
+              "itemassets/Worldmap/WorldmapObjects/Landmarks/Dummy_Mapobject/Dummy_Mapobject--1786696394046"),
+            (this.assets.ConstructionItem_AnniversaryTradeDistrictSecondary =
+              "itemassets/ConstructionItems/ConstructionItem_AnniversaryTradeDistrictSecondary/ConstructionItem_AnniversaryTradeDistrictSecondary--1785843873818"),
+            (this.assets.ConstructionItem_AnniversaryTradeDistrictPrimary =
+              "itemassets/ConstructionItems/ConstructionItem_AnniversaryTradeDistrictPrimary/ConstructionItem_AnniversaryTradeDistrictPrimary--1785843873818"),
+            (this.assets.ConstructionItem_AnniversaryKeep15 =
+              "itemassets/ConstructionItems/ConstructionItem_AnniversaryKeep15/ConstructionItem_AnniversaryKeep15--1785841399544"),
+            (this.assets.CastleOptionsExternal_AUG2026 =
+              "itemassets/Dialogs/CastleOptionsExternal_AUG2026/CastleOptionsExternal_AUG2026--1785831431169"),
+            (this.assets.CastleMessageIconsBaronAdvisor =
+              "itemassets/Dialogs/Messages/MessageIcons/CastleMessageIconsBaronAdvisor/CastleMessageIconsBaronAdvisor--1785750316705"),
+            (this.assets.AdvisorActivationExt_3 =
+              "itemassets/Dialogs/AttackAdvisor/AdvisorActivationExt_3/AdvisorActivationExt_3--1785752443310"),
+            (this.assets.Deco_Building_ExaltedRedTriumphalArch =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2026/Deco_Building_ExaltedRedTriumphalArch/Deco_Building_ExaltedRedTriumphalArch--1785403011087"),
+            (this.assets.Deco_Building_ExaltedRedFireworksSpire =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2026/Deco_Building_ExaltedRedFireworksSpire/Deco_Building_ExaltedRedFireworksSpire--1785403011087"),
+            (this.assets.Deco_Building_ExaltedRedAnniversaryGateway =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2026/Deco_Building_ExaltedRedAnniversaryGateway/Deco_Building_ExaltedRedAnniversaryGateway--1785403011087"),
+            (this.assets.Deco_Building_ExaltedPurpleTriumphalArch =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2026/Deco_Building_ExaltedPurpleTriumphalArch/Deco_Building_ExaltedPurpleTriumphalArch--1785403011087"),
+            (this.assets.Deco_Building_ExaltedPurpleFireworksSpire =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2026/Deco_Building_ExaltedPurpleFireworksSpire/Deco_Building_ExaltedPurpleFireworksSpire--1785403011087"),
+            (this.assets.Deco_Building_ExaltedPurpleAnniversaryGateway =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2026/Deco_Building_ExaltedPurpleAnniversaryGateway/Deco_Building_ExaltedPurpleAnniversaryGateway--1785403011087"),
+            (this.assets.Deco_Building_ExaltedGreenTriumphalArch =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2026/Deco_Building_ExaltedGreenTriumphalArch/Deco_Building_ExaltedGreenTriumphalArch--1785403011087"),
+            (this.assets.Deco_Building_ExaltedGreenFireworksSpire =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2026/Deco_Building_ExaltedGreenFireworksSpire/Deco_Building_ExaltedGreenFireworksSpire--1785403011087"),
+            (this.assets.Deco_Building_ExaltedGreenAnniversaryGateway =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2026/Deco_Building_ExaltedGreenAnniversaryGateway/Deco_Building_ExaltedGreenAnniversaryGateway--1785403011087"),
+            (this.assets.Deco_Building_AnniversaryGateway =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2026/Deco_Building_AnniversaryGateway/Deco_Building_AnniversaryGateway--1785403011087"),
+            (this.assets.AllianceMobilizationEventMainExt_Jul26 =
+              "itemassets/Dialogs/Events/AllianceMobilizationEvent/AllianceMobilizationEventMainExt_Jul26/AllianceMobilizationEventMainExt_Jul26--1784622230662"),
+            (this.assets.Keep_Building_AnniversaryKeep15 =
+              "itemassets/Building/Keep/Keep_Building_AnniversaryKeep15/Keep_Building_AnniversaryKeep15--1784622230662"),
+            (this.assets.Outpost_Mapobject_Special_AnniversaryWardenBulwark =
+              "itemassets/Worldmap/WorldmapObjects/Outposts/Outpost_Mapobject_Special_AnniversaryWardenBulwark/Outpost_Mapobject_Special_AnniversaryWardenBulwark--1784102259025"),
+            (this.assets.Skin_Mapmovement_AnniversaryWarAegis_Eiland =
+              "itemassets/Worldmap/WorldmapObjects/Movements/Skins/Skin_Mapmovement_AnniversaryWarAegis_Eiland/Skin_Mapmovement_AnniversaryWarAegis_Eiland--1784102259025"),
+            (this.assets.Skin_Mapmovement_AnniversaryWarAegis_Common =
+              "itemassets/Worldmap/WorldmapObjects/Movements/Skins/Skin_Mapmovement_AnniversaryWarAegis_Common/Skin_Mapmovement_AnniversaryWarAegis_Common--1784102259025"),
+            (this.assets.Metropol_Mapobject_Special_AnniversaryWardenBulwark =
+              "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_AnniversaryWardenBulwark/Metropol_Mapobject_Special_AnniversaryWardenBulwark--1784102259025"),
+            (this.assets.Capital_Mapobject_Special_AnniversaryWardenBulwark =
+              "itemassets/Worldmap/WorldmapObjects/Landmarks/Capital_Mapobject_Special_AnniversaryWardenBulwark/Capital_Mapobject_Special_AnniversaryWardenBulwark--1784102259025"),
+            (this.assets.Castle_Mapobject_Special_AnniversaryWardenBulwark =
+              "itemassets/Worldmap/WorldmapObjects/Castles/Castle_Mapobject_Special_AnniversaryWardenBulwark/Castle_Mapobject_Special_AnniversaryWardenBulwark--1784102259025"),
+            (this.assets.Item_Unique_1588 =
+              "itemassets/Equipment/Uniques/Item_Unique_1588/Item_Unique_1588--1784102259025"),
+            (this.assets.Item_Unique_1587 =
+              "itemassets/Equipment/Uniques/Item_Unique_1587/Item_Unique_1587--1784102259025"),
+            (this.assets.PivatePrimeDayDynamicDialog_TeaserImage_50 =
+              "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TeaserImages/PivatePrimeDayDynamicDialog_TeaserImage_50/PivatePrimeDayDynamicDialog_TeaserImage_50--1784102259025"),
+            (this.assets.ConstructionItem_AnniversaryTavern =
+              "itemassets/ConstructionItems/ConstructionItem_AnniversaryTavern/ConstructionItem_AnniversaryTavern--1784102259025"),
+            (this.assets.ConstructionItem_AnniversaryStables =
+              "itemassets/ConstructionItems/ConstructionItem_AnniversaryStables/ConstructionItem_AnniversaryStables--1784102259025"),
+            (this.assets.ConstructionItem_AnniversaryMilitaryDistrict =
+              "itemassets/ConstructionItems/ConstructionItem_AnniversaryMilitaryDistrict/ConstructionItem_AnniversaryMilitaryDistrict--1784102259025"),
+            (this.assets.ConstructionItem_AnniversaryHallofLegends =
+              "itemassets/ConstructionItems/ConstructionItem_AnniversaryHallofLegends/ConstructionItem_AnniversaryHallofLegends--1784102259025"),
+            (this.assets.ConstructionItem_AnniversaryGranary =
+              "itemassets/ConstructionItems/ConstructionItem_AnniversaryGranary/ConstructionItem_AnniversaryGranary--1784102259025"),
+            (this.assets.ConstructionItem_AnniversaryCattleFarm =
+              "itemassets/ConstructionItems/ConstructionItem_AnniversaryCattleFarm/ConstructionItem_AnniversaryCattleFarm--1784102259025"),
+            (this.assets.ConstructionItem_AnniversaryBarracks =
+              "itemassets/ConstructionItems/ConstructionItem_AnniversaryBarracks/ConstructionItem_AnniversaryBarracks--1784102259025"),
+            (this.assets.Tavern_Building_AnniversaryTavern =
+              "itemassets/Building/Tavern/Tavern_Building_AnniversaryTavern/Tavern_Building_AnniversaryTavern--1784102259025"),
+            (this.assets.Stable_Building_AnniversaryStables =
+              "itemassets/Building/Stable/Stable_Building_AnniversaryStables/Stable_Building_AnniversaryStables--1784102259025"),
+            (this.assets.MilitaryDistrict_Building_AnniversaryMilitaryDistrict =
+              "itemassets/Building/MilitaryDistrict/MilitaryDistrict_Building_AnniversaryMilitaryDistrict/MilitaryDistrict_Building_AnniversaryMilitaryDistrict--1784102259025"),
+            (this.assets.LegendFarm_Building_AnniversaryGranary =
+              "itemassets/Building/LegendFarm/LegendFarm_Building_AnniversaryGranary/LegendFarm_Building_AnniversaryGranary--1784102259025"),
+            (this.assets.Farm_Building_AnniversaryGranary =
+              "itemassets/Building/Farm/Farm_Building_AnniversaryGranary/Farm_Building_AnniversaryGranary--1784102259025"),
+            (this.assets.Deco_Building_ExaltedRedVintagePavilion =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2025/Deco_Building_ExaltedRedVintagePavilion/Deco_Building_ExaltedRedVintagePavilion--1784102259025"),
+            (this.assets.Deco_Building_ExaltedRedGardenSpire =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2025/Deco_Building_ExaltedRedGardenSpire/Deco_Building_ExaltedRedGardenSpire--1784102259025"),
+            (this.assets.Deco_Building_ExaltedPurpleVintagePavilion =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2025/Deco_Building_ExaltedPurpleVintagePavilion/Deco_Building_ExaltedPurpleVintagePavilion--1784102259025"),
+            (this.assets.Deco_Building_ExaltedPurpleGardenSpire =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2025/Deco_Building_ExaltedPurpleGardenSpire/Deco_Building_ExaltedPurpleGardenSpire--1784102259025"),
+            (this.assets.Deco_Building_ExaltedGreenVintagePavilion =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2025/Deco_Building_ExaltedGreenVintagePavilion/Deco_Building_ExaltedGreenVintagePavilion--1784102259025"),
+            (this.assets.Deco_Building_ExaltedGreenGardenSpire =
+              "itemassets/Building/Deco/EffectDecos/Anniversary2025/Deco_Building_ExaltedGreenGardenSpire/Deco_Building_ExaltedGreenGardenSpire--1784102259025"),
+            (this.assets.CattleFarm_Building_AnniversaryCattleFarm =
+              "itemassets/Building/Cattlefarm/CattleFarm_Building_AnniversaryCattleFarm/CattleFarm_Building_AnniversaryCattleFarm--1784102259025"),
+            (this.assets.Barracks_Building_AnniversaryBarracks =
+              "itemassets/Building/Barracks/Barracks_Building_AnniversaryBarracks/Barracks_Building_AnniversaryBarracks--1784102259025"),
+            (this.assets.NewsHub_Maintenance_Illustration =
+              "itemassets/Dialogs/NewsHub/NewsHub_Maintenance_Illustration/NewsHub_Maintenance_Illustration--1784034777919"),
+            (this.assets.Effect_Icon_778 =
+              "itemassets/Effects/Effect_Icon_778/Effect_Icon_778--1784023439483"),
+            (this.assets.Effect_Icon_777 =
+              "itemassets/Effects/Effect_Icon_777/Effect_Icon_777--1784017073116"),
+            (this.assets.Effect_Icon_776 =
+              "itemassets/Effects/Effect_Icon_776/Effect_Icon_776--1784017073116"),
+            (this.assets.Effect_Icon_775 =
+              "itemassets/Effects/Effect_Icon_775/Effect_Icon_775--1784017073116"),
+            (this.assets.CastleAlliance_JUL2026 =
+              "itemassets/Dialogs/Alliance/CastleAlliance_JUL2026/CastleAlliance_JUL2026--1784029416215"),
+            (this.assets.ModernYesNoBlueBigLabeled =
+              "itemassets/Dialogs/ModernYesNoBlueBigLabeled/ModernYesNoBlueBigLabeled--1783935996662"),
+            (this.assets.Btn_AttackAdvisor_Baron =
+              "itemassets/StatusIcons/Btn_AttackAdvisor_Baron/Btn_AttackAdvisor_Baron--1785749239357"),
+            (this.assets.BaronAdvisorTeasers =
+              "itemassets/Dialogs/AttackAdvisor/BaronAdvisorTeasers/BaronAdvisorTeasers--1784886776886"),
+            (this.assets.AdvisorOverviewExt_3 =
+              "itemassets/Dialogs/AttackAdvisor/AdvisorOverviewExt_3/AdvisorOverviewExt_3--1785912980239"),
+            (this.assets.QuestGiverBig_42 =
+              "itemassets/Characters/Big/QuestGiverBig_42/QuestGiverBig_42--1785749239357"),
+            (this.assets.ARE_BossCard_Necromancer =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/BossCards/ARE_BossCard_Necromancer/ARE_BossCard_Necromancer--1782996878055"),
+            (this.assets.ARE_BossCard_Necromancer_Victory =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/BossCards/ARE_BossCard_Necromancer_Victory/ARE_BossCard_Necromancer_Victory--1782996878055"),
+            (this.assets.ARE_BossCard_LegendaryDragon =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/BossCards/ARE_BossCard_LegendaryDragon/ARE_BossCard_LegendaryDragon--1782996878055"),
+            (this.assets.ARE_BossCard_LegendaryDragon_Victory =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/BossCards/ARE_BossCard_LegendaryDragon_Victory/ARE_BossCard_LegendaryDragon_Victory--1782996878055"),
+            (this.assets.ARE_BossCard_FungalSwarm =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/BossCards/ARE_BossCard_FungalSwarm/ARE_BossCard_FungalSwarm--1782996878055"),
+            (this.assets.ARE_BossCard_FungalSwarm_Victory =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/BossCards/ARE_BossCard_FungalSwarm_Victory/ARE_BossCard_FungalSwarm_Victory--1782996878055"),
+            (this.assets.AllianceRaidEventBG_BossSelection =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/Backgrounds/AllianceRaidEventBG_BossSelection/AllianceRaidEventBG_BossSelection--1782996878055"),
+            (this.assets.AllianceRaidEventMainExt_Jul26 =
+              "itemassets/Dialogs/Events/AllianceRaidEvent/AllianceRaidEventMainExt_Jul26/AllianceRaidEventMainExt_Jul26--1784023439483"),
             (this.assets.CastleStartscreenBackground_BG_Promo =
-              "itemassets/CastleStartscreenBackground_BG_Promo/CastleStartscreenBackground_BG_Promo--1782376876715"),
+              "itemassets/CastleStartscreenBackground_BG_Promo/CastleStartscreenBackground_BG_Promo--1784788738988"),
             (this.assets.Eventtool_Unit_AREWallDebuffPremium500 =
               "itemassets/Units/Eventtool/Eventtool_Unit_AREWallDebuffPremium500/Eventtool_Unit_AREWallDebuffPremium500--1781705519525"),
             (this.assets.Eventtool_Unit_AREWallDebuffPremium340 =
@@ -54096,7 +54223,7 @@ and limitations under the License.
             (this.assets.Eventtool_Unit_AREEventCurrencyBoost =
               "itemassets/Units/Eventtool/Eventtool_Unit_AREEventCurrencyBoost/Eventtool_Unit_AREEventCurrencyBoost--1778060896901"),
             (this.assets.Collectable_Currency_BaronAdvisorToken =
-              "itemassets/Collectables/Collectable_Currency_BaronAdvisorToken/Collectable_Currency_BaronAdvisorToken--1778056529690"),
+              "itemassets/Collectables/Collectable_Currency_BaronAdvisorToken/Collectable_Currency_BaronAdvisorToken--1785749239357"),
             (this.assets.AdvisorSummaryExt_1 =
               "itemassets/Dialogs/AttackAdvisor/AdvisorSummaryExt_1/AdvisorSummaryExt_1--1777974832784"),
             (this.assets.AdvisorActivationExt_2 =
@@ -54122,7 +54249,7 @@ and limitations under the License.
             (this.assets.AllianceRaidEventMainExt_Apr26 =
               "itemassets/Dialogs/Events/AllianceRaidEvent/AllianceRaidEventMainExt_Apr26/AllianceRaidEventMainExt_Apr26--1776244761311"),
             (this.assets.AttackScreen_APR2026 =
-              "itemassets/Dialogs/AttackScreen_APR2026/AttackScreen_APR2026--1777889111384"),
+              "itemassets/Dialogs/AttackScreen_APR2026/AttackScreen_APR2026--1785753377726"),
             (this.assets.Item_Unique_1524 =
               "itemassets/Equipment/Uniques/Item_Unique_1524/Item_Unique_1524--1776182367657"),
             (this.assets.Item_Unique_1523 =
@@ -55204,9 +55331,9 @@ and limitations under the License.
             (this.assets.Deco_Building_ExaltedPurpleKegForest =
               "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedPurpleKegForest/Deco_Building_ExaltedPurpleKegForest--1757496092367"),
             (this.assets.Deco_Building_ExaltedPurpleBeerPavilon =
-              "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedPurpleBeerPavilon/Deco_Building_ExaltedPurpleBeerPavilon--1757496092367"),
-            (this.assets.Deco_Building_ExaltedGreenKegForest =
-              "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedGreenKegForest/Deco_Building_ExaltedGreenKegForest--1757496092367"),
+              "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedPurpleBeerPavilon/Deco_Building_ExaltedPurpleBeerPavilon--1757496092367"));
+          ((this.assets.Deco_Building_ExaltedGreenKegForest =
+            "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedGreenKegForest/Deco_Building_ExaltedGreenKegForest--1757496092367"),
             (this.assets.Deco_Building_ExaltedGreenBeerPavilon =
               "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedGreenBeerPavilon/Deco_Building_ExaltedGreenBeerPavilon--1757496092367"),
             (this.assets.Deco_Building_ExaltedGreenBeerBarrelWell =
@@ -55340,9 +55467,9 @@ and limitations under the License.
             (this.assets.Dwelling_Building_AnniversaryDwelling =
               "itemassets/Building/Dwelling/Dwelling_Building_AnniversaryDwelling/Dwelling_Building_AnniversaryDwelling--1753700607060"),
             (this.assets.Deco_Building_ExaltedRedSweetSurpriseCake =
-              "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedRedSweetSurpriseCake/Deco_Building_ExaltedRedSweetSurpriseCake--1753700607060"));
-          ((this.assets.Deco_Building_ExaltedRedFuryBlade =
-            "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedRedFuryBlade/Deco_Building_ExaltedRedFuryBlade--1753700607060"),
+              "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedRedSweetSurpriseCake/Deco_Building_ExaltedRedSweetSurpriseCake--1753700607060"),
+            (this.assets.Deco_Building_ExaltedRedFuryBlade =
+              "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedRedFuryBlade/Deco_Building_ExaltedRedFuryBlade--1753700607060"),
             (this.assets.Deco_Building_ExaltedRedAnniversaryCake =
               "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedRedAnniversaryCake/Deco_Building_ExaltedRedAnniversaryCake--1753700607060"),
             (this.assets.Deco_Building_ExaltedRedAnniversaryBalloon =
@@ -55756,15 +55883,15 @@ and limitations under the License.
             (this.assets.Btn_AttackAdvisor =
               "itemassets/StatusIcons/Btn_AttackAdvisor/Btn_AttackAdvisor--1743782141174"),
             (this.assets.CastleMovementDetails_APR25 =
-              "itemassets/Dialogs/Movement/CastleMovementDetails_APR25/CastleMovementDetails_APR25--1777889111384"),
+              "itemassets/Dialogs/Movement/CastleMovementDetails_APR25/CastleMovementDetails_APR25--1785760114872"),
             (this.assets.CastleMessageIconsNomadAdvisor =
               "itemassets/Dialogs/Messages/MessageIcons/CastleMessageIconsNomadAdvisor/CastleMessageIconsNomadAdvisor--1743670540670"),
             (this.assets.CastleBattleLogMessageAdvanced_APR25 =
-              "itemassets/Dialogs/Messages/CastleBattleLogMessageAdvanced_APR25/CastleBattleLogMessageAdvanced_APR25--1779889987424"),
+              "itemassets/Dialogs/Messages/CastleBattleLogMessageAdvanced_APR25/CastleBattleLogMessageAdvanced_APR25--1786364151434"),
             (this.assets.CastlePostActionHorse_APR25 =
               "itemassets/Dialogs/HTML5Exported/CastlePostActionHorse_APR25/CastlePostActionHorse_APR25--1743670540670"),
             (this.assets.CastleMovementOverviewEx_APR25 =
-              "itemassets/Dialogs/HTML5Exported/CastleMovementOverviewEx_APR25/CastleMovementOverviewEx_APR25--1778053321172"),
+              "itemassets/Dialogs/HTML5Exported/CastleMovementOverviewEx_APR25/CastleMovementOverviewEx_APR25--1784886776886"),
             (this.assets.AttackScreen_APR25 =
               "itemassets/Dialogs/AttackScreen_APR25/AttackScreen_APR25--1757079158589"),
             (this.assets.NomadAdvisorFunctionalityExt =
@@ -55782,7 +55909,7 @@ and limitations under the License.
             (this.assets.Item_Unique_1267 =
               "itemassets/Equipment/Uniques/Item_Unique_1267/Item_Unique_1267--1742828575169"),
             (this.assets.NomadAdvisorFailExt =
-              "itemassets/Dialogs/AttackAdvisor/NomadAdvisorFailExt/NomadAdvisorFailExt--1777889111384"),
+              "itemassets/Dialogs/AttackAdvisor/NomadAdvisorFailExt/NomadAdvisorFailExt--1785753377726"),
             (this.assets.NomadAdvisorActivationExt =
               "itemassets/Dialogs/AttackAdvisor/NomadAdvisorActivationExt/NomadAdvisorActivationExt--1743670540670"),
             (this.assets.ConstructionItem_TheBrokenEggTavern =
@@ -56554,7 +56681,7 @@ and limitations under the License.
             (this.assets.CastleEquipment_Generals2 =
               "itemassets/Dialogs/Equipment/CastleEquipment_Generals2/CastleEquipment_Generals2--1721639883605"),
             (this.assets.Effect_Source_Icons =
-              "itemassets/Effects/Effect_Source_Icons/Effect_Source_Icons--1762331275942"),
+              "itemassets/Effects/Effect_Source_Icons/Effect_Source_Icons--1785834769746"),
             (this.assets.Skin_Mapmovement_EasterAppearence_Eiland =
               "itemassets/Worldmap/WorldmapObjects/Movements/Skins/Skin_Mapmovement_EasterAppearence_Eiland/Skin_Mapmovement_EasterAppearence_Eiland--1709739178772"),
             (this.assets.Skin_Mapmovement_EasterAppearence_Common =
@@ -56804,9 +56931,9 @@ and limitations under the License.
             (this.assets.LongTermPeHighScoreDialogDragonriderSkin =
               "itemassets/Dialogs/Events/LongTermPointEvent/HighScore/LongTermPeHighScoreDialogDragonriderSkin/LongTermPeHighScoreDialogDragonriderSkin--1697642269637"),
             (this.assets.ConstructionItem_DragonriderHospital =
-              "itemassets/ConstructionItems/ConstructionItem_DragonriderHospital/ConstructionItem_DragonriderHospital--1698043023786"),
-            (this.assets.Collectable_Currency_DragonriderLTPEToken =
-              "itemassets/Collectables/Collectable_Currency_DragonriderLTPEToken/Collectable_Currency_DragonriderLTPEToken--1697642269637"),
+              "itemassets/ConstructionItems/ConstructionItem_DragonriderHospital/ConstructionItem_DragonriderHospital--1698043023786"));
+          ((this.assets.Collectable_Currency_DragonriderLTPEToken =
+            "itemassets/Collectables/Collectable_Currency_DragonriderLTPEToken/Collectable_Currency_DragonriderLTPEToken--1697642269637"),
             (this.assets.Collectable_Currency_DragonriderLTPEToken_DropShadow =
               "itemassets/Collectables/Collectable_Currency_DragonriderLTPEToken_DropShadow/Collectable_Currency_DragonriderLTPEToken_DropShadow--1697642269637"),
             (this.assets.Hospital_Building_dragonriderHospital =
@@ -56940,9 +57067,9 @@ and limitations under the License.
             (this.assets.CastleChangePlayerEmailCancel =
               "itemassets/Dialogs/CastleChangePlayerEmailCancel/CastleChangePlayerEmailCancel--1695974173829"),
             (this.assets.CheatBotCollection =
-              "itemassets/Dialogs/CheatBotCollection/CheatBotCollection--1695386535542"));
-          ((this.assets.Barracks_Unit_ForsakenMaiden =
-            "itemassets/Units/Barracks/Barracks_Unit_ForsakenMaiden/Barracks_Unit_ForsakenMaiden--1695118613307"),
+              "itemassets/Dialogs/CheatBotCollection/CheatBotCollection--1695386535542"),
+            (this.assets.Barracks_Unit_ForsakenMaiden =
+              "itemassets/Units/Barracks/Barracks_Unit_ForsakenMaiden/Barracks_Unit_ForsakenMaiden--1695118613307"),
             (this.assets.Barracks_Unit_ForlornRanger =
               "itemassets/Units/Barracks/Barracks_Unit_ForlornRanger/Barracks_Unit_ForlornRanger--1695118613307"),
             (this.assets.ModernFilterableShopExt_SEP23 =
@@ -58404,9 +58531,9 @@ and limitations under the License.
             (this.assets.PivatePrimeDayDynamicDialog_TeaserImage_22 =
               "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TeaserImages/PivatePrimeDayDynamicDialog_TeaserImage_22/PivatePrimeDayDynamicDialog_TeaserImage_22--1636537312410"),
             (this.assets.Estate_Building_EstateAlien =
-              "itemassets/Building/Estate/Estate_Building_EstateAlien/Estate_Building_EstateAlien--1636537312410"),
-            (this.assets.Deco_Building_SleepingDragon =
-              "itemassets/Building/Deco/Deco_Building_SleepingDragon/Deco_Building_SleepingDragon--1636537312410"),
+              "itemassets/Building/Estate/Estate_Building_EstateAlien/Estate_Building_EstateAlien--1636537312410"));
+          ((this.assets.Deco_Building_SleepingDragon =
+            "itemassets/Building/Deco/Deco_Building_SleepingDragon/Deco_Building_SleepingDragon--1636537312410"),
             (this.assets.Outpost_Mapobject_Special_HollyBaron =
               "itemassets/Worldmap/WorldmapObjects/Outposts/Outpost_Mapobject_Special_HollyBaron/Outpost_Mapobject_Special_HollyBaron--1636466804958"),
             (this.assets.Skin_Mapmovement_GeneralCandyCane_Eiland =
@@ -58540,9 +58667,9 @@ and limitations under the License.
             (this.assets.Item_Unique_933 =
               "itemassets/Equipment/Uniques/Item_Unique_933/Item_Unique_933--1632323905732"),
             (this.assets.Item_Unique_932 =
-              "itemassets/Equipment/Uniques/Item_Unique_932/Item_Unique_932--1631288522243"));
-          ((this.assets.Item_Unique_931 =
-            "itemassets/Equipment/Uniques/Item_Unique_931/Item_Unique_931--1632323905732"),
+              "itemassets/Equipment/Uniques/Item_Unique_932/Item_Unique_932--1631288522243"),
+            (this.assets.Item_Unique_931 =
+              "itemassets/Equipment/Uniques/Item_Unique_931/Item_Unique_931--1632323905732"),
             (this.assets.Item_Unique_930 =
               "itemassets/Equipment/Uniques/Item_Unique_930/Item_Unique_930--1631288522243"),
             (this.assets.Item_Unique_929 =
@@ -60004,9 +60131,9 @@ and limitations under the License.
             (this.assets.Btn_PaymentReward_Easter_Hub =
               "itemassets/StatusIcons/PrivateOfferExtract/Btn_PaymentReward_Easter_Hub/Btn_PaymentReward_Easter_Hub--1586873170970"),
             (this.assets.Btn_PaymentReward_Defense_Hub =
-              "itemassets/StatusIcons/PrivateOfferExtract/Btn_PaymentReward_Defense_Hub/Btn_PaymentReward_Defense_Hub--1586873170970"),
-            (this.assets.Btn_PaymentReward_Default_Hub =
-              "itemassets/StatusIcons/PrivateOfferExtract/Btn_PaymentReward_Default_Hub/Btn_PaymentReward_Default_Hub--1586873170970"),
+              "itemassets/StatusIcons/PrivateOfferExtract/Btn_PaymentReward_Defense_Hub/Btn_PaymentReward_Defense_Hub--1586873170970"));
+          ((this.assets.Btn_PaymentReward_Default_Hub =
+            "itemassets/StatusIcons/PrivateOfferExtract/Btn_PaymentReward_Default_Hub/Btn_PaymentReward_Default_Hub--1586873170970"),
             (this.assets.Btn_PaymentReward_Christmas_Hub =
               "itemassets/StatusIcons/PrivateOfferExtract/Btn_PaymentReward_Christmas_Hub/Btn_PaymentReward_Christmas_Hub--1586873170970"),
             (this.assets.Btn_PaymentReward_Bloodcrow_Hub =
@@ -60140,9 +60267,9 @@ and limitations under the License.
             (this.assets.ABGAllianceTower_Mapobject_Maya_Level5_big =
               "itemassets/Worldmap/WorldmapObjects/Events/Battlegrounds/ABGAllianceTower_Mapobject_Maya_Level5_big/ABGAllianceTower_Mapobject_Maya_Level5_big--1583763728871"),
             (this.assets.ABGAllianceTower_Mapobject_Maya_Level4 =
-              "itemassets/Worldmap/WorldmapObjects/Events/Battlegrounds/ABGAllianceTower_Mapobject_Maya_Level4/ABGAllianceTower_Mapobject_Maya_Level4--1583763728871"));
-          ((this.assets.ABGAllianceTower_Mapobject_Maya_Level4_big =
-            "itemassets/Worldmap/WorldmapObjects/Events/Battlegrounds/ABGAllianceTower_Mapobject_Maya_Level4_big/ABGAllianceTower_Mapobject_Maya_Level4_big--1583763728871"),
+              "itemassets/Worldmap/WorldmapObjects/Events/Battlegrounds/ABGAllianceTower_Mapobject_Maya_Level4/ABGAllianceTower_Mapobject_Maya_Level4--1583763728871"),
+            (this.assets.ABGAllianceTower_Mapobject_Maya_Level4_big =
+              "itemassets/Worldmap/WorldmapObjects/Events/Battlegrounds/ABGAllianceTower_Mapobject_Maya_Level4_big/ABGAllianceTower_Mapobject_Maya_Level4_big--1583763728871"),
             (this.assets.ABGAllianceTower_Mapobject_Maya_Level3 =
               "itemassets/Worldmap/WorldmapObjects/Events/Battlegrounds/ABGAllianceTower_Mapobject_Maya_Level3/ABGAllianceTower_Mapobject_Maya_Level3--1583763728871"),
             (this.assets.ABGAllianceTower_Mapobject_Maya_Level3_big =
@@ -61604,9 +61731,9 @@ and limitations under the License.
             (this.assets.FactionMaintent_Building_Level1 =
               "itemassets/Building/Faction/FactionMaintent_Building_Level1/FactionMaintent_Building_Level1--1573584429307"),
             (this.assets.FactionMarket_Building_Level1 =
-              "itemassets/Building/Faction/FactionMarket_Building_Level1/FactionMarket_Building_Level1--1573584429307"),
-            (this.assets.FactionPUnittent_Building_Level1 =
-              "itemassets/Building/Faction/FactionPUnittent_Building_Level1/FactionPUnittent_Building_Level1--1573584429307"),
+              "itemassets/Building/Faction/FactionMarket_Building_Level1/FactionMarket_Building_Level1--1573584429307"));
+          ((this.assets.FactionPUnittent_Building_Level1 =
+            "itemassets/Building/Faction/FactionPUnittent_Building_Level1/FactionPUnittent_Building_Level1--1573584429307"),
             (this.assets.FactionPUnittent_Building_Level2 =
               "itemassets/Building/Faction/FactionPUnittent_Building_Level2/FactionPUnittent_Building_Level2--1573584429307"),
             (this.assets.FactionPUnittent_Building_Level3 =
@@ -61740,9 +61867,9 @@ and limitations under the License.
             (this.assets.Hideout_Building_Level3 =
               "itemassets/Building/Hideout/Hideout_Building_Level3/Hideout_Building_Level3--1573584429307"),
             (this.assets.FactionHospital_Building_Level1 =
-              "itemassets/Building/Hospital/FactionHospital_Building_Level1/FactionHospital_Building_Level1--1573584429307"));
-          ((this.assets.FactionHospital_Building_Level2 =
-            "itemassets/Building/Hospital/FactionHospital_Building_Level2/FactionHospital_Building_Level2--1573584429307"),
+              "itemassets/Building/Hospital/FactionHospital_Building_Level1/FactionHospital_Building_Level1--1573584429307"),
+            (this.assets.FactionHospital_Building_Level2 =
+              "itemassets/Building/Hospital/FactionHospital_Building_Level2/FactionHospital_Building_Level2--1573584429307"),
             (this.assets.FactionHospital_Building_Level3 =
               "itemassets/Building/Hospital/FactionHospital_Building_Level3/FactionHospital_Building_Level3--1573584429307"),
             (this.assets.FactionHospital_Building_Level4 =
@@ -63204,9 +63331,9 @@ and limitations under the License.
             (this.assets.ConstructionItem_HospitalHealSpeed =
               "itemassets/ConstructionItems/ConstructionItem_HospitalHealSpeed/ConstructionItem_HospitalHealSpeed--1573584429307"),
             (this.assets.ConstructionItem_KeepUnitWallCount =
-              "itemassets/ConstructionItems/ConstructionItem_KeepUnitWallCount/ConstructionItem_KeepUnitWallCount--1573584429307"),
-            (this.assets.ConstructionItem_MarketCarriages =
-              "itemassets/ConstructionItems/ConstructionItem_MarketCarriages/ConstructionItem_MarketCarriages--1573584429307"),
+              "itemassets/ConstructionItems/ConstructionItem_KeepUnitWallCount/ConstructionItem_KeepUnitWallCount--1573584429307"));
+          ((this.assets.ConstructionItem_MarketCarriages =
+            "itemassets/ConstructionItems/ConstructionItem_MarketCarriages/ConstructionItem_MarketCarriages--1573584429307"),
             (this.assets.ConstructionItem_NatureDefensiveWorkshop =
               "itemassets/ConstructionItems/ConstructionItem_NatureDefensiveWorkshop/ConstructionItem_NatureDefensiveWorkshop--1610539780624"),
             (this.assets.ConstructionItem_NatureHospital =
@@ -63340,9 +63467,9 @@ and limitations under the License.
             (this.assets.AllianceSymbolNobleHouseTeaser =
               "itemassets/Dialogs/Alliance/AllianceSymbol/AllianceSymbolNobleHouseTeaser/AllianceSymbolNobleHouseTeaser--1573584429307"),
             (this.assets.CastleAlliance_Relic =
-              "itemassets/Dialogs/Alliance/CastleAlliance_Relic/CastleAlliance_Relic--1573584429307"));
-          ((this.assets.CastleAlliance_Relic2 =
-            "itemassets/Dialogs/Alliance/CastleAlliance_Relic2/CastleAlliance_Relic2--1573584429307"),
+              "itemassets/Dialogs/Alliance/CastleAlliance_Relic/CastleAlliance_Relic--1573584429307"),
+            (this.assets.CastleAlliance_Relic2 =
+              "itemassets/Dialogs/Alliance/CastleAlliance_Relic2/CastleAlliance_Relic2--1573584429307"),
             (this.assets.CastleAllianceActionOverview =
               "itemassets/Dialogs/Alliance/CastleAllianceActionOverview/CastleAllianceActionOverview--1573584429307"),
             (this.assets.CastleAllianceBuyBoostEx =
@@ -64804,9 +64931,9 @@ and limitations under the License.
             (this.assets.CastleFriendList =
               "itemassets/Dialogs/inviteAFriend/CastleFriendList/CastleFriendList--1573584429307"),
             (this.assets.CastleFriendRequest =
-              "itemassets/Dialogs/inviteAFriend/CastleFriendRequest/CastleFriendRequest--1573584429307"),
-            (this.assets.InviteAFriendEmailForm =
-              "itemassets/Dialogs/inviteAFriend/InviteAFriendEmailForm/InviteAFriendEmailForm--1573584429307"),
+              "itemassets/Dialogs/inviteAFriend/CastleFriendRequest/CastleFriendRequest--1573584429307"));
+          ((this.assets.InviteAFriendEmailForm =
+            "itemassets/Dialogs/inviteAFriend/InviteAFriendEmailForm/InviteAFriendEmailForm--1573584429307"),
             (this.assets.InviteAFriendInstructions =
               "itemassets/Dialogs/inviteAFriend/InviteAFriendInstructions/InviteAFriendInstructions--1573584429307"),
             (this.assets.InviteAFriendInviterMessage =
@@ -64940,9 +65067,9 @@ and limitations under the License.
             (this.assets.PrebuiltCastlePicture_6 =
               "itemassets/Dialogs/kingdoms/pictures/PrebuiltCastlePicture_6/PrebuiltCastlePicture_6--1573584429307"),
             (this.assets.PrebuiltCastlePicture_7 =
-              "itemassets/Dialogs/kingdoms/pictures/PrebuiltCastlePicture_7/PrebuiltCastlePicture_7--1573584429307"));
-          ((this.assets.PrebuiltCastlePicture_8 =
-            "itemassets/Dialogs/kingdoms/pictures/PrebuiltCastlePicture_8/PrebuiltCastlePicture_8--1573584429307"),
+              "itemassets/Dialogs/kingdoms/pictures/PrebuiltCastlePicture_7/PrebuiltCastlePicture_7--1573584429307"),
+            (this.assets.PrebuiltCastlePicture_8 =
+              "itemassets/Dialogs/kingdoms/pictures/PrebuiltCastlePicture_8/PrebuiltCastlePicture_8--1573584429307"),
             (this.assets.PrebuiltCastlePicture_9 =
               "itemassets/Dialogs/kingdoms/pictures/PrebuiltCastlePicture_9/PrebuiltCastlePicture_9--1573584429307"),
             (this.assets.CastleResourceVillageOverview =
@@ -66404,9 +66531,9 @@ and limitations under the License.
             (this.assets.Relic_Gem_1_8_2 =
               "itemassets/Equipment/Relics/Relic_Gem_1_8_2/Relic_Gem_1_8_2--1573584429307"),
             (this.assets.Relic_Gem_1_8_3 =
-              "itemassets/Equipment/Relics/Relic_Gem_1_8_3/Relic_Gem_1_8_3--1573584429307"),
-            (this.assets.Relic_Gem_1_8_4 =
-              "itemassets/Equipment/Relics/Relic_Gem_1_8_4/Relic_Gem_1_8_4--1573584429307"),
+              "itemassets/Equipment/Relics/Relic_Gem_1_8_3/Relic_Gem_1_8_3--1573584429307"));
+          ((this.assets.Relic_Gem_1_8_4 =
+            "itemassets/Equipment/Relics/Relic_Gem_1_8_4/Relic_Gem_1_8_4--1573584429307"),
             (this.assets.Relic_Gem_1_8_5 =
               "itemassets/Equipment/Relics/Relic_Gem_1_8_5/Relic_Gem_1_8_5--1573584429307"),
             (this.assets.Relic_Gem_1_8_6 =
@@ -66540,9 +66667,9 @@ and limitations under the License.
             (this.assets.Item_Gem_Unique_22 =
               "itemassets/Equipment/UniqueGems/Item_Gem_Unique_22/Item_Gem_Unique_22--1573584429307"),
             (this.assets.Item_Gem_Unique_290 =
-              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_290/Item_Gem_Unique_290--1573584429307"));
-          ((this.assets.Item_Gem_Unique_291 =
-            "itemassets/Equipment/UniqueGems/Item_Gem_Unique_291/Item_Gem_Unique_291--1573584429307"),
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_290/Item_Gem_Unique_290--1573584429307"),
+            (this.assets.Item_Gem_Unique_291 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_291/Item_Gem_Unique_291--1573584429307"),
             (this.assets.Item_Gem_Unique_292 =
               "itemassets/Equipment/UniqueGems/Item_Gem_Unique_292/Item_Gem_Unique_292--1573584429307"),
             (this.assets.Item_Gem_Unique_293 =
@@ -68004,9 +68131,9 @@ and limitations under the License.
             (this.assets.Btn_Activity_Ruby_Reward =
               "itemassets/StatusIcons/Btn_Activity_Ruby_Reward/Btn_Activity_Ruby_Reward--1573584429307"),
             (this.assets.Btn_AllianceBattleground_Event =
-              "itemassets/StatusIcons/Btn_AllianceBattleground_Event/Btn_AllianceBattleground_Event--1573584429307"),
-            (this.assets.Btn_AllianceCityBattlePhase =
-              "itemassets/StatusIcons/Btn_AllianceCityBattlePhase/Btn_AllianceCityBattlePhase--1573584429307"),
+              "itemassets/StatusIcons/Btn_AllianceBattleground_Event/Btn_AllianceBattleground_Event--1573584429307"));
+          ((this.assets.Btn_AllianceCityBattlePhase =
+            "itemassets/StatusIcons/Btn_AllianceCityBattlePhase/Btn_AllianceCityBattlePhase--1573584429307"),
             (this.assets.Btn_AllianceCoinBooster =
               "itemassets/StatusIcons/Btn_AllianceCoinBooster/Btn_AllianceCoinBooster--1573584429307"),
             (this.assets.Btn_AlliPaymentBonus =
@@ -68140,9 +68267,9 @@ and limitations under the License.
             (this.assets.GGSGiftIcon =
               "itemassets/StatusIcons/GGSGiftIcon/GGSGiftIcon--1573584429307"),
             (this.assets.GlobalEffectEventButton =
-              "itemassets/StatusIcons/GlobalEffectEventButton/GlobalEffectEventButton--1573584429307"));
-          ((this.assets.Icon_AllianceHelpRequest =
-            "itemassets/StatusIcons/Icon_AllianceHelpRequest/Icon_AllianceHelpRequest--1573584429307"),
+              "itemassets/StatusIcons/GlobalEffectEventButton/GlobalEffectEventButton--1573584429307"),
+            (this.assets.Icon_AllianceHelpRequest =
+              "itemassets/StatusIcons/Icon_AllianceHelpRequest/Icon_AllianceHelpRequest--1573584429307"),
             (this.assets.Icon_AllianceTeaser =
               "itemassets/StatusIcons/Icon_AllianceTeaser/Icon_AllianceTeaser--1573584429307"),
             (this.assets.IconCategoryHolder =
@@ -69626,7 +69753,7 @@ and limitations under the License.
           (AdvancedDottedProgressBar.prototype.initBar = function () {
             var e = 0,
               t = !1;
-            for (this.dotList = []; !t; )
+            for (this.dotList = []; !t;)
               (e > 500 && (t = !0),
                 this.disp[this.instanceName + e]
                   ? (this.dotList.push(this.disp[this.instanceName + e]),
@@ -70493,7 +70620,7 @@ and limitations under the License.
           var a = t.changedTouches,
             s = t.type;
           if ("touchstart" == s && 1 == t.touches.length)
-            for (var r = e; r; )
+            for (var r = e; r;)
               (-1 === r._primaryPointerID && (r._primaryPointerID = null),
                 (r = r.nextStage));
           for (var o = 0, l = a.length; o < l; o++) {
@@ -71494,7 +71621,7 @@ and limitations under the License.
         e.target = t || e.target || this;
       } catch (e) {}
       if (e.bubbles && !e.cancelBubble && this.parent) {
-        for (var i = this, a = [i]; i.parent; ) a.push((i = i.parent));
+        for (var i = this, a = [i]; i.parent;) a.push((i = i.parent));
         var s = void 0,
           r = a.length;
         for (s = r - 1; s >= 0 && !e.propagationStopped; s--)
@@ -72343,7 +72470,7 @@ and limitations under the License.
         return n;
       }),
       (r.prototype.isInContainer = function (e) {
-        for (var t = this.parent; t; ) {
+        for (var t = this.parent; t;) {
           if (t === e) return !0;
           t = t.parent;
         }
@@ -74295,8 +74422,8 @@ and limitations under the License.
       b = n(238),
       R = n(143),
       N = n(605),
-      P = n(606),
-      B = createjs.GlowFilter,
+      B = n(606),
+      P = createjs.GlowFilter,
       M = createjs.DropShadowFilter,
       U = n(229),
       F = n(16),
@@ -74623,7 +74750,7 @@ and limitations under the License.
             var u = S._workingContext;
             return (
               u.save(),
-              (this._INTERNAL_currentLayout = P.calculateLatestLayoutType(
+              (this._INTERNAL_currentLayout = B.calculateLatestLayoutType(
                 u,
                 a,
                 e,
@@ -74674,7 +74801,7 @@ and limitations under the License.
         (TextField.prototype.blurHTMLTextInputIfTextFieldIsNotVisible =
           function () {
             if (!c.currentBrowserInfo.isMobile) {
-              for (var e = this.isVisible(), t = this; t && e; )
+              for (var e = this.isVisible(), t = this; t && e;)
                 (t = t.parent) && (e = t.isVisible());
               if (e) {
                 var n = this.getBounds(),
@@ -75563,7 +75690,7 @@ and limitations under the License.
               if (TextField.scaleCacheForTextfieldsWithFilters)
                 for (var i = 0; i < this.filters.length; i++) {
                   var a = this.filters[i];
-                  (a instanceof B || a instanceof M) &&
+                  (a instanceof P || a instanceof M) &&
                     !a.isScaled &&
                     (a instanceof M
                       ? (a.distance *= e)
@@ -75909,7 +76036,7 @@ and limitations under the License.
             (c.currentBrowserInfo.isMobile &&
               (TextField.isMobileKeyboardShown = !0),
               this.dispatchEvent(A.FOCUS_IN));
-            for (var e = this.scaleY, t = this.parent; t && !(t instanceof I); )
+            for (var e = this.scaleY, t = this.parent; t && !(t instanceof I);)
               ((e *= t.scaleY), (t = t.parent));
             ((this._htmlTextFieldElement.style.display = "block"),
               (this._htmlTextFieldElement.style.font =
@@ -76287,8 +76414,8 @@ and limitations under the License.
           R["[object WeakMap]"] =
             !1));
       var N = "object" == typeof e && e && e.Object === Object && e,
-        P = "object" == typeof self && self && self.Object === Object && self,
-        B = N || P || Function("return this")(),
+        B = "object" == typeof self && self && self.Object === Object && self,
+        P = N || B || Function("return this")(),
         M = "object" == typeof t && t && !t.nodeType && t,
         U = M && "object" == typeof n && n && !n.nodeType && n,
         F = U && U.exports === M,
@@ -76300,7 +76427,7 @@ and limitations under the License.
         })(),
         w = k && k.isTypedArray;
       function arraySome(e, t) {
-        for (var n = -1, i = null == e ? 0 : e.length; ++n < i; )
+        for (var n = -1, i = null == e ? 0 : e.length; ++n < i;)
           if (t(e[n], n, e)) return !0;
         return !1;
       }
@@ -76328,7 +76455,7 @@ and limitations under the License.
         W = Array.prototype,
         H = Function.prototype,
         V = Object.prototype,
-        j = B["__core-js_shared__"],
+        j = P["__core-js_shared__"],
         q = H.toString,
         K = V.hasOwnProperty,
         Y = (x = /[^.]+$/.exec((j && j.keys && j.keys.IE_PROTO) || ""))
@@ -76346,9 +76473,9 @@ and limitations under the License.
               ) +
             "$",
         ),
-        X = F ? B.Buffer : void 0,
-        Q = B.Symbol,
-        $ = B.Uint8Array,
+        X = F ? P.Buffer : void 0,
+        Q = P.Symbol,
+        $ = P.Uint8Array,
         J = V.propertyIsEnumerable,
         ee = W.splice,
         te = Q ? Q.toStringTag : void 0,
@@ -76359,11 +76486,11 @@ and limitations under the License.
             return e(t(n));
           };
         })(Object.keys, Object),
-        se = getNative(B, "DataView"),
-        re = getNative(B, "Map"),
-        oe = getNative(B, "Promise"),
-        le = getNative(B, "Set"),
-        ue = getNative(B, "WeakMap"),
+        se = getNative(P, "DataView"),
+        re = getNative(P, "Map"),
+        oe = getNative(P, "Promise"),
+        le = getNative(P, "Set"),
+        ue = getNative(P, "WeakMap"),
         _e = getNative(Object, "create"),
         ce = toSource(se),
         me = toSource(re),
@@ -76375,7 +76502,7 @@ and limitations under the License.
       function Hash(e) {
         var t = -1,
           n = null == e ? 0 : e.length;
-        for (this.clear(); ++t < n; ) {
+        for (this.clear(); ++t < n;) {
           var i = e[t];
           this.set(i[0], i[1]);
         }
@@ -76383,7 +76510,7 @@ and limitations under the License.
       function ListCache(e) {
         var t = -1,
           n = null == e ? 0 : e.length;
-        for (this.clear(); ++t < n; ) {
+        for (this.clear(); ++t < n;) {
           var i = e[t];
           this.set(i[0], i[1]);
         }
@@ -76391,7 +76518,7 @@ and limitations under the License.
       function MapCache(e) {
         var t = -1,
           n = null == e ? 0 : e.length;
-        for (this.clear(); ++t < n; ) {
+        for (this.clear(); ++t < n;) {
           var i = e[t];
           this.set(i[0], i[1]);
         }
@@ -76399,7 +76526,7 @@ and limitations under the License.
       function SetCache(e) {
         var t = -1,
           n = null == e ? 0 : e.length;
-        for (this.__data__ = new MapCache(); ++t < n; ) this.add(e[t]);
+        for (this.__data__ = new MapCache(); ++t < n;) this.add(e[t]);
       }
       function Stack(e) {
         var t = (this.__data__ = new ListCache(e));
@@ -76413,7 +76540,7 @@ and limitations under the License.
           r = n || i || a || s,
           o = r
             ? (function baseTimes(e, t) {
-                for (var n = -1, i = Array(e); ++n < e; ) i[n] = t(n);
+                for (var n = -1, i = Array(e); ++n < e;) i[n] = t(n);
                 return i;
               })(e.length, String)
             : [],
@@ -76430,7 +76557,7 @@ and limitations under the License.
         return o;
       }
       function assocIndexOf(e, t) {
-        for (var n = e.length; n--; ) if (eq(e[n][0], t)) return n;
+        for (var n = e.length; n--;) if (eq(e[n][0], t)) return n;
         return -1;
       }
       function baseGetTag(e) {
@@ -76526,8 +76653,8 @@ and limitations under the License.
                     R = A && K.call(t, "__wrapped__");
                   if (b || R) {
                     var N = b ? e.value() : e,
-                      P = R ? t.value() : t;
-                    return (o || (o = new Stack()), a(N, P, n, i, o));
+                      B = R ? t.value() : t;
+                    return (o || (o = new Stack()), a(N, B, n, i, o));
                   }
                 }
                 if (!D) return !1;
@@ -76539,7 +76666,7 @@ and limitations under the License.
                       u = l.length,
                       _ = getAllKeys(t).length;
                     if (u != _ && !o) return !1;
-                    for (var c = u; c--; ) {
+                    for (var c = u; c--;) {
                       var m = l[c];
                       if (!(o ? m in t : K.call(t, m))) return !1;
                     }
@@ -76547,7 +76674,7 @@ and limitations under the License.
                     if (d && r.get(t)) return d == t;
                     var h = !0;
                     (r.set(e, t), r.set(t, e));
-                    for (var p = o; ++c < u; ) {
+                    for (var p = o; ++c < u;) {
                       m = l[c];
                       var g = e[m],
                         E = t[m];
@@ -76613,7 +76740,7 @@ and limitations under the License.
         var m = -1,
           d = !0,
           h = n & r ? new SetCache() : void 0;
-        for (o.set(e, t), o.set(t, e); ++m < u; ) {
+        for (o.set(e, t), o.set(t, e); ++m < u;) {
           var p = e[m],
             g = t[m];
           if (i) var E = l ? i(g, p, m, t, e, o) : i(p, g, m, e, t, o);
@@ -76646,7 +76773,7 @@ and limitations under the License.
           return Se(e)
             ? i
             : (function arrayPush(e, t) {
-                for (var n = -1, i = t.length, a = e.length; ++n < i; )
+                for (var n = -1, i = t.length, a = e.length; ++n < i;)
                   e[a + n] = t[n];
                 return e;
               })(i, n(e));
@@ -77035,7 +77162,7 @@ and limitations under the License.
         );
       })();
     function isVisibleOnStage(e) {
-      for (var t = e.isVisible() && !!e.stage, n = e; n && t; )
+      for (var t = e.isVisible() && !!e.stage, n = e; n && t;)
         (n = n.parent) && (t = n.isVisible());
       if (t) {
         var i = e.getBounds(),
@@ -77053,7 +77180,7 @@ and limitations under the License.
         var t = e.getBounds();
         if (!t)
           throw new Error("Could not calculate bounds for target objects " + e);
-        for (var n = e.localToGlobal(t.x, t.y), i = 1, a = 1, s = e; s.parent; )
+        for (var n = e.localToGlobal(t.x, t.y), i = 1, a = 1, s = e; s.parent;)
           ((i *= s.scaleX || 1), (a *= s.scaleY || 1), (s = s.parent));
         return {
           x: -1 === i ? n.x - t.width : n.x,
@@ -77221,8 +77348,8 @@ and limitations under the License.
                     } else t.push(n);
                     return t;
                   }, [])));
-              for (var P = 0, B = N; P < B.length; P++) {
-                var M = B[P],
+              for (var B = 0, P = N; B < P.length; B++) {
+                var M = P[B],
                   U = e.measureText(M).width;
                 I + U > _ && " " != M && ((S = []), y.push(S), (I = 0));
                 var F = { type: "plain", text: M, width: U };
@@ -77395,11 +77522,11 @@ and limitations under the License.
       function baseIndexOf(e, t, n) {
         if (t != t)
           return (function baseFindIndex(e, t, n, i) {
-            for (var a = e.length, s = n + (i ? 1 : -1); i ? s-- : ++s < a; )
+            for (var a = e.length, s = n + (i ? 1 : -1); i ? s-- : ++s < a;)
               if (t(e[s], s, e)) return s;
             return -1;
           })(e, baseIsNaN, n);
-        for (var i = n - 1, a = e.length; ++i < a; ) if (e[i] === t) return i;
+        for (var i = n - 1, a = e.length; ++i < a;) if (e[i] === t) return i;
         return -1;
       }
       function baseIsNaN(e) {
@@ -77450,7 +77577,7 @@ and limitations under the License.
                   (n = n > a ? a : n) < 0 && (n += a),
                   (a = t > n ? 0 : (n - t) >>> 0),
                   (t >>>= 0));
-                for (var s = Array(a); ++i < a; ) s[i] = e[i + t];
+                for (var s = Array(a); ++i < a;) s[i] = e[i + t];
                 return s;
               })(e, t, n)
         );
@@ -77509,11 +77636,11 @@ and limitations under the License.
       function baseIndexOf(e, t, n) {
         if (t != t)
           return (function baseFindIndex(e, t, n, i) {
-            for (var a = e.length, s = n + (i ? 1 : -1); i ? s-- : ++s < a; )
+            for (var a = e.length, s = n + (i ? 1 : -1); i ? s-- : ++s < a;)
               if (t(e[s], s, e)) return s;
             return -1;
           })(e, baseIsNaN, n);
-        for (var i = n - 1, a = e.length; ++i < a; ) if (e[i] === t) return i;
+        for (var i = n - 1, a = e.length; ++i < a;) if (e[i] === t) return i;
         return -1;
       }
       function baseIsNaN(e) {
@@ -77564,7 +77691,7 @@ and limitations under the License.
                   (n = n > a ? a : n) < 0 && (n += a),
                   (a = t > n ? 0 : (n - t) >>> 0),
                   (t >>>= 0));
-                for (var s = Array(a); ++i < a; ) s[i] = e[i + t];
+                for (var s = Array(a); ++i < a;) s[i] = e[i + t];
                 return s;
               })(e, t, n)
         );
@@ -77583,7 +77710,7 @@ and limitations under the License.
           i,
           0,
           (function charsEndIndex(e, t) {
-            for (var n = e.length; n-- && baseIndexOf(t, e[n], 0) > -1; );
+            for (var n = e.length; n-- && baseIndexOf(t, e[n], 0) > -1;);
             return n;
           })(i, stringToArray(t)) + 1,
         ).join("");
@@ -78142,7 +78269,7 @@ and limitations under the License.
         (AllianceConst.MIN_XP_$LI$ = function () {
           return (
             null == AllianceConst.MIN_XP &&
-              (AllianceConst.MIN_XP = re.getXPFromLevel(
+              (AllianceConst.MIN_XP = oe.getXPFromLevel(
                 AllianceConst.MIN_LEVEL,
               )),
             AllianceConst.MIN_XP
@@ -78269,6 +78396,11 @@ and limitations under the License.
           return (
             e <= AllianceConst.MIN_RANK_FORUM_ADMIN_$LI$() &&
             AllianceConst.hasHigherRank(e, t)
+          );
+        }),
+        (AllianceConst.canManageAllianceRaid = function (e) {
+          return (
+            e === AllianceConst.RANK_LEADER || e === AllianceConst.RANK_COLEADER
           );
         }),
         (AllianceConst.TYPE_TEMP_BUFFS_$LI$ = function () {
@@ -78491,6 +78623,10 @@ and limitations under the License.
       (s.TYPE_HEALING_SPEED_BOOST = 19),
       (s.TYPE_COOLDOWN_REDUCTION_SAMURAI_CAMP = 20),
       (s.TYPE_COOLDOWN_REDUCTION_DAIYMO = 21),
+      (s.TYPE_TEMP_RAID_BOSS_COMMON_ATTACK_BOOST = 22),
+      (s.TYPE_TEMP_RAID_BOSS_RARE_ATTACK_BOOST = 23),
+      (s.TYPE_TEMP_RAID_BOSS_EPIC_ATTACK_BOOST = 24),
+      (s.TYPE_TEMP_RAID_BOSS_LEGENDARY_ATTACK_BOOST = 25),
       (s.FAME_CAP = 9e18),
       (s.DAILY_FAME_LOSS = 0.005),
       (s.REAL_ALLIED_CAP = 5),
@@ -78543,38 +78679,49 @@ and limitations under the License.
       (t.AllianceMobilisationConst = l),
       (l.__class = "AllianceMobilisationConst"));
     var u = (function () {
+      return function AllianceRaidConst() {};
+    })();
+    ((u.BOSS_CARD_STATUS_AVAILABLE = 0),
+      (u.BOSS_CARD_STATUS_UNAVAILABLE = 1),
+      (u.BOSS_CARD_STATUS_ONGOING = 2),
+      (u.BOSS_CARD_STATUS_LOCKED_FINAL_DEFEATED = 3),
+      (u.BOSS_CARD_STATUS_LOCKED_ABORTED = 4),
+      (t.AllianceRaidConst = u),
+      (u.__class = "AllianceRaidConst"));
+    var _ = (function () {
       return function ArtifactConst() {};
     })();
-    ((u.SKIN_TRAVELLING_KNIGHTS = 1),
-      (u.SKIN_RENEGADE_ICE_KINGDOM = 2),
-      (u.SKIN_RENEGADE_DESERT_KINGDOM = 3),
-      (u.SKIN_RENEGADE_VOLCANO_KINGDOM = 4),
-      (u.SKIN_NEW_KING = 5),
-      (t.ArtifactConst = u),
-      (u.__class = "ArtifactConst"));
-    var _ = (function () {
+    ((_.SKIN_TRAVELLING_KNIGHTS = 1),
+      (_.SKIN_RENEGADE_ICE_KINGDOM = 2),
+      (_.SKIN_RENEGADE_DESERT_KINGDOM = 3),
+      (_.SKIN_RENEGADE_VOLCANO_KINGDOM = 4),
+      (_.SKIN_NEW_KING = 5),
+      (t.ArtifactConst = _),
+      (_.__class = "ArtifactConst"));
+    var c = (function () {
       return function AttackAdvisorConst() {};
     })();
-    ((_.ADVISOR_TYPE_NOMAD = 1),
-      (_.ADVISOR_TYPE_SAMURAI = 2),
-      (_.ADVISOR_TYPE_BERIMOND = 3),
-      (_.FAILURE_GENERIC = 0),
-      (_.FAILURE_NOT_ENOUGH_CURRENCY_1 = 1),
-      (_.FAILURE_NOT_ENOUGH_CURRENCY_2 = 2),
-      (_.FAILURE_NOT_ENOUGH_PEGASUS_TICKETS = 3),
-      (_.FAILURE_NOT_ENOUGH_UNITS_OR_TOOLS = 4),
-      (_.FAILURE_NOT_ENOUGH_TIME_SKIPS = 5),
-      (t.AttackAdvisorConst = _),
-      (_.__class = "AttackAdvisorConst"));
-    var c = (function () {
+    ((c.ADVISOR_TYPE_NOMAD = 1),
+      (c.ADVISOR_TYPE_SAMURAI = 2),
+      (c.ADVISOR_TYPE_BERIMOND = 3),
+      (c.ADVISOR_TYPE_BARON = 4),
+      (c.FAILURE_GENERIC = 0),
+      (c.FAILURE_NOT_ENOUGH_CURRENCY_1 = 1),
+      (c.FAILURE_NOT_ENOUGH_CURRENCY_2 = 2),
+      (c.FAILURE_NOT_ENOUGH_PEGASUS_TICKETS = 3),
+      (c.FAILURE_NOT_ENOUGH_UNITS_OR_TOOLS = 4),
+      (c.FAILURE_NOT_ENOUGH_TIME_SKIPS = 5),
+      (t.AttackAdvisorConst = c),
+      (c.__class = "AttackAdvisorConst"));
+    var m = (function () {
       return function AutoSkipCooldownConst() {};
     })();
-    ((c.AUTO_SKIP_TYPE_OFF = 0),
-      (c.AUTO_SKIP_TYPE_MINUTE_SKIP = 1),
-      (c.AUTO_SKIP_TYPE_C2 = 2),
-      (t.AutoSkipCooldownConst = c),
-      (c.__class = "AutoSkipCooldownConst"));
-    var m = (function () {
+    ((m.AUTO_SKIP_TYPE_OFF = 0),
+      (m.AUTO_SKIP_TYPE_MINUTE_SKIP = 1),
+      (m.AUTO_SKIP_TYPE_C2 = 2),
+      (t.AutoSkipCooldownConst = m),
+      (m.__class = "AutoSkipCooldownConst"));
+    var d = (function () {
       function BeggingKnightsConst() {}
       return (
         (BeggingKnightsConst.calculateRequirement = function (e, t) {
@@ -78587,8 +78734,8 @@ and limitations under the License.
         BeggingKnightsConst
       );
     })();
-    ((t.BeggingKnightsConst = m), (m.__class = "BeggingKnightsConst"));
-    var d = (function () {
+    ((t.BeggingKnightsConst = d), (d.__class = "BeggingKnightsConst"));
+    var h = (function () {
       function BoosterConst() {}
       return (
         (BoosterConst.REMINDER_LEAD_TIME_SECONDS_$LI$ = function () {
@@ -78648,48 +78795,48 @@ and limitations under the License.
         BoosterConst
       );
     })();
-    ((d.OVERSEER_WOOD = 0),
-      (d.OVERSEER_STONE = 1),
-      (d.OVERSEER_FOOD = 2),
-      (d.OVERSEER_HONEY = 3),
-      (d.OVERSEER_MEAD = 4),
-      (d.OVERSEER_BEEF = 5),
-      (d.MARAUDER = 6),
-      (d.TAX = 8),
-      (d.INSTRUCTOR = 10),
-      (d.CARAVAN_OVERLOADER = 11),
-      (d.BUILDING_SKIP_DISCOUNT = 16),
-      (d.GLORY_BOOST_ID = 17),
-      (d.PERSONAL_GLORY_BOOST_ID = 18),
-      (d.RETURNING_SPEED = 19),
-      (d.KHAN_BOOST_ID = 20),
-      (d.XP_BOOSTER_ID = 21),
-      (d.SAMURA_TOKEN_BOOST_ID = 22),
-      (d.LONGTERM_POINT_EVENT_BOOST_ID = 23),
-      (d.GALLANTRY_POINTS_BOOST_ID = 24),
-      (d.XP_BUILDING_BOOSTER_ID = 25),
-      (d.ALLIANCE_COIN_BOOST_ID = 26),
-      (d.RAGE_POINT_BOOST_ID = 27),
-      (d.KHAN_MEDAL_BOOST_ID = 28),
-      (d.REPUTATION_POINT_BOOST_ID = 29),
-      (d.MIN_REBUY_FOR_DISCOUNT = 1),
-      (d.DISCOUNT_FACTOR = 0.1),
-      (d.REBUY_TRACKING = " rebuy"),
-      (d.TAX_BRIBE_COSTS_C2 = 750),
-      (d.TAX_BRIBE_BOOST = 0.2),
-      (d.INSTRUCTOR_CUSTOM_ID = "instructor"),
-      (d.INSTRUCTOR_BOOST = 0.8),
-      (d.INSTRUCTOR_COST_C2 = 990),
-      (d.MARAUDER_COST_C2 = 990),
-      (d.MARAUDER_BOOST = 0.9),
-      (d.OVERSEER_COST_C2 = 625),
-      (d.OVERSEER_BOOST = 25),
-      (d.OVERSEER_BEEF_COST_C2 = 4900),
-      (d.OVERSEER_BEEF_BOOST = 125),
-      (d.PERMANENT_BOOSTER_DURATION = 2147483647),
-      (t.BoosterConst = d),
-      (d.__class = "BoosterConst"));
-    var h = (function () {
+    ((h.OVERSEER_WOOD = 0),
+      (h.OVERSEER_STONE = 1),
+      (h.OVERSEER_FOOD = 2),
+      (h.OVERSEER_HONEY = 3),
+      (h.OVERSEER_MEAD = 4),
+      (h.OVERSEER_BEEF = 5),
+      (h.MARAUDER = 6),
+      (h.TAX = 8),
+      (h.INSTRUCTOR = 10),
+      (h.CARAVAN_OVERLOADER = 11),
+      (h.BUILDING_SKIP_DISCOUNT = 16),
+      (h.GLORY_BOOST_ID = 17),
+      (h.PERSONAL_GLORY_BOOST_ID = 18),
+      (h.RETURNING_SPEED = 19),
+      (h.KHAN_BOOST_ID = 20),
+      (h.XP_BOOSTER_ID = 21),
+      (h.SAMURA_TOKEN_BOOST_ID = 22),
+      (h.LONGTERM_POINT_EVENT_BOOST_ID = 23),
+      (h.GALLANTRY_POINTS_BOOST_ID = 24),
+      (h.XP_BUILDING_BOOSTER_ID = 25),
+      (h.ALLIANCE_COIN_BOOST_ID = 26),
+      (h.RAGE_POINT_BOOST_ID = 27),
+      (h.KHAN_MEDAL_BOOST_ID = 28),
+      (h.REPUTATION_POINT_BOOST_ID = 29),
+      (h.MIN_REBUY_FOR_DISCOUNT = 1),
+      (h.DISCOUNT_FACTOR = 0.1),
+      (h.REBUY_TRACKING = " rebuy"),
+      (h.TAX_BRIBE_COSTS_C2 = 750),
+      (h.TAX_BRIBE_BOOST = 0.2),
+      (h.INSTRUCTOR_CUSTOM_ID = "instructor"),
+      (h.INSTRUCTOR_BOOST = 0.8),
+      (h.INSTRUCTOR_COST_C2 = 990),
+      (h.MARAUDER_COST_C2 = 990),
+      (h.MARAUDER_BOOST = 0.9),
+      (h.OVERSEER_COST_C2 = 625),
+      (h.OVERSEER_BOOST = 25),
+      (h.OVERSEER_BEEF_COST_C2 = 4900),
+      (h.OVERSEER_BEEF_BOOST = 125),
+      (h.PERMANENT_BOOSTER_DURATION = 2147483647),
+      (t.BoosterConst = h),
+      (h.__class = "BoosterConst"));
+    var p = (function () {
       function ColossusConst() {}
       return (
         (ColossusConst.calcResourcePointsForResources = function (e, t) {
@@ -78709,13 +78856,13 @@ and limitations under the License.
         ColossusConst
       );
     })();
-    ((h.COIN_POINTS = 1),
-      (h.WOOD_POINTS = 2),
-      (h.STONE_POINTS = 3),
-      (h.MIN_POINTS = 50),
-      (t.ColossusConst = h),
-      (h.__class = "ColossusConst"));
-    var p = (function () {
+    ((p.COIN_POINTS = 1),
+      (p.WOOD_POINTS = 2),
+      (p.STONE_POINTS = 3),
+      (p.MIN_POINTS = 50),
+      (t.ColossusConst = p),
+      (p.__class = "ColossusConst"));
+    var g = (function () {
       function CombatConst() {}
       return (
         (CombatConst.ITEMS_LEFTWALL_TOOLS_$LI$ = function () {
@@ -79144,1591 +79291,1593 @@ and limitations under the License.
         CombatConst
       );
     })();
-    ((p.ATTACK_SUPPORT_TOOL_SLOTS = 3),
-      (p.REINFORCEMENT_WAVE_UNIT_SLOTS = 8),
-      (p.REINFORCEMENT_WAVE_TOOL_SLOTS = 0),
-      (p.SLOT_TYPE_MIDDLE_TOOL = 1),
-      (p.SLOT_TYPE_FLANK_TOOL = 2),
-      (p.LOW_LEVEL_PROTECTION_MAX_LEVEL = 10),
-      (p.LOW_LEVEL_PROTECTION_RANGE = 5),
-      (p.DEFENSIVE_DAMAGED_PERCENTAGE = 0.25),
-      (p.BASIC_PEASANTS_FROM_POPULATION_FACTOR = 20),
-      (p.TAKEOVER_DAMAGE_NORMAL = 0.5),
-      (p.TAKEOVER_DAMAGE_BIG = 0.8),
-      (p.TAKEOVER_DAMAGE_EXTRA_BIG = 1),
-      (p.PALACE_DAMAGE_LOWER_BOUND = 0.5),
-      (p.PALACE_DAMAGE_HIGHER_BOUND = 0.8),
-      (p.EMPORIUM_DAMAGE_LOWER_BOUND = 0.5),
-      (p.MIN_ATTACK_PLAYER_LEVEL = 5),
-      (p.MIN_SURVIVING_SOLDIERS = 0.1),
-      (p.CONQUERATTACK_ADDITIONAL_WAVES = 2),
-      (p.LOOT_PRIO_MIN_LEVEL = 20),
-      (p.LOOT_PRIO_NO = 0),
-      (p.LOOT_PRIO_WOOD = 1),
-      (p.LOOT_PRIO_STONE = 2),
-      (p.LOOT_PRIO_FOOD = 3),
-      (p.LOOT_PRIO_COAL = 4),
-      (p.LOOT_PRIO_OIL = 5),
-      (p.LOOT_PRIO_GLASS = 6),
-      (p.LOOT_PRIO_AQUAMARINE = 7),
-      (p.LOOT_PRIO_IRON = 8),
-      (p.LOOT_PRIO_HONEY = 9),
-      (p.LOOT_PRIO_MEAD = 10),
-      (p.LOOT_PRIO_BEEF = 11),
-      (p.LOOT_MAX_CONTIGENT_FACTOR = 1),
-      (p.ATTACK_TYPE_ATTACK = 0),
-      (p.ATTACK_TYPE_OUTPOST_CONQUER = 1),
-      (p.ATTACK_TYPE_VILLAGE_CONQUER = 2),
-      (p.ATTACK_TYPE_CAPITAL_CONQUER = 3),
-      (p.ATTACK_TYPE_METROPOL_CONQUER = 5),
-      (p.ATTACK_TYPE_KINGTOWER_CONQUER = 6),
-      (p.ATTACK_TYPE_CONQUER = 7),
-      (p.ATTACK_TYPE_MONUMENT_CONQUER = 8),
-      (p.ATTACK_TYPE_LABORATORY_CONQUER = 9),
-      (p.MIN_TARGET_LEVEL_FOR_FIND_ENEMY_CASTLE = 5),
-      (p.MIN_SECONDS_TO_NEXT_ATTACK = 3),
-      (p.MIN_FIRE_DAMAGE = 5),
-      (p.MAX_FIRE_DAMAGE = 10),
-      (p.DAMAGE_BUILDING_PROBABILITY = 100),
-      (p.MAX_LEVEL_CAPITAL_NO_HONOR = 51),
-      (t.CombatConst = p),
-      (p.__class = "CombatConst"));
-    var g = (function () {
+    ((g.ATTACK_SUPPORT_TOOL_SLOTS = 3),
+      (g.REINFORCEMENT_WAVE_UNIT_SLOTS = 8),
+      (g.REINFORCEMENT_WAVE_TOOL_SLOTS = 0),
+      (g.SLOT_TYPE_MIDDLE_TOOL = 1),
+      (g.SLOT_TYPE_FLANK_TOOL = 2),
+      (g.LOW_LEVEL_PROTECTION_MAX_LEVEL = 10),
+      (g.LOW_LEVEL_PROTECTION_RANGE = 5),
+      (g.DEFENSIVE_DAMAGED_PERCENTAGE = 0.25),
+      (g.BASIC_PEASANTS_FROM_POPULATION_FACTOR = 20),
+      (g.TAKEOVER_DAMAGE_NORMAL = 0.5),
+      (g.TAKEOVER_DAMAGE_BIG = 0.8),
+      (g.TAKEOVER_DAMAGE_EXTRA_BIG = 1),
+      (g.PALACE_DAMAGE_LOWER_BOUND = 0.5),
+      (g.PALACE_DAMAGE_HIGHER_BOUND = 0.8),
+      (g.EMPORIUM_DAMAGE_LOWER_BOUND = 0.5),
+      (g.MIN_ATTACK_PLAYER_LEVEL = 5),
+      (g.MIN_SURVIVING_SOLDIERS = 0.1),
+      (g.CONQUERATTACK_ADDITIONAL_WAVES = 2),
+      (g.LOOT_PRIO_MIN_LEVEL = 20),
+      (g.LOOT_PRIO_NO = 0),
+      (g.LOOT_PRIO_WOOD = 1),
+      (g.LOOT_PRIO_STONE = 2),
+      (g.LOOT_PRIO_FOOD = 3),
+      (g.LOOT_PRIO_COAL = 4),
+      (g.LOOT_PRIO_OIL = 5),
+      (g.LOOT_PRIO_GLASS = 6),
+      (g.LOOT_PRIO_AQUAMARINE = 7),
+      (g.LOOT_PRIO_IRON = 8),
+      (g.LOOT_PRIO_HONEY = 9),
+      (g.LOOT_PRIO_MEAD = 10),
+      (g.LOOT_PRIO_BEEF = 11),
+      (g.LOOT_MAX_CONTIGENT_FACTOR = 1),
+      (g.ATTACK_TYPE_ATTACK = 0),
+      (g.ATTACK_TYPE_OUTPOST_CONQUER = 1),
+      (g.ATTACK_TYPE_VILLAGE_CONQUER = 2),
+      (g.ATTACK_TYPE_CAPITAL_CONQUER = 3),
+      (g.ATTACK_TYPE_METROPOL_CONQUER = 5),
+      (g.ATTACK_TYPE_KINGTOWER_CONQUER = 6),
+      (g.ATTACK_TYPE_CONQUER = 7),
+      (g.ATTACK_TYPE_MONUMENT_CONQUER = 8),
+      (g.ATTACK_TYPE_LABORATORY_CONQUER = 9),
+      (g.MIN_TARGET_LEVEL_FOR_FIND_ENEMY_CASTLE = 5),
+      (g.MIN_SECONDS_TO_NEXT_ATTACK = 3),
+      (g.MIN_FIRE_DAMAGE = 5),
+      (g.MAX_FIRE_DAMAGE = 10),
+      (g.DAMAGE_BUILDING_PROBABILITY = 100),
+      (g.MAX_LEVEL_CAPITAL_NO_HONOR = 51),
+      (t.CombatConst = g),
+      (g.__class = "CombatConst"));
+    var E = (function () {
       return function CommKeys() {};
     })();
-    ((g.MAY_CHANGE_EMBLEM = "MCE"),
-      (g.GEMS = "GEM"),
-      (g.RELIC_GEMS = "RGEM"),
-      (g.DISTANCE = "D"),
-      (g.DURATION = "D"),
-      (g.PRICE = "P"),
-      (g.X_COORDINATE = "X"),
-      (g.Y_COORDINATE = "Y"),
-      (g.ROTATION = "R"),
-      (g.X_POSITION = "XPOS"),
-      (g.Y_POSITION = "YPOS"),
-      (g.LEGEND_LEVEL = "LL"),
-      (g.CURRENT_TOP_X = "TOPX"),
-      (g.IS_RUINED = "R"),
-      (g.SHOULD_USE_VIP_FLAG = "VF"),
-      (g.AMOUNT_OF_TIME = "AOT"),
-      (g.REMAINING_DURATION = "RD"),
-      (g.REMAINING_SECONDS = "RS"),
-      (g.REMAINING_TIME = "RT"),
-      (g.REMAINING_CANCEL_ABANDONMENT_TIME = "CAT"),
-      (g.REMAINING_OPEN_GATE_DURATION = "OGT"),
-      (g.REMAINING_OPEN_GATE_DURATION_2 = "RPT"),
-      (g.REMAINING_TIME_UNTIL_EXECUTION = "RD"),
-      (g.REMAINING_NO_ABANDON_TIME = "TA"),
-      (g.REMAINING_NOOB_PROTECTION = "RNP"),
-      (g.SECONDS_UNTIL_RESET = "STR"),
-      (g.LABORATORY_REMAINING_SECONDS = "LRS"),
-      (g.ISLAND_KINGDOM_REMAINING_SECONDS = "KRS"),
-      (g.MONUMENT_REMAINING_SECONDS = "MRS"),
-      (g.APPROXIMATE_REMAINING_TIME = "ART"),
-      (g.PASSED_SECONDS = "PS"),
-      (g.REMAINING_PEACE_TIME = "RPT"),
-      (g.REMAINING_RELOCATION_TIME = "RRD"),
-      (g.AREA_INFO = "AI"),
-      (g.AREA_INFO_2 = "A"),
-      (g.EMPTY_POSITION = "EP"),
-      (g.VISIBLE_AREA_INFO = "VAI"),
-      (g.CHEST_ID = "CID"),
-      (g.TIME_TO_UNLOCK = "TTU"),
-      (g.LORDS = "L"),
-      (g.BARONS = "B"),
-      (g.COMMANDERS = "C"),
-      (g.GENERALS = "G"),
-      (g.LORD_ID = "ID"),
-      (g.LORD_ID_2 = "LID"),
-      (g.DUMMY_LORD_ID = "DLID"),
-      (g.LORD_NAME = "N"),
-      (g.LORD_EQUIPMENT = "EQ"),
-      (g.LORD_LOOK = "VIS"),
-      (g.WEARER_ID = "WID"),
-      (g.LOCKED_CASTLE_ID = "LICID"),
-      (g.ALIEN_INVASION_EFFECTS = "AIE"),
-      (g.WINS = "W"),
-      (g.DEFEATS = "D"),
-      (g.WINNING_SPREE = "SPR"),
-      (g.DO_EXTRACT = "EX"),
-      (g.TAUNT_ATTACK_EFFECTS = "TAE"),
-      (g.OBJECT = "O"),
-      (g.OBJECT_ID = "OID"),
-      (g.BUILDING = "B"),
-      (g.NEW_BUILDING = "N"),
-      (g.NEW_OBJECT = "NO"),
-      (g.MOVED_OBJECT = "MO"),
-      (g.CUSTOM_BUILDINGS = "CB"),
-      (g.CUSTOM_OBJECT_ID = "COID"),
-      (g.OBJECT_ID_LIST = "OIDL"),
-      (g.SLOT_OVERVIEW = "SO"),
-      (g.BUILDING_COST_REDUCTION = "B"),
-      (g.BURNING = "B"),
-      (g.UPGRADE_DETAILS = "UD"),
-      (g.FAST_COMPLETE = "F"),
-      (g.MINES = "M"),
-      (g.BUILDING_EXISTS = "BE"),
-      (g.BUILDING_LIST = "BL"),
-      (g.SIMULTANEOUS_SLOT_COUNT = "SSC"),
-      (g.MERCENARY_MISSIONS = "M"),
-      (g.NEXT_MERCENARY_MISSION_REFRESH = "NM"),
-      (g.MERCENARY_MISSION_ID = "ID"),
-      (g.MISSION_STATE = "S"),
-      (g.QUALITY = "Q"),
-      (g.REWARD = "R"),
-      (g.REWARD_ID = "RID"),
-      (g.REWARD_IDS = "RIDS"),
-      (g.REWARD_ROTATION_INDEX = "RIDX"),
-      (g.REWARD_STEP = "RS"),
-      (g.COLLECTED_REWARDS = "CR"),
-      (g.SELECTED_REWARDS = "RS"),
-      (g.WINNER_REWARD_ID = "WR"),
-      (g.TOP_X_REWARD_ID = "TR"),
-      (g.BOOBY_PRIZE_REWARD_ID = "BR"),
-      (g.MINIMUM_FAME_FOR_BOOBY_PRIZE = "MFB"),
-      (g.CLASS_REWARDS = "CR"),
-      (g.REWARD_GRANT_TYPE = "GT"),
-      (g.REWARD_LEVEL_FOR_POINTS = "RL"),
-      (g.PEACE_MODE_STATUS = "PMS"),
-      (g.PEACE_MODE_TIME = "PMT"),
-      (g.RESOURCE_CARTS = "RC"),
-      (g.RESOURCE_TYPE = "RT"),
-      (g.BOOKMARKS = "BM"),
-      (g.BOOKMARK_LIST = "BL"),
-      (g.BOOKMARK_DISPLAY_NAME = "N"),
-      (g.BOOKMARK_DISPLAY_NAME_2 = "DN"),
-      (g.IS_FRIEND = "TY"),
-      (g.IS_FRIEND_2 = "IF"),
-      (g.BOOKMARK_TYPE = "TY"),
-      (g.TIME_LEFT = "TI"),
-      (g.SEND_IMPORTANT_MESSAGES = "IM"),
-      (g.BOOKMARK_ID = "BID"),
-      (g.BOOKMARK_CREATOR = "C"),
-      (g.ALLIANCE_BOOKMARK_LIST = "ABL"),
-      (g.CURRENCY_1 = "C1"),
-      (g.CURRENCY_2 = "C2"),
-      (g.WOOD = "W"),
-      (g.STONE = "S"),
-      (g.FOOD = "F"),
-      (g.COAL = "C"),
-      (g.OIL = "O"),
-      (g.GLASS = "G"),
-      (g.AQUAMARINE = "A"),
-      (g.IRON = "I"),
-      (g.HONEY = "HONEY"),
-      (g.MEAD = "MEAD"),
-      (g.BEEF = "BEEF"),
-      (g.KHAN_TABLETS = "KT"),
-      (g.SKULL_RELICS = "TS"),
-      (g.PEARL_RELICS = "PR"),
-      (g.SILVER_RUNES = "USR"),
-      (g.GOLD_RUNES = "UGR"),
-      (g.GREEN_SKULL_RELICS = "GTS"),
-      (g.WISHING_WELL_COINS = "WWC"),
-      (g.SAMURAI_TOKENS = "ST"),
-      (g.PEGASUS_TRAVEL_TICKET = "PTT"),
-      (g.CAPITAL_COINS = "CC"),
-      (g.CAPITAL_TOKENS = "CT"),
-      (g.RUBY_COST_FOR_WOOD = "WC2"),
-      (g.RUBY_COST_FOR_STONE = "SC2"),
-      (g.RUBY_COST_FOR_FOOD = "FC2"),
-      (g.RUBY_COST_FOR_C1 = "C1C2"),
-      (g.RESOURCE_AMOUNT_FOOD = "RAF"),
-      (g.RESOURCE_AMOUNT_WOOD = "RAW"),
-      (g.RESOURCE_AMOUNT_STONE = "RAS"),
-      (g.RESOURCE_AMOUNT_BEEF = "RAB"),
-      (g.APOLOGIZE_TOKEN = "APT"),
-      (g.KHAN_MEDALS = "KM"),
-      (g.MISSING_CURRENCY_IDS = "MCIDS"),
-      (g.BOOSTER_KEYS = "BKS"),
-      (g.HIDDEN_FOOD = "HF"),
-      (g.HIDDEN_MEAD = "HM"),
-      (g.HIDDEN_BEEF = "HB"),
-      (g.WISHING_WELL_OPERATION = "WOP"),
-      (g.WISHING_WELL_LEVEL = "L"),
-      (g.ALL_DIALOGS = "A"),
-      (g.DIALOG_ID = "K"),
-      (g.PREMIUM_ACCOUNT_TYPE = "PT"),
-      (g.PREMIUM_TIME_REMAINING = "PA"),
-      (g.FESTIVAL_TYPE = "T"),
-      (g.UPDATE_ALL = "UA"),
-      (g.TREASURE_MAP_ID = "MID"),
-      (g.TREASURE_MAP = "TM"),
-      (g.TREASURE_MAP_NODE = "N"),
-      (g.TREASURE_MAP_NODE_ID = "NID"),
-      (g.PROGRESS_TYPE = "PT"),
-      (g.ACHIEVED = "A"),
-      (g.COOLDOWN_MAP = "CM"),
-      (g.PRIVATE_OFFER_ID = "OID"),
-      (g.PRIVATE_OFFER_STATE = "OS"),
-      (g.PRIVATE_OFFER_ITERATION = "IT"),
-      (g.CAMP_POSITIONS = "CP"),
-      (g.CAMP_REROLL_ENABLED = "CRE"),
-      (g.REROLL_CURRENCY_KEY = "RCK"),
-      (g.REROLL_CURRENCY_KEYS = "RCKS"),
-      (g.REROLL_COUNT_SC = "RCSC"),
-      (g.REROLL_COUNT_HC = "RCHC"),
-      (g.TOPIC_ID = "TID"),
-      (g.TOPIC = "N"),
-      (g.TOPIC_NAME = "TN"),
-      (g.TOPIC_CREATOR_NAME = "CN"),
-      (g.UNREAD_TOPIC_COUNT = "UTC"),
-      (g.REPLY_TEXT = "RT"),
-      (g.REPLY_ID = "RID"),
-      (g.REPLY = "R"),
-      (g.RANKING_GROUPS = "RG"),
-      (g.TIME_SINCE_LAST_ALLIANCE_HELP = "TSL"),
-      (g.ALLIANCE_HELP_ID = "LID"),
-      (g.ALLIANCE_HELP_TYPE = "T"),
-      (g.ALLIANCE_HELP_TARGET_ID = "ID"),
-      (g.ALLIANCE_HELP_RECRUITMENT_PACKAGE_ID = "RID"),
-      (g.APPLICATION_LIST = "AL"),
-      (g.APPLICATION_AGE = "AA"),
-      (g.ALLIANCE = "A"),
-      (g.ALLIANCES = "AL"),
-      (g.ALLIANCE_NAME = "N"),
-      (g.ALLIANCE_NEW_NAME = "AN"),
-      (g.ALLIANCE_NAME_2 = "AN"),
-      (g.ALLIANCE_ID = "AID"),
-      (g.ALLIANCE_DESCRIPTION = "D"),
-      (g.IS_SEARCHING_ALLIANCE = "IS"),
-      (g.ALLIANCE_INVITATION_DECISION = "D"),
-      (g.ALLIANCE_TRIBUTE = "T"),
-      (g.NEW_DIPLOMACY_RANK = "NDR"),
-      (g.OLD_DIPLOMACY_RANK = "ODR"),
-      (g.THIS_ALLIANCE = "AS"),
-      (g.OTHER_ALLIANCE = "AO"),
-      (g.DIPLOMACY_REQUEST_STATUS = "S"),
-      (g.DESCRIPTION_TYPE = "T"),
-      (g.AUTO_WAR_ENABLED = "AW"),
-      (g.ACCEPTED_APPLICATION = "A"),
-      (g.ONLINE_MEMBERS = "OM"),
-      (g.ALLIANCE_LANDMARKS = "ALA"),
-      (g.APPLICATION_TEXT = "AT"),
-      (g.IS_AUTO_JOIN_ENABLED = "IA"),
-      (g.AUTO_JOIN_SET = "AS"),
-      (g.RANK = "R"),
-      (g.BUFF_TYPE = "BT"),
-      (g.ALLIANCE_NOTIFICATION_TYPE = "A"),
-      (g.ALLIANCE_NOTIFICATION_VALUES = "AV"),
-      (g.TRIBUTE = "T"),
-      (g.ALLIANCE_DIPLOMACY = "DOA"),
-      (g.HAS_REACHED_PEACE_CAP = "SP"),
-      (g.DIPLOMACY_TRIBUTE_OFFER = "PO"),
-      (g.TIME_TO_ACCEPT_TRIBUTE = "TS"),
-      (g.ANNOUNCEMENT = "A"),
-      (g.IS_ISLAND_KING_ALLIANCE = "KA"),
-      (g.ALLIANCE_DIPLOMACY_REQUEST_STATUS = "AS"),
-      (g.ALLIANCE_DIPLOMACY_REQUEST_ACCEPTED = "AC"),
-      (g.ALLIANCE_MEMBER_INFO = "AMI"),
-      (g.ALLIANCE_DIPLOMACY_LIST = "ADL"),
-      (g.ALLIANCE_PRIME_TIME_BONUS_PERCENTAGE = "APP"),
-      (g.ALLIANCE_CAPITAL = "ACA"),
-      (g.ALLIANCE_METROPOLIS = "ATC"),
-      (g.ALLIANCE_KINGS_TOWER = "AKT"),
-      (g.ALLIANCE_MONUMENT = "AMO"),
-      (g.ALLIANCE_LABORATORY = "ALA"),
-      (g.ALLIANCE_CURRENT_FAME_2 = "CF"),
-      (g.ALLIANCE_BUFF_LIST = "ABL"),
-      (g.ALLIANCE_AQUA_POINTS_RANK = "AR"),
-      (g.ALLIANCE_LANGUAGE = "ALL"),
-      (g.ALLIANCE_SCORE = "ACS"),
-      (g.IS_ALLIANCE_OPEN = "IAO"),
-      (g.MESSAGE = "M"),
-      (g.MESSAGES = "MSG"),
-      (g.MESSAGE_ID = "MID"),
-      (g.MESSAGE_IDS = "MIDS"),
-      (g.MESSAGE_ERROR_IDS = "ERR"),
-      (g.MESSAGE_DELETED_IDS = "DEL"),
-      (g.CHAT_MESSAGE = "CM"),
-      (g.IS_CHAT_HIDDEN = "H"),
-      (g.TEXT = "TXT"),
-      (g.MESSAGE_TEXT = "MTXT"),
-      (g.SUBJECT = "SJ"),
-      (g.MESSAGE_HEADER = "MH"),
-      (g.BADWORDS = "BW"),
-      (g.SOURCE_NAME = "SN"),
-      (g.TARGET_NAME = "TN"),
-      (g.RECEIVER_NAME = "RN"),
-      (g.RECEIVER_PLAYER_IDS = "PID"),
-      (g.EMAIL = "EM"),
-      (g.MESSAGE_TYPE = "MT"),
-      (g.MESSAGE_METADATA = "MS"),
-      (g.BUG_MESSAGE = "BM"),
-      (g.IGNORED_PLAYER_ID = "IPID"),
-      (g.MESSAGE_TYPES_COUNT = "MTC"),
-      (g.SPACE_ID = "SID"),
-      (g.AREA_ID = "AID"),
-      (g.KINGDOM_ID = "KID"),
-      (g.KINGDOM_ID_2 = "K"),
-      (g.AREA_TYPE = "AT"),
-      (g.GIFTS = "G"),
-      (g.GIFT_ID = "ID"),
-      (g.GIFT_TYPE = "T"),
-      (g.GIFTS_AVAILABLE_TODAY = "RA"),
-      (g.PLAYER_ID = "PID"),
-      (g.PLAYER_LIST = "PL"),
-      (g.PLAYER_IDS = "PIDS"),
-      (g.WOOD_STORED = "WS"),
-      (g.STONE_STORED = "SS"),
-      (g.CAPITAL_TOKENS_STORED = "CTS"),
-      (g.WOOD_PRODUCTION = "WP"),
-      (g.STONE_PRODUCTION = "SP"),
-      (g.STONE_CAPACITY = "MRS"),
-      (g.WOOD_CAPACITY = "MRW"),
-      (g.FOOD_CAPACITY = "MRF"),
-      (g.COAL_CAPACITY = "MRC"),
-      (g.OIL_CAPACITY = "MRO"),
-      (g.GLASS_CAPACITY = "MRG"),
-      (g.IRON_CAPACITY = "MRI"),
-      (g.AQUAMARINE_CAPACITY = "MRA"),
-      (g.STORAGE = "S"),
-      (g.ALLIANCE_STORAGE = "STO"),
-      (g.DONATION_RESOURCE_VALUES = "RV"),
-      (g.WOOD_PRODUCTION_MODIFIER = "WM"),
-      (g.STONE_PRODUCTION_MODIFIER = "SM"),
-      (g.FOOD_PRODUCTION_BOOST = "FM"),
-      (g.COAL_PRODUCTION_MODIFIER = "CM"),
-      (g.OIL_PRODUCTION_MODIFIER = "OM"),
-      (g.GLASS_PRODUCTION_MODIFIER = "GM"),
-      (g.IRON_PRODUCTION_MODIFIER = "IM"),
-      (g.RESOURCE_METROPOLIS_FOOD_PRODUCTION_BONUS = "MP"),
-      (g.WOOD_DELTA = "DW"),
-      (g.STONE_DELTA = "DS"),
-      (g.FOOD_DELTA = "DF"),
-      (g.COAL_DELTA = "DC"),
-      (g.OIL_DELTA = "DO"),
-      (g.GLASS_DELTA = "DG"),
-      (g.IRON_DELTA = "DI"),
-      (g.FOOD_CONSUMPTION_DELTA = "DFC"),
-      (g.SICKNESS = "S"),
-      (g.MAIN_CASTLES_RESOURCES = "MCR"),
-      (g.CURRENT_AREA_RESOURCES = "CAR"),
-      (g.MINIMUM_STOCK = "MS"),
-      (g.PRODUCTION_ADJUSTMENT = "PA"),
-      (g.SERVER_PRODUCTION_FREEZE = "SRPF"),
-      (g.CURRENCY_TYPE = "CT"),
-      (g.PACKAGE_ID = "PID"),
-      (g.PACKAGE_ID_2 = "PKID"),
-      (g.PACKAGE_LIST = "PL"),
-      (g.PACKAGE_PRICE = "PKPC"),
-      (g.PROPOSED_RUBIES = "PC2"),
-      (g.AMOUNT = "AMT"),
-      (g.AMOUNT_2 = "A"),
-      (g.COUNT = "C"),
-      (g.PRIME_OFFER_ID = "PO"),
-      (g.BUY_TYPE = "BT"),
-      (g.BUY_TYPE_ID = "TID"),
-      (g.BUY_AGAIN = "BA"),
-      (g.PAY_WITH_RUBIES = "PWR"),
-      (g.DISCOUNT = "DIS"),
-      (g.DECORATION_ID = "DID"),
-      (g.UNSTORED_DECO_ID = "I"),
-      (g.UNIQUE_DECORATION_ID = "UID"),
-      (g.VILLAGE_COUNT = "VC"),
-      (g.POPUP_ID = "POP"),
-      (g.POPUP_VALUE = "VAL"),
-      (g.BOOSTER_ID = "BID"),
-      (g.BOOSTER_ID_2 = "ID"),
-      (g.BOOSTER_PERCENT_BOOST = "PB"),
-      (g.BOOSTER_LEVEL = "L"),
-      (g.FOOD_BOOST = "FB"),
-      (g.VIP_BOOST = "VB"),
-      (g.IS_BOOSTED = "BT"),
-      (g.GLORY_BOOSTER_PERCENTAGE = "GBP"),
-      (g.MOVEMENTS = "M"),
-      (g.MOVEMENT = "M"),
-      (g.TO_PLAYER_ID = "TID"),
-      (g.MARKET_MOVEMENT = "MM"),
-      (g.CARRIAGES = "C"),
-      (g.GOODS = "G"),
-      (g.TARGET_AREA = "TA"),
-      (g.SOURCE_AREA = "SA"),
-      (g.DISTANCE_X = "DX"),
-      (g.DISTANCE_Y = "DY"),
-      (g.X_DESTINATION = "DX"),
-      (g.Y_DESTINATION = "DY"),
-      (g.UNIT_TRANSFER = "UT"),
-      (g.RESOURCE_TRANSFER = "RT"),
-      (g.ATTACK_MOVEMENT = "A"),
-      (g.ATTACK_TYPE = "ATT"),
-      (g.TARGET_X_COORDINATE = "TX"),
-      (g.TARGET_Y_COORDINATE = "TY"),
-      (g.SOURCE_X_COORDINATE = "SX"),
-      (g.SOURCE_Y_COORDINATE = "SY"),
-      (g.SOURCE_KINGDOM_ID = "SKID"),
-      (g.TARGET_KINGDOM_ID = "TKID"),
-      (g.ARMY_ATTACK_MOVEMENT = "AAM"),
-      (g.TRANSFER_TYPE = "TT"),
-      (g.SCOPE = "S"),
-      (g.TOTAL_CARRIAGES = "TC"),
-      (g.AVAILABLE_CARRIAGES = "AC"),
-      (g.MOVEMENT_ID = "MID"),
-      (g.TARGET_KINGDOM_ID_2 = "TK"),
-      (g.TREASURE_HUNT_MOVEMENT = "TM"),
-      (g.FINAL_ARMY = "FA"),
-      (g.GUESSED_SIZE = "GS"),
-      (g.GESAMMTE_ARMY = "GA"),
-      (g.SLOWNDOWN_DURATION_IN_SECONDS = "SD"),
-      (g.TOTAL_TIME = "TT"),
-      (g.PASSED_TIME = "PT"),
-      (g.START_PLAYER_ID = "SID"),
-      (g.ATTACK_SUPPORT_TOOLS = "AST"),
-      (g.HOME_AWORKSHOP_LEVEL = "HAWL"),
-      (g.UNIT_MOVEMENT = "UM"),
-      (g.PROGRESS_WAITING_DURATION = "PWD"),
-      (g.TOTAL_WAITING_DURATION = "TWD"),
-      (g.ARMY = "A"),
-      (g.INVENTORY = "I"),
-      (g.ALLIANCE_SUPPORT_INVENTORY = "AI"),
-      (g.UNITS = "U"),
-      (g.TOOLS = "T"),
-      (g.LEFT = "L"),
-      (g.MIDDLE = "M"),
-      (g.RIGHT = "R"),
-      (g.REINFORCEMENT_WAVE = "RW"),
-      (g.PRECOMBAT_WAVE = "PW"),
-      (g.POSTCOMBAT_WAVE = "EW"),
-      (g.UNITS_TRAVELING = "UT"),
-      (g.STATUS = "S"),
-      (g.STATUS_2 = "ST"),
-      (g.MINIMUM_SOLDIER_COUNT = "MS"),
-      (g.MAXIMUM_UNITS = "MU"),
-      (g.UNIT_AMOUNT = "U"),
-      (g.MORALE = "M"),
-      (g.APPEND_UNITS = "AU"),
-      (g.RUNNING_ACHIEVEMENTS = "RA"),
-      (g.FINISHED_ACHIEVEMENTS = "FA"),
-      (g.ACHIEVEMENT_POINTS = "AVP"),
-      (g.ACHIEVEMENT_ID = "AID"),
-      (g.PROGRESS = "P"),
-      (g.QUEST_ID = "QID"),
-      (g.QUEST_IDS = "QIDS"),
-      (g.UNREAD = "U"),
-      (g.QUEST_STATE = "S"),
-      (g.QUEST_LIST = "QL"),
-      (g.ANNOUNCED_QUESTS = "ANN"),
-      (g.RUNNING_QUESTS = "R"),
-      (g.DONE_QUESTS = "D"),
-      (g.RUNNING_DAILY_QUESTS = "RDQ"),
-      (g.FINISHED_DAILY_QUESTS = "FDQ"),
-      (g.PLAYER_QUEST_LEVEL = "PQL"),
-      (g.CAMPAIGN_QUESTS = "CQS"),
-      (g.QUEST_CAMPAIGN_STATUS = "QCS"),
-      (g.CAMPAIGN_QUEST_ID = "CQID"),
-      (g.QUEST_CONDITION = "QC"),
-      (g.QUEST_TARGET_ID = "QTID"),
-      (g.SIDE = "S"),
-      (g.UNIT_DISTRIBUTION_PERCENTAGE = "UP"),
-      (g.UNIT_COMPOSITION = "UC"),
-      (g.SLOTS = "S"),
-      (g.LEFT_SLOT = "LS"),
-      (g.MIDDLE_SLOT = "MS"),
-      (g.RIGHT_SLOT = "RS"),
-      (g.UNIT_SLOTS = "SU"),
-      (g.UNIT_SLOTS_2 = "US"),
-      (g.TOOL_SLOTS = "ST"),
-      (g.DEFENSE_VALUE = "D"),
-      (g.SPY_AGE = "AS"),
-      (g.DEFENDER_PLAYER_ID = "DP"),
-      (g.DEFENDER_LEVEL = "DL"),
-      (g.KEEP_LEVEL = "KL"),
-      (g.WALL_LEVEL = "WL"),
-      (g.GATE_LEVEL = "GL"),
-      (g.TOWER_LEVEL = "TL"),
-      (g.MOAT_LEVEL = "ML"),
-      (g.SPECIAL_CAMP_ID = "SPC"),
-      (g.MINIMUM_ATTACK_UNITS_TO_CONSUME_TOOLS = "MAUCT"),
-      (g.SUPPORT_TOOL_SLOTS = "STS"),
-      (g.SOURCE_ZONE_ID = "SZID"),
-      (g.TARGET_ZONE_ID = "TZID"),
-      (g.BOUNTYHUNTER_REWARD_C1 = "BC1"),
-      (g.BOUNTYHUNTER_REWARD_C2 = "BC2"),
-      (g.BOUNTYHUNTER_REWARD_IRON = "I"),
-      (g.DUNGEON_PROTECTION_TIME = "DPT"),
-      (g.DUNGEON = "D"),
-      (g.DEFENCE_UNITS = "DU"),
-      (g.COLOSSUS_POINTS = "P"),
-      (g.ISLAND_RANK = "OR"),
-      (g.WINNER_ALLIANCE_ID = "WAID"),
-      (g.WINNER_ALLIANCE_NAME = "WAN"),
-      (g.WINNER_ALLIANCE_MEMBER_COUNT = "WAM"),
-      (g.WINNER_ALLIANCE_LEVEL = "WAL"),
-      (g.WINNER_ALLIANCE_AQUA_POINTS = "WAP"),
-      (g.ISLAND_KING_PLAYER_ID = "KID"),
-      (g.ISLAND_KING_PLAYER_NAME = "KN"),
-      (g.OWNER_ALLIANCE_MEMBER_COUNT = "OAM"),
-      (g.OWNER_ALLIANCE_NAME = "OAN"),
-      (g.OWNER_ALLIANCE_LEVEL = "OAL"),
-      (g.OWNER_ALLIANCE_ID = "OAI"),
-      (g.FACTION_OWNER_INFO = "FN"),
-      (g.FACTION_POINTS_BLUE = "BFP"),
-      (g.FACTION_POINTS_RED = "RFP"),
-      (g.PLAYER_COUNT_RED = "RP"),
-      (g.PLAYER_COUNT_BLUE = "BP"),
-      (g.FACTION_ID = "FID"),
-      (g.AUXILIARY_CAPACITY = "AUS"),
-      (g.PLAYER_PERCENTAGE_IN_FACTION_RED = "RFPPA"),
-      (g.FACTION_BLUE = "FB"),
-      (g.FACTION_RED = "FR"),
-      (g.CURRENT_FACTION_POINTS = "CFP"),
-      (g.HIGHEST_FACTION_POINTS = "HFP"),
-      (g.RED_FACTION_LAST_MAN_STANDING_ACTIVE = "RFLMS"),
-      (g.BLUE_FACTION_LAST_MAN_STANDING_ACTIVE = "BFLMS"),
-      (g.BLUE_FACTION_CAPITAL_REACHED = "BCR"),
-      (g.RED_FACTION_CAPITAL_REACHED = "RCR"),
-      (g.MAIN_CAMP_ID = "MC"),
-      (g.IS_SPECTATOR = "SPC"),
-      (g.FACTION_AREA_CAPACITY = "FAC"),
-      (g.MAP_SEED = "MS"),
-      (g.BATTLE_LOG_ID = "LID"),
-      (g.ATTACKER_LORD_INFO = "AL"),
-      (g.DEFENDER_BARON_INFO = "DB"),
-      (g.ATTACKER_GEM_TRIGGERED = "AGT"),
-      (g.DEFENDER_GEM_TRIGGERED = "DGT"),
-      (g.ATTACKER_LEGEND_SKILLS = "ALS"),
-      (g.DEFENDER_LEGEND_SKILLS = "DLS"),
-      (g.DEFENDER_WON = "DW"),
-      (g.DEFENDER_USED_SUPPORT_TOOLS = "DUST"),
-      (g.HONOR = "H"),
-      (g.DEFENDER_SURVIVAL_RATE = "SR"),
-      (g.PLAYER_BATTLE_INFO = "PBI"),
-      (g.PLAYER_INFO = "PI"),
-      (g.FOUND_EQUIPMENT = "EQF"),
-      (g.FOUND_GEM_ID = "GF"),
-      (g.FOUND_MINUTE_SKIP_ID = "MSF"),
-      (g.ATTACKER_HOSPITAL_CASTLE_ID = "AHC"),
-      (g.ATTACKER_HAD_HOSPITAL = "AHH"),
-      (g.ATTACKER_HOSPITAL_WAS_FULL = "AHF"),
-      (g.DEFENDER_HOSPITAL_CASTLE_ID = "DHC"),
-      (g.DEFENDER_HAD_HOSPITAL = "DHH"),
-      (g.DEFENDER_HOSPITAL_WAS_FULL = "DHF"),
-      (g.WOUNDED_SUPPORTER_UNITS = "WSU"),
-      (g.ATTACKER_USED_ONLY_AUXILIARIES = "AUA"),
-      (g.DEFENDER_USED_ONLY_AUXILIARIES = "DUA"),
-      (g.ATTACKER_ALLIANCE_SUBSCRIBERS = "AAS"),
-      (g.DEFENDER_ALLIANCE_SUBSCRIBERS = "DAS"),
-      (g.ATTACKER_HAD_PLAYER_SUBSCRIPTION = "AHP"),
-      (g.DEFENDER_HAD_PLAYER_SUBSCRIPTION = "DHP"),
-      (g.RAGE_POINTS = "RP"),
-      (g.ADDITIONAL_EFFECTS = "AE"),
-      (g.SPY = "S"),
-      (g.SPY_COUNT = "SC"),
-      (g.GUARD_COUNT = "GC"),
-      (g.GUARD_COUNT_2 = "GRD"),
-      (g.SPYING_PLAYER_ID = "SID"),
-      (g.SPY_OWNER = "SO"),
-      (g.SPY_RISK = "SR"),
-      (g.SPY_ACCOUNT = "SA"),
-      (g.SPY_TYPE = "ST"),
-      (g.SPY_EFFECT = "SE"),
-      (g.RISK = "R"),
-      (g.PLAGUE_MONK_MOVEMENT = "P"),
-      (g.CASTLE = "C"),
-      (g.CASTLES = "C"),
-      (g.CASTLE_ID = "CID"),
-      (g.CASTLE_NAME = "N"),
-      (g.CASTLE_NAME_1 = "CN"),
-      (g.POPULATION = "P"),
-      (g.NEUTRAL_DECO_POINTS = "NDP"),
-      (g.DECO_POINTS = "DP"),
-      (g.RIOT = "R"),
-      (g.SLUM_LEVEL = "SL"),
-      (g.SOLDIER_PRODUCTION_SPEED = "RS1"),
-      (g.OFFENSIVE_TOOL_PRODUCTION_SPEED = "RS2"),
-      (g.DEFENSIVE_TOOL_PRODUCTION_SPEED = "RS3"),
-      (g.HOSPITAL_PRODUCTION_SPEED = "RSH"),
-      (g.BUILD_SPEED = "BDB"),
-      (g.BUILDING_INFO = "BI"),
-      (g.BUILDING_LEVEL = "BL"),
-      (g.STATE = "S"),
-      (g.OPEN_GATE_COUNTER = "OGC"),
-      (g.TAX = "TX"),
-      (g.EXPECTED_MONEY = "EM"),
-      (g.IS_BRIBED = "IB"),
-      (g.POPULATION_1 = "PO"),
-      (g.COLLECTED_TAXES = "CT"),
-      (g.TAX_TYPE = "TT"),
-      (g.SKIN_ID = "EID"),
-      (g.UNLOCKED_STUFF = "UL"),
-      (g.IS_UNLOCKED = "U"),
-      (g.PAID_WOOD = "PW"),
-      (g.PAID_FOOD = "PF"),
-      (g.PAID_STONE = "PS"),
-      (g.PAID_C1 = "PC1"),
-      (g.PAID_C2 = "PC2"),
-      (g.TOP_X_RANK = "TX"),
-      (g.CURRENT_SCORE = "OP"),
-      (g.CURRENT_SCORE_2 = "OEP"),
-      (g.LEAGUE_TYPE = "LID"),
-      (g.CURRENT_FAME = "CF"),
-      (g.HIGHEST_FAME = "HF"),
-      (g.VILLAGE_POSITIONS = "VP"),
-      (g.AREA_POSITIONS = "AP"),
-      (g.UNITS_2 = "UT"),
-      (g.CASTLE_X_COORDINATE = "CX"),
-      (g.CASTLE_Y_COORDINATE = "CY"),
-      (g.GATE_DEFENSE = "GD"),
-      (g.MELEE_DEFENSE_STRENGTH = "MDS"),
-      (g.RANGE_DEFENSE_STRENGTH = "RDS"),
-      (g.PLACED_RANGE_UNITS = "PR"),
-      (g.PLACED_MELEE_UNITS = "PM"),
-      (g.HOME_DWORKSHOP_LEVEL = "HDWL"),
-      (g.POPUP_LIST = "P"),
-      (g.PLAYER_NAME = "PN"),
-      (g.REGISTRATION_EMAIL = "MAIL"),
-      (g.PASSWORD = "PW"),
-      (g.LOGIN_TOKEN = "LT"),
-      (g.STAY_LOGGED_IN = "PL"),
-      (g.LANGUAGE = "LANG"),
-      (g.REFERRER = "REF"),
-      (g.KOREA_REQUEST_ID = "koreaRequestId"),
-      (g.KOREA_REQUEST_ID_SHORT = "KID"),
-      (g.INVITE_CODE = "IC"),
-      (g.LOGIN_NEW_PASSWORD = "P"),
-      (g.LOGIN_NEW_PASSWORD_BCRYPT = "PB"),
-      (g.LOGIN_NEW_EMAIL = "M"),
-      (g.NEWSLETTER_SUBSCRIPTION = "N"),
-      (g.REGISTRATION_DATE = "RD"),
-      (g.FREE_CASTLE_RENAME = "FCR"),
-      (g.IS_PLAYER_NAME_TEMPORARY = "PNT"),
-      (g.IS_EMAIL_TEMPORARY = "MLT"),
-      (g.IS_PASSWORD_TEMPORARY = "PWT"),
-      (g.NAME_OR_EMAIL = "NOM"),
-      (g.ACCOUNT_ID = "AID"),
-      (g.LOGIN_TYPE_ID = "ID"),
-      (g.GOODGAME_CAMPAIGN_ID = "GCI"),
-      (g.EMAIL_2 = "E"),
-      (g.HAS_CONFIRMED_EMAIL = "V"),
-      (g.HAS_CONFIRMED_TERMS_AND_CONDITIONS = "CTAC"),
-      (g.HAS_NEWSLETTER_SUBSCRIPTION = "SFN"),
-      (g.API_BEARER_TOKEN = "ABT"),
-      (g.EXPIRES_IN_SECONDS = "ES"),
-      (g.CAN_GET_NEWSLETTER_REWARD = "CGNR"),
-      (g.API_BEARER_TOKEN_V2 = "ABTV2"),
-      (g.ZONE_NETWORK_ID = "ZNID"),
-      (g.HAS_PASSWORD = "hasPassword"),
-      (g.CONSTRUCTION_ITEM = "CI"),
-      (g.CONSTRUCTION_ITEM_ID = "CID"),
-      (g.CONSTRUCTION_ITEM_LIST = "CIL"),
-      (g.MODE = "M"),
-      (g.CONSTRUCTION_ITEM_SELECTED_UPGRADE_CURRENCY = "SUC"),
-      (g.NEXT_EXPIRING_CI_REMAINING_SECONDS = "NCRS"),
-      (g.LAST_EXPIRED_CI_TIMESTAMP = "LECT"),
-      (g.BOOSTED_CONSTRUCTION_ITEM_ID = "BCID"),
-      (g.TITLE_ID = "TI"),
-      (g.TITLE_ID_2 = "TID"),
-      (g.NEW_TITLE_INDEX = "NHT"),
-      (g.PREFIX_TITLE = "PRE"),
-      (g.SUFFIX_TITLE = "SUF"),
-      (g.PREFIX_TITLE_2 = "PFX"),
-      (g.SUFFIX_TITLE_2 = "SFX"),
-      (g.TITLE_COOLDOWN = "TCD"),
-      (g.TITLE_INFO = "TI"),
-      (g.AQUA_POINTS = "AP"),
-      (g.ALLIANCE_AQUA_POINTS = "A"),
-      (g.AQUA_POINTS_HIGHSCORE = "APH"),
-      (g.LEGEND_SKILL_POINTS = "SP"),
-      (g.PLAYER_AQUA_POINTS = "P"),
-      (g.DELTA_PLAYER_AQUA_POINTS = "DP"),
-      (g.CURRENT_MIGHT_POINTS = "MP"),
-      (g.HIGHEST_MIGHT_POINTS = "HMP"),
-      (g.VIP_POINTS = "VP"),
-      (g.COLLECTED_POINTS = "CP"),
-      (g.HIGHEST_MIGHT_POINTS_2 = "HAMP"),
-      (g.POINT_THRESHOLD = "PT"),
-      (g.SURVEY_ID = "SID"),
-      (g.IS_CANCELED = "C"),
-      (g.ANSWERS = "A"),
-      (g.ANSWERS_IDS = "AS"),
-      (g.QUESTION_ID = "ID"),
-      (g.FREE_TEXT = "T"),
-      (g.SURVEY_TYPE_ID = "ST"),
-      (g.QUESTIONS = "QS"),
-      (g.QUESTION_TYPE = "QT"),
-      (g.ANSWERS_COUNT = "AC"),
-      (g.FULL_NAME = "FUN"),
-      (g.FIRST_NAME = "FIN"),
-      (g.LAST_NAME = "LAN"),
-      (g.PROFILE_LINK = "PLK"),
-      (g.GENDER_NAME = "GEN"),
-      (g.LOCALE_CODE = "LOC"),
-      (g.IS_ACCOUNT_VERIFIED = "IAV"),
-      (g.FACEBOOK_AGE_RANGE = "AGR"),
-      (g.UTC_OFFSET = "UTC"),
-      (g.BIRTHDAY = "BID"),
-      (g.FACEBOOK_BUSINESS_TOKEN = "FBT"),
-      (g.FACEBOOK_INVITER_INFO = "FI"),
-      (g.FACEBOOK_ID = "FB"),
-      (g.FACEBOOK_ID_1 = "ID"),
-      (g.FACEBOOK_IDS = "FIDS"),
-      (g.FACEBOOK_INVITEES_LIST = "FL"),
-      (g.FACEBOOK_APP_ID = "FAID"),
-      (g.FACEBOOK_USER_ID = "FID"),
-      (g.FACEBOOK_TOKEN = "FTK"),
-      (g.INSTANCE_ID = "IID"),
-      (g.ZONE_ID = "ZID"),
-      (g.IS_CONNECTED_TO_FACEBOOK = "CTF"),
-      (g.SET_FACEBOOK_CONNECTION = "SFC"),
-      (g.FACEBOOK_SENDER_ID = "SID"),
-      (g.FACEBOOK_RECEIVER_ID = "RXID"),
-      (g.FACEBOOK_ID_WAS_SET_BEFORE = "SB"),
-      (g.FACEBOOK_IDS_MAPPING = "FM"),
-      (g.SHOPPING_CART = "SC"),
-      (g.TYPE_IDS = "TID"),
-      (g.PAYED_C2 = "P"),
-      (g.LIMIT = "LIM"),
-      (g.LEVEL = "L"),
-      (g.COST_C2 = "C2"),
-      (g.SHOPPING_CART_A = "SCA"),
-      (g.SHOPPING_CART_B = "SCB"),
-      (g.SHOPPING_CART_C = "SCC"),
-      (g.MATERIAL_BAG_ID = "BID"),
-      (g.CRAFTING_MATERIAL = "CM"),
-      (g.MATERIAL_ID = "MID"),
-      (g.ITEM_RECIPES = "IR"),
-      (g.RECIPE_ID = "RID"),
-      (g.SLOT_NAME = "SN"),
-      (g.LINK = "L"),
-      (g.WEBSITE_ID = "WID"),
-      (g.OWNER_INFO = "OI"),
-      (g.OWNER_INFO_2 = "O"),
-      (g.INGREDIENTS = "I"),
-      (g.SEARCH_VALUE = "SV"),
-      (g.WOD_ID = "WID"),
-      (g.WOD_IDS = "WIDS"),
-      (g.WOD_ID_2 = "W"),
-      (g.WOD_ID_3 = "WOD"),
-      (g.RANDOM_NAMES = "RN"),
-      (g.CHOSEN_OPTION = "CO"),
-      (g.FREE_UNIT_CAPACITY = "FUC"),
-      (g.SHUTTING_DOWN = "SD"),
-      (g.EQUIPMENT = "E"),
-      (g.REMAINING_COOLDOWN = "CD"),
-      (g.DAY_OF_WEEK = "DOW"),
-      (g.EVENT_ID = "EID"),
-      (g.JUDGEMENT_ID = "JID"),
-      (g.FREE_SKIP = "FS"),
-      (g.FOOD_CONSUMPTION_REDUCTION = "FCR"),
-      (g.TIME_UNTIL_NEXT_COLLECTION = "NC"),
-      (g.REMAINING_COLLECTIONS = "RC"),
-      (g.EXTRA_GOODS = "EG"),
-      (g.XP = "XP"),
-      (g.OLD_SLOT = "OS"),
-      (g.NEW_SLOT = "NS"),
-      (g.SLOT_ID = "S"),
-      (g.SLOT_ID_2 = "SID"),
-      (g.SKIN_ID_2 = "SID"),
-      (g.SKIN_ID_3 = "SKN"),
-      (g.LEAGUE_ID = "ALID"),
-      (g.UPCOMING_EVENTS = "UE"),
-      (g.SUB_TYPE = "ST"),
-      (g.FOUND_RANK = "FR"),
-      (g.WOOD_AND_STONE_PRODUCTION_REDUCTION = "WSR"),
-      (g.UNIT_ID = "U"),
-      (g.TAKE_FROM_STRONGHOLD = "S"),
-      (g.AREAS = "A"),
-      (g.UNLOCKED_HORSES = "UH"),
-      (g.LOCKED_UNITS = "L"),
-      (g.SAFE_HOUSE_INVENTORY = "SHI"),
-      (g.HOSPITAL_INVENTORY = "HI"),
-      (g.TRAVELLING_UNITS = "TU"),
-      (g.RESEARCH_ID = "RID"),
-      (g.SOURCE_AREA_ID = "SCID"),
-      (g.SOURCE_AREA_ID_2 = "SID"),
-      (g.TARGET_AREA_ID = "TCID"),
-      (g.OWNER_ID = "OID"),
-      (g.HORSE_WOD_ID = "HBW"),
-      (g.BOUGHT_PREMIUM_COMMANDER = "BPC"),
-      (g.VISIBLE_FOR_ALLIANCE = "AV"),
-      (g.LOOT_PRIORITY = "LP"),
-      (g.KING_TOWER_BONUS = "KTB"),
-      (g.EMBLEM = "E"),
-      (g.MORALE_BONUS = "MB"),
-      (g.WAIT_TIME_INDEX = "WT"),
-      (g.WAIT_TIME_HOURS = "WT"),
-      (g.CAMP_ID = "CID"),
-      (g.EFFECT = "E"),
-      (g.AVAILABLE_SPY_COUNT = "AS"),
-      (g.AVAILABLE_PLAGUE_MONK_COUNT = "APM"),
-      (g.TRAVELLING_PLAGUE_MONK_COUNT = "TPM"),
-      (g.AGE_SPY = "AS"),
-      (g.OBJECT_THINGY = "O"),
-      (g.VILLAGES = "VI"),
-      (g.HAS_CONTOR = "C"),
-      (g.RESOURCES_TRANSPORTED = "RT"),
-      (g.SLUM_PAID_WOOD = "SPW"),
-      (g.SLUM_PAID_STONE = "SPS"),
-      (g.SLUM_PAID_FOOD = "SPF"),
-      (g.SLUM_PAID_C1 = "SPC1"),
-      (g.DIRECTION = "D"),
-      (g.RELOCATION_COUNT = "RLC"),
-      (g.REMAINING_RELOCATION_COOLDOWN = "RMC"),
-      (g.JUST_MOVED = "JM"),
-      (g.ORIGIN_X_COORDINATE = "OX"),
-      (g.ORIGIN_Y_COORDINATE = "OY"),
-      (g.X_POSITION_2 = "PX"),
-      (g.Y_POSITION_2 = "PY"),
-      (g.CHOSEN_DURATION_INDEX = "CD"),
-      (g.NEW_NAME = "N"),
-      (g.HAS_TO_PAY = "P"),
-      (g.DISABLE_JUMP = "DJ"),
-      (g.INCLUDE_MIDDLE_LOG = "IM"),
-      (g.IGNORE = "IGN"),
-      (g.OWNER_CASTLE_ID = "OCID"),
-      (g.TARGET_CASTLE_ID = "TCID"),
-      (g.RESOURCES = "R"),
-      (g.ISLAND_RANDOM_SEED = "I"),
-      (g.ALLIANCE_BOOKMARK_INFO = "ABI"),
-      (g.CREATED_AVATAR_EMBLEM = "CAE"),
-      (g.EMBLEM_SYMBOL_1_ID = "S1"),
-      (g.EMBLEM_SYMBOL_2_ID = "S2"),
-      (g.NEW_PASSWORD = "NPW"),
-      (g.NEW_BCRYPT_PASSWORD = "NBPW"),
-      (g.OLD_PASSWORD = "OPW"),
-      (g.INDEX = "I"),
-      (g.SPECIAL_PARAMETER = "SP"),
-      (g.REWARDED_TROOPS_WOD_ID = "ID"),
-      (g.PORTAL_LOGIN_NAME = "PLN"),
-      (g.DAY = "D"),
-      (g.NAME_OR_MAIL = "NOM"),
-      (g.DISTRIBUTOR_ID = "ID"),
-      (g.SHOW_VIP_FLAG = "SVF"),
-      (g.CONFIRM_C2_THRESHOLD = "CC2T"));
-    ((g.USE_BIG_MESSAGE_BOX = "BIG"),
-      (g.MESSAGE_2 = "MSG"),
-      (g.TIMESTAMP = "T"),
-      (g.NEXT_RETENTION_REWARD = "NRR"),
-      (g.CAN_COLLECT = "CC"),
-      (g.MEMBERS = "M"),
-      (g.RESOURCE_TYPE_2 = "T"),
-      (g.GEM_ID = "GID"),
-      (g.EQUIPMENT_ID = "EID"),
-      (g.HERO_ID = "HID"),
-      (g.SUCCESS = "S"),
-      (g.USED_GEM_IDS = "UG"),
-      (g.MADE_GEM_ID = "MID"),
-      (g.DO_EQUIP = "E"),
-      (g.REMAINING_EQUIPMENT_INVENTORY_SPACE = "E"),
-      (g.TOTAL_EQUIPMENT_INVENTORY_SPACE = "TE"),
-      (g.REMAINING_CONSTRUCTION_ITEM_INVENTORY_SPACE = "C"),
-      (g.REMAINING_GEM_INVENTORY_SPACE = "G"),
-      (g.TOTAL_GEM_INVENTORY_SPACE = "TG"),
-      (g.RECEIVED_REWARDS = "RR"),
-      (g.MISSION_ID = "MID"),
-      (g.MINUTE_SKIP_TYPE = "MST"),
-      (g.MINUTE_SKIPS = "MS"),
-      (g.ISSUER_ID = "IID"),
-      (g.EVENT_COMMAND = "CMD"),
-      (g.SKIP_WITH_C2 = "SC"),
-      (g.FOOD_STORED = "FS"),
-      (g.REMAINING_NOOB_PROTECTION_TIME_IN_SECONDS = "NS"),
-      (g.TIME_SINCE_LAST_ACTIVE = "LA"),
-      (g.WAS_RESETTED = "WR"),
-      (g.INCLUDE_CASTLE_DEFENSE = "CD"),
-      (g.TOTAL_CARRIAGES_2 = "MC"),
-      (g.HAS_BARRACKS = "B"),
-      (g.HAS_WORKSHOP = "WS"),
-      (g.HAS_DEFENSE_WORKSHOP = "DW"),
-      (g.HAS_HOSPITAL = "H"),
-      (g.ARMY_COLLECTION = "AC"),
-      (g.DEFENSE_DECORATION = "D"),
-      (g.HONOR_RANK = "RP"),
-      (g.BONUS_SPY_AMOUNT = "BS"),
-      (g.MAXIMUM_SPY_AMOUNT = "MS"),
-      (g.HAS_EVER_CHANGED_NAME = "ECN"),
-      (g.ADMIN_SECURITY_LEVEL = "CL"),
-      (g.USER_ID = "UID"),
-      (g.HAS_PREMIUM_FLAG = "PF"),
-      (g.CURRENT_PLAYER_LEVEL = "LVL"),
-      (g.NEW_PLAYER_LEVEL = "NL"),
-      (g.XP_FOR_CURRENT_LEVEL = "XPFCL"),
-      (g.XP_FOR_NEXT_LEVEL = "XPTNL"),
-      (g.LAST_WEEKS_RANK = "LWR"),
-      (g.CURRENT_HONOR_RANK = "CWR"),
-      (g.LIST_TYPE = "LT"),
-      (g.LAST_ROW = "LR"),
-      (g.HIGHSCORE_LIST = "L"),
-      (g.ALLIANCE_RANK = "R"),
-      (g.ALLIANCE_CURRENT_FAME = "ACF"),
-      (g.IS_SEARCHING_ALLIANCE_2 = "SA"),
-      (g.USED_PREMIUM_GENERALS = "UPG"),
-      (g.VIP_REMAINING_SECONDS = "VRS"),
-      (g.VIP_REACHED_LEVEL = "VRL"),
-      (g.OFFER_ID = "OID"),
-      (g.OFFER_DESCRIPTION_INDEX = "ODI"),
-      (g.OFFER_ACCEPTED = "C"),
-      (g.WAS_INSTANT_COMPLETED = "IC"),
-      (g.GAINED_EQUIPMENT = "GEQ"),
-      (g.DAILY_ACTIVITY_TYPE = "DA"),
-      (g.ARTIFACT_PIECES_FOUND = "PF"),
-      (g.WOOD_PACKAGES = "WP"),
-      (g.FOOD_PACKAGES = "FP"),
-      (g.STONE_PACKAGES = "SP"),
-      (g.DONATED_COINS = "DC"),
-      (g.DONATED_STONE = "DS"),
-      (g.DONATED_WOOD = "DW"),
-      (g.IS_SMALL_LIST = "S"),
-      (g.CURRENT_RANK = "OR"),
-      (g.HIGHSCORE = "HS"),
-      (g.AREA_TYPE_2 = "T"),
-      (g.MINIMUM_LEVEL = "LMIN"),
-      (g.MAXIMUM_LEVEL = "LMAX"),
-      (g.IS_PLAYER_ACTIVE = "PA"),
-      (g.CAMP_TYPE_ID = "ID"),
-      (g.DO_COLLECT_REWARDS = "CR"),
-      (g.RECEIVER_PLAYER_ID = "RID"),
-      (g.REWARD_COUNT = "RC"),
-      (g.REWARDS = "RW"),
-      (g.WON_RUBIES = "WR"),
-      (g.FOOD_COST = "F"),
-      (g.FOOD_PRODUCED = "FP"),
-      (g.WOOD_PRODUCED = "WP"),
-      (g.STONE_PRODUCED = "SP"),
-      (g.COAL_STORED = "CS"),
-      (g.COAL_PRODUCED = "CP"),
-      (g.OIL_STORED = "OS"),
-      (g.OIL_PRODUCED = "OP"),
-      (g.GLASS_STORED = "GS"),
-      (g.GLASS_PRODUCED = "GP"),
-      (g.IRON_STORED = "IS"),
-      (g.IRON_PRODUCED = "IP"),
-      (g.EVENTS = "E"),
-      (g.AREA_1_X_COORDINATE = "AX1"),
-      (g.AREA_1_Y_COORDINATE = "AY1"),
-      (g.AREA_2_X_COORDINATE = "AX2"),
-      (g.AREA_2_Y_COORDINATE = "AY2"),
-      (g.AREA_ID_2 = "ID"),
-      (g.AREA_NAME = "AN"),
-      (g.TOPIC_COUNT = "TC"),
-      (g.TOPICS = "T"),
-      (g.ALLIANCE_RANK_2 = "AR"),
-      (g.TOPIC_NAME_2 = "N"),
-      (g.TOPIC_CREATION_TIMESTAMP = "CT"),
-      (g.TOPIC_CREATOR_RANK = "CR"),
-      (g.REPLY_COUNT = "RC"),
-      (g.LAST_REPLY_CREATOR_NAME = "LRN"),
-      (g.LAST_REPLY_CREATION_TIMESTAMP = "LRT"),
-      (g.TOPIC_IS_READ = "R"),
-      (g.REPLIES = "R"),
-      (g.HELP_TYPE_ID = "TID"),
-      (g.MESSAGE_AGE = "MA"),
-      (g.HAS_ALREADY_CONFIRMED = "AC"),
-      (g.OPTIONAL_PARAMETERS = "OP"),
-      (g.ALLIANCE_HELP_LIST = "AHL"),
-      (g.MESSAGE_3 = "MT"),
-      (g.SOURCE_ID = "SID"),
-      (g.NPC_OWNER_ID = "NID"),
-      (g.CURRENCY_1_STORED = "SC1"),
-      (g.CURRENCY_2_STORED = "SC2"),
-      (g.WOOD_STORED_2 = "SW"),
-      (g.FREE_RENAMES = "FR"),
-      (g.IS_AUTO_WAR_ENABLED = "AW"),
-      (g.APPLICATION_AMOUNT = "AA"),
-      (g.REQUESTED_DELETE_TIME = "RT"),
-      (g.HAS_PACT_CAP_REACHED = "HP"),
-      (g.IS_LOOKING_FOR_MEMBERS = "IS"),
-      (g.BUFF_LEVELS = "BL"),
-      (g.BUFF_COOLDOWNS = "BC"),
-      (g.IS_INVENTORY_FULL = "IF"),
-      (g.ALLIANCE_LOGS = "AL"),
-      (g.BACKGROUND_TYPE = "BGT"),
-      (g.BACKGROUND_COLOR_1 = "BGC1"),
-      (g.BACKGROUND_COLOR_2 = "BGC2"),
-      (g.BACKGROUND_COLOR_3 = "BGC3"),
-      (g.SYMBOL_POSITION_TYPE = "SPT"),
-      (g.EMBLEM_SYMBOL_1_COLOR = "SC1"),
-      (g.EMBLEM_SYMBOL_2_COLOR = "SC2"),
-      (g.EMBLEM_SYMBOL_3_ID = "S3"),
-      (g.EMBLEM_SYMBOL_3_COLOR = "SC3"),
-      (g.MEMBER_COUNT = "M"),
-      (g.PACKAGE_ID_LIST = "PIDL"),
-      (g.IGNORED_PLAYERS = "IPS"),
-      (g.PLAYER_NAME_2 = "N"),
-      (g.OWNER_PLAYER_ID = "OID"),
-      (g.IS_DUMMY = "DUM"),
-      (g.SKIP_COST_PER_MINUTE = "CPM"),
-      (g.SKIP_LEVEL = "SL"),
-      (g.SINGLE_PLAYER = "SP"),
-      (g.ROTATION_INDEX = "RIDX"),
-      (g.ALLIANCE_RANKING_INFO = "A"),
-      (g.TOTAL_HOURS = "TH"),
-      (g.TARGET_PLAYER_ID = "PID"),
-      (g.HAS_WON = "HW"),
-      (g.AREA = "A"),
-      (g.HAS_FINISHED = "F"),
-      (g.ANNOUNCED_EVENT_ID = "AEID"),
-      (g.HAS_COLLECTED_REWARDS = "COL"),
-      (g.THEME = "T"),
-      (g.ATTACKABLE_CAMPS = "AC"),
-      (g.LAST_SKIPPABLE_SECOND = "SEC"),
-      (g.IS_ALREADY_COLLECTED = "AC"),
-      (g.POINT_EVENT_TYPE = "PET"),
-      (g.WINNING_CATEGORY = "WC"),
-      (g.SUB_EVENT_ID = "SEID"),
-      (g.REAL_PRICE = "RP"),
-      (g.IS_TIMELESS = "TML"),
-      (g.TIME_IN_SECONDS = "TS"),
-      (g.SCALE_FACTOR = "SC"),
-      (g.OCCUPIER_ID = "OCID"),
-      (g.MOVEMENT_TYPE = "T"),
-      (g.MEMBER_BUFF_LEVEL = "ML"),
-      (g.INVITER_ID = "INV"),
-      (g.CONNECTIONS = "CON"),
-      (g.IS_ONLINE = "ION"),
-      (g.IS_INVITER = "IIN"),
-      (g.IS_REFERRED = "IRF"),
-      (g.USING_ONLY_CURRENCY_2 = "OC2"),
-      (g.IS_FORCED_CANCELABLE = "FC"),
-      (g.IS_GROUPED_HIGHSCORE = "IGH"),
-      (g.CURRENCY_CODE = "CC"),
-      (g.VOUCHER_CODE = "VC"),
-      (g.PRICE_DATA = "PD"),
-      (g.LIFETIME_SPENT_C2 = "LTS"),
-      (g.C2_SPENT_90_DAYS = "SND"),
-      (g.USE_90_DAYS_SPENT = "UNDS"),
-      (g.BOUGHT_C2 = "BC2"),
-      (g.C2_SOURCE = "C2SRC"),
-      (g.SEND_ONE_PAY_POPUP = "PB"),
-      (g.IS_PAY_USER = "PU"),
-      (g.PAYMENT_DOPPLER_COUNT = "DC"),
-      (g.LAST_PAY_DATE = "LPD"),
-      (g.FIRST_PAY_DATE = "FPD"),
-      (g.KINGDOM_FAME_BOOST = "KFB"),
-      (g.LEVEL_RANGE = "LR"),
-      (g.NTH_TARGET = "N"),
-      (g.FACEBOOK_LOGIN_CLIENT_TRACKING = "FBD"),
-      (g.USER_SURVEY_SEEN_CLIENT_TRACKING = "USS"),
-      (g.MOBILE_ADVERTISING_ID = "ADID"),
-      (g.APPSFLYER_UID = "AFUID"),
-      (g.IOS_IDFV = "IDFV"),
-      (g.TEST_ID = "TID"),
-      (g.TEST_CASE_ID = "CID"),
-      (g.PACKAGE_INSTALLER_ID = "PAID"),
-      (g.PRE_INSTALL_ID = "PRID"),
-      (g.SLOT_TYPE = "ST"),
-      (g.RECRUITMENT_MODE = "RM"),
-      (g.RECRUITMENT_LIST_ID = "LID"),
-      (g.RECRUITMENT_LIST_ID_2 = "RLID"),
-      (g.HOSPITAL_SLOT_OVERVIEW = "SOH"),
-      (g.RECRUITMENT_SNAPSHOT = "RS"),
-      (g.CURRENT_FOOD_CONSUMPTION = "CFC"),
-      (g.CURRENT_RECRUITMENT_TIME = "CRT"),
-      (g.ADDITIONAL_FOOD_CONSUMPTION = "AFC"),
-      (g.ADDITIONAL_RECRUITMENT_TIME = "ART"),
-      (g.CURRENT_BOOST_STAGE = "CBS"),
-      (g.INITIAL_AMOUNT = "IA"),
-      (g.DOUBLING_COST_C2 = "DC"),
-      (g.PRODUCTIVITY = "P"),
-      (g.FOOD_PRODUCTION = "FP"),
-      (g.ERROR_ID = "EID"),
-      (g.COST_WOOD = "CW"),
-      (g.COST_STONE = "CS"),
-      (g.INITIAL_COMPLETION_TIME = "ICT"),
-      (g.RECEIVED_ALLIANCE_HELP = "RAH"),
-      (g.REMAINING_COMPLETION_TIME = "RCT"),
-      (g.TOTAL_UNIT_AMOUNT = "TUA"),
-      (g.PRODUCTION_SLOT = "PS"),
-      (g.QUEUE_SLOTS = "QS"),
-      (g.PACKAGE = "P"),
-      (g.SLOT_INFO = "SI"),
-      (g.REMAINING_UNLOCK_TIME = "RUT"),
-      (g.UNLOCKED_BY_VIP = "VIP"),
-      (g.SOURCE_PACKAGE_ID = "SPID"),
-      (g.TOTAL_COMPLETION_TIME = "TCT"),
-      (g.NEW_UNIT_AMOUNT = "NUA"),
-      (g.RECEIVED_UNIT_AMOUNT = "RUA"),
-      (g.DIALOG_NAME = "DN"),
-      (g.ACTION = "A"),
-      (g.STATE_LAYOUT = "SL"),
-      (g.ANNOUNCEMENT_AVAILABLE = "AA"),
-      (g.ANNOUNCEMENT_MESSAGES = "A"),
-      (g.ANNOUNCEMENT_ID = "ID"),
-      (g.ANNOUNCEMENT_IDS = "IDS"),
-      (g.ANNOUNCEMENT_LANGUAGE = "L"),
-      (g.ANNOUNCEMENT_FILTER = "F"),
-      (g.ANNOUNCEMENT_TITLE = "T"),
-      (g.ANNOUNCEMENT_MESSAGE = "M"),
-      (g.ANNOUNCEMENT_FILTER_PLAYER_LEVEL_MIN = "LMIN"),
-      (g.ANNOUNCEMENT_FILTER_PLAYER_LEVEL_MAX = "LMAX"),
-      (g.ANNOUNCEMENT_FILTER_PAY_USER = "PU"),
-      (g.ANNOUNCEMENT_FILTER_OS_TYPE = "OS"),
-      (g.ANNOUNCEMENT_FILTER_OS_TYPE_IOS = "ios"),
-      (g.ANNOUNCEMENT_FILTER_OS_TYPE_ANDROID = "android"),
-      (g.ANNOUNCEMENT_FILTER_STORE = "S"),
-      (g.ANNOUNCEMENT_FILTER_STORE_AMAZON = "amazon"),
-      (g.ANNOUNCEMENT_FILTER_STORE_APPLE = "apple"),
-      (g.ANNOUNCEMENT_FILTER_STORE_GOOGLE = "google"),
-      (g.ANNOUNCEMENT_FILTER_STORE_SAMSUNG = "samsung"),
-      (g.ANNOUNCEMENT_FILTER_OS_VERSION_MIN = "OSMIN"),
-      (g.ANNOUNCEMENT_FILTER_OS_VERSION_MAX = "OSMAX"),
-      (g.ACTIVE_RESEARCH_ID = "ARID"),
-      (g.ACTIVE_RESEARCH_REMAINING_TIME = "ARRT"),
-      (g.BOUGHT_RESEARCHES = "BR"),
-      (g.DEVICE_MODEL = "DM"),
-      (g.MOBILE_NETWORK_ID = "MNID"),
-      (g.PROMOTION_BANNER_ID = "PID"),
-      (g.CHANCE = "CH"),
-      (g.VILLAGE_ID = "VID"),
-      (g.XML_VILLAGE_ID = "XID"),
-      (g.VILLAGE_TYPE = "VT"),
-      (g.VILLAGE_LEVEL = "VL"),
-      (g.PRIVATE_RESOURCE_VILLAGES = "PV"),
-      (g.RESOURCE_VILLAGE_TOKEN = "RVT"),
-      (g.SKILL_ID = "ID"),
-      (g.SKILL_IDS = "IDS"),
-      (g.SKILL_IDS_2 = "SID"),
-      (g.LEGEND_SKILLS = "LS"),
-      (g.RESET_COUNT = "RC"),
-      (g.SCEAT_SKILL_IDS = "SIDS"),
-      (g.SCEAT_SKILL_ACTIVATIONS = "SSA"),
-      (g.SCEAT_SKILLS_TAB_ID = "TID"),
-      (g.SUBSCRIPTION_TYPE_ID = "STID"),
-      (g.ALLIANCE_SUBSCRIBERS_COUNT = "ASC"),
-      (g.SUBSCRIPTION_PACKAGES = "SP"),
-      (g.REMAINING_SECONDS_WITH_GRACE_PERIOD = "RSGP"),
-      (g.SUBSCRIPTION_LOYALTY_BOOST = "SLB"),
-      (g.ALLIANCE_RAGE = "AR"),
-      (g.ALLIANCE_CAMP = "AC"),
-      (g.ALLIANCE_CAMP_ID = "ACID"),
-      (g.ALLIANCE_CAMP_ENABLED = "ACE"),
-      (g.ALLIANCE_CAMP_VICTORY_COUNT = "ACVC"),
-      (g.PLAYER_RAGE_POINTS_TYPE = "PRPT"),
-      (g.PLAYER_CURRENT_RAGE_POINTS = "PCRP"),
-      (g.PLAYER_TOTAL_RAGE_POINTS = "PTRP"),
-      (g.REWARD_SET_ID = "RSID"),
-      (g.END_REWARD_VALUE = "ERV"),
-      (g.START_TIMESTAMP = "ST"),
-      (g.EXPIRED_EQUIPMENTS = "EE"),
-      (g.REGULAR_DECORATIONS = "RD"),
-      (g.CUSTOM_DECORATIONS = "CD"),
-      (g.UNIQUE_DECORATIONS = "UD"),
-      (g.STORAGE_ID = "SID"),
-      (g.FUSION_FORGE_ID = "FID"),
-      (g.FUSION_FORGE_IDS = "FIDS"),
-      (g.FUSION_FORGE_ENERGY = "FE"),
-      (g.FUSION_FORGE_LEVEL = "FL"),
-      (g.FUSION_FORGE_ENERGY_RECHARGE_INTERVAL_PROGRESS_IN_SECONDS = "FRS"),
-      (g.FUSION_FORGE_USED_MINUTE_SKIPS = "FUM"),
-      (g.FUSION_FORGE_USED_PREMIUM_SKIPS = "FUPS"),
-      (g.FUSION_FORGE_INFO = "FI"),
-      (g.FUSION_FORGE_SKIP_RECHARGE_USE_PREMIUM = "FSRP"),
-      (g.FUSION_FORGE_SKIP_RECHARGE_MINUTE_SKIP_ID = "FSRMID"),
-      (g.FUSION_FORGE_CATALYST_CONVERSION_DIRECTION = "FCCD"),
-      (g.FUSION_FORGE_CATALYST_ID = "FCID"),
-      (g.FUSION_FORGE_CATALYST_CONVERSION_AMOUNT = "FCCA"),
-      (g.FUSION_FORGE_FUSE_USE_PREMIUM = "FFFP"),
-      (g.FUSION_SOURCE_UNIQUE_DECORATION_ID = "FSUID"),
-      (g.FUSION_SOURCE_WOD_ID = "FSWID"),
-      (g.FUSION_TARGET_UNIQUE_DECORATION_ID = "FTUID"),
-      (g.FUSION_TARGET_WOD_ID = "FTWID"),
-      (g.FUSION_TARGET_OBJECT_ID = "FTOID"),
-      (g.FUSION_TARGET_SPACE_ID = "FTSID"),
-      (g.FUSION_TARGET_AREA_ID = "FTAID"),
-      (g.FUSION_XP = "FXP"),
-      (g.BONUS_FUSION_XP = "BFXP"),
-      (g.AUTO_SELL_EQUIPMENT_CONDITIONS = "ECS"),
-      (g.AUTO_SELL_GEM_CONDITIONS = "GCS"),
-      (g.POPOVER_ID = "ID"),
-      (g.POPOVER_DATA = "D"),
-      (g.PUSH_NOTIFICATION_CATEGORY_ACTIVE = "A"),
-      (g.PUSH_NOTIFICATION_DEVICE_TOKEN = "D"),
-      (g.PUSH_NOTIFICATION_CATEGORIES = "C"),
-      (g.PUSH_NOTIFICATION_DEVICE_PLATFORM = "PL"),
-      (g.SHOP_ITEM_ID = "IID"),
-      (g.SHOP_PROVIDER_ID = "PID"),
-      (g.SHOP_GAME_SESSION_ID = "GSID"),
-      (g.GLOBALSERVER_LOGIN_TOKEN = "TLT"),
-      (g.COUNTRY_CODE = "CC"),
-      (g.REGISTRATION_IP = "IP"),
-      (g.GLOBALSERVER_ZONE = "TSZ"),
-      (g.GLOBALSERVER_IP = "TSIP"),
-      (g.GLOBALSERVER_PORT = "TSP"),
-      (g.IS_TEMPSERVER = "ITS"),
-      (g.DEVICE_ID = "DID"),
-      (g.TEMPSERVER_TOKEN_PLATFORM_ID = "PPID"),
-      (g.NETWORK_ID = "NID"),
-      (g.DAILY_POINTS_MIN_MODIFIER = "DPMM"),
-      (g.DAILY_POINTS_MAX_MODIFIER = "DPXM"),
-      (g.PREBUILT_CASTLE_ID = "PBCI"),
-      (g.SETTING_ID = "TSID"),
-      (g.RUNTIME_IN_DAYS = "TSR"),
-      (g.TEMP_SERVER_BUILDING_MIGHT = "TSBM"),
-      (g.TEMP_SERVER_COLLECTOR_KEYS = "TCK"),
-      (g.IS_PRESET_SELECTED = "IPS"),
-      (g.DAILY_RANK = "DR"),
-      (g.DAILY_HIGHSCORE = "DHS"),
-      (g.TEMP_SERVER_CAMP_ID = "TSCI"),
-      (g.TEMP_SERVER = "TS"),
-      (g.PLAYER_DAILY_TASK_REWARD_ID = "DTR"),
-      (g.PLAYER_DAILY_TASK_REWARD_LEVEL = "DTRL"),
-      (g.PLAYER_DAILY_TASK_POINTS = "DTP"),
-      (g.IS_SUPPORT_LOGIN = "ISL"),
-      (g.IS_COLLECTOR_ATTACK = "ICA"),
-      (g.COLLECTOR_KEYS = "CK"),
-      (g.COLLECTOR_SECONDS_TO_DAILY_PAYOUT = "SDP"),
-      (g.COLLECTOR_EVENT_OPTION_ID = "EOID"),
-      (g.COLLECTOR_CURRENCY_AMOUNT = "CCA"),
-      (g.TRIGGER_EVENTS = "TE"),
-      (g.TRIGGER_ID = "TRID"),
-      (g.SEASON_RUNTIME = "KLRT"),
-      (g.SEASON_REMAINING_DAYS = "KLRD"),
-      (g.SEASON_MODE_ENABLED = "KL"),
-      (g.SEASON_DIVISION = "KLD"),
-      (g.SEASON_DIVISION_ID = "KLDID"),
-      (g.SEASON_DIVISION_SIZE = "KLDS"),
-      (g.SEASON_POINTS = "KLCP"),
-      (g.SEASON_MEDALS = "KLM"),
-      (g.SEASON_MEDALS_OVERVIEW = "KLMO"),
-      (g.SEASON_MEDAL_ID = "KLMID"),
-      (g.SEASON_RANK = "KLR"),
-      (g.SEASON_RANK_ID = "KLRID"),
-      (g.SEASON_MEDAL_POINTS = "KLMP"),
-      (g.SEASON_PASS_ENABLED = "KLP"),
-      (g.SEASON_PASS = "KLSP"),
-      (g.SEASON_SEEN_EVENT_START = "KLSE"),
-      (g.SEASON_SEEN_START = "KLS"),
-      (g.SEASON_ALLIANCE_RANKING_ENABLED = "KLARE"),
-      (g.SEASON_ALLIANCE_POINTS = "KLAP"),
-      (g.SEASON_ALLIANCE_MEDAL_ID = "KLAMID"),
-      (g.SEASON_ALLIANCE_RANK = "KLAR"),
-      (g.SEASON_ALLIANCE_MEDALS = "KLAM"),
-      (g.SEASON_LEAGUE_TYPE_ID = "KLLID"),
-      (g.SEASON_PROMOTION_PASSES = "KLPP"),
-      (g.SEASON_EVENT_PASS_ENABLED = "KLEPE"),
-      (g.SEASON_PASS_TYPE = "KLPT"),
-      (g.SEASON_ID = "KLID"),
-      (g.SEASON_PROMOTION_PASS_ENABLED = "KLPPE"),
-      (g.GLOBAL_EFFECTS = "GE"),
-      (g.SEEN_GLOBAL_EFFECTS = "SGE"),
-      (g.GLOBAL_EFFECT_BOOSTERS = "GEB"),
-      (g.GLOBAL_EFFECT_ID = "GEID"),
-      (g.BOOST_VALUE = "BV"),
-      (g.USE_PREMIUM_RELIC_ALLIANCE_FORGE = "UPRAF"),
-      (g.MAY_FORGE = "MF"),
-      (g.SOFT_CURRENCY_RELIC_ALLIANCE_FORGE_USES = "SRFU"),
-      (g.HARD_CURRENCY_RELIC_ALLIANCE_FORGE_USES = "HRFU"),
-      (g.DONATE_CURRENCY_ID = "CID"),
-      (g.DONATE_CURRENCY_AMOUNT = "A"),
-      (g.NEW_RELICS = "NR"),
-      (g.RELIC_ITEM_ID = "RIID"),
-      (g.IS_GEM = "IG"),
-      (g.EXPANDABLE_AREAS = "EA"),
-      (g.REWARD_OBJECT_TYPE = "ROT"),
-      (g.REWARD_OBJECT_VALUE = "ROV"),
-      (g.EXPIRE_TIME = "ET"),
-      (g.LOST_AND_FOUND_ID = "LFID"),
-      (g.CREATION_TIMESTAMP = "CT"),
-      (g.RELIC_GEM = "GEM"),
-      (g.RELIC_EQUIPMENT = "EQ"),
-      (g.LOST_AND_FOUND_ELAPSED_SECONDS = "LFES"),
-      (g.USE_PREMIUM = "P"),
-      (g.LOCKED_SLOTS = "LS"),
-      (g.TRAINING_PROGRAMS = "TP"),
-      (g.TRAINING_EFFECT = "TE"),
-      (g.ACTIVE_TRAINING = "AT"),
-      (g.TRAINING_PROLONG_COUNTER = "PC"),
-      (g.DAIMYO_INFO = "DY"),
-      (g.DAIMYO_ENABLED = "E"),
-      (g.DAIMYO_CASTLES = "DC"),
-      (g.DAIMYO_TOWNSHIPS = "DT"),
-      (g.DAIMYO_ALLIANCE_CONTRACTS = "C"),
-      (g.DAIMYO_CASTLE_CONTRACTS = "DCC"),
-      (g.DAIMYO_TOWNSHIP_CONTRACTS = "DTC"),
-      (g.DAIMYO_WAR_EFFORTS = "WES"),
-      (g.DAIMYO_TOTAL_WAR_EFFORT = "TWE"),
-      (g.DAIMYO_CASTLE_WAR_EFFORTS = "CWES"),
-      (g.DAIMYO_TOWNSHIP_WAR_EFFORTS = "TWES"),
-      (g.DAIMYO_COOLDOWN_COUNTER = "CDC"),
-      (g.SAMURAI_MEDAL_BOOSTER_KEYS = "SMK"),
-      (g.SHOGUN_POINTS = "SP"),
-      (g.SHOGUN_POINT_BOOSTER_KEYS = "SPK"),
-      (g.DAIMYO_AREA_RANK = "DAR"),
-      (g.DAIMYO_DIFFICULTY_CAMP_ID = "DDCID"),
-      (g.RELIC_ENCHANTER_ENABLED = "E"),
-      (g.RELIC_FRAGMENT_BOOST = "RFB"),
-      (g.WEB_SHOP_SESSION_ID = "sessionId"),
-      (g.WEB_SHOP_PACKAGE_ID = "packageId"),
-      (g.CASH_OFFER_ID = "cashOfferId"),
-      (g.API_TOKEN = "apiToken"),
-      (g.AUTH_PLATFORM = "platform"),
-      (g.APPLE_TOKEN = "appleToken"),
-      (g.APPLE_ID = "appleId"),
-      (g.APPLE_AUTH_CODE = "authCode"),
-      (g.ALLIANCE_LEADER_PLAYER_ID = "ALPI"),
-      (g.ALLIANCE_BATTLEGROUND_CAMP_ID = "BGCI"),
-      (g.GLOBAL_SERVER_TYPE = "GST"),
-      (g.MAX_ALLIANCE_SIZE = "MAS"),
-      (g.MAX_INFLUENCE_POINTS = "MIP"),
-      (g.ALLIANCE_REWARD_ID = "ARID"),
-      (g.PLAYER_REWARD_ID = "PRID"),
-      (g.PLAYER_STATISTIC_ID = "PSI"),
-      (g.PLAYER_STATISTICS = "PST"),
-      (g.ALLIANCE_MEMBERS_STATISTICS = "AME"),
-      (g.CAPITAL_AMOUNT = "CPA"),
-      (g.CAPITAL_LIMIT = "CPL"),
-      (g.CITY_STATES_AMOUNT = "CSA"),
-      (g.CITY_STATES_PLAYER_LIMIT = "CSPL"),
-      (g.CITY_STATES_ALLIANCE_LIMIT = "CSAL"),
-      (g.TOWER_AMOUNT = "TWM"),
-      (g.TOWER_PLAYER_LIMIT = "TPL"),
-      (g.TOWER_ALLIANCE_LIMIT = "TAL"),
-      (g.GLOBAL_SERVER_PLAYER_RANK = "PLR"),
-      (g.GLOBAL_SERVER_PLAYER_RANK_POINTS = "PLP"),
-      (g.GLOBAL_SERVER_ALLIANCE_RANK = "ALR"),
-      (g.GLOBAL_SERVER_ALLIANCE_RANK_POINTS = "ALP"),
-      (g.ALLIANCE_AREAS_INFO = "AAI"),
-      (g.SECONDS_TILL_NEXT_REVIVE = "STNR"),
-      (g.SECONDS_TILL_NEXT_RE_LINK = "STNL"),
-      (g.TOWERS = "T"),
-      (g.TOWER_EFFECTS = "TE"),
-      (g.TOWER_EFFECT_ACTIVE = "TEA"),
-      (g.TOWER_EFFECT_ID = "TEID"),
-      (g.EFFECT_LEVEL_BEFORE_INCREASE = "ELBI"),
-      (g.EFFECT_LEVEL_AFTER_INCREASE = "ELAI"),
-      (g.REMAINING_JOIN_TIME = "RJT"),
-      (g.ALLIANCE_BATTLE_GROUND = "ABG"),
-      (g.GLOBAL_SERVER_INFO = "GSI"),
-      (g.MAP_TYPE = "MTYP"),
-      (g.END_TIMESTAMP = "ET"),
-      (g.PLAYER_ID_FULL = "playerId"),
-      (g.PAYLOAD = "payload"),
-      (g.CXF_PUSH_TOPIC = "topic"),
-      (g.CXF_BROADCAST_TOPIC = "topic"),
-      (g.LUCKY_WHEEL_EVENT_TYPE = "LWET"),
-      (g.LUCKY_WHEEL_TICKETS = "LWT"),
-      (g.DISTRICT_OBJECT_ID = "DOID"),
-      (g.FORTUNE_TELLER_DRAW_COUNT = "FTDC"),
-      (g.FORTUNE_TELLER_REWARD_ID_CHANCES = "FTRC"),
-      (g.VISUAL_COMPONENT_METADATA = "VCM"),
-      (g.FILTER_ID = "FID"),
-      (g.IS_ACTIVATION = "ACT"),
-      (g.ACTIVE_FILTERS = "AFS"),
-      (g.EMBLEM_UNLOCKED_SYMBOL_IDS = "U"),
-      (g.EMBLEM_PAID_SYMBOL_IDS = "P"),
-      (g.DOWNTIME_STATUS = "DTS"),
-      (g.PARENT_OFFER_ID = "POID"),
-      (g.SILENT_RECONNECT_ENABLED = "SRC"),
-      (g.SILENT_RECONNECT_ISO_ENABLED = "SRI"),
-      (g.IGS_REDIRECT_TO_HC_ENABLED = "ISR"),
-      (g.HOSPITAL_RUBY_FILTER = "HRF"),
-      (g.PRIORITISE_PRODUCTION_OVER_TROOPS = "PPOT"),
-      (g.HAS_ALLIANCE_ENTERED = "AE"),
-      (g.INTERNAL_RANK = "IR"),
-      (g.HAS_PLAYER_ENTERED = "PE"),
-      (g.HAS_ALLIANCE = "HA"),
-      (g.ALLIANCE_REWARD_IDS = "ARIDS"),
-      (g.PLAYER_REWARD_IDS = "PRIDS"),
-      (g.FEAST_REDUCTION_MODIFIER = "FRM"),
-      (g.PING = "ping"),
-      (g.PARENT_PARTITION_KEY = "parentPartitionKey"),
-      (g.HUB_REWARD_ID = "hubRewardID"),
-      (g.PARENT_SORT_KEY = "parentSortKey"),
-      (g.PARENT_STILL_ACTIVE = "parentStillActive"),
-      (g.EXTRA_TIER_UNLOCKED_BY_PARENT = "extraTierUnlockedByParent"),
-      (g.EXTRA_TIER_UNLOCK_COST_C_2 = "extraTierUnlockCostC2"),
-      (g.EXTRA_TIER_UNLOCKED = "extraTierUnlocked"),
-      (g.UNLOCK_TIMESTAMP = "unlockTimestamp"),
-      (g.BASIC_TIER = "basicTier"),
-      (g.EXTRA_TIER = "extraTier"),
-      (g.COLLECTED = "collected"),
-      (g.REWARD_HUB_REWARD_IDS = "rewardIds"),
-      (g.VISUAL_COMPONENT = "visualComponent"),
-      (g.REWARD_HUB_EVENT_ID = "eventID"),
-      (g.REWARD_HUB_SUB_EVENT_ID = "subEventID"),
-      (g.PROMOTION_ID = "promotionID"),
-      (g.COUNTERS = "counters"),
-      (g.PRE_UPGRADE_POPUP = "preUpgradePopup"),
-      (g.TRACKING_COMPONENT = "trackingComponent"),
-      (g.ERROR = "ERROR"),
-      (g.CORRELATION_ID = "correlationId"),
-      (g.PARENT_SORT_KEY_PREFIX = "parentSortKeyPrefix"),
-      (g.CRAFTING_RECIPE_ID = "CRID"),
-      (g.CRAFTING_QUEUE_ID = "CQID"),
-      (g.CRAFTING_BUILDINGS_INFO = "CBI"),
-      (g.CRAFTING_EFFECTS = "CE"),
-      (g.CRAFTING_QUEUE_BOOST_EFFECTS = "CQBE"),
-      (g.CRAFTING_AREA_INFO = "CAI"),
-      (g.PLATFORM_ID = "PLFID"),
-      (g.STORE_ID = "SID"),
-      (g.EVENT_DIFFICULTY_ID = "EDID"),
-      (g.EVENT_AUTO_SCALING_ENABLED = "EASE"),
-      (g.HIGHEST_THRESHOLD_REWARD = "HTR"),
-      (g.HAS_RECEIVED_ALLIANCE_REAWRDS = "HRAR"),
-      (g.RENT_C2_UNLOCK = "C2U"),
-      (g.PLAYER_NAME_CHANGE_COUNTER = "PNCC"),
-      (g.PLAYER_NAME_CHANGE_COOLDOWN = "PNCD"),
-      (g.ENABLE_RUBY_CONFIRMATION = "ERC"),
-      (g.DELETION_DATE_TIMESTAMP = "D"),
-      (g.IS_GDPR_DELETED = "GDPR"),
-      (g.PENDING_MAIL_ADDRESS = "PMA"),
-      (g.RESEND_MAIL_ACTION_TYPE = "T"),
-      (g.PENDING_MAIL_CHANGE_STATUS = "PMCS"),
-      (g.WELCOME_BACK_REWARD_ID = "WBRID"),
-      (g.WELCOME_BACK_REWARD_DATE = "WBRD"),
-      (g.WELCOME_BACK_REWARD_MIN_INACIVE_DAYS = "WBRMID"),
-      (g.ID = "ID"),
-      (g.CURRENCY_ID = "CID"),
-      (g.LOOTBOX_PAYOUT_ID = "LID"),
-      (g.ALL_LOOTBOXES = "ALL"),
-      (g.TOMBOLA_KEY = "KEY"),
-      (g.TOMBOLA_REWARDS_LIST = "LTR"),
-      (g.TOMBOLA_REWARDS_RESPONSE_LIST = "LTRR"),
-      (g.KEY_BAR_STATUS = "KBS"),
-      (g.TOMBOLA_KEY_BAR_FILLING_AMOUNT = "TBF"),
-      (g.KEY_TOMBOLA_REWARDS = "KTR"),
-      (g.USED_KEY_ID = "UKI"),
-      (g.CHARACTER_ID = "CID"),
-      (g.OFFERINGS_ID = "OID"),
-      (g.IS_FREE = "IF"),
-      (g.CHARACTERS = "CHR"),
-      (g.CHARACTER = "CH"),
-      (g.FREE_OPENINGS_AVAILABLE = "FOA"),
-      (g.LAST_FREE_OPENING = "LFO"),
-      (g.RARITY = "R"),
-      (g.REWARD_RESPONSE = "RR"),
-      (g.ALIAS_POPUP_SELECTION = "APS"),
-      (g.IGNORE_REWARD_GRANTING_CHECK = "IGC"),
-      (g.GENERAL_ID = "GID"),
-      (g.STAR_TIER = "ST"),
-      (g.IS_NEW = "IN"),
-      (g.LEVELLED_UP = "LU"),
-      (g.GENERAL_SKILL_IDS = "SIDS"),
-      (g.ABILITY_ID = "AID"),
-      (g.GENERAL_ASSIGNED_SLOT_AND_ABILITY_IDS = "GASAIDS"),
-      (g.SLOT_AND_ABILITY_IDS = "SAIDS"),
-      (g.OLD_XP = "OXP"),
-      (g.ATTACKER_ABILITIES = "AA"),
-      (g.DEFENDER_ABILITIES = "DA"),
-      (g.ENABLE_SPLITRUN_HARDCURRENCY_SHOP = "ESHS"),
-      (g.UNITS_YARD_LIMIT = "UYL"),
-      (g.ALLIANCE_YARD_UNITS_LIMIT = "AUYL"),
-      (g.UNITS_WALL_LIMIT = "UWL"),
-      (g.UNITS_YARD = "UY"),
-      (g.ALLIANCE_YARD_UNITS = "AUY"),
-      (g.UNITS_WALL = "UW"),
-      (g.REMAINING_SUPPORT_UNITS = "RSU"),
-      (g.FACEBOOK_LOGIN_BUTTON_DISABLE = "FLBD"),
-      (g.IS_CROSSPLAY_SERVER = "ICS"),
-      (g.GAME_ID = "GID"),
-      (g.IS_CROSSPLAY_SERVER_EVENT = "ICSE"),
-      (g.AUTO_SKIP_COOLDOWN_TYPE = "ASCT"),
-      (g.AUTO_SKIP_C2 = "ASC"),
-      (g.AUTO_SKIP_MINUTESKIPS = "ASMS"),
-      (g.AUTO_SKIP_SECONDS = "ASS"),
-      (g.DISABLE_RUBY_SHOP = "DRS"),
-      (g.RECAPTCHA_TOKEN = "RCT"),
-      (g.SKIN = "S"),
-      (g.DONATION_SETTING_ID = "DSI"),
-      (g.DONATION_ITEM_VALUES = "DIV"),
-      (g.DONATION_ITEM_ID = "DII"),
-      (g.DONATION_ITEM_AMOUNT = "DIA"),
-      (g.DONATED_ITEMS = "DIS"),
-      (g.DONATION_ITEM_POINTS = "DIP"),
-      (g.DONATION_EVENT_END_REWARD_IDS = "DEER"),
-      (g.DONATION_EVENT_END_TYPE_POINTS = "DEETP"),
-      (g.EFFECT_SOURCE_EQUIPMENT = "EQ"),
-      (g.EFFECT_SOURCE_BUILDING = "BG"),
-      (g.EFFECT_SOURCE_CONSTRUCTION_ITEM = "CI"),
-      (g.EFFECT_SOURCE_OTHER = "OTH"),
-      (g.EFFECT_SOURCE_DECORATION = "DE"),
-      (g.EFFECT_SOURCE_ALLIANCE_BUFF = "AB"),
-      (g.EFFECT_SOURCE_CREST_SYMBOL = "CS"),
-      (g.EFFECT_SOURCE_GLOBAL_EFFECT = "GE"),
-      (g.EFFECT_SOURCE_PRIVATE_VILLAGE = "PV"),
-      (g.EFFECT_SOURCE_TITLE = "TL"),
-      (g.EFFECT_SOURCE_RESEARCH = "RH"),
-      (g.EFFECT_SOURCE_ALLIANCE_SUBSCRIPTION = "AS"),
-      (g.EFFECT_SOURCE_PLAYER_SUBSCRIPTION = "PS"),
-      (g.EFFECT_SOURCE_ALLIANCE_COAT = "AC"),
-      (g.EFFECT_SOURCE_GENERAL = "GNL"),
-      (g.EFFECT_SOURCE_TRAINING = "TG"),
-      (g.EFFECT_SOURCE_HIGH_LEVEL_HOL = "HLH"),
-      (g.EFFECT_SOURCE_TOOLS = "TLS"),
-      (g.EFFECT_SOURCE_SOLDIER = "SR"),
-      (g.EFFECT_SOURCE_RAID_BOSS_STAGE_DEFENDER = "RBSD"),
-      (g.EFFECT_SOURCE_RAID_BOSS_STAGE_ATTACKER = "RBSA"),
-      (g.EFFECT_SOURCE_RAID_BOSS_BATTLE_DEFENDER = "RBBD"),
-      (g.EFFECT_SOURCE_RAID_BOSS_BATTLE_ATTACKER = "RBBA"),
-      (g.EFFECT_SOURCE_RAID_BOSS_POST_BATTLE_DEFENDER = "RBPBD"),
-      (g.EFFECT_SOURCE_RAID_BOSS_POST_BATTLE_ATTACKER = "RBPBA"),
-      (g.EFFECT_SOURCE_RAID_BOSS_WALL_REGENERATION = "RBWR"),
-      (g.DATA = "DATA"),
-      (g.DISABLE_HELPSHIFT_CHAT = "DHSC"),
-      (g.LEADERBOARD_TYPE = "LT"),
-      (g.LEADERBOARD_MAX_RESULTS = "M"),
-      (g.LEADERBOARD_LIST = "L"),
-      (g.LEADERBOARD_NUM_SCORES = "T"),
-      (g.LEADERBOARD_SCORE_ID = "SI"),
-      (g.LEADERBOARD_RANK = "R"),
-      (g.LEADERBOARD_PLAYER_NAME = "P"),
-      (g.LEADERBOARD_ALLIANCE_NAME = "A"),
-      (g.LEADERBOARD_SERVER_INSTANCE = "I"),
-      (g.LEADERBOARD_SCORE = "S"),
-      (g.LEADERBOARD_REWARD_SET_ID = "LRSI"),
-      (g.LEADERBOARD_SCORE_METADATA = "SM"),
-      (g.DIVISION_ID = "DI"),
-      (g.SUBDIVISION_ID = "SDI"),
-      (g.DIVISION_ROUND_ID = "DRI"),
-      (g.DIVISION_CHANGE_MESSAGE_EVENT_ID = "E"),
-      (g.DIVISION_CHANGE_MESSAGE_FOR_ALLIANCE = "A"),
-      (g.DIVISION_CHANGE_MESSAGE_START_DIVISION = "SD"),
-      (g.DIVISION_CHANGE_MESSAGE_END_DIVISION = "ED"),
-      (g.DIVISION_CHANGE_MESSAGE_RANK = "R"),
-      (g.DIVISION_CHANGE_MESSAGE_POINTS = "P"),
-      (g.DIVISION_CHANGE_MESSAGE_POINTS_TO_THRESHOLD = "PT"),
-      (g.ADVISOR_ATTACK_CURRENCY_ID = "ACI"),
-      (g.ADVISOR_ATTACK_IS_FREE = "AAF"),
-      (g.ADVISOR_ATTACK_IS_ACTIVATED = "AAA"),
-      (g.ADVISOR_ATTACK_TYPE = "AAT"),
-      (g.ADVISOR_ATTACK_COUNT = "AAC"),
-      (g.ADVISOR_ATTACK_NUMBER = "AAN"),
-      (g.ADVISOR_ATTACK_IS_LAST = "AAL"),
-      (g.ADVISOR_ATTACK_SEND_MESSAGE = "AASM"),
-      (g.ADVISOR_ATTACK_OVERVIEW_COMMANDERS = "C"),
-      (g.ADVISOR_ATTACK_OVERVIEW_GAINED = "G"),
-      (g.ADVISOR_ATTACK_OVERVIEW_GAINED_POINTS = "GP"),
-      (g.ADVISOR_ATTACK_OVERVIEW_LOST = "L"),
-      (g.ADVISOR_ATTACK_OVERVIEW_LOST_UNITS = "LU"),
-      (g.ADVISOR_ATTACK_OVERVIEW_LOST_TOOLS = "LT"),
-      (g.ADVISOR_ATTACK_OVERVIEW_WINS = "W"),
-      (g.ADVISOR_ATTACK_OVERVIEW_DEFEATS = "D"),
-      (g.ADVISOR_ATTACK_OVERVIEW_ABORTS = "P"),
-      (g.ATTACK_COUNT = "AC"),
-      (g.ATTACK_COUNT_THRESHOLD = "ACTH"),
-      (g.ATTACK_COUNT_GROWTH_RATE = "ACGR"),
-      (g.ALLIANCE_COAT_LAYOUTS = "ACLS"),
-      (g.ALLIANCE_COAT_LAYOUT_ID = "ACLI"),
-      (g.ALLIANCE_COAT_COLORS = "ACCS"),
-      (g.ALLIANCE_COAT_ISACTIVE = "ACIA"),
-      (g.ALLIANCE_COAT_LAYOUT_END_TIMESTAMP = "ACLET"),
-      (g.ALLIANCE_COAT_CURRENT_ACTIVE = "ACCA"),
-      (g.ALLIANCE_COAT_FALL_BACK = "ACFB"),
-      (g.ALLIANCE_COAT_LAYOUT = "ACL"),
-      (g.ALLIANCE_QUEST_STATUS = "AQS"),
-      (g.ALLIANCE_PARTICIPANT_COUNT = "APC"),
-      (g.ALLIANCE_QUEST_PLAYER_CONTRIBUTIONS = "AQPC"),
-      (g.RAID_BOSS_IDS = "RBIDS"),
-      (g.PORTAL_BOSS_ID = "BID"),
-      (g.PORTAL_BOSS_CREATION_TIME = "CT"),
-      (g.LEVEL_ID = "BLID"),
-      (g.WALL_INFO = "WI"),
-      (g.PERCENT_LEFT = "PL"),
-      (g.REGEN_TIME = "RT"),
-      (g.HEALTH = "HP"),
-      (g.BOSS_STAGE = "BS"),
-      (g.BOSS_STATUS = "BSE"),
-      (g.BOSS_LEVEL_PLAYER_POINTS = "BLPP"),
-      (g.REVIVE_UNIT_PERCENTAGE = "RUP"),
-      (g.ENABLE_NEWS_HUB = "ENH"),
-      (t.CommKeys = g),
-      (g.__class = "CommKeys"));
-    var E = (function () {
+    ((E.MAY_CHANGE_EMBLEM = "MCE"),
+      (E.GEMS = "GEM"),
+      (E.RELIC_GEMS = "RGEM"),
+      (E.DISTANCE = "D"),
+      (E.DURATION = "D"),
+      (E.PRICE = "P"),
+      (E.X_COORDINATE = "X"),
+      (E.Y_COORDINATE = "Y"),
+      (E.ROTATION = "R"),
+      (E.X_POSITION = "XPOS"),
+      (E.Y_POSITION = "YPOS"),
+      (E.LEGEND_LEVEL = "LL"),
+      (E.CURRENT_TOP_X = "TOPX"),
+      (E.IS_RUINED = "R"),
+      (E.SHOULD_USE_VIP_FLAG = "VF"),
+      (E.AMOUNT_OF_TIME = "AOT"),
+      (E.REMAINING_DURATION = "RD"),
+      (E.REMAINING_SECONDS = "RS"),
+      (E.REMAINING_TIME = "RT"),
+      (E.REMAINING_CANCEL_ABANDONMENT_TIME = "CAT"),
+      (E.REMAINING_OPEN_GATE_DURATION = "OGT"),
+      (E.REMAINING_OPEN_GATE_DURATION_2 = "RPT"),
+      (E.REMAINING_TIME_UNTIL_EXECUTION = "RD"),
+      (E.REMAINING_NO_ABANDON_TIME = "TA"),
+      (E.REMAINING_NOOB_PROTECTION = "RNP"),
+      (E.SECONDS_UNTIL_RESET = "STR"),
+      (E.LABORATORY_REMAINING_SECONDS = "LRS"),
+      (E.ISLAND_KINGDOM_REMAINING_SECONDS = "KRS"),
+      (E.MONUMENT_REMAINING_SECONDS = "MRS"),
+      (E.APPROXIMATE_REMAINING_TIME = "ART"),
+      (E.PASSED_SECONDS = "PS"),
+      (E.REMAINING_PEACE_TIME = "RPT"),
+      (E.REMAINING_RELOCATION_TIME = "RRD"),
+      (E.AREA_INFO = "AI"),
+      (E.AREA_INFO_2 = "A"),
+      (E.EMPTY_POSITION = "EP"),
+      (E.VISIBLE_AREA_INFO = "VAI"),
+      (E.CHEST_ID = "CID"),
+      (E.TIME_TO_UNLOCK = "TTU"),
+      (E.LORDS = "L"),
+      (E.BARONS = "B"),
+      (E.COMMANDERS = "C"),
+      (E.GENERALS = "G"),
+      (E.LORD_ID = "ID"),
+      (E.LORD_ID_2 = "LID"),
+      (E.DUMMY_LORD_ID = "DLID"),
+      (E.LORD_NAME = "N"),
+      (E.LORD_EQUIPMENT = "EQ"),
+      (E.LORD_LOOK = "VIS"),
+      (E.WEARER_ID = "WID"),
+      (E.LOCKED_CASTLE_ID = "LICID"),
+      (E.ALIEN_INVASION_EFFECTS = "AIE"),
+      (E.WINS = "W"),
+      (E.DEFEATS = "D"),
+      (E.WINNING_SPREE = "SPR"),
+      (E.DO_EXTRACT = "EX"),
+      (E.TAUNT_ATTACK_EFFECTS = "TAE"),
+      (E.OBJECT = "O"),
+      (E.OBJECT_ID = "OID"),
+      (E.BUILDING = "B"),
+      (E.NEW_BUILDING = "N"),
+      (E.NEW_OBJECT = "NO"),
+      (E.MOVED_OBJECT = "MO"),
+      (E.CUSTOM_BUILDINGS = "CB"),
+      (E.CUSTOM_OBJECT_ID = "COID"),
+      (E.OBJECT_ID_LIST = "OIDL"),
+      (E.SLOT_OVERVIEW = "SO"),
+      (E.BUILDING_COST_REDUCTION = "B"),
+      (E.BURNING = "B"),
+      (E.UPGRADE_DETAILS = "UD"),
+      (E.FAST_COMPLETE = "F"),
+      (E.MINES = "M"),
+      (E.BUILDING_EXISTS = "BE"),
+      (E.BUILDING_LIST = "BL"),
+      (E.SIMULTANEOUS_SLOT_COUNT = "SSC"),
+      (E.MERCENARY_MISSIONS = "M"),
+      (E.NEXT_MERCENARY_MISSION_REFRESH = "NM"),
+      (E.MERCENARY_MISSION_ID = "ID"),
+      (E.MISSION_STATE = "S"),
+      (E.QUALITY = "Q"),
+      (E.REWARD = "R"),
+      (E.REWARD_ID = "RID"),
+      (E.REWARD_IDS = "RIDS"),
+      (E.REWARD_ROTATION_INDEX = "RIDX"),
+      (E.REWARD_STEP = "RS"),
+      (E.COLLECTED_REWARDS = "CR"),
+      (E.SELECTED_REWARDS = "RS"),
+      (E.WINNER_REWARD_ID = "WR"),
+      (E.TOP_X_REWARD_ID = "TR"),
+      (E.BOOBY_PRIZE_REWARD_ID = "BR"),
+      (E.MINIMUM_FAME_FOR_BOOBY_PRIZE = "MFB"),
+      (E.CLASS_REWARDS = "CR"),
+      (E.REWARD_GRANT_TYPE = "GT"),
+      (E.REWARD_LEVEL_FOR_POINTS = "RL"),
+      (E.PEACE_MODE_STATUS = "PMS"),
+      (E.PEACE_MODE_TIME = "PMT"),
+      (E.RESOURCE_CARTS = "RC"),
+      (E.RESOURCE_TYPE = "RT"),
+      (E.BOOKMARKS = "BM"),
+      (E.BOOKMARK_LIST = "BL"),
+      (E.BOOKMARK_DISPLAY_NAME = "N"),
+      (E.BOOKMARK_DISPLAY_NAME_2 = "DN"),
+      (E.IS_FRIEND = "TY"),
+      (E.IS_FRIEND_2 = "IF"),
+      (E.BOOKMARK_TYPE = "TY"),
+      (E.TIME_LEFT = "TI"),
+      (E.SEND_IMPORTANT_MESSAGES = "IM"),
+      (E.BOOKMARK_ID = "BID"),
+      (E.BOOKMARK_CREATOR = "C"),
+      (E.ALLIANCE_BOOKMARK_LIST = "ABL"),
+      (E.CURRENCY_1 = "C1"),
+      (E.CURRENCY_2 = "C2"),
+      (E.WOOD = "W"),
+      (E.STONE = "S"),
+      (E.FOOD = "F"),
+      (E.COAL = "C"),
+      (E.OIL = "O"),
+      (E.GLASS = "G"),
+      (E.AQUAMARINE = "A"),
+      (E.IRON = "I"),
+      (E.HONEY = "HONEY"),
+      (E.MEAD = "MEAD"),
+      (E.BEEF = "BEEF"),
+      (E.KHAN_TABLETS = "KT"),
+      (E.SKULL_RELICS = "TS"),
+      (E.PEARL_RELICS = "PR"),
+      (E.SILVER_RUNES = "USR"),
+      (E.GOLD_RUNES = "UGR"),
+      (E.GREEN_SKULL_RELICS = "GTS"),
+      (E.WISHING_WELL_COINS = "WWC"),
+      (E.SAMURAI_TOKENS = "ST"),
+      (E.PEGASUS_TRAVEL_TICKET = "PTT"),
+      (E.CAPITAL_COINS = "CC"),
+      (E.CAPITAL_TOKENS = "CT"),
+      (E.RUBY_COST_FOR_WOOD = "WC2"),
+      (E.RUBY_COST_FOR_STONE = "SC2"),
+      (E.RUBY_COST_FOR_FOOD = "FC2"),
+      (E.RUBY_COST_FOR_C1 = "C1C2"),
+      (E.RESOURCE_AMOUNT_FOOD = "RAF"),
+      (E.RESOURCE_AMOUNT_WOOD = "RAW"),
+      (E.RESOURCE_AMOUNT_STONE = "RAS"),
+      (E.RESOURCE_AMOUNT_BEEF = "RAB"),
+      (E.APOLOGIZE_TOKEN = "APT"),
+      (E.KHAN_MEDALS = "KM"),
+      (E.MISSING_CURRENCY_IDS = "MCIDS"),
+      (E.BOOSTER_KEYS = "BKS"),
+      (E.HIDDEN_FOOD = "HF"),
+      (E.HIDDEN_MEAD = "HM"),
+      (E.HIDDEN_BEEF = "HB"),
+      (E.WISHING_WELL_OPERATION = "WOP"),
+      (E.WISHING_WELL_LEVEL = "L"),
+      (E.ALL_DIALOGS = "A"),
+      (E.DIALOG_ID = "K"),
+      (E.PREMIUM_ACCOUNT_TYPE = "PT"),
+      (E.PREMIUM_TIME_REMAINING = "PA"),
+      (E.FESTIVAL_TYPE = "T"),
+      (E.UPDATE_ALL = "UA"),
+      (E.TREASURE_MAP_ID = "MID"),
+      (E.TREASURE_MAP = "TM"),
+      (E.TREASURE_MAP_NODE = "N"),
+      (E.TREASURE_MAP_NODE_ID = "NID"),
+      (E.PROGRESS_TYPE = "PT"),
+      (E.ACHIEVED = "A"),
+      (E.COOLDOWN_MAP = "CM"),
+      (E.PRIVATE_OFFER_ID = "OID"),
+      (E.PRIVATE_OFFER_STATE = "OS"),
+      (E.PRIVATE_OFFER_ITERATION = "IT"),
+      (E.CAMP_POSITIONS = "CP"),
+      (E.CAMP_REROLL_ENABLED = "CRE"),
+      (E.REROLL_CURRENCY_KEY = "RCK"),
+      (E.REROLL_CURRENCY_KEYS = "RCKS"),
+      (E.REROLL_COUNT_SC = "RCSC"),
+      (E.REROLL_COUNT_HC = "RCHC"),
+      (E.TOPIC_ID = "TID"),
+      (E.TOPIC = "N"),
+      (E.TOPIC_NAME = "TN"),
+      (E.TOPIC_CREATOR_NAME = "CN"),
+      (E.UNREAD_TOPIC_COUNT = "UTC"),
+      (E.REPLY_TEXT = "RT"),
+      (E.REPLY_ID = "RID"),
+      (E.REPLY = "R"),
+      (E.RANKING_GROUPS = "RG"),
+      (E.TIME_SINCE_LAST_ALLIANCE_HELP = "TSL"),
+      (E.ALLIANCE_HELP_ID = "LID"),
+      (E.ALLIANCE_HELP_TYPE = "T"),
+      (E.ALLIANCE_HELP_TARGET_ID = "ID"),
+      (E.ALLIANCE_HELP_RECRUITMENT_PACKAGE_ID = "RID"),
+      (E.APPLICATION_LIST = "AL"),
+      (E.APPLICATION_AGE = "AA"),
+      (E.ALLIANCE = "A"),
+      (E.ALLIANCES = "AL"),
+      (E.ALLIANCE_NAME = "N"),
+      (E.ALLIANCE_NEW_NAME = "AN"),
+      (E.ALLIANCE_NAME_2 = "AN"),
+      (E.ALLIANCE_ID = "AID"),
+      (E.ALLIANCE_DESCRIPTION = "D"),
+      (E.IS_SEARCHING_ALLIANCE = "IS"),
+      (E.ALLIANCE_INVITATION_DECISION = "D"),
+      (E.ALLIANCE_TRIBUTE = "T"),
+      (E.NEW_DIPLOMACY_RANK = "NDR"),
+      (E.OLD_DIPLOMACY_RANK = "ODR"),
+      (E.THIS_ALLIANCE = "AS"),
+      (E.OTHER_ALLIANCE = "AO"),
+      (E.DIPLOMACY_REQUEST_STATUS = "S"),
+      (E.DESCRIPTION_TYPE = "T"),
+      (E.AUTO_WAR_ENABLED = "AW"),
+      (E.ACCEPTED_APPLICATION = "A"),
+      (E.ONLINE_MEMBERS = "OM"),
+      (E.ALLIANCE_LANDMARKS = "ALA"),
+      (E.APPLICATION_TEXT = "AT"),
+      (E.IS_AUTO_JOIN_ENABLED = "IA"),
+      (E.AUTO_JOIN_SET = "AS"),
+      (E.RANK = "R"),
+      (E.BUFF_TYPE = "BT"),
+      (E.ALLIANCE_NOTIFICATION_TYPE = "A"),
+      (E.ALLIANCE_NOTIFICATION_VALUES = "AV"),
+      (E.TRIBUTE = "T"),
+      (E.ALLIANCE_DIPLOMACY = "DOA"),
+      (E.HAS_REACHED_PEACE_CAP = "SP"),
+      (E.DIPLOMACY_TRIBUTE_OFFER = "PO"),
+      (E.TIME_TO_ACCEPT_TRIBUTE = "TS"),
+      (E.ANNOUNCEMENT = "A"),
+      (E.IS_ISLAND_KING_ALLIANCE = "KA"),
+      (E.ALLIANCE_DIPLOMACY_REQUEST_STATUS = "AS"),
+      (E.ALLIANCE_DIPLOMACY_REQUEST_ACCEPTED = "AC"),
+      (E.ALLIANCE_MEMBER_INFO = "AMI"),
+      (E.ALLIANCE_DIPLOMACY_LIST = "ADL"),
+      (E.ALLIANCE_PRIME_TIME_BONUS_PERCENTAGE = "APP"),
+      (E.ALLIANCE_CAPITAL = "ACA"),
+      (E.ALLIANCE_METROPOLIS = "ATC"),
+      (E.ALLIANCE_KINGS_TOWER = "AKT"),
+      (E.ALLIANCE_MONUMENT = "AMO"),
+      (E.ALLIANCE_LABORATORY = "ALA"),
+      (E.ALLIANCE_CURRENT_FAME_2 = "CF"),
+      (E.ALLIANCE_BUFF_LIST = "ABL"),
+      (E.ALLIANCE_AQUA_POINTS_RANK = "AR"),
+      (E.ALLIANCE_LANGUAGE = "ALL"),
+      (E.ALLIANCE_SCORE = "ACS"),
+      (E.IS_ALLIANCE_OPEN = "IAO"),
+      (E.MESSAGE = "M"),
+      (E.MESSAGES = "MSG"),
+      (E.MESSAGE_ID = "MID"),
+      (E.MESSAGE_IDS = "MIDS"),
+      (E.MESSAGE_ERROR_IDS = "ERR"),
+      (E.MESSAGE_DELETED_IDS = "DEL"),
+      (E.CHAT_MESSAGE = "CM"),
+      (E.IS_CHAT_HIDDEN = "H"),
+      (E.TEXT = "TXT"),
+      (E.MESSAGE_TEXT = "MTXT"),
+      (E.SUBJECT = "SJ"),
+      (E.MESSAGE_HEADER = "MH"),
+      (E.BADWORDS = "BW"),
+      (E.SOURCE_NAME = "SN"),
+      (E.TARGET_NAME = "TN"),
+      (E.RECEIVER_NAME = "RN"),
+      (E.RECEIVER_PLAYER_IDS = "PID"),
+      (E.EMAIL = "EM"),
+      (E.MESSAGE_TYPE = "MT"),
+      (E.MESSAGE_METADATA = "MS"),
+      (E.BUG_MESSAGE = "BM"),
+      (E.IGNORED_PLAYER_ID = "IPID"),
+      (E.MESSAGE_TYPES_COUNT = "MTC"),
+      (E.SPACE_ID = "SID"),
+      (E.AREA_ID = "AID"),
+      (E.KINGDOM_ID = "KID"),
+      (E.KINGDOM_ID_2 = "K"),
+      (E.AREA_TYPE = "AT"),
+      (E.GIFTS = "G"),
+      (E.GIFT_ID = "ID"),
+      (E.GIFT_TYPE = "T"),
+      (E.GIFTS_AVAILABLE_TODAY = "RA"),
+      (E.PLAYER_ID = "PID"),
+      (E.PLAYER_LIST = "PL"),
+      (E.PLAYER_IDS = "PIDS"),
+      (E.WOOD_STORED = "WS"),
+      (E.STONE_STORED = "SS"),
+      (E.CAPITAL_TOKENS_STORED = "CTS"),
+      (E.WOOD_PRODUCTION = "WP"),
+      (E.STONE_PRODUCTION = "SP"),
+      (E.STONE_CAPACITY = "MRS"),
+      (E.WOOD_CAPACITY = "MRW"),
+      (E.FOOD_CAPACITY = "MRF"),
+      (E.COAL_CAPACITY = "MRC"),
+      (E.OIL_CAPACITY = "MRO"),
+      (E.GLASS_CAPACITY = "MRG"),
+      (E.IRON_CAPACITY = "MRI"),
+      (E.AQUAMARINE_CAPACITY = "MRA"),
+      (E.STORAGE = "S"),
+      (E.ALLIANCE_STORAGE = "STO"),
+      (E.DONATION_RESOURCE_VALUES = "RV"),
+      (E.WOOD_PRODUCTION_MODIFIER = "WM"),
+      (E.STONE_PRODUCTION_MODIFIER = "SM"),
+      (E.FOOD_PRODUCTION_BOOST = "FM"),
+      (E.COAL_PRODUCTION_MODIFIER = "CM"),
+      (E.OIL_PRODUCTION_MODIFIER = "OM"),
+      (E.GLASS_PRODUCTION_MODIFIER = "GM"),
+      (E.IRON_PRODUCTION_MODIFIER = "IM"),
+      (E.RESOURCE_METROPOLIS_FOOD_PRODUCTION_BONUS = "MP"),
+      (E.WOOD_DELTA = "DW"),
+      (E.STONE_DELTA = "DS"),
+      (E.FOOD_DELTA = "DF"),
+      (E.COAL_DELTA = "DC"),
+      (E.OIL_DELTA = "DO"),
+      (E.GLASS_DELTA = "DG"),
+      (E.IRON_DELTA = "DI"),
+      (E.FOOD_CONSUMPTION_DELTA = "DFC"),
+      (E.SICKNESS = "S"),
+      (E.MAIN_CASTLES_RESOURCES = "MCR"),
+      (E.CURRENT_AREA_RESOURCES = "CAR"),
+      (E.MINIMUM_STOCK = "MS"),
+      (E.PRODUCTION_ADJUSTMENT = "PA"),
+      (E.SERVER_PRODUCTION_FREEZE = "SRPF"),
+      (E.CURRENCY_TYPE = "CT"),
+      (E.PACKAGE_ID = "PID"),
+      (E.PACKAGE_ID_2 = "PKID"),
+      (E.PACKAGE_LIST = "PL"),
+      (E.PACKAGE_PRICE = "PKPC"),
+      (E.PROPOSED_RUBIES = "PC2"),
+      (E.AMOUNT = "AMT"),
+      (E.AMOUNT_2 = "A"),
+      (E.COUNT = "C"),
+      (E.PRIME_OFFER_ID = "PO"),
+      (E.BUY_TYPE = "BT"),
+      (E.BUY_TYPE_ID = "TID"),
+      (E.BUY_AGAIN = "BA"),
+      (E.PAY_WITH_RUBIES = "PWR"),
+      (E.DISCOUNT = "DIS"),
+      (E.DECORATION_ID = "DID"),
+      (E.UNSTORED_DECO_ID = "I"),
+      (E.UNIQUE_DECORATION_ID = "UID"),
+      (E.VILLAGE_COUNT = "VC"),
+      (E.POPUP_ID = "POP"),
+      (E.POPUP_VALUE = "VAL"),
+      (E.BOOSTER_ID = "BID"),
+      (E.BOOSTER_ID_2 = "ID"),
+      (E.BOOSTER_PERCENT_BOOST = "PB"),
+      (E.BOOSTER_LEVEL = "L"),
+      (E.FOOD_BOOST = "FB"),
+      (E.VIP_BOOST = "VB"),
+      (E.IS_BOOSTED = "BT"),
+      (E.GLORY_BOOSTER_PERCENTAGE = "GBP"),
+      (E.MOVEMENTS = "M"),
+      (E.MOVEMENT = "M"),
+      (E.TO_PLAYER_ID = "TID"),
+      (E.MARKET_MOVEMENT = "MM"),
+      (E.CARRIAGES = "C"),
+      (E.GOODS = "G"),
+      (E.TARGET_AREA = "TA"),
+      (E.SOURCE_AREA = "SA"),
+      (E.DISTANCE_X = "DX"),
+      (E.DISTANCE_Y = "DY"),
+      (E.X_DESTINATION = "DX"),
+      (E.Y_DESTINATION = "DY"),
+      (E.UNIT_TRANSFER = "UT"),
+      (E.RESOURCE_TRANSFER = "RT"),
+      (E.ATTACK_MOVEMENT = "A"),
+      (E.ATTACK_TYPE = "ATT"),
+      (E.TARGET_X_COORDINATE = "TX"),
+      (E.TARGET_Y_COORDINATE = "TY"),
+      (E.SOURCE_X_COORDINATE = "SX"),
+      (E.SOURCE_Y_COORDINATE = "SY"),
+      (E.SOURCE_KINGDOM_ID = "SKID"),
+      (E.TARGET_KINGDOM_ID = "TKID"),
+      (E.ARMY_ATTACK_MOVEMENT = "AAM"),
+      (E.TRANSFER_TYPE = "TT"),
+      (E.SCOPE = "S"),
+      (E.TOTAL_CARRIAGES = "TC"),
+      (E.AVAILABLE_CARRIAGES = "AC"),
+      (E.MOVEMENT_ID = "MID"),
+      (E.TARGET_KINGDOM_ID_2 = "TK"),
+      (E.TREASURE_HUNT_MOVEMENT = "TM"),
+      (E.FINAL_ARMY = "FA"),
+      (E.GUESSED_SIZE = "GS"),
+      (E.GESAMMTE_ARMY = "GA"),
+      (E.SLOWNDOWN_DURATION_IN_SECONDS = "SD"),
+      (E.TOTAL_TIME = "TT"),
+      (E.PASSED_TIME = "PT"),
+      (E.START_PLAYER_ID = "SID"),
+      (E.ATTACK_SUPPORT_TOOLS = "AST"),
+      (E.HOME_AWORKSHOP_LEVEL = "HAWL"),
+      (E.UNIT_MOVEMENT = "UM"),
+      (E.PROGRESS_WAITING_DURATION = "PWD"),
+      (E.TOTAL_WAITING_DURATION = "TWD"),
+      (E.ARMY = "A"),
+      (E.INVENTORY = "I"),
+      (E.ALLIANCE_SUPPORT_INVENTORY = "AI"),
+      (E.UNITS = "U"),
+      (E.TOOLS = "T"),
+      (E.LEFT = "L"),
+      (E.MIDDLE = "M"),
+      (E.RIGHT = "R"),
+      (E.REINFORCEMENT_WAVE = "RW"),
+      (E.PRECOMBAT_WAVE = "PW"),
+      (E.POSTCOMBAT_WAVE = "EW"),
+      (E.UNITS_TRAVELING = "UT"),
+      (E.STATUS = "S"),
+      (E.STATUS_2 = "ST"),
+      (E.MINIMUM_SOLDIER_COUNT = "MS"),
+      (E.MAXIMUM_UNITS = "MU"),
+      (E.UNIT_AMOUNT = "U"),
+      (E.MORALE = "M"),
+      (E.APPEND_UNITS = "AU"),
+      (E.RUNNING_ACHIEVEMENTS = "RA"),
+      (E.FINISHED_ACHIEVEMENTS = "FA"),
+      (E.ACHIEVEMENT_POINTS = "AVP"),
+      (E.ACHIEVEMENT_ID = "AID"),
+      (E.PROGRESS = "P"),
+      (E.QUEST_ID = "QID"),
+      (E.QUEST_IDS = "QIDS"),
+      (E.UNREAD = "U"),
+      (E.QUEST_STATE = "S"),
+      (E.QUEST_LIST = "QL"),
+      (E.ANNOUNCED_QUESTS = "ANN"),
+      (E.RUNNING_QUESTS = "R"),
+      (E.DONE_QUESTS = "D"),
+      (E.RUNNING_DAILY_QUESTS = "RDQ"),
+      (E.FINISHED_DAILY_QUESTS = "FDQ"),
+      (E.PLAYER_QUEST_LEVEL = "PQL"),
+      (E.CAMPAIGN_QUESTS = "CQS"),
+      (E.QUEST_CAMPAIGN_STATUS = "QCS"),
+      (E.CAMPAIGN_QUEST_ID = "CQID"),
+      (E.QUEST_CONDITION = "QC"),
+      (E.QUEST_TARGET_ID = "QTID"),
+      (E.SIDE = "S"),
+      (E.UNIT_DISTRIBUTION_PERCENTAGE = "UP"),
+      (E.UNIT_COMPOSITION = "UC"),
+      (E.SLOTS = "S"),
+      (E.LEFT_SLOT = "LS"),
+      (E.MIDDLE_SLOT = "MS"),
+      (E.RIGHT_SLOT = "RS"),
+      (E.UNIT_SLOTS = "SU"),
+      (E.UNIT_SLOTS_2 = "US"),
+      (E.TOOL_SLOTS = "ST"),
+      (E.DEFENSE_VALUE = "D"),
+      (E.SPY_AGE = "AS"),
+      (E.DEFENDER_PLAYER_ID = "DP"),
+      (E.DEFENDER_LEVEL = "DL"),
+      (E.KEEP_LEVEL = "KL"),
+      (E.WALL_LEVEL = "WL"),
+      (E.GATE_LEVEL = "GL"),
+      (E.TOWER_LEVEL = "TL"),
+      (E.MOAT_LEVEL = "ML"),
+      (E.SPECIAL_CAMP_ID = "SPC"),
+      (E.MINIMUM_ATTACK_UNITS_TO_CONSUME_TOOLS = "MAUCT"),
+      (E.SUPPORT_TOOL_SLOTS = "STS"),
+      (E.SOURCE_ZONE_ID = "SZID"),
+      (E.TARGET_ZONE_ID = "TZID"),
+      (E.BOUNTYHUNTER_REWARD_C1 = "BC1"),
+      (E.BOUNTYHUNTER_REWARD_C2 = "BC2"),
+      (E.BOUNTYHUNTER_REWARD_IRON = "I"),
+      (E.DUNGEON_PROTECTION_TIME = "DPT"),
+      (E.DUNGEON = "D"),
+      (E.DEFENCE_UNITS = "DU"),
+      (E.COLOSSUS_POINTS = "P"),
+      (E.ISLAND_RANK = "OR"),
+      (E.WINNER_ALLIANCE_ID = "WAID"),
+      (E.WINNER_ALLIANCE_NAME = "WAN"),
+      (E.WINNER_ALLIANCE_MEMBER_COUNT = "WAM"),
+      (E.WINNER_ALLIANCE_LEVEL = "WAL"),
+      (E.WINNER_ALLIANCE_AQUA_POINTS = "WAP"),
+      (E.ISLAND_KING_PLAYER_ID = "KID"),
+      (E.ISLAND_KING_PLAYER_NAME = "KN"),
+      (E.OWNER_ALLIANCE_MEMBER_COUNT = "OAM"),
+      (E.OWNER_ALLIANCE_NAME = "OAN"),
+      (E.OWNER_ALLIANCE_LEVEL = "OAL"),
+      (E.OWNER_ALLIANCE_ID = "OAI"),
+      (E.FACTION_OWNER_INFO = "FN"),
+      (E.FACTION_POINTS_BLUE = "BFP"),
+      (E.FACTION_POINTS_RED = "RFP"),
+      (E.PLAYER_COUNT_RED = "RP"),
+      (E.PLAYER_COUNT_BLUE = "BP"),
+      (E.FACTION_ID = "FID"),
+      (E.AUXILIARY_CAPACITY = "AUS"),
+      (E.PLAYER_PERCENTAGE_IN_FACTION_RED = "RFPPA"),
+      (E.FACTION_BLUE = "FB"),
+      (E.FACTION_RED = "FR"),
+      (E.CURRENT_FACTION_POINTS = "CFP"),
+      (E.HIGHEST_FACTION_POINTS = "HFP"),
+      (E.RED_FACTION_LAST_MAN_STANDING_ACTIVE = "RFLMS"),
+      (E.BLUE_FACTION_LAST_MAN_STANDING_ACTIVE = "BFLMS"),
+      (E.BLUE_FACTION_CAPITAL_REACHED = "BCR"),
+      (E.RED_FACTION_CAPITAL_REACHED = "RCR"),
+      (E.MAIN_CAMP_ID = "MC"),
+      (E.IS_SPECTATOR = "SPC"),
+      (E.FACTION_AREA_CAPACITY = "FAC"),
+      (E.MAP_SEED = "MS"),
+      (E.BATTLE_LOG_ID = "LID"),
+      (E.ATTACKER_LORD_INFO = "AL"),
+      (E.DEFENDER_BARON_INFO = "DB"),
+      (E.ATTACKER_GEM_TRIGGERED = "AGT"),
+      (E.DEFENDER_GEM_TRIGGERED = "DGT"),
+      (E.ATTACKER_LEGEND_SKILLS = "ALS"),
+      (E.DEFENDER_LEGEND_SKILLS = "DLS"),
+      (E.DEFENDER_WON = "DW"),
+      (E.DEFENDER_USED_SUPPORT_TOOLS = "DUST"),
+      (E.HONOR = "H"),
+      (E.DEFENDER_SURVIVAL_RATE = "SR"),
+      (E.PLAYER_BATTLE_INFO = "PBI"),
+      (E.PLAYER_INFO = "PI"),
+      (E.FOUND_EQUIPMENT = "EQF"),
+      (E.FOUND_GEM_ID = "GF"),
+      (E.FOUND_MINUTE_SKIP_ID = "MSF"),
+      (E.ATTACKER_HOSPITAL_CASTLE_ID = "AHC"),
+      (E.ATTACKER_HAD_HOSPITAL = "AHH"),
+      (E.ATTACKER_HOSPITAL_WAS_FULL = "AHF"),
+      (E.DEFENDER_HOSPITAL_CASTLE_ID = "DHC"),
+      (E.DEFENDER_HAD_HOSPITAL = "DHH"),
+      (E.DEFENDER_HOSPITAL_WAS_FULL = "DHF"),
+      (E.WOUNDED_SUPPORTER_UNITS = "WSU"),
+      (E.ATTACKER_USED_ONLY_AUXILIARIES = "AUA"),
+      (E.DEFENDER_USED_ONLY_AUXILIARIES = "DUA"),
+      (E.ATTACKER_ALLIANCE_SUBSCRIBERS = "AAS"),
+      (E.DEFENDER_ALLIANCE_SUBSCRIBERS = "DAS"),
+      (E.ATTACKER_HAD_PLAYER_SUBSCRIPTION = "AHP"),
+      (E.DEFENDER_HAD_PLAYER_SUBSCRIPTION = "DHP"),
+      (E.RAGE_POINTS = "RP"),
+      (E.ADDITIONAL_EFFECTS = "AE"),
+      (E.SPY = "S"),
+      (E.SPY_COUNT = "SC"),
+      (E.GUARD_COUNT = "GC"),
+      (E.GUARD_COUNT_2 = "GRD"),
+      (E.SPYING_PLAYER_ID = "SID"),
+      (E.SPY_OWNER = "SO"),
+      (E.SPY_RISK = "SR"),
+      (E.SPY_ACCOUNT = "SA"),
+      (E.SPY_TYPE = "ST"),
+      (E.SPY_EFFECT = "SE"),
+      (E.RISK = "R"),
+      (E.PLAGUE_MONK_MOVEMENT = "P"),
+      (E.CASTLE = "C"),
+      (E.CASTLES = "C"),
+      (E.CASTLE_ID = "CID"),
+      (E.CASTLE_NAME = "N"),
+      (E.CASTLE_NAME_1 = "CN"),
+      (E.POPULATION = "P"),
+      (E.NEUTRAL_DECO_POINTS = "NDP"),
+      (E.DECO_POINTS = "DP"),
+      (E.RIOT = "R"),
+      (E.SLUM_LEVEL = "SL"),
+      (E.SOLDIER_PRODUCTION_SPEED = "RS1"),
+      (E.OFFENSIVE_TOOL_PRODUCTION_SPEED = "RS2"),
+      (E.DEFENSIVE_TOOL_PRODUCTION_SPEED = "RS3"),
+      (E.HOSPITAL_PRODUCTION_SPEED = "RSH"),
+      (E.BUILD_SPEED = "BDB"),
+      (E.BUILDING_INFO = "BI"),
+      (E.BUILDING_LEVEL = "BL"),
+      (E.STATE = "S"),
+      (E.OPEN_GATE_COUNTER = "OGC"),
+      (E.TAX = "TX"),
+      (E.EXPECTED_MONEY = "EM"),
+      (E.IS_BRIBED = "IB"),
+      (E.POPULATION_1 = "PO"),
+      (E.COLLECTED_TAXES = "CT"),
+      (E.TAX_TYPE = "TT"),
+      (E.SKIN_ID = "EID"),
+      (E.UNLOCKED_STUFF = "UL"),
+      (E.IS_UNLOCKED = "U"),
+      (E.PAID_WOOD = "PW"),
+      (E.PAID_FOOD = "PF"),
+      (E.PAID_STONE = "PS"),
+      (E.PAID_C1 = "PC1"),
+      (E.PAID_C2 = "PC2"),
+      (E.TOP_X_RANK = "TX"),
+      (E.CURRENT_SCORE = "OP"),
+      (E.CURRENT_SCORE_2 = "OEP"),
+      (E.LEAGUE_TYPE = "LID"),
+      (E.CURRENT_FAME = "CF"),
+      (E.HIGHEST_FAME = "HF"),
+      (E.VILLAGE_POSITIONS = "VP"),
+      (E.AREA_POSITIONS = "AP"),
+      (E.UNITS_2 = "UT"),
+      (E.CASTLE_X_COORDINATE = "CX"),
+      (E.CASTLE_Y_COORDINATE = "CY"),
+      (E.GATE_DEFENSE = "GD"),
+      (E.MELEE_DEFENSE_STRENGTH = "MDS"),
+      (E.RANGE_DEFENSE_STRENGTH = "RDS"),
+      (E.PLACED_RANGE_UNITS = "PR"),
+      (E.PLACED_MELEE_UNITS = "PM"),
+      (E.HOME_DWORKSHOP_LEVEL = "HDWL"),
+      (E.POPUP_LIST = "P"),
+      (E.PLAYER_NAME = "PN"),
+      (E.REGISTRATION_EMAIL = "MAIL"),
+      (E.PASSWORD = "PW"),
+      (E.LOGIN_TOKEN = "LT"),
+      (E.STAY_LOGGED_IN = "PL"),
+      (E.LANGUAGE = "LANG"),
+      (E.REFERRER = "REF"),
+      (E.KOREA_REQUEST_ID = "koreaRequestId"),
+      (E.KOREA_REQUEST_ID_SHORT = "KID"),
+      (E.INVITE_CODE = "IC"),
+      (E.LOGIN_NEW_PASSWORD = "P"),
+      (E.LOGIN_NEW_PASSWORD_BCRYPT = "PB"),
+      (E.LOGIN_NEW_EMAIL = "M"),
+      (E.NEWSLETTER_SUBSCRIPTION = "N"),
+      (E.REGISTRATION_DATE = "RD"),
+      (E.FREE_CASTLE_RENAME = "FCR"),
+      (E.IS_PLAYER_NAME_TEMPORARY = "PNT"),
+      (E.IS_EMAIL_TEMPORARY = "MLT"),
+      (E.IS_PASSWORD_TEMPORARY = "PWT"),
+      (E.NAME_OR_EMAIL = "NOM"),
+      (E.ACCOUNT_ID = "AID"),
+      (E.LOGIN_TYPE_ID = "ID"),
+      (E.GOODGAME_CAMPAIGN_ID = "GCI"),
+      (E.EMAIL_2 = "E"),
+      (E.HAS_CONFIRMED_EMAIL = "V"),
+      (E.HAS_CONFIRMED_TERMS_AND_CONDITIONS = "CTAC"),
+      (E.HAS_NEWSLETTER_SUBSCRIPTION = "SFN"),
+      (E.API_BEARER_TOKEN = "ABT"),
+      (E.EXPIRES_IN_SECONDS = "ES"),
+      (E.CAN_GET_NEWSLETTER_REWARD = "CGNR"),
+      (E.API_BEARER_TOKEN_V2 = "ABTV2"),
+      (E.ZONE_NETWORK_ID = "ZNID"),
+      (E.HAS_PASSWORD = "hasPassword"),
+      (E.CONSTRUCTION_ITEM = "CI"),
+      (E.CONSTRUCTION_ITEM_ID = "CID"),
+      (E.CONSTRUCTION_ITEM_LIST = "CIL"),
+      (E.MODE = "M"),
+      (E.CONSTRUCTION_ITEM_SELECTED_UPGRADE_CURRENCY = "SUC"),
+      (E.NEXT_EXPIRING_CI_REMAINING_SECONDS = "NCRS"),
+      (E.LAST_EXPIRED_CI_TIMESTAMP = "LECT"),
+      (E.BOOSTED_CONSTRUCTION_ITEM_ID = "BCID"),
+      (E.TITLE_ID = "TI"),
+      (E.TITLE_ID_2 = "TID"),
+      (E.NEW_TITLE_INDEX = "NHT"),
+      (E.PREFIX_TITLE = "PRE"),
+      (E.SUFFIX_TITLE = "SUF"),
+      (E.PREFIX_TITLE_2 = "PFX"),
+      (E.SUFFIX_TITLE_2 = "SFX"),
+      (E.TITLE_COOLDOWN = "TCD"),
+      (E.TITLE_INFO = "TI"),
+      (E.AQUA_POINTS = "AP"),
+      (E.ALLIANCE_AQUA_POINTS = "A"),
+      (E.AQUA_POINTS_HIGHSCORE = "APH"),
+      (E.LEGEND_SKILL_POINTS = "SP"),
+      (E.PLAYER_AQUA_POINTS = "P"),
+      (E.DELTA_PLAYER_AQUA_POINTS = "DP"),
+      (E.CURRENT_MIGHT_POINTS = "MP"),
+      (E.HIGHEST_MIGHT_POINTS = "HMP"),
+      (E.VIP_POINTS = "VP"),
+      (E.COLLECTED_POINTS = "CP"),
+      (E.HIGHEST_MIGHT_POINTS_2 = "HAMP"),
+      (E.POINT_THRESHOLD = "PT"),
+      (E.SURVEY_ID = "SID"),
+      (E.IS_CANCELED = "C"),
+      (E.ANSWERS = "A"),
+      (E.ANSWERS_IDS = "AS"),
+      (E.QUESTION_ID = "ID"),
+      (E.FREE_TEXT = "T"),
+      (E.SURVEY_TYPE_ID = "ST"),
+      (E.QUESTIONS = "QS"),
+      (E.QUESTION_TYPE = "QT"),
+      (E.ANSWERS_COUNT = "AC"),
+      (E.FULL_NAME = "FUN"),
+      (E.FIRST_NAME = "FIN"),
+      (E.LAST_NAME = "LAN"),
+      (E.PROFILE_LINK = "PLK"),
+      (E.GENDER_NAME = "GEN"),
+      (E.LOCALE_CODE = "LOC"),
+      (E.IS_ACCOUNT_VERIFIED = "IAV"),
+      (E.FACEBOOK_AGE_RANGE = "AGR"),
+      (E.UTC_OFFSET = "UTC"),
+      (E.BIRTHDAY = "BID"),
+      (E.FACEBOOK_BUSINESS_TOKEN = "FBT"),
+      (E.FACEBOOK_INVITER_INFO = "FI"),
+      (E.FACEBOOK_ID = "FB"),
+      (E.FACEBOOK_ID_1 = "ID"),
+      (E.FACEBOOK_IDS = "FIDS"),
+      (E.FACEBOOK_INVITEES_LIST = "FL"),
+      (E.FACEBOOK_APP_ID = "FAID"),
+      (E.FACEBOOK_USER_ID = "FID"),
+      (E.FACEBOOK_TOKEN = "FTK"),
+      (E.INSTANCE_ID = "IID"),
+      (E.ZONE_ID = "ZID"),
+      (E.IS_CONNECTED_TO_FACEBOOK = "CTF"),
+      (E.SET_FACEBOOK_CONNECTION = "SFC"),
+      (E.FACEBOOK_SENDER_ID = "SID"),
+      (E.FACEBOOK_RECEIVER_ID = "RXID"),
+      (E.FACEBOOK_ID_WAS_SET_BEFORE = "SB"),
+      (E.FACEBOOK_IDS_MAPPING = "FM"),
+      (E.SHOPPING_CART = "SC"),
+      (E.TYPE_IDS = "TID"),
+      (E.PAYED_C2 = "P"),
+      (E.LIMIT = "LIM"),
+      (E.LEVEL = "L"),
+      (E.COST_C2 = "C2"),
+      (E.SHOPPING_CART_A = "SCA"),
+      (E.SHOPPING_CART_B = "SCB"),
+      (E.SHOPPING_CART_C = "SCC"),
+      (E.MATERIAL_BAG_ID = "BID"),
+      (E.CRAFTING_MATERIAL = "CM"),
+      (E.MATERIAL_ID = "MID"),
+      (E.ITEM_RECIPES = "IR"),
+      (E.RECIPE_ID = "RID"),
+      (E.SLOT_NAME = "SN"),
+      (E.LINK = "L"),
+      (E.WEBSITE_ID = "WID"),
+      (E.OWNER_INFO = "OI"),
+      (E.OWNER_INFO_2 = "O"),
+      (E.INGREDIENTS = "I"),
+      (E.SEARCH_VALUE = "SV"),
+      (E.WOD_ID = "WID"),
+      (E.WOD_IDS = "WIDS"),
+      (E.WOD_ID_2 = "W"),
+      (E.WOD_ID_3 = "WOD"),
+      (E.RANDOM_NAMES = "RN"),
+      (E.CHOSEN_OPTION = "CO"),
+      (E.FREE_UNIT_CAPACITY = "FUC"),
+      (E.SHUTTING_DOWN = "SD"),
+      (E.EQUIPMENT = "E"),
+      (E.REMAINING_COOLDOWN = "CD"),
+      (E.DAY_OF_WEEK = "DOW"),
+      (E.EVENT_ID = "EID"),
+      (E.JUDGEMENT_ID = "JID"),
+      (E.FREE_SKIP = "FS"),
+      (E.FOOD_CONSUMPTION_REDUCTION = "FCR"),
+      (E.TIME_UNTIL_NEXT_COLLECTION = "NC"),
+      (E.REMAINING_COLLECTIONS = "RC"),
+      (E.EXTRA_GOODS = "EG"),
+      (E.XP = "XP"),
+      (E.OLD_SLOT = "OS"),
+      (E.NEW_SLOT = "NS"),
+      (E.SLOT_ID = "S"),
+      (E.SLOT_ID_2 = "SID"),
+      (E.SKIN_ID_2 = "SID"),
+      (E.SKIN_ID_3 = "SKN"),
+      (E.LEAGUE_ID = "ALID"),
+      (E.UPCOMING_EVENTS = "UE"),
+      (E.SUB_TYPE = "ST"),
+      (E.FOUND_RANK = "FR"),
+      (E.WOOD_AND_STONE_PRODUCTION_REDUCTION = "WSR"),
+      (E.UNIT_ID = "U"),
+      (E.TAKE_FROM_STRONGHOLD = "S"),
+      (E.AREAS = "A"),
+      (E.UNLOCKED_HORSES = "UH"),
+      (E.LOCKED_UNITS = "L"),
+      (E.SAFE_HOUSE_INVENTORY = "SHI"),
+      (E.HOSPITAL_INVENTORY = "HI"),
+      (E.TRAVELLING_UNITS = "TU"),
+      (E.RESEARCH_ID = "RID"),
+      (E.SOURCE_AREA_ID = "SCID"),
+      (E.SOURCE_AREA_ID_2 = "SID"),
+      (E.TARGET_AREA_ID = "TCID"),
+      (E.OWNER_ID = "OID"),
+      (E.HORSE_WOD_ID = "HBW"),
+      (E.BOUGHT_PREMIUM_COMMANDER = "BPC"),
+      (E.VISIBLE_FOR_ALLIANCE = "AV"),
+      (E.LOOT_PRIORITY = "LP"),
+      (E.KING_TOWER_BONUS = "KTB"),
+      (E.EMBLEM = "E"),
+      (E.MORALE_BONUS = "MB"),
+      (E.WAIT_TIME_INDEX = "WT"),
+      (E.WAIT_TIME_HOURS = "WT"),
+      (E.CAMP_ID = "CID"),
+      (E.EFFECT = "E"),
+      (E.AVAILABLE_SPY_COUNT = "AS"),
+      (E.AVAILABLE_PLAGUE_MONK_COUNT = "APM"),
+      (E.TRAVELLING_PLAGUE_MONK_COUNT = "TPM"),
+      (E.AGE_SPY = "AS"),
+      (E.OBJECT_THINGY = "O"),
+      (E.VILLAGES = "VI"),
+      (E.HAS_CONTOR = "C"),
+      (E.RESOURCES_TRANSPORTED = "RT"),
+      (E.SLUM_PAID_WOOD = "SPW"),
+      (E.SLUM_PAID_STONE = "SPS"),
+      (E.SLUM_PAID_FOOD = "SPF"),
+      (E.SLUM_PAID_C1 = "SPC1"),
+      (E.DIRECTION = "D"),
+      (E.RELOCATION_COUNT = "RLC"),
+      (E.REMAINING_RELOCATION_COOLDOWN = "RMC"),
+      (E.JUST_MOVED = "JM"),
+      (E.ORIGIN_X_COORDINATE = "OX"),
+      (E.ORIGIN_Y_COORDINATE = "OY"),
+      (E.X_POSITION_2 = "PX"),
+      (E.Y_POSITION_2 = "PY"),
+      (E.CHOSEN_DURATION_INDEX = "CD"),
+      (E.NEW_NAME = "N"),
+      (E.HAS_TO_PAY = "P"),
+      (E.DISABLE_JUMP = "DJ"),
+      (E.INCLUDE_MIDDLE_LOG = "IM"),
+      (E.IGNORE = "IGN"),
+      (E.OWNER_CASTLE_ID = "OCID"),
+      (E.TARGET_CASTLE_ID = "TCID"),
+      (E.RESOURCES = "R"),
+      (E.ISLAND_RANDOM_SEED = "I"),
+      (E.ALLIANCE_BOOKMARK_INFO = "ABI"),
+      (E.CREATED_AVATAR_EMBLEM = "CAE"),
+      (E.EMBLEM_SYMBOL_1_ID = "S1"),
+      (E.EMBLEM_SYMBOL_2_ID = "S2"),
+      (E.NEW_PASSWORD = "NPW"),
+      (E.NEW_BCRYPT_PASSWORD = "NBPW"),
+      (E.OLD_PASSWORD = "OPW"),
+      (E.INDEX = "I"),
+      (E.SPECIAL_PARAMETER = "SP"),
+      (E.REWARDED_TROOPS_WOD_ID = "ID"),
+      (E.PORTAL_LOGIN_NAME = "PLN"),
+      (E.DAY = "D"),
+      (E.NAME_OR_MAIL = "NOM"),
+      (E.DISTRIBUTOR_ID = "ID"),
+      (E.SHOW_VIP_FLAG = "SVF"),
+      (E.CONFIRM_C2_THRESHOLD = "CC2T"));
+    ((E.USE_BIG_MESSAGE_BOX = "BIG"),
+      (E.MESSAGE_2 = "MSG"),
+      (E.TIMESTAMP = "T"),
+      (E.NEXT_RETENTION_REWARD = "NRR"),
+      (E.CAN_COLLECT = "CC"),
+      (E.MEMBERS = "M"),
+      (E.RESOURCE_TYPE_2 = "T"),
+      (E.GEM_ID = "GID"),
+      (E.EQUIPMENT_ID = "EID"),
+      (E.HERO_ID = "HID"),
+      (E.SUCCESS = "S"),
+      (E.USED_GEM_IDS = "UG"),
+      (E.MADE_GEM_ID = "MID"),
+      (E.DO_EQUIP = "E"),
+      (E.REMAINING_EQUIPMENT_INVENTORY_SPACE = "E"),
+      (E.TOTAL_EQUIPMENT_INVENTORY_SPACE = "TE"),
+      (E.REMAINING_CONSTRUCTION_ITEM_INVENTORY_SPACE = "C"),
+      (E.REMAINING_GEM_INVENTORY_SPACE = "G"),
+      (E.TOTAL_GEM_INVENTORY_SPACE = "TG"),
+      (E.RECEIVED_REWARDS = "RR"),
+      (E.MISSION_ID = "MID"),
+      (E.MINUTE_SKIP_TYPE = "MST"),
+      (E.MINUTE_SKIPS = "MS"),
+      (E.ISSUER_ID = "IID"),
+      (E.EVENT_COMMAND = "CMD"),
+      (E.SKIP_WITH_C2 = "SC"),
+      (E.FOOD_STORED = "FS"),
+      (E.REMAINING_NOOB_PROTECTION_TIME_IN_SECONDS = "NS"),
+      (E.TIME_SINCE_LAST_ACTIVE = "LA"),
+      (E.WAS_RESETTED = "WR"),
+      (E.INCLUDE_CASTLE_DEFENSE = "CD"),
+      (E.TOTAL_CARRIAGES_2 = "MC"),
+      (E.HAS_BARRACKS = "B"),
+      (E.HAS_WORKSHOP = "WS"),
+      (E.HAS_DEFENSE_WORKSHOP = "DW"),
+      (E.HAS_HOSPITAL = "H"),
+      (E.ARMY_COLLECTION = "AC"),
+      (E.DEFENSE_DECORATION = "D"),
+      (E.HONOR_RANK = "RP"),
+      (E.BONUS_SPY_AMOUNT = "BS"),
+      (E.MAXIMUM_SPY_AMOUNT = "MS"),
+      (E.HAS_EVER_CHANGED_NAME = "ECN"),
+      (E.ADMIN_SECURITY_LEVEL = "CL"),
+      (E.USER_ID = "UID"),
+      (E.HAS_PREMIUM_FLAG = "PF"),
+      (E.CURRENT_PLAYER_LEVEL = "LVL"),
+      (E.NEW_PLAYER_LEVEL = "NL"),
+      (E.XP_FOR_CURRENT_LEVEL = "XPFCL"),
+      (E.XP_FOR_NEXT_LEVEL = "XPTNL"),
+      (E.LAST_WEEKS_RANK = "LWR"),
+      (E.CURRENT_HONOR_RANK = "CWR"),
+      (E.LIST_TYPE = "LT"),
+      (E.LAST_ROW = "LR"),
+      (E.HIGHSCORE_LIST = "L"),
+      (E.ALLIANCE_RANK = "R"),
+      (E.ALLIANCE_CURRENT_FAME = "ACF"),
+      (E.IS_SEARCHING_ALLIANCE_2 = "SA"),
+      (E.USED_PREMIUM_GENERALS = "UPG"),
+      (E.VIP_REMAINING_SECONDS = "VRS"),
+      (E.VIP_REACHED_LEVEL = "VRL"),
+      (E.OFFER_ID = "OID"),
+      (E.OFFER_DESCRIPTION_INDEX = "ODI"),
+      (E.OFFER_ACCEPTED = "C"),
+      (E.WAS_INSTANT_COMPLETED = "IC"),
+      (E.GAINED_EQUIPMENT = "GEQ"),
+      (E.DAILY_ACTIVITY_TYPE = "DA"),
+      (E.ARTIFACT_PIECES_FOUND = "PF"),
+      (E.WOOD_PACKAGES = "WP"),
+      (E.FOOD_PACKAGES = "FP"),
+      (E.STONE_PACKAGES = "SP"),
+      (E.DONATED_COINS = "DC"),
+      (E.DONATED_STONE = "DS"),
+      (E.DONATED_WOOD = "DW"),
+      (E.IS_SMALL_LIST = "S"),
+      (E.CURRENT_RANK = "OR"),
+      (E.HIGHSCORE = "HS"),
+      (E.AREA_TYPE_2 = "T"),
+      (E.MINIMUM_LEVEL = "LMIN"),
+      (E.MAXIMUM_LEVEL = "LMAX"),
+      (E.IS_PLAYER_ACTIVE = "PA"),
+      (E.CAMP_TYPE_ID = "ID"),
+      (E.DO_COLLECT_REWARDS = "CR"),
+      (E.RECEIVER_PLAYER_ID = "RID"),
+      (E.REWARD_COUNT = "RC"),
+      (E.REWARDS = "RW"),
+      (E.WON_RUBIES = "WR"),
+      (E.FOOD_COST = "F"),
+      (E.FOOD_PRODUCED = "FP"),
+      (E.WOOD_PRODUCED = "WP"),
+      (E.STONE_PRODUCED = "SP"),
+      (E.COAL_STORED = "CS"),
+      (E.COAL_PRODUCED = "CP"),
+      (E.OIL_STORED = "OS"),
+      (E.OIL_PRODUCED = "OP"),
+      (E.GLASS_STORED = "GS"),
+      (E.GLASS_PRODUCED = "GP"),
+      (E.IRON_STORED = "IS"),
+      (E.IRON_PRODUCED = "IP"),
+      (E.EVENTS = "E"),
+      (E.AREA_1_X_COORDINATE = "AX1"),
+      (E.AREA_1_Y_COORDINATE = "AY1"),
+      (E.AREA_2_X_COORDINATE = "AX2"),
+      (E.AREA_2_Y_COORDINATE = "AY2"),
+      (E.AREA_ID_2 = "ID"),
+      (E.AREA_NAME = "AN"),
+      (E.TOPIC_COUNT = "TC"),
+      (E.TOPICS = "T"),
+      (E.ALLIANCE_RANK_2 = "AR"),
+      (E.TOPIC_NAME_2 = "N"),
+      (E.TOPIC_CREATION_TIMESTAMP = "CT"),
+      (E.TOPIC_CREATOR_RANK = "CR"),
+      (E.REPLY_COUNT = "RC"),
+      (E.LAST_REPLY_CREATOR_NAME = "LRN"),
+      (E.LAST_REPLY_CREATION_TIMESTAMP = "LRT"),
+      (E.TOPIC_IS_READ = "R"),
+      (E.REPLIES = "R"),
+      (E.HELP_TYPE_ID = "TID"),
+      (E.MESSAGE_AGE = "MA"),
+      (E.HAS_ALREADY_CONFIRMED = "AC"),
+      (E.OPTIONAL_PARAMETERS = "OP"),
+      (E.ALLIANCE_HELP_LIST = "AHL"),
+      (E.MESSAGE_3 = "MT"),
+      (E.SOURCE_ID = "SID"),
+      (E.NPC_OWNER_ID = "NID"),
+      (E.CURRENCY_1_STORED = "SC1"),
+      (E.CURRENCY_2_STORED = "SC2"),
+      (E.WOOD_STORED_2 = "SW"),
+      (E.FREE_RENAMES = "FR"),
+      (E.IS_AUTO_WAR_ENABLED = "AW"),
+      (E.APPLICATION_AMOUNT = "AA"),
+      (E.REQUESTED_DELETE_TIME = "RT"),
+      (E.HAS_PACT_CAP_REACHED = "HP"),
+      (E.IS_LOOKING_FOR_MEMBERS = "IS"),
+      (E.BUFF_LEVELS = "BL"),
+      (E.BUFF_COOLDOWNS = "BC"),
+      (E.IS_INVENTORY_FULL = "IF"),
+      (E.ALLIANCE_LOGS = "AL"),
+      (E.BACKGROUND_TYPE = "BGT"),
+      (E.BACKGROUND_COLOR_1 = "BGC1"),
+      (E.BACKGROUND_COLOR_2 = "BGC2"),
+      (E.BACKGROUND_COLOR_3 = "BGC3"),
+      (E.SYMBOL_POSITION_TYPE = "SPT"),
+      (E.EMBLEM_SYMBOL_1_COLOR = "SC1"),
+      (E.EMBLEM_SYMBOL_2_COLOR = "SC2"),
+      (E.EMBLEM_SYMBOL_3_ID = "S3"),
+      (E.EMBLEM_SYMBOL_3_COLOR = "SC3"),
+      (E.MEMBER_COUNT = "M"),
+      (E.PACKAGE_ID_LIST = "PIDL"),
+      (E.IGNORED_PLAYERS = "IPS"),
+      (E.PLAYER_NAME_2 = "N"),
+      (E.OWNER_PLAYER_ID = "OID"),
+      (E.IS_DUMMY = "DUM"),
+      (E.SKIP_COST_PER_MINUTE = "CPM"),
+      (E.SKIP_LEVEL = "SL"),
+      (E.SINGLE_PLAYER = "SP"),
+      (E.ROTATION_INDEX = "RIDX"),
+      (E.ALLIANCE_RANKING_INFO = "A"),
+      (E.TOTAL_HOURS = "TH"),
+      (E.TARGET_PLAYER_ID = "PID"),
+      (E.HAS_WON = "HW"),
+      (E.AREA = "A"),
+      (E.HAS_FINISHED = "F"),
+      (E.ANNOUNCED_EVENT_ID = "AEID"),
+      (E.HAS_COLLECTED_REWARDS = "COL"),
+      (E.THEME = "T"),
+      (E.ATTACKABLE_CAMPS = "AC"),
+      (E.LAST_SKIPPABLE_SECOND = "SEC"),
+      (E.IS_ALREADY_COLLECTED = "AC"),
+      (E.POINT_EVENT_TYPE = "PET"),
+      (E.WINNING_CATEGORY = "WC"),
+      (E.SUB_EVENT_ID = "SEID"),
+      (E.REAL_PRICE = "RP"),
+      (E.IS_TIMELESS = "TML"),
+      (E.TIME_IN_SECONDS = "TS"),
+      (E.SCALE_FACTOR = "SC"),
+      (E.OCCUPIER_ID = "OCID"),
+      (E.MOVEMENT_TYPE = "T"),
+      (E.MEMBER_BUFF_LEVEL = "ML"),
+      (E.INVITER_ID = "INV"),
+      (E.CONNECTIONS = "CON"),
+      (E.IS_ONLINE = "ION"),
+      (E.IS_INVITER = "IIN"),
+      (E.IS_REFERRED = "IRF"),
+      (E.USING_ONLY_CURRENCY_2 = "OC2"),
+      (E.IS_FORCED_CANCELABLE = "FC"),
+      (E.IS_GROUPED_HIGHSCORE = "IGH"),
+      (E.CURRENCY_CODE = "CC"),
+      (E.VOUCHER_CODE = "VC"),
+      (E.PRICE_DATA = "PD"),
+      (E.LIFETIME_SPENT_C2 = "LTS"),
+      (E.C2_SPENT_90_DAYS = "SND"),
+      (E.USE_90_DAYS_SPENT = "UNDS"),
+      (E.BOUGHT_C2 = "BC2"),
+      (E.C2_SOURCE = "C2SRC"),
+      (E.SEND_ONE_PAY_POPUP = "PB"),
+      (E.IS_PAY_USER = "PU"),
+      (E.PAYMENT_DOPPLER_COUNT = "DC"),
+      (E.LAST_PAY_DATE = "LPD"),
+      (E.FIRST_PAY_DATE = "FPD"),
+      (E.KINGDOM_FAME_BOOST = "KFB"),
+      (E.LEVEL_RANGE = "LR"),
+      (E.NTH_TARGET = "N"),
+      (E.FACEBOOK_LOGIN_CLIENT_TRACKING = "FBD"),
+      (E.USER_SURVEY_SEEN_CLIENT_TRACKING = "USS"),
+      (E.MOBILE_ADVERTISING_ID = "ADID"),
+      (E.APPSFLYER_UID = "AFUID"),
+      (E.IOS_IDFV = "IDFV"),
+      (E.TEST_ID = "TID"),
+      (E.TEST_CASE_ID = "CID"),
+      (E.PACKAGE_INSTALLER_ID = "PAID"),
+      (E.PRE_INSTALL_ID = "PRID"),
+      (E.SLOT_TYPE = "ST"),
+      (E.RECRUITMENT_MODE = "RM"),
+      (E.RECRUITMENT_LIST_ID = "LID"),
+      (E.RECRUITMENT_LIST_ID_2 = "RLID"),
+      (E.HOSPITAL_SLOT_OVERVIEW = "SOH"),
+      (E.RECRUITMENT_SNAPSHOT = "RS"),
+      (E.CURRENT_FOOD_CONSUMPTION = "CFC"),
+      (E.CURRENT_RECRUITMENT_TIME = "CRT"),
+      (E.ADDITIONAL_FOOD_CONSUMPTION = "AFC"),
+      (E.ADDITIONAL_RECRUITMENT_TIME = "ART"),
+      (E.CURRENT_BOOST_STAGE = "CBS"),
+      (E.INITIAL_AMOUNT = "IA"),
+      (E.DOUBLING_COST_C2 = "DC"),
+      (E.PRODUCTIVITY = "P"),
+      (E.FOOD_PRODUCTION = "FP"),
+      (E.ERROR_ID = "EID"),
+      (E.COST_WOOD = "CW"),
+      (E.COST_STONE = "CS"),
+      (E.INITIAL_COMPLETION_TIME = "ICT"),
+      (E.RECEIVED_ALLIANCE_HELP = "RAH"),
+      (E.REMAINING_COMPLETION_TIME = "RCT"),
+      (E.TOTAL_UNIT_AMOUNT = "TUA"),
+      (E.PRODUCTION_SLOT = "PS"),
+      (E.QUEUE_SLOTS = "QS"),
+      (E.PACKAGE = "P"),
+      (E.SLOT_INFO = "SI"),
+      (E.REMAINING_UNLOCK_TIME = "RUT"),
+      (E.UNLOCKED_BY_VIP = "VIP"),
+      (E.SOURCE_PACKAGE_ID = "SPID"),
+      (E.TOTAL_COMPLETION_TIME = "TCT"),
+      (E.NEW_UNIT_AMOUNT = "NUA"),
+      (E.RECEIVED_UNIT_AMOUNT = "RUA"),
+      (E.DIALOG_NAME = "DN"),
+      (E.ACTION = "A"),
+      (E.STATE_LAYOUT = "SL"),
+      (E.ANNOUNCEMENT_AVAILABLE = "AA"),
+      (E.ANNOUNCEMENT_MESSAGES = "A"),
+      (E.ANNOUNCEMENT_ID = "ID"),
+      (E.ANNOUNCEMENT_IDS = "IDS"),
+      (E.ANNOUNCEMENT_LANGUAGE = "L"),
+      (E.ANNOUNCEMENT_FILTER = "F"),
+      (E.ANNOUNCEMENT_TITLE = "T"),
+      (E.ANNOUNCEMENT_MESSAGE = "M"),
+      (E.ANNOUNCEMENT_FILTER_PLAYER_LEVEL_MIN = "LMIN"),
+      (E.ANNOUNCEMENT_FILTER_PLAYER_LEVEL_MAX = "LMAX"),
+      (E.ANNOUNCEMENT_FILTER_PAY_USER = "PU"),
+      (E.ANNOUNCEMENT_FILTER_OS_TYPE = "OS"),
+      (E.ANNOUNCEMENT_FILTER_OS_TYPE_IOS = "ios"),
+      (E.ANNOUNCEMENT_FILTER_OS_TYPE_ANDROID = "android"),
+      (E.ANNOUNCEMENT_FILTER_STORE = "S"),
+      (E.ANNOUNCEMENT_FILTER_STORE_AMAZON = "amazon"),
+      (E.ANNOUNCEMENT_FILTER_STORE_APPLE = "apple"),
+      (E.ANNOUNCEMENT_FILTER_STORE_GOOGLE = "google"),
+      (E.ANNOUNCEMENT_FILTER_STORE_SAMSUNG = "samsung"),
+      (E.ANNOUNCEMENT_FILTER_OS_VERSION_MIN = "OSMIN"),
+      (E.ANNOUNCEMENT_FILTER_OS_VERSION_MAX = "OSMAX"),
+      (E.ACTIVE_RESEARCH_ID = "ARID"),
+      (E.ACTIVE_RESEARCH_REMAINING_TIME = "ARRT"),
+      (E.BOUGHT_RESEARCHES = "BR"),
+      (E.DEVICE_MODEL = "DM"),
+      (E.MOBILE_NETWORK_ID = "MNID"),
+      (E.PROMOTION_BANNER_ID = "PID"),
+      (E.CHANCE = "CH"),
+      (E.VILLAGE_ID = "VID"),
+      (E.XML_VILLAGE_ID = "XID"),
+      (E.VILLAGE_TYPE = "VT"),
+      (E.VILLAGE_LEVEL = "VL"),
+      (E.PRIVATE_RESOURCE_VILLAGES = "PV"),
+      (E.RESOURCE_VILLAGE_TOKEN = "RVT"),
+      (E.SKILL_ID = "ID"),
+      (E.SKILL_IDS = "IDS"),
+      (E.SKILL_IDS_2 = "SID"),
+      (E.LEGEND_SKILLS = "LS"),
+      (E.RESET_COUNT = "RC"),
+      (E.SCEAT_SKILL_IDS = "SIDS"),
+      (E.SCEAT_SKILL_ACTIVATIONS = "SSA"),
+      (E.SCEAT_SKILLS_TAB_ID = "TID"),
+      (E.SUBSCRIPTION_TYPE_ID = "STID"),
+      (E.ALLIANCE_SUBSCRIBERS_COUNT = "ASC"),
+      (E.SUBSCRIPTION_PACKAGES = "SP"),
+      (E.REMAINING_SECONDS_WITH_GRACE_PERIOD = "RSGP"),
+      (E.SUBSCRIPTION_LOYALTY_BOOST = "SLB"),
+      (E.ALLIANCE_RAGE = "AR"),
+      (E.ALLIANCE_CAMP = "AC"),
+      (E.ALLIANCE_CAMP_ID = "ACID"),
+      (E.ALLIANCE_CAMP_ENABLED = "ACE"),
+      (E.ALLIANCE_CAMP_VICTORY_COUNT = "ACVC"),
+      (E.PLAYER_RAGE_POINTS_TYPE = "PRPT"),
+      (E.PLAYER_CURRENT_RAGE_POINTS = "PCRP"),
+      (E.PLAYER_TOTAL_RAGE_POINTS = "PTRP"),
+      (E.REWARD_SET_ID = "RSID"),
+      (E.END_REWARD_VALUE = "ERV"),
+      (E.START_TIMESTAMP = "ST"),
+      (E.EXPIRED_EQUIPMENTS = "EE"),
+      (E.REGULAR_DECORATIONS = "RD"),
+      (E.CUSTOM_DECORATIONS = "CD"),
+      (E.UNIQUE_DECORATIONS = "UD"),
+      (E.STORAGE_ID = "SID"),
+      (E.FUSION_FORGE_ID = "FID"),
+      (E.FUSION_FORGE_IDS = "FIDS"),
+      (E.FUSION_FORGE_ENERGY = "FE"),
+      (E.FUSION_FORGE_LEVEL = "FL"),
+      (E.FUSION_FORGE_ENERGY_RECHARGE_INTERVAL_PROGRESS_IN_SECONDS = "FRS"),
+      (E.FUSION_FORGE_USED_MINUTE_SKIPS = "FUM"),
+      (E.FUSION_FORGE_USED_PREMIUM_SKIPS = "FUPS"),
+      (E.FUSION_FORGE_INFO = "FI"),
+      (E.FUSION_FORGE_SKIP_RECHARGE_USE_PREMIUM = "FSRP"),
+      (E.FUSION_FORGE_SKIP_RECHARGE_MINUTE_SKIP_ID = "FSRMID"),
+      (E.FUSION_FORGE_CATALYST_CONVERSION_DIRECTION = "FCCD"),
+      (E.FUSION_FORGE_CATALYST_ID = "FCID"),
+      (E.FUSION_FORGE_CATALYST_CONVERSION_AMOUNT = "FCCA"),
+      (E.FUSION_FORGE_FUSE_USE_PREMIUM = "FFFP"),
+      (E.FUSION_SOURCE_UNIQUE_DECORATION_ID = "FSUID"),
+      (E.FUSION_SOURCE_WOD_ID = "FSWID"),
+      (E.FUSION_TARGET_UNIQUE_DECORATION_ID = "FTUID"),
+      (E.FUSION_TARGET_WOD_ID = "FTWID"),
+      (E.FUSION_TARGET_OBJECT_ID = "FTOID"),
+      (E.FUSION_TARGET_SPACE_ID = "FTSID"),
+      (E.FUSION_TARGET_AREA_ID = "FTAID"),
+      (E.FUSION_XP = "FXP"),
+      (E.BONUS_FUSION_XP = "BFXP"),
+      (E.AUTO_SELL_EQUIPMENT_CONDITIONS = "ECS"),
+      (E.AUTO_SELL_GEM_CONDITIONS = "GCS"),
+      (E.POPOVER_ID = "ID"),
+      (E.POPOVER_DATA = "D"),
+      (E.PUSH_NOTIFICATION_CATEGORY_ACTIVE = "A"),
+      (E.PUSH_NOTIFICATION_DEVICE_TOKEN = "D"),
+      (E.PUSH_NOTIFICATION_CATEGORIES = "C"),
+      (E.PUSH_NOTIFICATION_DEVICE_PLATFORM = "PL"),
+      (E.GLOBALSERVER_LOGIN_TOKEN = "TLT"),
+      (E.COUNTRY_CODE = "CC"),
+      (E.REGISTRATION_IP = "IP"),
+      (E.GLOBALSERVER_ZONE = "TSZ"),
+      (E.GLOBALSERVER_IP = "TSIP"),
+      (E.GLOBALSERVER_PORT = "TSP"),
+      (E.IS_TEMPSERVER = "ITS"),
+      (E.DEVICE_ID = "DID"),
+      (E.TEMPSERVER_TOKEN_PLATFORM_ID = "PPID"),
+      (E.NETWORK_ID = "NID"),
+      (E.DAILY_POINTS_MIN_MODIFIER = "DPMM"),
+      (E.DAILY_POINTS_MAX_MODIFIER = "DPXM"),
+      (E.PREBUILT_CASTLE_ID = "PBCI"),
+      (E.SETTING_ID = "TSID"),
+      (E.RUNTIME_IN_DAYS = "TSR"),
+      (E.TEMP_SERVER_BUILDING_MIGHT = "TSBM"),
+      (E.TEMP_SERVER_COLLECTOR_KEYS = "TCK"),
+      (E.IS_PRESET_SELECTED = "IPS"),
+      (E.DAILY_RANK = "DR"),
+      (E.DAILY_HIGHSCORE = "DHS"),
+      (E.TEMP_SERVER_CAMP_ID = "TSCI"),
+      (E.TEMP_SERVER = "TS"),
+      (E.PLAYER_DAILY_TASK_REWARD_ID = "DTR"),
+      (E.PLAYER_DAILY_TASK_REWARD_LEVEL = "DTRL"),
+      (E.PLAYER_DAILY_TASK_POINTS = "DTP"),
+      (E.IS_SUPPORT_LOGIN = "ISL"),
+      (E.IS_COLLECTOR_ATTACK = "ICA"),
+      (E.COLLECTOR_KEYS = "CK"),
+      (E.COLLECTOR_SECONDS_TO_DAILY_PAYOUT = "SDP"),
+      (E.COLLECTOR_EVENT_OPTION_ID = "EOID"),
+      (E.COLLECTOR_CURRENCY_AMOUNT = "CCA"),
+      (E.TRIGGER_EVENTS = "TE"),
+      (E.TRIGGER_ID = "TRID"),
+      (E.SEASON_RUNTIME = "KLRT"),
+      (E.SEASON_REMAINING_DAYS = "KLRD"),
+      (E.SEASON_MODE_ENABLED = "KL"),
+      (E.SEASON_DIVISION = "KLD"),
+      (E.SEASON_DIVISION_ID = "KLDID"),
+      (E.SEASON_DIVISION_SIZE = "KLDS"),
+      (E.SEASON_POINTS = "KLCP"),
+      (E.SEASON_MEDALS = "KLM"),
+      (E.SEASON_MEDALS_OVERVIEW = "KLMO"),
+      (E.SEASON_MEDAL_ID = "KLMID"),
+      (E.SEASON_RANK = "KLR"),
+      (E.SEASON_RANK_ID = "KLRID"),
+      (E.SEASON_MEDAL_POINTS = "KLMP"),
+      (E.SEASON_PASS_ENABLED = "KLP"),
+      (E.SEASON_PASS = "KLSP"),
+      (E.SEASON_SEEN_EVENT_START = "KLSE"),
+      (E.SEASON_SEEN_START = "KLS"),
+      (E.SEASON_ALLIANCE_RANKING_ENABLED = "KLARE"),
+      (E.SEASON_ALLIANCE_POINTS = "KLAP"),
+      (E.SEASON_ALLIANCE_MEDAL_ID = "KLAMID"),
+      (E.SEASON_ALLIANCE_RANK = "KLAR"),
+      (E.SEASON_ALLIANCE_MEDALS = "KLAM"),
+      (E.SEASON_LEAGUE_TYPE_ID = "KLLID"),
+      (E.SEASON_PROMOTION_PASSES = "KLPP"),
+      (E.SEASON_EVENT_PASS_ENABLED = "KLEPE"),
+      (E.SEASON_PASS_TYPE = "KLPT"),
+      (E.SEASON_ID = "KLID"),
+      (E.SEASON_PROMOTION_PASS_ENABLED = "KLPPE"),
+      (E.GLOBAL_EFFECTS = "GE"),
+      (E.SEEN_GLOBAL_EFFECTS = "SGE"),
+      (E.GLOBAL_EFFECT_BOOSTERS = "GEB"),
+      (E.GLOBAL_EFFECT_ID = "GEID"),
+      (E.BOOST_VALUE = "BV"),
+      (E.USE_PREMIUM_RELIC_ALLIANCE_FORGE = "UPRAF"),
+      (E.MAY_FORGE = "MF"),
+      (E.SOFT_CURRENCY_RELIC_ALLIANCE_FORGE_USES = "SRFU"),
+      (E.HARD_CURRENCY_RELIC_ALLIANCE_FORGE_USES = "HRFU"),
+      (E.DONATE_CURRENCY_ID = "CID"),
+      (E.DONATE_CURRENCY_AMOUNT = "A"),
+      (E.NEW_RELICS = "NR"),
+      (E.RELIC_ITEM_ID = "RIID"),
+      (E.IS_GEM = "IG"),
+      (E.EXPANDABLE_AREAS = "EA"),
+      (E.REWARD_OBJECT_TYPE = "ROT"),
+      (E.REWARD_OBJECT_VALUE = "ROV"),
+      (E.EXPIRE_TIME = "ET"),
+      (E.LOST_AND_FOUND_ID = "LFID"),
+      (E.CREATION_TIMESTAMP = "CT"),
+      (E.RELIC_GEM = "GEM"),
+      (E.RELIC_EQUIPMENT = "EQ"),
+      (E.LOST_AND_FOUND_ELAPSED_SECONDS = "LFES"),
+      (E.USE_PREMIUM = "P"),
+      (E.LOCKED_SLOTS = "LS"),
+      (E.TRAINING_PROGRAMS = "TP"),
+      (E.TRAINING_EFFECT = "TE"),
+      (E.ACTIVE_TRAINING = "AT"),
+      (E.TRAINING_PROLONG_COUNTER = "PC"),
+      (E.DAIMYO_INFO = "DY"),
+      (E.DAIMYO_ENABLED = "E"),
+      (E.DAIMYO_CASTLES = "DC"),
+      (E.DAIMYO_TOWNSHIPS = "DT"),
+      (E.DAIMYO_ALLIANCE_CONTRACTS = "C"),
+      (E.DAIMYO_CASTLE_CONTRACTS = "DCC"),
+      (E.DAIMYO_TOWNSHIP_CONTRACTS = "DTC"),
+      (E.DAIMYO_WAR_EFFORTS = "WES"),
+      (E.DAIMYO_TOTAL_WAR_EFFORT = "TWE"),
+      (E.DAIMYO_CASTLE_WAR_EFFORTS = "CWES"),
+      (E.DAIMYO_TOWNSHIP_WAR_EFFORTS = "TWES"),
+      (E.DAIMYO_COOLDOWN_COUNTER = "CDC"),
+      (E.SAMURAI_MEDAL_BOOSTER_KEYS = "SMK"),
+      (E.SHOGUN_POINTS = "SP"),
+      (E.SHOGUN_POINT_BOOSTER_KEYS = "SPK"),
+      (E.DAIMYO_AREA_RANK = "DAR"),
+      (E.DAIMYO_DIFFICULTY_CAMP_ID = "DDCID"),
+      (E.RELIC_ENCHANTER_ENABLED = "E"),
+      (E.RELIC_FRAGMENT_BOOST = "RFB"),
+      (E.WEB_SHOP_SESSION_ID = "sessionId"),
+      (E.WEB_SHOP_PACKAGE_ID = "packageId"),
+      (E.CASH_OFFER_ID = "cashOfferId"),
+      (E.API_TOKEN = "apiToken"),
+      (E.AUTH_PLATFORM = "platform"),
+      (E.APPLE_TOKEN = "appleToken"),
+      (E.APPLE_ID = "appleId"),
+      (E.APPLE_AUTH_CODE = "authCode"),
+      (E.ALLIANCE_LEADER_PLAYER_ID = "ALPI"),
+      (E.ALLIANCE_BATTLEGROUND_CAMP_ID = "BGCI"),
+      (E.GLOBAL_SERVER_TYPE = "GST"),
+      (E.MAX_ALLIANCE_SIZE = "MAS"),
+      (E.MAX_INFLUENCE_POINTS = "MIP"),
+      (E.ALLIANCE_REWARD_ID = "ARID"),
+      (E.PLAYER_REWARD_ID = "PRID"),
+      (E.PLAYER_STATISTIC_ID = "PSI"),
+      (E.PLAYER_STATISTICS = "PST"),
+      (E.ALLIANCE_MEMBERS_STATISTICS = "AME"),
+      (E.CAPITAL_AMOUNT = "CPA"),
+      (E.CAPITAL_LIMIT = "CPL"),
+      (E.CITY_STATES_AMOUNT = "CSA"),
+      (E.CITY_STATES_PLAYER_LIMIT = "CSPL"),
+      (E.CITY_STATES_ALLIANCE_LIMIT = "CSAL"),
+      (E.TOWER_AMOUNT = "TWM"),
+      (E.TOWER_PLAYER_LIMIT = "TPL"),
+      (E.TOWER_ALLIANCE_LIMIT = "TAL"),
+      (E.GLOBAL_SERVER_PLAYER_RANK = "PLR"),
+      (E.GLOBAL_SERVER_PLAYER_RANK_POINTS = "PLP"),
+      (E.GLOBAL_SERVER_ALLIANCE_RANK = "ALR"),
+      (E.GLOBAL_SERVER_ALLIANCE_RANK_POINTS = "ALP"),
+      (E.ALLIANCE_AREAS_INFO = "AAI"),
+      (E.SECONDS_TILL_NEXT_REVIVE = "STNR"),
+      (E.SECONDS_TILL_NEXT_RE_LINK = "STNL"),
+      (E.TOWERS = "T"),
+      (E.TOWER_EFFECTS = "TE"),
+      (E.TOWER_EFFECT_ACTIVE = "TEA"),
+      (E.TOWER_EFFECT_ID = "TEID"),
+      (E.EFFECT_LEVEL_BEFORE_INCREASE = "ELBI"),
+      (E.EFFECT_LEVEL_AFTER_INCREASE = "ELAI"),
+      (E.REMAINING_JOIN_TIME = "RJT"),
+      (E.ALLIANCE_BATTLE_GROUND = "ABG"),
+      (E.GLOBAL_SERVER_INFO = "GSI"),
+      (E.MAP_TYPE = "MTYP"),
+      (E.END_TIMESTAMP = "ET"),
+      (E.PLAYER_ID_FULL = "playerId"),
+      (E.PAYLOAD = "payload"),
+      (E.CXF_PUSH_TOPIC = "topic"),
+      (E.CXF_BROADCAST_TOPIC = "topic"),
+      (E.LUCKY_WHEEL_EVENT_TYPE = "LWET"),
+      (E.LUCKY_WHEEL_TICKETS = "LWT"),
+      (E.DISTRICT_OBJECT_ID = "DOID"),
+      (E.FORTUNE_TELLER_DRAW_COUNT = "FTDC"),
+      (E.FORTUNE_TELLER_REWARD_ID_CHANCES = "FTRC"),
+      (E.VISUAL_COMPONENT_METADATA = "VCM"),
+      (E.FILTER_ID = "FID"),
+      (E.IS_ACTIVATION = "ACT"),
+      (E.ACTIVE_FILTERS = "AFS"),
+      (E.EMBLEM_UNLOCKED_SYMBOL_IDS = "U"),
+      (E.EMBLEM_PAID_SYMBOL_IDS = "P"),
+      (E.DOWNTIME_STATUS = "DTS"),
+      (E.PARENT_OFFER_ID = "POID"),
+      (E.SILENT_RECONNECT_ENABLED = "SRC"),
+      (E.SILENT_RECONNECT_ISO_ENABLED = "SRI"),
+      (E.IGS_REDIRECT_TO_HC_ENABLED = "ISR"),
+      (E.HOSPITAL_RUBY_FILTER = "HRF"),
+      (E.PRIORITISE_PRODUCTION_OVER_TROOPS = "PPOT"),
+      (E.HAS_ALLIANCE_ENTERED = "AE"),
+      (E.INTERNAL_RANK = "IR"),
+      (E.HAS_PLAYER_ENTERED = "PE"),
+      (E.HAS_ALLIANCE = "HA"),
+      (E.ALLIANCE_REWARD_IDS = "ARIDS"),
+      (E.PLAYER_REWARD_IDS = "PRIDS"),
+      (E.FEAST_REDUCTION_MODIFIER = "FRM"),
+      (E.PING = "ping"),
+      (E.PARENT_PARTITION_KEY = "parentPartitionKey"),
+      (E.HUB_REWARD_ID = "hubRewardID"),
+      (E.PARENT_SORT_KEY = "parentSortKey"),
+      (E.PARENT_STILL_ACTIVE = "parentStillActive"),
+      (E.EXTRA_TIER_UNLOCKED_BY_PARENT = "extraTierUnlockedByParent"),
+      (E.EXTRA_TIER_UNLOCK_COST_C_2 = "extraTierUnlockCostC2"),
+      (E.EXTRA_TIER_UNLOCKED = "extraTierUnlocked"),
+      (E.UNLOCK_TIMESTAMP = "unlockTimestamp"),
+      (E.BASIC_TIER = "basicTier"),
+      (E.EXTRA_TIER = "extraTier"),
+      (E.COLLECTED = "collected"),
+      (E.REWARD_HUB_REWARD_IDS = "rewardIds"),
+      (E.VISUAL_COMPONENT = "visualComponent"),
+      (E.REWARD_HUB_EVENT_ID = "eventID"),
+      (E.REWARD_HUB_SUB_EVENT_ID = "subEventID"),
+      (E.PROMOTION_ID = "promotionID"),
+      (E.COUNTERS = "counters"),
+      (E.PRE_UPGRADE_POPUP = "preUpgradePopup"),
+      (E.TRACKING_COMPONENT = "trackingComponent"),
+      (E.ERROR = "ERROR"),
+      (E.CORRELATION_ID = "correlationId"),
+      (E.PARENT_SORT_KEY_PREFIX = "parentSortKeyPrefix"),
+      (E.CRAFTING_RECIPE_ID = "CRID"),
+      (E.CRAFTING_QUEUE_ID = "CQID"),
+      (E.CRAFTING_BUILDINGS_INFO = "CBI"),
+      (E.CRAFTING_EFFECTS = "CE"),
+      (E.CRAFTING_QUEUE_BOOST_EFFECTS = "CQBE"),
+      (E.CRAFTING_AREA_INFO = "CAI"),
+      (E.PLATFORM_ID = "PLFID"),
+      (E.STORE_ID = "SID"),
+      (E.EVENT_DIFFICULTY_ID = "EDID"),
+      (E.EVENT_AUTO_SCALING_ENABLED = "EASE"),
+      (E.HIGHEST_THRESHOLD_REWARD = "HTR"),
+      (E.HAS_RECEIVED_ALLIANCE_REAWRDS = "HRAR"),
+      (E.RENT_C2_UNLOCK = "C2U"),
+      (E.PLAYER_NAME_CHANGE_COUNTER = "PNCC"),
+      (E.PLAYER_NAME_CHANGE_COOLDOWN = "PNCD"),
+      (E.ENABLE_RUBY_CONFIRMATION = "ERC"),
+      (E.DELETION_DATE_TIMESTAMP = "D"),
+      (E.IS_GDPR_DELETED = "GDPR"),
+      (E.PENDING_MAIL_ADDRESS = "PMA"),
+      (E.RESEND_MAIL_ACTION_TYPE = "T"),
+      (E.PENDING_MAIL_CHANGE_STATUS = "PMCS"),
+      (E.WELCOME_BACK_REWARD_ID = "WBRID"),
+      (E.WELCOME_BACK_REWARD_DATE = "WBRD"),
+      (E.WELCOME_BACK_REWARD_MIN_INACIVE_DAYS = "WBRMID"),
+      (E.ID = "ID"),
+      (E.CURRENCY_ID = "CID"),
+      (E.LOOTBOX_PAYOUT_ID = "LID"),
+      (E.ALL_LOOTBOXES = "ALL"),
+      (E.TOMBOLA_KEY = "KEY"),
+      (E.TOMBOLA_REWARDS_LIST = "LTR"),
+      (E.TOMBOLA_REWARDS_RESPONSE_LIST = "LTRR"),
+      (E.KEY_BAR_STATUS = "KBS"),
+      (E.TOMBOLA_KEY_BAR_FILLING_AMOUNT = "TBF"),
+      (E.KEY_TOMBOLA_REWARDS = "KTR"),
+      (E.USED_KEY_ID = "UKI"),
+      (E.CHARACTER_ID = "CID"),
+      (E.OFFERINGS_ID = "OID"),
+      (E.IS_FREE = "IF"),
+      (E.CHARACTERS = "CHR"),
+      (E.CHARACTER = "CH"),
+      (E.FREE_OPENINGS_AVAILABLE = "FOA"),
+      (E.LAST_FREE_OPENING = "LFO"),
+      (E.RARITY = "R"),
+      (E.REWARD_RESPONSE = "RR"),
+      (E.ALIAS_POPUP_SELECTION = "APS"),
+      (E.IGNORE_REWARD_GRANTING_CHECK = "IGC"),
+      (E.GENERAL_ID = "GID"),
+      (E.STAR_TIER = "ST"),
+      (E.IS_NEW = "IN"),
+      (E.LEVELLED_UP = "LU"),
+      (E.GENERAL_SKILL_IDS = "SIDS"),
+      (E.ABILITY_ID = "AID"),
+      (E.GENERAL_ASSIGNED_SLOT_AND_ABILITY_IDS = "GASAIDS"),
+      (E.SLOT_AND_ABILITY_IDS = "SAIDS"),
+      (E.OLD_XP = "OXP"),
+      (E.ATTACKER_ABILITIES = "AA"),
+      (E.DEFENDER_ABILITIES = "DA"),
+      (E.ENABLE_SPLITRUN_HARDCURRENCY_SHOP = "ESHS"),
+      (E.UNITS_YARD_LIMIT = "UYL"),
+      (E.ALLIANCE_YARD_UNITS_LIMIT = "AUYL"),
+      (E.UNITS_WALL_LIMIT = "UWL"),
+      (E.UNITS_YARD = "UY"),
+      (E.ALLIANCE_YARD_UNITS = "AUY"),
+      (E.UNITS_WALL = "UW"),
+      (E.REMAINING_SUPPORT_UNITS = "RSU"),
+      (E.FACEBOOK_LOGIN_BUTTON_DISABLE = "FLBD"),
+      (E.IS_CROSSPLAY_SERVER = "ICS"),
+      (E.GAME_ID = "GID"),
+      (E.IS_CROSSPLAY_SERVER_EVENT = "ICSE"),
+      (E.AUTO_SKIP_COOLDOWN_TYPE = "ASCT"),
+      (E.AUTO_SKIP_C2 = "ASC"),
+      (E.AUTO_SKIP_MINUTESKIPS = "ASMS"),
+      (E.AUTO_SKIP_SECONDS = "ASS"),
+      (E.DISABLE_RUBY_SHOP = "DRS"),
+      (E.RECAPTCHA_TOKEN = "RCT"),
+      (E.SKIN = "S"),
+      (E.DONATION_SETTING_ID = "DSI"),
+      (E.DONATION_ITEM_VALUES = "DIV"),
+      (E.DONATION_ITEM_ID = "DII"),
+      (E.DONATION_ITEM_AMOUNT = "DIA"),
+      (E.DONATED_ITEMS = "DIS"),
+      (E.DONATION_ITEM_POINTS = "DIP"),
+      (E.DONATION_EVENT_END_REWARD_IDS = "DEER"),
+      (E.DONATION_EVENT_END_TYPE_POINTS = "DEETP"),
+      (E.EFFECT_SOURCE_EQUIPMENT = "EQ"),
+      (E.EFFECT_SOURCE_BUILDING = "BG"),
+      (E.EFFECT_SOURCE_CONSTRUCTION_ITEM = "CI"),
+      (E.EFFECT_SOURCE_OTHER = "OTH"),
+      (E.EFFECT_SOURCE_DECORATION = "DE"),
+      (E.EFFECT_SOURCE_ALLIANCE_BUFF = "AB"),
+      (E.EFFECT_SOURCE_CREST_SYMBOL = "CS"),
+      (E.EFFECT_SOURCE_GLOBAL_EFFECT = "GE"),
+      (E.EFFECT_SOURCE_PRIVATE_VILLAGE = "PV"),
+      (E.EFFECT_SOURCE_TITLE = "TL"),
+      (E.EFFECT_SOURCE_RESEARCH = "RH"),
+      (E.EFFECT_SOURCE_ALLIANCE_SUBSCRIPTION = "AS"),
+      (E.EFFECT_SOURCE_PLAYER_SUBSCRIPTION = "PS"),
+      (E.EFFECT_SOURCE_BARON_ADVISOR_SUBSCRIPTION = "BAS"),
+      (E.EFFECT_SOURCE_ALLIANCE_COAT = "AC"),
+      (E.EFFECT_SOURCE_GENERAL = "GNL"),
+      (E.EFFECT_SOURCE_TRAINING = "TG"),
+      (E.EFFECT_SOURCE_HIGH_LEVEL_HOL = "HLH"),
+      (E.EFFECT_SOURCE_TOOLS = "TLS"),
+      (E.EFFECT_SOURCE_SOLDIER = "SR"),
+      (E.EFFECT_SOURCE_RAID_BOSS_STAGE_DEFENDER = "RBSD"),
+      (E.EFFECT_SOURCE_RAID_BOSS_STAGE_ATTACKER = "RBSA"),
+      (E.EFFECT_SOURCE_RAID_BOSS_BATTLE_DEFENDER = "RBBD"),
+      (E.EFFECT_SOURCE_RAID_BOSS_BATTLE_ATTACKER = "RBBA"),
+      (E.EFFECT_SOURCE_RAID_BOSS_POST_BATTLE_DEFENDER = "RBPBD"),
+      (E.EFFECT_SOURCE_RAID_BOSS_POST_BATTLE_ATTACKER = "RBPBA"),
+      (E.EFFECT_SOURCE_RAID_BOSS_WALL_REGENERATION = "RBWR"),
+      (E.DATA = "DATA"),
+      (E.DISABLE_HELPSHIFT_CHAT = "DHSC"),
+      (E.LEADERBOARD_TYPE = "LT"),
+      (E.LEADERBOARD_MAX_RESULTS = "M"),
+      (E.LEADERBOARD_LIST = "L"),
+      (E.LEADERBOARD_NUM_SCORES = "T"),
+      (E.LEADERBOARD_SCORE_ID = "SI"),
+      (E.LEADERBOARD_RANK = "R"),
+      (E.LEADERBOARD_PLAYER_NAME = "P"),
+      (E.LEADERBOARD_ALLIANCE_NAME = "A"),
+      (E.LEADERBOARD_SERVER_INSTANCE = "I"),
+      (E.LEADERBOARD_SCORE = "S"),
+      (E.LEADERBOARD_REWARD_SET_ID = "LRSI"),
+      (E.LEADERBOARD_SCORE_METADATA = "SM"),
+      (E.DIVISION_ID = "DI"),
+      (E.SUBDIVISION_ID = "SDI"),
+      (E.DIVISION_ROUND_ID = "DRI"),
+      (E.DIVISION_CHANGE_MESSAGE_EVENT_ID = "E"),
+      (E.DIVISION_CHANGE_MESSAGE_FOR_ALLIANCE = "A"),
+      (E.DIVISION_CHANGE_MESSAGE_START_DIVISION = "SD"),
+      (E.DIVISION_CHANGE_MESSAGE_END_DIVISION = "ED"),
+      (E.DIVISION_CHANGE_MESSAGE_RANK = "R"),
+      (E.DIVISION_CHANGE_MESSAGE_POINTS = "P"),
+      (E.DIVISION_CHANGE_MESSAGE_POINTS_TO_THRESHOLD = "PT"),
+      (E.ADVISOR_ATTACK_CURRENCY_ID = "ACI"),
+      (E.ADVISOR_ATTACK_IS_FREE = "AAF"),
+      (E.ADVISOR_ATTACK_IS_ACTIVATED = "AAA"),
+      (E.ADVISOR_ATTACK_TYPE = "AAT"),
+      (E.ADVISOR_ATTACK_COUNT = "AAC"),
+      (E.ADVISOR_ATTACK_NUMBER = "AAN"),
+      (E.ADVISOR_ATTACK_IS_LAST = "AAL"),
+      (E.ADVISOR_ATTACK_SEND_MESSAGE = "AASM"),
+      (E.ADVISOR_ATTACK_OVERVIEW_COMMANDERS = "C"),
+      (E.ADVISOR_ATTACK_OVERVIEW_GAINED = "G"),
+      (E.ADVISOR_ATTACK_OVERVIEW_GAINED_POINTS = "GP"),
+      (E.ADVISOR_ATTACK_OVERVIEW_LOST = "L"),
+      (E.ADVISOR_ATTACK_OVERVIEW_LOST_UNITS = "LU"),
+      (E.ADVISOR_ATTACK_OVERVIEW_LOST_TOOLS = "LT"),
+      (E.ADVISOR_ATTACK_OVERVIEW_WINS = "W"),
+      (E.ADVISOR_ATTACK_OVERVIEW_DEFEATS = "D"),
+      (E.ADVISOR_ATTACK_OVERVIEW_ABORTS = "P"),
+      (E.ATTACK_COUNT = "AC"),
+      (E.ATTACK_COUNT_THRESHOLD = "ACTH"),
+      (E.ATTACK_COUNT_GROWTH_RATE = "ACGR"),
+      (E.ALLIANCE_COAT_LAYOUTS = "ACLS"),
+      (E.ALLIANCE_COAT_LAYOUT_ID = "ACLI"),
+      (E.ALLIANCE_COAT_COLORS = "ACCS"),
+      (E.ALLIANCE_COAT_ISACTIVE = "ACIA"),
+      (E.ALLIANCE_COAT_LAYOUT_END_TIMESTAMP = "ACLET"),
+      (E.ALLIANCE_COAT_CURRENT_ACTIVE = "ACCA"),
+      (E.ALLIANCE_COAT_FALL_BACK = "ACFB"),
+      (E.ALLIANCE_COAT_LAYOUT = "ACL"),
+      (E.ALLIANCE_QUEST_STATUS = "AQS"),
+      (E.ALLIANCE_PARTICIPANT_COUNT = "APC"),
+      (E.ALLIANCE_QUEST_PLAYER_CONTRIBUTIONS = "AQPC"),
+      (E.RAID_BOSS_IDS = "RBIDS"),
+      (E.PORTAL_BOSS_ID = "BID"),
+      (E.BOSS_CARDS = "BCDS"),
+      (E.RAID_BOSS_CARD_STATUS = "CST"),
+      (E.UNLOCKED_LEVEL = "ULV"),
+      (E.PORTAL_BOSS_CREATION_TIME = "CT"),
+      (E.LEVEL_ID = "BLID"),
+      (E.WALL_INFO = "WI"),
+      (E.PERCENT_LEFT = "PL"),
+      (E.REGEN_TIME = "RT"),
+      (E.HEALTH = "HP"),
+      (E.BOSS_STAGE = "BS"),
+      (E.BOSS_STATUS = "BSE"),
+      (E.BOSS_LEVEL_PLAYER_POINTS = "BLPP"),
+      (E.REVIVE_UNIT_PERCENTAGE = "RUP"),
+      (E.ENABLE_NEWS_HUB = "ENH"),
+      (E.ENABLE_FREE_BARON_ADVISOR = "EFBA"),
+      (t.CommKeys = E),
+      (E.__class = "CommKeys"));
+    var C = (function () {
       function ConditionConst() {}
       return (
         (ConditionConst.calculateSpyCount = function (e) {
-          return Math.min(S.MAX_SPY_COUNT, 0 | Math.ceil((e - 4) / 10));
+          return Math.min(y.MAX_SPY_COUNT, 0 | Math.ceil((e - 4) / 10));
         }),
         (ConditionConst.amountOfTaxesToCollect = function (e) {
           return 10 * (0 | Math.round((150 * Math.exp(0.052 * e) - 170) / 10));
@@ -80744,935 +80893,937 @@ and limitations under the License.
         ConditionConst
       );
     })();
-    ((t.ConditionConst = E), (E.__class = "ConditionConst"));
-    var C = (function () {
+    ((t.ConditionConst = C), (C.__class = "ConditionConst"));
+    var f = (function () {
       return function ConstantsSmartFox() {};
     })();
-    ((C.C2S_RENAME_CASTLE = "arc"),
-      (C.S2C_RENAME_CASTLE = "arc"),
-      (C.S2C_SERVER_SHUTDOWN = "ssd"),
-      (C.S2C_GET_LOGIN_BONUS = "alb"),
-      (C.C2S_GET_LOGIN_BONUS = "alb"),
-      (C.C2S_CATCH_LOGIN_BONUS = "clb"),
-      (C.S2C_CATCH_LOGIN_BONUS = "clb"),
-      (C.C2S_STARTUP_LOGINBONUS_COLLECT = "slc"),
-      (C.S2C_STARTUP_LOGINBONUS_COLLECT = "slc"),
-      (C.C2S_STARTUP_LOGINBONUS_INFO = "sli"),
-      (C.S2C_STARTUP_LOGINBONUS_INFO = "sli"),
-      (C.C2S_EMAIL_VERIFIED = "lev"),
-      (C.C2S_CHANGE_EMBLEM = "cem"),
-      (C.S2C_CHANGE_EMBLEM = "cem"),
-      (C.C2S_CHOOSE_FREE_NAME = "lcn"),
-      (C.S2C_CHOOSE_FREE_NAME = "lcn"),
-      (C.C2S_CHOOSE_FREE_EMBLEM = "lce"),
-      (C.S2C_CHOOSE_FREE_EMBLEM = "lce"),
-      (C.S2C_COMEBACK_POPUP = "lcb"),
-      (C.S2C_ADMIN_FEEDBACK = "smg"),
-      (C.S2C_SHOW_POPUP = "msp"),
-      (C.C2S_UPDATE_PACKAGE_AND_PARTNER_IDS = "upp"),
-      (C.C2S_SET_META_DATA_EVENT = "dmd"),
-      (C.C2S_API_TOKEN_INFO = "ato"),
-      (C.S2C_API_TOKEN_INFO = "ato"),
-      (C.S2C_SEASON_EVENT = "sea"),
-      (C.C2S_SPECIAL_EVENT_INFO = "sei"),
-      (C.S2C_SPECIAL_EVENT_INFO = "sei"),
-      (C.S2C_ALLIANCE_TOURNAMENT_REWARD = "atr"),
-      (C.S2C_PRIVATE_PRIME_TIME_EVENT = "ppt"),
-      (C.S2C_SPECIAL_EVENT_END = "see"),
-      (C.C2S_POINT_EVENT_POINTS = "pep"),
-      (C.S2C_POINT_EVENT_POINTS = "pep"),
-      (C.C2S_SEASON_EVENT_PAY_UNLOCK = "spu"),
-      (C.S2C_SEASON_EVENT_PAY_UNLOCK = "spu"),
-      (C.C2S_SEASON_JOIN_EVENT = "sje"),
-      (C.S2C_SHOPPING_CART_REWARD = "spr"),
-      (C.C2S_BOUNTY_HUNTER_SKIP = "bst"),
-      (C.S2C_BOUNTY_HUNTER_SKIP = "bst"),
-      (C.BOUNTY_HUNTER_VALIDATE_OR_RESET_TARGET_EVENT = "brt"),
-      (C.C2S_TRIGGER_EVENT_INFO = "tei"),
-      (C.S2C_TRIGGER_EVENT_INFO = "tei"),
-      (C.S2C_TRIGGER_EVENT_END = "tee"),
-      (C.C2S_BUY_EVENTPACKAGE = "sbp"),
-      (C.S2C_BUY_EVENTPACKAGE = "sbp"),
-      (C.C2S_GET_PACKAGE_PRIZE = "gpp"),
-      (C.S2C_GET_PACKAGE_PRIZE = "gpp"),
-      (C.C2S_PLAYER_GIFT_LIST = "pgl"),
-      (C.S2C_PLAYER_GIFT_LIST = "pgl"),
-      (C.C2S_GRANT_PLAYER_GIFT = "gpg"),
-      (C.S2C_GRANT_PLAYER_GIFT = "gpg"),
-      (C.C2S_GET_ALLIANCE_INFO = "ain"),
-      (C.S2C_GET_ALLIANCE_INFO = "ain"),
-      (C.S2C_GET_ALLIANCE_BUFF_LIST = "abl"),
-      (C.C2S_FOUND_ALLIANCE = "afo"),
-      (C.S2C_FOUND_ALLIANCE = "afo"),
-      (C.C2S_ALLIANCE_INVITE_PLAYER = "aip"),
-      (C.S2C_ALLIANCE_INVITE_PLAYER = "aip"),
-      (C.C2S_ALLIANCE_ACTION_LIST = "all"),
-      (C.S2C_ALLIANCE_ACTION_LIST = "all"),
-      (C.C2S_ALLIANCE_QUIT = "aqi"),
-      (C.S2C_ALLIANCE_QUIT = "aqi"),
-      (C.C2S_GET_ALLIANCE_INVITATION = "bai"),
-      (C.S2C_GET_ALLIANCE_INVITATION = "bai"),
-      (C.C2S_ALLIANCE_ACCEPT_INVITE = "aai"),
-      (C.S2C_ALLIANCE_ACCEPT_INVITE = "aai"),
-      (C.S2C_ALLIANCE_CHAT_LOG = "acl"),
-      (C.C2S_ALLIANCE_CHAT_LOG = "acl"),
-      (C.C2S_ALLIANCE_CHAT = "acm"),
-      (C.S2C_ALLIANCE_CHAT = "acm"),
-      (C.C2S_ALLIANCE_CHAT_VISIBILITY = "acv"),
-      (C.S2C_ALLIANCE_CHAT_VISIBILITY = "acv"),
-      (C.C2S_ALLIANCE_ONLINE_MEMBERS = "aom"),
-      (C.S2C_ALLIANCE_ONLINE_MEMBERS = "aom"),
-      (C.C2S_ALLIANCE_DONATE = "ado"),
-      (C.S2C_ALLIANCE_DONATE = "ado"),
-      (C.C2S_ALLIANCE_UPGRADE = "aug"),
-      (C.S2C_ALLIANCE_UPGRADE = "aug"),
-      (C.C2S_ALLIANCE_CHANGE_NAME = "acn"),
-      (C.S2C_ALLIANCE_CHANGE_NAME = "acn"),
-      (C.C2S_ALLIANCE_CHANGE_DESCRIPTION = "acd"),
-      (C.S2C_ALLIANCE_CHANGE_DESCRIPTION = "acd"),
-      (C.C2S_ALLIANCE_NEWSLETTER = "anl"),
-      (C.S2C_ALLIANCE_NEWSLETTER = "anl"),
-      (C.C2S_ALLIANCE_KICK_MEMBER = "akm"),
-      (C.S2C_ALLIANCE_KICK_MEMBER = "akm"),
-      (C.C2S_ALLIANCE_RERANK_MEMBER = "arm"),
-      (C.S2C_ALLIANCE_RERANK_MEMBER = "arm"),
-      (C.C2S_ALLIANCE_CHANGE_DIPLOMACY = "adp"),
-      (C.S2C_ALLIANCE_CHANGE_DIPLOMACY = "adp"),
-      (C.C2S_ALLIANCE_REFUSE_DIPLOMACY = "ard"),
-      (C.S2C_ALLIANCE_REFUSE_DIPLOMACY = "ard"),
-      (C.C2S_ALLIANCE_GET_FAME = "afa"),
-      (C.S2C_ALLIANCE_GET_FAME = "afa"),
-      (C.C2S_ALLIANCE_SET_SEARCH_ALLIANCE = "asa"),
-      (C.S2C_ALLIANCE_SET_SEARCH_ALLIANCE = "asa"),
-      (C.C2S_ALLIANCE_SEND_APPLICATION = "saa"),
-      (C.S2C_ALLIANCE_SEND_APPLICATION = "saa"),
-      (C.C2S_ALLIANCE_APPLICATION_LIST = "aal"),
-      (C.S2C_ALLIANCE_APPLICATION_LIST = "aal"),
-      (C.C2S_ALLIANCE_ANSWER_APPLICATION = "aaa"),
-      (C.C2S_JOIN_OPEN_ALLIANCE = "joa"),
-      (C.S2C_JOIN_OPEN_ALLIANCE = "joa"),
-      (C.C2S_ALLIANCE_SET_SEARCH_MEMBER = "asm"),
-      (C.S2C_ALLIANCE_SET_SEARCH_MEMBER = "asm"),
-      (C.C2S_AUTO_ALLIANCE_SEARCH = "aas"),
-      (C.S2C_AUTO_ALLIANCE_SEARCH = "aas"),
-      (C.C2S_ALLIANCE_HELP_LIST = "ahl"),
-      (C.S2C_ALLIANCE_HELP_LIST = "ahl"),
-      (C.S2C_ALLIANCE_HELP_FEEDBACK = "ahf"),
-      (C.C2S_ALLIANCE_HELP_CONFIRMED = "ahc"),
-      (C.C2S_ALLIANCE_HELP_REQUEST_RECRUITMENT = "ahr"),
-      (C.S2C_ALLIANCE_HELP_REQUEST_RECRUITMENT = "ahr"),
-      (C.S2C_ALLIANCE_HELP_CHANGE_OR_ADD = "ahh"),
-      (C.S2C_ALLIANCE_HELP_DELETE = "ahd"),
-      (C.C2S_ALLIANCE_HELP_ALL = "aha"),
-      (C.C2S_ALLIANCE_SET_AUTO_WAR = "saw"),
-      (C.S2C_ALLIANCE_SET_AUTO_WAR = "saw"),
-      (C.S2C_GET_CURRENCY = "gcu"),
-      (C.S2C_GET_PLAYER_IDENTITY = "gpi"),
-      (C.S2C_GET_EMBLEM = "gem"),
-      (C.S2C_GET_XP = "gxp"),
-      (C.S2C_GET_BASIC_DATA = "gbd"),
-      (C.S2C_LEVEL_UP = "glu"),
-      (C.S2C_GET_ACTIVITY = "gac"),
-      (C.S2C_GET_PERMANENT_CASTLE_DATA = "gpc"),
-      (C.C2S_GET_PERMANENT_CASTLE_DATA = "gpc"),
-      (C.S2C_GET_PLAYER_ALLIANCE = "gal"),
-      (C.C2S_GET_CASTLELIST = "gcl"),
-      (C.S2C_GET_CASTLELIST = "gcl"),
-      (C.C2S_GET_DETAILPLAYERINFO = "gdi"),
-      (C.S2C_GET_DETAILPLAYERINFO = "gdi"),
-      (C.S2C_PREMIUM_FLAG_INFO = "gpf"),
-      (C.C2S_BUY_PREMIUIM_FLAG = "gbp"),
-      (C.S2C_BUY_PREMIUIM_FLAG = "gbp"),
-      (C.S2C_HELLO_WORLD = "ghw"),
-      (C.C2S_USER_ATTACK_PROTECTION = "uap"),
-      (C.S2C_USER_ATTACK_PROTECTION = "uap"),
-      (C.S2C_GET_HONOR = "gho"),
-      (C.C2S_GET_DETAILEDCASTLELIST = "dcl"),
-      (C.S2C_GET_DETAILEDCASTLELIST = "dcl"),
-      (C.S2C_GET_FAME = "ufa"),
-      (C.S2C_USER_FACTION_POINTS = "ufp"),
-      (C.S2C_USER_ACHIEVED_RANK = "uar"),
-      (C.C2S_USER_ACHIEVED_RANK = "uar"),
-      (C.S2C_GET_PAYMENT_INFO = "upi"),
-      (C.S2C_KIKERIKI = "kik"),
-      (C.S2C_GET_KINGSTOWER_LIST = "gkl"),
-      (C.C2S_GET_PACKAGE_BUY_COUNT = "gbc"),
-      (C.S2C_GET_PACKAGE_BUY_COUNT = "gbc"),
-      (C.S2C_LIFETIME_SPEND_C2 = "lts"),
-      (C.C2S_ADD_BOOKMARK = "bad"),
-      (C.S2C_ADD_BOOKMARK = "bad"),
-      (C.C2S_CHANGE_BOOKMARK = "bch"),
-      (C.S2C_CHANGE_BOOKMARK = "bch"),
-      (C.C2S_DELETE_BOOKMARK = "bde"),
-      (C.S2C_DELETE_BOOKMARK = "bde"),
-      (C.C2S_DELETE_ALLIANCE_BOOKMARK = "abd"),
-      (C.S2C_DELETE_ALLIANCE_BOOKMARK = "abd"),
-      (C.C2S_GET_BOOKMARKLIST = "gbl"),
-      (C.S2C_GET_BOOKMARKLIST = "gbl"),
-      (C.C2S_BOOSTER_INFO = "boi"),
-      (C.S2C_BOOSTER_INFO = "boi"),
-      (C.C2S_OVERSEER_START = "ovs"),
-      (C.S2C_OVERSEER_START = "ovs"),
-      (C.C2S_DOCTOR_START = "bds"),
-      (C.S2C_DOCTOR_START = "bds"),
-      (C.C2S_MARAUDER_START = "bms"),
-      (C.S2C_MARAUDER_START = "bms"),
-      (C.C2S_INSTRUCTOR_START = "bis"),
-      (C.S2C_INSTRUCTOR_START = "bis"),
-      (C.C2S_ARCHITECT_START = "bas"),
-      (C.S2C_ARCHITECT_START = "bas"),
-      (C.C2S_CARAVAN_OVERLOADER_START = "bcs"),
-      (C.S2C_CARAVAN_OVERLOADER_START = "bcs"),
-      (C.C2S_BOOST_RETURNSPEED_START = "brs"),
-      (C.S2C_BOOST_RETURNSPEED_START = "brs"),
-      (C.C2S_SHOW_CONSTRUCTION_LIST = "scl"),
-      (C.S2C_SHOW_CONSTRUCTION_LIST = "scl"),
-      (C.C2S_MOVE_CONSTRUCTION_ITEM = "mci"),
-      (C.S2C_FINISHED_BUILDING = "fbe"),
-      (C.C2S_GET_CASTLE = "gca"),
-      (C.S2C_GET_CASTLE = "gca"),
-      (C.C2S_GET_CASTLE_RESOURCES = "grc"),
-      (C.S2C_GET_CASTLE_RESOURCES = "grc"),
-      (C.C2S_GET_CASTLE_PRODUCTION_DATA = "gpa"),
-      (C.S2C_GET_CASTLE_PRODUCTION_DATA = "gpa"),
-      (C.C2S_PLACE_CUSTOM_INVENTORY_OBJECT = "pio"),
-      (C.S2C_PLACE_CUSTOM_INVENTORY_OBJECT = "pio"),
-      (C.C2S_BUY_OBJECT = "ebu"),
-      (C.S2C_BUY_OBJECT = "ebu"),
-      (C.C2S_BUY_EXPANSION = "ebe"),
-      (C.S2C_BUY_EXPANSION = "ebe"),
-      (C.C2S_MOVE_OBJECT = "emo"),
-      (C.S2C_MOVE_OBJECT = "emo"),
-      (C.C2S_UPGRADE_OBJECT = "eup"),
-      (C.S2C_UPGRADE_OBJECT = "eup"),
-      (C.C2S_DISASSEMBLE_OBJECT = "edo"),
-      (C.S2C_DISASSEMBLE_OBJECT = "edo"),
-      (C.S2C_GET_OBJECT = "ego"),
-      (C.C2S_FAST_COMPLETE_OBJECT = "fco"),
-      (C.S2C_FAST_COMPLETE_OBJECT = "fco"),
-      (C.C2S_REPAIR_BUILDING = "rbu"),
-      (C.S2C_REPAIR_BUILDING = "rbu"),
-      (C.C2S_UPGRADE_DEFENCE = "eud"),
-      (C.S2C_UPGRADE_DEFENCE = "eud"),
-      (C.S2C_GET_CHANGED_BUILDING_EFFICIENCY = "gcb"),
-      (C.S2C_GET_DAMAGED_BUILDINGS = "gdb"),
-      (C.S2C_GET_DAMAGED_BUILDINGS_E4K = "dar"),
-      (C.S2C_GET_DAMAGED_BUILDINGS_AND_RUBBLE = "gdr"),
-      (C.S2C_RESOURCE_CITIZEN = "irc"),
-      (C.C2S_RESOURCE_CITIZEN = "irc"),
-      (C.C2S_REPAIR_ALL = "ira"),
-      (C.S2C_REPAIR_ALL = "ira"),
-      (C.S2C_GET_AREA_BOOSTER = "gab"),
-      (C.C2S_MERCENARY_PACKAGE = "mpe"),
-      (C.S2C_MERCENARY_PACKAGE = "mpe"),
-      (C.C2S_MERCENARY_REFRESH_MISSION = "rmm"),
-      (C.S2C_MERCENARY_REFRESH_MISSION = "rmm"),
-      (C.S2C_SPECIAL_CURRENCY_EVENT = "sce"),
-      (C.GET_CASTLE_TRANSPORTATION_BUILDINGS_EVENT = "gctb"),
-      (C.C2S_START_TAX_COLLECTION = "txs"),
-      (C.S2C_START_TAX_COLLECTION = "txs"),
-      (C.C2S_COLLECT_TAX = "txc"),
-      (C.S2C_COLLECT_TAX = "txc"),
-      (C.C2S_BRIBE_TAX_COLLECTOR = "btx"),
-      (C.S2C_BRIBE_TAX_COLLECTOR = "btx"),
-      (C.C2S_TAX_INFO = "txi"),
-      (C.S2C_TAX_INFO = "txi"),
-      (C.C2S_GET_TUTORIAL_AREAS = "gta"),
-      (C.C2S_GET_AREAS = "gaa"),
-      (C.S2C_GET_AREAS = "gaa"),
-      (C.C2S_JOIN_AREA = "jaa"),
-      (C.S2C_JOIN_AREA = "jaa"),
-      (C.C2S_JOIN_CASTLE = "jca"),
-      (C.S2C_JOIN_CASTLE = "jca"),
-      (C.C2S_JOIN_CAMP = "jea"),
-      (C.S2C_JOIN_CAMP = "jea"),
-      (C.C2S_SEARCH_PLAYER = "wsp"),
-      (C.S2C_SEARCH_PLAYER = "wsp"),
-      (C.C2S_GET_DUNGEONS = "wgd"),
-      (C.C2S_FIND_NEXT_ENEMY_CASTLE_FOR_HONOR = "fec"),
-      (C.S2C_FIND_NEXT_ENEMY_CASTLE_FOR_HONOR = "fec"),
-      (C.S2C_FIND_NEXT_ENEMY_CASTLE_FOR_GLORY = "ffc"),
-      (C.C2S_FIND_NEXT_ENEMY_CASTLE_FOR_GLORY = "ffc"),
-      (C.C2S_LEAVE_AREA = "laa"),
-      (C.S2C_LEAVE_AREA = "laa"),
-      (C.C2S_FIND_NEXT_MAPOBJECT = "fnm"),
-      (C.S2C_FIND_NEXT_MAPOBJECT = "fnm"),
-      (C.C2S_RUIN_INFO = "rui"),
-      (C.S2C_RUIN_INFO = "rui"),
-      (C.C2S_START_RELOCATION = "rst"),
-      (C.S2C_START_RELOCATION = "rst"),
-      (C.C2S_REMEMBER_RUIN = "rmb"),
-      (C.S2C_REMEMBER_RUIN = "rmb"),
-      (C.S2C_GET_RELOCATION_INFO = "gri"),
-      (C.C2S_SHOW_MESSAGES = "sne"),
-      (C.S2C_SHOW_MESSAGES = "sne"),
-      (C.C2S_SEND_MESSAGE = "sms"),
-      (C.S2C_SEND_MESSAGE = "sms"),
-      (C.C2S_MARK_MESSAGE_READ = "mmr"),
-      (C.C2S_READ_MESSAGES = "rms"),
-      (C.S2C_READ_MESSAGES = "rms"),
-      (C.C2S_DELETE_MESSAGE = "dms"),
-      (C.S2C_DELETE_MESSAGE = "dms"),
-      (C.C2S_IGNORE_PLAYER = "ipl"),
-      (C.S2C_IGNORE_PLAYER = "ipl"),
-      (C.C2S_BATTLE_LOG_SHORT = "bls"),
-      (C.S2C_BATTLE_LOG_SHORT = "bls"),
-      (C.C2S_BATTLE_LOG_MIDDLE = "blm"),
-      (C.S2C_BATTLE_LOG_MIDDLE = "blm"),
-      (C.C2S_BATTLE_LOG_DETAIL = "bld"),
-      (C.S2C_BATTLE_LOG_DETAIL = "bld"),
-      (C.C2S_BUG_REPORT = "brp"),
-      (C.S2C_BUG_REPORT = "brp"),
-      (C.C2S_MARKET_CARRIAGE_NOTIFY = "mmn"),
-      (C.S2C_MARKET_CARRIAGE_NOTIFY = "mmn"),
-      (C.S2C_RENAME_CASTLE_INVITATION = "mir"),
-      (C.C2S_GET_IGNORED_PLAYERS = "ili"),
-      (C.S2C_GET_IGNORED_PLAYERS = "ili"),
-      (C.C2S_FORWARD_BATTLE_LOG = "mfb"),
-      (C.S2C_FORWARD_BATTLE_LOG = "mfb"),
-      (C.C2S_FORWARD_SPY_LOG = "mfs"),
-      (C.S2C_FORWARD_SPY_LOG = "mfs"),
-      (C.C2S_ARCHIVE_MESSAGES = "ams"),
-      (C.S2C_ARCHIVE_MESSAGES = "ams"),
-      (C.C2S_PEACEMODE_START = "mps"),
-      (C.S2C_PEACEMODE_START = "mps"),
-      (C.C2S_OPENGATE_START = "mos"),
-      (C.S2C_OPENGATE_START = "mos"),
-      (C.C2S_ABANDONOUTPOST_START = "mas"),
-      (C.S2C_ABANDONOUTPOST_START = "mas"),
-      (C.C2S_ABANDON_OUTPOST_CANCEL = "mac"),
-      (C.S2C_ABANDON_OUTPOST_CANCEL = "mac"),
-      (C.C2S_GET_ALL_MOVEMENTS = "gam"),
-      (C.S2C_GET_ALL_MOVEMENTS = "gam"),
-      (C.C2S_CANCEL_MOVEMENT = "mcm"),
-      (C.S2C_CANCEL_MOVEMENT = "mcm"),
-      (C.C2S_CREATE_DEFENCE_SUPPORT_MOVEMENT = "cds"),
-      (C.S2C_CREATE_DEFENCE_SUPPORT_MOVEMENT = "cds"),
-      (C.S2C_CREATE_SIEGE_MOVEMENT = "css"),
-      (C.C2S_CREATE_ARMY_ATTACK_MOVEMENT = "cra"),
-      (C.S2C_CREATE_ARMY_ATTACK_MOVEMENT = "cra"),
-      (C.S2C_ARMY_REACHED_SMALL_RADIUS = "asr"),
-      (C.S2C_ARMY_REACHED_BIG_RADIUS = "abr"),
-      (C.C2S_CREATE_ARMY_TRAVEL_MOVEMENT = "cat"),
-      (C.S2C_CREATE_ARMY_TRAVEL_MOVEMENT = "cat"),
-      (C.C2S_CREATE_MARKET_MOVEMENT = "crm"),
-      (C.S2C_CREATE_MARKET_MOVEMENT = "crm"),
-      (C.C2S_SKIP_DUNGEON_COOLDOWN = "sdc"),
-      (C.S2C_SKIP_DUNGEON_COOLDOWN = "sdc"),
-      (C.C2S_MARKET_INFO = "cmi"),
-      (C.S2C_MARKET_INFO = "cmi"),
-      (C.C2S_TROOP_SUPPORT_INFO = "sti"),
-      (C.S2C_TROOP_SUPPORT_INFO = "sti"),
-      (C.C2S_SHOW_INVENTORY = "sin"),
-      (C.S2C_SHOW_INVENTORY = "sin"),
-      (C.C2S_MARK_BUILDING_IN_STORAGE = "mbs"),
-      (C.S2C_MARK_BUILDING_IN_STORAGE = "mbs"),
-      (C.C2S_STORE_OBJECT = "sob"),
-      (C.S2C_STORE_OBJECT = "sob"),
-      (C.C2S_BUY_UNIT_PACKAGE = "bup"),
-      (C.S2C_BUY_UNIT_PACKAGE = "bup"),
-      (C.C2S_SHOW_PACKAGE_LIST = "spl"),
-      (C.S2C_SHOW_PACKAGE_LIST = "spl"),
-      (C.C2S_UNLOCK_PACKAGE_SLOT = "ups"),
-      (C.S2C_UNLOCK_PACKAGE_SLOT = "ups"),
-      (C.C2S_MOVE_UNIT_PACKAGE = "mup"),
-      (C.S2C_MOVE_UNIT_PACKAGE = "mup"),
-      (C.C2S_CANCEL_UNIT_PACKAGE = "mcu"),
-      (C.S2C_CANCEL_UNIT_PACKAGE = "mcu"),
-      (C.C2S_GET_UNIT_INVENTORY = "gui"),
-      (C.S2C_GET_UNIT_INVENTORY = "gui"),
-      (C.C2S_GET_RECEIVED_UNIT_EVENT = "rue"),
-      (C.S2C_GET_RECEIVED_UNIT_EVENT = "rue"),
-      (C.C2S_BOOST_UNIT_PACKAGE = "bou"),
-      (C.S2C_BOOST_UNIT_PACKAGE = "bou"),
-      (C.C2S_SET_RECRUITMENT_MODE = "srm"),
-      (C.S2C_GET_RECRUITMENT_DUPLICATION_INFO = "dri"),
-      (C.C2S_GET_RECRUITMENT_DUPLICATION_INFO = "dri"),
-      (C.C2S_DUPLICATE_RECRUITMENT_LIST = "drl"),
-      (C.S2C_DUPLICATE_RECRUITMENT_LIST = "drl"),
-      (C.C2S_DEFENSE_COMPLETE = "dfc"),
-      (C.S2C_DEFENSE_COMPLETE = "dfc"),
-      (C.C2S_DEFENSE_WALL = "dfw"),
-      (C.S2C_DEFENSE_WALL = "dfw"),
-      (C.C2S_DEFENSE_KEEP = "dfk"),
-      (C.S2C_DEFENSE_KEEP = "dfk"),
-      (C.C2S_DEFENSE_MOAT = "dfm"),
-      (C.S2C_DEFENSE_MOAT = "dfm"),
-      (C.C2S_INSTANT_BUY_TOOL = "ibt"),
-      (C.S2C_INSTANT_BUY_TOOL = "ibt"),
-      (C.C2S_GET_ATTACK_CASTLE_INFOS = "aci"),
-      (C.S2C_GET_ATTACK_CASTLE_INFOS = "aci"),
-      (C.C2S_GET_ATTACK_DUNGEON_INFOS = "adi"),
-      (C.S2C_GET_ATTACK_DUNGEON_INFOS = "adi"),
-      (C.C2S_GET_CONQUER_INFO_OUTPOST = "coi"),
-      (C.S2C_GET_CONQUER_INFO_OUTPOST = "coi"),
-      (C.C2S_GET_CONQUER_INFO_CAPITAL = "cci"),
-      (C.S2C_GET_CONQUER_INFO_CAPITAL = "cci"),
-      (C.C2S_CONQUER_INFO_TRADECENTER = "cti"),
-      (C.S2C_CONQUER_INFO_TRADECENTER = "cti"),
-      (C.C2S_ATTACK_INFO_BOSSDUNGEON = "abi"),
-      (C.S2C_ATTACK_INFO_BOSSDUNGEON = "abi"),
-      (C.C2S_ATTACK_INFO_VILLAGE = "avi"),
-      (C.S2C_ATTACK_INFO_VILLAGE = "avi"),
-      (C.C2S_ATTACK_INFO_LANDMARK = "ali"),
-      (C.S2C_ATTACK_INFO_LANDMARK = "ali"),
-      (C.C2S_ATTACK_INFO_ISLAND = "aii"),
-      (C.S2C_ATTACK_INFO_ISLAND = "aii"),
-      (C.S2C_OCCUPATION_TARGET_CHANGED_STATUS = "otc"),
-      (C.C2S_GET_PREDEFINED_ATTACK_SETUP = "gas"),
-      (C.S2C_GET_PREDEFINED_ATTACK_SETUP = "gas"),
-      (C.C2S_SAVE_PREDEFINED_ATTACK_SETUP = "sas"),
-      (C.S2C_SAVE_PREDEFINED_ATTACK_SETUP = "sas"),
-      (C.C2S_UNLOCK_PREDEFINED_ATTACK_SLOT = "uas"),
-      (C.S2C_UNLOCK_PREDEFINED_ATTACK_SLOT = "uas"),
-      (C.C2S_GET_ATTACK_INFO = "gai"),
-      (C.S2C_GET_ATTACK_INFO = "gai"),
-      (C.C2S_GET_MAX_SPYS = "gms"),
-      (C.S2C_GET_MAX_SPYS = "gms"),
-      (C.C2S_GET_SPY_INFO = "ssi"),
-      (C.S2C_GET_SPY_INFO = "ssi"),
-      (C.C2S_CREATE_SPY_MOVEMENT = "csm"),
-      (C.S2C_CREATE_SPY_MOVEMENT = "csm"),
-      (C.C2S_REMOVE_MOVEMENT = "mrm"),
-      (C.S2C_REMOVE_MOVEMENT = "mrm"),
-      (C.C2S_SPY_LOG_DETAIL = "bsd"),
-      (C.S2C_SPY_LOG_DETAIL = "bsd"),
-      (C.C2S_GET_SPY_UNITS_EVENT = "ssu"),
-      (C.S2C_GET_SPY_UNITS_EVENT = "ssu"),
-      (C.S2C_QUEST_START = "qst"),
-      (C.S2C_QUEST_FINISHED = "qfi"),
-      (C.C2S_QUEST_STARTER_CLICK = "qsc"),
-      (C.S2C_QUEST_STARTER_CLICK = "qsc"),
-      (C.C2S_QUEST_DONATE_RESOURCES = "qdr"),
-      (C.S2C_QUEST_DONATE_RESOURCES = "qdr"),
-      (C.C2S_QUEST_LIST = "qli"),
-      (C.S2C_QUEST_LIST = "qli"),
-      (C.S2C_QUEST_PROGRES = "qpg"),
-      (C.S2C_QUEST_MARK_AS_READ = "qmr"),
-      (C.C2S_CHECK_COMPLETED_QUESTS = "ccq"),
-      (C.S2C_CHECK_COMPLETED_QUESTS = "ccq"),
-      (C.C2S_MAIN_CASTLE_RESOURCES = "mcr"),
-      (C.S2C_MAIN_CASTLE_RESOURCES = "mcr"),
-      (C.C2S_BUY_QUEST = "bcq"),
-      (C.S2C_BUY_QUEST = "bcq"),
-      (C.C2S_BUY_CAMPAIGN_REWARD = "bcr"),
-      (C.S2C_BUY_CAMPAIGN_REWARD = "bcr"),
-      (C.S2C_CAMPAIGN_QUEST_STATUS = "cqs"),
-      (C.C2S_QUEST_DONATE_CURRENCIES = "qdc"),
-      (C.S2C_QUEST_DONATE_CURRENCIES = "qdc"),
-      (C.C2S_GET_HIGHSCORE = "hgh"),
-      (C.S2C_GET_HIGHSCORE = "hgh"),
-      (C.C2S_GET_WEEKLY_HONOR_SCORE = "gwh"),
-      (C.S2C_GET_WEEKLY_HONOR_SCORE = "gwh"),
-      (C.C2S_REDEEM_WEEKLY_HONOR_SCORE = "rwb"),
-      (C.S2C_REDEEM_WEEKLY_HONOR_SCORE = "rwb"),
-      (C.C2S_SUPPORT_DEFENCE_INFO = "sdi"),
-      (C.S2C_SUPPORT_DEFENCE_INFO = "sdi"),
-      (C.C2S_ARTIFACT_FOUND = "saf"),
-      (C.S2C_ARTIFACT_FOUND = "saf"),
-      (C.C2S_BUY_ARTIFACT_PIECE = "sap"),
-      (C.S2C_BUY_ARTIFACT_PIECE = "sap"),
-      (C.S2C_PAYMENT_REWARD = "par"),
-      (C.S2C_PAYMENT_CONFIRMAMTION = "upc"),
-      (C.C2S_START_HUNTER = "hst"),
-      (C.S2C_START_HUNTER = "hst"),
-      (C.C2S_HUNTER_INFO = "hin"),
-      (C.S2C_HUNTER_INFO = "hin"),
-      (C.S2C_HUNTER_RETURNED = "hre"),
-      (C.C2S_RESEARCH_INFO = "rei"),
-      (C.S2C_RESEARCH_INFO = "rei"),
-      (C.C2S_RESEARCH_START = "res"),
-      (C.S2C_RESEARCH_START = "res"),
-      (C.C2S_RESEARCH_FINISH_INSTANT = "rfi"),
-      (C.S2C_RESEARCH_FINISH_INSTANT = "rfi"),
-      (C.C2S_KINGDOM_INFO = "kpi"),
-      (C.S2C_KINGDOM_INFO = "kpi"),
-      (C.C2S_KINGDOM_SKIP_TRANSFER = "kst"),
-      (C.S2C_KINGDOM_SKIP_TRANSFER = "kst"),
-      (C.C2S_KINGDOM_UNIT_TRANSFER = "kut"),
-      (C.S2C_KINGDOM_UNIT_TRANSFER = "kut"),
-      (C.C2S_KINGDOM_GOODS_TRANSFER = "kgt"),
-      (C.S2C_KINGDOM_GOODS_TRANSFER = "kgt"),
-      (C.C2S_CRUSADE_SELECT_CAMP = "csc"),
-      (C.S2C_CRUSADE_SELECT_CAMP = "csc"),
-      (C.C2S_FACTION_SELECT_CAMP = "fsc"),
-      (C.S2C_FACTION_SELECT_CAMP = "fsc"),
-      (C.C2S_KINGDOM_SELECT_CAMP = "ksc"),
-      (C.S2C_KINGDOM_SELECT_CAMP = "ksc"),
-      (C.C2S_KINGDOM_GET_VILLAGE_LIST = "kgv"),
-      (C.S2C_KINGDOM_GET_VILLAGE_LIST = "kgv"),
-      (C.S2C_GET_LOGIN_NAME = "agl"),
-      (C.C2S_UNLOCK_EVENT = "ule"),
-      (C.S2C_UNLOCK_EVENT = "ule"),
-      (C.S2C_FACTIONS_JOIN_FACTION = "fjf"),
-      (C.C2S_GET_FACTION_BALANCE = "fgb"),
-      (C.S2C_GET_FACTION_BALANCE = "fgb"),
-      (C.C2S_FIND_NEXT_TOWER = "fnt"),
-      (C.S2C_FIND_NEXT_TOWER = "fnt"),
-      (C.C2S_GET_ATTACKABLE_FACTION_DATA = "afd"),
-      (C.S2C_GET_ATTACKABLE_FACTION_DATA = "afd"),
-      (C.C2S_GET_FACTIONKINGDOM_INFO = "fki"),
-      (C.S2C_GET_FACTIONKINGDOM_INFO = "fki"),
-      (C.C2S_START_FACTIONPROTECTION = "ffp"),
-      (C.S2C_START_FACTIONPROTECTION = "ffp"),
-      (C.C2S_CONQUER_INFO_FACTIONCAMP = "cfi"),
-      (C.S2C_CONQUER_INFO_FACTIONCAMP = "cfi"),
-      (C.C2S_GET_CAMP_UNIT_CAPACITY = "fuc"),
-      (C.S2C_GET_CAMP_UNIT_CAPACITY = "fuc"),
-      (C.C2S_GET_ALL_CAMP_UNIT_CAPACITY = "fac"),
-      (C.S2C_GET_ALL_CAMP_UNIT_CAPACITY = "fac"),
-      (C.C2S_GET_VILLAGE_COUNT = "gvc"),
-      (C.S2C_GET_VILLAGE_COUNT = "gvc"),
-      (C.S2C_SHUTTING_DOWN_EVENT = "sde"),
-      (C.C2S_GET_EQUIPMENT_INVENTORY = "gei"),
-      (C.S2C_GET_EQUIPMENT_INVENTORY = "gei"),
-      (C.C2S_EQUIPMENT_INVENTORY_SPACE_LEFT = "esl"),
-      (C.S2C_EQUIPMENT_INVENTORY_SPACE_LEFT = "esl"),
-      (C.C2S_CRAFT_EQUIPMENT = "ceq"),
-      (C.S2C_CRAFT_EQUIPMENT = "ceq"),
-      (C.C2S_EQUIP_EQUIPMENT = "eeq"),
-      (C.S2C_EQUIP_EQUIPMENT = "eeq"),
-      (C.C2S_SELL_EQUIPMENT = "seq"),
-      (C.S2C_SELL_EQUIPMENT = "seq"),
-      (C.S2C_BOUGHT_EQUIPMENT = "beq"),
-      (C.C2S_GET_LORDS_INFO = "gli"),
-      (C.S2C_GET_LORDS_INFO = "gli"),
-      (C.C2S_GET_LORD_ASSIGNED_GENERAL = "gla"),
-      (C.S2C_GET_LORD_ASSIGNED_GENERAL = "gla"),
-      (C.C2S_RENAME_LORD = "arl"),
-      (C.S2C_RENAME_LORD = "arl"),
-      (C.C2S_EXTRACT_GEM = "ege"),
-      (C.S2C_EXTRACT_GEM = "ege"),
-      (C.C2S_ALLIANCE_FORGE_EVENT = "frc"),
-      (C.S2C_ALLIANCE_FORGE_EVENT = "frc"),
-      (C.C2S_GET_NEW_RELICS = "gnr"),
-      (C.S2C_GET_NEW_RELICS = "gnr"),
-      (C.C2S_NEW_RELICS_FLAG = "nrf"),
-      (C.S2C_NEW_RELICS_FLAG = "nrf"),
-      (C.C2S_ENCHANT_RELIC_ITEM_EVENT = "ere"),
-      (C.S2C_ENCHANT_RELIC_ITEM_EVENT = "ere"),
-      (C.BOUGHT_RELIC_ITEM_EVENT = "bri"),
-      (C.C2S_ENCHANT_EQUIPMENT_EVENT = "eqe"),
-      (C.S2C_ENCHANT_EQUIPMENT_EVENT = "eqe"),
-      (C.C2S_SET_PUSH_NOTIFICATION_RUIN = "grt"),
-      (C.S2C_SET_PUSH_NOTIFICATION_RUIN = "grt"),
-      (C.C2S_COLOSSUS_GET_RANK = "che"),
-      (C.S2C_COLOSSUS_GET_RANK = "che"),
-      (C.C2S_COLOSSUS_DEPOSIT_RESOURCES = "cde"),
-      (C.S2C_COLOSSUS_DEPOSIT_RESOURCES = "cde"),
-      (C.C2S_CHOOSE_DECO_CASTLE = "cdc"),
-      (C.S2C_CHOOSE_DECO_CASTLE = "cdc"),
-      (C.C2S_COLOSSUS_GET_COLOSSUS = "cdg"),
-      (C.S2C_COLOSSUS_GET_COLOSSUS = "cdg"),
-      (C.C2S_OPEN_ACTIVITY_CHEST = "uoa"),
-      (C.S2C_OPEN_ACTIVITY_CHEST = "uoa"),
-      (C.S2C_ACTIVITY_CHEST_INFO = "uac"),
-      (C.C2S_FESTIVAL_START = "bfs"),
-      (C.S2C_FESTIVAL_START = "bfs"),
-      (C.C2S_ACHIEVEMENT_LIST = "vli"),
-      (C.S2C_ACHIEVEMENT_LIST = "vli"),
-      (C.C2S_ACHIEVEMENT_FINISHED = "vfi"),
-      (C.S2C_ACHIEVEMENT_FINISHED = "vfi"),
-      (C.S2C_GET_STATUS_MINES = "gsm"),
-      (C.C2S_COLLECT_MINE_RESOURCES = "cmr"),
-      (C.S2C_COLLECT_MINE_RESOURCES = "cmr"),
-      (C.S2C_DAILY_QUEST_LIST = "dql"),
-      (C.C2S_DAILY_QUEST_LIST = "dql"),
-      (C.S2C_COLLECT_DAILY_REWARD = "cdr"),
-      (C.C2S_COLLECT_DAILY_REWARD = "cdr"),
-      (C.C2S_VIP_INFO_EVENT = "vip"),
-      (C.S2C_VIP_INFO_EVENT = "vip"),
-      (C.C2S_OPTION_EVENT = "opt"),
-      (C.S2C_OPTION_EVENT = "opt"),
-      (C.C2S_LUCKY_WHEEL_SPIN = "lws"),
-      (C.S2C_LUCKY_WHEEL_SPIN = "lws"),
-      (C.C2S_LUCKY_WHEEL_CHANGE_MODE = "lwm"),
-      (C.S2C_LUCKY_WHEEL_CHANGE_MODE = "lwm"),
-      (C.C2S_LUCKY_WHEEL_BUY_JACKPOT = "lwj"),
-      (C.S2C_LUCKY_WHEEL_BUY_JACKPOT = "lwj"),
-      (C.C2S_LUCKY_WHEEL_INCREASE_PRIZE_CLASS = "lwc"),
-      (C.S2C_LUCKY_WHEEL_INCREASE_PRIZE_CLASS = "lwc"),
-      (C.S2C_GET_DAILY_RESET_TIME = "drt"),
-      (C.C2S_GET_DAILY_RESET_TIME = "drt"),
-      (C.C2S_GET_BUILDING_INFO = "gbi"),
-      (C.S2C_GET_BUILDING_INFO = "gbi"),
-      (C.C2S_GET_EXPANSION_INFO = "sea"),
-      (C.S2C_GET_EXPANSION_INFO = "sea"),
-      (C.C2S_NEW_MARAUDERS_DEPOSIT_RESOURCES = "bkp"),
-      (C.S2C_NEW_MARAUDERS_DEPOSIT_RESOURCES = "bkp"),
-      (C.C2S_TREASUREMAPS = "tmp"),
-      (C.S2C_TREASUREMAPS = "tmp"),
-      (C.C2S_CREATE_TREASUREHUNT_MOVEMENT = "thm"),
-      (C.S2C_CREATE_TREASUREHUNT_MOVEMENT = "thm"),
-      (C.C2S_ATTACK_INFO_TREASUREDUNGEON = "tai"),
-      (C.S2C_ATTACK_INFO_TREASUREDUNGEON = "tai"),
-      (C.C2S_BUY_TREASUREMAP_PIECE = "tbm"),
-      (C.S2C_BUY_TREASUREMAP_PIECE = "tbm"),
-      (C.C2S_TREASUREMAP_SKIP_TRANSFER = "tkt"),
-      (C.S2C_TREASUREMAP_SKIP_TRANSFER = "tkt"),
-      (C.C2S_TREASUREMAP_UNIT_TRANSFER = "tut"),
-      (C.S2C_TREASUREMAP_UNIT_TRANSFER = "tut"),
-      (C.C2S_TREASUREMAP_GOODS_TRANSFER = "tgt"),
-      (C.S2C_TREASUREMAP_GOODS_TRANSFER = "tgt"),
-      (C.C2S_TREASURE_FINISH_MAP = "tfm"),
-      (C.S2C_TREASURE_FINISH_MAP = "tfm"),
-      (C.S2C_TREASUREHUNT_INFO = "thi"),
-      (C.C2S_CLICK_NODE = "tcn"),
-      (C.S2C_CLICK_NODE = "tcn"),
-      (C.S2C_HIDE_ALIEN_CAMP = "hac"),
-      (C.S2C_REPLACE_ALIEN_CAMP = "rae"),
-      (C.C2S_REPLACE_ALIEN_CAMP = "rae"),
-      (C.S2C_GET_ALIEN_REPLACE_COUNT = "rce"),
-      (C.C2S_GET_ALIEN_REPLACE_COUNT = "rce"),
-      (C.C2S_DISMISS_UNITS = "dup"),
-      (C.S2C_DISMISS_UNITS = "dup"),
-      (C.C2S_REVIVE_ALL_HOSPITAL_UNITS = "hra"),
-      (C.S2C_REVIVE_ALL_HOSPITAL_UNITS = "hra"),
-      (C.C2S_CANCEL_HOSPITAL_SLOT = "hcs"),
-      (C.S2C_CANCEL_HOSPITAL_SLOT = "hcs"),
-      (C.C2S_REVIVE_HOSPITAL_UNITS = "hru"),
-      (C.S2C_REVIVE_HOSPITAL_UNITS = "hru"),
-      (C.C2S_SKIP_HOSPITAL_SLOT = "hss"),
-      (C.S2C_SKIP_HOSPITAL_SLOT = "hss"),
-      (C.C2S_DISMISS_HOSPITAL_UNITS = "hdu"),
-      (C.S2C_DISMISS_HOSPITAL_UNITS = "hdu"),
-      (C.C2S_ASSIGN_TITLE = "apt"),
-      (C.S2C_ASSIGN_TITLE = "apt"),
-      (C.S2C_ISLAND_KINGDOM_RESET = "ikr"),
-      (C.C2S_GET_AQUA_POINTS = "gap"),
-      (C.S2C_GET_AQUA_POINTS = "gap"),
-      (C.C2S_STORM_ISLAND_INFO = "sii"),
-      (C.S2C_STORM_ISLAND_INFO = "sii"),
-      (C.C2S_SEARCH_PLAYER_FOR_TITLE = "spt"),
-      (C.S2C_SEARCH_PLAYER_FOR_TITLE = "spt"),
-      (C.C2S_ALLIANCE_MEMBER_AQUA_POINTS_EVENT = "ama"),
-      (C.S2C_ALLIANCE_MEMBER_AQUA_POINTS_EVENT = "ama"),
-      (C.S2C_SLUM_LEVEL = "csl"),
-      (C.S2C_UPDATE_REWARD_INFO_EVENT = "uri"),
-      (C.C2S_ASSIGN_AND_GET_TEST_CASE_EVENT = "gtc"),
-      (C.S2C_ASSIGN_AND_GET_TEST_CASE_EVENT = "gtc"),
-      (C.C2S_SET_FACEBOOK_DATA_EVENT = "sfd"),
-      (C.S2C_SET_FACEBOOK_DATA_EVENT = "sfd"),
-      (C.C2S_PLAYERS_BY_FACEBOOK_IDS = "pbf"),
-      (C.S2C_PLAYERS_BY_FACEBOOK_IDS = "pbf"),
-      (C.C2S_GET_OWNER_INFO = "goi"),
-      (C.S2C_GET_OWNER_INFO = "goi"),
-      (C.C2S_GET_FACEBOOK_GIFT_COUNT = "fgc"),
-      (C.S2C_GET_FACEBOOK_GIFT_COUNT = "fgc"),
-      (C.C2S_GET_FACEBOOK_GIFT_LIST = "fgl"),
-      (C.S2C_GET_FACEBOOK_GIFT_LIST = "fgl"),
-      (C.C2S_COLLECT_FACEBOOK_GIFT = "cfg"),
-      (C.S2C_COLLECT_FACEBOOK_GIFT = "cfg"),
-      (C.C2S_SEND_FACEBOOK_GIFT = "sfg"),
-      (C.S2C_SEND_FACEBOOK_GIFT = "sfg"),
-      (C.C2S_GET_FACEBOOK_GIFT_COOLDOWN = "efc"),
-      (C.S2C_GET_FACEBOOK_GIFT_COOLDOWN = "efc"),
-      (C.C2S_RUBY_WISHING_WELL = "rww"),
-      (C.S2C_RUBY_WISHING_WELL = "rww"),
-      (C.C2S_SKILL_POINT_LIST = "skl"),
-      (C.S2C_SKILL_POINT_LIST = "skl"),
-      (C.C2S_ADD_SKILL_POINT = "skp"),
-      (C.S2C_ADD_SKILL_POINT = "skp"),
-      (C.C2S_RESET_SKILL_POINT = "skr"),
-      (C.S2C_RESET_SKILL_POINT = "skr"),
-      (C.S2C_HERO_DECISION_COMMAND = "hdc"),
-      (C.C2S_HERO_DECISION_COMMAND = "hdc"),
-      (C.C2S_GET_MONUMENTS_PROGRESS = "gmp"),
-      (C.S2C_GET_MONUMENTS_PROGRESS = "gmp"),
-      (C.S2C_GET_MONUMENTS_LIST = "gml"),
-      (C.S2C_MONUMENTS_RESET = "mre"),
-      (C.C2S_GET_GEMS_EVENT = "ggm"),
-      (C.S2C_GET_GEMS_EVENT = "ggm"),
-      (C.S2C_GEM_CHANGE = "gec"),
-      (C.S2C_SELL_GEM = "sge"),
-      (C.C2S_SELL_GEM = "sge"),
-      (C.S2C_BOUGHT_GEM = "bgm"),
-      (C.C2S_BIND_GEM = "bge"),
-      (C.S2C_BIND_GEM = "bge"),
-      (C.S2C_CRAFT_GEM = "cge"),
-      (C.C2S_CRAFT_GEM = "cge"),
-      (C.S2C_PLAYER_NAMES_LIST = "pnl"),
-      (C.C2S_GET_MIGHT_UPDATE = "gmu"),
-      (C.S2C_GET_MIGHT_UPDATE = "gmu"),
-      (C.C2S_KINGDOM_FAME_BOOST = "kfb"),
-      (C.S2C_KINGDOM_FAME_BOOST = "kfb"),
-      (C.C2S_SELECT_TITLE_EVENT = "ste"),
-      (C.S2C_SELECT_TITLE_EVENT = "ste"),
-      (C.C2S_GET_FACTION_POINTS = "gfp"),
-      (C.S2C_GET_FACTION_POINTS = "gfp"),
-      (C.S2C_LOGIN_POPUP_LIST = "lpl"),
-      (C.C2S_MINUTE_SKIP_BUILDING = "msb"),
-      (C.S2C_MINUTE_SKIP_BUILDING = "msb"),
-      (C.C2S_MINUTE_SKIP_KINGDOM_TRANSFER = "msk"),
-      (C.S2C_MINUTE_SKIP_KINGDOM_TRANSFER = "msk"),
-      (C.C2S_MINUTE_SKIP_MAP_TRANSFER = "msm"),
-      (C.S2C_MINUTE_SKIP_MAP_TRANSFER = "msm"),
-      (C.C2S_MINUTE_SKIP_RESEARCH = "msr"),
-      (C.S2C_MINUTE_SKIP_RESEARCH = "msr"),
-      (C.C2S_MINUTE_SKIP_DUNGEON = "msd"),
-      (C.S2C_MINUTE_SKIP_DUNGEON = "msd"),
-      (C.C2S_SAVE_SHOPPING_CART = "ssc"),
-      (C.S2C_IN_GAME_ANNOUNCEMENTS = "iga"),
-      (C.C2S_GET_ANNOUNCEMENTS_IN_LANGUAGE = "gia"),
-      (C.S2C_GET_ANNOUNCEMENTS_IN_LANGUAGE = "gia"),
-      (C.C2S_GET_CONSTRUCTION_ITEM_INVENTORY = "gii"),
-      (C.S2C_GET_CONSTRUCTION_ITEM_INVENTORY = "gii"),
-      (C.C2S_ADD_OR_REPLACE_CONSTRUCTION_ITEM = "rpc"),
-      (C.S2C_ADD_OR_REPLACE_CONSTRUCTION_ITEM = "rpc"),
-      (C.C2S_REMOVE_CONSTRUCTION_ITEM = "cri"),
-      (C.S2C_REMOVE_CONSTRUCTION_ITEM = "cri"),
-      (C.C2S_PROMOTION_BANNER_DATA = "pbd"),
-      (C.C2S_SELL_STORED_DECO = "sds"),
-      (C.S2C_SELL_STORED_DECO = "sds"),
-      (C.C2S_GET_USER_SURVEY_EVENT = "sur"),
-      (C.S2C_GET_USER_SURVEY_EVENT = "sur"),
-      (C.C2S_REPORT_USER_SURVEY_EVENT = "rus"),
-      (C.S2C_REPORT_USER_SURVEY_EVENT = "rus"),
-      (C.C2S_CLIENT_TRACKING_REQUEST_EVENT = "ctr"),
-      (C.S2C_GET_UNLOCKED_SYMBOL = "gus"),
-      (C.C2S_REQUEST_GGS_GIFT = "rgg"),
-      (C.S2C_REQUEST_GGS_GIFT = "rgg"),
-      (C.C2S_ALLIANCE_SUBSCRIBER_COUNT = "asc"),
-      (C.S2C_ALLIANCE_SUBSCRIBER_COUNT = "asc"),
-      (C.C2S_SUBSCRIPTIONS_INFORMATION = "sie"),
-      (C.S2C_SUBSCRIPTIONS_INFORMATION = "sie"),
-      (C.C2S_START_TAUNT_ATTACK = "lta"),
-      (C.S2C_START_TAUNT_ATTACK = "lta"),
-      (C.S2C_ALLIANCE_INVASION_CAMP_INFO = "aic"),
-      (C.S2C_RAGE_POINTS_RECEIVED = "rpr"),
-      (C.C2S_GET_CONSTRUCTION_CRAFTING_INFO = "gcc"),
-      (C.S2C_GET_CONSTRUCTION_CRAFTING_INFO = "gcc"),
-      (C.C2S_CONSTRUCTION_ITEM_CRAFT = "cic"),
-      (C.S2C_CONSTRUCTION_ITEM_CRAFT = "cic"),
-      (C.C2S_CONSTRUCTION_ITEM_DISASSEMBLE = "dci"),
-      (C.S2C_CONSTRUCTION_ITEM_DISASSEMBLE = "dci"),
-      (C.C2S_CONSTRUCTION_ITEM_INVENTORYS_SPACE_LEFT = "csp"),
-      (C.S2C_CONSTRUCTION_ITEM_INVENTORYS_SPACE_LEFT = "csp"),
-      (C.C2S_MINUTE_SKIP_CRAFTING = "sci"),
-      (C.S2C_MINUTE_SKIP_CRAFTING = "sci"),
-      (C.C2S_VISIT_SHOP = "vsh"),
-      (C.S2C_VISIT_SHOP = "vsh"),
-      (C.C2S_GET_ENABLED_HARDCORE_MODE_EFFECTS = "ghe"),
-      (C.S2C_GET_ENABLED_HARDCORE_MODE_EFFECTS = "ghe"),
-      (C.C2S_SET_ENABLED_HARDCORE_MODE_EFFECTS = "she"),
-      (C.S2C_SET_ENABLED_HARDCORE_MODE_EFFECTS = "she"),
-      (C.C2S_CONFIRM_TERMS_AND_CONDITIONS_EVENT = "ctc"),
-      (C.S2C_CONFIRM_TERMS_AND_CONDITIONS_EVENT = "ctc"),
-      (C.C2S_NEWSLETTER_SUBSCRIPTION_EVENT = "nse"),
-      (C.S2C_NEWSLETTER_SUBSCRIPTION_EVENT = "nse"),
-      (C.C2S_GET_NEWSLETTER_SUBSCRIPTION_STATUS_EVENT = "nss"),
-      (C.S2C_GET_NEWSLETTER_SUBSCRIPTION_STATUS_EVENT = "nss"),
-      (C.S2C_GET_FUSION_FORGE_INFO_EVENT = "ffi"),
-      (C.C2S_GET_FUSION_FORGE_INFO_EVENT = "ffi"),
-      (C.C2S_LEVEL_UP_FUSION_FORGE_EVENT = "ffl"),
-      (C.S2C_LEVEL_UP_FUSION_FORGE_EVENT = "ffl"),
-      (C.C2S_GET_FUSION_TARGET_DECO = "gtd"),
-      (C.S2C_GET_FUSION_TARGET_DECO = "gtd"),
-      (C.C2S_SKIP_FUSION_RECHARGE_EVENT = "fsr"),
-      (C.S2C_SKIP_FUSION_RECHARGE_EVENT = "fsr"),
-      (C.C2S_FUSION_CATALYST_CONVERSION_EVENT = "fcc"),
-      (C.S2C_FUSION_CATALYST_CONVERSION_EVENT = "fcc"),
-      (C.C2S_DECO_FORGE_FUSE_EVENT = "dff"),
-      (C.S2C_DECO_FORGE_FUSE_EVENT = "dff"),
-      (C.C2S_GET_AUTO_SELL_CONDITIONS_EVENT = "asg"),
-      (C.S2C_GET_AUTO_SELL_CONDITIONS_EVENT = "asg"),
-      (C.C2S_SET_AUTO_SELL_EQUIPMENT_CONDITIONS_EVENT = "aes"),
-      (C.S2C_SET_AUTO_SELL_EQUIPMENT_CONDITIONS_EVENT = "aes"),
-      (C.C2S_SET_AUTO_SELL_GEM_CONDITIONS_EVENT = "ags"),
-      (C.S2C_SET_AUTO_SELL_GEM_CONDITIONS_EVENT = "ags"),
-      (C.S2C_SHOW_POPOVER_EVENT = "spo"),
-      (C.C2S_REGISTER_PUSH_NOTIFICATION_DEVICE = "rpd"),
-      (C.C2S_GENERATE_LOGIN_TOKEN_EVENT = "glt"),
-      (C.S2C_GENERATE_LOGIN_TOKEN_EVENT = "glt"),
-      (C.C2S_REGISTER_OR_LOGIN_EVENT = "tle"),
-      (C.S2C_REGISTER_OR_LOGIN_EVENT = "tle"),
-      (C.S2C_TEMP_SERVER_EVENT = "tse"),
-      (C.S2C_TEMP_SERVER_PLAYER_HIGHSCORE = "tsh"),
-      (C.C2S_TEMP_SERVER_PLAYER_HIGHSCORE = "tsh"),
-      (C.S2C_TEMP_SERVER_SELECT_CAMP = "tsc"),
-      (C.C2S_TEMP_SERVER_SELECT_CAMP = "tsc"),
-      (C.S2C_TEMP_SERVER_GET_PLAYER_COLLECTOR_CURRENCY = "tpc"),
-      (C.C2S_TEMP_SERVER_GET_PLAYER_COLLECTOR_CURRENCY = "tpc"),
-      (C.S2C_CREATE_TEMP_SERVER_COLLECTOR_ARMY_ATTACK_MOVEMENT = "cam"),
-      (C.C2S_CREATE_TEMP_SERVER_COLLECTOR_ARMY_ATTACK_MOVEMENT = "cam"),
-      (C.S2C_GET_ATTACK_TEMP_SERVER_COLLECTOR_CASTLE_INFO = "ati"),
-      (C.C2S_GET_ATTACK_TEMP_SERVER_COLLECTOR_CASTLE_INFO = "ati"),
-      (C.S2C_MUTE_DIALOGS = "smd"),
-      (C.C2S_GET_PLAYER_COLLECTOR_CURRENCY = "pcc"),
-      (C.S2C_GET_PLAYER_COLLECTOR_CURRENCY = "pcc"),
-      (C.C2S_GET_ATTACK_COLLECTOR_CASTLE_INFO = "acc"),
-      (C.S2C_GET_ATTACK_COLLECTOR_CASTLE_INFO = "acc"),
-      (C.C2S_BUY_PRIVATE_RESOURCE_VILLAGE = "bpv"),
-      (C.S2C_BUY_PRIVATE_RESOURCE_VILLAGE = "bpv"),
-      (C.C2S_REMOVE_PRIVATE_RESOURCE_VILLAGE = "rpv"),
-      (C.S2C_REMOVE_PRIVATE_RESOURCE_VILLAGE = "rpv"),
-      (C.C2S_UPGRADE_PRIVATE_RESOURCE_VILLAGE = "upv"),
-      (C.S2C_UPGRADE_PRIVATE_RESOURCE_VILLAGE = "upv"),
-      (C.C2S_GET_KINGDOMS_LEAGUE_INFO_EVENT = "kli"),
-      (C.S2C_GET_KINGDOMS_LEAGUE_INFO_EVENT = "kli"),
-      (C.C2S_BUY_KINGDOMS_LEAGUE_PASS_EVENT = "kbp"),
-      (C.S2C_BUY_KINGDOMS_LEAGUE_PASS_EVENT = "kbp"),
-      (C.C2S_SET_KINGDOMS_LEAGUE_START_SEEN_EVENT = "kss"),
-      (C.S2C_SET_KINGDOMS_LEAGUE_START_SEEN_EVENT = "kss"),
-      (C.C2S_GET_KINGDOMS_HIGHSCORE_RANK_EVENT = "klh"),
-      (C.S2C_GET_KINGDOMS_HIGHSCORE_RANK_EVENT = "klh"),
-      (C.SEASON_PASS_PRICE_EVENT = "spp"),
-      (C.BUY_SEASON_PROMOTION_PASS = "bsp"),
-      (C.BUY_SEASON_EVENT_PASS = "bep"),
-      (C.C2S_OFFER_OFFER_PAY = "oop"),
-      (C.S2C_OFFER_OFFER_PAY = "oop"),
-      (C.BUY_BESTSELLER_OFFER = "bso"),
-      (C.C2S_UPDATE_SEEN_GLOBAL_EFFECTS_EVENT = "usg"),
-      (C.S2C_UPDATE_SEEN_GLOBAL_EFFECTS_EVENT = "usg"),
-      (C.ACTIVATE_GLOBAL_EFFECT_BOOSTER_EVENT = "agb"),
-      (C.GLOBAL_EFFECT_BOOSTER_INFO_EVENT = "bie"),
-      (C.C2S_LOST_AND_FOUND_EVENT = "lfe"),
-      (C.S2C_LOST_AND_FOUND_EVENT = "lfe"),
-      (C.C2S_COLLECT_LOST_AND_FOUND_EVENT = "clf"),
-      (C.S2C_COLLECT_LOST_AND_FOUND_EVENT = "clf"),
-      (C.C2S_ACTIVATE_TRAINING_PROGRAM_EVENT = "atp"),
-      (C.S2C_ACTIVATE_TRAINING_PROGRAM_EVENT = "atp"),
-      (C.C2S_PROLONG_TRAINING_PROGRAM_EVENT = "ptp"),
-      (C.S2C_PROLONG_TRAINING_PROGRAM_EVENT = "ptp"),
-      (C.C2S_REROLL_TRAINING_PROGRAMS_EVENT = "rtp"),
-      (C.S2C_REROLL_TRAINING_PROGRAMS_EVENT = "rtp"),
-      (C.C2S_GET_ACTIVE_TRAINING_PROGRAM_INFO_EVENT = "gatp"),
-      (C.S2C_GET_ACTIVE_TRAINING_PROGRAM_INFO_EVENT = "gatp"),
-      (C.C2S_GET_TRAINING_PROGRAM_INFO_EVENT = "gtp"),
-      (C.S2C_GET_TRAINING_PROGRAM_INFO_EVENT = "gtp"),
-      (C.C2S_GET_DAIMYO_ALLIANCE_CONTRACTS_EVENT = "gdc"),
-      (C.S2C_GET_DAIMYO_ALLIANCE_CONTRACTS_EVENT = "gdc"),
-      (C.C2S_GET_DAIMYO_WAR_EFFORTS_EVENT = "gdw"),
-      (C.S2C_GET_DAIMYO_WAR_EFFORTS_EVENT = "gdw"),
-      (C.C2S_GET_DAIMYO_AREAS_EVENT = "gda"),
-      (C.S2C_GET_DAIMYO_AREAS_EVENT = "gda"),
-      (C.C2S_CREATE_DAIMYO_DEFENSE_MOVEMENT_EVENT = "cdd"),
-      (C.S2C_CREATE_DAIMYO_DEFENSE_MOVEMENT_EVENT = "cdd"));
-    ((C.C2S_LAUNCH_DAIMYO_TAUNT_ATTACK_EVENT = "ldt"),
-      (C.S2C_LAUNCH_DAIMYO_TAUNT_ATTACK_EVENT = "ldt"),
-      (C.S2C_RELIC_ENCHANTER_ENABLED_EVENT = "ree"),
-      (C.THIRD_PARTY_GET_MAPPING = "tgm"),
-      (C.THIRD_PARTY_SET_MAPPING = "tsm"),
-      (C.ALLIANCE_BATTLE_GROUND_JOINED_PLAYER = "ajp"),
-      (C.ALLIANCE_BATTLE_GROUND_MINE_OUT_TIME = "mot"),
-      (C.GET_ALLIANCE_BATTLE_GROUND_ALLIANCE_POINTS = "gabgap"),
-      (C.GET_ALLIANCE_BATTLE_GROUND_PLAYER_POINTS = "gabgpp"),
-      (C.CREATE_ALLIANCE_BATTLE_GROUND_COLLECTOR_ARMY_ATTACK_MOVEMENT =
+    ((f.C2S_RENAME_CASTLE = "arc"),
+      (f.S2C_RENAME_CASTLE = "arc"),
+      (f.S2C_SERVER_SHUTDOWN = "ssd"),
+      (f.S2C_GET_LOGIN_BONUS = "alb"),
+      (f.C2S_GET_LOGIN_BONUS = "alb"),
+      (f.C2S_CATCH_LOGIN_BONUS = "clb"),
+      (f.S2C_CATCH_LOGIN_BONUS = "clb"),
+      (f.C2S_STARTUP_LOGINBONUS_COLLECT = "slc"),
+      (f.S2C_STARTUP_LOGINBONUS_COLLECT = "slc"),
+      (f.C2S_STARTUP_LOGINBONUS_INFO = "sli"),
+      (f.S2C_STARTUP_LOGINBONUS_INFO = "sli"),
+      (f.C2S_EMAIL_VERIFIED = "lev"),
+      (f.C2S_CHANGE_EMBLEM = "cem"),
+      (f.S2C_CHANGE_EMBLEM = "cem"),
+      (f.C2S_CHOOSE_FREE_NAME = "lcn"),
+      (f.S2C_CHOOSE_FREE_NAME = "lcn"),
+      (f.C2S_CHOOSE_FREE_EMBLEM = "lce"),
+      (f.S2C_CHOOSE_FREE_EMBLEM = "lce"),
+      (f.S2C_COMEBACK_POPUP = "lcb"),
+      (f.S2C_ADMIN_FEEDBACK = "smg"),
+      (f.S2C_SHOW_POPUP = "msp"),
+      (f.C2S_UPDATE_PACKAGE_AND_PARTNER_IDS = "upp"),
+      (f.C2S_SET_META_DATA_EVENT = "dmd"),
+      (f.C2S_API_TOKEN_INFO = "ato"),
+      (f.S2C_API_TOKEN_INFO = "ato"),
+      (f.S2C_SEASON_EVENT = "sea"),
+      (f.C2S_SPECIAL_EVENT_INFO = "sei"),
+      (f.S2C_SPECIAL_EVENT_INFO = "sei"),
+      (f.S2C_ALLIANCE_TOURNAMENT_REWARD = "atr"),
+      (f.S2C_PRIVATE_PRIME_TIME_EVENT = "ppt"),
+      (f.S2C_SPECIAL_EVENT_END = "see"),
+      (f.C2S_POINT_EVENT_POINTS = "pep"),
+      (f.S2C_POINT_EVENT_POINTS = "pep"),
+      (f.C2S_SEASON_EVENT_PAY_UNLOCK = "spu"),
+      (f.S2C_SEASON_EVENT_PAY_UNLOCK = "spu"),
+      (f.C2S_SEASON_JOIN_EVENT = "sje"),
+      (f.S2C_SHOPPING_CART_REWARD = "spr"),
+      (f.C2S_BOUNTY_HUNTER_SKIP = "bst"),
+      (f.S2C_BOUNTY_HUNTER_SKIP = "bst"),
+      (f.BOUNTY_HUNTER_VALIDATE_OR_RESET_TARGET_EVENT = "brt"),
+      (f.C2S_TRIGGER_EVENT_INFO = "tei"),
+      (f.S2C_TRIGGER_EVENT_INFO = "tei"),
+      (f.S2C_TRIGGER_EVENT_END = "tee"),
+      (f.C2S_BUY_EVENTPACKAGE = "sbp"),
+      (f.S2C_BUY_EVENTPACKAGE = "sbp"),
+      (f.C2S_GET_PACKAGE_PRIZE = "gpp"),
+      (f.S2C_GET_PACKAGE_PRIZE = "gpp"),
+      (f.C2S_PLAYER_GIFT_LIST = "pgl"),
+      (f.S2C_PLAYER_GIFT_LIST = "pgl"),
+      (f.C2S_GRANT_PLAYER_GIFT = "gpg"),
+      (f.S2C_GRANT_PLAYER_GIFT = "gpg"),
+      (f.C2S_GET_ALLIANCE_INFO = "ain"),
+      (f.S2C_GET_ALLIANCE_INFO = "ain"),
+      (f.S2C_GET_ALLIANCE_BUFF_LIST = "abl"),
+      (f.C2S_FOUND_ALLIANCE = "afo"),
+      (f.S2C_FOUND_ALLIANCE = "afo"),
+      (f.C2S_ALLIANCE_INVITE_PLAYER = "aip"),
+      (f.S2C_ALLIANCE_INVITE_PLAYER = "aip"),
+      (f.C2S_ALLIANCE_ACTION_LIST = "all"),
+      (f.S2C_ALLIANCE_ACTION_LIST = "all"),
+      (f.C2S_ALLIANCE_QUIT = "aqi"),
+      (f.S2C_ALLIANCE_QUIT = "aqi"),
+      (f.C2S_GET_ALLIANCE_INVITATION = "bai"),
+      (f.S2C_GET_ALLIANCE_INVITATION = "bai"),
+      (f.C2S_ALLIANCE_ACCEPT_INVITE = "aai"),
+      (f.S2C_ALLIANCE_ACCEPT_INVITE = "aai"),
+      (f.S2C_ALLIANCE_CHAT_LOG = "acl"),
+      (f.C2S_ALLIANCE_CHAT_LOG = "acl"),
+      (f.C2S_ALLIANCE_CHAT = "acm"),
+      (f.S2C_ALLIANCE_CHAT = "acm"),
+      (f.C2S_ALLIANCE_CHAT_VISIBILITY = "acv"),
+      (f.S2C_ALLIANCE_CHAT_VISIBILITY = "acv"),
+      (f.C2S_ALLIANCE_ONLINE_MEMBERS = "aom"),
+      (f.S2C_ALLIANCE_ONLINE_MEMBERS = "aom"),
+      (f.C2S_ALLIANCE_DONATE = "ado"),
+      (f.S2C_ALLIANCE_DONATE = "ado"),
+      (f.C2S_ALLIANCE_UPGRADE = "aug"),
+      (f.S2C_ALLIANCE_UPGRADE = "aug"),
+      (f.C2S_ALLIANCE_CHANGE_NAME = "acn"),
+      (f.S2C_ALLIANCE_CHANGE_NAME = "acn"),
+      (f.C2S_ALLIANCE_CHANGE_DESCRIPTION = "acd"),
+      (f.S2C_ALLIANCE_CHANGE_DESCRIPTION = "acd"),
+      (f.C2S_ALLIANCE_NEWSLETTER = "anl"),
+      (f.S2C_ALLIANCE_NEWSLETTER = "anl"),
+      (f.C2S_ALLIANCE_KICK_MEMBER = "akm"),
+      (f.S2C_ALLIANCE_KICK_MEMBER = "akm"),
+      (f.C2S_ALLIANCE_RERANK_MEMBER = "arm"),
+      (f.S2C_ALLIANCE_RERANK_MEMBER = "arm"),
+      (f.C2S_ALLIANCE_CHANGE_DIPLOMACY = "adp"),
+      (f.S2C_ALLIANCE_CHANGE_DIPLOMACY = "adp"),
+      (f.C2S_ALLIANCE_REFUSE_DIPLOMACY = "ard"),
+      (f.S2C_ALLIANCE_REFUSE_DIPLOMACY = "ard"),
+      (f.C2S_ALLIANCE_GET_FAME = "afa"),
+      (f.S2C_ALLIANCE_GET_FAME = "afa"),
+      (f.C2S_ALLIANCE_SET_SEARCH_ALLIANCE = "asa"),
+      (f.S2C_ALLIANCE_SET_SEARCH_ALLIANCE = "asa"),
+      (f.C2S_ALLIANCE_SEND_APPLICATION = "saa"),
+      (f.S2C_ALLIANCE_SEND_APPLICATION = "saa"),
+      (f.C2S_ALLIANCE_APPLICATION_LIST = "aal"),
+      (f.S2C_ALLIANCE_APPLICATION_LIST = "aal"),
+      (f.C2S_ALLIANCE_ANSWER_APPLICATION = "aaa"),
+      (f.C2S_JOIN_OPEN_ALLIANCE = "joa"),
+      (f.S2C_JOIN_OPEN_ALLIANCE = "joa"),
+      (f.C2S_ALLIANCE_SET_SEARCH_MEMBER = "asm"),
+      (f.S2C_ALLIANCE_SET_SEARCH_MEMBER = "asm"),
+      (f.C2S_AUTO_ALLIANCE_SEARCH = "aas"),
+      (f.S2C_AUTO_ALLIANCE_SEARCH = "aas"),
+      (f.C2S_ALLIANCE_HELP_LIST = "ahl"),
+      (f.S2C_ALLIANCE_HELP_LIST = "ahl"),
+      (f.S2C_ALLIANCE_HELP_FEEDBACK = "ahf"),
+      (f.C2S_ALLIANCE_HELP_CONFIRMED = "ahc"),
+      (f.C2S_ALLIANCE_HELP_REQUEST_RECRUITMENT = "ahr"),
+      (f.S2C_ALLIANCE_HELP_REQUEST_RECRUITMENT = "ahr"),
+      (f.S2C_ALLIANCE_HELP_CHANGE_OR_ADD = "ahh"),
+      (f.S2C_ALLIANCE_HELP_DELETE = "ahd"),
+      (f.C2S_ALLIANCE_HELP_ALL = "aha"),
+      (f.C2S_ALLIANCE_SET_AUTO_WAR = "saw"),
+      (f.S2C_ALLIANCE_SET_AUTO_WAR = "saw"),
+      (f.S2C_GET_CURRENCY = "gcu"),
+      (f.S2C_GET_PLAYER_IDENTITY = "gpi"),
+      (f.S2C_GET_EMBLEM = "gem"),
+      (f.S2C_GET_XP = "gxp"),
+      (f.S2C_GET_BASIC_DATA = "gbd"),
+      (f.S2C_LEVEL_UP = "glu"),
+      (f.S2C_GET_ACTIVITY = "gac"),
+      (f.S2C_GET_PERMANENT_CASTLE_DATA = "gpc"),
+      (f.C2S_GET_PERMANENT_CASTLE_DATA = "gpc"),
+      (f.S2C_GET_PLAYER_ALLIANCE = "gal"),
+      (f.C2S_GET_CASTLELIST = "gcl"),
+      (f.S2C_GET_CASTLELIST = "gcl"),
+      (f.C2S_GET_DETAILPLAYERINFO = "gdi"),
+      (f.S2C_GET_DETAILPLAYERINFO = "gdi"),
+      (f.S2C_PREMIUM_FLAG_INFO = "gpf"),
+      (f.C2S_BUY_PREMIUIM_FLAG = "gbp"),
+      (f.S2C_BUY_PREMIUIM_FLAG = "gbp"),
+      (f.S2C_HELLO_WORLD = "ghw"),
+      (f.C2S_USER_ATTACK_PROTECTION = "uap"),
+      (f.S2C_USER_ATTACK_PROTECTION = "uap"),
+      (f.S2C_GET_HONOR = "gho"),
+      (f.C2S_GET_DETAILEDCASTLELIST = "dcl"),
+      (f.S2C_GET_DETAILEDCASTLELIST = "dcl"),
+      (f.S2C_GET_FAME = "ufa"),
+      (f.S2C_USER_FACTION_POINTS = "ufp"),
+      (f.S2C_USER_ACHIEVED_RANK = "uar"),
+      (f.C2S_USER_ACHIEVED_RANK = "uar"),
+      (f.S2C_GET_PAYMENT_INFO = "upi"),
+      (f.S2C_KIKERIKI = "kik"),
+      (f.S2C_GET_KINGSTOWER_LIST = "gkl"),
+      (f.C2S_GET_PACKAGE_BUY_COUNT = "gbc"),
+      (f.S2C_GET_PACKAGE_BUY_COUNT = "gbc"),
+      (f.S2C_LIFETIME_SPEND_C2 = "lts"),
+      (f.C2S_ADD_BOOKMARK = "bad"),
+      (f.S2C_ADD_BOOKMARK = "bad"),
+      (f.C2S_CHANGE_BOOKMARK = "bch"),
+      (f.S2C_CHANGE_BOOKMARK = "bch"),
+      (f.C2S_DELETE_BOOKMARK = "bde"),
+      (f.S2C_DELETE_BOOKMARK = "bde"),
+      (f.C2S_DELETE_ALLIANCE_BOOKMARK = "abd"),
+      (f.S2C_DELETE_ALLIANCE_BOOKMARK = "abd"),
+      (f.C2S_GET_BOOKMARKLIST = "gbl"),
+      (f.S2C_GET_BOOKMARKLIST = "gbl"),
+      (f.C2S_BOOSTER_INFO = "boi"),
+      (f.S2C_BOOSTER_INFO = "boi"),
+      (f.C2S_OVERSEER_START = "ovs"),
+      (f.S2C_OVERSEER_START = "ovs"),
+      (f.C2S_DOCTOR_START = "bds"),
+      (f.S2C_DOCTOR_START = "bds"),
+      (f.C2S_MARAUDER_START = "bms"),
+      (f.S2C_MARAUDER_START = "bms"),
+      (f.C2S_INSTRUCTOR_START = "bis"),
+      (f.S2C_INSTRUCTOR_START = "bis"),
+      (f.C2S_ARCHITECT_START = "bas"),
+      (f.S2C_ARCHITECT_START = "bas"),
+      (f.C2S_CARAVAN_OVERLOADER_START = "bcs"),
+      (f.S2C_CARAVAN_OVERLOADER_START = "bcs"),
+      (f.C2S_BOOST_RETURNSPEED_START = "brs"),
+      (f.S2C_BOOST_RETURNSPEED_START = "brs"),
+      (f.C2S_SHOW_CONSTRUCTION_LIST = "scl"),
+      (f.S2C_SHOW_CONSTRUCTION_LIST = "scl"),
+      (f.C2S_MOVE_CONSTRUCTION_ITEM = "mci"),
+      (f.S2C_FINISHED_BUILDING = "fbe"),
+      (f.C2S_GET_CASTLE = "gca"),
+      (f.S2C_GET_CASTLE = "gca"),
+      (f.C2S_GET_CASTLE_RESOURCES = "grc"),
+      (f.S2C_GET_CASTLE_RESOURCES = "grc"),
+      (f.C2S_GET_CASTLE_PRODUCTION_DATA = "gpa"),
+      (f.S2C_GET_CASTLE_PRODUCTION_DATA = "gpa"),
+      (f.C2S_PLACE_CUSTOM_INVENTORY_OBJECT = "pio"),
+      (f.S2C_PLACE_CUSTOM_INVENTORY_OBJECT = "pio"),
+      (f.C2S_BUY_OBJECT = "ebu"),
+      (f.S2C_BUY_OBJECT = "ebu"),
+      (f.C2S_BUY_EXPANSION = "ebe"),
+      (f.S2C_BUY_EXPANSION = "ebe"),
+      (f.C2S_MOVE_OBJECT = "emo"),
+      (f.S2C_MOVE_OBJECT = "emo"),
+      (f.C2S_UPGRADE_OBJECT = "eup"),
+      (f.S2C_UPGRADE_OBJECT = "eup"),
+      (f.C2S_DISASSEMBLE_OBJECT = "edo"),
+      (f.S2C_DISASSEMBLE_OBJECT = "edo"),
+      (f.S2C_GET_OBJECT = "ego"),
+      (f.C2S_FAST_COMPLETE_OBJECT = "fco"),
+      (f.S2C_FAST_COMPLETE_OBJECT = "fco"),
+      (f.C2S_REPAIR_BUILDING = "rbu"),
+      (f.S2C_REPAIR_BUILDING = "rbu"),
+      (f.C2S_UPGRADE_DEFENCE = "eud"),
+      (f.S2C_UPGRADE_DEFENCE = "eud"),
+      (f.S2C_GET_CHANGED_BUILDING_EFFICIENCY = "gcb"),
+      (f.S2C_GET_DAMAGED_BUILDINGS = "gdb"),
+      (f.S2C_GET_DAMAGED_BUILDINGS_E4K = "dar"),
+      (f.S2C_GET_DAMAGED_BUILDINGS_AND_RUBBLE = "gdr"),
+      (f.S2C_RESOURCE_CITIZEN = "irc"),
+      (f.C2S_RESOURCE_CITIZEN = "irc"),
+      (f.C2S_REPAIR_ALL = "ira"),
+      (f.S2C_REPAIR_ALL = "ira"),
+      (f.S2C_GET_AREA_BOOSTER = "gab"),
+      (f.C2S_MERCENARY_PACKAGE = "mpe"),
+      (f.S2C_MERCENARY_PACKAGE = "mpe"),
+      (f.C2S_MERCENARY_REFRESH_MISSION = "rmm"),
+      (f.S2C_MERCENARY_REFRESH_MISSION = "rmm"),
+      (f.S2C_SPECIAL_CURRENCY_EVENT = "sce"),
+      (f.GET_CASTLE_TRANSPORTATION_BUILDINGS_EVENT = "gctb"),
+      (f.C2S_START_TAX_COLLECTION = "txs"),
+      (f.S2C_START_TAX_COLLECTION = "txs"),
+      (f.C2S_COLLECT_TAX = "txc"),
+      (f.S2C_COLLECT_TAX = "txc"),
+      (f.C2S_BRIBE_TAX_COLLECTOR = "btx"),
+      (f.S2C_BRIBE_TAX_COLLECTOR = "btx"),
+      (f.C2S_TAX_INFO = "txi"),
+      (f.S2C_TAX_INFO = "txi"),
+      (f.C2S_GET_TUTORIAL_AREAS = "gta"),
+      (f.C2S_GET_AREAS = "gaa"),
+      (f.S2C_GET_AREAS = "gaa"),
+      (f.C2S_JOIN_AREA = "jaa"),
+      (f.S2C_JOIN_AREA = "jaa"),
+      (f.C2S_JOIN_CASTLE = "jca"),
+      (f.S2C_JOIN_CASTLE = "jca"),
+      (f.C2S_JOIN_CAMP = "jea"),
+      (f.S2C_JOIN_CAMP = "jea"),
+      (f.C2S_SEARCH_PLAYER = "wsp"),
+      (f.S2C_SEARCH_PLAYER = "wsp"),
+      (f.C2S_GET_DUNGEONS = "wgd"),
+      (f.C2S_FIND_NEXT_ENEMY_CASTLE_FOR_HONOR = "fec"),
+      (f.S2C_FIND_NEXT_ENEMY_CASTLE_FOR_HONOR = "fec"),
+      (f.S2C_FIND_NEXT_ENEMY_CASTLE_FOR_GLORY = "ffc"),
+      (f.C2S_FIND_NEXT_ENEMY_CASTLE_FOR_GLORY = "ffc"),
+      (f.C2S_LEAVE_AREA = "laa"),
+      (f.S2C_LEAVE_AREA = "laa"),
+      (f.C2S_FIND_NEXT_MAPOBJECT = "fnm"),
+      (f.S2C_FIND_NEXT_MAPOBJECT = "fnm"),
+      (f.C2S_RUIN_INFO = "rui"),
+      (f.S2C_RUIN_INFO = "rui"),
+      (f.C2S_START_RELOCATION = "rst"),
+      (f.S2C_START_RELOCATION = "rst"),
+      (f.C2S_REMEMBER_RUIN = "rmb"),
+      (f.S2C_REMEMBER_RUIN = "rmb"),
+      (f.S2C_GET_RELOCATION_INFO = "gri"),
+      (f.C2S_SHOW_MESSAGES = "sne"),
+      (f.S2C_SHOW_MESSAGES = "sne"),
+      (f.C2S_SEND_MESSAGE = "sms"),
+      (f.S2C_SEND_MESSAGE = "sms"),
+      (f.C2S_MARK_MESSAGE_READ = "mmr"),
+      (f.C2S_READ_MESSAGES = "rms"),
+      (f.S2C_READ_MESSAGES = "rms"),
+      (f.C2S_DELETE_MESSAGE = "dms"),
+      (f.S2C_DELETE_MESSAGE = "dms"),
+      (f.C2S_IGNORE_PLAYER = "ipl"),
+      (f.S2C_IGNORE_PLAYER = "ipl"),
+      (f.C2S_BATTLE_LOG_SHORT = "bls"),
+      (f.S2C_BATTLE_LOG_SHORT = "bls"),
+      (f.C2S_BATTLE_LOG_MIDDLE = "blm"),
+      (f.S2C_BATTLE_LOG_MIDDLE = "blm"),
+      (f.C2S_BATTLE_LOG_DETAIL = "bld"),
+      (f.S2C_BATTLE_LOG_DETAIL = "bld"),
+      (f.C2S_BUG_REPORT = "brp"),
+      (f.S2C_BUG_REPORT = "brp"),
+      (f.C2S_MARKET_CARRIAGE_NOTIFY = "mmn"),
+      (f.S2C_MARKET_CARRIAGE_NOTIFY = "mmn"),
+      (f.S2C_RENAME_CASTLE_INVITATION = "mir"),
+      (f.C2S_GET_IGNORED_PLAYERS = "ili"),
+      (f.S2C_GET_IGNORED_PLAYERS = "ili"),
+      (f.C2S_FORWARD_BATTLE_LOG = "mfb"),
+      (f.S2C_FORWARD_BATTLE_LOG = "mfb"),
+      (f.C2S_FORWARD_SPY_LOG = "mfs"),
+      (f.S2C_FORWARD_SPY_LOG = "mfs"),
+      (f.C2S_ARCHIVE_MESSAGES = "ams"),
+      (f.S2C_ARCHIVE_MESSAGES = "ams"),
+      (f.C2S_PEACEMODE_START = "mps"),
+      (f.S2C_PEACEMODE_START = "mps"),
+      (f.C2S_OPENGATE_START = "mos"),
+      (f.S2C_OPENGATE_START = "mos"),
+      (f.C2S_ABANDONOUTPOST_START = "mas"),
+      (f.S2C_ABANDONOUTPOST_START = "mas"),
+      (f.C2S_ABANDON_OUTPOST_CANCEL = "mac"),
+      (f.S2C_ABANDON_OUTPOST_CANCEL = "mac"),
+      (f.C2S_GET_ALL_MOVEMENTS = "gam"),
+      (f.S2C_GET_ALL_MOVEMENTS = "gam"),
+      (f.C2S_CANCEL_MOVEMENT = "mcm"),
+      (f.S2C_CANCEL_MOVEMENT = "mcm"),
+      (f.C2S_CREATE_DEFENCE_SUPPORT_MOVEMENT = "cds"),
+      (f.S2C_CREATE_DEFENCE_SUPPORT_MOVEMENT = "cds"),
+      (f.S2C_CREATE_SIEGE_MOVEMENT = "css"),
+      (f.C2S_CREATE_ARMY_ATTACK_MOVEMENT = "cra"),
+      (f.S2C_CREATE_ARMY_ATTACK_MOVEMENT = "cra"),
+      (f.S2C_ARMY_REACHED_SMALL_RADIUS = "asr"),
+      (f.S2C_ARMY_REACHED_BIG_RADIUS = "abr"),
+      (f.C2S_CREATE_ARMY_TRAVEL_MOVEMENT = "cat"),
+      (f.S2C_CREATE_ARMY_TRAVEL_MOVEMENT = "cat"),
+      (f.C2S_CREATE_MARKET_MOVEMENT = "crm"),
+      (f.S2C_CREATE_MARKET_MOVEMENT = "crm"),
+      (f.C2S_SKIP_DUNGEON_COOLDOWN = "sdc"),
+      (f.S2C_SKIP_DUNGEON_COOLDOWN = "sdc"),
+      (f.C2S_MARKET_INFO = "cmi"),
+      (f.S2C_MARKET_INFO = "cmi"),
+      (f.C2S_TROOP_SUPPORT_INFO = "sti"),
+      (f.S2C_TROOP_SUPPORT_INFO = "sti"),
+      (f.C2S_SHOW_INVENTORY = "sin"),
+      (f.S2C_SHOW_INVENTORY = "sin"),
+      (f.C2S_MARK_BUILDING_IN_STORAGE = "mbs"),
+      (f.S2C_MARK_BUILDING_IN_STORAGE = "mbs"),
+      (f.C2S_STORE_OBJECT = "sob"),
+      (f.S2C_STORE_OBJECT = "sob"),
+      (f.C2S_BUY_UNIT_PACKAGE = "bup"),
+      (f.S2C_BUY_UNIT_PACKAGE = "bup"),
+      (f.C2S_SHOW_PACKAGE_LIST = "spl"),
+      (f.S2C_SHOW_PACKAGE_LIST = "spl"),
+      (f.C2S_UNLOCK_PACKAGE_SLOT = "ups"),
+      (f.S2C_UNLOCK_PACKAGE_SLOT = "ups"),
+      (f.C2S_MOVE_UNIT_PACKAGE = "mup"),
+      (f.S2C_MOVE_UNIT_PACKAGE = "mup"),
+      (f.C2S_CANCEL_UNIT_PACKAGE = "mcu"),
+      (f.S2C_CANCEL_UNIT_PACKAGE = "mcu"),
+      (f.C2S_GET_UNIT_INVENTORY = "gui"),
+      (f.S2C_GET_UNIT_INVENTORY = "gui"),
+      (f.C2S_GET_RECEIVED_UNIT_EVENT = "rue"),
+      (f.S2C_GET_RECEIVED_UNIT_EVENT = "rue"),
+      (f.C2S_BOOST_UNIT_PACKAGE = "bou"),
+      (f.S2C_BOOST_UNIT_PACKAGE = "bou"),
+      (f.C2S_SET_RECRUITMENT_MODE = "srm"),
+      (f.S2C_GET_RECRUITMENT_DUPLICATION_INFO = "dri"),
+      (f.C2S_GET_RECRUITMENT_DUPLICATION_INFO = "dri"),
+      (f.C2S_DUPLICATE_RECRUITMENT_LIST = "drl"),
+      (f.S2C_DUPLICATE_RECRUITMENT_LIST = "drl"),
+      (f.C2S_DEFENSE_COMPLETE = "dfc"),
+      (f.S2C_DEFENSE_COMPLETE = "dfc"),
+      (f.C2S_DEFENSE_WALL = "dfw"),
+      (f.S2C_DEFENSE_WALL = "dfw"),
+      (f.C2S_DEFENSE_KEEP = "dfk"),
+      (f.S2C_DEFENSE_KEEP = "dfk"),
+      (f.C2S_DEFENSE_MOAT = "dfm"),
+      (f.S2C_DEFENSE_MOAT = "dfm"),
+      (f.C2S_INSTANT_BUY_TOOL = "ibt"),
+      (f.S2C_INSTANT_BUY_TOOL = "ibt"),
+      (f.C2S_GET_ATTACK_CASTLE_INFOS = "aci"),
+      (f.S2C_GET_ATTACK_CASTLE_INFOS = "aci"),
+      (f.C2S_GET_ATTACK_DUNGEON_INFOS = "adi"),
+      (f.S2C_GET_ATTACK_DUNGEON_INFOS = "adi"),
+      (f.C2S_GET_CONQUER_INFO_OUTPOST = "coi"),
+      (f.S2C_GET_CONQUER_INFO_OUTPOST = "coi"),
+      (f.C2S_GET_CONQUER_INFO_CAPITAL = "cci"),
+      (f.S2C_GET_CONQUER_INFO_CAPITAL = "cci"),
+      (f.C2S_CONQUER_INFO_TRADECENTER = "cti"),
+      (f.S2C_CONQUER_INFO_TRADECENTER = "cti"),
+      (f.C2S_ATTACK_INFO_BOSSDUNGEON = "abi"),
+      (f.S2C_ATTACK_INFO_BOSSDUNGEON = "abi"),
+      (f.C2S_ATTACK_INFO_VILLAGE = "avi"),
+      (f.S2C_ATTACK_INFO_VILLAGE = "avi"),
+      (f.C2S_ATTACK_INFO_LANDMARK = "ali"),
+      (f.S2C_ATTACK_INFO_LANDMARK = "ali"),
+      (f.C2S_ATTACK_INFO_ISLAND = "aii"),
+      (f.S2C_ATTACK_INFO_ISLAND = "aii"),
+      (f.S2C_OCCUPATION_TARGET_CHANGED_STATUS = "otc"),
+      (f.C2S_GET_PREDEFINED_ATTACK_SETUP = "gas"),
+      (f.S2C_GET_PREDEFINED_ATTACK_SETUP = "gas"),
+      (f.C2S_SAVE_PREDEFINED_ATTACK_SETUP = "sas"),
+      (f.S2C_SAVE_PREDEFINED_ATTACK_SETUP = "sas"),
+      (f.C2S_UNLOCK_PREDEFINED_ATTACK_SLOT = "uas"),
+      (f.S2C_UNLOCK_PREDEFINED_ATTACK_SLOT = "uas"),
+      (f.C2S_GET_ATTACK_INFO = "gai"),
+      (f.S2C_GET_ATTACK_INFO = "gai"),
+      (f.C2S_GET_MAX_SPYS = "gms"),
+      (f.S2C_GET_MAX_SPYS = "gms"),
+      (f.C2S_GET_SPY_INFO = "ssi"),
+      (f.S2C_GET_SPY_INFO = "ssi"),
+      (f.C2S_CREATE_SPY_MOVEMENT = "csm"),
+      (f.S2C_CREATE_SPY_MOVEMENT = "csm"),
+      (f.C2S_REMOVE_MOVEMENT = "mrm"),
+      (f.S2C_REMOVE_MOVEMENT = "mrm"),
+      (f.C2S_SPY_LOG_DETAIL = "bsd"),
+      (f.S2C_SPY_LOG_DETAIL = "bsd"),
+      (f.C2S_GET_SPY_UNITS_EVENT = "ssu"),
+      (f.S2C_GET_SPY_UNITS_EVENT = "ssu"),
+      (f.S2C_QUEST_START = "qst"),
+      (f.S2C_QUEST_FINISHED = "qfi"),
+      (f.C2S_QUEST_STARTER_CLICK = "qsc"),
+      (f.S2C_QUEST_STARTER_CLICK = "qsc"),
+      (f.C2S_QUEST_DONATE_RESOURCES = "qdr"),
+      (f.S2C_QUEST_DONATE_RESOURCES = "qdr"),
+      (f.C2S_QUEST_LIST = "qli"),
+      (f.S2C_QUEST_LIST = "qli"),
+      (f.S2C_QUEST_PROGRES = "qpg"),
+      (f.S2C_QUEST_MARK_AS_READ = "qmr"),
+      (f.C2S_CHECK_COMPLETED_QUESTS = "ccq"),
+      (f.S2C_CHECK_COMPLETED_QUESTS = "ccq"),
+      (f.C2S_MAIN_CASTLE_RESOURCES = "mcr"),
+      (f.S2C_MAIN_CASTLE_RESOURCES = "mcr"),
+      (f.C2S_BUY_QUEST = "bcq"),
+      (f.S2C_BUY_QUEST = "bcq"),
+      (f.C2S_BUY_CAMPAIGN_REWARD = "bcr"),
+      (f.S2C_BUY_CAMPAIGN_REWARD = "bcr"),
+      (f.S2C_CAMPAIGN_QUEST_STATUS = "cqs"),
+      (f.C2S_QUEST_DONATE_CURRENCIES = "qdc"),
+      (f.S2C_QUEST_DONATE_CURRENCIES = "qdc"),
+      (f.C2S_GET_HIGHSCORE = "hgh"),
+      (f.S2C_GET_HIGHSCORE = "hgh"),
+      (f.C2S_GET_WEEKLY_HONOR_SCORE = "gwh"),
+      (f.S2C_GET_WEEKLY_HONOR_SCORE = "gwh"),
+      (f.C2S_REDEEM_WEEKLY_HONOR_SCORE = "rwb"),
+      (f.S2C_REDEEM_WEEKLY_HONOR_SCORE = "rwb"),
+      (f.C2S_SUPPORT_DEFENCE_INFO = "sdi"),
+      (f.S2C_SUPPORT_DEFENCE_INFO = "sdi"),
+      (f.C2S_ARTIFACT_FOUND = "saf"),
+      (f.S2C_ARTIFACT_FOUND = "saf"),
+      (f.C2S_BUY_ARTIFACT_PIECE = "sap"),
+      (f.S2C_BUY_ARTIFACT_PIECE = "sap"),
+      (f.S2C_PAYMENT_REWARD = "par"),
+      (f.S2C_PAYMENT_CONFIRMAMTION = "upc"),
+      (f.C2S_START_HUNTER = "hst"),
+      (f.S2C_START_HUNTER = "hst"),
+      (f.C2S_HUNTER_INFO = "hin"),
+      (f.S2C_HUNTER_INFO = "hin"),
+      (f.S2C_HUNTER_RETURNED = "hre"),
+      (f.C2S_RESEARCH_INFO = "rei"),
+      (f.S2C_RESEARCH_INFO = "rei"),
+      (f.C2S_RESEARCH_START = "res"),
+      (f.S2C_RESEARCH_START = "res"),
+      (f.C2S_RESEARCH_FINISH_INSTANT = "rfi"),
+      (f.S2C_RESEARCH_FINISH_INSTANT = "rfi"),
+      (f.C2S_KINGDOM_INFO = "kpi"),
+      (f.S2C_KINGDOM_INFO = "kpi"),
+      (f.C2S_KINGDOM_SKIP_TRANSFER = "kst"),
+      (f.S2C_KINGDOM_SKIP_TRANSFER = "kst"),
+      (f.C2S_KINGDOM_UNIT_TRANSFER = "kut"),
+      (f.S2C_KINGDOM_UNIT_TRANSFER = "kut"),
+      (f.C2S_KINGDOM_GOODS_TRANSFER = "kgt"),
+      (f.S2C_KINGDOM_GOODS_TRANSFER = "kgt"),
+      (f.C2S_CRUSADE_SELECT_CAMP = "csc"),
+      (f.S2C_CRUSADE_SELECT_CAMP = "csc"),
+      (f.C2S_FACTION_SELECT_CAMP = "fsc"),
+      (f.S2C_FACTION_SELECT_CAMP = "fsc"),
+      (f.C2S_KINGDOM_SELECT_CAMP = "ksc"),
+      (f.S2C_KINGDOM_SELECT_CAMP = "ksc"),
+      (f.C2S_KINGDOM_GET_VILLAGE_LIST = "kgv"),
+      (f.S2C_KINGDOM_GET_VILLAGE_LIST = "kgv"),
+      (f.S2C_GET_LOGIN_NAME = "agl"),
+      (f.C2S_UNLOCK_EVENT = "ule"),
+      (f.S2C_UNLOCK_EVENT = "ule"),
+      (f.S2C_FACTIONS_JOIN_FACTION = "fjf"),
+      (f.C2S_GET_FACTION_BALANCE = "fgb"),
+      (f.S2C_GET_FACTION_BALANCE = "fgb"),
+      (f.C2S_FIND_NEXT_TOWER = "fnt"),
+      (f.S2C_FIND_NEXT_TOWER = "fnt"),
+      (f.C2S_GET_ATTACKABLE_FACTION_DATA = "afd"),
+      (f.S2C_GET_ATTACKABLE_FACTION_DATA = "afd"),
+      (f.C2S_GET_FACTIONKINGDOM_INFO = "fki"),
+      (f.S2C_GET_FACTIONKINGDOM_INFO = "fki"),
+      (f.C2S_START_FACTIONPROTECTION = "ffp"),
+      (f.S2C_START_FACTIONPROTECTION = "ffp"),
+      (f.C2S_CONQUER_INFO_FACTIONCAMP = "cfi"),
+      (f.S2C_CONQUER_INFO_FACTIONCAMP = "cfi"),
+      (f.C2S_GET_CAMP_UNIT_CAPACITY = "fuc"),
+      (f.S2C_GET_CAMP_UNIT_CAPACITY = "fuc"),
+      (f.C2S_GET_ALL_CAMP_UNIT_CAPACITY = "fac"),
+      (f.S2C_GET_ALL_CAMP_UNIT_CAPACITY = "fac"),
+      (f.C2S_GET_VILLAGE_COUNT = "gvc"),
+      (f.S2C_GET_VILLAGE_COUNT = "gvc"),
+      (f.S2C_SHUTTING_DOWN_EVENT = "sde"),
+      (f.C2S_GET_EQUIPMENT_INVENTORY = "gei"),
+      (f.S2C_GET_EQUIPMENT_INVENTORY = "gei"),
+      (f.C2S_EQUIPMENT_INVENTORY_SPACE_LEFT = "esl"),
+      (f.S2C_EQUIPMENT_INVENTORY_SPACE_LEFT = "esl"),
+      (f.C2S_CRAFT_EQUIPMENT = "ceq"),
+      (f.S2C_CRAFT_EQUIPMENT = "ceq"),
+      (f.C2S_EQUIP_EQUIPMENT = "eeq"),
+      (f.S2C_EQUIP_EQUIPMENT = "eeq"),
+      (f.C2S_SELL_EQUIPMENT = "seq"),
+      (f.S2C_SELL_EQUIPMENT = "seq"),
+      (f.S2C_BOUGHT_EQUIPMENT = "beq"),
+      (f.C2S_GET_LORDS_INFO = "gli"),
+      (f.S2C_GET_LORDS_INFO = "gli"),
+      (f.C2S_GET_LORD_ASSIGNED_GENERAL = "gla"),
+      (f.S2C_GET_LORD_ASSIGNED_GENERAL = "gla"),
+      (f.C2S_RENAME_LORD = "arl"),
+      (f.S2C_RENAME_LORD = "arl"),
+      (f.C2S_EXTRACT_GEM = "ege"),
+      (f.S2C_EXTRACT_GEM = "ege"),
+      (f.C2S_ALLIANCE_FORGE_EVENT = "frc"),
+      (f.S2C_ALLIANCE_FORGE_EVENT = "frc"),
+      (f.C2S_GET_NEW_RELICS = "gnr"),
+      (f.S2C_GET_NEW_RELICS = "gnr"),
+      (f.C2S_NEW_RELICS_FLAG = "nrf"),
+      (f.S2C_NEW_RELICS_FLAG = "nrf"),
+      (f.C2S_ENCHANT_RELIC_ITEM_EVENT = "ere"),
+      (f.S2C_ENCHANT_RELIC_ITEM_EVENT = "ere"),
+      (f.BOUGHT_RELIC_ITEM_EVENT = "bri"),
+      (f.C2S_ENCHANT_EQUIPMENT_EVENT = "eqe"),
+      (f.S2C_ENCHANT_EQUIPMENT_EVENT = "eqe"),
+      (f.C2S_SET_PUSH_NOTIFICATION_RUIN = "grt"),
+      (f.S2C_SET_PUSH_NOTIFICATION_RUIN = "grt"),
+      (f.C2S_COLOSSUS_GET_RANK = "che"),
+      (f.S2C_COLOSSUS_GET_RANK = "che"),
+      (f.C2S_COLOSSUS_DEPOSIT_RESOURCES = "cde"),
+      (f.S2C_COLOSSUS_DEPOSIT_RESOURCES = "cde"),
+      (f.C2S_CHOOSE_DECO_CASTLE = "cdc"),
+      (f.S2C_CHOOSE_DECO_CASTLE = "cdc"),
+      (f.C2S_COLOSSUS_GET_COLOSSUS = "cdg"),
+      (f.S2C_COLOSSUS_GET_COLOSSUS = "cdg"),
+      (f.C2S_OPEN_ACTIVITY_CHEST = "uoa"),
+      (f.S2C_OPEN_ACTIVITY_CHEST = "uoa"),
+      (f.S2C_ACTIVITY_CHEST_INFO = "uac"),
+      (f.C2S_FESTIVAL_START = "bfs"),
+      (f.S2C_FESTIVAL_START = "bfs"),
+      (f.C2S_ACHIEVEMENT_LIST = "vli"),
+      (f.S2C_ACHIEVEMENT_LIST = "vli"),
+      (f.C2S_ACHIEVEMENT_FINISHED = "vfi"),
+      (f.S2C_ACHIEVEMENT_FINISHED = "vfi"),
+      (f.S2C_GET_STATUS_MINES = "gsm"),
+      (f.C2S_COLLECT_MINE_RESOURCES = "cmr"),
+      (f.S2C_COLLECT_MINE_RESOURCES = "cmr"),
+      (f.S2C_DAILY_QUEST_LIST = "dql"),
+      (f.C2S_DAILY_QUEST_LIST = "dql"),
+      (f.S2C_COLLECT_DAILY_REWARD = "cdr"),
+      (f.C2S_COLLECT_DAILY_REWARD = "cdr"),
+      (f.C2S_VIP_INFO_EVENT = "vip"),
+      (f.S2C_VIP_INFO_EVENT = "vip"),
+      (f.C2S_OPTION_EVENT = "opt"),
+      (f.S2C_OPTION_EVENT = "opt"),
+      (f.C2S_LUCKY_WHEEL_SPIN = "lws"),
+      (f.S2C_LUCKY_WHEEL_SPIN = "lws"),
+      (f.C2S_LUCKY_WHEEL_CHANGE_MODE = "lwm"),
+      (f.S2C_LUCKY_WHEEL_CHANGE_MODE = "lwm"),
+      (f.C2S_LUCKY_WHEEL_BUY_JACKPOT = "lwj"),
+      (f.S2C_LUCKY_WHEEL_BUY_JACKPOT = "lwj"),
+      (f.C2S_LUCKY_WHEEL_INCREASE_PRIZE_CLASS = "lwc"),
+      (f.S2C_LUCKY_WHEEL_INCREASE_PRIZE_CLASS = "lwc"),
+      (f.S2C_GET_DAILY_RESET_TIME = "drt"),
+      (f.C2S_GET_DAILY_RESET_TIME = "drt"),
+      (f.C2S_GET_BUILDING_INFO = "gbi"),
+      (f.S2C_GET_BUILDING_INFO = "gbi"),
+      (f.C2S_GET_EXPANSION_INFO = "sea"),
+      (f.S2C_GET_EXPANSION_INFO = "sea"),
+      (f.C2S_NEW_MARAUDERS_DEPOSIT_RESOURCES = "bkp"),
+      (f.S2C_NEW_MARAUDERS_DEPOSIT_RESOURCES = "bkp"),
+      (f.C2S_TREASUREMAPS = "tmp"),
+      (f.S2C_TREASUREMAPS = "tmp"),
+      (f.C2S_CREATE_TREASUREHUNT_MOVEMENT = "thm"),
+      (f.S2C_CREATE_TREASUREHUNT_MOVEMENT = "thm"),
+      (f.C2S_ATTACK_INFO_TREASUREDUNGEON = "tai"),
+      (f.S2C_ATTACK_INFO_TREASUREDUNGEON = "tai"),
+      (f.C2S_BUY_TREASUREMAP_PIECE = "tbm"),
+      (f.S2C_BUY_TREASUREMAP_PIECE = "tbm"),
+      (f.C2S_TREASUREMAP_SKIP_TRANSFER = "tkt"),
+      (f.S2C_TREASUREMAP_SKIP_TRANSFER = "tkt"),
+      (f.C2S_TREASUREMAP_UNIT_TRANSFER = "tut"),
+      (f.S2C_TREASUREMAP_UNIT_TRANSFER = "tut"),
+      (f.C2S_TREASUREMAP_GOODS_TRANSFER = "tgt"),
+      (f.S2C_TREASUREMAP_GOODS_TRANSFER = "tgt"),
+      (f.C2S_TREASURE_FINISH_MAP = "tfm"),
+      (f.S2C_TREASURE_FINISH_MAP = "tfm"),
+      (f.S2C_TREASUREHUNT_INFO = "thi"),
+      (f.C2S_CLICK_NODE = "tcn"),
+      (f.S2C_CLICK_NODE = "tcn"),
+      (f.S2C_HIDE_ALIEN_CAMP = "hac"),
+      (f.S2C_REPLACE_ALIEN_CAMP = "rae"),
+      (f.C2S_REPLACE_ALIEN_CAMP = "rae"),
+      (f.S2C_GET_ALIEN_REPLACE_COUNT = "rce"),
+      (f.C2S_GET_ALIEN_REPLACE_COUNT = "rce"),
+      (f.C2S_DISMISS_UNITS = "dup"),
+      (f.S2C_DISMISS_UNITS = "dup"),
+      (f.C2S_REVIVE_ALL_HOSPITAL_UNITS = "hra"),
+      (f.S2C_REVIVE_ALL_HOSPITAL_UNITS = "hra"),
+      (f.C2S_CANCEL_HOSPITAL_SLOT = "hcs"),
+      (f.S2C_CANCEL_HOSPITAL_SLOT = "hcs"),
+      (f.C2S_REVIVE_HOSPITAL_UNITS = "hru"),
+      (f.S2C_REVIVE_HOSPITAL_UNITS = "hru"),
+      (f.C2S_SKIP_HOSPITAL_SLOT = "hss"),
+      (f.S2C_SKIP_HOSPITAL_SLOT = "hss"),
+      (f.C2S_DISMISS_HOSPITAL_UNITS = "hdu"),
+      (f.S2C_DISMISS_HOSPITAL_UNITS = "hdu"),
+      (f.C2S_ASSIGN_TITLE = "apt"),
+      (f.S2C_ASSIGN_TITLE = "apt"),
+      (f.S2C_ISLAND_KINGDOM_RESET = "ikr"),
+      (f.C2S_GET_AQUA_POINTS = "gap"),
+      (f.S2C_GET_AQUA_POINTS = "gap"),
+      (f.C2S_STORM_ISLAND_INFO = "sii"),
+      (f.S2C_STORM_ISLAND_INFO = "sii"),
+      (f.C2S_SEARCH_PLAYER_FOR_TITLE = "spt"),
+      (f.S2C_SEARCH_PLAYER_FOR_TITLE = "spt"),
+      (f.C2S_ALLIANCE_MEMBER_AQUA_POINTS_EVENT = "ama"),
+      (f.S2C_ALLIANCE_MEMBER_AQUA_POINTS_EVENT = "ama"),
+      (f.S2C_SLUM_LEVEL = "csl"),
+      (f.S2C_UPDATE_REWARD_INFO_EVENT = "uri"),
+      (f.C2S_ASSIGN_AND_GET_TEST_CASE_EVENT = "gtc"),
+      (f.S2C_ASSIGN_AND_GET_TEST_CASE_EVENT = "gtc"),
+      (f.C2S_SET_FACEBOOK_DATA_EVENT = "sfd"),
+      (f.S2C_SET_FACEBOOK_DATA_EVENT = "sfd"),
+      (f.C2S_PLAYERS_BY_FACEBOOK_IDS = "pbf"),
+      (f.S2C_PLAYERS_BY_FACEBOOK_IDS = "pbf"),
+      (f.C2S_GET_OWNER_INFO = "goi"),
+      (f.S2C_GET_OWNER_INFO = "goi"),
+      (f.C2S_GET_FACEBOOK_GIFT_COUNT = "fgc"),
+      (f.S2C_GET_FACEBOOK_GIFT_COUNT = "fgc"),
+      (f.C2S_GET_FACEBOOK_GIFT_LIST = "fgl"),
+      (f.S2C_GET_FACEBOOK_GIFT_LIST = "fgl"),
+      (f.C2S_COLLECT_FACEBOOK_GIFT = "cfg"),
+      (f.S2C_COLLECT_FACEBOOK_GIFT = "cfg"),
+      (f.C2S_SEND_FACEBOOK_GIFT = "sfg"),
+      (f.S2C_SEND_FACEBOOK_GIFT = "sfg"),
+      (f.C2S_GET_FACEBOOK_GIFT_COOLDOWN = "efc"),
+      (f.S2C_GET_FACEBOOK_GIFT_COOLDOWN = "efc"),
+      (f.C2S_RUBY_WISHING_WELL = "rww"),
+      (f.S2C_RUBY_WISHING_WELL = "rww"),
+      (f.C2S_SKILL_POINT_LIST = "skl"),
+      (f.S2C_SKILL_POINT_LIST = "skl"),
+      (f.C2S_ADD_SKILL_POINT = "skp"),
+      (f.S2C_ADD_SKILL_POINT = "skp"),
+      (f.C2S_RESET_SKILL_POINT = "skr"),
+      (f.S2C_RESET_SKILL_POINT = "skr"),
+      (f.S2C_HERO_DECISION_COMMAND = "hdc"),
+      (f.C2S_HERO_DECISION_COMMAND = "hdc"),
+      (f.C2S_GET_MONUMENTS_PROGRESS = "gmp"),
+      (f.S2C_GET_MONUMENTS_PROGRESS = "gmp"),
+      (f.S2C_GET_MONUMENTS_LIST = "gml"),
+      (f.S2C_MONUMENTS_RESET = "mre"),
+      (f.C2S_GET_GEMS_EVENT = "ggm"),
+      (f.S2C_GET_GEMS_EVENT = "ggm"),
+      (f.S2C_GEM_CHANGE = "gec"),
+      (f.S2C_SELL_GEM = "sge"),
+      (f.C2S_SELL_GEM = "sge"),
+      (f.S2C_BOUGHT_GEM = "bgm"),
+      (f.C2S_BIND_GEM = "bge"),
+      (f.S2C_BIND_GEM = "bge"),
+      (f.S2C_CRAFT_GEM = "cge"),
+      (f.C2S_CRAFT_GEM = "cge"),
+      (f.S2C_PLAYER_NAMES_LIST = "pnl"),
+      (f.C2S_GET_MIGHT_UPDATE = "gmu"),
+      (f.S2C_GET_MIGHT_UPDATE = "gmu"),
+      (f.C2S_KINGDOM_FAME_BOOST = "kfb"),
+      (f.S2C_KINGDOM_FAME_BOOST = "kfb"),
+      (f.C2S_SELECT_TITLE_EVENT = "ste"),
+      (f.S2C_SELECT_TITLE_EVENT = "ste"),
+      (f.C2S_GET_FACTION_POINTS = "gfp"),
+      (f.S2C_GET_FACTION_POINTS = "gfp"),
+      (f.S2C_LOGIN_POPUP_LIST = "lpl"),
+      (f.C2S_MINUTE_SKIP_BUILDING = "msb"),
+      (f.S2C_MINUTE_SKIP_BUILDING = "msb"),
+      (f.C2S_MINUTE_SKIP_KINGDOM_TRANSFER = "msk"),
+      (f.S2C_MINUTE_SKIP_KINGDOM_TRANSFER = "msk"),
+      (f.C2S_MINUTE_SKIP_MAP_TRANSFER = "msm"),
+      (f.S2C_MINUTE_SKIP_MAP_TRANSFER = "msm"),
+      (f.C2S_MINUTE_SKIP_RESEARCH = "msr"),
+      (f.S2C_MINUTE_SKIP_RESEARCH = "msr"),
+      (f.C2S_MINUTE_SKIP_DUNGEON = "msd"),
+      (f.S2C_MINUTE_SKIP_DUNGEON = "msd"),
+      (f.C2S_SAVE_SHOPPING_CART = "ssc"),
+      (f.S2C_IN_GAME_ANNOUNCEMENTS = "iga"),
+      (f.C2S_GET_ANNOUNCEMENTS_IN_LANGUAGE = "gia"),
+      (f.S2C_GET_ANNOUNCEMENTS_IN_LANGUAGE = "gia"),
+      (f.C2S_GET_CONSTRUCTION_ITEM_INVENTORY = "gii"),
+      (f.S2C_GET_CONSTRUCTION_ITEM_INVENTORY = "gii"),
+      (f.C2S_ADD_OR_REPLACE_CONSTRUCTION_ITEM = "rpc"),
+      (f.S2C_ADD_OR_REPLACE_CONSTRUCTION_ITEM = "rpc"),
+      (f.C2S_REMOVE_CONSTRUCTION_ITEM = "cri"),
+      (f.S2C_REMOVE_CONSTRUCTION_ITEM = "cri"),
+      (f.C2S_PROMOTION_BANNER_DATA = "pbd"),
+      (f.C2S_SELL_STORED_DECO = "sds"),
+      (f.S2C_SELL_STORED_DECO = "sds"),
+      (f.C2S_GET_USER_SURVEY_EVENT = "sur"),
+      (f.S2C_GET_USER_SURVEY_EVENT = "sur"),
+      (f.C2S_REPORT_USER_SURVEY_EVENT = "rus"),
+      (f.S2C_REPORT_USER_SURVEY_EVENT = "rus"),
+      (f.C2S_CLIENT_TRACKING_REQUEST_EVENT = "ctr"),
+      (f.S2C_GET_UNLOCKED_SYMBOL = "gus"),
+      (f.C2S_REQUEST_GGS_GIFT = "rgg"),
+      (f.S2C_REQUEST_GGS_GIFT = "rgg"),
+      (f.C2S_ALLIANCE_SUBSCRIBER_COUNT = "asc"),
+      (f.S2C_ALLIANCE_SUBSCRIBER_COUNT = "asc"),
+      (f.C2S_SUBSCRIPTIONS_INFORMATION = "sie"),
+      (f.S2C_SUBSCRIPTIONS_INFORMATION = "sie"),
+      (f.C2S_START_TAUNT_ATTACK = "lta"),
+      (f.S2C_START_TAUNT_ATTACK = "lta"),
+      (f.S2C_ALLIANCE_INVASION_CAMP_INFO = "aic"),
+      (f.S2C_RAGE_POINTS_RECEIVED = "rpr"),
+      (f.C2S_GET_CONSTRUCTION_CRAFTING_INFO = "gcc"),
+      (f.S2C_GET_CONSTRUCTION_CRAFTING_INFO = "gcc"),
+      (f.C2S_CONSTRUCTION_ITEM_CRAFT = "cic"),
+      (f.S2C_CONSTRUCTION_ITEM_CRAFT = "cic"),
+      (f.C2S_CONSTRUCTION_ITEM_DISASSEMBLE = "dci"),
+      (f.S2C_CONSTRUCTION_ITEM_DISASSEMBLE = "dci"),
+      (f.C2S_CONSTRUCTION_ITEM_INVENTORYS_SPACE_LEFT = "csp"),
+      (f.S2C_CONSTRUCTION_ITEM_INVENTORYS_SPACE_LEFT = "csp"),
+      (f.C2S_MINUTE_SKIP_CRAFTING = "sci"),
+      (f.S2C_MINUTE_SKIP_CRAFTING = "sci"),
+      (f.C2S_VISIT_SHOP = "vsh"),
+      (f.S2C_VISIT_SHOP = "vsh"),
+      (f.C2S_GET_ENABLED_HARDCORE_MODE_EFFECTS = "ghe"),
+      (f.S2C_GET_ENABLED_HARDCORE_MODE_EFFECTS = "ghe"),
+      (f.C2S_SET_ENABLED_HARDCORE_MODE_EFFECTS = "she"),
+      (f.S2C_SET_ENABLED_HARDCORE_MODE_EFFECTS = "she"),
+      (f.C2S_CONFIRM_TERMS_AND_CONDITIONS_EVENT = "ctc"),
+      (f.S2C_CONFIRM_TERMS_AND_CONDITIONS_EVENT = "ctc"),
+      (f.C2S_NEWSLETTER_SUBSCRIPTION_EVENT = "nse"),
+      (f.S2C_NEWSLETTER_SUBSCRIPTION_EVENT = "nse"),
+      (f.C2S_GET_NEWSLETTER_SUBSCRIPTION_STATUS_EVENT = "nss"),
+      (f.S2C_GET_NEWSLETTER_SUBSCRIPTION_STATUS_EVENT = "nss"),
+      (f.S2C_GET_FUSION_FORGE_INFO_EVENT = "ffi"),
+      (f.C2S_GET_FUSION_FORGE_INFO_EVENT = "ffi"),
+      (f.C2S_LEVEL_UP_FUSION_FORGE_EVENT = "ffl"),
+      (f.S2C_LEVEL_UP_FUSION_FORGE_EVENT = "ffl"),
+      (f.C2S_GET_FUSION_TARGET_DECO = "gtd"),
+      (f.S2C_GET_FUSION_TARGET_DECO = "gtd"),
+      (f.C2S_SKIP_FUSION_RECHARGE_EVENT = "fsr"),
+      (f.S2C_SKIP_FUSION_RECHARGE_EVENT = "fsr"),
+      (f.C2S_FUSION_CATALYST_CONVERSION_EVENT = "fcc"),
+      (f.S2C_FUSION_CATALYST_CONVERSION_EVENT = "fcc"),
+      (f.C2S_DECO_FORGE_FUSE_EVENT = "dff"),
+      (f.S2C_DECO_FORGE_FUSE_EVENT = "dff"),
+      (f.C2S_GET_AUTO_SELL_CONDITIONS_EVENT = "asg"),
+      (f.S2C_GET_AUTO_SELL_CONDITIONS_EVENT = "asg"),
+      (f.C2S_SET_AUTO_SELL_EQUIPMENT_CONDITIONS_EVENT = "aes"),
+      (f.S2C_SET_AUTO_SELL_EQUIPMENT_CONDITIONS_EVENT = "aes"),
+      (f.C2S_SET_AUTO_SELL_GEM_CONDITIONS_EVENT = "ags"),
+      (f.S2C_SET_AUTO_SELL_GEM_CONDITIONS_EVENT = "ags"),
+      (f.S2C_SHOW_POPOVER_EVENT = "spo"),
+      (f.C2S_REGISTER_PUSH_NOTIFICATION_DEVICE = "rpd"),
+      (f.C2S_GENERATE_LOGIN_TOKEN_EVENT = "glt"),
+      (f.S2C_GENERATE_LOGIN_TOKEN_EVENT = "glt"),
+      (f.C2S_REGISTER_OR_LOGIN_EVENT = "tle"),
+      (f.S2C_REGISTER_OR_LOGIN_EVENT = "tle"),
+      (f.S2C_TEMP_SERVER_EVENT = "tse"),
+      (f.S2C_TEMP_SERVER_PLAYER_HIGHSCORE = "tsh"),
+      (f.C2S_TEMP_SERVER_PLAYER_HIGHSCORE = "tsh"),
+      (f.S2C_TEMP_SERVER_SELECT_CAMP = "tsc"),
+      (f.C2S_TEMP_SERVER_SELECT_CAMP = "tsc"),
+      (f.S2C_TEMP_SERVER_GET_PLAYER_COLLECTOR_CURRENCY = "tpc"),
+      (f.C2S_TEMP_SERVER_GET_PLAYER_COLLECTOR_CURRENCY = "tpc"),
+      (f.S2C_CREATE_TEMP_SERVER_COLLECTOR_ARMY_ATTACK_MOVEMENT = "cam"),
+      (f.C2S_CREATE_TEMP_SERVER_COLLECTOR_ARMY_ATTACK_MOVEMENT = "cam"),
+      (f.S2C_GET_ATTACK_TEMP_SERVER_COLLECTOR_CASTLE_INFO = "ati"),
+      (f.C2S_GET_ATTACK_TEMP_SERVER_COLLECTOR_CASTLE_INFO = "ati"),
+      (f.S2C_MUTE_DIALOGS = "smd"),
+      (f.C2S_GET_PLAYER_COLLECTOR_CURRENCY = "pcc"),
+      (f.S2C_GET_PLAYER_COLLECTOR_CURRENCY = "pcc"),
+      (f.C2S_GET_ATTACK_COLLECTOR_CASTLE_INFO = "acc"),
+      (f.S2C_GET_ATTACK_COLLECTOR_CASTLE_INFO = "acc"),
+      (f.C2S_BUY_PRIVATE_RESOURCE_VILLAGE = "bpv"),
+      (f.S2C_BUY_PRIVATE_RESOURCE_VILLAGE = "bpv"),
+      (f.C2S_REMOVE_PRIVATE_RESOURCE_VILLAGE = "rpv"),
+      (f.S2C_REMOVE_PRIVATE_RESOURCE_VILLAGE = "rpv"),
+      (f.C2S_UPGRADE_PRIVATE_RESOURCE_VILLAGE = "upv"),
+      (f.S2C_UPGRADE_PRIVATE_RESOURCE_VILLAGE = "upv"),
+      (f.C2S_GET_KINGDOMS_LEAGUE_INFO_EVENT = "kli"),
+      (f.S2C_GET_KINGDOMS_LEAGUE_INFO_EVENT = "kli"),
+      (f.C2S_BUY_KINGDOMS_LEAGUE_PASS_EVENT = "kbp"),
+      (f.S2C_BUY_KINGDOMS_LEAGUE_PASS_EVENT = "kbp"),
+      (f.C2S_SET_KINGDOMS_LEAGUE_START_SEEN_EVENT = "kss"),
+      (f.S2C_SET_KINGDOMS_LEAGUE_START_SEEN_EVENT = "kss"),
+      (f.C2S_GET_KINGDOMS_HIGHSCORE_RANK_EVENT = "klh"),
+      (f.S2C_GET_KINGDOMS_HIGHSCORE_RANK_EVENT = "klh"),
+      (f.SEASON_PASS_PRICE_EVENT = "spp"),
+      (f.BUY_SEASON_PROMOTION_PASS = "bsp"),
+      (f.BUY_SEASON_EVENT_PASS = "bep"),
+      (f.C2S_OFFER_OFFER_PAY = "oop"),
+      (f.S2C_OFFER_OFFER_PAY = "oop"),
+      (f.BUY_BESTSELLER_OFFER = "bso"),
+      (f.C2S_UPDATE_SEEN_GLOBAL_EFFECTS_EVENT = "usg"),
+      (f.S2C_UPDATE_SEEN_GLOBAL_EFFECTS_EVENT = "usg"),
+      (f.ACTIVATE_GLOBAL_EFFECT_BOOSTER_EVENT = "agb"),
+      (f.GLOBAL_EFFECT_BOOSTER_INFO_EVENT = "bie"),
+      (f.C2S_LOST_AND_FOUND_EVENT = "lfe"),
+      (f.S2C_LOST_AND_FOUND_EVENT = "lfe"),
+      (f.C2S_COLLECT_LOST_AND_FOUND_EVENT = "clf"),
+      (f.S2C_COLLECT_LOST_AND_FOUND_EVENT = "clf"),
+      (f.C2S_ACTIVATE_TRAINING_PROGRAM_EVENT = "atp"),
+      (f.S2C_ACTIVATE_TRAINING_PROGRAM_EVENT = "atp"),
+      (f.C2S_PROLONG_TRAINING_PROGRAM_EVENT = "ptp"),
+      (f.S2C_PROLONG_TRAINING_PROGRAM_EVENT = "ptp"),
+      (f.C2S_REROLL_TRAINING_PROGRAMS_EVENT = "rtp"),
+      (f.S2C_REROLL_TRAINING_PROGRAMS_EVENT = "rtp"),
+      (f.C2S_GET_ACTIVE_TRAINING_PROGRAM_INFO_EVENT = "gatp"),
+      (f.S2C_GET_ACTIVE_TRAINING_PROGRAM_INFO_EVENT = "gatp"),
+      (f.C2S_GET_TRAINING_PROGRAM_INFO_EVENT = "gtp"),
+      (f.S2C_GET_TRAINING_PROGRAM_INFO_EVENT = "gtp"),
+      (f.C2S_GET_DAIMYO_ALLIANCE_CONTRACTS_EVENT = "gdc"),
+      (f.S2C_GET_DAIMYO_ALLIANCE_CONTRACTS_EVENT = "gdc"),
+      (f.C2S_GET_DAIMYO_WAR_EFFORTS_EVENT = "gdw"),
+      (f.S2C_GET_DAIMYO_WAR_EFFORTS_EVENT = "gdw"),
+      (f.C2S_GET_DAIMYO_AREAS_EVENT = "gda"),
+      (f.S2C_GET_DAIMYO_AREAS_EVENT = "gda"),
+      (f.C2S_CREATE_DAIMYO_DEFENSE_MOVEMENT_EVENT = "cdd"),
+      (f.S2C_CREATE_DAIMYO_DEFENSE_MOVEMENT_EVENT = "cdd"));
+    ((f.C2S_LAUNCH_DAIMYO_TAUNT_ATTACK_EVENT = "ldt"),
+      (f.S2C_LAUNCH_DAIMYO_TAUNT_ATTACK_EVENT = "ldt"),
+      (f.S2C_RELIC_ENCHANTER_ENABLED_EVENT = "ree"),
+      (f.THIRD_PARTY_GET_MAPPING = "tgm"),
+      (f.THIRD_PARTY_SET_MAPPING = "tsm"),
+      (f.ALLIANCE_BATTLE_GROUND_JOINED_PLAYER = "ajp"),
+      (f.ALLIANCE_BATTLE_GROUND_MINE_OUT_TIME = "mot"),
+      (f.GET_ALLIANCE_BATTLE_GROUND_ALLIANCE_POINTS = "gabgap"),
+      (f.GET_ALLIANCE_BATTLE_GROUND_PLAYER_POINTS = "gabgpp"),
+      (f.CREATE_ALLIANCE_BATTLE_GROUND_COLLECTOR_ARMY_ATTACK_MOVEMENT =
         "abgcam"),
-      (C.GET_ATTACK_ALLIANCE_BATTLE_GROUND_COLLECTOR_CASTLE_INFO = "abgati"),
-      (C.GET_ALLIANCE_BATTLE_GROUND_ALLIANCE_HIGHSCORE = "abgph"),
-      (C.GO_TO_WORLD_MAP_AFTER_REMOVE_AREA = "gtwara"),
-      (C.GET_PLAYER_EVENT_STATISTICS = "gpe"),
-      (C.GET_ALLIANCE_EVENT_STATISTICS = "gae"),
-      (C.GET_ALLIANCE_CENTERS_OF_POWER = "cpe"),
-      (C.GET_ALLIANCE_CENTERS_OF_POWER_DETAILED = "cpd"),
-      (C.GET_ALLIANCE_TOWER_RESET_TIMERS = "trt"),
-      (C.GET_ALLIANCE_TOWER_INFO = "tie"),
-      (C.GET_ALLIANCE_TOWER_PLAYER_INFO = "tpi"),
-      (C.GET_ALLIANCE_TOWER_BUFF_INFO = "tbi"),
-      (C.INCREASE_ALLIANCE_TOWER_BUFF = "iatb"),
-      (C.ACTIVATE_ALLIANCE_TOWER_BUFF = "aatb"),
-      (C.GET_ATTACK_ALLIANCE_BATTLE_GROUND_TOWER_INFO = "gti"),
-      (C.CREATE_ALLIANCE_BATTLE_GROUND_TOWER_DEFENSE_MOVEMENT = "tde"),
-      (C.GET_AREA_BARON_INFO_EVENT = "abe"),
-      (C.GLOBAL_SERVER_PREVIOUS_RUN_INFO_EVENT = "gpr"),
-      (C.GLOBAL_SERVER_REGISTER_OR_LOGIN_E4K_EVENT = "tle"),
-      (C.GLOBAL_SERVER_REGISTER_OR_LOGIN_EP_EVENT = "tlep"),
-      (C.FORTUNE_TELLER_EVENT = "ftl"),
-      (C.MOVE_OBJECT_TO_BUILDING_DISTRICT = "mde"),
-      (C.MOVE_OBJECT_FROM_BUILDING_DISTRICT = "rde"),
-      (C.BUY_SCEAT_SKILL = "bss"),
-      (C.SKIP_SCEAT_SKILL_ACTIVATION = "ssa"),
-      (C.AREA_BUILDING_PRODUCTION_INFO = "abpi"),
-      (C.MOVEMENT_FILTER_EVENT = "mvf"),
-      (C.BUY_UNLOCKED_SYMBOLS_EVENT = "bus"),
-      (C.GET_UNLOCKED_AND_PAID_CREST_SYMBOL_EVENT = "gus"),
-      (C.DOWNTIME_STATUS = "DTS"),
-      (C.FEATURE_FLAGS = "FTF"),
-      (C.CHANGE_ALLIANCE_LANGUAGE = "cal"),
-      (C.HOSPITAL_FLAGS = "hfl"),
-      (C.BREWERY_FLAGS = "bfl"),
-      (C.GET_NEXT_EXPIRING_CONSTRUCTION_ITEM_EVENT = "nec"),
-      (C.GET_ALL_EXPIRED_CONSTRUCTION_ITEM_EVENT = "aec"),
-      (C.MARK_EXPIRED_CONSTRUCTION_ITEM_EVENT = "mec"),
-      (C.USE_BOOSTER_CONSUMABLE_ON_CONSTRUCTION_ITEM_EVENT = "ubc"),
-      (C.GET_FEAST_COST_REDUCTION_EVENT = "fce"),
-      (C.PENDING_REWARDS_EVENT = "pre"),
-      (C.CRAFTING_START_EVENT = "crst"),
-      (C.CRAFTING_CANCEL_EVENT = "crca"),
-      (C.CRAFTING_SKIP_EVENT = "crsk"),
-      (C.CRAFTING_INFO_EVENT = "crin"),
-      (C.CRAFTING_QUEUE_MOVE_EVENT = "crqm"),
-      (C.CRAFTING_UNLOCK_EVENT = "crun"),
-      (C.CRAFTING_AREA_INFO_EVENT = "crai"),
-      (C.SELECT_EVENT_AUTO_SCALING_DIFFICULTY_EVENT = "sede"),
-      (C.CHANGE_PLAYER_NAME_EVENT = "cpne"),
-      (C.CHANGE_PLAYER_EMAIL_EVENT = "cpee"),
-      (C.GET_PLAYER_NAME_CHANGE_INFO_EVENT = "gnci"),
-      (C.PLAYER_SCHEDULED_DELETION_EVENT = "psd"),
-      (C.REQUEST_MAIL_CHANGE = "rmc"),
-      (C.MAIL_NEWSLETTER_STATUS = "mns"),
-      (C.RESEND_MAIL = "rsm"),
-      (C.CANCEL_MAIL_CHANGE = "cmc"),
-      (C.VALIDATE_NEW_PLAYER_NAME_EVENT = "vpn"),
-      (C.VALIDATE_LOGIN_NAME_EVENT = "vln"),
-      (C.GET_LOOTBOXES_STATUS = "gls"),
-      (C.OPEN_LOOTBOX_EVENT = "ole"),
-      (C.GENERALS_INFO_EVENT = "gie"),
-      (C.GENERAL_UNLOCK_EVENT = "gue"),
-      (C.GENERAL_STAR_UPGRADE_EVENT = "gsue"),
-      (C.GENERAL_ADD_XP_EVENT = "gaxp"),
-      (C.GENERAL_RESET_FLAGS_EVENT = "grf"),
-      (C.GENERAL_UNLOCK_SKILL_EVENT = "guse"),
-      (C.GENERAL_RESET_SKILLS_EVENT = "grs"),
-      (C.GET_CHARACTERS_STATUS_EVENT = "gcs"),
-      (C.SPIN_CHARACTER_TOMBOLA_EVENT = "sct"),
-      (C.GENERALS_ASSIGN_ABILITY_EVENT = "gaae"),
-      (C.FINISH_QUEST_CONDITION_EVENT = "fcq"),
-      (C.SKIP_GENERALS_INTRODUCTION = "sgi"),
-      (C.LAUNCH_WOLFKING_TAUNT_ATTACK = "lwta"),
-      (C.WELCOME_BACK_MESSAGE_INFO_EVENT = "wbie"),
-      (C.UPDATE_PREDEFINED_ATTACK_NAME_EVENT = "upan"),
-      (C.STORE_SOLDIERS_EVENT = "sts"),
-      (C.TAKE_SOLDIERS_EVENT = "tas"),
-      (C.DAILY_MESSAGES_COUNT_UPDATE = "mcd"),
-      (C.PING_PONG = "pinpon"),
-      (C.C2S_VERSION_CHECK = "vck"),
-      (C.C2S_NEW_CASH_HASH = "nch"),
-      (C.C2S_REPORT_SURVEY = "rsv"),
-      (C.C2S_SOCIALLOGIN_EVENT = "lgs"),
-      (C.C2S_VERIFY_PLAYERMAIL_EVENT = "vpm"),
-      (C.S2C_SERVER_MESSAGE = "sms"),
-      (C.S2C_GET_CASH_HASH = "gch"),
-      (C.S2C_VERSION_CHECK = "vck"),
-      (C.S2C_SPECIAL_OFFER_EVENT = "soe"),
-      (C.S2C_FORUM_LOGIN_DATA = "core_gfl"),
-      (C.S2C_SERVERINFO = "nfo"),
-      (C.S2C_COMA_TEASER_EVENT = "cmt"),
-      (C.S2C_LOSTPASSWORD_EVENT = "lpp"),
-      (C.GET_DONATION_TYPE_INFO_EVENT = "gdti"),
-      (C.DONATE_DONATION_ITEM_EVENT = "ddi"),
-      (C.CLAIM_FREE_CHEST_EVENT = "cfc"),
-      (C.SPIN_GACHA_EVENT = "dge"),
-      (C.LIST_LEADERBOARD_SCORES_PAGE_EVENT = "llsp"),
-      (C.LIST_LEADERBOARD_SCORES_WINDOW_EVENT = "llsw"),
-      (C.SEARCH_LEADERBOARD_SCORES_EVENT = "slse"),
-      (C.ACTIVATE_ATTACK_ADVISOR_EVENT = "aa"),
-      (C.GET_ATTACK_ADVISOR_OVERVIEW_EVENT = "aao"),
-      (C.ALLIANCE_EMBLEM_EVENT = "aee"),
-      (C.SET_ALLIANCE_EMBLEM_EVENT = "sae"),
-      (C.START_ALLIANCE_QUEST = "saq"),
-      (C.COMPLETE_ALLIANCE_QUEST = "caq"),
-      (C.CANCEL_ALLIANCE_QUEST = "caaq"),
-      (C.REROLL_ALLIANCE_QUEST = "raq"),
-      (C.ALLIANCE_QUEST_STATUS = "aqs"),
-      (C.ALLIANCE_QUEST_PLAYER_CONTRIBUTION_EVENT = "aqpc"),
-      (C.SKIP_COOLDOWN_ALLIANCE_QUEST = "scq"),
-      (C.BOSS_STATUS_EVENT = "bse"),
-      (C.BOSS_BROADCAST_STATUS_EVENT = "bbs"),
-      (t.ConstantsSmartFox = C),
-      (C.__class = "ConstantsSmartFox"));
-    var f = (function () {
+      (f.GET_ATTACK_ALLIANCE_BATTLE_GROUND_COLLECTOR_CASTLE_INFO = "abgati"),
+      (f.GET_ALLIANCE_BATTLE_GROUND_ALLIANCE_HIGHSCORE = "abgph"),
+      (f.GO_TO_WORLD_MAP_AFTER_REMOVE_AREA = "gtwara"),
+      (f.GET_PLAYER_EVENT_STATISTICS = "gpe"),
+      (f.GET_ALLIANCE_EVENT_STATISTICS = "gae"),
+      (f.GET_ALLIANCE_CENTERS_OF_POWER = "cpe"),
+      (f.GET_ALLIANCE_CENTERS_OF_POWER_DETAILED = "cpd"),
+      (f.GET_ALLIANCE_TOWER_RESET_TIMERS = "trt"),
+      (f.GET_ALLIANCE_TOWER_INFO = "tie"),
+      (f.GET_ALLIANCE_TOWER_PLAYER_INFO = "tpi"),
+      (f.GET_ALLIANCE_TOWER_BUFF_INFO = "tbi"),
+      (f.INCREASE_ALLIANCE_TOWER_BUFF = "iatb"),
+      (f.ACTIVATE_ALLIANCE_TOWER_BUFF = "aatb"),
+      (f.GET_ATTACK_ALLIANCE_BATTLE_GROUND_TOWER_INFO = "gti"),
+      (f.CREATE_ALLIANCE_BATTLE_GROUND_TOWER_DEFENSE_MOVEMENT = "tde"),
+      (f.GET_AREA_BARON_INFO_EVENT = "abe"),
+      (f.GLOBAL_SERVER_PREVIOUS_RUN_INFO_EVENT = "gpr"),
+      (f.GLOBAL_SERVER_REGISTER_OR_LOGIN_E4K_EVENT = "tle"),
+      (f.GLOBAL_SERVER_REGISTER_OR_LOGIN_EP_EVENT = "tlep"),
+      (f.FORTUNE_TELLER_EVENT = "ftl"),
+      (f.MOVE_OBJECT_TO_BUILDING_DISTRICT = "mde"),
+      (f.MOVE_OBJECT_FROM_BUILDING_DISTRICT = "rde"),
+      (f.BUY_SCEAT_SKILL = "bss"),
+      (f.SKIP_SCEAT_SKILL_ACTIVATION = "ssa"),
+      (f.AREA_BUILDING_PRODUCTION_INFO = "abpi"),
+      (f.MOVEMENT_FILTER_EVENT = "mvf"),
+      (f.BUY_UNLOCKED_SYMBOLS_EVENT = "bus"),
+      (f.GET_UNLOCKED_AND_PAID_CREST_SYMBOL_EVENT = "gus"),
+      (f.DOWNTIME_STATUS = "DTS"),
+      (f.FEATURE_FLAGS = "FTF"),
+      (f.CHANGE_ALLIANCE_LANGUAGE = "cal"),
+      (f.HOSPITAL_FLAGS = "hfl"),
+      (f.BREWERY_FLAGS = "bfl"),
+      (f.GET_NEXT_EXPIRING_CONSTRUCTION_ITEM_EVENT = "nec"),
+      (f.GET_ALL_EXPIRED_CONSTRUCTION_ITEM_EVENT = "aec"),
+      (f.MARK_EXPIRED_CONSTRUCTION_ITEM_EVENT = "mec"),
+      (f.USE_BOOSTER_CONSUMABLE_ON_CONSTRUCTION_ITEM_EVENT = "ubc"),
+      (f.GET_FEAST_COST_REDUCTION_EVENT = "fce"),
+      (f.PENDING_REWARDS_EVENT = "pre"),
+      (f.CRAFTING_START_EVENT = "crst"),
+      (f.CRAFTING_CANCEL_EVENT = "crca"),
+      (f.CRAFTING_SKIP_EVENT = "crsk"),
+      (f.CRAFTING_INFO_EVENT = "crin"),
+      (f.CRAFTING_QUEUE_MOVE_EVENT = "crqm"),
+      (f.CRAFTING_UNLOCK_EVENT = "crun"),
+      (f.CRAFTING_AREA_INFO_EVENT = "crai"),
+      (f.SELECT_EVENT_AUTO_SCALING_DIFFICULTY_EVENT = "sede"),
+      (f.CHANGE_PLAYER_NAME_EVENT = "cpne"),
+      (f.CHANGE_PLAYER_EMAIL_EVENT = "cpee"),
+      (f.GET_PLAYER_NAME_CHANGE_INFO_EVENT = "gnci"),
+      (f.PLAYER_SCHEDULED_DELETION_EVENT = "psd"),
+      (f.REQUEST_MAIL_CHANGE = "rmc"),
+      (f.MAIL_NEWSLETTER_STATUS = "mns"),
+      (f.RESEND_MAIL = "rsm"),
+      (f.CANCEL_MAIL_CHANGE = "cmc"),
+      (f.VALIDATE_NEW_PLAYER_NAME_EVENT = "vpn"),
+      (f.VALIDATE_LOGIN_NAME_EVENT = "vln"),
+      (f.GET_LOOTBOXES_STATUS = "gls"),
+      (f.OPEN_LOOTBOX_EVENT = "ole"),
+      (f.GENERALS_INFO_EVENT = "gie"),
+      (f.GENERAL_UNLOCK_EVENT = "gue"),
+      (f.GENERAL_STAR_UPGRADE_EVENT = "gsue"),
+      (f.GENERAL_ADD_XP_EVENT = "gaxp"),
+      (f.GENERAL_RESET_FLAGS_EVENT = "grf"),
+      (f.GENERAL_UNLOCK_SKILL_EVENT = "guse"),
+      (f.GENERAL_RESET_SKILLS_EVENT = "grs"),
+      (f.GET_CHARACTERS_STATUS_EVENT = "gcs"),
+      (f.SPIN_CHARACTER_TOMBOLA_EVENT = "sct"),
+      (f.GENERALS_ASSIGN_ABILITY_EVENT = "gaae"),
+      (f.FINISH_QUEST_CONDITION_EVENT = "fcq"),
+      (f.SKIP_GENERALS_INTRODUCTION = "sgi"),
+      (f.LAUNCH_WOLFKING_TAUNT_ATTACK = "lwta"),
+      (f.WELCOME_BACK_MESSAGE_INFO_EVENT = "wbie"),
+      (f.UPDATE_PREDEFINED_ATTACK_NAME_EVENT = "upan"),
+      (f.STORE_SOLDIERS_EVENT = "sts"),
+      (f.TAKE_SOLDIERS_EVENT = "tas"),
+      (f.DAILY_MESSAGES_COUNT_UPDATE = "mcd"),
+      (f.PING_PONG = "pinpon"),
+      (f.C2S_VERSION_CHECK = "vck"),
+      (f.C2S_NEW_CASH_HASH = "nch"),
+      (f.C2S_REPORT_SURVEY = "rsv"),
+      (f.C2S_SOCIALLOGIN_EVENT = "lgs"),
+      (f.C2S_VERIFY_PLAYERMAIL_EVENT = "vpm"),
+      (f.S2C_SERVER_MESSAGE = "sms"),
+      (f.S2C_GET_CASH_HASH = "gch"),
+      (f.S2C_VERSION_CHECK = "vck"),
+      (f.S2C_SPECIAL_OFFER_EVENT = "soe"),
+      (f.S2C_FORUM_LOGIN_DATA = "core_gfl"),
+      (f.S2C_SERVERINFO = "nfo"),
+      (f.S2C_COMA_TEASER_EVENT = "cmt"),
+      (f.S2C_LOSTPASSWORD_EVENT = "lpp"),
+      (f.GET_DONATION_TYPE_INFO_EVENT = "gdti"),
+      (f.DONATE_DONATION_ITEM_EVENT = "ddi"),
+      (f.CLAIM_FREE_CHEST_EVENT = "cfc"),
+      (f.SPIN_GACHA_EVENT = "dge"),
+      (f.LIST_LEADERBOARD_SCORES_PAGE_EVENT = "llsp"),
+      (f.LIST_LEADERBOARD_SCORES_WINDOW_EVENT = "llsw"),
+      (f.SEARCH_LEADERBOARD_SCORES_EVENT = "slse"),
+      (f.ACTIVATE_ATTACK_ADVISOR_EVENT = "aa"),
+      (f.GET_ATTACK_ADVISOR_OVERVIEW_EVENT = "aao"),
+      (f.ALLIANCE_EMBLEM_EVENT = "aee"),
+      (f.SET_ALLIANCE_EMBLEM_EVENT = "sae"),
+      (f.START_ALLIANCE_QUEST = "saq"),
+      (f.COMPLETE_ALLIANCE_QUEST = "caq"),
+      (f.CANCEL_ALLIANCE_QUEST = "caaq"),
+      (f.REROLL_ALLIANCE_QUEST = "raq"),
+      (f.ALLIANCE_QUEST_STATUS = "aqs"),
+      (f.ALLIANCE_QUEST_PLAYER_CONTRIBUTION_EVENT = "aqpc"),
+      (f.SKIP_COOLDOWN_ALLIANCE_QUEST = "scq"),
+      (f.BOSS_STATUS_EVENT = "bse"),
+      (f.BOSS_BROADCAST_STATUS_EVENT = "bbs"),
+      (f.SELECT_RAID_BOSS_EVENT = "srb"),
+      (f.ABORT_RAID_EVENT = "arb"),
+      (t.ConstantsSmartFox = f),
+      (f.__class = "ConstantsSmartFox"));
+    var T = (function () {
       function ConstructionConst() {}
       return (
         (ConstructionConst.UNLOCK_DURATION_$LI$ = function () {
@@ -81739,9 +81890,9 @@ and limitations under the License.
           );
         }),
         (ConstructionConst.getExpandLimitForC2 = function (e, t, n) {
-          return t === P.EVENTCAMP_AREA_ID || n === M.KINGDOM_ID
+          return t === P.EVENTCAMP_AREA_ID || n === U.KINGDOM_ID
             ? ConstructionConst.MAX_EXPANSION_LEVEL
-            : e < He.TUTORIAL_END_LEVEL
+            : e < Ve.TUTORIAL_END_LEVEL
               ? 0
               : e < 13
                 ? e - 1
@@ -81754,7 +81905,7 @@ and limitations under the License.
           t,
           n,
         ) {
-          return t === P.EVENTCAMP_AREA_ID || n === M.KINGDOM_ID
+          return t === P.EVENTCAMP_AREA_ID || n === U.KINGDOM_ID
             ? ConstructionConst.MAX_EXPANSION_LEVEL
             : e < 3
               ? e
@@ -81784,7 +81935,7 @@ and limitations under the License.
                     : 0;
         }),
         (ConstructionConst.getExpandLimitForResources = function (e, t, n) {
-          return t === P.EVENTCAMP_AREA_ID || n === M.KINGDOM_ID
+          return t === P.EVENTCAMP_AREA_ID || n === U.KINGDOM_ID
             ? ConstructionConst.MAX_EXPANSION_LEVEL
             : 1 === e
               ? 1
@@ -81813,7 +81964,7 @@ and limitations under the License.
         }),
         (ConstructionConst.getExpandLevelForC2 = function (e) {
           return e < 4
-            ? He.TUTORIAL_END_LEVEL
+            ? Ve.TUTORIAL_END_LEVEL
             : e < 12
               ? e + 1
               : e < 17
@@ -81826,30 +81977,30 @@ and limitations under the License.
         ConstructionConst
       );
     })();
-    ((f.MAX_SLOTS = 4),
-      (f.MAX_QUEUE_SLOTS = 2),
-      (f.MAX_SIMULTANEOUS_SLOTS = 2),
-      (f.SLOTSTATEUNLOCKED = -1),
-      (f.SLOTSTATELOCKED = -2),
-      (f.BUILT_TO_DISASSEMBLE_TIME_FACTOR = 0.5),
-      (f.BUILT_TO_REPAIR_TIME_FACTOR = 0.5),
-      (f.MAX_HP = 100),
-      (f.MIN_HP = 0),
-      (f.UPGRADE_RECRUITSPEED_BOOST = 5),
-      (f.INSTANT_COST_C2_PER_MINUTE = 2),
-      (f.INSTANT_REPAIR_ALL_COST_C2_PER_MINUTE = 2),
-      (f.UNLOCK_C2 = 625),
-      (f.PREMIUM_FACTOR_REPAIR_ALL = 0.5),
-      (f.RUBBLE_WOD_ID = 250),
-      (f.MAX_REPAIR_ALL_COST = 1e4),
-      (f.DAMAGE_TYPE_FIRE = 0),
-      (f.DAMAGE_TYPE_PLAGUE = 1),
-      (f.SELL_BONUS_FROM_BUY_COSTS_FACTOR = 0.25),
-      (f.SKIP_COST_FACTOR = 2),
-      (f.MAX_EXPANSION_LEVEL = 19),
-      (t.ConstructionConst = f),
-      (f.__class = "ConstructionConst"));
-    var T = (function () {
+    ((T.MAX_SLOTS = 4),
+      (T.MAX_QUEUE_SLOTS = 2),
+      (T.MAX_SIMULTANEOUS_SLOTS = 2),
+      (T.SLOTSTATEUNLOCKED = -1),
+      (T.SLOTSTATELOCKED = -2),
+      (T.BUILT_TO_DISASSEMBLE_TIME_FACTOR = 0.5),
+      (T.BUILT_TO_REPAIR_TIME_FACTOR = 0.5),
+      (T.MAX_HP = 100),
+      (T.MIN_HP = 0),
+      (T.UPGRADE_RECRUITSPEED_BOOST = 5),
+      (T.INSTANT_COST_C2_PER_MINUTE = 2),
+      (T.INSTANT_REPAIR_ALL_COST_C2_PER_MINUTE = 2),
+      (T.UNLOCK_C2 = 625),
+      (T.PREMIUM_FACTOR_REPAIR_ALL = 0.5),
+      (T.RUBBLE_WOD_ID = 250),
+      (T.MAX_REPAIR_ALL_COST = 1e4),
+      (T.DAMAGE_TYPE_FIRE = 0),
+      (T.DAMAGE_TYPE_PLAGUE = 1),
+      (T.SELL_BONUS_FROM_BUY_COSTS_FACTOR = 0.25),
+      (T.SKIP_COST_FACTOR = 2),
+      (T.MAX_EXPANSION_LEVEL = 19),
+      (t.ConstructionConst = T),
+      (T.__class = "ConstructionConst"));
+    var S = (function () {
       function ConstructionItemConst() {}
       return (
         (ConstructionItemConst.MAX_SLOTS_$LI$ = function () {
@@ -81876,22 +82027,22 @@ and limitations under the License.
         ConstructionItemConst
       );
     })();
-    ((T.APPEARANCE_SLOT_TYPE = 0),
-      (T.PRIMARY_SLOT_TYPE = 1),
-      (T.SECONDARY_SLOT_TYPE = 2),
-      (T.APPEARANCE_SLOT_COUNT = 1),
-      (T.PRIMARY_SLOT_COUNT = 1),
-      (T.SECONDARY_SLOT_COUNT = 1),
-      (T.RARENESS_UNIQUE = 0),
-      (T.RARENESS_COMMON = 1),
-      (T.RARENESS_RARE = 2),
-      (T.RARENESS_EPIC = 3),
-      (T.RARENESS_LEGENDARY = 4),
-      (T.INVENTORY_SOFTCAP = 1e3),
-      (T.INVENTORY_HARDCAP = 1500),
-      (t.ConstructionItemConst = T),
-      (T.__class = "ConstructionItemConst"));
-    var S = (function () {
+    ((S.APPEARANCE_SLOT_TYPE = 0),
+      (S.PRIMARY_SLOT_TYPE = 1),
+      (S.SECONDARY_SLOT_TYPE = 2),
+      (S.APPEARANCE_SLOT_COUNT = 1),
+      (S.PRIMARY_SLOT_COUNT = 1),
+      (S.SECONDARY_SLOT_COUNT = 1),
+      (S.RARENESS_UNIQUE = 0),
+      (S.RARENESS_COMMON = 1),
+      (S.RARENESS_RARE = 2),
+      (S.RARENESS_EPIC = 3),
+      (S.RARENESS_LEGENDARY = 4),
+      (S.INVENTORY_SOFTCAP = 5e3),
+      (S.INVENTORY_HARDCAP = 6e3),
+      (t.ConstructionItemConst = S),
+      (S.__class = "ConstructionItemConst"));
+    var y = (function () {
       function DailyQuestConst() {}
       return (
         (DailyQuestConst.REWARD_STEPS_$LI$ = function () {
@@ -81911,36 +82062,36 @@ and limitations under the License.
         DailyQuestConst
       );
     })();
-    ((S.MIN_LEVEL = 6),
-      (S.MAX_SPY_COUNT = 5),
-      (S.RUBY_STEP = 12),
-      (S.ACTIVITIES_PER_DAY = 12),
-      (S.TEMP_SERVER_ACTIVITIES_PER_DAY = 3),
-      (t.DailyQuestConst = S),
-      (S.__class = "DailyQuestConst"));
-    var y = (function () {
+    ((y.MIN_LEVEL = 6),
+      (y.MAX_SPY_COUNT = 5),
+      (y.RUBY_STEP = 12),
+      (y.ACTIVITIES_PER_DAY = 12),
+      (y.TEMP_SERVER_ACTIVITIES_PER_DAY = 3),
+      (t.DailyQuestConst = y),
+      (y.__class = "DailyQuestConst"));
+    var I = (function () {
       return function DaimyoConst() {};
     })();
-    ((y.DAIMYO_CASTLES_PER_PLAYER = 4),
-      (y.DAIMYO_TOWNSHIPS_PER_PLAYER = 4),
-      (y.DAIMYO_BARON_LOOK_ID = 1002),
-      (y.DAIMYO_GENERAL_LOOK_ID = 1003),
-      (t.DaimyoConst = y),
-      (y.__class = "DaimyoConst"));
-    var I = (function () {
+    ((I.DAIMYO_CASTLES_PER_PLAYER = 4),
+      (I.DAIMYO_TOWNSHIPS_PER_PLAYER = 4),
+      (I.DAIMYO_BARON_LOOK_ID = 1002),
+      (I.DAIMYO_GENERAL_LOOK_ID = 1003),
+      (t.DaimyoConst = I),
+      (I.__class = "DaimyoConst"));
+    var v = (function () {
       function DecorationConst() {}
       return (
         (DecorationConst.getStorageID = function (e) {
-          for (var t = !1, n = 0; n < We.CRUSADE_MAP_IDS_$LI$().length; n++) {
-            if (We.CRUSADE_MAP_IDS_$LI$()[n] === e) {
+          for (var t = !1, n = 0; n < He.CRUSADE_MAP_IDS_$LI$().length; n++) {
+            if (He.CRUSADE_MAP_IDS_$LI$()[n] === e) {
               t = !0;
               break;
             }
           }
-          if (t || M.KINGDOM_ID === e) return e;
+          if (t || U.KINGDOM_ID === e) return e;
           var i = !1;
-          for (n = 0; n < Je.WORLD_IDS_$LI$().length; n++) {
-            if (Je.WORLD_IDS_$LI$()[n] === e) {
+          for (n = 0; n < et.WORLD_IDS_$LI$().length; n++) {
+            if (et.WORLD_IDS_$LI$()[n] === e) {
               i = !0;
               break;
             }
@@ -81952,15 +82103,15 @@ and limitations under the License.
         DecorationConst
       );
     })();
-    ((I.HARD_CAP = 3e3),
-      (I.SOFT_CAP = 50),
-      (I.EMPTY_NEW_COUNT = 0),
-      (I.NO_DECORATION_STORAGE_ID = -1),
-      (I.GLOBAL_DECORATION_STORAGE_ID = 1),
-      (I.AREA_INVENTORY_STORAGE_ID = 2),
-      (t.DecorationConst = I),
-      (I.__class = "DecorationConst"));
-    var v = (function () {
+    ((v.HARD_CAP = 3e3),
+      (v.SOFT_CAP = 50),
+      (v.EMPTY_NEW_COUNT = 0),
+      (v.NO_DECORATION_STORAGE_ID = -1),
+      (v.GLOBAL_DECORATION_STORAGE_ID = 1),
+      (v.AREA_INVENTORY_STORAGE_ID = 2),
+      (t.DecorationConst = v),
+      (v.__class = "DecorationConst"));
+    var A = (function () {
       function DefenseConst() {}
       return (
         (DefenseConst.ITEMS_KEEP_$LI$ = function () {
@@ -82241,17 +82392,17 @@ and limitations under the License.
           )
             D[b] = m[b] + d[b] === u[b];
           for (
-            var R, N = DefenseConst.getIndicesOfMaxToMinSorting(y), P = 0;
-            P < 3 && ((R = N[P]), !(O <= 0));
-            P++
+            var R, N = DefenseConst.getIndicesOfMaxToMinSorting(y), B = 0;
+            B < 3 && ((R = N[B]), !(O <= 0));
+            B++
           )
             D[R] || (m[R]++, O--, (D[R] = m[R] + d[R] === u[R]));
           N = DefenseConst.getIndicesOfMaxToMinSorting(v);
-          for (var B = 0; B < 3 && ((R = N[B]), !(L <= 0)); B++)
+          for (var P = 0; P < 3 && ((R = N[P]), !(L <= 0)); P++)
             D[R] || (d[R]++, L--, (D[R] = m[R] + d[R] === u[R]));
           for (
             var M = 2 * n.getUnitTypeCount(),
-              U = new Ae(M),
+              U = new Oe(M),
               F = 0,
               G = n.getSoldierMeleeDefenseOrder(),
               k = 0;
@@ -82321,30 +82472,30 @@ and limitations under the License.
         DefenseConst
       );
     })();
-    ((v.MAX_SLOTSIZE = 999),
-      (v.MAX_SUPPORT_TOOLS_SLOTSIZE = 1),
-      (v.TOOL_TYPE_WALL = 1),
-      (v.TOOL_TYPE_GATE = 2),
-      (v.TOOL_TYPE_FIELD = 3),
-      (v.TOOL_TYPE_MOAT = 4),
-      (v.TOOL_TYPE_KEEP = 5),
-      (v.TOOL_TYPE_KEEP_DEFENSE_SUPPORT_TOOLS = 6),
-      (v.DEFENCE_CATEGORY_MOAT = 2),
-      (v.SIDE_LEFT = 0),
-      (v.SIDE_MIDDLE = 1),
-      (v.SIDE_RIGHT = 2),
-      (v.MAX_SUPPORT_TOOL_TRIGGER_LIMIT = 2e3),
-      (t.DefenseConst = v),
-      (v.__class = "DefenseConst"));
-    var A = (function () {
+    ((A.MAX_SLOTSIZE = 999),
+      (A.MAX_SUPPORT_TOOLS_SLOTSIZE = 1),
+      (A.TOOL_TYPE_WALL = 1),
+      (A.TOOL_TYPE_GATE = 2),
+      (A.TOOL_TYPE_FIELD = 3),
+      (A.TOOL_TYPE_MOAT = 4),
+      (A.TOOL_TYPE_KEEP = 5),
+      (A.TOOL_TYPE_KEEP_DEFENSE_SUPPORT_TOOLS = 6),
+      (A.DEFENCE_CATEGORY_MOAT = 2),
+      (A.SIDE_LEFT = 0),
+      (A.SIDE_MIDDLE = 1),
+      (A.SIDE_RIGHT = 2),
+      (A.MAX_SUPPORT_TOOL_TRIGGER_LIMIT = 2e3),
+      (t.DefenseConst = A),
+      (A.__class = "DefenseConst"));
+    var O = (function () {
       return function DistrictConst() {};
     })();
-    ((A.NOT_IN_DISTRICT = -1),
-      (A.NO_SLOT = -1),
-      (A.INVALID_DISTRICT_ID = -1),
-      (t.DistrictConst = A),
-      (A.__class = "DistrictConst"));
-    var O = (function () {
+    ((O.NOT_IN_DISTRICT = -1),
+      (O.NO_SLOT = -1),
+      (O.INVALID_DISTRICT_ID = -1),
+      (t.DistrictConst = O),
+      (O.__class = "DistrictConst"));
+    var L = (function () {
       function DontShowDialogConst() {}
       return (
         (DontShowDialogConst.isValidDialogID = function (e) {
@@ -82353,19 +82504,19 @@ and limitations under the License.
         DontShowDialogConst
       );
     })();
-    ((O.WORLDMAP_TEASER = 0),
-      (t.DontShowDialogConst = O),
-      (O.__class = "DontShowDialogConst"));
-    var L = (function () {
+    ((L.WORLDMAP_TEASER = 0),
+      (t.DontShowDialogConst = L),
+      (L.__class = "DontShowDialogConst"));
+    var D = (function () {
       return function DowntimeStatusConst() {};
     })();
-    ((L.FREEZED = 1),
-      (L.UNFREEZED = 0),
-      (L.FOOD_PRODUCTION_MESSAGE = 1),
-      (L.ALL_PRODUCTION_MESSAGE = 0),
-      (t.DowntimeStatusConst = L),
-      (L.__class = "DowntimeStatusConst"));
-    var D = (function () {
+    ((D.FREEZED = 1),
+      (D.UNFREEZED = 0),
+      (D.FOOD_PRODUCTION_MESSAGE = 1),
+      (D.ALL_PRODUCTION_MESSAGE = 0),
+      (t.DowntimeStatusConst = D),
+      (D.__class = "DowntimeStatusConst"));
+    var b = (function () {
       function DungeonConst() {}
       return (
         (DungeonConst.COOLDOWN_$LI$ = function () {
@@ -82477,48 +82628,48 @@ and limitations under the License.
         DungeonConst
       );
     })();
-    ((D.DUNGEON_PLAYER_ID = -202),
-      (D.DUNGEON_PLAYER_NAME_COUNT = 13),
-      (D.KINGDOM_DUNGEON_PLAYER_ID = -220),
-      (D.KINGDOM_BOSS_DUNGEON_PLAYER_ID = -230),
-      (D.BLUE_FACTION_KING = -410),
-      (D.RED_FACTION_KING = -411),
-      (D.RANDOM_DUNGEON_EVENT_PLAYER_ID = -500),
-      (D.APRIL_DUNGEON_EVENT_PLAYER_ID = -501),
-      (D.ST_PATRICKS_DAY_DUNGEON_EVENT_PLAYER_ID = -502),
-      (D.EASTER_DUNGEON_EVENT_PLAYER_ID = -503),
-      (D.RANDOM_DUNGEON_MAX_GUARDS = 50),
-      (D.BASIC_NOMAD_CAMP_PLAYER_ID = -601),
-      (D.BASIC_SAMURAI_CAMP_PLAYER_ID = -651),
-      (D.BASIC_INVASION_CAMP_PLAYER_ID = -701),
-      (D.BASIC_ALIEN_ID = -1e3),
-      (D.BASIC_SAMURAI_ALIEN_ID = -1001),
-      (D.BASIC_RED_ALIEN_ID = -1002),
-      (D.BASIC_ALLIANCE_NOMAD_CAMP_PLAYER_ID = -801),
-      (D.BASIC_DAIMYO_CASTLE_PLAYER_ID = -811),
-      (D.BASIC_DAIMYO_TOWNSHIP_PLAYER_ID = -815),
-      (D.BASIC_COLLECTOR_PLAYER_ID = -1100),
-      (D.BASIC_ALLIANCE_BATTLE_GROUND_RESOURCE_TOWER_PLAYER_ID = -1200),
-      (D.BASIC_WOLF_KING_PLAYER_ID = -1201),
-      (D.BASIC_ARE_PORTAL_PLAYER_ID = -1202),
-      (D.DUNGEON_SKIN_ROBBER_BARON_KING = 1),
-      (D.DUNGEON_SKIN_COW = 2),
-      (D.DUNGEON_SKIN_ST_PATRICKS_DAY = 3),
-      (D.DUNGEON_SKIN_EASTER = 4),
-      (D.NOMAD_CAMP_COUNT = 4),
-      (D.MESSAGE_FAKE_TUTORIAL_BATTLELOG_PID = -2),
-      (D.DUNGEON_DELETION_CLASSIC_FACTOR = 1),
-      (D.DUNGEON_DELETION_ICE_FACTOR = 2.2),
-      (D.DUNGEON_DELETION_DESERT_FACTOR = 3.5),
-      (D.DUNGEON_DELETION_VULCAN_FACTOR = 4),
-      (D.NO_LOW_LEVEL_DUNGEON_ATTACK = !1),
-      (D.RAID_BOSS_DEFENDER_LEVEL = 120),
-      (D.FACTOR_VICTORY_LEVEL = 1.9),
-      (D.POWER_VICTORY_LEVEL = 0.555),
-      (D.INVALID = -1),
-      (t.DungeonConst = D),
-      (D.__class = "DungeonConst"));
-    var b = (function () {
+    ((b.DUNGEON_PLAYER_ID = -202),
+      (b.DUNGEON_PLAYER_NAME_COUNT = 13),
+      (b.KINGDOM_DUNGEON_PLAYER_ID = -220),
+      (b.KINGDOM_BOSS_DUNGEON_PLAYER_ID = -230),
+      (b.BLUE_FACTION_KING = -410),
+      (b.RED_FACTION_KING = -411),
+      (b.RANDOM_DUNGEON_EVENT_PLAYER_ID = -500),
+      (b.APRIL_DUNGEON_EVENT_PLAYER_ID = -501),
+      (b.ST_PATRICKS_DAY_DUNGEON_EVENT_PLAYER_ID = -502),
+      (b.EASTER_DUNGEON_EVENT_PLAYER_ID = -503),
+      (b.RANDOM_DUNGEON_MAX_GUARDS = 50),
+      (b.BASIC_NOMAD_CAMP_PLAYER_ID = -601),
+      (b.BASIC_SAMURAI_CAMP_PLAYER_ID = -651),
+      (b.BASIC_INVASION_CAMP_PLAYER_ID = -701),
+      (b.BASIC_ALIEN_ID = -1e3),
+      (b.BASIC_SAMURAI_ALIEN_ID = -1001),
+      (b.BASIC_RED_ALIEN_ID = -1002),
+      (b.BASIC_ALLIANCE_NOMAD_CAMP_PLAYER_ID = -801),
+      (b.BASIC_DAIMYO_CASTLE_PLAYER_ID = -811),
+      (b.BASIC_DAIMYO_TOWNSHIP_PLAYER_ID = -815),
+      (b.BASIC_COLLECTOR_PLAYER_ID = -1100),
+      (b.BASIC_ALLIANCE_BATTLE_GROUND_RESOURCE_TOWER_PLAYER_ID = -1200),
+      (b.BASIC_WOLF_KING_PLAYER_ID = -1201),
+      (b.BASIC_ARE_PORTAL_PLAYER_ID = -1202),
+      (b.DUNGEON_SKIN_ROBBER_BARON_KING = 1),
+      (b.DUNGEON_SKIN_COW = 2),
+      (b.DUNGEON_SKIN_ST_PATRICKS_DAY = 3),
+      (b.DUNGEON_SKIN_EASTER = 4),
+      (b.NOMAD_CAMP_COUNT = 4),
+      (b.MESSAGE_FAKE_TUTORIAL_BATTLELOG_PID = -2),
+      (b.DUNGEON_DELETION_CLASSIC_FACTOR = 1),
+      (b.DUNGEON_DELETION_ICE_FACTOR = 2.2),
+      (b.DUNGEON_DELETION_DESERT_FACTOR = 3.5),
+      (b.DUNGEON_DELETION_VULCAN_FACTOR = 4),
+      (b.NO_LOW_LEVEL_DUNGEON_ATTACK = !1),
+      (b.RAID_BOSS_DEFENDER_LEVEL = 120),
+      (b.FACTOR_VICTORY_LEVEL = 1.9),
+      (b.POWER_VICTORY_LEVEL = 0.555),
+      (b.INVALID = -1),
+      (t.DungeonConst = b),
+      (b.__class = "DungeonConst"));
+    var R = (function () {
       function EffectConst() {}
       return (
         (EffectConst.boostToModifier = function (e) {
@@ -82605,16 +82756,16 @@ and limitations under the License.
         EffectConst
       );
     })();
-    ((b.BASE_BOOST_PERCENTAGE = 100),
-      (b.TO_MULTIPLIER_FACTOR = 0.01),
-      (b.DEFAULT_MODIFIER = 1),
-      (b.NO_BOOST = 0),
-      (b.NO_BOOST_FACTOR = 0),
-      (b.NO_BONUS = 0),
-      (b.DUMMY_VALUE = 0),
-      (t.EffectConst = b),
-      (b.__class = "EffectConst"));
-    var R = (function () {
+    ((R.BASE_BOOST_PERCENTAGE = 100),
+      (R.TO_MULTIPLIER_FACTOR = 0.01),
+      (R.DEFAULT_MODIFIER = 1),
+      (R.NO_BOOST = 0),
+      (R.NO_BOOST_FACTOR = 0),
+      (R.NO_BONUS = 0),
+      (R.DUMMY_VALUE = 0),
+      (t.EffectConst = R),
+      (R.__class = "EffectConst"));
+    var N = (function () {
       function EquipmentConst() {}
       return (
         (EquipmentConst.SLOT_IDS_$LI$ = function () {
@@ -82724,13 +82875,13 @@ and limitations under the License.
         }),
         (EquipmentConst.getBaronCapitalPick = function (e) {
           switch (e) {
-            case ze.KINGDOM_ID:
+            case Ze.KINGDOM_ID:
               return EquipmentConst.PICK_BARON_CAPITAL_CLASSIC;
-            case tt.KINGDOM_ID:
+            case nt.KINGDOM_ID:
               return EquipmentConst.PICK_BARON_CAPITAL_ICE;
-            case et.KINGDOM_ID:
+            case tt.KINGDOM_ID:
               return EquipmentConst.PICK_BARON_CAPITAL_DESERT;
-            case at.KINGDOM_ID:
+            case st.KINGDOM_ID:
               return EquipmentConst.PICK_BARON_CAPITAL_VULCAN;
           }
           return -1;
@@ -82758,80 +82909,80 @@ and limitations under the License.
         EquipmentConst
       );
     })();
-    ((R.NORMAL_CRAFT_COUNT = 3),
-      (R.SUPER_CRAFT_COUNT = 6),
-      (R.EQUIPMENT_SIZE_NORMAL = 400),
-      (R.EQUIPMENT_SIZE_MAX = 420),
-      (R.UNDEFINED_WEARER_ID = -1),
-      (R.BARON_WEARER_ID = 1),
-      (R.COMMANDER_WEARER_ID = 2),
-      (R.SLOT_ARMOR = 1),
-      (R.SLOT_WEAPON = 2),
-      (R.SLOT_HELMET = 3),
-      (R.SLOT_ARTIFACT = 4),
-      (R.SLOT_SKIN = 5),
-      (R.SLOT_HERO = 6),
-      (R.RARENESS_UNIQUE = 0),
-      (R.RARENESS_COMMON = 1),
-      (R.RARENESS_RARE = 2),
-      (R.RARENESS_EPIC = 3),
-      (R.RARENESS_LEGENDARY = 4),
-      (R.RARENESS_RELIC = 5),
-      (R.RARENESS_HERO_UNIQUE = 10),
-      (R.RARENESS_HERO_COMMON = 11),
-      (R.RARENESS_HERO_RARE = 12),
-      (R.RARENESS_HERO_EPIC = 13),
-      (R.RARENESS_HERO_LEGENDARY = 14),
-      (R.RARENESS_HERO_RELIC = 15),
-      (R.RARENESS_HERO_BEGINN = 10),
-      (R.PRICE_COMMON = 10),
-      (R.PRICE_TORARE = 25),
-      (R.PRICE_RARE = 500),
-      (R.PRICE_TOEPIC = 2500),
-      (R.PRICE_EPIC = 4e3),
-      (R.PRICE_TOLEGENDARY = 2e4),
-      (R.PRICE_LEGENDARY = 25e3),
-      (R.PICK_BARON_CLASSIC = 0),
-      (R.PICK_BARON_ICE = 1),
-      (R.PICK_BARON_DESERT = 2),
-      (R.PICK_BARON_VULCAN = 3),
-      (R.PICK_BARON_CAPITAL_CLASSIC = 4),
-      (R.PICK_BARON_FACTION = 5),
-      (R.PICK_BARON_A1 = 6),
-      (R.PICK_BARON_A2 = 7),
-      (R.PICK_BARON_A3 = 8),
-      (R.PICK_BARON_METROPOL = 9),
-      (R.PICK_BARON_CAPITAL_ICE = 10),
-      (R.PICK_BARON_CAPITAL_DESERT = 11),
-      (R.PICK_BARON_CAPITAL_VULCAN = 12),
-      (R.PICK_BARON_ISLAND = 13),
-      (R.BARON_BOSS_DUNGEON = -51),
-      (R.WOLFKING_BARON = -214),
-      (R.BARON_FACTION_RED = -101),
-      (R.BARON_FACTION_BLUE = -102),
-      (R.NO_ENCHANTMENT = 0),
-      (R.MAX_ENCHANTMENTLEVEL_COMMON = 3),
-      (R.MAX_ENCHANTMENTLEVEL_RARE = 8),
-      (R.MAX_ENCHANTMENTLEVEL_EPIC = 12),
-      (R.MAX_ENCHANTMENTLEVEL_LEGENDARY = 16),
-      (R.MAX_ENCHANTMENTLEVEL_UNIQUE = 20),
-      (R.MAX_ENCHANTMENTLEVEL_RELIC = 50),
-      (R.LORD_NAME_MIN_LENGTH = 3),
-      (R.LORD_NAME_MAX_LENGTH = 15),
-      (R.EQUIPMENT_TYPE_ID_GENERATED = 0),
-      (R.EQUIPMENT_TYPE_ID_UNIQUE = 1),
-      (R.EQUIPMENT_TYPE_ID_UNIQUE_TEMPORARY = 2),
-      (R.EQUIPMENT_TYPE_ID_RELIC = 3),
-      (t.EquipmentConst = R),
-      (R.__class = "EquipmentConst"));
-    var N = (function () {
+    ((N.NORMAL_CRAFT_COUNT = 3),
+      (N.SUPER_CRAFT_COUNT = 6),
+      (N.EQUIPMENT_SIZE_NORMAL = 400),
+      (N.EQUIPMENT_SIZE_MAX = 420),
+      (N.UNDEFINED_WEARER_ID = -1),
+      (N.BARON_WEARER_ID = 1),
+      (N.COMMANDER_WEARER_ID = 2),
+      (N.SLOT_ARMOR = 1),
+      (N.SLOT_WEAPON = 2),
+      (N.SLOT_HELMET = 3),
+      (N.SLOT_ARTIFACT = 4),
+      (N.SLOT_SKIN = 5),
+      (N.SLOT_HERO = 6),
+      (N.RARENESS_UNIQUE = 0),
+      (N.RARENESS_COMMON = 1),
+      (N.RARENESS_RARE = 2),
+      (N.RARENESS_EPIC = 3),
+      (N.RARENESS_LEGENDARY = 4),
+      (N.RARENESS_RELIC = 5),
+      (N.RARENESS_HERO_UNIQUE = 10),
+      (N.RARENESS_HERO_COMMON = 11),
+      (N.RARENESS_HERO_RARE = 12),
+      (N.RARENESS_HERO_EPIC = 13),
+      (N.RARENESS_HERO_LEGENDARY = 14),
+      (N.RARENESS_HERO_RELIC = 15),
+      (N.RARENESS_HERO_BEGINN = 10),
+      (N.PRICE_COMMON = 10),
+      (N.PRICE_TORARE = 25),
+      (N.PRICE_RARE = 500),
+      (N.PRICE_TOEPIC = 2500),
+      (N.PRICE_EPIC = 4e3),
+      (N.PRICE_TOLEGENDARY = 2e4),
+      (N.PRICE_LEGENDARY = 25e3),
+      (N.PICK_BARON_CLASSIC = 0),
+      (N.PICK_BARON_ICE = 1),
+      (N.PICK_BARON_DESERT = 2),
+      (N.PICK_BARON_VULCAN = 3),
+      (N.PICK_BARON_CAPITAL_CLASSIC = 4),
+      (N.PICK_BARON_FACTION = 5),
+      (N.PICK_BARON_A1 = 6),
+      (N.PICK_BARON_A2 = 7),
+      (N.PICK_BARON_A3 = 8),
+      (N.PICK_BARON_METROPOL = 9),
+      (N.PICK_BARON_CAPITAL_ICE = 10),
+      (N.PICK_BARON_CAPITAL_DESERT = 11),
+      (N.PICK_BARON_CAPITAL_VULCAN = 12),
+      (N.PICK_BARON_ISLAND = 13),
+      (N.BARON_BOSS_DUNGEON = -51),
+      (N.WOLFKING_BARON = -214),
+      (N.BARON_FACTION_RED = -101),
+      (N.BARON_FACTION_BLUE = -102),
+      (N.NO_ENCHANTMENT = 0),
+      (N.MAX_ENCHANTMENTLEVEL_COMMON = 3),
+      (N.MAX_ENCHANTMENTLEVEL_RARE = 8),
+      (N.MAX_ENCHANTMENTLEVEL_EPIC = 12),
+      (N.MAX_ENCHANTMENTLEVEL_LEGENDARY = 16),
+      (N.MAX_ENCHANTMENTLEVEL_UNIQUE = 20),
+      (N.MAX_ENCHANTMENTLEVEL_RELIC = 50),
+      (N.LORD_NAME_MIN_LENGTH = 3),
+      (N.LORD_NAME_MAX_LENGTH = 15),
+      (N.EQUIPMENT_TYPE_ID_GENERATED = 0),
+      (N.EQUIPMENT_TYPE_ID_UNIQUE = 1),
+      (N.EQUIPMENT_TYPE_ID_UNIQUE_TEMPORARY = 2),
+      (N.EQUIPMENT_TYPE_ID_RELIC = 3),
+      (t.EquipmentConst = N),
+      (N.__class = "EquipmentConst"));
+    var B = (function () {
       return function EventAutoScalingConst() {};
     })();
-    ((N.DIFFICULTY_NOT_SELECTED = -1),
-      (N.CLASSIC_EVENT_DIFFICULTY = 0),
-      (N.ANY_EVENT_DIFFICULTY = 1),
-      (t.EventAutoScalingConst = N),
-      (N.__class = "EventAutoScalingConst"));
+    ((B.DIFFICULTY_NOT_SELECTED = -1),
+      (B.CLASSIC_EVENT_DIFFICULTY = 0),
+      (B.ANY_EVENT_DIFFICULTY = 1),
+      (t.EventAutoScalingConst = B),
+      (B.__class = "EventAutoScalingConst"));
     var P = (function () {
       function EventConst() {}
       return (
@@ -83251,6 +83402,7 @@ and limitations under the License.
       (P.EVENTTYPE_CARNIVAL_GACHA = 135),
       (P.EVENTTYPE_CONVERSION_PRIVATE_PRIME_TIME_EVENT = 136),
       (P.EVENTTYPE_ALLIANCE_RAID_MOBILISATION = 137),
+      (P.EVENTTYPE_ALLIANCE_RAID_BOSS_VENDOR = 138),
       (P.EVENTTYPE_ISLAND_KINGDOM = 102),
       (P.EVENTTYPE_RED_ALIEN_INVASION_ALLIANCE = 103),
       (P.EVENTTYPE_PRIME_SALES_FUSION_RECHARGE = 104),
@@ -83272,7 +83424,7 @@ and limitations under the License.
       (P.SKIN_OFFSET = 100),
       (t.EventConst = P),
       (P.__class = "EventConst"));
-    var B = (function () {
+    var M = (function () {
       function FacebookConst() {}
       return (
         (FacebookConst.GIFT_COOLDOWN_$LI$ = function () {
@@ -83285,10 +83437,10 @@ and limitations under the License.
         FacebookConst
       );
     })();
-    ((B.BULK_REQUEST_LIMIT = 150),
-      (t.FacebookConst = B),
-      (B.__class = "FacebookConst"));
-    var M = (function () {
+    ((M.BULK_REQUEST_LIMIT = 150),
+      (t.FacebookConst = M),
+      (M.__class = "FacebookConst"));
+    var U = (function () {
       function FactionConst() {}
       return (
         (FactionConst.FACTIONS_$LI$ = function () {
@@ -83328,10 +83480,10 @@ and limitations under the License.
             : FactionConst.BLUE_FACTION;
         }),
         (FactionConst.getMapWidth = function () {
-          return Je.SECTOR_WIDTH * FactionConst.MAP_WIDTH_IN_SECTORS;
+          return et.SECTOR_WIDTH * FactionConst.MAP_WIDTH_IN_SECTORS;
         }),
         (FactionConst.getMapHeight = function () {
-          return Je.SECTOR_HEIGHT * FactionConst.MAP_HEIGHT_IN_SECTORS;
+          return et.SECTOR_HEIGHT * FactionConst.MAP_HEIGHT_IN_SECTORS;
         }),
         (FactionConst.getSectorSeed = function (e, t, n) {
           return e + 15 * t + 31 * n;
@@ -83351,12 +83503,12 @@ and limitations under the License.
         (FactionConst.upperLeftWorldXFromAbsoluteCampX = function (e) {
           var t = (e / FactionConst.SECTOR_WIDTH_IN_CAMPS) | 0,
             n = e % FactionConst.SECTOR_WIDTH_IN_CAMPS;
-          return t * Je.SECTOR_WIDTH + n * FactionConst.CAMP_SPOT_WIDTH;
+          return t * et.SECTOR_WIDTH + n * FactionConst.CAMP_SPOT_WIDTH;
         }),
         (FactionConst.upperLeftWorldYFromAbsoluteCampY = function (e) {
           var t = (e / FactionConst.SECTOR_HEIGHT_IN_CAMPS) | 0,
             n = e % FactionConst.SECTOR_HEIGHT_IN_CAMPS;
-          return t * Je.SECTOR_HEIGHT + n * FactionConst.CAMP_SPOT_HEIGHT;
+          return t * et.SECTOR_HEIGHT + n * FactionConst.CAMP_SPOT_HEIGHT;
         }),
         (FactionConst.getMoraleModifier = function (e) {
           return e >= 0
@@ -83392,9 +83544,9 @@ and limitations under the License.
         }),
         (FactionConst.getNPCFactionID = function (e) {
           switch (e) {
-            case D.BLUE_FACTION_KING:
+            case b.BLUE_FACTION_KING:
               return FactionConst.BLUE_FACTION;
-            case D.RED_FACTION_KING:
+            case b.RED_FACTION_KING:
               return FactionConst.RED_FACTION;
             default:
               return -1;
@@ -83403,9 +83555,9 @@ and limitations under the License.
         (FactionConst.getNpcPID = function (e) {
           switch (e) {
             case FactionConst.BLUE_FACTION:
-              return D.BLUE_FACTION_KING;
+              return b.BLUE_FACTION_KING;
             case FactionConst.RED_FACTION:
-              return D.RED_FACTION_KING;
+              return b.RED_FACTION_KING;
             default:
               return -1;
           }
@@ -83413,41 +83565,41 @@ and limitations under the License.
         FactionConst
       );
     })();
-    ((M.KINGDOM_ID = 10),
-      (M.MAP_WIDTH_IN_SECTORS = 200),
-      (M.MAP_HEIGHT_IN_SECTORS = 10),
-      (M.SECTOR_WIDTH_IN_CAMPS = 4),
-      (M.SECTOR_HEIGHT_IN_CAMPS = 6),
-      (M.CAMP_SPOT_WIDTH = 3),
-      (M.CAMP_SPOT_HEIGHT = 2),
-      (M.BLUE_FACTION = 0),
-      (M.RED_FACTION = 1),
-      (M.VILLAGE_POINTS = 5),
-      (M.TOWER_POINTS = 15),
-      (M.CAPITAL_POINTS = 30),
-      (M.BURNING_BUILDING_MORAL = 10),
-      (M.BERIMOND_ADVISOR_MORALE = 200),
-      (M.START_GATE_WOD = 238),
-      (M.START_MAINTENT_WOD = 233),
-      (M.START_WALL_WOD = 234),
-      (M.START_TOWER_WOD = 272),
-      (M.START_WOOD = 3e3),
-      (M.START_FOOD = 3e3),
-      (M.START_STONE = 3e3),
-      (M.TOWER_COOLDOWN_TEST = 60),
-      (M.VILLAGE_COOLDOWN_TEST = 60),
-      (M.BARON_ID = -16),
-      (M.DESTROYED_OCCUPIER_PLAYER_ID = -415),
-      (M.TOP_X = 100),
-      (M.MAJORITY_CAP = 1.2),
-      (M.FACTION_PROTECTION_STATUS_OFF = -1),
-      (M.FACTION_PROTECTION_STATUS_PRETIME = 0),
-      (M.FACTION_PROTECTION_STATUS_ACTIVE = 1),
-      (M.FACTION_PROTECTION_STATUS_COOLDOWN = 2),
-      (M.FACTION_ACTIVE_THRESHOLD = 250),
-      (t.FactionConst = M),
-      (M.__class = "FactionConst"));
-    var U = (function () {
+    ((U.KINGDOM_ID = 10),
+      (U.MAP_WIDTH_IN_SECTORS = 200),
+      (U.MAP_HEIGHT_IN_SECTORS = 10),
+      (U.SECTOR_WIDTH_IN_CAMPS = 4),
+      (U.SECTOR_HEIGHT_IN_CAMPS = 6),
+      (U.CAMP_SPOT_WIDTH = 3),
+      (U.CAMP_SPOT_HEIGHT = 2),
+      (U.BLUE_FACTION = 0),
+      (U.RED_FACTION = 1),
+      (U.VILLAGE_POINTS = 5),
+      (U.TOWER_POINTS = 15),
+      (U.CAPITAL_POINTS = 30),
+      (U.BURNING_BUILDING_MORAL = 10),
+      (U.BERIMOND_ADVISOR_MORALE = 200),
+      (U.START_GATE_WOD = 238),
+      (U.START_MAINTENT_WOD = 233),
+      (U.START_WALL_WOD = 234),
+      (U.START_TOWER_WOD = 272),
+      (U.START_WOOD = 3e3),
+      (U.START_FOOD = 3e3),
+      (U.START_STONE = 3e3),
+      (U.TOWER_COOLDOWN_TEST = 60),
+      (U.VILLAGE_COOLDOWN_TEST = 60),
+      (U.BARON_ID = -16),
+      (U.DESTROYED_OCCUPIER_PLAYER_ID = -415),
+      (U.TOP_X = 100),
+      (U.MAJORITY_CAP = 1.2),
+      (U.FACTION_PROTECTION_STATUS_OFF = -1),
+      (U.FACTION_PROTECTION_STATUS_PRETIME = 0),
+      (U.FACTION_PROTECTION_STATUS_ACTIVE = 1),
+      (U.FACTION_PROTECTION_STATUS_COOLDOWN = 2),
+      (U.FACTION_ACTIVE_THRESHOLD = 250),
+      (t.FactionConst = U),
+      (U.__class = "FactionConst"));
+    var F = (function () {
       function FusionConst() {}
       return (
         (FusionConst.getPremiumFusionC2Cost = function (e) {
@@ -83592,97 +83744,97 @@ and limitations under the License.
         FusionConst
       );
     })();
-    ((U.DECORATION_FORGE_ID = 1),
-      (t.FusionConst = U),
-      (U.__class = "FusionConst"));
-    var F = (function () {
+    ((F.DECORATION_FORGE_ID = 1),
+      (t.FusionConst = F),
+      (F.__class = "FusionConst"));
+    var G = (function () {
       return function GameConst() {};
     })();
-    ((F.GAME_ID = 12),
-      (F.IS_EMPIRE = !0),
-      (F.IS_E4K = !1),
-      (F.GAME_NAME_SHORT = "EP"),
-      (F.ALLIANCE_FORGE_ACTIVATED = !0),
-      (F.JUDGMENT_CITIZEN_ACTIVATED = !0),
-      (F.LOOKING_FOR_MEMBERS_ACTIVATED = !0),
-      (F.MAIN_QUESTS_ACTIVATED = !0),
-      (F.PROMO_MAILS_ACTIVATED = !0),
-      (F.WORLD_LOOP_ACTIVATED = !0),
-      (F.ALLI_FORUM_ACTIVATED = !0),
-      (F.COMEBACK_BONUS_ACTIVATED = !0),
-      (F.EXPANSION_TREASURE_CHEST = !0),
-      (F.EMPTY_DEFAULT_EMBLEM = !0),
-      (F.RESOURCE_CARTS = !0),
-      (F.ALLIANCE_TRIBUTE = !0),
-      (F.LABORATORY_ACTIVATED = !0),
-      (F.SEND_ALLIANCE_WAR_MESSAGE = !0),
-      (F.WEB_RESOURCE_PACKAGE = !0),
-      (F.WEB_USE_ROUNDING = !0),
-      (F.WEB_AUTO_RETREAT = !0),
-      (F.KINGDOM_RESOURCES_IMMEDIATELY_LOOTABLE = !1),
-      (F.WEB_REGISTER = !0),
-      (F.WEB_COLOSSUS = !0),
-      (F.WEB_WISHING_WELL = !0),
-      (F.WEB_TUTORIAL = !0),
-      (F.WEB_FACTION = !0),
-      (F.WEB_ARCHIVE_MESSAGE = !0),
-      (F.WEB_PARAGON = !0),
-      (F.WEB_SEARCH_MAP = !0),
-      (F.WEB_ALIEN = !0),
-      (F.WEB_STORM_ISLAND = !0),
-      (F.WEB_GEMS = !0),
-      (F.REG_MGR_USE_EMPIRE_ERROR_CODES = !0),
-      (F.LP_LOGINREWARD = !0),
-      (F.CORE_LOGIN = !1),
-      (F.PRIVATE_OFFER_EMPIRE_STILE = !0),
-      (F.LEVEL_ZERO_EMBLEM = !0),
-      (F.SET_PLAYER_PW_HASH_IN_FACADE = !1),
-      (F.VERIFY_PLAYER_MAIL_EVENT = !0),
-      (F.SIMPLE_RANDOM = !0),
-      (F.WEB_DEFAULT_NETWORK = !0),
-      (F.BUGGY_ADDITIONAL_ICE_KINGDOM_CASTLES = !0),
-      (F.ALIEN_INVASION_USE_RANDOM_TOOL_AMOUNTS = !1),
-      (F.ALIEN_HERO_EFFECTS = !0),
-      (F.WEB_MOVEMENT_VISIBILITY = !0),
-      (F.WEB_NPC_ATTACKS = !0),
-      (F.PRIME_SALE_FILL_ALL_STORAGES = !1),
-      (F.SLIM_BASIC_DATA = !1),
-      (F.UNLOCK_EVENT_ERROR_RESPONSE = !1),
-      (F.SEND_OUT_ACHIEVEMENT_LIST = !0),
-      (F.QUEST_CAN_BE_UNREAD = !1),
-      (F.ALLIANCE_MINI_CHAT = !1),
-      (F.SPYLOG_TOOLS_AMOUNT = !1),
-      (F.SEND_ALLIANCE_WAR_ENEMY_SABOTAGE_MESSAGE = !1),
-      (F.ALLI_AUTOWAR_ON_CHANGE_NOTIFY_ALL = !1),
-      (F.DETAIL_CASTLE_LIST_WITH_PACKAGE_LIST_OVERVIEW = !1),
-      (F.E4K_TUTORIAL_AB = !1),
-      (F.INVALIDATE_USER_KINGDOM = !1),
-      (F.SEND_AQUA_RANK_IN_ALLIANCE_INFO = !1),
-      (F.SEND_FULL_GBC = !1),
-      (F.DISTINGUISH_SHADOW_ATTACKS = !0),
-      (F.FACEBOOK_USE_MAPPING_PROVIDER = !1),
-      (F.FACEBOOK_FRIENDINVITE = !1),
-      (F.SEND_DAMAGE_AND_RUBBLE = !1),
-      (F.REGISTRATION_EMAIL_WITH_WEBSITE_ID_ENABLED = !0),
-      (F.PING_PONG = !1),
-      (F.MOBILE_CORE_EVENTSTUFF = !1),
-      (F.FREE_PLAYER_RENAME = !1),
-      (F.PUSH_NOTIFICATIONS_ACTIVATED = !1),
-      (F.MOBILE_LOGIN_ADDITIONAL_DATA = !1),
-      (F.FACEBOOK_EMPIRE_STYLE = !0),
-      (F.WEB_LTPE = !0),
-      (F.RATING_EVENT_ENABLED = !1),
-      (F.ANNOUNCEMENT_ENABLED = !1),
-      (F.EXPIRED_EQUIPMENT_MESSAGE_ENABLED = !0),
-      (F.HAS_LOGIN_TOKEN = !0),
-      (F.GAME_SHORT_NAME = "Empire"),
-      (F.ITEM_XML_NAME = "items.xml"),
-      (F.GAME_TRACKING_PREFIX = "empire_"),
-      (F.DEFAULT_URL = "empire.goodgamestudios.com"),
-      (F.AWS_PROJECT_NAME = "ep"),
-      (t.GameConst = F),
-      (F.__class = "GameConst"));
-    var G = (function () {
+    ((G.GAME_ID = 12),
+      (G.IS_EMPIRE = !0),
+      (G.IS_E4K = !1),
+      (G.GAME_NAME_SHORT = "EP"),
+      (G.ALLIANCE_FORGE_ACTIVATED = !0),
+      (G.JUDGMENT_CITIZEN_ACTIVATED = !0),
+      (G.LOOKING_FOR_MEMBERS_ACTIVATED = !0),
+      (G.MAIN_QUESTS_ACTIVATED = !0),
+      (G.PROMO_MAILS_ACTIVATED = !0),
+      (G.WORLD_LOOP_ACTIVATED = !0),
+      (G.ALLI_FORUM_ACTIVATED = !0),
+      (G.COMEBACK_BONUS_ACTIVATED = !0),
+      (G.EXPANSION_TREASURE_CHEST = !0),
+      (G.EMPTY_DEFAULT_EMBLEM = !0),
+      (G.RESOURCE_CARTS = !0),
+      (G.ALLIANCE_TRIBUTE = !0),
+      (G.LABORATORY_ACTIVATED = !0),
+      (G.SEND_ALLIANCE_WAR_MESSAGE = !0),
+      (G.WEB_RESOURCE_PACKAGE = !0),
+      (G.WEB_USE_ROUNDING = !0),
+      (G.WEB_AUTO_RETREAT = !0),
+      (G.KINGDOM_RESOURCES_IMMEDIATELY_LOOTABLE = !1),
+      (G.WEB_REGISTER = !0),
+      (G.WEB_COLOSSUS = !0),
+      (G.WEB_WISHING_WELL = !0),
+      (G.WEB_TUTORIAL = !0),
+      (G.WEB_FACTION = !0),
+      (G.WEB_ARCHIVE_MESSAGE = !0),
+      (G.WEB_PARAGON = !0),
+      (G.WEB_SEARCH_MAP = !0),
+      (G.WEB_ALIEN = !0),
+      (G.WEB_STORM_ISLAND = !0),
+      (G.WEB_GEMS = !0),
+      (G.REG_MGR_USE_EMPIRE_ERROR_CODES = !0),
+      (G.LP_LOGINREWARD = !0),
+      (G.CORE_LOGIN = !1),
+      (G.PRIVATE_OFFER_EMPIRE_STILE = !0),
+      (G.LEVEL_ZERO_EMBLEM = !0),
+      (G.SET_PLAYER_PW_HASH_IN_FACADE = !1),
+      (G.VERIFY_PLAYER_MAIL_EVENT = !0),
+      (G.SIMPLE_RANDOM = !0),
+      (G.WEB_DEFAULT_NETWORK = !0),
+      (G.BUGGY_ADDITIONAL_ICE_KINGDOM_CASTLES = !0),
+      (G.ALIEN_INVASION_USE_RANDOM_TOOL_AMOUNTS = !1),
+      (G.ALIEN_HERO_EFFECTS = !0),
+      (G.WEB_MOVEMENT_VISIBILITY = !0),
+      (G.WEB_NPC_ATTACKS = !0),
+      (G.PRIME_SALE_FILL_ALL_STORAGES = !1),
+      (G.SLIM_BASIC_DATA = !1),
+      (G.UNLOCK_EVENT_ERROR_RESPONSE = !1),
+      (G.SEND_OUT_ACHIEVEMENT_LIST = !0),
+      (G.QUEST_CAN_BE_UNREAD = !1),
+      (G.ALLIANCE_MINI_CHAT = !1),
+      (G.SPYLOG_TOOLS_AMOUNT = !1),
+      (G.SEND_ALLIANCE_WAR_ENEMY_SABOTAGE_MESSAGE = !1),
+      (G.ALLI_AUTOWAR_ON_CHANGE_NOTIFY_ALL = !1),
+      (G.DETAIL_CASTLE_LIST_WITH_PACKAGE_LIST_OVERVIEW = !1),
+      (G.E4K_TUTORIAL_AB = !1),
+      (G.INVALIDATE_USER_KINGDOM = !1),
+      (G.SEND_AQUA_RANK_IN_ALLIANCE_INFO = !1),
+      (G.SEND_FULL_GBC = !1),
+      (G.DISTINGUISH_SHADOW_ATTACKS = !0),
+      (G.FACEBOOK_USE_MAPPING_PROVIDER = !1),
+      (G.FACEBOOK_FRIENDINVITE = !1),
+      (G.SEND_DAMAGE_AND_RUBBLE = !1),
+      (G.REGISTRATION_EMAIL_WITH_WEBSITE_ID_ENABLED = !0),
+      (G.PING_PONG = !1),
+      (G.MOBILE_CORE_EVENTSTUFF = !1),
+      (G.FREE_PLAYER_RENAME = !1),
+      (G.PUSH_NOTIFICATIONS_ACTIVATED = !1),
+      (G.MOBILE_LOGIN_ADDITIONAL_DATA = !1),
+      (G.FACEBOOK_EMPIRE_STYLE = !0),
+      (G.WEB_LTPE = !0),
+      (G.RATING_EVENT_ENABLED = !1),
+      (G.ANNOUNCEMENT_ENABLED = !1),
+      (G.EXPIRED_EQUIPMENT_MESSAGE_ENABLED = !0),
+      (G.HAS_LOGIN_TOKEN = !0),
+      (G.GAME_SHORT_NAME = "Empire"),
+      (G.ITEM_XML_NAME = "items.xml"),
+      (G.GAME_TRACKING_PREFIX = "empire_"),
+      (G.DEFAULT_URL = "empire.goodgamestudios.com"),
+      (G.AWS_PROJECT_NAME = "ep"),
+      (t.GameConst = G),
+      (G.__class = "GameConst"));
+    var k = (function () {
       function GemConst() {}
       return (
         (GemConst.getTotalStorageCapacity = function (e) {
@@ -83691,15 +83843,15 @@ and limitations under the License.
         GemConst
       );
     })();
-    ((G.MAX_GEM_LEVEL = 13),
-      (G.MIN_GEM_LEVEL = 0),
-      (G.MIN_PLAYER_LEVEL_FOR_GEM_DROP = 25),
-      (G.NUM_GEMS_NEEDED_FOR_UPGRADE = 6),
-      (G.MAX_GEM_STORAGE = 500),
-      (G.NORMAL_GEM_STORAGE = 480),
-      (t.GemConst = G),
-      (G.__class = "GemConst"));
-    var k = (function () {
+    ((k.MAX_GEM_LEVEL = 13),
+      (k.MIN_GEM_LEVEL = 0),
+      (k.MIN_PLAYER_LEVEL_FOR_GEM_DROP = 25),
+      (k.NUM_GEMS_NEEDED_FOR_UPGRADE = 6),
+      (k.MAX_GEM_STORAGE = 500),
+      (k.NORMAL_GEM_STORAGE = 480),
+      (t.GemConst = k),
+      (k.__class = "GemConst"));
+    var w = (function () {
       function GeneralConst() {}
       return (
         (GeneralConst.getMaxLevelForStarTier = function (e) {
@@ -83774,46 +83926,46 @@ and limitations under the License.
         GeneralConst
       );
     })();
-    ((k.SKILL_RESET_C2_COST = 2500),
-      (k.MAXIMUM_DAILY_ATTACKS_FOR_XP_GAIN = 20),
-      (k.BASE_XP_ATTACK = 100),
-      (k.BASE_XP_DEFENSE = 100),
-      (k.FIRST_ATTACK_BONUS_XP = 500),
-      (k.UNITS_KILLED_XP_CAP = 500),
-      (k.GENERALS_STARTER_QUEST_SERIES_ID = 1e4),
-      (k.GENERAL_HORATIO_ID = 104),
-      (k.NPC_GENERAL_ID = 106),
-      (t.GeneralConst = k),
-      (k.__class = "GeneralConst"));
-    var w = (function () {
+    ((w.SKILL_RESET_C2_COST = 2500),
+      (w.MAXIMUM_DAILY_ATTACKS_FOR_XP_GAIN = 20),
+      (w.BASE_XP_ATTACK = 100),
+      (w.BASE_XP_DEFENSE = 100),
+      (w.FIRST_ATTACK_BONUS_XP = 500),
+      (w.UNITS_KILLED_XP_CAP = 500),
+      (w.GENERALS_STARTER_QUEST_SERIES_ID = 1e4),
+      (w.GENERAL_HORATIO_ID = 104),
+      (w.NPC_GENERAL_ID = 106),
+      (t.GeneralConst = w),
+      (w.__class = "GeneralConst"));
+    var x = (function () {
       return function GiftConst() {};
     })();
-    ((w.DEFAULT_SKIN = 0),
-      (w.CHRISTMAS_SKIN = 1),
-      (t.GiftConst = w),
-      (w.__class = "GiftConst"));
-    var x = (function () {
+    ((x.DEFAULT_SKIN = 0),
+      (x.CHRISTMAS_SKIN = 1),
+      (t.GiftConst = x),
+      (x.__class = "GiftConst"));
+    var W = (function () {
       return function GlobalPrimeTimeConst() {};
     })();
-    ((x.MBS_PERCENTAGE_BONUS = 0),
-      (t.GlobalPrimeTimeConst = x),
-      (x.__class = "GlobalPrimeTimeConst"));
-    var W = (function () {
+    ((W.MBS_PERCENTAGE_BONUS = 0),
+      (t.GlobalPrimeTimeConst = W),
+      (W.__class = "GlobalPrimeTimeConst"));
+    var H = (function () {
       return function GlobalServerConst() {};
     })();
-    ((W.NORMAL_SERVER = 1),
-      (W.TEMP_SERVER = 2),
-      (W.ALLIANCE_BATTLE_GROUND_SERVER = 3),
-      (t.GlobalServerConst = W),
-      (W.__class = "GlobalServerConst"));
-    var H = (function () {
+    ((H.NORMAL_SERVER = 1),
+      (H.TEMP_SERVER = 2),
+      (H.ALLIANCE_BATTLE_GROUND_SERVER = 3),
+      (t.GlobalServerConst = H),
+      (H.__class = "GlobalServerConst"));
+    var V = (function () {
       return function GraphiteConst() {};
     })();
-    ((H.DEFAULT_GRAPHITE_HOST_URL = "graphite.ggs-game.com"),
-      (H.DEFAULT_GRAPHITE_HOST_PORT = 2003),
-      (t.GraphiteConst = H),
-      (H.__class = "GraphiteConst"));
-    var V = (function () {
+    ((V.DEFAULT_GRAPHITE_HOST_URL = "graphite.ggs-game.com"),
+      (V.DEFAULT_GRAPHITE_HOST_PORT = 2003),
+      (t.GraphiteConst = V),
+      (V.__class = "GraphiteConst"));
+    var j = (function () {
       function HighscoreBonusConst() {}
       return (
         (HighscoreBonusConst.calcHighscoreBonusForC1 = function (
@@ -83859,8 +84011,8 @@ and limitations under the License.
         HighscoreBonusConst
       );
     })();
-    ((t.HighscoreBonusConst = V), (V.__class = "HighscoreBonusConst"));
-    var j = (function () {
+    ((t.HighscoreBonusConst = j), (j.__class = "HighscoreBonusConst"));
+    var q = (function () {
       function HighscoreConst() {}
       return (
         (HighscoreConst.SEASON_NUMBER_OF_ENTRIES_SHOWN_$LI$ = function () {
@@ -83937,8 +84089,8 @@ and limitations under the License.
         (HighscoreConst.MIN_XP_FOR_HIGHSCORE_$LI$ = function () {
           return (
             null == HighscoreConst.MIN_XP_FOR_HIGHSCORE &&
-              (HighscoreConst.MIN_XP_FOR_HIGHSCORE = re.getXPFromLevel(
-                re.MIN_LEVEL_FOR_MAP,
+              (HighscoreConst.MIN_XP_FOR_HIGHSCORE = oe.getXPFromLevel(
+                oe.MIN_LEVEL_FOR_MAP,
               )),
             HighscoreConst.MIN_XP_FOR_HIGHSCORE
           );
@@ -83966,113 +84118,113 @@ and limitations under the License.
         HighscoreConst
       );
     })();
-    ((j.SEPARATOR = ","),
-      (j.MY_RANK = -1),
-      (j.SEARCH_FOR_OWN_RANK = "-1"),
-      (j.PLAYER_ACHIEVEMENT_POINTS = 1),
-      (j.PLAYER_WEEKLY_LOOT = 2),
-      (j.PLAYER_HONOR = 5),
-      (j.PLAYER_MIGHT_POINTS = 6),
-      (j.PLAYER_LEGEND = 7),
-      (j.ALLIANCE_HONOR = 10),
-      (j.ALLIANCE_MIGHT_POINTS = 11),
-      (j.ALLIANCE_LANDMARKS = 12),
-      (j.ALLIANCE_AQUA_POINTS = 13),
-      (j.TOURNAMENT_FAME = 20),
-      (j.ALLIANCE_TOURNAMENT_FAME = 21),
-      (j.FACTION_TOURNAMENT = 30),
-      (j.TOURNAMENT_START_OFFSET = 4),
-      (j.TOURNAMENT_TOP = 6),
-      (j.NUMBER_OF_ENTRIES_SHOWN = 10),
-      (j.NUMBER_OF_ENTRIES_SHOWN_FOR_COLOSS = 50),
-      (j.PERSISTENT_LEAGUE_NUMBER_OF_ENTRIES_SHOWN = 8),
-      (j.NUMBER_OF_ENTRIES_SHOWN_FOR_FACTION = 5),
-      (j.TOURNAMENT_NUM_ENTRIES = 8),
-      (j.AQUAPOINTS_NUM_ENTRIES = 7),
-      (j.TEMP_SERVER_HIGHSCORE_NUMBER_OF_ENTRIES_SHOWN = 7),
-      (j.ALLIANCE_BATTLE_GROUND_HIGHSCORE_NUMBER_OF_ENTRIES_SHOWN = 9),
-      (j.DONATION_EVENT_NUMBER_OF_ENTRIES = 10),
-      (j.PLAYER_BUILDINGS = 6),
-      (j.ALLIANCE_BUILDINGS = 11),
-      (j.POINTS_METROPOL = 750),
-      (j.POINTS_KINGS_TOWER = 25),
-      (j.POINTS_MONUMENTS = 25),
-      (j.POINTS_LABORATORY = 25),
-      (j.POINT_EVENT = 40),
-      (j.FACTION_INVASION_INITIAL_POINTS = 150),
-      (j.BEGGING_KNIGHTS = 41),
-      (j.ALIEN_INVASION = 42),
-      (j.LUCKY_WHEEL = 43),
-      (j.ALLIANCE_ALIEN_INVASION_PLAYER = 44),
-      (j.ALLIANCE_ALIEN_INVASION_ALLIANCE = 45),
-      (j.ALLIANCE_NOMADINVASION_PLAYER = 46),
-      (j.ALLIANCE_NOMADINVASION_ALLIANCE = 47),
-      (j.NOMADINVASION = 48),
-      (j.ALLIANCE_SAMURAI_ALIEN_INVASION_PLAYER = 500),
-      (j.ALLIANCE_SAMURAI_ALIEN_INVASION_ALLIANCE = 501),
-      (j.COLOSSUS = 50),
-      (j.SAMURAI_PLAYER = 51),
-      (j.SAMURAI_ALLIANCE = 52),
-      (j.LONG_TERM_POINT_EVENT = 53),
-      (j.FACTION_INVASION_PLAYER_BLUE = 54),
-      (j.FACTION_INVASION_PLAYER_RED = 55),
-      (j.FACTION_INVASION_ALLIANCE = 56),
-      (j.ALLIANCE_RED_ALIEN_INVASION_PLAYER = 58),
-      (j.ALLIANCE_RED_ALIEN_INVASION_ALLIANCE = 59),
-      (j.TEMP_SERVER_DAILY_MIGHT_POINTS_BUILDINGS = 61),
-      (j.TEMP_SERVER_GLOBAL = 62),
-      (j.KINGDOMS_LEAGUE_SEASON = 63),
-      (j.KINGDOMS_LEAGUE_SEASON_EVENT = 64),
-      (j.TEMP_SERVER_DAILY_COLLECTOR_POINTS = 65),
-      (j.TEMP_SERVER_DAILY_RANK_SWAP = 66),
-      (j.ALLIANCE_KINGDOMS_LEAGUE_SEASON = 67),
-      (j.ALLIANCE_KINGDOMS_LEAGUE_SEASON_EVENT = 68),
-      (j.ALLIANCE_DAIMYO = 69),
-      (j.ALLIANCE_BATTLE_GROUND_ALLIANCE_COLLECTOR = 70),
-      (j.ALLIANCE_BATTLE_GROUND_PLAYER_COLLECTOR = 71),
-      (j.LUCKY_WHEEL_SALE_DAYS = 72),
-      (j.ALLIANCE_BATTLE_GROUND_ALLIANCE_TOWER = 74),
-      (j.ALLIANCE_BATTLE_GROUND_PLAYER_TOWER = 75),
-      (j.TEMPSERVER_PREVIOUS_RUN_PLAYER = 76),
-      (j.ALLIANCE_BATTLE_GROUND_PREVIOUS_RUN_ALLIANCE = 77),
-      (j.ALLIANCE_BATTLE_GROUND_PREVIOUS_RUN_PLAYER = 78),
-      (j.DONATION_EVENT = 79),
-      (j.DECO_GACHA_EVENT = 80),
-      (j.CHRISTMAS_GACHA_EVENT = 81),
-      (j.EASTER_GACHA_EVENT = 82),
-      (j.SUMMER_GACHA_EVENT = 83),
-      (j.ALLIANCE_MOBILISATION_EVENT = 84),
-      (j.ANNIVERSARY_GACHA_EVENT = 85),
-      (j.HALLOWEEN_GACHA_EVENT = 86),
-      (j.BLACK_FRIDAY_GACHA_EVENT = 87),
-      (j.CARNIVAL_GACHA_EVENT = 88),
-      (j.ALLIANCE_RAID_MOBILISATION_EVENT = 89),
-      (j.INVALID_HIGHSCORE_LIST_ID = -1),
-      (j.INVALID_RANK = 0),
-      (j.NO_ENTRIES = 0),
-      (j.NO_SCORE = 0),
-      (j.INVALID_ENTRY_ID = -1),
-      (j.RANK_ONE = 1),
-      (j.USE_LOCAL_HIGHSCORE = !0),
-      (j.DO_NOT_USE_LOCAL_HIGHSCORE = !1),
-      (j.USE_GLOBAL_HIGHSCORE = !0),
-      (j.DO_NOT_USE_GLOBAL_HIGHSCORE = !1),
-      (j.INITIAL_HIGHSCORE_SIZE_ON_LIVE = 131072),
-      (j.INITIAL_HIGHSCORE_SIZE_ON_TEST = 4096),
-      (t.HighscoreConst = j),
-      (j.__class = "HighscoreConst"));
-    var q = (function () {
+    ((q.SEPARATOR = ","),
+      (q.MY_RANK = -1),
+      (q.SEARCH_FOR_OWN_RANK = "-1"),
+      (q.PLAYER_ACHIEVEMENT_POINTS = 1),
+      (q.PLAYER_WEEKLY_LOOT = 2),
+      (q.PLAYER_HONOR = 5),
+      (q.PLAYER_MIGHT_POINTS = 6),
+      (q.PLAYER_LEGEND = 7),
+      (q.ALLIANCE_HONOR = 10),
+      (q.ALLIANCE_MIGHT_POINTS = 11),
+      (q.ALLIANCE_LANDMARKS = 12),
+      (q.ALLIANCE_AQUA_POINTS = 13),
+      (q.TOURNAMENT_FAME = 20),
+      (q.ALLIANCE_TOURNAMENT_FAME = 21),
+      (q.FACTION_TOURNAMENT = 30),
+      (q.TOURNAMENT_START_OFFSET = 4),
+      (q.TOURNAMENT_TOP = 6),
+      (q.NUMBER_OF_ENTRIES_SHOWN = 10),
+      (q.NUMBER_OF_ENTRIES_SHOWN_FOR_COLOSS = 50),
+      (q.PERSISTENT_LEAGUE_NUMBER_OF_ENTRIES_SHOWN = 8),
+      (q.NUMBER_OF_ENTRIES_SHOWN_FOR_FACTION = 5),
+      (q.TOURNAMENT_NUM_ENTRIES = 8),
+      (q.AQUAPOINTS_NUM_ENTRIES = 7),
+      (q.TEMP_SERVER_HIGHSCORE_NUMBER_OF_ENTRIES_SHOWN = 7),
+      (q.ALLIANCE_BATTLE_GROUND_HIGHSCORE_NUMBER_OF_ENTRIES_SHOWN = 9),
+      (q.DONATION_EVENT_NUMBER_OF_ENTRIES = 10),
+      (q.PLAYER_BUILDINGS = 6),
+      (q.ALLIANCE_BUILDINGS = 11),
+      (q.POINTS_METROPOL = 750),
+      (q.POINTS_KINGS_TOWER = 25),
+      (q.POINTS_MONUMENTS = 25),
+      (q.POINTS_LABORATORY = 25),
+      (q.POINT_EVENT = 40),
+      (q.FACTION_INVASION_INITIAL_POINTS = 150),
+      (q.BEGGING_KNIGHTS = 41),
+      (q.ALIEN_INVASION = 42),
+      (q.LUCKY_WHEEL = 43),
+      (q.ALLIANCE_ALIEN_INVASION_PLAYER = 44),
+      (q.ALLIANCE_ALIEN_INVASION_ALLIANCE = 45),
+      (q.ALLIANCE_NOMADINVASION_PLAYER = 46),
+      (q.ALLIANCE_NOMADINVASION_ALLIANCE = 47),
+      (q.NOMADINVASION = 48),
+      (q.ALLIANCE_SAMURAI_ALIEN_INVASION_PLAYER = 500),
+      (q.ALLIANCE_SAMURAI_ALIEN_INVASION_ALLIANCE = 501),
+      (q.COLOSSUS = 50),
+      (q.SAMURAI_PLAYER = 51),
+      (q.SAMURAI_ALLIANCE = 52),
+      (q.LONG_TERM_POINT_EVENT = 53),
+      (q.FACTION_INVASION_PLAYER_BLUE = 54),
+      (q.FACTION_INVASION_PLAYER_RED = 55),
+      (q.FACTION_INVASION_ALLIANCE = 56),
+      (q.ALLIANCE_RED_ALIEN_INVASION_PLAYER = 58),
+      (q.ALLIANCE_RED_ALIEN_INVASION_ALLIANCE = 59),
+      (q.TEMP_SERVER_DAILY_MIGHT_POINTS_BUILDINGS = 61),
+      (q.TEMP_SERVER_GLOBAL = 62),
+      (q.KINGDOMS_LEAGUE_SEASON = 63),
+      (q.KINGDOMS_LEAGUE_SEASON_EVENT = 64),
+      (q.TEMP_SERVER_DAILY_COLLECTOR_POINTS = 65),
+      (q.TEMP_SERVER_DAILY_RANK_SWAP = 66),
+      (q.ALLIANCE_KINGDOMS_LEAGUE_SEASON = 67),
+      (q.ALLIANCE_KINGDOMS_LEAGUE_SEASON_EVENT = 68),
+      (q.ALLIANCE_DAIMYO = 69),
+      (q.ALLIANCE_BATTLE_GROUND_ALLIANCE_COLLECTOR = 70),
+      (q.ALLIANCE_BATTLE_GROUND_PLAYER_COLLECTOR = 71),
+      (q.LUCKY_WHEEL_SALE_DAYS = 72),
+      (q.ALLIANCE_BATTLE_GROUND_ALLIANCE_TOWER = 74),
+      (q.ALLIANCE_BATTLE_GROUND_PLAYER_TOWER = 75),
+      (q.TEMPSERVER_PREVIOUS_RUN_PLAYER = 76),
+      (q.ALLIANCE_BATTLE_GROUND_PREVIOUS_RUN_ALLIANCE = 77),
+      (q.ALLIANCE_BATTLE_GROUND_PREVIOUS_RUN_PLAYER = 78),
+      (q.DONATION_EVENT = 79),
+      (q.DECO_GACHA_EVENT = 80),
+      (q.CHRISTMAS_GACHA_EVENT = 81),
+      (q.EASTER_GACHA_EVENT = 82),
+      (q.SUMMER_GACHA_EVENT = 83),
+      (q.ALLIANCE_MOBILISATION_EVENT = 84),
+      (q.ANNIVERSARY_GACHA_EVENT = 85),
+      (q.HALLOWEEN_GACHA_EVENT = 86),
+      (q.BLACK_FRIDAY_GACHA_EVENT = 87),
+      (q.CARNIVAL_GACHA_EVENT = 88),
+      (q.ALLIANCE_RAID_MOBILISATION_EVENT = 89),
+      (q.INVALID_HIGHSCORE_LIST_ID = -1),
+      (q.INVALID_RANK = 0),
+      (q.NO_ENTRIES = 0),
+      (q.NO_SCORE = 0),
+      (q.INVALID_ENTRY_ID = -1),
+      (q.RANK_ONE = 1),
+      (q.USE_LOCAL_HIGHSCORE = !0),
+      (q.DO_NOT_USE_LOCAL_HIGHSCORE = !1),
+      (q.USE_GLOBAL_HIGHSCORE = !0),
+      (q.DO_NOT_USE_GLOBAL_HIGHSCORE = !1),
+      (q.INITIAL_HIGHSCORE_SIZE_ON_LIVE = 131072),
+      (q.INITIAL_HIGHSCORE_SIZE_ON_TEST = 4096),
+      (t.HighscoreConst = q),
+      (q.__class = "HighscoreConst"));
+    var K = (function () {
       return function InstallerPackageConst() {};
     })();
-    ((q.UNKNOWN = -1),
-      (q.PRE_INSTALLED = 0),
-      (q.SAMSUNG = 1),
-      (q.ITUNES = 2),
-      (q.GOOGLEPLAY = 3),
-      (q.AMAZON = 4),
-      (t.InstallerPackageConst = q),
-      (q.__class = "InstallerPackageConst"));
-    var K = (function () {
+    ((K.UNKNOWN = -1),
+      (K.PRE_INSTALLED = 0),
+      (K.SAMSUNG = 1),
+      (K.ITUNES = 2),
+      (K.GOOGLEPLAY = 3),
+      (K.AMAZON = 4),
+      (t.InstallerPackageConst = K),
+      (K.__class = "InstallerPackageConst"));
+    var Y = (function () {
       function JudgementCitizenCalculation() {}
       return (
         (JudgementCitizenCalculation.EXPONENT_FORMULA_1_COND_$LI$ =
@@ -84282,9 +84434,9 @@ and limitations under the License.
         JudgementCitizenCalculation
       );
     })();
-    ((t.JudgementCitizenCalculation = K),
-      (K.__class = "JudgementCitizenCalculation"));
-    var Y = (function () {
+    ((t.JudgementCitizenCalculation = Y),
+      (Y.__class = "JudgementCitizenCalculation"));
+    var z = (function () {
       function LawAndOrderConst() {}
       return (
         (LawAndOrderConst.calculateLawAndOrder = function (e, t, n) {
@@ -84303,7 +84455,7 @@ and limitations under the License.
             e,
             t,
             n,
-            b.DEFAULT_MODIFIER,
+            R.DEFAULT_MODIFIER,
           );
         }),
         (LawAndOrderConst.calculateLawAndOrderFactorWithEffect = function (
@@ -84320,8 +84472,8 @@ and limitations under the License.
         LawAndOrderConst
       );
     })();
-    ((t.LawAndOrderConst = Y), (Y.__class = "LawAndOrderConst"));
-    var z = (function () {
+    ((t.LawAndOrderConst = z), (z.__class = "LawAndOrderConst"));
+    var Z = (function () {
       function LegendSkillConst() {}
       return (
         (LegendSkillConst.RESET_COOLDOWN_IN_SECONDS_$LI$ = function () {
@@ -84370,20 +84522,20 @@ and limitations under the License.
         LegendSkillConst
       );
     })();
-    ((z.TIER_1_POINTS_TO_TIER_2 = 40),
-      (z.TIER_2_POINTS_TO_TIER_3 = 80),
-      (z.TIER_3_POINTS_TO_TIER_4 = 90),
-      (z.TIER_4_POINTS_TO_TIER_5 = 90),
-      (z.TIER_5_POINTS_TO_TIER_6 = 90),
-      (z.MIN_TIER_ID = 1),
-      (z.MAX_TIER_ID = 6),
-      (z.BASE_COST = 20),
-      (z.EXPONENT = 5),
-      (z.BASE_SKILL_POINTS = 50),
-      (z.POINTS_FACTOR = 30),
-      (t.LegendSkillConst = z),
-      (z.__class = "LegendSkillConst"));
-    var Z = (function () {
+    ((Z.TIER_1_POINTS_TO_TIER_2 = 40),
+      (Z.TIER_2_POINTS_TO_TIER_3 = 80),
+      (Z.TIER_3_POINTS_TO_TIER_4 = 90),
+      (Z.TIER_4_POINTS_TO_TIER_5 = 90),
+      (Z.TIER_5_POINTS_TO_TIER_6 = 90),
+      (Z.MIN_TIER_ID = 1),
+      (Z.MAX_TIER_ID = 6),
+      (Z.BASE_COST = 20),
+      (Z.EXPONENT = 5),
+      (Z.BASE_SKILL_POINTS = 50),
+      (Z.POINTS_FACTOR = 30),
+      (t.LegendSkillConst = Z),
+      (Z.__class = "LegendSkillConst"));
+    var X = (function () {
       function LongTermPointEventConst() {}
       return (
         (LongTermPointEventConst.SKINS_$LI$ = function () {
@@ -84410,23 +84562,23 @@ and limitations under the License.
         LongTermPointEventConst
       );
     })();
-    ((Z.NO_SKIN = -1),
-      (Z.HARD_MODE_SKIN = -2),
-      (Z.HALLOWEEN_SKIN = 2),
-      (Z.WINTER_SKIN = 3),
-      (Z.SPRING_SKIN = 4),
-      (Z.REUSABLE_SKIN = 5),
-      (Z.NEW_KING_SKIN = 6),
-      (Z.ST_PATRICKS_DAY_SKIN = 7),
-      (Z.ANNIVERSARY_SKIN = 8),
-      (Z.OKTOBERFEST_SKIN = 9),
-      (Z.CHRISTMAS_SKIN = 10),
-      (Z.MAYA_SKIN = 11),
-      (Z.PIRATES_SKIN = 12),
-      (Z.DRAGONRIDERS_SKIN = 13),
-      (t.LongTermPointEventConst = Z),
-      (Z.__class = "LongTermPointEventConst"));
-    var X = (function () {
+    ((X.NO_SKIN = -1),
+      (X.HARD_MODE_SKIN = -2),
+      (X.HALLOWEEN_SKIN = 2),
+      (X.WINTER_SKIN = 3),
+      (X.SPRING_SKIN = 4),
+      (X.REUSABLE_SKIN = 5),
+      (X.NEW_KING_SKIN = 6),
+      (X.ST_PATRICKS_DAY_SKIN = 7),
+      (X.ANNIVERSARY_SKIN = 8),
+      (X.OKTOBERFEST_SKIN = 9),
+      (X.CHRISTMAS_SKIN = 10),
+      (X.MAYA_SKIN = 11),
+      (X.PIRATES_SKIN = 12),
+      (X.DRAGONRIDERS_SKIN = 13),
+      (t.LongTermPointEventConst = X),
+      (X.__class = "LongTermPointEventConst"));
+    var Q = (function () {
       function LordConst() {}
       return (
         (LordConst.isRealLord = function (e) {
@@ -84435,27 +84587,27 @@ and limitations under the License.
         LordConst
       );
     })();
-    ((X.NO_LORD = -1),
-      (X.FIRST_REAL_ID = 0),
-      (X.BARON_ID = -300),
-      (X.AUTOSCALING_ALIEN_BARON_ID = -220),
-      (X.AUTOSCALING_BLOOD_CROW_BARON_ID = -219),
-      (X.AUTOSCALING_NOMAD_AND_KHAN_BARON_ID = -217),
-      (X.AUTOSCALING_SAMURAI_AND_DAIMYO_BARON_ID = -218),
-      (X.AUTOSCALING_BATTLEGROUND_RESOURCE_TOWER_BARON_ID = -1),
-      (X.AUTOSCALING_KHAN_TAUNT_COMMANDER_ID = -215),
-      (X.AUTOSCALING_WOLF_KING_TAUNT_COMMANDER_ID = -213),
-      (X.AUTOSCALING_DAIMIO_COMMANDER_ID = -216),
-      (X.RAID_BOSS_BARON_ID = -400),
-      (t.LordConst = X),
-      (X.__class = "LordConst"));
-    var Q = (function () {
+    ((Q.NO_LORD = -1),
+      (Q.FIRST_REAL_ID = 0),
+      (Q.BARON_ID = -300),
+      (Q.AUTOSCALING_ALIEN_BARON_ID = -220),
+      (Q.AUTOSCALING_BLOOD_CROW_BARON_ID = -219),
+      (Q.AUTOSCALING_NOMAD_AND_KHAN_BARON_ID = -217),
+      (Q.AUTOSCALING_SAMURAI_AND_DAIMYO_BARON_ID = -218),
+      (Q.AUTOSCALING_BATTLEGROUND_RESOURCE_TOWER_BARON_ID = -1),
+      (Q.AUTOSCALING_KHAN_TAUNT_COMMANDER_ID = -215),
+      (Q.AUTOSCALING_WOLF_KING_TAUNT_COMMANDER_ID = -213),
+      (Q.AUTOSCALING_DAIMIO_COMMANDER_ID = -216),
+      (Q.RAID_BOSS_BARON_ID = -400),
+      (t.LordConst = Q),
+      (Q.__class = "LordConst"));
+    var $ = (function () {
       return function LostAndFoundConst() {};
     })();
-    ((Q.INVENTORY_SIZE = 30),
-      (t.LostAndFoundConst = Q),
-      (Q.__class = "LostAndFoundConst"));
-    var $ = (function () {
+    (($.INVENTORY_SIZE = 30),
+      (t.LostAndFoundConst = $),
+      ($.__class = "LostAndFoundConst"));
+    var J = (function () {
       function LuckyWheelConst() {}
       return (
         (LuckyWheelConst.calculateC2CostForIncreasingPrizeClass = function (
@@ -84469,19 +84621,19 @@ and limitations under the License.
         LuckyWheelConst
       );
     })();
-    (($.SPIN_TICKET_COST_NORMAL = 30),
-      ($.SPIN_TICKET_COST_PROMODE = 300),
-      ($.SPIN_TICKET_COST_SALE_DAYS = 1),
-      ($.JACKPOT_C2_COST_NORMAL = 2900),
-      ($.JACKPOT_C2_COST_PROMODE = 29e3),
-      ($.CATEGORY_COUNT_NORMAL = 8),
-      ($.CATEGORY_JACKPOT = 0),
-      ($.MIN_EXCLUSIVE_POINT_VALUE = 1),
-      ($.WINNING_CLASS_PROGRESS_NORMAL = 1),
-      ($.WINNING_CLASS_PROGRESS_PROMODE = 10),
-      (t.LuckyWheelConst = $),
-      ($.__class = "LuckyWheelConst"));
-    var J = (function () {
+    ((J.SPIN_TICKET_COST_NORMAL = 30),
+      (J.SPIN_TICKET_COST_PROMODE = 300),
+      (J.SPIN_TICKET_COST_SALE_DAYS = 1),
+      (J.JACKPOT_C2_COST_NORMAL = 2900),
+      (J.JACKPOT_C2_COST_PROMODE = 29e3),
+      (J.CATEGORY_COUNT_NORMAL = 8),
+      (J.CATEGORY_JACKPOT = 0),
+      (J.MIN_EXCLUSIVE_POINT_VALUE = 1),
+      (J.WINNING_CLASS_PROGRESS_NORMAL = 1),
+      (J.WINNING_CLASS_PROGRESS_PROMODE = 10),
+      (t.LuckyWheelConst = J),
+      (J.__class = "LuckyWheelConst"));
+    var ee = (function () {
       function MarketConst() {}
       return (
         (MarketConst.getMarketTravelCostC1 = function (e, t) {
@@ -84509,12 +84661,12 @@ and limitations under the License.
         MarketConst
       );
     })();
-    ((J.MARKET_TRAVEL_SPEED = 50),
-      (J.RESOURCES_PER_CARRIAGE = 100),
-      (J.MAX_MARKET_MOVEMENTS_TO_TARGET = 15),
-      (t.MarketConst = J),
-      (J.__class = "MarketConst"));
-    var ee = (function () {
+    ((ee.MARKET_TRAVEL_SPEED = 50),
+      (ee.RESOURCES_PER_CARRIAGE = 100),
+      (ee.MAX_MARKET_MOVEMENTS_TO_TARGET = 15),
+      (t.MarketConst = ee),
+      (ee.__class = "MarketConst"));
+    var te = (function () {
       function MercenaryConst() {}
       return (
         (MercenaryConst.getSkipC2Cost = function (e) {
@@ -84528,15 +84680,15 @@ and limitations under the License.
         MercenaryConst
       );
     })();
-    ((ee.REFRESH_MISSION_COST = 240),
-      (ee.REFRESH_INTERVAL_HOURS = 6),
-      (ee.MAX_MISSION_COUNT = 6),
-      (ee.REWARD_AMOUNT = 3),
-      (ee.INSTANT_COST_C2_PER_MINUTE = 5),
-      (ee.REFRESH_FIRST_HOUR_OF_THE_DAY = 4),
-      (t.MercenaryConst = ee),
-      (ee.__class = "MercenaryConst"));
-    var te = (function () {
+    ((te.REFRESH_MISSION_COST = 240),
+      (te.REFRESH_INTERVAL_HOURS = 6),
+      (te.MAX_MISSION_COUNT = 6),
+      (te.REWARD_AMOUNT = 3),
+      (te.INSTANT_COST_C2_PER_MINUTE = 5),
+      (te.REFRESH_FIRST_HOUR_OF_THE_DAY = 4),
+      (t.MercenaryConst = te),
+      (te.__class = "MercenaryConst"));
+    var ne = (function () {
       function MessageConst() {}
       return (
         (MessageConst.getSubtypeForBattleAndSpies = function (e, t) {
@@ -84551,198 +84703,198 @@ and limitations under the License.
         MessageConst
       );
     })();
-    ((te.MAX_MAILBOX_SIZE = 50),
-      (te.MESSAGES_PER_PAGE = 8),
-      (te.MAX_LENGTH_SUBJECT = 20),
-      (te.MAX_LENGTH_RECEIVER = 15),
-      (te.MIN_LENGTH_TEXT = 3),
-      (te.MAX_LENGTH_TEXT = 1300),
-      (te.MAX_IGNORE_COUNT = 50),
-      (te.MAX_MAILBOX_ARCHIVE_SIZE = 20),
-      (te.MAX_MAILBOX_BATTLE_AND_SPY_REPORTS = 25),
-      (te.MAX_MAILBOX_BATTLE_AND_SPY_REPORTS_FORWARDED = 50),
-      (te.MAX_MAILBOX_OUTBOX_SIZE = 10),
-      (te.MAX_MAILBOX_SPECIAL_OFFERS_SIZE = 50),
-      (te.MIN_FREE_MESSAGE_ID_THRESHOLD = 1e8),
-      (te.FROM_SERVER_PLAYER_ID = -1),
-      (te.FROM_SERVER_PLAYER_NAME = ""),
-      (te.MESSAGE_TYPE_SYSTEM = 0),
-      (te.MESSAGE_TYPE_USER_IN = 1),
-      (te.MESSAGE_TYPE_USER_OUT = 2),
-      (te.MESSAGE_TYPE_SPY_PLAYER = 3),
-      (te.MESSAGE_TYPE_SPY_NPC = 4),
-      (te.MESSAGE_TYPE_CONQUERABLE_AREA = 5),
-      (te.MESSAGE_TYPE_BATTLE_LOG = 6),
-      (te.MESSAGE_TYPE_ALLIANCE_REQUEST = 20),
-      (te.MESSAGE_TYPE_ALLIANCE_WAR = 21),
-      (te.MESSAGE_TYPE_ALLIANCE_NEWSLETTER = 22),
-      (te.MESSAGE_TYPE_ALLIANCE_BOOKMARK = 23),
-      (te.MESSAGE_TYPE_LOWLEVEL_UNDERWORLD = 40),
-      (te.MESSAGE_TYPE_USER_SURVEY = 50),
-      (te.MESSAGE_TYPE_ATTACK_CANCELLED = 67),
-      (te.MESSAGE_TYPE_SPY_CANCELLED = 68),
-      (te.MESSAGE_TYPE_STARVE_INFO = 70),
-      (te.MESSAGE_TYPE_BUILDING_DISABLED = 71),
-      (te.MESSAGE_TYPE_MARKET_CARRIAGE_ARRIVED = 75),
-      (te.MESSAGE_TYPE_ABO = 80),
-      (te.MESSAGE_TYPE_PAYMENT_DOPPLER = 81),
-      (te.MESSAGE_TYPE_REBUY = 90),
-      (te.MESSAGE_TYPE_SPECIAL_EVENT = 95),
-      (te.MESSAGE_TYPE_STARVE_VILLAGE_LOST = 96),
-      (te.MESSAGE_TYPE_TOURNAMENT_OVER = 97),
-      (te.MESSAGE_TYPE_ISLAND_KINGDOM_TITLE = 98),
-      (te.MESSAGE_TYPE_ISLAND_KINGDOM_REWARD = 99),
-      (te.MESSAGE_TYPE_STARVE_ISLE_RESOURCE_LOST = 100),
-      (te.MESSAGE_RUIN_INFO = 102),
-      (te.MESSAGE_TYPE_PLAYER_GIFT = 103),
-      (te.MESSAGE_TYPE_SUBSCRIPTION = 104),
-      (te.MESSAGE_TYPE_ATTACK_COUNT_THRESHOLD = 105),
-      (te.MESSAGE_TYPE_THANKY_YOU_PACKAGE = 117),
-      (te.MESSAGE_TYPE_DOWNTIME_STATUS = 118),
-      (te.MESSAGE_TYPE_DIVISION_CHANGE = 119),
-      (te.MESSAGE_TYPE_ATTACK_ADVISOR_FAILURE = 120),
-      (te.MESSAGE_TYPE_ATTACK_ADVISOR_SUMMARY = 121),
-      (te.MESSAGE_TYPE_HIGHSCORE_BONUS = 122),
-      (te.MESSAGE_TYPE_EVENT_ANNOUNCEMENT = 123),
-      (te.MESSAGE_TYPE_POPUP = 124),
-      (te.MESSAGE_TYPE_PATCH_NOTES = 125),
-      (te.MESSAGE_TYPE_PRIVATE_OFFER = 126),
-      (te.MESSAGE_TYPE_TEXT_ID = 127),
-      (te.MAILBOX_INBOX = 0),
-      (te.MAILBOX_COMBAT_AND_SPY = 1),
-      (te.MAILBOX_FORWARDED = 2),
-      (te.MAILBOX_OUTBOX = 3),
-      (te.MAILBOX_SPECIAL_OFFERS = 4),
-      (te.SPECIAL_ID_BAEM_AWARD = 1),
-      (te.SPECIAL_ID_BAEM_AWARD_FINAL = 2),
-      (te.SPECIAL_ID_EUROPEAN_AWARD = 3),
-      (te.SPECIAL_ID_SHADOW_TEASER = 4),
-      (te.SPECIAL_ID_EGA_100_RUBIES = 5),
-      (te.SPECIAL_ID_EGA_150_RUBIES = 6),
-      (te.SPECIAL_ID_EGA_500_RUBIES_FORUM = 7),
-      (te.SPECIAL_ID_GAMEX_AWARD = 8),
-      (te.SPECIAL_ID_MMO_OF_THE_YEAR_AWARD = 9),
-      (te.SPECIAL_ID_TURKEY_MESSAGE = 10),
-      (te.SPECIAL_ID_SPECIAL_EVENT_START = 12),
-      (te.SPECIAL_ID_SPECIAL_EVENT_END = 13),
-      (te.SPECIAL_ID_FACTION_LAST_MAN_STANDING_BEGAN_FOR_FACTION = 14),
-      (te.SPECIAL_ID_FACTION_LAST_CAMP_DESTROYED = 15),
-      (te.SPECIAL_ID_VIP_INFORMATION = 16),
-      (te.SPECIAL_ID_WORLD_CUP = 17),
-      (te.SPECIAL_ID_UNDERWORLD = 18),
-      (te.SPECIAL_ID_THORNKING = 19),
-      (te.SPECIAL_ID_HOSPITAL_CAPACITY_EXCEEDED = 20),
-      (te.SPECIAL_ID_EMPIRE_DEALS_DAYS_MESSAGE = 21),
-      (te.SPECIAL_ID_TERMS_AND_CONDITIONS = 22),
-      (te.SPECIAL_ID_WAR_OF_EMPIRES_1 = 23),
-      (te.SPECIAL_ID_WAR_OF_EMPIRES_2 = 24),
-      (te.SPECIAL_ID_WAR_OF_EMPIRES_3 = 25),
-      (te.SPECIAL_ID_WAR_OF_EMPIRES_REWARD_1 = 26),
-      (te.SPECIAL_ID_WAR_OF_EMPIRES_REWARD_2 = 27),
-      (te.SPECIAL_ID_WAR_OF_EMPIRES_REWARD_3 = 28),
-      (te.SPECIAL_ID_ANNOUNCE_INSTANCE = 29),
-      (te.SPECIAL_ID_FAIR_PLAY_MESSAGE = 30),
-      (te.SPECIAL_ID_ALCHEMIST_RETIREMENT = 31),
-      (te.SPECIAL_ID_SPECIAL_EVENT_UPDATE = 32),
-      (te.SPECIAL_ID_TREASURE_MAP_PIECE_FOUND = 33),
-      (te.SPECIAL_ID_MONUMENT = 66),
-      (te.SPECIAL_ID_LABORATORY = 67),
-      (te.SPECIAL_ID_METROPOLIS = 68),
-      (te.SPECIAL_ID_KINGSTOWER = 69),
-      (te.PRIVATE_OFFER_TIPPMAIL = 1),
-      (te.PRIVATE_OFFER_DUNGEON_TREASURE_CHEST = 5),
-      (te.PRIVATE_OFFER_WHALE_CHEST = 6),
-      (te.PRIVATE_OFFER_EVENT_GIFT = 7),
-      (te.PRIVATE_OFFER_FORUM_ADVERTISING = 8),
-      (te.PRIVATE_OFFER_DEFENSE = 9),
-      (te.PRIVATE_OFFER_TOOL_RETURN = 10),
-      (te.PRIVATE_OFFER_VOUCHER = 11),
-      (te.PRIVATE_OFFER_TIME_CHALLENGE = 12),
-      (te.PRIVATE_OFFER_TIME_CHALLENGE_FINISHED = 13),
-      (te.PRIVATE_OFFER_BESTSELLER_SHOP = 14),
-      (te.BATTLE_LOG_CANCELLED_GENERAL = 1),
-      (te.BATTLE_LOG_CANCELLED_COOLDOWN = 2),
-      (te.BATTLE_LOG_CANCELLED_STARVATION = 3),
-      (te.TOURNAMENT_SINGLE = 1),
-      (te.SUBTYPE_SIEGE_CANCELED = 0),
-      (te.SUBTYPE_NEW_SIEGE = 1),
-      (te.SUBTYPE_CONQUERABLE_AREA_CONQUERED = 2),
-      (te.SUBTYPE_CONQUERABLE_AREA_LOST = 3),
-      (te.SUBTYPE_TREASUREMAP_SUBNODE = 0),
-      (te.SUBTYPE_TREASUREMAP_MAINNODE = 1),
-      (te.SUBTYPE_TREASUREMAP_ENDNODE = 2),
-      (te.SUBTYPE_ATTACK_NORMAL = 0),
-      (te.SUBTYPE_ATTACK_CONQUER = 1),
-      (te.SUBTYPE_ATTACK_NPC = 2),
-      (te.SUBTYPE_ATTACK_OCCUPY = 3),
-      (te.SUBTYPE_ATTACK_SHADOW = 4),
-      (te.POSITION_SUBTYPE_SPY = 0),
-      (te.SUBTYPE_SPY_SABOTAGE = 0),
-      (te.SUBTYPE_SPY_DEFENCE = 1),
-      (te.SUBTYPE_SPY_ECO = 2),
-      (te.SUBTYPE_SPY_PLAQUE_MONK = 3),
-      (te.SUBTYPE_ATTACKER_SUCCESS = 0),
-      (te.SUBTYPE_DEFENDER_SUCCESS = 1),
-      (te.SUBTYPE_ATTACKER_FAILED = 2),
-      (te.SUBTYPE_DEFENDER_FAILED = 3),
-      (te.SUBTYPE_ALLIANCE_ENEMY_ATTACK_WAR = 0),
-      (te.SUBTYPE_ALLIANCE_ENEMY_DECLARED_WAR = 1),
-      (te.SUBTYPE_ALLIANCE_OUR_DECLARED_WAR = 2),
-      (te.SUBTYPE_ALLIANCE_OUR_ATTACK_WAR = 3),
-      (te.SUBTYPE_ALLIANCE_OUR_SABOTAGE_WAR = 4),
-      (te.SUBTYPE_ALLIANCE_ENEMY_END_WAR = 5),
-      (te.SUBTYPE_ALLIANCE_ENEMY_SABOTAGE_WAR = 6),
-      (te.SUBTYPE_TITLE_ASSIGNED = 0),
-      (te.SUBTYPE_TITLE_LOST = 1),
-      (te.SUBTYPE_NEW_KING = 2),
-      (te.SUBTYPE_REWARD_TOP_X = 3),
-      (te.SUBTYPE_REWARD_KING = 4),
-      (te.SUBTYPE_REWARD_POINTS = 5),
-      (te.SUBTYPE_REWARD_WINNER_ALLI = 6),
-      (te.SUBTYPE_LOST_TITLE_ON_RESET = 7),
-      (te.DATATYPE_TITLE_LOST_TAKEN = 0),
-      (te.DATATYPE_TITLE_LOST_RESET = 1),
-      (te.DATATYPE_TITLE_LOST_LEADER_LEFT = 2),
-      (te.DATATYPE_TITLE_LOST_PLAYER_LEFT = 3),
-      (te.SUBTYPE_ATTACK_ABORTED = 0),
-      (te.SUBTYPE_ATTACK_AUTO_RETREAT = 1),
-      (te.SUBTYPE_ATTACK_AUTO_RETREAT_ENEMY = 2),
-      (te.SUBTYPE_SPY_ABORTED = 0),
-      (te.SUBTYPE_BOOKMARK_ADDED = 0),
-      (te.SUBTYPE_BOOKMARK_DELETED = 1),
-      (te.SUBTYPE_LOWLEVEL_UNDERWORLD_START = 0),
-      (te.SUBTYPE_LOWLEVEL_UNDERWORLD_WARN = 1),
-      (te.SUBTYPE_LOWLEVEL_UNDERWORLD_END = 2),
-      (te.SUBTYPE_THANK_YOU_PACKAGE_DESTROYED_FACTION_TOWERS = 0),
-      (te.SUBTYPE_SUPPORT_PACKAGE_LOST_FACTION_TOWERS = 1),
-      (te.SUBTYPE_SUBSCRIPTION_ENABLED = 0),
-      (te.SUBTYPE_SUBSCRIPTION_EXPIRED = 1),
-      (te.SUBTYPE_SUBSCRIPTION_REWARD = 2),
-      (te.SUBTYPE_META_DATA_SPLITTER = "#"),
-      (te.SUBJECT_SEPARATOR = "+"),
-      (te.SUBTYPE_POPUP_REGISTRATION_GIFT = 0),
-      (te.SUBTYPE_POPUP_FACEBOOK_CONNECTION = 1),
-      (te.SUBTYPE_POPUP_LOGIN_BONUS = 2),
-      (te.SUBTYPE_POPUP_SAVE_ACCOUNT = 3),
-      (t.MessageConst = te),
-      (te.__class = "MessageConst"));
-    var ne = (function () {
+    ((ne.MAX_MAILBOX_SIZE = 50),
+      (ne.MESSAGES_PER_PAGE = 8),
+      (ne.MAX_LENGTH_SUBJECT = 20),
+      (ne.MAX_LENGTH_RECEIVER = 15),
+      (ne.MIN_LENGTH_TEXT = 3),
+      (ne.MAX_LENGTH_TEXT = 1300),
+      (ne.MAX_IGNORE_COUNT = 50),
+      (ne.MAX_MAILBOX_ARCHIVE_SIZE = 20),
+      (ne.MAX_MAILBOX_BATTLE_AND_SPY_REPORTS = 25),
+      (ne.MAX_MAILBOX_BATTLE_AND_SPY_REPORTS_FORWARDED = 50),
+      (ne.MAX_MAILBOX_OUTBOX_SIZE = 10),
+      (ne.MAX_MAILBOX_SPECIAL_OFFERS_SIZE = 50),
+      (ne.MIN_FREE_MESSAGE_ID_THRESHOLD = 1e8),
+      (ne.FROM_SERVER_PLAYER_ID = -1),
+      (ne.FROM_SERVER_PLAYER_NAME = ""),
+      (ne.MESSAGE_TYPE_SYSTEM = 0),
+      (ne.MESSAGE_TYPE_USER_IN = 1),
+      (ne.MESSAGE_TYPE_USER_OUT = 2),
+      (ne.MESSAGE_TYPE_SPY_PLAYER = 3),
+      (ne.MESSAGE_TYPE_SPY_NPC = 4),
+      (ne.MESSAGE_TYPE_CONQUERABLE_AREA = 5),
+      (ne.MESSAGE_TYPE_BATTLE_LOG = 6),
+      (ne.MESSAGE_TYPE_ALLIANCE_REQUEST = 20),
+      (ne.MESSAGE_TYPE_ALLIANCE_WAR = 21),
+      (ne.MESSAGE_TYPE_ALLIANCE_NEWSLETTER = 22),
+      (ne.MESSAGE_TYPE_ALLIANCE_BOOKMARK = 23),
+      (ne.MESSAGE_TYPE_LOWLEVEL_UNDERWORLD = 40),
+      (ne.MESSAGE_TYPE_USER_SURVEY = 50),
+      (ne.MESSAGE_TYPE_ATTACK_CANCELLED = 67),
+      (ne.MESSAGE_TYPE_SPY_CANCELLED = 68),
+      (ne.MESSAGE_TYPE_STARVE_INFO = 70),
+      (ne.MESSAGE_TYPE_BUILDING_DISABLED = 71),
+      (ne.MESSAGE_TYPE_MARKET_CARRIAGE_ARRIVED = 75),
+      (ne.MESSAGE_TYPE_ABO = 80),
+      (ne.MESSAGE_TYPE_PAYMENT_DOPPLER = 81),
+      (ne.MESSAGE_TYPE_REBUY = 90),
+      (ne.MESSAGE_TYPE_SPECIAL_EVENT = 95),
+      (ne.MESSAGE_TYPE_STARVE_VILLAGE_LOST = 96),
+      (ne.MESSAGE_TYPE_TOURNAMENT_OVER = 97),
+      (ne.MESSAGE_TYPE_ISLAND_KINGDOM_TITLE = 98),
+      (ne.MESSAGE_TYPE_ISLAND_KINGDOM_REWARD = 99),
+      (ne.MESSAGE_TYPE_STARVE_ISLE_RESOURCE_LOST = 100),
+      (ne.MESSAGE_RUIN_INFO = 102),
+      (ne.MESSAGE_TYPE_PLAYER_GIFT = 103),
+      (ne.MESSAGE_TYPE_SUBSCRIPTION = 104),
+      (ne.MESSAGE_TYPE_ATTACK_COUNT_THRESHOLD = 105),
+      (ne.MESSAGE_TYPE_THANKY_YOU_PACKAGE = 117),
+      (ne.MESSAGE_TYPE_DOWNTIME_STATUS = 118),
+      (ne.MESSAGE_TYPE_DIVISION_CHANGE = 119),
+      (ne.MESSAGE_TYPE_ATTACK_ADVISOR_FAILURE = 120),
+      (ne.MESSAGE_TYPE_ATTACK_ADVISOR_SUMMARY = 121),
+      (ne.MESSAGE_TYPE_HIGHSCORE_BONUS = 122),
+      (ne.MESSAGE_TYPE_EVENT_ANNOUNCEMENT = 123),
+      (ne.MESSAGE_TYPE_POPUP = 124),
+      (ne.MESSAGE_TYPE_PATCH_NOTES = 125),
+      (ne.MESSAGE_TYPE_PRIVATE_OFFER = 126),
+      (ne.MESSAGE_TYPE_TEXT_ID = 127),
+      (ne.MAILBOX_INBOX = 0),
+      (ne.MAILBOX_COMBAT_AND_SPY = 1),
+      (ne.MAILBOX_FORWARDED = 2),
+      (ne.MAILBOX_OUTBOX = 3),
+      (ne.MAILBOX_SPECIAL_OFFERS = 4),
+      (ne.SPECIAL_ID_BAEM_AWARD = 1),
+      (ne.SPECIAL_ID_BAEM_AWARD_FINAL = 2),
+      (ne.SPECIAL_ID_EUROPEAN_AWARD = 3),
+      (ne.SPECIAL_ID_SHADOW_TEASER = 4),
+      (ne.SPECIAL_ID_EGA_100_RUBIES = 5),
+      (ne.SPECIAL_ID_EGA_150_RUBIES = 6),
+      (ne.SPECIAL_ID_EGA_500_RUBIES_FORUM = 7),
+      (ne.SPECIAL_ID_GAMEX_AWARD = 8),
+      (ne.SPECIAL_ID_MMO_OF_THE_YEAR_AWARD = 9),
+      (ne.SPECIAL_ID_TURKEY_MESSAGE = 10),
+      (ne.SPECIAL_ID_SPECIAL_EVENT_START = 12),
+      (ne.SPECIAL_ID_SPECIAL_EVENT_END = 13),
+      (ne.SPECIAL_ID_FACTION_LAST_MAN_STANDING_BEGAN_FOR_FACTION = 14),
+      (ne.SPECIAL_ID_FACTION_LAST_CAMP_DESTROYED = 15),
+      (ne.SPECIAL_ID_VIP_INFORMATION = 16),
+      (ne.SPECIAL_ID_WORLD_CUP = 17),
+      (ne.SPECIAL_ID_UNDERWORLD = 18),
+      (ne.SPECIAL_ID_THORNKING = 19),
+      (ne.SPECIAL_ID_HOSPITAL_CAPACITY_EXCEEDED = 20),
+      (ne.SPECIAL_ID_EMPIRE_DEALS_DAYS_MESSAGE = 21),
+      (ne.SPECIAL_ID_TERMS_AND_CONDITIONS = 22),
+      (ne.SPECIAL_ID_WAR_OF_EMPIRES_1 = 23),
+      (ne.SPECIAL_ID_WAR_OF_EMPIRES_2 = 24),
+      (ne.SPECIAL_ID_WAR_OF_EMPIRES_3 = 25),
+      (ne.SPECIAL_ID_WAR_OF_EMPIRES_REWARD_1 = 26),
+      (ne.SPECIAL_ID_WAR_OF_EMPIRES_REWARD_2 = 27),
+      (ne.SPECIAL_ID_WAR_OF_EMPIRES_REWARD_3 = 28),
+      (ne.SPECIAL_ID_ANNOUNCE_INSTANCE = 29),
+      (ne.SPECIAL_ID_FAIR_PLAY_MESSAGE = 30),
+      (ne.SPECIAL_ID_ALCHEMIST_RETIREMENT = 31),
+      (ne.SPECIAL_ID_SPECIAL_EVENT_UPDATE = 32),
+      (ne.SPECIAL_ID_TREASURE_MAP_PIECE_FOUND = 33),
+      (ne.SPECIAL_ID_MONUMENT = 66),
+      (ne.SPECIAL_ID_LABORATORY = 67),
+      (ne.SPECIAL_ID_METROPOLIS = 68),
+      (ne.SPECIAL_ID_KINGSTOWER = 69),
+      (ne.PRIVATE_OFFER_TIPPMAIL = 1),
+      (ne.PRIVATE_OFFER_DUNGEON_TREASURE_CHEST = 5),
+      (ne.PRIVATE_OFFER_WHALE_CHEST = 6),
+      (ne.PRIVATE_OFFER_EVENT_GIFT = 7),
+      (ne.PRIVATE_OFFER_FORUM_ADVERTISING = 8),
+      (ne.PRIVATE_OFFER_DEFENSE = 9),
+      (ne.PRIVATE_OFFER_TOOL_RETURN = 10),
+      (ne.PRIVATE_OFFER_VOUCHER = 11),
+      (ne.PRIVATE_OFFER_TIME_CHALLENGE = 12),
+      (ne.PRIVATE_OFFER_TIME_CHALLENGE_FINISHED = 13),
+      (ne.PRIVATE_OFFER_BESTSELLER_SHOP = 14),
+      (ne.BATTLE_LOG_CANCELLED_GENERAL = 1),
+      (ne.BATTLE_LOG_CANCELLED_COOLDOWN = 2),
+      (ne.BATTLE_LOG_CANCELLED_STARVATION = 3),
+      (ne.TOURNAMENT_SINGLE = 1),
+      (ne.SUBTYPE_SIEGE_CANCELED = 0),
+      (ne.SUBTYPE_NEW_SIEGE = 1),
+      (ne.SUBTYPE_CONQUERABLE_AREA_CONQUERED = 2),
+      (ne.SUBTYPE_CONQUERABLE_AREA_LOST = 3),
+      (ne.SUBTYPE_TREASUREMAP_SUBNODE = 0),
+      (ne.SUBTYPE_TREASUREMAP_MAINNODE = 1),
+      (ne.SUBTYPE_TREASUREMAP_ENDNODE = 2),
+      (ne.SUBTYPE_ATTACK_NORMAL = 0),
+      (ne.SUBTYPE_ATTACK_CONQUER = 1),
+      (ne.SUBTYPE_ATTACK_NPC = 2),
+      (ne.SUBTYPE_ATTACK_OCCUPY = 3),
+      (ne.SUBTYPE_ATTACK_SHADOW = 4),
+      (ne.POSITION_SUBTYPE_SPY = 0),
+      (ne.SUBTYPE_SPY_SABOTAGE = 0),
+      (ne.SUBTYPE_SPY_DEFENCE = 1),
+      (ne.SUBTYPE_SPY_ECO = 2),
+      (ne.SUBTYPE_SPY_PLAQUE_MONK = 3),
+      (ne.SUBTYPE_ATTACKER_SUCCESS = 0),
+      (ne.SUBTYPE_DEFENDER_SUCCESS = 1),
+      (ne.SUBTYPE_ATTACKER_FAILED = 2),
+      (ne.SUBTYPE_DEFENDER_FAILED = 3),
+      (ne.SUBTYPE_ALLIANCE_ENEMY_ATTACK_WAR = 0),
+      (ne.SUBTYPE_ALLIANCE_ENEMY_DECLARED_WAR = 1),
+      (ne.SUBTYPE_ALLIANCE_OUR_DECLARED_WAR = 2),
+      (ne.SUBTYPE_ALLIANCE_OUR_ATTACK_WAR = 3),
+      (ne.SUBTYPE_ALLIANCE_OUR_SABOTAGE_WAR = 4),
+      (ne.SUBTYPE_ALLIANCE_ENEMY_END_WAR = 5),
+      (ne.SUBTYPE_ALLIANCE_ENEMY_SABOTAGE_WAR = 6),
+      (ne.SUBTYPE_TITLE_ASSIGNED = 0),
+      (ne.SUBTYPE_TITLE_LOST = 1),
+      (ne.SUBTYPE_NEW_KING = 2),
+      (ne.SUBTYPE_REWARD_TOP_X = 3),
+      (ne.SUBTYPE_REWARD_KING = 4),
+      (ne.SUBTYPE_REWARD_POINTS = 5),
+      (ne.SUBTYPE_REWARD_WINNER_ALLI = 6),
+      (ne.SUBTYPE_LOST_TITLE_ON_RESET = 7),
+      (ne.DATATYPE_TITLE_LOST_TAKEN = 0),
+      (ne.DATATYPE_TITLE_LOST_RESET = 1),
+      (ne.DATATYPE_TITLE_LOST_LEADER_LEFT = 2),
+      (ne.DATATYPE_TITLE_LOST_PLAYER_LEFT = 3),
+      (ne.SUBTYPE_ATTACK_ABORTED = 0),
+      (ne.SUBTYPE_ATTACK_AUTO_RETREAT = 1),
+      (ne.SUBTYPE_ATTACK_AUTO_RETREAT_ENEMY = 2),
+      (ne.SUBTYPE_SPY_ABORTED = 0),
+      (ne.SUBTYPE_BOOKMARK_ADDED = 0),
+      (ne.SUBTYPE_BOOKMARK_DELETED = 1),
+      (ne.SUBTYPE_LOWLEVEL_UNDERWORLD_START = 0),
+      (ne.SUBTYPE_LOWLEVEL_UNDERWORLD_WARN = 1),
+      (ne.SUBTYPE_LOWLEVEL_UNDERWORLD_END = 2),
+      (ne.SUBTYPE_THANK_YOU_PACKAGE_DESTROYED_FACTION_TOWERS = 0),
+      (ne.SUBTYPE_SUPPORT_PACKAGE_LOST_FACTION_TOWERS = 1),
+      (ne.SUBTYPE_SUBSCRIPTION_ENABLED = 0),
+      (ne.SUBTYPE_SUBSCRIPTION_EXPIRED = 1),
+      (ne.SUBTYPE_SUBSCRIPTION_REWARD = 2),
+      (ne.SUBTYPE_META_DATA_SPLITTER = "#"),
+      (ne.SUBJECT_SEPARATOR = "+"),
+      (ne.SUBTYPE_POPUP_REGISTRATION_GIFT = 0),
+      (ne.SUBTYPE_POPUP_FACEBOOK_CONNECTION = 1),
+      (ne.SUBTYPE_POPUP_LOGIN_BONUS = 2),
+      (ne.SUBTYPE_POPUP_SAVE_ACCOUNT = 3),
+      (t.MessageConst = ne),
+      (ne.__class = "MessageConst"));
+    var ie = (function () {
       return function MonumentConst() {};
     })();
-    ((ne.MAX_LEVEL_NORMAL_MONUMENT = 9),
-      (ne.START_LEVEL_RARE_MONUMENT = 5),
-      (ne.MAX_LEVEL_RARE_MONUMENT = 19),
-      (t.MonumentConst = ne),
-      (ne.__class = "MonumentConst"));
-    var ie = (function () {
+    ((ie.MAX_LEVEL_NORMAL_MONUMENT = 9),
+      (ie.START_LEVEL_RARE_MONUMENT = 5),
+      (ie.MAX_LEVEL_RARE_MONUMENT = 19),
+      (t.MonumentConst = ie),
+      (ie.__class = "MonumentConst"));
+    var ae = (function () {
       return function MovementFilterConst() {};
     })();
-    ((ie.PLAYER_PVP_ATTACKS = 0),
-      (ie.ALLIANCE_PVP_ATTACKS = 1),
-      (ie.RESOURCE_TRANSPORTS = 2),
-      (t.MovementFilterConst = ie),
-      (ie.__class = "MovementFilterConst"));
-    var ae = (function () {
+    ((ae.PLAYER_PVP_ATTACKS = 0),
+      (ae.ALLIANCE_PVP_ATTACKS = 1),
+      (ae.RESOURCE_TRANSPORTS = 2),
+      (t.MovementFilterConst = ae),
+      (ae.__class = "MovementFilterConst"));
+    var se = (function () {
       function OutpostConst() {}
       return (
         (OutpostConst.SIEGE_TIME_$LI$ = function () {
@@ -84796,13 +84948,13 @@ and limitations under the License.
         }),
         (OutpostConst.getCapitalDefaultOwnerFor = function (e) {
           switch (e) {
-            case ze.KINGDOM_ID:
+            case Ze.KINGDOM_ID:
               return OutpostConst.CAPITAL_CLASSIC_DEFAULT_OWNER_ID;
-            case tt.KINGDOM_ID:
+            case nt.KINGDOM_ID:
               return OutpostConst.CAPITAL_ICE_DEFAULT_OWNER_ID;
-            case et.KINGDOM_ID:
+            case tt.KINGDOM_ID:
               return OutpostConst.CAPITAL_DESSERT_DEFAULT_OWNER_ID;
-            case at.KINGDOM_ID:
+            case st.KINGDOM_ID:
               return OutpostConst.CAPITAL_VOLCANO_DEFAULT_OWNER_ID;
             default:
               return OutpostConst.CAPITAL_CLASSIC_DEFAULT_OWNER_ID;
@@ -84818,13 +84970,13 @@ and limitations under the License.
         }),
         (OutpostConst.getLaboratoryDefaultOwnerFor = function (e) {
           switch (e) {
-            case ze.KINGDOM_ID:
+            case Ze.KINGDOM_ID:
               return OutpostConst.LABORATORY_CLASSIC_DEFAULT_OWNER_ID;
-            case tt.KINGDOM_ID:
+            case nt.KINGDOM_ID:
               return OutpostConst.LABORATORY_ICE_OWNER_ID;
-            case et.KINGDOM_ID:
+            case tt.KINGDOM_ID:
               return OutpostConst.LABORATORY_DESERT_OWNER_ID;
-            case at.KINGDOM_ID:
+            case st.KINGDOM_ID:
               return OutpostConst.LABORATORY_VOLCANO_OWNER_ID;
             default:
               return OutpostConst.LABORATORY_CLASSIC_DEFAULT_OWNER_ID;
@@ -84841,64 +84993,64 @@ and limitations under the License.
         OutpostConst
       );
     })();
-    ((ae.DUMMY_SIEGE_TIME = 2),
-      (ae.DAMAGED_BUILDING_RATIO = 0.9),
-      (ae.ABANDON_CANCEL_TIME_TEST = 60),
-      (ae.DEFAULT_NAME = ""),
-      (ae.OUTPOST_DEFAULT_OWNER_ID = -300),
-      (ae.OUTPOST_DEFAULT_AREA_ID = -300),
-      (ae.OUTPOST_DEFAULT_LEVEL = 5),
-      (ae.CAPITAL_CLASSIC_DEFAULT_OWNER_ID = -432),
-      (ae.CAPITAL_ICE_DEFAULT_OWNER_ID = -433),
-      (ae.CAPITAL_DESSERT_DEFAULT_OWNER_ID = -434),
-      (ae.CAPITAL_VOLCANO_DEFAULT_OWNER_ID = -435),
-      (ae.CAPITAL_UNSPAWNED_AREA_ID = -301),
-      (ae.CAPITAL_MAP_ICON = "333300"),
-      (ae.CAPITAL_NON_CLASSIC_FOOD_PRODUCERS = 2),
-      (ae.CAPITAL_CLASSIC_FOOD_PRODUCERS = 3),
-      (ae.METROPOL_DEFAULT_OWNER_ID = -440),
-      (ae.METROPOL_UNSPAWNED_AREA_ID = -341),
-      (ae.METROPOL_ALLIANCE_BATTLE_GROUND_MINED_OUT_AREA_ID = -342),
-      (ae.METROPOL_MAP_ICON = "333300"),
-      (ae.METROPOL_FOOD_PRODUCERS = 3),
-      (ae.KINGS_TOWER_DEFAULT_OWNER_ID = -450),
-      (ae.KINGS_TOWER_UNSPAWNED_AREA_ID = -351),
-      (ae.KINGS_TOWER_BONUS = 20),
-      (ae.KINGS_TOWER_DEFAULT_LEVEL = 70),
-      (ae.MONUMENT_DEFAULT_OWNER_ID = -460),
-      (ae.MONUMENT_UNSPAWNED_AREA_ID = -353),
-      (ae.MONUMENT_DEFAULT_LEVEL = 70),
-      (ae.LABORATORY_CLASSIC_DEFAULT_OWNER_ID = -470),
-      (ae.LABORATORY_ICE_OWNER_ID = -471),
-      (ae.LABORATORY_DESERT_OWNER_ID = -472),
-      (ae.LABORATORY_VOLCANO_OWNER_ID = -473),
-      (ae.LABORATORY_UNSPAWNED_AREA_ID = -355),
-      (ae.LABORATORY_DEFAULT_LEVEL = 70),
-      (ae.ALLIANCE_BATTLE_GROUND_DEFAULT_OWNER_ID = -480),
-      (ae.ALLIANCE_BATTLE_GROUND_UNSPAWNED_AREA_ID = -481),
-      (ae.LANDMARK_DEFAULT_LEVEL = 70),
-      (ae.RESOURCE_ISLE_DEFAULT_LEVEL = 70),
-      (t.OutpostConst = ae),
-      (ae.__class = "OutpostConst"));
-    var se = (function () {
+    ((se.DUMMY_SIEGE_TIME = 2),
+      (se.DAMAGED_BUILDING_RATIO = 0.9),
+      (se.ABANDON_CANCEL_TIME_TEST = 60),
+      (se.DEFAULT_NAME = ""),
+      (se.OUTPOST_DEFAULT_OWNER_ID = -300),
+      (se.OUTPOST_DEFAULT_AREA_ID = -300),
+      (se.OUTPOST_DEFAULT_LEVEL = 5),
+      (se.CAPITAL_CLASSIC_DEFAULT_OWNER_ID = -432),
+      (se.CAPITAL_ICE_DEFAULT_OWNER_ID = -433),
+      (se.CAPITAL_DESSERT_DEFAULT_OWNER_ID = -434),
+      (se.CAPITAL_VOLCANO_DEFAULT_OWNER_ID = -435),
+      (se.CAPITAL_UNSPAWNED_AREA_ID = -301),
+      (se.CAPITAL_MAP_ICON = "333300"),
+      (se.CAPITAL_NON_CLASSIC_FOOD_PRODUCERS = 2),
+      (se.CAPITAL_CLASSIC_FOOD_PRODUCERS = 3),
+      (se.METROPOL_DEFAULT_OWNER_ID = -440),
+      (se.METROPOL_UNSPAWNED_AREA_ID = -341),
+      (se.METROPOL_ALLIANCE_BATTLE_GROUND_MINED_OUT_AREA_ID = -342),
+      (se.METROPOL_MAP_ICON = "333300"),
+      (se.METROPOL_FOOD_PRODUCERS = 3),
+      (se.KINGS_TOWER_DEFAULT_OWNER_ID = -450),
+      (se.KINGS_TOWER_UNSPAWNED_AREA_ID = -351),
+      (se.KINGS_TOWER_BONUS = 20),
+      (se.KINGS_TOWER_DEFAULT_LEVEL = 70),
+      (se.MONUMENT_DEFAULT_OWNER_ID = -460),
+      (se.MONUMENT_UNSPAWNED_AREA_ID = -353),
+      (se.MONUMENT_DEFAULT_LEVEL = 70),
+      (se.LABORATORY_CLASSIC_DEFAULT_OWNER_ID = -470),
+      (se.LABORATORY_ICE_OWNER_ID = -471),
+      (se.LABORATORY_DESERT_OWNER_ID = -472),
+      (se.LABORATORY_VOLCANO_OWNER_ID = -473),
+      (se.LABORATORY_UNSPAWNED_AREA_ID = -355),
+      (se.LABORATORY_DEFAULT_LEVEL = 70),
+      (se.ALLIANCE_BATTLE_GROUND_DEFAULT_OWNER_ID = -480),
+      (se.ALLIANCE_BATTLE_GROUND_UNSPAWNED_AREA_ID = -481),
+      (se.LANDMARK_DEFAULT_LEVEL = 70),
+      (se.RESOURCE_ISLE_DEFAULT_LEVEL = 70),
+      (t.OutpostConst = se),
+      (se.__class = "OutpostConst"));
+    var re = (function () {
       return function PackageConst() {};
     })();
-    ((se.BUY_TYPE_EVENT = 0),
-      (se.BUY_TYPE_PRIVATE_OFFER = 1),
-      (se.BUY_TYPE_VIP = 2),
-      (se.BUY_TYPE_SLUM = 3),
-      (se.BUY_TYPE_PRIMEDAY = 4),
-      (se.BUY_TYPE_CRUSADEMAP = 5),
-      (se.BUY_TYPE_GIFT = 6),
-      (se.BUY_TYPE_FUSION = 7),
-      (se.BUY_TYPE_OFFERINGS = 8),
-      (se.BUY_TYPE_GENERAL_SKILLS_RESET_TOKEN = 9),
-      (se.MAX_BUY_PER_CLICK = 1e3),
-      (se.MAX_PLAYER_GIFT_PER_DAY = 50),
-      (se.MAX_PLAYER_GIFT_STORAGE = 30),
-      (t.PackageConst = se),
-      (se.__class = "PackageConst"));
-    var re = (function () {
+    ((re.BUY_TYPE_EVENT = 0),
+      (re.BUY_TYPE_PRIVATE_OFFER = 1),
+      (re.BUY_TYPE_VIP = 2),
+      (re.BUY_TYPE_SLUM = 3),
+      (re.BUY_TYPE_PRIMEDAY = 4),
+      (re.BUY_TYPE_CRUSADEMAP = 5),
+      (re.BUY_TYPE_GIFT = 6),
+      (re.BUY_TYPE_FUSION = 7),
+      (re.BUY_TYPE_OFFERINGS = 8),
+      (re.BUY_TYPE_GENERAL_SKILLS_RESET_TOKEN = 9),
+      (re.MAX_BUY_PER_CLICK = 1e3),
+      (re.MAX_PLAYER_GIFT_PER_DAY = 50),
+      (re.MAX_PLAYER_GIFT_STORAGE = 30),
+      (t.PackageConst = re),
+      (re.__class = "PackageConst"));
+    var oe = (function () {
       function PlayerConst() {}
       return (
         (PlayerConst.NAME_PREFIX_$LI$ = function () {
@@ -85195,9 +85347,9 @@ and limitations under the License.
         }),
         (PlayerConst.isAlien = function (e) {
           return (
-            e === D.BASIC_ALIEN_ID ||
-            e === D.BASIC_RED_ALIEN_ID ||
-            e === D.BASIC_SAMURAI_ALIEN_ID
+            e === b.BASIC_ALIEN_ID ||
+            e === b.BASIC_RED_ALIEN_ID ||
+            e === b.BASIC_SAMURAI_ALIEN_ID
           );
         }),
         (PlayerConst.isLegendaryPlayer = function (e) {
@@ -85212,55 +85364,55 @@ and limitations under the License.
         PlayerConst
       );
     })();
-    ((re.START_XP = 0),
-      (re.START_C1 = 100),
-      (re.START_C2 = 0),
-      (re.START_WOOD = 200),
-      (re.START_STONE = 100),
-      (re.START_FOOD = 0),
-      (re.START_HONOR = 0),
-      (re.START_ACHIEVEMENTPOINTS = 0),
-      (re.MAX_LOGIN_FAILS = 59),
-      (re.MAX_LOGIN_FAIL_RESETTIME = 1800),
-      (re.CASTLE_NAME_MIN_LENGTH = 3),
-      (re.CASTLE_NAME_MAX_LENGTH = 15),
-      (re.OPEN_GATE_COUNT_CAP = 9),
-      (re.WELCOME_GIFT_ID = 0),
-      (re.MAIL_CONFIRMED_ID = 1),
-      (re.CHANGE_CASTLE_NAME_C2 = 2500),
-      (re.NEWSLETTER_CONFIRM_ID = 1),
-      (re.DAILY_FAME_LOSS = 2),
-      (re.MERCENARY_EVENT_MIN_LEVEL = 6),
-      (re.START_LEVEL = 1),
-      (re.LEVEL_CAP = 70),
-      (re.LEGEND_LEVEL_CAP = 950),
-      (re.START_LEGEND_LEVEL = 1),
-      (re.PREMIUM_FLAG_COST_C2 = 4900),
-      (re.MIN_LEVEL_FOR_RECRUITMENT = 2),
-      (re.MIN_LEVEL_FOR_MESSAGES = 2),
-      (re.MIN_LEVEL_FOR_ACTIVITY_CHEST = 2),
-      (re.LEVEL_FOR_CASTLE_NAME = 3),
-      (re.MIN_LEVEL_FOR_MAP = 3),
-      (re.MIN_LEVEL_FOR_MAIL_POPUP = 3),
-      (re.LEVEL_FOR_FACEBOOK_MESSAGE = 3),
-      (re.MIN_LEVEL_FOR_EXPANSION_TREASURE = 6),
-      (re.MIN_LEVEL_FOR_DAILY_REWARD = 6),
-      (re.DAILY_VIP_POINTS_LOSS = 5),
-      (re.BOOKMARKS_MAX_ENTRYS = 50),
-      (re.LOGIN_BONUS_REQUIRED_XP = 1200),
-      (re.LOGIN_BONUS_KEYS = 3),
-      (re.DAYS_BEFORE_FINAL_DELETION = 120),
-      (re.MIN_LEVEL_FOR_INVITE_TEASER = 12),
-      (re.DEFAULT_MAIL = "-1"),
-      (re.RESEND_MAIL_ACCOUNT_VERIFICATION = 0),
-      (re.MAIL_CHANGE_NO_PENDING_STATE = 0),
-      (re.MAIL_CHANGE_STARTED = 1),
-      (re.MAIL_CHANGE_FIRST_EXPIRATION_TIME_STATE = 2),
-      (re.MAIL_CHANGE_SECOND_EXPIRATION_TIME_STATE = 3),
-      (re.MAIL_CHANGE_CANCEL_STARTED = 4),
-      (t.PlayerConst = re),
-      (re.__class = "PlayerConst"));
-    var oe = (function () {
+    ((oe.START_XP = 0),
+      (oe.START_C1 = 100),
+      (oe.START_C2 = 0),
+      (oe.START_WOOD = 200),
+      (oe.START_STONE = 100),
+      (oe.START_FOOD = 0),
+      (oe.START_HONOR = 0),
+      (oe.START_ACHIEVEMENTPOINTS = 0),
+      (oe.MAX_LOGIN_FAILS = 59),
+      (oe.MAX_LOGIN_FAIL_RESETTIME = 1800),
+      (oe.CASTLE_NAME_MIN_LENGTH = 3),
+      (oe.CASTLE_NAME_MAX_LENGTH = 15),
+      (oe.OPEN_GATE_COUNT_CAP = 9),
+      (oe.WELCOME_GIFT_ID = 0),
+      (oe.MAIL_CONFIRMED_ID = 1),
+      (oe.CHANGE_CASTLE_NAME_C2 = 2500),
+      (oe.NEWSLETTER_CONFIRM_ID = 1),
+      (oe.DAILY_FAME_LOSS = 2),
+      (oe.MERCENARY_EVENT_MIN_LEVEL = 6),
+      (oe.START_LEVEL = 1),
+      (oe.LEVEL_CAP = 70),
+      (oe.LEGEND_LEVEL_CAP = 950),
+      (oe.START_LEGEND_LEVEL = 1),
+      (oe.PREMIUM_FLAG_COST_C2 = 4900),
+      (oe.MIN_LEVEL_FOR_RECRUITMENT = 2),
+      (oe.MIN_LEVEL_FOR_MESSAGES = 2),
+      (oe.MIN_LEVEL_FOR_ACTIVITY_CHEST = 2),
+      (oe.LEVEL_FOR_CASTLE_NAME = 3),
+      (oe.MIN_LEVEL_FOR_MAP = 3),
+      (oe.MIN_LEVEL_FOR_MAIL_POPUP = 3),
+      (oe.LEVEL_FOR_FACEBOOK_MESSAGE = 3),
+      (oe.MIN_LEVEL_FOR_EXPANSION_TREASURE = 6),
+      (oe.MIN_LEVEL_FOR_DAILY_REWARD = 6),
+      (oe.DAILY_VIP_POINTS_LOSS = 5),
+      (oe.BOOKMARKS_MAX_ENTRYS = 50),
+      (oe.LOGIN_BONUS_REQUIRED_XP = 1200),
+      (oe.LOGIN_BONUS_KEYS = 3),
+      (oe.DAYS_BEFORE_FINAL_DELETION = 120),
+      (oe.MIN_LEVEL_FOR_INVITE_TEASER = 12),
+      (oe.DEFAULT_MAIL = "-1"),
+      (oe.RESEND_MAIL_ACCOUNT_VERIFICATION = 0),
+      (oe.MAIL_CHANGE_NO_PENDING_STATE = 0),
+      (oe.MAIL_CHANGE_STARTED = 1),
+      (oe.MAIL_CHANGE_FIRST_EXPIRATION_TIME_STATE = 2),
+      (oe.MAIL_CHANGE_SECOND_EXPIRATION_TIME_STATE = 3),
+      (oe.MAIL_CHANGE_CANCEL_STARTED = 4),
+      (t.PlayerConst = oe),
+      (oe.__class = "PlayerConst"));
+    var le = (function () {
       function PointEventConst() {}
       return (
         (PointEventConst.POINTS_FOR_TASK_$LI$ = function () {
@@ -85273,50 +85425,50 @@ and limitations under the License.
         PointEventConst
       );
     })();
-    ((oe.NUMBER_OF_REWARDPACKAGES = 3),
-      (oe.TOTAL_NUMBER_OF_REWARDS = 4),
-      (oe.COLLECT_TAX_PE_TYPE = 1),
-      (oe.SPY_PE_TYPE = 2),
-      (oe.SABOTAGE_DAMAGE_PE_TYPE = 3),
-      (oe.WIN_HONOR_FIGHT_PE_TYPE = 4),
-      (oe.DO_FIRE_DAMAGE_PE_TYPE = 5),
-      (oe.COLLECT_FROM_CITIZEN_PE_TYPE = 6),
-      (oe.COLLECT_FROM_CARRIAGE_PE_TYPE = 7),
-      (oe.OFF_MELEE_UNITS_PE_TYPE = 8),
-      (oe.OFF_RANGE_UNITS_PE_TYPE = 9),
-      (oe.FIND_EQUIPMENT_PE_TYPE = 10),
-      (oe.CRAFT_EQUIPMENT_PE_TYPE = 11),
-      (oe.RESOURCE_TO_PLAYER_PE_TYPE = 12),
-      (oe.COUNT_DUNGEONS_PE_TYPE = 13),
-      (oe.COUNT_DUNGEONS_KINGDOM_PE_TYPE = 14),
-      (oe.POINT_EVENT_FAME_PE_TYPE = 15),
-      (oe.POINT_EVENT_CONQUER_VILLAGES = 16),
-      (oe.POINT_EVENT_SPIN_LUCKY_WHEEL = 17),
-      (oe.POINT_EVENT_BOUNTY_HUNTER = 18),
-      (oe.POINT_EVENT_LUCKY_WHEEL = 19),
-      (oe.POINT_EVENT_NOMAD_INVASION = 20),
-      (oe.POINT_EVENT_MARAUDERS = 21),
-      (oe.POINT_EVENT_TOOLS = 22),
-      (oe.POINT_EVENT_LOOT_RESOURCES = 23),
-      (oe.POINT_EVENT_REVIVE_UNITS = 24),
-      (oe.POINT_EVENT_FACTION_POINTS = 25),
-      (oe.POINT_EVENT_DUNGEONS_ICE = 26),
-      (oe.POINT_EVENT_DUNGEONS_SAND = 27),
-      (oe.POINT_EVENT_SAMURAI_INVASION = 28),
-      (oe.POINT_EVENT_SPENT_C2 = 29),
-      (oe.POINT_EVENT_LUCKY_WHEEL_SALE_DAYS = 30),
-      (oe.NUM_ENTRIES_IN_HIGHSCORE = 8),
-      (oe.OFFSET_IN_HIGHSCORE_LIST = 4),
-      (t.PointEventConst = oe),
-      (oe.__class = "PointEventConst"));
-    var le = (function () {
+    ((le.NUMBER_OF_REWARDPACKAGES = 3),
+      (le.TOTAL_NUMBER_OF_REWARDS = 4),
+      (le.COLLECT_TAX_PE_TYPE = 1),
+      (le.SPY_PE_TYPE = 2),
+      (le.SABOTAGE_DAMAGE_PE_TYPE = 3),
+      (le.WIN_HONOR_FIGHT_PE_TYPE = 4),
+      (le.DO_FIRE_DAMAGE_PE_TYPE = 5),
+      (le.COLLECT_FROM_CITIZEN_PE_TYPE = 6),
+      (le.COLLECT_FROM_CARRIAGE_PE_TYPE = 7),
+      (le.OFF_MELEE_UNITS_PE_TYPE = 8),
+      (le.OFF_RANGE_UNITS_PE_TYPE = 9),
+      (le.FIND_EQUIPMENT_PE_TYPE = 10),
+      (le.CRAFT_EQUIPMENT_PE_TYPE = 11),
+      (le.RESOURCE_TO_PLAYER_PE_TYPE = 12),
+      (le.COUNT_DUNGEONS_PE_TYPE = 13),
+      (le.COUNT_DUNGEONS_KINGDOM_PE_TYPE = 14),
+      (le.POINT_EVENT_FAME_PE_TYPE = 15),
+      (le.POINT_EVENT_CONQUER_VILLAGES = 16),
+      (le.POINT_EVENT_SPIN_LUCKY_WHEEL = 17),
+      (le.POINT_EVENT_BOUNTY_HUNTER = 18),
+      (le.POINT_EVENT_LUCKY_WHEEL = 19),
+      (le.POINT_EVENT_NOMAD_INVASION = 20),
+      (le.POINT_EVENT_MARAUDERS = 21),
+      (le.POINT_EVENT_TOOLS = 22),
+      (le.POINT_EVENT_LOOT_RESOURCES = 23),
+      (le.POINT_EVENT_REVIVE_UNITS = 24),
+      (le.POINT_EVENT_FACTION_POINTS = 25),
+      (le.POINT_EVENT_DUNGEONS_ICE = 26),
+      (le.POINT_EVENT_DUNGEONS_SAND = 27),
+      (le.POINT_EVENT_SAMURAI_INVASION = 28),
+      (le.POINT_EVENT_SPENT_C2 = 29),
+      (le.POINT_EVENT_LUCKY_WHEEL_SALE_DAYS = 30),
+      (le.NUM_ENTRIES_IN_HIGHSCORE = 8),
+      (le.OFFSET_IN_HIGHSCORE_LIST = 4),
+      (t.PointEventConst = le),
+      (le.__class = "PointEventConst"));
+    var ue = (function () {
       return function PopoverConst() {};
     })();
-    ((le.EQUIPMENT_SOLD = 1),
-      (le.GEM_SOLD = 2),
-      (t.PopoverConst = le),
-      (le.__class = "PopoverConst"));
-    var ue = (function () {
+    ((ue.EQUIPMENT_SOLD = 1),
+      (ue.GEM_SOLD = 2),
+      (t.PopoverConst = ue),
+      (ue.__class = "PopoverConst"));
+    var _e = (function () {
       function PopupConst() {}
       return (
         (PopupConst.ALLIANCE_ALIEN_INVASION_POPUPS_$LI$ = function () {
@@ -85456,185 +85608,185 @@ and limitations under the License.
         PopupConst
       );
     })();
-    ((ue.BOUNTYHUNTER = 1),
-      (ue.RANDOMDUNGEON = 2),
-      (ue.ARTIFACT = 3),
-      (ue.QUEST_FINISH = 4),
-      (ue.ACHIEVEMENT_FINISH = 5),
-      (ue.MAIL_VERIFIED = 6),
-      (ue.ALCHEMIST = 7),
-      (ue.MAIN_QUEST = 8),
-      (ue.FACTION_FINISHED = 9),
-      (ue.COLOSSUS_COMPLETE = 11),
-      (ue.CRUSADE_THORNKING_FAILED = 12),
-      (ue.LEVEL_UP = 14),
-      (ue.APRILDUNGEON = 15),
-      (ue.CRUSADE_SEAQUEEN_FAILED = 16),
-      (ue.PRIVATE_OFFER = 18),
-      (ue.TMAP_RELIC_REWARD = 19),
-      (ue.TMAP_RESOURCE_REWARD = 20),
-      (ue.MINE_EXHAUSTED = 21),
-      (ue.POINT_EVENT_FIRST = 22),
-      (ue.POINT_EVENT_REWARD = 23),
-      (ue.POINT_EVENT_END_WITHOUT_REWARD = 24),
-      (ue.LOGIN_LP_INCENTIVE = 25),
-      (ue.BEGGING_KNIGHTS_FIRST = 26),
-      (ue.BEGGING_KNIGHTS_TOPX = 27),
-      (ue.BEGGING_KNIGHTS_REWARD = 28),
-      (ue.BEGGING_KNIGHTS_END_WITHOUT_REWARD = 29),
-      (ue.POINT_EVENT_TOPX = 30),
-      (ue.ISLAND_END_NO_ALLI_PLAYER = 31),
-      (ue.ISLAND_END_ALLI_PLAYER_WIN = 32),
-      (ue.ISLAND_END_ALLI_PLAYER_PARTICIPANT = 33),
-      (ue.ISLAND_END = 262),
-      (ue.CRUSADE_UNDERWOLRD_FAILED = 38),
-      (ue.LUCKY_WHEEL_POINT_EVENT_FIRST = 39),
-      (ue.LUCKY_WHEEL_POINT_EVENT_TOPX = 40),
-      (ue.LUCKY_WHEEL_POINT_EVENT_REWARD = 41),
-      (ue.LUCKY_WHEEL_POINT_EVENT_END_WITHOUT_REWARD = 42),
-      (ue.NOMAD_INVASION_FIRST = 43),
-      (ue.NOMAD_INVASION_TOPX = 44),
-      (ue.NOMAD_INVASION_REWARD = 45),
-      (ue.NOMAD_INVASION_END_WITHOUT_REWARD = 46),
-      (ue.ALLIANCE_ALIEN_INVASION_FIRST_ALLIANCE = 47),
-      (ue.ALLIANCE_ALIEN_INVASION_TOPX_ALLIANCE = 48),
-      (ue.ALLIANCE_ALIEN_INVASION_REWARD_ALLIANCE = 49),
-      (ue.ALLIANCE_ALIEN_INVASION_END_WITHOUT_REWARD = 50),
-      (ue.ALLIANCE_ALIEN_INVASION_FIRST_PLAYER = 51),
-      (ue.ALLIANCE_ALIEN_INVASION_TOPX_PLAYER = 52),
-      (ue.ALLIANCE_ALIEN_INVASION_REWARD_PLAYER = 53),
-      (ue.ALLIANCE_ALIEN_INVASION_END_WITHOUT_REWARD_PLAYER = 65),
-      (ue.ALLIANCE_ALIEN_INVASION_ALLIANCE_REWARDS_UNLOCKED = 254),
-      (ue.MIGHT_REWARD = 54),
-      (ue.ALLIANCE_NOMAD_INVASION_FIRST_ALLIANCE = 55),
-      (ue.ALLIANCE_NOMAD_INVASION_TOPX_ALLIANCE = 56),
-      (ue.ALLIANCE_NOMAD_INVASION_REWARD_ALLIANCE = 57),
-      (ue.ALLIANCE_NOMAD_INVASION_END_WITHOUT_REWARD = 58),
-      (ue.ALLIANCE_NOMAD_INVASION_FIRST_PLAYER = 59),
-      (ue.ALLIANCE_NOMAD_INVASION_TOPX_PLAYER = 60),
-      (ue.ALLIANCE_NOMAD_INVASION_REWARD_PLAYER = 61),
-      (ue.ALLIANCE_NOMAD_INVASION_END_WITHOUT_REWARD_PLAYER = 66),
-      (ue.ALLIANCE_NOMAD_INVASION_ALLIANCE_REWARDS_UNLOCKED = 255),
-      (ue.NOMAD_INVASION_ALLIANCE_CAMP_REWARD_POPUP = 118),
-      (ue.NEW_DAILY_QUEST_REWARD = 62),
-      (ue.MORALE_BOOSTER_REWARD = 63),
-      (ue.FACTION_POINT_EVENT_FIRST = 67),
-      (ue.FACTION_POINT_EVENT_TOPX = 68),
-      (ue.FACTION_POINT_EVENT_REWARD = 69),
-      (ue.FACTION_POINT_EVENT_END_WITHOUT_REWARD = 70),
-      (ue.PERMANENT_SLOT_REWARD = 71),
-      (ue.SAMURAI_INVASION_FIRST_ALLIANCE = 72),
-      (ue.SAMURAI_INVASION_TOPX_ALLIANCE = 73),
-      (ue.SAMURAI_INVASION_REWARD_ALLIANCE = 74),
-      (ue.SAMURAI_INVASION_END_WITHOUT_REWARD_ALLIANCE = 75),
-      (ue.SAMURAI_INVASION_FIRST_PLAYER = 76),
-      (ue.SAMURAI_INVASION_TOPX_PLAYER = 77),
-      (ue.SAMURAI_INVASION_REWARD_PLAYER = 78),
-      (ue.SAMURAI_INVASION_END_WITHOUT_REWARD_PLAYER = 79),
-      (ue.SAMURAI_INVASION_ALLIANCE_REWARDS_UNLOCKED = 256),
-      (ue.LONGTERM_POINT_EVENT_FIRST = 82),
-      (ue.LONGTERM_POINT_EVENT_TOPX = 83),
-      (ue.LONGTERM_POINT_EVENT_REWARD = 84),
-      (ue.LONGTERM_POINT_EVENT_END_WITHOUT_REWARD = 85),
-      (ue.ALLIANCE_TOURNAMENT_FIRST = 86),
-      (ue.ALLIANCE_TOURNAMENT_TOPX = 87),
-      (ue.ALLIANCE_TOURNAMENT_REWARD = 88),
-      (ue.ALLIANCE_TOURNAMENT_END_WITHOUT_REWARD = 89),
-      (ue.RESEARCH_FINISHED = 90),
-      (ue.FACTION_INVASION_FIRST_ALLIANCE = 91),
-      (ue.FACTION_INVASION_TOPX_ALLIANCE = 92),
-      (ue.FACTION_INVASION_REWARD_ALLIANCE = 93),
-      (ue.FACTION_INVASION_END_WITHOUT_REWARD = 94),
-      (ue.FACTION_INVASION_FIRST_PLAYER = 95),
-      (ue.FACTION_INVASION_TOPX_PLAYER = 96),
-      (ue.FACTION_INVASION_REWARD_PLAYER = 97),
-      (ue.FACTION_INVASION_END_WITHOUT_REWARD_PLAYER = 98),
-      (ue.FACTION_INVASION_ALLIANCE_REWARDS_UNLOCKED = 257),
-      (ue.TERMS_AND_CONDITIONS_CHANGE = 100),
-      (ue.LONGTERM_POINT_EVENT_HARD_MODE = 101),
-      (ue.CRAFTING_MATERIALS = 108),
-      (ue.ALLIANCE_RED_ALIEN_INVASION_FIRST_ALLIANCE = 109),
-      (ue.ALLIANCE_RED_ALIEN_INVASION_TOPX_ALLIANCE = 110),
-      (ue.ALLIANCE_RED_ALIEN_INVASION_REWARD_ALLIANCE = 111),
-      (ue.ALLIANCE_RED_ALIEN_INVASION_END_WITHOUT_REWARD = 112),
-      (ue.ALLIANCE_RED_ALIEN_INVASION_FIRST_PLAYER = 113),
-      (ue.ALLIANCE_RED_ALIEN_INVASION_TOPX_PLAYER = 114),
-      (ue.ALLIANCE_RED_ALIEN_INVASION_REWARD_PLAYER = 115),
-      (ue.ALLIANCE_RED_ALIEN_INVASION_END_WITHOUT_REWARD_PLAYER = 116),
-      (ue.ALLIANCE_RED_ALIEN_INVASION_ALLIANCE_REWARDS_UNLOCKED = 258),
-      (ue.RETURN_INVENTORY_TO_THE_OLD_OWNER = 117),
-      (ue.POPUP_FIRST_ALLIANCE = 0),
-      (ue.POPUP_TOPX_ALLIANCE = 1),
-      (ue.POPUP_REWARD_ALLIANCE = 2),
-      (ue.POPUP_END_WITHOUT_REWARD = 3),
-      (ue.POPUP_FIRST_PLAYER = 4),
-      (ue.POPUP_TOPX_PLAYER = 5),
-      (ue.POPUP_REWARD_PLAYER = 6),
-      (ue.POPUP_END_WITHOUT_REWARD_PLAYER = 7),
-      (ue.POPUP_ALLIANCE_REWARDS_UNLOCKED = 8),
-      (ue.ALLIANCE_CAMP_REWARD_POPUP_INDEX = 9),
-      (ue.POPUP_GENERIC_INDEX = 10),
-      (ue.TIME_LIMITED_CAMPAIGN_REWARD_POPUP = 119),
-      (ue.EXPIRED_EQUIPMENTS = 120),
-      (ue.NEWSLETTER_CONFIRMED = 221),
-      (ue.NEWSLETTER_CONFIRMED_AGAIN = 222),
-      (ue.EMAIL_SEND_SUCCESS = 223),
-      (ue.EMAIL_SEND_FAIL = 224),
-      (ue.SAMURAI_ALIEN_INVASION_FIRST_ALLIANCE = 225),
-      (ue.SAMURAI_ALIEN_INVASION_TOPX_ALLIANCE = 226),
-      (ue.SAMURAI_ALIEN_INVASION_REWARD_ALLIANCE = 227),
-      (ue.SAMURAI_ALIEN_INVASION_END_WITHOUT_REWARD_ALLIANCE = 228),
-      (ue.SAMURAI_ALIEN_INVASION_FIRST_PLAYER = 229),
-      (ue.SAMURAI_ALIEN_INVASION_TOPX_PLAYER = 230),
-      (ue.SAMURAI_ALIEN_INVASION_REWARD_PLAYER = 231),
-      (ue.SAMURAI_ALIEN_INVASION_END_WITHOUT_REWARD_PLAYER = 232),
-      (ue.SAMURAI_ALIEN_INVASION_ALLIANCE_REWARDS_UNLOCKED = 259),
-      (ue.SEASON_DAILY_MEDAL_PAYOUT = 233),
-      (ue.SEASON_PROMOTION = 234),
-      (ue.SEASON_EVENT_END = 235),
-      (ue.SEASON_END = 236),
-      (ue.SEASON_PASS_ACTIVATION = 261),
-      (ue.COLLECTOR_REWARD_PLAYER = 237),
-      (ue.TEMP_SERVER_ENTER = 238),
-      (ue.SUBSCRPTION_LOYALTY_PAYOUT = 239),
-      (ue.DAIMYO_ALLIANCE_CONTRACT_COMPLETED = 240),
-      (ue.DAIMYO_REWARD = 241),
-      (ue.ALLIANCE_BATTLE_GROUND_ENTER = 242),
-      (ue.ALLIANCE_BATTLE_GROUND_EVENT_END_REWARD = 243),
-      (ue.LUCKY_WHEEL_SALE_DAYS_POINT_EVENT_FIRST = 244),
-      (ue.LUCKY_WHEEL_SALE_DAYS_POINT_EVENT_TOPX = 245),
-      (ue.LUCKY_WHEEL_SALE_DAYS_POINT_EVENT_REWARD = 246),
-      (ue.LUCKY_WHEEL_SALE_DAYS_POINT_EVENT_END_WITHOUT_REWARD = 247),
-      (ue.ALLIANCE_BATTLE_GROUND_TOWER_PLAYER_REVIVE = 250),
-      (ue.ALLIANCE_BATTLE_GROUND_TOWER_PLAYER_RE_LINK = 251),
-      (ue.STATELESS_OFFER_REWARD_PAYOUT = 252),
-      (ue.BUILDINGS_TRANSFERRED_TO_AREA_INVENTORY = 253),
-      (ue.TEMP_SERVER_EVENT_END_REWARD = 260),
-      (ue.RECE_WELCOME_MESSAGE = 271),
-      (ue.VERIFICATION_SENT_TO_OLD_MAIL = 272),
-      (ue.MAIL_CHANGE_SUCCESS = 273),
-      (ue.PLAYER_NAME_EMAIL_ALIAS_POPUP = 274),
-      (ue.MAIL_CANCEL_SUCCESS = 275),
-      (ue.MAIL_CHANGE_REQUEST_WITHOUT_VERIFICATION = 276),
-      (ue.TEASER = 277),
-      (ue.DONATION_EVENT_END_REWARD = 278),
-      (ue.US_ZIP_CODE = 279),
-      (ue.GACHA_EVENT_REWARD = 280),
-      (ue.GACHA_EVENT_END_WITHOUT_REWARD = 281),
-      (ue.GACHA_EVENT_END_REWARD = 282),
-      (ue.GENERIC_REWARDS_GAINED = 283),
-      (ue.ALLIANCE_MOBILIZATION_REWARD_ALLIANCE = 284),
-      (ue.ALLIANCE_MOBILIZATION_FIRST_ALLIANCE = 285),
-      (ue.ALLIANCE_MOBILIZATION_TOPX_ALLIANCE = 286),
-      (ue.ALLIANCE_MOBILIZATION_END_WITHOUT_REWARD_ALLIANCE = 287),
-      (ue.ALLIANCE_MOBILIZATION_ALLIANCE_REWARDS_UNLOCKED = 288),
-      (ue.ALLIANCE_MOBILIZATION_END_GENERIC = 289),
-      (ue.ALLIANCE_RAID_END_GENERIC = 290),
-      (ue.ALLIANCE_RAID_THRESHOLD_REWARD = 291),
-      (ue.ALLIANCE_RAID_BOSS_LEVEL_DEFEAT = 292),
-      (t.PopupConst = ue),
-      (ue.__class = "PopupConst"));
-    var _e = (function () {
+    ((_e.BOUNTYHUNTER = 1),
+      (_e.RANDOMDUNGEON = 2),
+      (_e.ARTIFACT = 3),
+      (_e.QUEST_FINISH = 4),
+      (_e.ACHIEVEMENT_FINISH = 5),
+      (_e.MAIL_VERIFIED = 6),
+      (_e.ALCHEMIST = 7),
+      (_e.MAIN_QUEST = 8),
+      (_e.FACTION_FINISHED = 9),
+      (_e.COLOSSUS_COMPLETE = 11),
+      (_e.CRUSADE_THORNKING_FAILED = 12),
+      (_e.LEVEL_UP = 14),
+      (_e.APRILDUNGEON = 15),
+      (_e.CRUSADE_SEAQUEEN_FAILED = 16),
+      (_e.PRIVATE_OFFER = 18),
+      (_e.TMAP_RELIC_REWARD = 19),
+      (_e.TMAP_RESOURCE_REWARD = 20),
+      (_e.MINE_EXHAUSTED = 21),
+      (_e.POINT_EVENT_FIRST = 22),
+      (_e.POINT_EVENT_REWARD = 23),
+      (_e.POINT_EVENT_END_WITHOUT_REWARD = 24),
+      (_e.LOGIN_LP_INCENTIVE = 25),
+      (_e.BEGGING_KNIGHTS_FIRST = 26),
+      (_e.BEGGING_KNIGHTS_TOPX = 27),
+      (_e.BEGGING_KNIGHTS_REWARD = 28),
+      (_e.BEGGING_KNIGHTS_END_WITHOUT_REWARD = 29),
+      (_e.POINT_EVENT_TOPX = 30),
+      (_e.ISLAND_END_NO_ALLI_PLAYER = 31),
+      (_e.ISLAND_END_ALLI_PLAYER_WIN = 32),
+      (_e.ISLAND_END_ALLI_PLAYER_PARTICIPANT = 33),
+      (_e.ISLAND_END = 262),
+      (_e.CRUSADE_UNDERWOLRD_FAILED = 38),
+      (_e.LUCKY_WHEEL_POINT_EVENT_FIRST = 39),
+      (_e.LUCKY_WHEEL_POINT_EVENT_TOPX = 40),
+      (_e.LUCKY_WHEEL_POINT_EVENT_REWARD = 41),
+      (_e.LUCKY_WHEEL_POINT_EVENT_END_WITHOUT_REWARD = 42),
+      (_e.NOMAD_INVASION_FIRST = 43),
+      (_e.NOMAD_INVASION_TOPX = 44),
+      (_e.NOMAD_INVASION_REWARD = 45),
+      (_e.NOMAD_INVASION_END_WITHOUT_REWARD = 46),
+      (_e.ALLIANCE_ALIEN_INVASION_FIRST_ALLIANCE = 47),
+      (_e.ALLIANCE_ALIEN_INVASION_TOPX_ALLIANCE = 48),
+      (_e.ALLIANCE_ALIEN_INVASION_REWARD_ALLIANCE = 49),
+      (_e.ALLIANCE_ALIEN_INVASION_END_WITHOUT_REWARD = 50),
+      (_e.ALLIANCE_ALIEN_INVASION_FIRST_PLAYER = 51),
+      (_e.ALLIANCE_ALIEN_INVASION_TOPX_PLAYER = 52),
+      (_e.ALLIANCE_ALIEN_INVASION_REWARD_PLAYER = 53),
+      (_e.ALLIANCE_ALIEN_INVASION_END_WITHOUT_REWARD_PLAYER = 65),
+      (_e.ALLIANCE_ALIEN_INVASION_ALLIANCE_REWARDS_UNLOCKED = 254),
+      (_e.MIGHT_REWARD = 54),
+      (_e.ALLIANCE_NOMAD_INVASION_FIRST_ALLIANCE = 55),
+      (_e.ALLIANCE_NOMAD_INVASION_TOPX_ALLIANCE = 56),
+      (_e.ALLIANCE_NOMAD_INVASION_REWARD_ALLIANCE = 57),
+      (_e.ALLIANCE_NOMAD_INVASION_END_WITHOUT_REWARD = 58),
+      (_e.ALLIANCE_NOMAD_INVASION_FIRST_PLAYER = 59),
+      (_e.ALLIANCE_NOMAD_INVASION_TOPX_PLAYER = 60),
+      (_e.ALLIANCE_NOMAD_INVASION_REWARD_PLAYER = 61),
+      (_e.ALLIANCE_NOMAD_INVASION_END_WITHOUT_REWARD_PLAYER = 66),
+      (_e.ALLIANCE_NOMAD_INVASION_ALLIANCE_REWARDS_UNLOCKED = 255),
+      (_e.NOMAD_INVASION_ALLIANCE_CAMP_REWARD_POPUP = 118),
+      (_e.NEW_DAILY_QUEST_REWARD = 62),
+      (_e.MORALE_BOOSTER_REWARD = 63),
+      (_e.FACTION_POINT_EVENT_FIRST = 67),
+      (_e.FACTION_POINT_EVENT_TOPX = 68),
+      (_e.FACTION_POINT_EVENT_REWARD = 69),
+      (_e.FACTION_POINT_EVENT_END_WITHOUT_REWARD = 70),
+      (_e.PERMANENT_SLOT_REWARD = 71),
+      (_e.SAMURAI_INVASION_FIRST_ALLIANCE = 72),
+      (_e.SAMURAI_INVASION_TOPX_ALLIANCE = 73),
+      (_e.SAMURAI_INVASION_REWARD_ALLIANCE = 74),
+      (_e.SAMURAI_INVASION_END_WITHOUT_REWARD_ALLIANCE = 75),
+      (_e.SAMURAI_INVASION_FIRST_PLAYER = 76),
+      (_e.SAMURAI_INVASION_TOPX_PLAYER = 77),
+      (_e.SAMURAI_INVASION_REWARD_PLAYER = 78),
+      (_e.SAMURAI_INVASION_END_WITHOUT_REWARD_PLAYER = 79),
+      (_e.SAMURAI_INVASION_ALLIANCE_REWARDS_UNLOCKED = 256),
+      (_e.LONGTERM_POINT_EVENT_FIRST = 82),
+      (_e.LONGTERM_POINT_EVENT_TOPX = 83),
+      (_e.LONGTERM_POINT_EVENT_REWARD = 84),
+      (_e.LONGTERM_POINT_EVENT_END_WITHOUT_REWARD = 85),
+      (_e.ALLIANCE_TOURNAMENT_FIRST = 86),
+      (_e.ALLIANCE_TOURNAMENT_TOPX = 87),
+      (_e.ALLIANCE_TOURNAMENT_REWARD = 88),
+      (_e.ALLIANCE_TOURNAMENT_END_WITHOUT_REWARD = 89),
+      (_e.RESEARCH_FINISHED = 90),
+      (_e.FACTION_INVASION_FIRST_ALLIANCE = 91),
+      (_e.FACTION_INVASION_TOPX_ALLIANCE = 92),
+      (_e.FACTION_INVASION_REWARD_ALLIANCE = 93),
+      (_e.FACTION_INVASION_END_WITHOUT_REWARD = 94),
+      (_e.FACTION_INVASION_FIRST_PLAYER = 95),
+      (_e.FACTION_INVASION_TOPX_PLAYER = 96),
+      (_e.FACTION_INVASION_REWARD_PLAYER = 97),
+      (_e.FACTION_INVASION_END_WITHOUT_REWARD_PLAYER = 98),
+      (_e.FACTION_INVASION_ALLIANCE_REWARDS_UNLOCKED = 257),
+      (_e.TERMS_AND_CONDITIONS_CHANGE = 100),
+      (_e.LONGTERM_POINT_EVENT_HARD_MODE = 101),
+      (_e.CRAFTING_MATERIALS = 108),
+      (_e.ALLIANCE_RED_ALIEN_INVASION_FIRST_ALLIANCE = 109),
+      (_e.ALLIANCE_RED_ALIEN_INVASION_TOPX_ALLIANCE = 110),
+      (_e.ALLIANCE_RED_ALIEN_INVASION_REWARD_ALLIANCE = 111),
+      (_e.ALLIANCE_RED_ALIEN_INVASION_END_WITHOUT_REWARD = 112),
+      (_e.ALLIANCE_RED_ALIEN_INVASION_FIRST_PLAYER = 113),
+      (_e.ALLIANCE_RED_ALIEN_INVASION_TOPX_PLAYER = 114),
+      (_e.ALLIANCE_RED_ALIEN_INVASION_REWARD_PLAYER = 115),
+      (_e.ALLIANCE_RED_ALIEN_INVASION_END_WITHOUT_REWARD_PLAYER = 116),
+      (_e.ALLIANCE_RED_ALIEN_INVASION_ALLIANCE_REWARDS_UNLOCKED = 258),
+      (_e.RETURN_INVENTORY_TO_THE_OLD_OWNER = 117),
+      (_e.POPUP_FIRST_ALLIANCE = 0),
+      (_e.POPUP_TOPX_ALLIANCE = 1),
+      (_e.POPUP_REWARD_ALLIANCE = 2),
+      (_e.POPUP_END_WITHOUT_REWARD = 3),
+      (_e.POPUP_FIRST_PLAYER = 4),
+      (_e.POPUP_TOPX_PLAYER = 5),
+      (_e.POPUP_REWARD_PLAYER = 6),
+      (_e.POPUP_END_WITHOUT_REWARD_PLAYER = 7),
+      (_e.POPUP_ALLIANCE_REWARDS_UNLOCKED = 8),
+      (_e.ALLIANCE_CAMP_REWARD_POPUP_INDEX = 9),
+      (_e.POPUP_GENERIC_INDEX = 10),
+      (_e.TIME_LIMITED_CAMPAIGN_REWARD_POPUP = 119),
+      (_e.EXPIRED_EQUIPMENTS = 120),
+      (_e.NEWSLETTER_CONFIRMED = 221),
+      (_e.NEWSLETTER_CONFIRMED_AGAIN = 222),
+      (_e.EMAIL_SEND_SUCCESS = 223),
+      (_e.EMAIL_SEND_FAIL = 224),
+      (_e.SAMURAI_ALIEN_INVASION_FIRST_ALLIANCE = 225),
+      (_e.SAMURAI_ALIEN_INVASION_TOPX_ALLIANCE = 226),
+      (_e.SAMURAI_ALIEN_INVASION_REWARD_ALLIANCE = 227),
+      (_e.SAMURAI_ALIEN_INVASION_END_WITHOUT_REWARD_ALLIANCE = 228),
+      (_e.SAMURAI_ALIEN_INVASION_FIRST_PLAYER = 229),
+      (_e.SAMURAI_ALIEN_INVASION_TOPX_PLAYER = 230),
+      (_e.SAMURAI_ALIEN_INVASION_REWARD_PLAYER = 231),
+      (_e.SAMURAI_ALIEN_INVASION_END_WITHOUT_REWARD_PLAYER = 232),
+      (_e.SAMURAI_ALIEN_INVASION_ALLIANCE_REWARDS_UNLOCKED = 259),
+      (_e.SEASON_DAILY_MEDAL_PAYOUT = 233),
+      (_e.SEASON_PROMOTION = 234),
+      (_e.SEASON_EVENT_END = 235),
+      (_e.SEASON_END = 236),
+      (_e.SEASON_PASS_ACTIVATION = 261),
+      (_e.COLLECTOR_REWARD_PLAYER = 237),
+      (_e.TEMP_SERVER_ENTER = 238),
+      (_e.SUBSCRPTION_LOYALTY_PAYOUT = 239),
+      (_e.DAIMYO_ALLIANCE_CONTRACT_COMPLETED = 240),
+      (_e.DAIMYO_REWARD = 241),
+      (_e.ALLIANCE_BATTLE_GROUND_ENTER = 242),
+      (_e.ALLIANCE_BATTLE_GROUND_EVENT_END_REWARD = 243),
+      (_e.LUCKY_WHEEL_SALE_DAYS_POINT_EVENT_FIRST = 244),
+      (_e.LUCKY_WHEEL_SALE_DAYS_POINT_EVENT_TOPX = 245),
+      (_e.LUCKY_WHEEL_SALE_DAYS_POINT_EVENT_REWARD = 246),
+      (_e.LUCKY_WHEEL_SALE_DAYS_POINT_EVENT_END_WITHOUT_REWARD = 247),
+      (_e.ALLIANCE_BATTLE_GROUND_TOWER_PLAYER_REVIVE = 250),
+      (_e.ALLIANCE_BATTLE_GROUND_TOWER_PLAYER_RE_LINK = 251),
+      (_e.STATELESS_OFFER_REWARD_PAYOUT = 252),
+      (_e.BUILDINGS_TRANSFERRED_TO_AREA_INVENTORY = 253),
+      (_e.TEMP_SERVER_EVENT_END_REWARD = 260),
+      (_e.RECE_WELCOME_MESSAGE = 271),
+      (_e.VERIFICATION_SENT_TO_OLD_MAIL = 272),
+      (_e.MAIL_CHANGE_SUCCESS = 273),
+      (_e.PLAYER_NAME_EMAIL_ALIAS_POPUP = 274),
+      (_e.MAIL_CANCEL_SUCCESS = 275),
+      (_e.MAIL_CHANGE_REQUEST_WITHOUT_VERIFICATION = 276),
+      (_e.TEASER = 277),
+      (_e.DONATION_EVENT_END_REWARD = 278),
+      (_e.US_ZIP_CODE = 279),
+      (_e.GACHA_EVENT_REWARD = 280),
+      (_e.GACHA_EVENT_END_WITHOUT_REWARD = 281),
+      (_e.GACHA_EVENT_END_REWARD = 282),
+      (_e.GENERIC_REWARDS_GAINED = 283),
+      (_e.ALLIANCE_MOBILIZATION_REWARD_ALLIANCE = 284),
+      (_e.ALLIANCE_MOBILIZATION_FIRST_ALLIANCE = 285),
+      (_e.ALLIANCE_MOBILIZATION_TOPX_ALLIANCE = 286),
+      (_e.ALLIANCE_MOBILIZATION_END_WITHOUT_REWARD_ALLIANCE = 287),
+      (_e.ALLIANCE_MOBILIZATION_ALLIANCE_REWARDS_UNLOCKED = 288),
+      (_e.ALLIANCE_MOBILIZATION_END_GENERIC = 289),
+      (_e.ALLIANCE_RAID_END_GENERIC = 290),
+      (_e.ALLIANCE_RAID_THRESHOLD_REWARD = 291),
+      (_e.ALLIANCE_RAID_BOSS_LEVEL_DEFEAT = 292),
+      (t.PopupConst = _e),
+      (_e.__class = "PopupConst"));
+    var ce = (function () {
       function PremiumConst() {}
       return (
         (PremiumConst.FACTOR_C1_$LI$ = function () {
@@ -85668,37 +85820,37 @@ and limitations under the License.
         PremiumConst
       );
     })();
-    ((_e.EVENT_SPECIALOFFER = 0),
-      (_e.EVENT_SPECIALINGAMEOFFER = 1),
-      (_e.EVENT_REGISTERBONUS = 2),
-      (_e.PREMIUM_ACCOUNT_GOLD = 2),
-      (_e.PREMIUM_ACCOUNT_SILVER = 1),
-      (_e.PREMIUM_ACCOUNT_BRONZE = 0),
-      (_e.PREMIUM_ACCOUNT_TYPE_0 = 50),
-      (_e.PREMIUM_ACCOUNT_TYPE_1 = 51),
-      (_e.PREMIUM_ACCOUNT_TYPE_2 = 52),
-      (_e.VIP_FLAG_OPTION_DEFAULT = !0),
-      (t.PremiumConst = _e),
-      (_e.__class = "PremiumConst"));
-    var ce = (function () {
+    ((ce.EVENT_SPECIALOFFER = 0),
+      (ce.EVENT_SPECIALINGAMEOFFER = 1),
+      (ce.EVENT_REGISTERBONUS = 2),
+      (ce.PREMIUM_ACCOUNT_GOLD = 2),
+      (ce.PREMIUM_ACCOUNT_SILVER = 1),
+      (ce.PREMIUM_ACCOUNT_BRONZE = 0),
+      (ce.PREMIUM_ACCOUNT_TYPE_0 = 50),
+      (ce.PREMIUM_ACCOUNT_TYPE_1 = 51),
+      (ce.PREMIUM_ACCOUNT_TYPE_2 = 52),
+      (ce.VIP_FLAG_OPTION_DEFAULT = !0),
+      (t.PremiumConst = ce),
+      (ce.__class = "PremiumConst"));
+    var me = (function () {
       return function PrivateOfferHelpTextMessageConst() {};
     })();
-    ((ce.DEFAULT_MESSAGE = 0),
-      (ce.ATTACK_SUCCEEDED = 1),
-      (ce.DEFENSE_SUCCEEDED = 2),
-      (ce.SPY_SUCCEEDED = 3),
-      (ce.GOT_SUCCESSFULLY_SABOTAGED = 4),
-      (ce.DAILY_MAIL_1 = 5),
-      (ce.DAILY_MAIL_2 = 6),
-      (ce.DAILY_MAIL_3 = 7),
-      (ce.DAILY_MAIL_4 = 8),
-      (ce.DAILY_MAIL_5 = 9),
-      (ce.DAILY_MAIL_6 = 10),
-      (ce.DAILY_MAIL_7 = 11),
-      (ce.DAILY_MAIL_8 = 12),
-      (t.PrivateOfferHelpTextMessageConst = ce),
-      (ce.__class = "PrivateOfferHelpTextMessageConst"));
-    var me = (function () {
+    ((me.DEFAULT_MESSAGE = 0),
+      (me.ATTACK_SUCCEEDED = 1),
+      (me.DEFENSE_SUCCEEDED = 2),
+      (me.SPY_SUCCEEDED = 3),
+      (me.GOT_SUCCESSFULLY_SABOTAGED = 4),
+      (me.DAILY_MAIL_1 = 5),
+      (me.DAILY_MAIL_2 = 6),
+      (me.DAILY_MAIL_3 = 7),
+      (me.DAILY_MAIL_4 = 8),
+      (me.DAILY_MAIL_5 = 9),
+      (me.DAILY_MAIL_6 = 10),
+      (me.DAILY_MAIL_7 = 11),
+      (me.DAILY_MAIL_8 = 12),
+      (t.PrivateOfferHelpTextMessageConst = me),
+      (me.__class = "PrivateOfferHelpTextMessageConst"));
+    var de = (function () {
       function PrivatePrimeTimeConst() {}
       return (
         (PrivatePrimeTimeConst.DEFAULT_SKIN_ID_$LI$ = function () {
@@ -85738,20 +85890,20 @@ and limitations under the License.
         PrivatePrimeTimeConst
       );
     })();
-    ((me.USE_NOVELITY_ALGORITHM_SKIN_ID = 1),
-      (me.START_SKIN_ID = 10),
-      (t.PrivatePrimeTimeConst = me),
-      (me.__class = "PrivatePrimeTimeConst"));
-    var de = (function () {
+    ((de.USE_NOVELITY_ALGORITHM_SKIN_ID = 1),
+      (de.START_SKIN_ID = 10),
+      (t.PrivatePrimeTimeConst = de),
+      (de.__class = "PrivatePrimeTimeConst"));
+    var he = (function () {
       return function ProductionPackageConst() {};
     })();
-    ((de.MIN_RECRUITMENT_TIME_PER_UNIT = 15),
-      (de.MIN_RECRUITMENT_TIME_PER_UNIT_IN_FACTION_KINGDOM = 10),
-      (de.PRODUCTION_SLOT_SIZE = 5),
-      (de.MAX_AMOUNT_OF_BOOST_APPLICATIONS_PER_PACKAGE = 3),
-      (t.ProductionPackageConst = de),
-      (de.__class = "ProductionPackageConst"));
-    var he = (function () {
+    ((he.MIN_RECRUITMENT_TIME_PER_UNIT = 15),
+      (he.MIN_RECRUITMENT_TIME_PER_UNIT_IN_FACTION_KINGDOM = 10),
+      (he.PRODUCTION_SLOT_SIZE = 5),
+      (he.MAX_AMOUNT_OF_BOOST_APPLICATIONS_PER_PACKAGE = 3),
+      (t.ProductionPackageConst = he),
+      (he.__class = "ProductionPackageConst"));
+    var pe = (function () {
       function PushConstants() {}
       return (
         (PushConstants.PUSHCATEGORY_CONSTRUCTION_$LI$ = function () {
@@ -85806,64 +85958,64 @@ and limitations under the License.
         PushConstants
       );
     })();
-    ((he.SOUND_DEFAULT = "default"),
-      (he.SOUND_NO_SOUND = ""),
-      (he.PUSHTYPE_ID_INCOMING_ATTACK = 1e3),
-      (he.PUSHTYPE_ID_ESPIONAGE_DONE = 1001),
-      (he.PUSHTYPE_ID_ATTACK_DONE = 1002),
-      (he.PUSHTYPE_ID_MARKET_MOVEMENT_DONE = 1003),
-      (he.PUSHTYPE_ID_LOST_OUTPOST = 1004),
-      (he.PUSHTYPE_ID_LOST_VILLAGE = 1005),
-      (he.PUSHTYPE_ID_MESSAGE_RECEIVED = 1007),
-      (he.PUSHTYPE_ID_ALLIANCE_INCOMING_ATTACK = 1008),
-      (he.PUSHTYPE_ID_BACK_ONLINE = 1009),
-      (he.PUSHTYPE_ID_UPDATE_AVAILABLE = 1010),
-      (he.PUSHTYPE_ID_PRIVATE_PRIMETIME = 1039),
-      (he.PUSHTYPE_ID_GLOBAL_PRIMETIME = 1040),
-      (he.PUSHTYPE_ID_UPGRADE = 2e3),
-      (he.PUSHTYPE_ID_DESTRUCTION = 2001),
-      (he.PUSHTYPE_ID_BUILDUP = 2002),
-      (he.PUSHTYPE_ID_TAXCOLLECT = 2004),
-      (he.PUSHTYPE_ID_DESERTINGUNITS = 2005),
-      (he.PUSHTYPE_ID_UNITSREADY = 2006),
-      (he.PUSHTYPE_ID_TOOLSBUILT = 2007),
-      (he.PUSHTYPE_ID_RESEARCHCOMPLETED = 2008),
-      (he.PUSHTYPE_ID_STORAGEFULL = 2009),
-      (he.PUSHTYPE_ID_RETENTION_1 = 2010),
-      (he.PUSHTYPE_ID_RETENTION_2 = 2011),
-      (he.PUSHTYPE_ID_RETENTION_3 = 2012),
-      (he.PUSHTYPE_ID_RETENTION_4 = 2013),
-      (he.PUSHTYPE_ID_RETENTION_5 = 2014),
-      (he.PUSHTYPE_ID_RETENTION_6 = 2015),
-      (he.PUSHTYPE_ID_RETENTION_7 = 2016),
-      (he.PUSHTYPE_ID_RETENTION_8 = 2017),
-      (he.PUSHTYPE_ID_RETENTION_9 = 2018),
-      (he.PUSHTYPE_ID_RETENTION_10 = 2019),
-      (he.PUSHTYPE_ID_RETENTION_11 = 2020),
-      (he.PUSHTYPE_ID_INACTIVITY_WARNING = 2021),
-      (he.PUSHTYPE_ID_FINISHED_REPAIR = 2022),
-      (he.PUSHTYPE_ID_MERCENARY_MISSION_COMPLETE = 2023),
-      (he.PUSHTYPE_ID_MERCENARY_MISSION_AVAILABLE = 2024),
-      (he.PUSHTYPE_ID_ACTIVITY_CHEST_1 = 2051),
-      (he.PUSHTYPE_ID_ACTIVITY_CHEST_2 = 2052),
-      (he.PUSHTYPE_ID_ACTIVITY_CHEST_3 = 2053),
-      (he.PUSHTYPE_ID_ACTIVITY_CHEST_4 = 2054),
-      (he.PUSHTYPE_ID_ACTIVITY_CHEST_5 = 2055),
-      (he.PUSHTYPE_ID_ACTIVITY_CHEST_6 = 2056),
-      (he.PUSHTYPE_ID_LOGIN_BONUS_1 = 2061),
-      (he.PUSHTYPE_ID_LOGIN_BONUS_2 = 2062),
-      (he.PUSHTYPE_ID_LOGIN_BONUS_3 = 2063),
-      (he.PUSHTYPE_ID_LOGIN_BONUS_4 = 2064),
-      (he.PUSHTYPE_ID_LOGIN_BONUS_5 = 2065),
-      (he.PUSHTYPE_ID_LOGIN_BONUS_6 = 2066),
-      (he.PUSHTYPE_ID_LOGIN_BONUS_7 = 2067),
-      (he.PUSHTYPE_ID_INACTIVITY = 2071),
-      (he.PUSHTYPE_ID_RESEARCH_COMPLETE = 2072),
-      (he.PUSHCATEGORY_NO_CATEGORY = 0),
-      (he.PUSHCATEGORY_MILITARY = 1),
-      (t.PushConstants = he),
-      (he.__class = "PushConstants"));
-    var pe = (function () {
+    ((pe.SOUND_DEFAULT = "default"),
+      (pe.SOUND_NO_SOUND = ""),
+      (pe.PUSHTYPE_ID_INCOMING_ATTACK = 1e3),
+      (pe.PUSHTYPE_ID_ESPIONAGE_DONE = 1001),
+      (pe.PUSHTYPE_ID_ATTACK_DONE = 1002),
+      (pe.PUSHTYPE_ID_MARKET_MOVEMENT_DONE = 1003),
+      (pe.PUSHTYPE_ID_LOST_OUTPOST = 1004),
+      (pe.PUSHTYPE_ID_LOST_VILLAGE = 1005),
+      (pe.PUSHTYPE_ID_MESSAGE_RECEIVED = 1007),
+      (pe.PUSHTYPE_ID_ALLIANCE_INCOMING_ATTACK = 1008),
+      (pe.PUSHTYPE_ID_BACK_ONLINE = 1009),
+      (pe.PUSHTYPE_ID_UPDATE_AVAILABLE = 1010),
+      (pe.PUSHTYPE_ID_PRIVATE_PRIMETIME = 1039),
+      (pe.PUSHTYPE_ID_GLOBAL_PRIMETIME = 1040),
+      (pe.PUSHTYPE_ID_UPGRADE = 2e3),
+      (pe.PUSHTYPE_ID_DESTRUCTION = 2001),
+      (pe.PUSHTYPE_ID_BUILDUP = 2002),
+      (pe.PUSHTYPE_ID_TAXCOLLECT = 2004),
+      (pe.PUSHTYPE_ID_DESERTINGUNITS = 2005),
+      (pe.PUSHTYPE_ID_UNITSREADY = 2006),
+      (pe.PUSHTYPE_ID_TOOLSBUILT = 2007),
+      (pe.PUSHTYPE_ID_RESEARCHCOMPLETED = 2008),
+      (pe.PUSHTYPE_ID_STORAGEFULL = 2009),
+      (pe.PUSHTYPE_ID_RETENTION_1 = 2010),
+      (pe.PUSHTYPE_ID_RETENTION_2 = 2011),
+      (pe.PUSHTYPE_ID_RETENTION_3 = 2012),
+      (pe.PUSHTYPE_ID_RETENTION_4 = 2013),
+      (pe.PUSHTYPE_ID_RETENTION_5 = 2014),
+      (pe.PUSHTYPE_ID_RETENTION_6 = 2015),
+      (pe.PUSHTYPE_ID_RETENTION_7 = 2016),
+      (pe.PUSHTYPE_ID_RETENTION_8 = 2017),
+      (pe.PUSHTYPE_ID_RETENTION_9 = 2018),
+      (pe.PUSHTYPE_ID_RETENTION_10 = 2019),
+      (pe.PUSHTYPE_ID_RETENTION_11 = 2020),
+      (pe.PUSHTYPE_ID_INACTIVITY_WARNING = 2021),
+      (pe.PUSHTYPE_ID_FINISHED_REPAIR = 2022),
+      (pe.PUSHTYPE_ID_MERCENARY_MISSION_COMPLETE = 2023),
+      (pe.PUSHTYPE_ID_MERCENARY_MISSION_AVAILABLE = 2024),
+      (pe.PUSHTYPE_ID_ACTIVITY_CHEST_1 = 2051),
+      (pe.PUSHTYPE_ID_ACTIVITY_CHEST_2 = 2052),
+      (pe.PUSHTYPE_ID_ACTIVITY_CHEST_3 = 2053),
+      (pe.PUSHTYPE_ID_ACTIVITY_CHEST_4 = 2054),
+      (pe.PUSHTYPE_ID_ACTIVITY_CHEST_5 = 2055),
+      (pe.PUSHTYPE_ID_ACTIVITY_CHEST_6 = 2056),
+      (pe.PUSHTYPE_ID_LOGIN_BONUS_1 = 2061),
+      (pe.PUSHTYPE_ID_LOGIN_BONUS_2 = 2062),
+      (pe.PUSHTYPE_ID_LOGIN_BONUS_3 = 2063),
+      (pe.PUSHTYPE_ID_LOGIN_BONUS_4 = 2064),
+      (pe.PUSHTYPE_ID_LOGIN_BONUS_5 = 2065),
+      (pe.PUSHTYPE_ID_LOGIN_BONUS_6 = 2066),
+      (pe.PUSHTYPE_ID_LOGIN_BONUS_7 = 2067),
+      (pe.PUSHTYPE_ID_INACTIVITY = 2071),
+      (pe.PUSHTYPE_ID_RESEARCH_COMPLETE = 2072),
+      (pe.PUSHCATEGORY_NO_CATEGORY = 0),
+      (pe.PUSHCATEGORY_MILITARY = 1),
+      (t.PushConstants = pe),
+      (pe.__class = "PushConstants"));
+    var ge = (function () {
       function RecruitmentConst() {}
       return (
         (RecruitmentConst.getSkipCostC2 = function (e, t, n) {
@@ -85872,24 +86024,24 @@ and limitations under the License.
         RecruitmentConst
       );
     })();
-    ((pe.FINISH_FIRST_STACK_MODE_ID = 0),
-      (pe.FINISH_STACKS_EQUALLY_MODE_ID = 1),
-      (pe.SLOT_IS_PERMANENTLY_UNLOCKED = -1),
-      (pe.SLOT_IS_LOCKED = 0),
-      (pe.PRODUCTION_SLOT_TYPE_NAME = "production"),
-      (pe.QUEUE_SLOT_TYPE_NAME = "queue"),
-      (pe.INVALID_SLOT_ID = -1),
-      (pe.NO_SOURCE_ID = -1),
-      (pe.CONTAINS_SOLDIERS = !0),
-      (pe.CONTAINS_TOOLS = !1),
-      (pe.MAXIMUM_PREMIUM_TOOL_STACK_SIZE = 500),
-      (pe.CHEATED_DURATION_PER_PACKAGE = 5),
-      (pe.END_TIMESTAMP_IN_THE_PAST = -1),
-      (pe.START_TIMESTAMP_IN_THE_PAST = -1),
-      (pe.MINIMUM_STACK_SIZE_FOR_ALLIANCE_HELP = 5),
-      (t.RecruitmentConst = pe),
-      (pe.__class = "RecruitmentConst"));
-    var ge = (function () {
+    ((ge.FINISH_FIRST_STACK_MODE_ID = 0),
+      (ge.FINISH_STACKS_EQUALLY_MODE_ID = 1),
+      (ge.SLOT_IS_PERMANENTLY_UNLOCKED = -1),
+      (ge.SLOT_IS_LOCKED = 0),
+      (ge.PRODUCTION_SLOT_TYPE_NAME = "production"),
+      (ge.QUEUE_SLOT_TYPE_NAME = "queue"),
+      (ge.INVALID_SLOT_ID = -1),
+      (ge.NO_SOURCE_ID = -1),
+      (ge.CONTAINS_SOLDIERS = !0),
+      (ge.CONTAINS_TOOLS = !1),
+      (ge.MAXIMUM_PREMIUM_TOOL_STACK_SIZE = 500),
+      (ge.CHEATED_DURATION_PER_PACKAGE = 5),
+      (ge.END_TIMESTAMP_IN_THE_PAST = -1),
+      (ge.START_TIMESTAMP_IN_THE_PAST = -1),
+      (ge.MINIMUM_STACK_SIZE_FOR_ALLIANCE_HELP = 5),
+      (t.RecruitmentConst = ge),
+      (ge.__class = "RecruitmentConst"));
+    var Ee = (function () {
       function RelicItemConst() {}
       return (
         (RelicItemConst.calculateRelicItemMightValue = function (e) {
@@ -85910,11 +86062,11 @@ and limitations under the License.
         RelicItemConst
       );
     })();
-    ((ge.INSERT_RELIC_GEM_C1_COST = 95e3),
-      (ge.EXTRACT_RELIC_GEM_RELIC_FRAGMENT_COST = 2e3),
-      (t.RelicItemConst = ge),
-      (ge.__class = "RelicItemConst"));
-    var Ee = (function () {
+    ((Ee.INSERT_RELIC_GEM_C1_COST = 95e3),
+      (Ee.EXTRACT_RELIC_GEM_RELIC_FRAGMENT_COST = 2e3),
+      (t.RelicItemConst = Ee),
+      (Ee.__class = "RelicItemConst"));
+    var Ce = (function () {
       function RelocationConst() {}
       return (
         (RelocationConst.RELOCATION_DURATION_$LI$ = function () {
@@ -85979,32 +86131,32 @@ and limitations under the License.
         RelocationConst
       );
     })();
-    ((Ee.MIN_RELOCATION_LEVEL = 6),
-      (t.RelocationConst = Ee),
-      (Ee.__class = "RelocationConst"));
-    var Ce = (function () {
+    ((Ce.MIN_RELOCATION_LEVEL = 6),
+      (t.RelocationConst = Ce),
+      (Ce.__class = "RelocationConst"));
+    var fe = (function () {
       function ResearchConst() {}
       return (
         (ResearchConst.getFastCompleteCostC2 = function (e, t) {
           return (
-            0 | Math.ceil(((1 * e) / 60) * f.getInstantCostC2PerMinuteFor(t))
+            0 | Math.ceil(((1 * e) / 60) * T.getInstantCostC2PerMinuteFor(t))
           );
         }),
         (ResearchConst.RESOURCE_TYPES_TO_MODIFY_$LI$ = function () {
           return (
             null == ResearchConst.RESOURCE_TYPES_TO_MODIFY &&
               (ResearchConst.RESOURCE_TYPES_TO_MODIFY = [
-                g.FOOD,
-                g.WOOD,
-                g.STONE,
-                g.COAL,
-                g.OIL,
-                g.GLASS,
-                g.IRON,
-                g.AQUAMARINE,
-                g.MEAD,
-                g.HONEY,
-                g.BEEF,
+                E.FOOD,
+                E.WOOD,
+                E.STONE,
+                E.COAL,
+                E.OIL,
+                E.GLASS,
+                E.IRON,
+                E.AQUAMARINE,
+                E.MEAD,
+                E.HONEY,
+                E.BEEF,
               ]),
             ResearchConst.RESOURCE_TYPES_TO_MODIFY
           );
@@ -86012,8 +86164,8 @@ and limitations under the License.
         ResearchConst
       );
     })();
-    ((t.ResearchConst = Ce), (Ce.__class = "ResearchConst"));
-    var fe = (function () {
+    ((t.ResearchConst = fe), (fe.__class = "ResearchConst"));
+    var Te = (function () {
       function ResourceCartConst() {}
       return (
         (ResourceCartConst.CHARGETIME_$LI$ = function () {
@@ -86026,10 +86178,10 @@ and limitations under the License.
         ResourceCartConst
       );
     })();
-    ((fe.MIN_LEVEL = 5),
-      (t.ResourceCartConst = fe),
-      (fe.__class = "ResourceCartConst"));
-    var Te = (function () {
+    ((Te.MIN_LEVEL = 5),
+      (t.ResourceCartConst = Te),
+      (Te.__class = "ResourceCartConst"));
+    var Se = (function () {
       function ResourceConst() {}
       return (
         (ResourceConst.RESOURCE_FACTORS_$LI$ = function () {
@@ -86064,53 +86216,53 @@ and limitations under the License.
         ResourceConst
       );
     })();
-    ((Te.PRODUCTION_INTERVAL = 3600),
-      (Te.NO_RIOT = 0),
-      (Te.RIOT_INCREASE = 5),
-      (Te.PRICE_FOR_PACKAGE = 1),
-      (Te.PRICE_FOR_BUILDING = 2),
-      (Te.WOOD_FACTOR = 0.25),
-      (Te.STONE_FACTOR = 0.22),
-      (Te.FOOD_FACTOR = 0.19),
-      (Te.COAL_FACTOR = 0.41),
-      (Te.OIL_FACTOR = 0.57),
-      (Te.GLASS_FACTOR = 0.79),
-      (Te.IRON_FACTOR = 1.5),
-      (Te.AQUAMARINE_FACTOR = 1e3),
-      (Te.MEAD_FACTOR = 0.25),
-      (Te.HONEY_FACTOR = 0.19),
-      (Te.BEEF_FACTOR = 0.25),
-      (Te.ONE_CLICK_FACTOR = 1.12),
-      (Te.MEAD_HOHEY_UNLOCK_PLAYER_LEGEND_LEVEL = 650),
-      (Te.BEEF_UNLOCK_PLAYER_LEGEND_LEVEL = 650),
-      (Te.MIN_LEVEL_FOR_RESOURCE_TRADER_BUTTON_FOR_PACKAGES = 70),
-      (t.ResourceConst = Te),
-      (Te.__class = "ResourceConst"));
-    var Se = (function () {
+    ((Se.PRODUCTION_INTERVAL = 3600),
+      (Se.NO_RIOT = 0),
+      (Se.RIOT_INCREASE = 5),
+      (Se.PRICE_FOR_PACKAGE = 1),
+      (Se.PRICE_FOR_BUILDING = 2),
+      (Se.WOOD_FACTOR = 0.25),
+      (Se.STONE_FACTOR = 0.22),
+      (Se.FOOD_FACTOR = 0.19),
+      (Se.COAL_FACTOR = 0.41),
+      (Se.OIL_FACTOR = 0.57),
+      (Se.GLASS_FACTOR = 0.79),
+      (Se.IRON_FACTOR = 1.5),
+      (Se.AQUAMARINE_FACTOR = 1e3),
+      (Se.MEAD_FACTOR = 0.25),
+      (Se.HONEY_FACTOR = 0.19),
+      (Se.BEEF_FACTOR = 0.25),
+      (Se.ONE_CLICK_FACTOR = 1.12),
+      (Se.MEAD_HOHEY_UNLOCK_PLAYER_LEGEND_LEVEL = 650),
+      (Se.BEEF_UNLOCK_PLAYER_LEGEND_LEVEL = 650),
+      (Se.MIN_LEVEL_FOR_RESOURCE_TRADER_BUTTON_FOR_PACKAGES = 70),
+      (t.ResourceConst = Se),
+      (Se.__class = "ResourceConst"));
+    var ye = (function () {
       return function RewardConst() {};
     })();
-    ((Se.PLAYER = 0),
-      (Se.ALLIANCE = 1),
-      (Se.ALLIANCE_MEMBER = 2),
-      (Se.DECO_GRANT_TYPE_NORMAL = 0),
-      (Se.DECO_GRANT_TYPE_GLOBAL = 1),
-      (Se.DECO_GRANT_TYPE_AREA_SPECIFIC = 2),
-      (Se.OFFER_ID_FOR_C2_INVITER_REWARD = 2209),
-      (t.RewardConst = Se),
-      (Se.__class = "RewardConst"));
-    var ye = (function () {
+    ((ye.PLAYER = 0),
+      (ye.ALLIANCE = 1),
+      (ye.ALLIANCE_MEMBER = 2),
+      (ye.DECO_GRANT_TYPE_NORMAL = 0),
+      (ye.DECO_GRANT_TYPE_GLOBAL = 1),
+      (ye.DECO_GRANT_TYPE_AREA_SPECIFIC = 2),
+      (ye.OFFER_ID_FOR_C2_INVITER_REWARD = 2209),
+      (t.RewardConst = ye),
+      (ye.__class = "RewardConst"));
+    var Ie = (function () {
       function SceatSkillConst() {}
       return (
         (SceatSkillConst.getFastCompleteCostC2 = function (e, t) {
           return (
-            0 | Math.ceil(((1 * e) / 60) * f.getInstantCostC2PerMinuteFor(t))
+            0 | Math.ceil(((1 * e) / 60) * T.getInstantCostC2PerMinuteFor(t))
           );
         }),
         SceatSkillConst
       );
     })();
-    ((t.SceatSkillConst = ye), (ye.__class = "SceatSkillConst"));
-    var Ie = (function () {
+    ((t.SceatSkillConst = Ie), (Ie.__class = "SceatSkillConst"));
+    var ve = (function () {
       function SeasonConst() {}
       return (
         (SeasonConst.calculateMaxPromotion = function (e) {
@@ -86137,58 +86289,58 @@ and limitations under the License.
         SeasonConst
       );
     })();
-    ((Ie.GOLD_MEDAL_ID = 1),
-      (Ie.SILVER_MEDAL_ID = 2),
-      (Ie.BRONZE_MEDAL_ID = 3),
-      (Ie.PASS_TYPE_SEASON = 1),
-      (Ie.PASS_TYPE_EVENT_END = 2),
-      (Ie.PASS_TYPE_PROMOTION = 3),
-      (Ie.MAX_POINTS_PER_DAY = 1e3),
-      (Ie.POINTS_PER_PROMOTION = 2e3),
-      (t.SeasonConst = Ie),
-      (Ie.__class = "SeasonConst"));
-    var ve = (function () {
+    ((ve.GOLD_MEDAL_ID = 1),
+      (ve.SILVER_MEDAL_ID = 2),
+      (ve.BRONZE_MEDAL_ID = 3),
+      (ve.PASS_TYPE_SEASON = 1),
+      (ve.PASS_TYPE_EVENT_END = 2),
+      (ve.PASS_TYPE_PROMOTION = 3),
+      (ve.MAX_POINTS_PER_DAY = 1e3),
+      (ve.POINTS_PER_PROMOTION = 2e3),
+      (t.SeasonConst = ve),
+      (ve.__class = "SeasonConst"));
+    var Ae = (function () {
       return function ShadowUnitConst() {};
     })();
-    ((ve.DEFAULT_AREA_ID = -333),
-      (ve.DEFAULT_OWNER_ID = -333),
-      (ve.SHADOW_LORDS_ID = -333),
-      (ve.DEFAULT_NAME = "-333"),
-      (t.ShadowUnitConst = ve),
-      (ve.__class = "ShadowUnitConst"));
-    var Ae = (function () {
+    ((Ae.DEFAULT_AREA_ID = -333),
+      (Ae.DEFAULT_OWNER_ID = -333),
+      (Ae.SHADOW_LORDS_ID = -333),
+      (Ae.DEFAULT_NAME = "-333"),
+      (t.ShadowUnitConst = Ae),
+      (Ae.__class = "ShadowUnitConst"));
+    var Oe = (function () {
       return function SharedCastleDefense(e) {
         ((this.leftSide = new Array(e)),
           (this.middleSide = new Array(e)),
           (this.rightSide = new Array(e)));
       };
     })();
-    ((t.SharedCastleDefense = Ae), (Ae.__class = "SharedCastleDefense"));
-    var Oe = (function () {
+    ((t.SharedCastleDefense = Oe), (Oe.__class = "SharedCastleDefense"));
+    var Le = (function () {
       return function ShoppingCartConst() {};
     })();
-    ((Oe.DEFAULT_SKIN = 0),
-      (Oe.OPTIONS_PER_GROUP = 6),
-      (Oe.TOTAL_OPTIONS_AMOUNT = 18),
-      (Oe.SHOPPING_CART_SIZE = 9),
-      (Oe.SHOPPING_CART_GROUP_SIZE = 3),
-      (Oe.SHOPPING_CART_CATEGORY_SIZE = 3),
-      (Oe.DEFAULT_AMOUNT_BUYABLE = 3),
-      (Oe.LIFE_TIME_GROUP_AMOUNT = 4),
-      (Oe.TOTAL_OPTIONS_PER_TYPE = 12),
-      (t.ShoppingCartConst = Oe),
-      (Oe.__class = "ShoppingCartConst"));
-    var Le = (function () {
+    ((Le.DEFAULT_SKIN = 0),
+      (Le.OPTIONS_PER_GROUP = 6),
+      (Le.TOTAL_OPTIONS_AMOUNT = 18),
+      (Le.SHOPPING_CART_SIZE = 9),
+      (Le.SHOPPING_CART_GROUP_SIZE = 3),
+      (Le.SHOPPING_CART_CATEGORY_SIZE = 3),
+      (Le.DEFAULT_AMOUNT_BUYABLE = 3),
+      (Le.LIFE_TIME_GROUP_AMOUNT = 4),
+      (Le.TOTAL_OPTIONS_PER_TYPE = 12),
+      (t.ShoppingCartConst = Le),
+      (Le.__class = "ShoppingCartConst"));
+    var De = (function () {
       return function SplitRunConst() {};
     })();
-    ((Le.SKIP_GROUP_PARAM = "inSkipGroup"),
-      (Le.BUY_LEVEL_TEST_NAME = "buyLevel"),
-      (Le.BUY_LEVEL_TEST_PARAM = "inBuyLevelGroup"),
-      (Le.MIN_LEVEL_TO_BUY_LEVEL = 10),
-      (Le.MAX_LEVEL_TO_BUY_LEVEL = 69),
-      (t.SplitRunConst = Le),
-      (Le.__class = "SplitRunConst"));
-    var De = (function () {
+    ((De.SKIP_GROUP_PARAM = "inSkipGroup"),
+      (De.BUY_LEVEL_TEST_NAME = "buyLevel"),
+      (De.BUY_LEVEL_TEST_PARAM = "inBuyLevelGroup"),
+      (De.MIN_LEVEL_TO_BUY_LEVEL = 10),
+      (De.MAX_LEVEL_TO_BUY_LEVEL = 69),
+      (t.SplitRunConst = De),
+      (De.__class = "SplitRunConst"));
+    var be = (function () {
       function SpyConst() {}
       return (
         (SpyConst.SPY_VALIDITY_$LI$ = function () {
@@ -86294,60 +86446,60 @@ and limitations under the License.
         SpyConst
       );
     })();
-    ((De.SPY_QUEST_ID = 2147),
-      (De.TRAVELSPEED_SABOTAGE = 50),
-      (De.TRAVELSPEED_SPY = 450),
-      (De.MAX_GUARD = 180),
-      (De.MAX_SPY = 15),
-      (De.MAX_DEPLOYABLE_PLAGUEMONKS = 20),
-      (De.MAX_OWNABLE_PLAGUEMONKS = 200),
-      (De.MIN_RISK_SPY_PLAYER = 5),
-      (De.MIN_RISK_SPY_DUNGEON = 0),
-      (De.MAX_RISK_SPY = 95),
-      (De.MIN_RISK_SABOTAGE = 10),
-      (De.MAX_RISK_SABOTAGE = 90),
-      (De.MIN_ACCURACY = 50),
-      (De.MAX_ACCURACY = 100),
-      (De.MIN_DAMAGE = 10),
-      (De.MAX_DAMAGE = 50),
-      (De.PLAGUEMONK_OWNER_ID = -334),
-      (De.PLAGUEMONK_DISTANCE_TO_TARGET = 10),
-      (De.DAMAGE_PER_BUILDING = 10),
-      (De.DAMAGE_PER_SPY = 0.02),
-      (De.QUEST_ID_DEFENSE = 0),
-      (De.QUEST_ID_ECO = 1),
-      (De.MAX_DELTA_LEVEL_SPY = 50),
-      (De.MIN_LEVEL_SPY_ALL = 50),
-      (De.SABTOAGE_PROTECTION_THRESHOLD = 12),
-      (t.SpyConst = De),
-      (De.__class = "SpyConst"));
-    var be = (function () {
+    ((be.SPY_QUEST_ID = 2147),
+      (be.TRAVELSPEED_SABOTAGE = 50),
+      (be.TRAVELSPEED_SPY = 450),
+      (be.MAX_GUARD = 180),
+      (be.MAX_SPY = 15),
+      (be.MAX_DEPLOYABLE_PLAGUEMONKS = 20),
+      (be.MAX_OWNABLE_PLAGUEMONKS = 200),
+      (be.MIN_RISK_SPY_PLAYER = 5),
+      (be.MIN_RISK_SPY_DUNGEON = 0),
+      (be.MAX_RISK_SPY = 95),
+      (be.MIN_RISK_SABOTAGE = 10),
+      (be.MAX_RISK_SABOTAGE = 90),
+      (be.MIN_ACCURACY = 50),
+      (be.MAX_ACCURACY = 100),
+      (be.MIN_DAMAGE = 10),
+      (be.MAX_DAMAGE = 50),
+      (be.PLAGUEMONK_OWNER_ID = -334),
+      (be.PLAGUEMONK_DISTANCE_TO_TARGET = 10),
+      (be.DAMAGE_PER_BUILDING = 10),
+      (be.DAMAGE_PER_SPY = 0.02),
+      (be.QUEST_ID_DEFENSE = 0),
+      (be.QUEST_ID_ECO = 1),
+      (be.MAX_DELTA_LEVEL_SPY = 50),
+      (be.MIN_LEVEL_SPY_ALL = 50),
+      (be.SABTOAGE_PROTECTION_THRESHOLD = 12),
+      (t.SpyConst = be),
+      (be.__class = "SpyConst"));
+    var Re = (function () {
       return function StatisticsConst() {};
     })();
-    ((be.CONTRIBUTION_TO_ALLIANCE_INFLUENCE = 1),
-      (be.CITY_STATES_CONQUERED = 2),
-      (be.CAPITALS_ATTACKED = 3),
-      (be.INFLUENCE_FROM_CITY_STATES = 4),
-      (be.INFLUENCE_FROM_ENEMY_CASTLES = 5),
-      (be.INFLUENCE_FROM_ENEMY_CAPITALS = 6),
-      (be.CONTRIBUTION_TO_ALLIANCE_TOWER_POINTS = 7),
-      (be.ALLIANCE_TOWERS_DEFEATED = 8),
-      (be.ALLIANCE_TOWERS_DEFENDED = 9),
-      (be.ALLIANCE_CASTLES_DEFENDED = 10),
-      (be.TOWER_EFFECT_BUFFS_ACTIVATED = 11),
-      (be.TOWER_EFFECT_BUFFS_PURCHASED = 12),
-      (be.SUPPORT_TROOPS_SENT_TO_ALLIANCE_TOWERS = 13),
-      (be.RESOURCE_TOWERS_DEFEATED = 14),
-      (be.AQUAMARINE_TOTAL = 15),
-      (be.AQUAMARINE_RESOURCE_ISLE = 16),
-      (be.AQUAMARINE_STORM_FORTRESS = 17),
-      (be.AQUAMARINE_PVP = 18),
-      (be.AQUAMARINE_SPENT = 19),
-      (be.AQUAMARINE_LOST_PVP = 20),
-      (be.AQUAMARINE_FIRST_POINTS_TIMESTAMP = 21),
-      (t.StatisticsConst = be),
-      (be.__class = "StatisticsConst"));
-    var Re = (function () {
+    ((Re.CONTRIBUTION_TO_ALLIANCE_INFLUENCE = 1),
+      (Re.CITY_STATES_CONQUERED = 2),
+      (Re.CAPITALS_ATTACKED = 3),
+      (Re.INFLUENCE_FROM_CITY_STATES = 4),
+      (Re.INFLUENCE_FROM_ENEMY_CASTLES = 5),
+      (Re.INFLUENCE_FROM_ENEMY_CAPITALS = 6),
+      (Re.CONTRIBUTION_TO_ALLIANCE_TOWER_POINTS = 7),
+      (Re.ALLIANCE_TOWERS_DEFEATED = 8),
+      (Re.ALLIANCE_TOWERS_DEFENDED = 9),
+      (Re.ALLIANCE_CASTLES_DEFENDED = 10),
+      (Re.TOWER_EFFECT_BUFFS_ACTIVATED = 11),
+      (Re.TOWER_EFFECT_BUFFS_PURCHASED = 12),
+      (Re.SUPPORT_TROOPS_SENT_TO_ALLIANCE_TOWERS = 13),
+      (Re.RESOURCE_TOWERS_DEFEATED = 14),
+      (Re.AQUAMARINE_TOTAL = 15),
+      (Re.AQUAMARINE_RESOURCE_ISLE = 16),
+      (Re.AQUAMARINE_STORM_FORTRESS = 17),
+      (Re.AQUAMARINE_PVP = 18),
+      (Re.AQUAMARINE_SPENT = 19),
+      (Re.AQUAMARINE_LOST_PVP = 20),
+      (Re.AQUAMARINE_FIRST_POINTS_TIMESTAMP = 21),
+      (t.StatisticsConst = Re),
+      (Re.__class = "StatisticsConst"));
+    var Ne = (function () {
       function SubscriptionConst() {}
       return (
         (SubscriptionConst.PLAYER_TYPE_PACKAGES_$LI$ = function () {
@@ -86356,6 +86508,7 @@ and limitations under the License.
               (SubscriptionConst.PLAYER_TYPE_PACKAGES = [
                 SubscriptionConst.PLAYER_SUBSCRIPTION_PACKAGE_TYPE_ID,
                 SubscriptionConst.PLAYER_SUBSCRIPTION_PREMIUM_PACKAGE_TYPE_ID,
+                SubscriptionConst.PLAYER_SUBSCRIPTION_BARON_ADVISOR_PACKAGE_TYPE_ID,
               ]),
             SubscriptionConst.PLAYER_TYPE_PACKAGES
           );
@@ -86363,20 +86516,21 @@ and limitations under the License.
         SubscriptionConst
       );
     })();
-    ((Re.PLAYER_SUBSCRIPTION_PACKAGE_TYPE_ID = 1),
-      (Re.ALLIANCE_SUBSCRIPTION_PACKAGE_TYPE_ID = 2),
-      (Re.PLAYER_SUBSCRIPTION_PREMIUM_PACKAGE_TYPE_ID = 3),
-      (t.SubscriptionConst = Re),
-      (Re.__class = "SubscriptionConst"));
-    var Ne = (function () {
+    ((Ne.PLAYER_SUBSCRIPTION_PACKAGE_TYPE_ID = 1),
+      (Ne.ALLIANCE_SUBSCRIPTION_PACKAGE_TYPE_ID = 2),
+      (Ne.PLAYER_SUBSCRIPTION_PREMIUM_PACKAGE_TYPE_ID = 3),
+      (Ne.PLAYER_SUBSCRIPTION_BARON_ADVISOR_PACKAGE_TYPE_ID = 4),
+      (t.SubscriptionConst = Ne),
+      (Ne.__class = "SubscriptionConst"));
+    var Be = (function () {
       return function SurveyConst() {};
     })();
-    ((Ne.MAX_ANSWER_LENGTH = 1e3),
-      (Ne.QUESTION_TYPE_TEXT = 0),
-      (Ne.QUESTION_TYPE_RADIO = 1),
-      (Ne.QUESTION_TYPE_CHECKBOX = 2),
-      (t.SurveyConst = Ne),
-      (Ne.__class = "SurveyConst"));
+    ((Be.MAX_ANSWER_LENGTH = 1e3),
+      (Be.QUESTION_TYPE_TEXT = 0),
+      (Be.QUESTION_TYPE_RADIO = 1),
+      (Be.QUESTION_TYPE_CHECKBOX = 2),
+      (t.SurveyConst = Be),
+      (Be.__class = "SurveyConst"));
     var Pe = (function () {
       function TaxConst() {}
       return (
@@ -86421,11 +86575,11 @@ and limitations under the License.
         (TaxConst.getCollectorC2Costs = function (e, t, n, i, a) {
           return 5 === e &&
             (i ||
-              t === _e.PREMIUM_ACCOUNT_SILVER ||
-              t === _e.PREMIUM_ACCOUNT_GOLD ||
+              t === ce.PREMIUM_ACCOUNT_SILVER ||
+              t === ce.PREMIUM_ACCOUNT_GOLD ||
               n)
             ? 0
-            : 6 !== e || (!a && t !== _e.PREMIUM_ACCOUNT_GOLD)
+            : 6 !== e || (!a && t !== ce.PREMIUM_ACCOUNT_GOLD)
               ? TaxConst.START_COST_C2_$LI$()[e]
               : 0;
         }),
@@ -86441,7 +86595,7 @@ and limitations under the License.
         (TaxConst.applyCollectionBoosts = function (e, t, n, i) {
           var a = 1;
           return (
-            t && (a += d.TAX_BRIBE_BOOST),
+            t && (a += h.TAX_BRIBE_BOOST),
             (e *= a += i / 100),
             (e *= n),
             Math.round(e)
@@ -86459,8 +86613,8 @@ and limitations under the License.
           var i = TaxConst.START_COST_C2_$LI$()[e];
           return (
             (5 === e || 6 === e) &&
-              t > _e.PREMIUM_ACCOUNT_BRONZE &&
-              ((5 !== e && t !== _e.PREMIUM_ACCOUNT_GOLD) || (i = 0)),
+              t > ce.PREMIUM_ACCOUNT_BRONZE &&
+              ((5 !== e && t !== ce.PREMIUM_ACCOUNT_GOLD) || (i = 0)),
             n && 5 === e && (i = 0),
             i
           );
@@ -86469,37 +86623,37 @@ and limitations under the License.
       );
     })();
     ((t.TaxConst = Pe), (Pe.__class = "TaxConst"));
-    var Be = (function () {
+    var Me = (function () {
       return function TempServerConst() {};
     })();
-    ((Be.NORMAL_SERVER_EVENT_JOIN_LEVEL = 70),
-      (Be.TEMP_SERVER_EVENT_JOIN_LEVEL = 11),
-      (Be.HIGHSCORE_COLLECTOR = "collector"),
-      (Be.HIGHSCORE_MIGHT = "might"),
-      (Be.HIGHSCORE_RANK_SWAP = "rankSwap"),
-      (t.TempServerConst = Be),
-      (Be.__class = "TempServerConst"));
-    var Me = (function () {
+    ((Me.NORMAL_SERVER_EVENT_JOIN_LEVEL = 70),
+      (Me.TEMP_SERVER_EVENT_JOIN_LEVEL = 11),
+      (Me.HIGHSCORE_COLLECTOR = "collector"),
+      (Me.HIGHSCORE_MIGHT = "might"),
+      (Me.HIGHSCORE_RANK_SWAP = "rankSwap"),
+      (t.TempServerConst = Me),
+      (Me.__class = "TempServerConst"));
+    var Ue = (function () {
       return function ThirdPartyAuthConst() {};
     })();
-    ((Me.PLATFORM_APPLE = "apple"),
-      (Me.PLATFORM_FACEBOOK = "facebook"),
-      (Me.PLATFORM_GAME_CENTER = "gamecenter"),
-      (t.ThirdPartyAuthConst = Me),
-      (Me.__class = "ThirdPartyAuthConst"));
-    var Ue = (function () {
+    ((Ue.PLATFORM_APPLE = "apple"),
+      (Ue.PLATFORM_FACEBOOK = "facebook"),
+      (Ue.PLATFORM_GAME_CENTER = "gamecenter"),
+      (t.ThirdPartyAuthConst = Ue),
+      (Ue.__class = "ThirdPartyAuthConst"));
+    var Fe = (function () {
       return function TimeConst() {};
     })();
-    ((Ue.SUNDAY = 1),
-      (Ue.MONDAY = 2),
-      (Ue.TUESDAY = 3),
-      (Ue.WEDNESDAY = 4),
-      (Ue.THURSDAY = 5),
-      (Ue.FRIDAY = 6),
-      (Ue.SATURDAY = 7),
-      (t.TimeConst = Ue),
-      (Ue.__class = "TimeConst"));
-    var Fe = (function () {
+    ((Fe.SUNDAY = 1),
+      (Fe.MONDAY = 2),
+      (Fe.TUESDAY = 3),
+      (Fe.WEDNESDAY = 4),
+      (Fe.THURSDAY = 5),
+      (Fe.FRIDAY = 6),
+      (Fe.SATURDAY = 7),
+      (t.TimeConst = Fe),
+      (Fe.__class = "TimeConst"));
+    var Ge = (function () {
       function TimeLimitedCampaignConst() {}
       return (
         (TimeLimitedCampaignConst.calculateEndRewardPurchaseCost = function (
@@ -86516,22 +86670,22 @@ and limitations under the License.
         TimeLimitedCampaignConst
       );
     })();
-    ((Fe.NO_SKIN = -1),
-      (Fe.QUEST_STATUS_NEW = "N"),
-      (Fe.QUEST_STATUS_INPROGRESS = "I"),
-      (Fe.QUEST_STATUS_FAILED = "F"),
-      (Fe.QUEST_STATUS_COMPLETE = "C"),
-      (Fe.DEFAULT_END_REWARD_VALUE = 1e6),
-      (Fe.END_REWARD_VALUE_REMAINDER_DIVISOR = 1e4),
-      (t.TimeLimitedCampaignConst = Fe),
-      (Fe.__class = "TimeLimitedCampaignConst"));
-    var Ge = (function () {
+    ((Ge.NO_SKIN = -1),
+      (Ge.QUEST_STATUS_NEW = "N"),
+      (Ge.QUEST_STATUS_INPROGRESS = "I"),
+      (Ge.QUEST_STATUS_FAILED = "F"),
+      (Ge.QUEST_STATUS_COMPLETE = "C"),
+      (Ge.DEFAULT_END_REWARD_VALUE = 1e6),
+      (Ge.END_REWARD_VALUE_REMAINDER_DIVISOR = 1e4),
+      (t.TimeLimitedCampaignConst = Ge),
+      (Ge.__class = "TimeLimitedCampaignConst"));
+    var ke = (function () {
       return function TombolaConst() {};
     })();
-    ((Ge.BATCH_OPENING_SPIN_CAP = 100),
-      (t.TombolaConst = Ge),
-      (Ge.__class = "TombolaConst"));
-    var ke = (function () {
+    ((ke.BATCH_OPENING_SPIN_CAP = 100),
+      (t.TombolaConst = ke),
+      (ke.__class = "TombolaConst"));
+    var we = (function () {
       function TrackingConst() {}
       return (
         (TrackingConst.wasAutofieldUsed = function (e) {
@@ -86549,14 +86703,14 @@ and limitations under the License.
         TrackingConst
       );
     })();
-    ((ke.TRACKING_ID_MOVEMENTS = 901),
-      (ke.TRACKING_AUTOFILL_USED = 1),
-      (ke.TRACKING_AUTOFILL_TOOLS_BEFORE = 2),
-      (ke.TRACKING_AUTOFILL_SOLDIERS_BEFORE = 4),
-      (ke.TRACKING_AUTOFILL_MODIFIED = 8),
-      (t.TrackingConst = ke),
-      (ke.__class = "TrackingConst"));
-    var we = (function () {
+    ((we.TRACKING_ID_MOVEMENTS = 901),
+      (we.TRACKING_AUTOFILL_USED = 1),
+      (we.TRACKING_AUTOFILL_TOOLS_BEFORE = 2),
+      (we.TRACKING_AUTOFILL_SOLDIERS_BEFORE = 4),
+      (we.TRACKING_AUTOFILL_MODIFIED = 8),
+      (t.TrackingConst = we),
+      (we.__class = "TrackingConst"));
+    var xe = (function () {
       function TrainingConst() {}
       return (
         (TrainingConst.calculateProlongationDuration = function (e) {
@@ -86565,8 +86719,8 @@ and limitations under the License.
         TrainingConst
       );
     })();
-    ((t.TrainingConst = we), (we.__class = "TrainingConst"));
-    var xe = (function () {
+    ((t.TrainingConst = xe), (xe.__class = "TrainingConst"));
+    var We = (function () {
       function TravelConst() {}
       return (
         (TravelConst.BASIC_FIELD_TRAVEL_TIME_$LI$ = function () {
@@ -86761,59 +86915,59 @@ and limitations under the License.
         TravelConst
       );
     })();
-    ((xe.GUESS_SIZE_PRECISION = 3),
-      (xe.DEFAULT_SIGHT_RADIUS = 6),
-      (xe.INNER_CIRCLE_DIVISOR = 2),
-      (xe.TRAVEL_PREMIUM_COMMANDER_COSTS_C2 = 125),
-      (xe.KINGDOM_TOOL_TRAVEL_COST_C1 = 100),
-      (xe.TRAVEL_BOOST_TUTORIAL = 20),
-      (xe.BARON_SPEED = 2),
-      (xe.CAPITAL_CONQUER_SPEED = 5),
-      (xe.CAPITAL_CONQUER_MIN_ATTACK_DISTANCE = 6),
-      (xe.CAPITAL_CONQUER_MAX_ATTACK_DISTANCE = 144),
-      (xe.CAPITAL_CONQUER_MIN_BIG_SIGHT_RADIUS = 30),
-      (xe.METROPOL_CONQUER_SPEED = 5),
-      (xe.METROPOL_CONQUER_MIN_ATTACK_DISTANCE = 6),
-      (xe.METROPOL_CONQUER_MAX_ATTACK_DISTANCE = 144),
-      (xe.METROPOL_CONQUER_MIN_BIG_SIGHT_RADIUS = 30),
-      (xe.DEFENSE_SUPPORT_DURATION_HOURS_MAX = 99),
-      (xe.DEFENSE_SUPPORT_DURATION_HOURS_FREE = 12),
-      (xe.DEFENSE_SUPPORT_DURATION_HOURS_FREE_OCCUPIED = 24),
-      (xe.DEFENSE_SUPPORT_DURATION_HOURS_FREE_CAPITAL_METROPOL = 72),
-      (xe.DEFENSE_SUPPORT_DURATION_HOURLY_C2_COST = 275),
-      (xe.SLOWDOWN_C2_COSTS = 200),
-      (xe.TRAVEL_BOOST_CHEAT = 5),
-      (xe.HORSE_BOOST_FIELDS = 10),
-      (xe.LOW_DISTANCE_BOOST_FIELDS = 100),
-      (xe.ALIEN_TRAVEL_DISTANCE = 50),
-      (xe.NOMAD_TRAVEL_DISTANCE = 2),
-      (xe.SAMURAI_TRAVEL_DISTANCE = 2),
-      (xe.FACTION_TRAVEL_DISTANCE = 5),
-      (xe.ALLIANCE_INVASION_CAMP_TRAVEL_DISTANCE = 2),
-      (xe.COLLECTOR_TRAVEL_DISTANCE = 50),
-      (xe.TEMPSERVER_RANKSWAP_TRAVEL_DISTANCE = 25.2),
-      (xe.DAIMYO_CASTLE_TRAVEL_DISTANCE = 2),
-      (xe.DAIMYO_TOWNSHIP_TRAVEL_DISTANCE = 2),
-      (xe.DAIMYO_TAUNT_TRAVEL_DISTANCE = 2),
-      (xe.ALLIANCE_BATTLE_GROUND_RESOURCE_TOWER_DISTANCE = 10),
-      (xe.ALLIANCE_BATTLE_GROUND_TOWER_DISTANCE = 25),
-      (xe.WOLFKING_TRAVEL_DISTANCE = 1),
-      (xe.WOLFKING_TAUNT_TRAVEL_DISTANCE = 0.5),
-      (xe.ALLIANCE_RAID_PORTAL_TRAVEL_DISTANCE = 50),
-      (xe.MAX_TOOL_SLOTS = 9),
-      (xe.MAX_TOOLS_PER_SLOT = 99999),
-      (xe.TESTSERVER_DEFENSE_WAIT_DIVISOR = 4),
-      (xe.MAX_KINGDOM_GOODS_MOVEMENTS = 1),
-      (xe.MAX_KINGDOM_ARMY_MOVEMENTS = 1),
-      (xe.COMMANDER_PREMIUM = -14),
-      (xe.COMMANDER_DUNGEON = -15),
-      (xe.WOLFKING_COMMANDER = -213),
-      (xe.COMMANDER_BOSS_DUNGEON = -45),
-      (xe.COMMANDER_TREASURE = -12),
-      (xe.MAX_LEVEL_FOR_LOW_LEVEL_TRAVEL_BOOST = 25),
-      (t.TravelConst = xe),
-      (xe.__class = "TravelConst"));
-    var We = (function () {
+    ((We.GUESS_SIZE_PRECISION = 3),
+      (We.DEFAULT_SIGHT_RADIUS = 6),
+      (We.INNER_CIRCLE_DIVISOR = 2),
+      (We.TRAVEL_PREMIUM_COMMANDER_COSTS_C2 = 125),
+      (We.KINGDOM_TOOL_TRAVEL_COST_C1 = 100),
+      (We.TRAVEL_BOOST_TUTORIAL = 20),
+      (We.BARON_SPEED = 2),
+      (We.CAPITAL_CONQUER_SPEED = 5),
+      (We.CAPITAL_CONQUER_MIN_ATTACK_DISTANCE = 6),
+      (We.CAPITAL_CONQUER_MAX_ATTACK_DISTANCE = 144),
+      (We.CAPITAL_CONQUER_MIN_BIG_SIGHT_RADIUS = 30),
+      (We.METROPOL_CONQUER_SPEED = 5),
+      (We.METROPOL_CONQUER_MIN_ATTACK_DISTANCE = 6),
+      (We.METROPOL_CONQUER_MAX_ATTACK_DISTANCE = 144),
+      (We.METROPOL_CONQUER_MIN_BIG_SIGHT_RADIUS = 30),
+      (We.DEFENSE_SUPPORT_DURATION_HOURS_MAX = 99),
+      (We.DEFENSE_SUPPORT_DURATION_HOURS_FREE = 12),
+      (We.DEFENSE_SUPPORT_DURATION_HOURS_FREE_OCCUPIED = 24),
+      (We.DEFENSE_SUPPORT_DURATION_HOURS_FREE_CAPITAL_METROPOL = 72),
+      (We.DEFENSE_SUPPORT_DURATION_HOURLY_C2_COST = 275),
+      (We.SLOWDOWN_C2_COSTS = 200),
+      (We.TRAVEL_BOOST_CHEAT = 5),
+      (We.HORSE_BOOST_FIELDS = 10),
+      (We.LOW_DISTANCE_BOOST_FIELDS = 100),
+      (We.ALIEN_TRAVEL_DISTANCE = 50),
+      (We.NOMAD_TRAVEL_DISTANCE = 2),
+      (We.SAMURAI_TRAVEL_DISTANCE = 2),
+      (We.FACTION_TRAVEL_DISTANCE = 5),
+      (We.ALLIANCE_INVASION_CAMP_TRAVEL_DISTANCE = 2),
+      (We.COLLECTOR_TRAVEL_DISTANCE = 50),
+      (We.TEMPSERVER_RANKSWAP_TRAVEL_DISTANCE = 25.2),
+      (We.DAIMYO_CASTLE_TRAVEL_DISTANCE = 2),
+      (We.DAIMYO_TOWNSHIP_TRAVEL_DISTANCE = 2),
+      (We.DAIMYO_TAUNT_TRAVEL_DISTANCE = 2),
+      (We.ALLIANCE_BATTLE_GROUND_RESOURCE_TOWER_DISTANCE = 10),
+      (We.ALLIANCE_BATTLE_GROUND_TOWER_DISTANCE = 25),
+      (We.WOLFKING_TRAVEL_DISTANCE = 1),
+      (We.WOLFKING_TAUNT_TRAVEL_DISTANCE = 0.5),
+      (We.ALLIANCE_RAID_PORTAL_TRAVEL_DISTANCE = 50),
+      (We.MAX_TOOL_SLOTS = 9),
+      (We.MAX_TOOLS_PER_SLOT = 99999),
+      (We.TESTSERVER_DEFENSE_WAIT_DIVISOR = 4),
+      (We.MAX_KINGDOM_GOODS_MOVEMENTS = 1),
+      (We.MAX_KINGDOM_ARMY_MOVEMENTS = 1),
+      (We.COMMANDER_PREMIUM = -14),
+      (We.COMMANDER_DUNGEON = -15),
+      (We.WOLFKING_COMMANDER = -213),
+      (We.COMMANDER_BOSS_DUNGEON = -45),
+      (We.COMMANDER_TREASURE = -12),
+      (We.MAX_LEVEL_FOR_LOW_LEVEL_TRAVEL_BOOST = 25),
+      (t.TravelConst = We),
+      (We.__class = "TravelConst"));
+    var He = (function () {
       function TreasureMapsConst() {}
       return (
         (TreasureMapsConst.CRUSADE_MAP_IDS_$LI$ = function () {
@@ -86849,34 +87003,34 @@ and limitations under the License.
         TreasureMapsConst
       );
     })();
-    ((We.FIRST_MAP_ID = 50),
-      (We.PROGRESS_NONE = 0),
-      (We.PROGRESS_FOUND_MAP_PIECE = 1),
-      (We.PROGRESS_DESTROYED_DUNGEON = 2),
-      (We.PROGRESS_NEW_MAP = 3),
-      (We.PROGRESS_DESTROYED_END_NODE = 4),
-      (We.MIN_LEVEL_FOR_FINDING_PIECES = 6),
-      (We.TRAVEL_BOOST_ARMY = 2),
-      (We.MAP_ID_THORNKING_EASY = 21),
-      (We.MAP_ID_THORNKING_HARD = 25),
-      (We.MAP_ID_SEAQUEEN_EASY = 22),
-      (We.MAP_ID_SEAQUEEN_HARD = 27),
-      (We.MAP_ID_SEAQUEEN_EXTRA_HARD = 28),
-      (We.MAP_ID_UNDERWORLD_EASY = 23),
-      (We.MAP_ID_UNDERWORLD_HARD = 24),
-      (We.LOWLEVEL_UNDERWORLD_START_LEVEL = 10),
-      (We.LOWLEVEL_UNDERWORLD_STOP_LEVEL = 22),
-      (We.LOWLEVEL_UNDERWORLD_WARN_LEVEL = 29),
-      (We.LOWLEVEL_UNDERWORLD_KILL_LEVEL = 30),
-      (We.NODE_ID_HIDDEN_COW_DUNGEON = 165),
-      (We.NODE_ID_KRAKEN = 206),
-      (We.NODE_ID_THORNKING = 164),
-      (We.MAP_TYPE_CRUSADE = 0),
-      (We.MAP_TYPE_TREASURE_HUNT = 1),
-      (We.MAP_TYPE_CRUSADE_TIMED = 2),
-      (t.TreasureMapsConst = We),
-      (We.__class = "TreasureMapsConst"));
-    var He = (function () {
+    ((He.FIRST_MAP_ID = 50),
+      (He.PROGRESS_NONE = 0),
+      (He.PROGRESS_FOUND_MAP_PIECE = 1),
+      (He.PROGRESS_DESTROYED_DUNGEON = 2),
+      (He.PROGRESS_NEW_MAP = 3),
+      (He.PROGRESS_DESTROYED_END_NODE = 4),
+      (He.MIN_LEVEL_FOR_FINDING_PIECES = 6),
+      (He.TRAVEL_BOOST_ARMY = 2),
+      (He.MAP_ID_THORNKING_EASY = 21),
+      (He.MAP_ID_THORNKING_HARD = 25),
+      (He.MAP_ID_SEAQUEEN_EASY = 22),
+      (He.MAP_ID_SEAQUEEN_HARD = 27),
+      (He.MAP_ID_SEAQUEEN_EXTRA_HARD = 28),
+      (He.MAP_ID_UNDERWORLD_EASY = 23),
+      (He.MAP_ID_UNDERWORLD_HARD = 24),
+      (He.LOWLEVEL_UNDERWORLD_START_LEVEL = 10),
+      (He.LOWLEVEL_UNDERWORLD_STOP_LEVEL = 22),
+      (He.LOWLEVEL_UNDERWORLD_WARN_LEVEL = 29),
+      (He.LOWLEVEL_UNDERWORLD_KILL_LEVEL = 30),
+      (He.NODE_ID_HIDDEN_COW_DUNGEON = 165),
+      (He.NODE_ID_KRAKEN = 206),
+      (He.NODE_ID_THORNKING = 164),
+      (He.MAP_TYPE_CRUSADE = 0),
+      (He.MAP_TYPE_TREASURE_HUNT = 1),
+      (He.MAP_TYPE_CRUSADE_TIMED = 2),
+      (t.TreasureMapsConst = He),
+      (He.__class = "TreasureMapsConst"));
+    var Ve = (function () {
       function TutorialConst() {}
       return (
         (TutorialConst.TUTORIAL_TMAPS_$LI$ = function () {
@@ -86889,20 +87043,20 @@ and limitations under the License.
         TutorialConst
       );
     })();
-    ((He.LAST_TUTORIAL_STEP_LEVEL = 6),
-      (He.TUTORIAL_END_LEVEL = 5),
-      (He.LAST_TUTORIAL_STEP_XP = 1080),
-      (He.LAST_TUTORIAL_QID = 2130),
-      (He.LOAD_TAX_COLLECTOR_MIN_XP = 119),
-      (He.TUTORIAL_HERO_0_ID = 801),
-      (He.TUTORIAL_HERO_1_ID = 802),
-      (He.TUTORIAL_HERO_2_ID = 803),
-      (He.E4K_SHORT_TUTORIAL_FIRST_LEVEL_BARRIER = 2),
-      (He.E4K_SHORT_TUTORIAL_SECOND_LEVEL_BARRIER = 3),
-      (He.E4K_SHORT_TUTORIAL_QUEST_ID_ATTACK_DUNGEON = 3220),
-      (t.TutorialConst = He),
-      (He.__class = "TutorialConst"));
-    var Ve = (function () {
+    ((Ve.LAST_TUTORIAL_STEP_LEVEL = 6),
+      (Ve.TUTORIAL_END_LEVEL = 5),
+      (Ve.LAST_TUTORIAL_STEP_XP = 1080),
+      (Ve.LAST_TUTORIAL_QID = 2130),
+      (Ve.LOAD_TAX_COLLECTOR_MIN_XP = 119),
+      (Ve.TUTORIAL_HERO_0_ID = 801),
+      (Ve.TUTORIAL_HERO_1_ID = 802),
+      (Ve.TUTORIAL_HERO_2_ID = 803),
+      (Ve.E4K_SHORT_TUTORIAL_FIRST_LEVEL_BARRIER = 2),
+      (Ve.E4K_SHORT_TUTORIAL_SECOND_LEVEL_BARRIER = 3),
+      (Ve.E4K_SHORT_TUTORIAL_QUEST_ID_ATTACK_DUNGEON = 3220),
+      (t.TutorialConst = Ve),
+      (Ve.__class = "TutorialConst"));
+    var je = (function () {
       function UnitProductionConst() {}
       return (
         (UnitProductionConst.UNLOCK_DURATION_$LI$ = function () {
@@ -86915,23 +87069,23 @@ and limitations under the License.
         UnitProductionConst
       );
     })();
-    ((Ve.MAX_SLOTS = 5),
-      (Ve.TOOLS_LIMIT = 80),
-      (Ve.UNIT_LIST = 0),
-      (Ve.TOOLS_LIST = 1),
-      (Ve.HOSPITAL_LIST = 2),
-      (Ve.AUXILIARY_LIST = 3),
-      (Ve.LIST_AMOUNT = 2),
-      (Ve.UNLOCK_C2 = 375),
-      (Ve.PEACE_MODE_SLOWDOWN = 2),
-      (Ve.MAX_AMOUNT_CLIENT_INPUT = 1e3),
-      (Ve.MAX_UNIT_BOOST_AMOUNT = 3),
-      (Ve.MAX_TOOL_BOOST_AMOUNT = 1),
-      (Ve.MAX_STARTER_BOOST_LEVEL = 10),
-      (Ve.MAX_STARTER_BOOST_Value = 0.98),
-      (t.UnitProductionConst = Ve),
-      (Ve.__class = "UnitProductionConst"));
-    var je = (function () {
+    ((je.MAX_SLOTS = 5),
+      (je.TOOLS_LIMIT = 80),
+      (je.UNIT_LIST = 0),
+      (je.TOOLS_LIST = 1),
+      (je.HOSPITAL_LIST = 2),
+      (je.AUXILIARY_LIST = 3),
+      (je.LIST_AMOUNT = 2),
+      (je.UNLOCK_C2 = 375),
+      (je.PEACE_MODE_SLOWDOWN = 2),
+      (je.MAX_AMOUNT_CLIENT_INPUT = 1e3),
+      (je.MAX_UNIT_BOOST_AMOUNT = 3),
+      (je.MAX_TOOL_BOOST_AMOUNT = 1),
+      (je.MAX_STARTER_BOOST_LEVEL = 10),
+      (je.MAX_STARTER_BOOST_Value = 0.98),
+      (t.UnitProductionConst = je),
+      (je.__class = "UnitProductionConst"));
+    var qe = (function () {
       function VillageConst() {}
       return (
         (VillageConst.getVillageDefaultOwnerID = function (e) {
@@ -86946,19 +87100,19 @@ and limitations under the License.
         VillageConst
       );
     })();
-    ((je.VILLAGE_UNSPAWNED_AREA_ID = -1),
-      (je.DEFAULT_OWNER_OFFSET = -400),
-      (t.VillageConst = je),
-      (je.__class = "VillageConst"));
-    var qe = (function () {
+    ((qe.VILLAGE_UNSPAWNED_AREA_ID = -1),
+      (qe.DEFAULT_OWNER_OFFSET = -400),
+      (t.VillageConst = qe),
+      (qe.__class = "VillageConst"));
+    var Ke = (function () {
       return function WaveConst() {};
     })();
-    ((qe.YARD = -1),
-      (qe.PRE_COMBAT = -2),
-      (qe.POST_COMBAT = -3),
-      (t.WaveConst = qe),
-      (qe.__class = "WaveConst"));
-    var Ke = (function () {
+    ((Ke.YARD = -1),
+      (Ke.PRE_COMBAT = -2),
+      (Ke.POST_COMBAT = -3),
+      (t.WaveConst = Ke),
+      (Ke.__class = "WaveConst"));
+    var Ye = (function () {
       function WishingWellConst() {}
       return (
         (WishingWellConst.calculateWishingWellSkipCost = function (e) {
@@ -86970,1750 +87124,1750 @@ and limitations under the License.
         WishingWellConst
       );
     })();
-    ((Ke.ENTRY_COST_MODIFIER = 2),
-      (Ke.RUINED_WELL = 0),
-      (Ke.MIN_REQUIRED_PLAYER_LEVEL = 13),
-      (Ke.MIN_SKIP_PRICE_C2 = 1999),
-      (Ke.OPTION_START_RUBY_WISHING_WELL = "S"),
-      (Ke.OPTION_SKIP_RUBY_WISHING_WELL = "SK"),
-      (Ke.OPTION_COLLECT_RUBY_WISHING_WELL = "C"),
-      (Ke.OPTION_UPGRADE_RUBY_WISHING_WELL = "U"),
-      (Ke.OPTION_UPDATE_INFO_WISHING_WELL = "UD"),
-      (t.WishingWellConst = Ke),
-      (Ke.__class = "WishingWellConst"));
-    var Ye = (function () {
+    ((Ye.ENTRY_COST_MODIFIER = 2),
+      (Ye.RUINED_WELL = 0),
+      (Ye.MIN_REQUIRED_PLAYER_LEVEL = 13),
+      (Ye.MIN_SKIP_PRICE_C2 = 1999),
+      (Ye.OPTION_START_RUBY_WISHING_WELL = "S"),
+      (Ye.OPTION_SKIP_RUBY_WISHING_WELL = "SK"),
+      (Ye.OPTION_COLLECT_RUBY_WISHING_WELL = "C"),
+      (Ye.OPTION_UPGRADE_RUBY_WISHING_WELL = "U"),
+      (Ye.OPTION_UPDATE_INFO_WISHING_WELL = "UD"),
+      (t.WishingWellConst = Ye),
+      (Ye.__class = "WishingWellConst"));
+    var ze = (function () {
       return function WODConst() {};
     })();
-    ((Ye.WOD_IDS = "wodIds"),
-      (Ye.COST_WOOD = "costWood"),
-      (Ye.COST_STONE = "costStone"),
-      (Ye.COST_AQUAMARINE = "costAquamarine"),
-      (Ye.COST_FOOD = "costFood"),
-      (Ye.COST_COAL = "costCoal"),
-      (Ye.COST_OIL = "costOil"),
-      (Ye.COST_GLASS = "costGlass"),
-      (Ye.COST_IRON = "costIron"),
-      (Ye.COST_HONEY = "costHoney"),
-      (Ye.COST_MEAD = "costMead"),
-      (Ye.COST_BEEF = "costBeef"),
-      (Ye.COST_CURRENCY1 = "costC1"),
-      (Ye.COST_CURRENCY2 = "costC2"),
-      (Ye.XML_VERSION_NODE = "version"),
-      (Ye.XML_VERSION_VALUE = "value"),
-      (Ye.DROPPABLE = "droppable"),
-      (Ye.DEPRECATED = "deprecated"),
-      (Ye.ID_LOWER_CASE = "id"),
-      (Ye.ID_UPPER_CASE = "ID"),
-      (Ye.EVENT_TYPE_ID = "eventTypeID"),
-      (Ye.COST_HEALING_C1 = "healingCostC1"),
-      (Ye.COST_HEALING_C2 = "healingCostC2"),
-      (Ye.COST_SKIP_C2 = "skipCostC2"),
-      (Ye.COST_ALL_REVIVAL_C2 = "reviveAllCostC2"),
-      (Ye.HEALING_TIME = "healingTime"),
-      (Ye.HEALING_ORDER = "healingOrder"),
-      (Ye.WOD_ID = "wodID"),
-      (Ye.TYPE = "type"),
-      (Ye.FOOD_SUPPLY = "foodSupply"),
-      (Ye.MEAD_SUPPLY = "meadSupply"),
-      (Ye.BEEF_SUPPLY = "beefSupply"),
-      (Ye.MELEE_DEF = "meleeDefence"),
-      (Ye.MELEE_ATT = "meleeAttack"),
-      (Ye.RANGE_DEF = "rangeDefence"),
-      (Ye.RANGE_ATT = "rangeAttack"),
-      (Ye.LOOT = "lootValue"),
-      (Ye.ROLE = "role"),
-      (Ye.SPEED = "speed"),
-      (Ye.RECRUITMENT_TIME = "recruitmentTime"),
-      (Ye.LOWLEVEL_RECRUITMENT_TIME = "lowLevelRecruitmentTime"),
-      (Ye.BUILDING_LEVEL = "buildingLevel"),
-      (Ye.INVENTORY_TYPE = "inventoryType"),
-      (Ye.RESEARCH_LOCKED = "researchLocked"),
-      (Ye.PALACE_LOCKED = "palaceLockedByKID"),
-      (Ye.FIRE_BOOST = "fireBoost"),
-      (Ye.FIGHT_TYPE = "fightType"),
-      (Ye.OFFENSIVE_RANGE_BONUS = "offRangeBonus"),
-      (Ye.OFFENSIVE_MELEE_BONUS = "offMeleeBonus"),
-      (Ye.KAMIKAZE = "isKamikaze"),
-      (Ye.IS_DORMANT = "isDormant"),
-      (Ye.EXTRA_BOSS_HEALTH_UNIT = "extraBossHealthUnit"),
-      (Ye.UNLOCK_NPC_ID = "unlockNpcId"),
-      (Ye.SKIP_COST = "skipCost"),
-      (Ye.DESERTING_ORDER = "desertingOrder"),
-      (Ye.CLEAVAGE_OF_CELLS_COST = "cleavageOfCellsCost"),
-      (Ye.ALLOWED_TO_TRAVEL = "allowedToTravel"),
-      (Ye.ALLOWED_TO_ATTACK = "allowedToAttack"),
-      (Ye.NAME = "name"),
-      (Ye.SLOT_TYPES = "slotTypes"),
-      (Ye.WALL_BONUS = "wallBonus"),
-      (Ye.WALL_LEVEL = "wallLevel"),
-      (Ye.GATE_BONUS = "gateBonus"),
-      (Ye.GATE_LEVEL = "gateLevel"),
-      (Ye.MOAT_BONUS = "moatBonus"),
-      (Ye.MOAT_LEVEL = "moatLevel"),
-      (Ye.TOWER_LEVEL = "towerLevel"),
-      (Ye.TOOL_TYP = "typ"),
-      (Ye.DELETE_AFTER_BATTLE = "deleteToolAfterBattle"),
-      (Ye.DAILY_ACTIVITY = "dailyactivity"),
-      (Ye.ACHIEVEMENT = "achievement"),
-      (Ye.ACHIEVEMENT_ID = "achievementID"),
-      (Ye.REQUIRED_ACHIEVEMENT_ID = "requiredAchievementID"),
-      (Ye.OR_REQUIRED_ACHIEVEMENT_ID = "orRequiredAchievementID"),
-      (Ye.ACHIEVEMENT_POINTS = "achievementPoints"),
-      (Ye.CREST_SYMBOL_IDS = "crestSymbolIDs"),
-      (Ye.RUNS_PARALLEL_FOR_SERVER = "runsParallelForServer"),
-      (Ye.QUEST = "quest"),
-      (Ye.QUEST_ID = "questID"),
-      (Ye.EVENT_ID = "eventID"),
-      (Ye.MAP_ID = "mapID"),
-      (Ye.WOD_FOOD = "food"),
-      (Ye.WOD_WOOD = "wood"),
-      (Ye.WOD_STONE = "stone"),
-      (Ye.WOD_COAL = "coal"),
-      (Ye.WOD_OIL = "oil"),
-      (Ye.WOD_GLASS = "glass"),
-      (Ye.WOD_IRON = "iron"),
-      (Ye.WOD_AQUAMARINE = "aquamarine"),
-      (Ye.WOD_HONEY = "honey"),
-      (Ye.WOD_MEAD = "mead"),
-      (Ye.WOD_BEEF = "beef"),
-      (Ye.APOLOGIZE_TOKEN = "apologizeToken"),
-      (Ye.CURRENCY1 = "currency1"),
-      (Ye.CURRENCY2 = "currency2"),
-      (Ye.KHAN_TABLETS = "khanTablets"),
-      (Ye.KHAN_MEDALS = "khanMedals"),
-      (Ye.SAMURAI_TOKENS = "samuraiTokens"),
-      (Ye.PEGASUS_TRAVEL_TICKETS = "pegasusTravelTickets"),
-      (Ye.XP = "xp"),
-      (Ye.REQUIRED_LEVEL = "requiredLevel"),
-      (Ye.EARLY_UNLOCK_REQUIRED_LEVEL = "earlyUnlockRequiredLevel"),
-      (Ye.MAX_LEVEL = "maxLevel"),
-      (Ye.MAX_LEVEL_FOR_XP = "maxLevelForXP"),
-      (Ye.REQUIRED_QUEST_ID = "requiredQuestID"),
-      (Ye.OR_REQUIRED_QUEST_ID = "orRequiredQuestID"),
-      (Ye.ATTRIBUTE_KILLED_QUESTS = "killQuestIDs"),
-      (Ye.ATTRIBUTE_KILLED_QUESTS_START = "killQuestIDsOnStart"),
-      (Ye.QUEST_SERIES_ID = "questSeriesID"),
-      (Ye.TRIGGER_TUTORIAL_STEP_ID = "triggerTutorialStepID"),
-      (Ye.TEST_CASE_ID = "testCaseID"),
-      (Ye.CONDITIONS = "conditions"),
-      (Ye.FAILURE_CONDITIONS = "failureConditions"),
-      (Ye.DOLL_AMOUNT = "numberofDolls"),
-      (Ye.DOLL_WOD = "dollWod"),
-      (Ye.DEFENSIVE_MELEE_BONUS = "defMeleeBonus"),
-      (Ye.DEFENSIVE_RANGE_BONUS = "defRangeBonus"),
-      (Ye.MAX_COUNT = "maximumCount"),
-      (Ye.UPGRADE_ID = "upgradeWodID"),
-      (Ye.DOWNGRAGE_ID = "downgradeWodID"),
-      (Ye.GROUP = "group"),
-      (Ye.HEIGHT = "height"),
-      (Ye.WIDTH = "width"),
-      (Ye.STORABLE = "storeable"),
-      (Ye.BUILD_DURATION = "buildDuration"),
-      (Ye.LOW_LEVEL_BUILD_DURATION = "lowLevelBuildDuration"),
-      (Ye.BUILD_SPEED_BOOST = "buildSpeedBoost"),
-      (Ye.WOOD_PRODUCTION = "Woodproduction"),
-      (Ye.STONE_PRODUCTION = "Stoneproduction"),
-      (Ye.FOOD_PRODUCTION = "Foodproduction"),
-      (Ye.COAL_PRODUCTION = "Coalproduction"),
-      (Ye.OIL_PRODUCTION = "Oilproduction"),
-      (Ye.GLASS_PRODUCTION = "Glassproduction"),
-      (Ye.IRON_PRODUCTION = "Ironproduction"),
-      (Ye.HONEY_PRODUCTION = "Honeyproduction"),
-      (Ye.MEAD_PRODUCTION = "meadProduction"),
-      (Ye.BEEF_PRODUCTION = "Beefproduction"),
-      (Ye.FOOD_RATIO = "foodRatio"),
-      (Ye.HONEY_RATIO = "honeyRatio"),
-      (Ye.WOOD_BOOST = "Woodboost"),
-      (Ye.STONE_BOOST = "Stoneboost"),
-      (Ye.FOOD_BOOST = "Foodboost"),
-      (Ye.COAL_BOOST = "Coalboost"),
-      (Ye.OIL_BOOST = "Oilboost"),
-      (Ye.GLASS_BOOST = "Glassboost"),
-      (Ye.IRON_BOOST = "Ironboost"),
-      (Ye.HONEY_BOOST = "Honeyboost"),
-      (Ye.MEAD_BOOST = "Meadboost"),
-      (Ye.BEEF_BOOST = "Beefboost"),
-      (Ye.FOOD_CONSUMPTION_REDUCTION = "Foodreduction"),
-      (Ye.MEAD_CONSUMPTION_REDUCTION = "Meadreduction"),
-      (Ye.BEEF_CONSUMPTION_REDUCTION = "Beefreduction"),
-      (Ye.HIDEOUT = "Hideout"),
-      (Ye.AQUAMARINE_HIDEOUT = "aquamarineHideout"),
-      (Ye.GUARDS = "guardSize"),
-      (Ye.SPY_SIZE = "spySize"),
-      (Ye.GENERALS = "commanderSize"),
-      (Ye.MARKET_CARRIAGES = "marketCarriages"),
-      (Ye.BARONS = "baronSize"),
-      (Ye.STONESTORAGE = "stoneStorage"),
-      (Ye.FOODSTORAGE = "foodStorage"),
-      (Ye.WOODSTORAGE = "woodStorage"),
-      (Ye.COALSTORAGE = "coalStorage"),
-      (Ye.OILSTORAGE = "oilStorage"),
-      (Ye.GLASSSTORAGE = "glassStorage"),
-      (Ye.IRONSTORAGE = "ironStorage"),
-      (Ye.AQUAMARINESTORAGE = "aquamarineStorage"),
-      (Ye.HONEYSTORAGE = "honeyStorage"),
-      (Ye.MEADSTORAGE = "meadStorage"),
-      (Ye.BEEFSTORAGE = "beefStorage"),
-      (Ye.SIGHT_RADIUS_BONUS = "sightRadiusBonus"),
-      (Ye.POPULATION = "Population"),
-      (Ye.DECO_POINTS = "decoPoints"),
-      (Ye.EVENT_IDS = "eventIDs"),
-      (Ye.MAP_IDS = "mapIDs"),
-      (Ye.UNLOCKING_IDS = "unlockIDs"),
-      (Ye.UNLOCKING_HORSES = "unlockHorses"),
-      (Ye.CONSTRUCTION_ITEM_GROUP_IDS = "constructionItemGroupIDs"),
-      (Ye.SHOP_CATEGORY = "shopCategory"),
-      (Ye.LEVEL = "level"),
-      (Ye.DESTRUCTABLE = "destructable"),
-      (Ye.BURNABLE = "burnable"),
-      (Ye.DAMAGE_THRESHOLD = "damageTreshold"),
-      (Ye.DUNGEON = "dungeon"),
-      (Ye.COUNT_VICTORIES = "countVictories"),
-      (Ye.DUNGEON_SKIP_COST = "skipCosts"),
-      (Ye.UNIT_WALL_COUNT = "unitWallCount"),
-      (Ye.TOOL_R = "toolR"),
-      (Ye.TOOL_M = "toolM"),
-      (Ye.TOOL_L = "toolL"),
-      (Ye.UNIT_R = "unitsR"),
-      (Ye.UNIT_M = "unitsM"),
-      (Ye.UNIT_L = "unitsL"),
-      (Ye.UNIT_K = "unitsK"),
-      (Ye.UNITS = "units"),
-      (Ye.SMASHABLE = "smashable"),
-      (Ye.MORAL = "Moral"),
-      (Ye.UNIT_SIZE = "unitSize"),
-      (Ye.RESEARCH_BOOST = "researchBoost"),
-      (Ye.RECRUIT_SPEED_BOOST = "recruitSpeedBoost"),
-      (Ye.USAGE_EVENT_ID = "usageEventID"),
-      (Ye.XP_BONUS = "xpBonus"),
-      (Ye.AMOUNT_PER_WAVE = "amountPerWave"),
-      (Ye.DECOS = "decos"),
-      (Ye.TOHOME = "toHome"),
-      (Ye.HIDDENFOOD = "hiddenFood"),
-      (Ye.HIDDENMEAD = "hiddenMead"),
-      (Ye.HIDDENBEEF = "hiddenBeef"),
-      (Ye.DUNGEON_TYPE = "dungeonType"),
-      (Ye.DUNGEON_TYPE_MAIN = "main"),
-      (Ye.DUNGEON_TYPE_SUB = "sub"),
-      (Ye.TREASUREMAP = "tmap"),
-      (Ye.TREASUREMAP_ID = "mapID"),
-      (Ye.TREASUREMAP_TYPE = "maptype"),
-      (Ye.TREASURE_MAP_NODE_IDS = "tmapnodeIDs"),
-      (Ye.TREASURE_RELATES_OLD_MAP = "relatesOld"),
-      (Ye.STARTMAPPIECES = "initialpieces"),
-      (Ye.TOTALMAPPIECES = "totalpieces"),
-      (Ye.TREASURE_END_NODE_ID = "endNodeID"),
-      (Ye.TREASURE_HAS_CAMP = "hasCamp"),
-      (Ye.CONTINUE_AFTER_BOSS = "continueAfterBoss"),
-      (Ye.TREASURE_MAP_NODE = "tmapnode"),
-      (Ye.TREASURE_MAP_NODE_ID = "tmapnodeID"),
-      (Ye.DEFENSE_STREGTH = "defStrength"),
-      (Ye.RANDOMIZED_DEFENSE = "randomizedDefence"),
-      (Ye.DEFENCE_UNITS = "defenceUnits"),
-      (Ye.DEFENCE_TOOLS = "defenceTools"),
-      (Ye.DEFENCE_P_TOOLS = "dungeonPTools"),
-      (Ye.DISTANCE = "distance"),
-      (Ye.COOLDOWN = "coolDown"),
-      (Ye.DUNGEON_ID = "countVictories"),
-      (Ye.LOOT_C1 = "lootc1"),
-      (Ye.LOOT_C2 = "lootc2"),
-      (Ye.LOOT_WOOD = "lootWood"),
-      (Ye.LOOT_STONE = "lootStone"),
-      (Ye.LOOT_FOOD = "lootFood"),
-      (Ye.LOOT_COAL = "lootCoal"),
-      (Ye.LOOT_OIL = "lootOil"),
-      (Ye.LOOT_GLASS = "lootGlass"),
-      (Ye.LOOT_IRON = "lootIron"),
-      (Ye.LOOT_BEEF = "lootBeef"),
-      (Ye.CAPTURED_PRODUCTION_WOOD = "capturedProductionWood"),
-      (Ye.CAPTURED_PRODUCTION_STONE = "capturedProductionStone"),
-      (Ye.CAPTURED_PRODUCTION_FOOD = "capturedProductionFood"),
-      (Ye.TREASURE_UNLOCK_IDS_OR = "orUnlockIDs"),
-      (Ye.TREASURE_UNLOCK_IDS_AND = "andUnlockIDs"),
-      (Ye.TREASURE_TYPE = "type"),
-      (Ye.TREASURE_TYPE_DUNGEON = "DUNGEON"),
-      (Ye.TREASURE_TYPE_BRIDGE = "BRIDGE"),
-      (Ye.TREASURE_TYPE_BRIDGEDUNGEON = "BRIDGEDUNGEON"),
-      (Ye.TREASURE_TYPE_MORALE_BOOSTER = "MORALBOOSTER"),
-      (Ye.TREASURE_TYPE_PORT = "PORT"),
-      (Ye.TREASURE_TYPE_SWAMP = "SWAMP"),
-      (Ye.TREASURE_TYPE_SAND = "SAND"),
-      (Ye.TREASURE_CHEST_COSTC2 = "COSTC2"),
-      (Ye.DUNGEONLEVEL = "dungeonlevel"),
-      (Ye.MAPPIECEPRICE = "costpiece"),
-      (Ye.DIFFICULTY = "difficulty"),
-      (Ye.UNIT_BOOST = "unitBoost"),
-      (Ye.MARKET_BOOST = "marketBoost"),
-      (Ye.SPY_BOOST = "spyBoost"),
-      (Ye.IS_INSTANT_SPY_HORSE = "isInstantSpyHorse"),
-      (Ye.COST_FACTOR_C1 = "costFactorC1"),
-      (Ye.COST_FACTOR_C2 = "costFactorC2"),
-      (Ye.ALLOWED_FOR_NPC_ATTACK_IN_KIDS = "allowedForNpcAttackInKingdom"),
-      (Ye.IS_LAST_TUTORIAL_QUEST = "isLastTutorialQuest"),
-      (Ye.IS_RELIC_BUILDING = "isRelicBuilding"),
-      (Ye.SELL_WOOD = "sellWood"),
-      (Ye.SELL_STONE = "sellStone"),
-      (Ye.SELL_AQUAMARINE = "sellAquamarine"),
-      (Ye.SELL_FOOD = "sellFood"),
-      (Ye.SELL_COAL = "sellCoal"),
-      (Ye.SELL_OIL = "sellOil"),
-      (Ye.SELL_GLASS = "sellGlass"),
-      (Ye.SELL_IRON = "sellIron"),
-      (Ye.SELL_HONEY = "sellHoney"),
-      (Ye.SELL_MEAD = "sellMead"),
-      (Ye.SELL_BEEF = "sellBeef"),
-      (Ye.SELL_CURRENCY1 = "sellC1"),
-      (Ye.SELL_CURRENCY2 = "sellC2"),
-      (Ye.WISHING_WELL = "wishingwell"),
-      (Ye.WISHING_WELL_COIN = "wishingWellCoin"),
-      (Ye.COST_WISHING_WELL_COINS = "costWishingWellCoin"),
-      (Ye.ENTRY_COSTS = "entryCosts"),
-      (Ye.EVENT = "event"),
-      (Ye.EVENTID = "eventID"),
-      (Ye.TRAVEL_TIME = "travelTime"),
-      (Ye.SKIP_COST_C2 = "skipCostC2"),
-      (Ye.REQUIRED_MAP_ID = "requiredMapID"),
-      (Ye.THRESHOLD = "threshold"),
-      (Ye.TOP_X = "topX"),
-      (Ye.BOOSTED_WODS = "boostedWodIDs"),
-      (Ye.REDUCTION = "reduction"),
-      (Ye.ENABLE_WODS = "enabledWodIDs"),
-      (Ye.ALLIANCE_FAME_BOOST = "allianceFameBoost"),
-      (Ye.MAX_SOLDIERS = "maxSoldiers"),
-      (Ye.RETURN_UNITS = "returnUnits"),
-      (Ye.START_TMAP_WITH_UNITS = "startWithUnits"),
-      (Ye.FAME_LEVEL = "fameLevel"),
-      (Ye.FAME_DECREASE_PERCENT = "fameLoss"),
-      (Ye.EVENT_TYPE = "eventType"),
-      (Ye.PACKAGE_IDS = "packageIDs"),
-      (Ye.PACKAGES = "packages"),
-      (Ye.ARTIFACT = "artifact"),
-      (Ye.ARTIFACT_LEAGUE = "artifactsLeague"),
-      (Ye.ARTIFACT_LEAGUE_ID = "artifactsLeagueID"),
-      (Ye.ARTIFACT_ID = "artifactID"),
-      (Ye.ARTIFACT_PARTS = "artifactParts"),
-      (Ye.ARTIFACT_PRICE = "artifactPrice"),
-      (Ye.ARTIFACT_PART_PRICE = "artifactPartPrice"),
-      (Ye.DROP_FACTOR = "dropFactor"),
-      (Ye.EXPONENT = "exponent"),
-      (Ye.OFFSET = "offset"),
-      (Ye.AVERAGE_DUNGEON_LEVEL = "averageDungeonLevel"),
-      (Ye.PACKAGE_ID = "packageID"),
-      (Ye.PACKAGE_TYPE = "packageType"),
-      (Ye.PACKAGE_PRICE_C1 = "packagePriceC1"),
-      (Ye.PACKAGE_PRICE_C2 = "packagePriceC2"),
-      (Ye.PACKAGE_PRICE_WOOD = "packagePriceWood"),
-      (Ye.PACKAGE_PRICE_STONE = "packagePriceStone"),
-      (Ye.PACKAGE_PRICE_FOOD = "packagePriceFood"),
-      (Ye.PACKAGE_PRICE_COAL = "packagePriceCoal"),
-      (Ye.PACKAGE_PRICE_OIL = "packagePriceOil"),
-      (Ye.PACKAGE_PRICE_GLASS = "packagePriceGlass"),
-      (Ye.PACKAGE_PRICE_IRON = "packagePriceIron"),
-      (Ye.PACKAGE_PRICE_AQUAMARINE = "packagePriceAquamarine"),
-      (Ye.PACKAGE_PRICE_HONEY = "packagePriceHoney"),
-      (Ye.PACKAGE_PRICE_MEAD = "packagePriceMead"),
-      (Ye.PACKAGE_PRICE_BEEF = "packagePriceBeef"),
-      (Ye.BUY_AGAIN_REDUCED_COST_C2 = "buyAgainReducedCostC2"),
-      (Ye.AMOUNT_WOOD = "amountWood"),
-      (Ye.AMOUNT_STONE = "amountStone"),
-      (Ye.AMOUNT_FOOD = "amountFood"),
-      (Ye.AMOUNT_COAL = "amountCoal"),
-      (Ye.AMOUNT_OIL = "amountOil"),
-      (Ye.AMOUNT_GLASS = "amountGlass"),
-      (Ye.AMOUNT_IRON = "amountIron"),
-      (Ye.AMOUNT_C1 = "amountC1"),
-      (Ye.WOD_AMOUNT = "wodAmount"),
-      (Ye.PACKAGE_STOCK = "stock"),
-      (Ye.FILL_UP_RESOURCE_STORAGE = "fillUpResourceStorage"),
-      (Ye.FILL_ALL_KINGDOMS = "fillAllStorages"),
-      (Ye.EXCLUDED_AREA_TYPES = "excludedAreaTypes"),
-      (Ye.AMOUNT_SILVER_RUNES = "amountSilverRunes"),
-      (Ye.IS_GIFT_PACKAGE = "isGiftPackage"),
-      (Ye.AMOUNT_XP = "amountXP"),
-      (Ye.MAX_BUY_PER_CLICK = "maxBuyPerClick"),
-      (Ye.BOUNTY_TARGET_SKIP_COST_C2 = "targetSkipCostC2"),
-      (Ye.FAME_AS_OFF = "fameAsOff"),
-      (Ye.FAME_AS_DEF = "fameAsDef"),
-      (Ye.DEFENCE_P_TOOLS_STACK = "dungeonPToolStacks"),
-      (Ye.DEFENCE_NP_TOOLS_STACK = "dungeonNPToolStacks"),
-      (Ye.HIDDEN_SOLDIERS_SPACE = "hiddenSoldiersSpace"),
-      (Ye.KINGDOM_TRAVELLING_COST = "kingdomTravellingCost"),
-      (Ye.CAN_BE_PRIME_SALE_OFFER = "canBePrimeSaleOffer"),
-      (Ye.HOSPITAL_CAPACITY = "hospitalCapacity"),
-      (Ye.HOSPITAL_SURVIVE_BOOST = "surviveBoost"),
-      (Ye.HOSPITAL_SLOTS = "hospitalSlots"),
-      (Ye.HEAL_SPEED = "healSpeed"),
-      (Ye.RESEARCH = "research"),
-      (Ye.RESEARCH_ID = "researchID"),
-      (Ye.RESEARCH_GROUP_ID = "groupID"),
-      (Ye.RESEARCH_LEVEL = "level"),
-      (Ye.RESEARCH_PREREQUISITE_IDS = "prerequisiteIDs"),
-      (Ye.RESEARCH_DURATION = "researchDuration"),
-      (Ye.RECRUIT_SOLDIER_BOOST = "recruitSoldierBoost"),
-      (Ye.BUILD_TOOL_BOOST = "buildToolBoost"),
-      (Ye.TRAVEL_STATION_UNIT_BOOST = "travelStationUnitBoost"),
-      (Ye.TRAVEL_SPY_BOOST = "travelSpyBoost"),
-      (Ye.TRAVEL_MARKET_OWN_BOOST = "travelMarketOwnBoost"),
-      (Ye.TAX_COLLECTOR_BOOST = "taxCollectorBoost"),
-      (Ye.BUILDING_XP_BOOST = "buildingXPBoost"),
-      (Ye.PRODUCTIVITY_WOOD_BOOST = "productivityWoodBoost"),
-      (Ye.PRODUCTIVITY_STONE_BOOST = "productivityStoneBoost"),
-      (Ye.PRODUCTIVITY_FOOD_BOOST = "productivityFoodBoost"),
-      (Ye.BATTLE_XP_BOOST = "battleXPBoost"),
-      (Ye.LOOT_BOOST = "lootBoost"),
-      (Ye.RESEARCH_LOCK_WOD_IDS = "lockWodIDs"),
-      (Ye.RESEARCH_UNLOCK_WOD_IDS = "unlockWodIDs"),
-      (Ye.RESEARCH_SPEED_BOOST = "researchBoost"),
-      (Ye.FAME_BOOST = "fameBoost"),
-      (Ye.HONOR_BOOST = "honorBoost"),
-      (Ye.PERCEPTION_BOOST = "perceptionBoost"),
-      (Ye.MAGIC_FIND_BOOST = "magicFindBoost"),
-      (Ye.POPULATION_BOOST = "populationAmountBoost"),
-      (Ye.POPULATION_CONVERSION_BOOST = "peasantAmountBoost"),
-      (Ye.CRAFT_COST_REDUCTION = "forgeCostReduction"),
-      (Ye.STEALTH_BOOST = "stealthBoost"),
-      (Ye.ONLY_WITH_RESEARCH_EXPERT = "onlyWithResearchExpert"),
-      (Ye.REQUIRED_BUILDINGS = "requiredBuildings"),
-      (Ye.REQUIRED_BUILDINGS_CONDITION = "requiredBuildingsCondition"),
-      (Ye.RESEARCH_RECRUIT_SOLDIER_BOOST_ABSOLUTE =
+    ((ze.WOD_IDS = "wodIds"),
+      (ze.COST_WOOD = "costWood"),
+      (ze.COST_STONE = "costStone"),
+      (ze.COST_AQUAMARINE = "costAquamarine"),
+      (ze.COST_FOOD = "costFood"),
+      (ze.COST_COAL = "costCoal"),
+      (ze.COST_OIL = "costOil"),
+      (ze.COST_GLASS = "costGlass"),
+      (ze.COST_IRON = "costIron"),
+      (ze.COST_HONEY = "costHoney"),
+      (ze.COST_MEAD = "costMead"),
+      (ze.COST_BEEF = "costBeef"),
+      (ze.COST_CURRENCY1 = "costC1"),
+      (ze.COST_CURRENCY2 = "costC2"),
+      (ze.XML_VERSION_NODE = "version"),
+      (ze.XML_VERSION_VALUE = "value"),
+      (ze.DROPPABLE = "droppable"),
+      (ze.DEPRECATED = "deprecated"),
+      (ze.ID_LOWER_CASE = "id"),
+      (ze.ID_UPPER_CASE = "ID"),
+      (ze.EVENT_TYPE_ID = "eventTypeID"),
+      (ze.COST_HEALING_C1 = "healingCostC1"),
+      (ze.COST_HEALING_C2 = "healingCostC2"),
+      (ze.COST_SKIP_C2 = "skipCostC2"),
+      (ze.COST_ALL_REVIVAL_C2 = "reviveAllCostC2"),
+      (ze.HEALING_TIME = "healingTime"),
+      (ze.HEALING_ORDER = "healingOrder"),
+      (ze.WOD_ID = "wodID"),
+      (ze.TYPE = "type"),
+      (ze.FOOD_SUPPLY = "foodSupply"),
+      (ze.MEAD_SUPPLY = "meadSupply"),
+      (ze.BEEF_SUPPLY = "beefSupply"),
+      (ze.MELEE_DEF = "meleeDefence"),
+      (ze.MELEE_ATT = "meleeAttack"),
+      (ze.RANGE_DEF = "rangeDefence"),
+      (ze.RANGE_ATT = "rangeAttack"),
+      (ze.LOOT = "lootValue"),
+      (ze.ROLE = "role"),
+      (ze.SPEED = "speed"),
+      (ze.RECRUITMENT_TIME = "recruitmentTime"),
+      (ze.LOWLEVEL_RECRUITMENT_TIME = "lowLevelRecruitmentTime"),
+      (ze.BUILDING_LEVEL = "buildingLevel"),
+      (ze.INVENTORY_TYPE = "inventoryType"),
+      (ze.RESEARCH_LOCKED = "researchLocked"),
+      (ze.PALACE_LOCKED = "palaceLockedByKID"),
+      (ze.FIRE_BOOST = "fireBoost"),
+      (ze.FIGHT_TYPE = "fightType"),
+      (ze.OFFENSIVE_RANGE_BONUS = "offRangeBonus"),
+      (ze.OFFENSIVE_MELEE_BONUS = "offMeleeBonus"),
+      (ze.KAMIKAZE = "isKamikaze"),
+      (ze.IS_DORMANT = "isDormant"),
+      (ze.EXTRA_BOSS_HEALTH_UNIT = "extraBossHealthUnit"),
+      (ze.UNLOCK_NPC_ID = "unlockNpcId"),
+      (ze.SKIP_COST = "skipCost"),
+      (ze.DESERTING_ORDER = "desertingOrder"),
+      (ze.CLEAVAGE_OF_CELLS_COST = "cleavageOfCellsCost"),
+      (ze.ALLOWED_TO_TRAVEL = "allowedToTravel"),
+      (ze.ALLOWED_TO_ATTACK = "allowedToAttack"),
+      (ze.NAME = "name"),
+      (ze.SLOT_TYPES = "slotTypes"),
+      (ze.WALL_BONUS = "wallBonus"),
+      (ze.WALL_LEVEL = "wallLevel"),
+      (ze.GATE_BONUS = "gateBonus"),
+      (ze.GATE_LEVEL = "gateLevel"),
+      (ze.MOAT_BONUS = "moatBonus"),
+      (ze.MOAT_LEVEL = "moatLevel"),
+      (ze.TOWER_LEVEL = "towerLevel"),
+      (ze.TOOL_TYP = "typ"),
+      (ze.DELETE_AFTER_BATTLE = "deleteToolAfterBattle"),
+      (ze.DAILY_ACTIVITY = "dailyactivity"),
+      (ze.ACHIEVEMENT = "achievement"),
+      (ze.ACHIEVEMENT_ID = "achievementID"),
+      (ze.REQUIRED_ACHIEVEMENT_ID = "requiredAchievementID"),
+      (ze.OR_REQUIRED_ACHIEVEMENT_ID = "orRequiredAchievementID"),
+      (ze.ACHIEVEMENT_POINTS = "achievementPoints"),
+      (ze.CREST_SYMBOL_IDS = "crestSymbolIDs"),
+      (ze.RUNS_PARALLEL_FOR_SERVER = "runsParallelForServer"),
+      (ze.QUEST = "quest"),
+      (ze.QUEST_ID = "questID"),
+      (ze.EVENT_ID = "eventID"),
+      (ze.MAP_ID = "mapID"),
+      (ze.WOD_FOOD = "food"),
+      (ze.WOD_WOOD = "wood"),
+      (ze.WOD_STONE = "stone"),
+      (ze.WOD_COAL = "coal"),
+      (ze.WOD_OIL = "oil"),
+      (ze.WOD_GLASS = "glass"),
+      (ze.WOD_IRON = "iron"),
+      (ze.WOD_AQUAMARINE = "aquamarine"),
+      (ze.WOD_HONEY = "honey"),
+      (ze.WOD_MEAD = "mead"),
+      (ze.WOD_BEEF = "beef"),
+      (ze.APOLOGIZE_TOKEN = "apologizeToken"),
+      (ze.CURRENCY1 = "currency1"),
+      (ze.CURRENCY2 = "currency2"),
+      (ze.KHAN_TABLETS = "khanTablets"),
+      (ze.KHAN_MEDALS = "khanMedals"),
+      (ze.SAMURAI_TOKENS = "samuraiTokens"),
+      (ze.PEGASUS_TRAVEL_TICKETS = "pegasusTravelTickets"),
+      (ze.XP = "xp"),
+      (ze.REQUIRED_LEVEL = "requiredLevel"),
+      (ze.EARLY_UNLOCK_REQUIRED_LEVEL = "earlyUnlockRequiredLevel"),
+      (ze.MAX_LEVEL = "maxLevel"),
+      (ze.MAX_LEVEL_FOR_XP = "maxLevelForXP"),
+      (ze.REQUIRED_QUEST_ID = "requiredQuestID"),
+      (ze.OR_REQUIRED_QUEST_ID = "orRequiredQuestID"),
+      (ze.ATTRIBUTE_KILLED_QUESTS = "killQuestIDs"),
+      (ze.ATTRIBUTE_KILLED_QUESTS_START = "killQuestIDsOnStart"),
+      (ze.QUEST_SERIES_ID = "questSeriesID"),
+      (ze.TRIGGER_TUTORIAL_STEP_ID = "triggerTutorialStepID"),
+      (ze.TEST_CASE_ID = "testCaseID"),
+      (ze.CONDITIONS = "conditions"),
+      (ze.FAILURE_CONDITIONS = "failureConditions"),
+      (ze.DOLL_AMOUNT = "numberofDolls"),
+      (ze.DOLL_WOD = "dollWod"),
+      (ze.DEFENSIVE_MELEE_BONUS = "defMeleeBonus"),
+      (ze.DEFENSIVE_RANGE_BONUS = "defRangeBonus"),
+      (ze.MAX_COUNT = "maximumCount"),
+      (ze.UPGRADE_ID = "upgradeWodID"),
+      (ze.DOWNGRAGE_ID = "downgradeWodID"),
+      (ze.GROUP = "group"),
+      (ze.HEIGHT = "height"),
+      (ze.WIDTH = "width"),
+      (ze.STORABLE = "storeable"),
+      (ze.BUILD_DURATION = "buildDuration"),
+      (ze.LOW_LEVEL_BUILD_DURATION = "lowLevelBuildDuration"),
+      (ze.BUILD_SPEED_BOOST = "buildSpeedBoost"),
+      (ze.WOOD_PRODUCTION = "Woodproduction"),
+      (ze.STONE_PRODUCTION = "Stoneproduction"),
+      (ze.FOOD_PRODUCTION = "Foodproduction"),
+      (ze.COAL_PRODUCTION = "Coalproduction"),
+      (ze.OIL_PRODUCTION = "Oilproduction"),
+      (ze.GLASS_PRODUCTION = "Glassproduction"),
+      (ze.IRON_PRODUCTION = "Ironproduction"),
+      (ze.HONEY_PRODUCTION = "Honeyproduction"),
+      (ze.MEAD_PRODUCTION = "meadProduction"),
+      (ze.BEEF_PRODUCTION = "Beefproduction"),
+      (ze.FOOD_RATIO = "foodRatio"),
+      (ze.HONEY_RATIO = "honeyRatio"),
+      (ze.WOOD_BOOST = "Woodboost"),
+      (ze.STONE_BOOST = "Stoneboost"),
+      (ze.FOOD_BOOST = "Foodboost"),
+      (ze.COAL_BOOST = "Coalboost"),
+      (ze.OIL_BOOST = "Oilboost"),
+      (ze.GLASS_BOOST = "Glassboost"),
+      (ze.IRON_BOOST = "Ironboost"),
+      (ze.HONEY_BOOST = "Honeyboost"),
+      (ze.MEAD_BOOST = "Meadboost"),
+      (ze.BEEF_BOOST = "Beefboost"),
+      (ze.FOOD_CONSUMPTION_REDUCTION = "Foodreduction"),
+      (ze.MEAD_CONSUMPTION_REDUCTION = "Meadreduction"),
+      (ze.BEEF_CONSUMPTION_REDUCTION = "Beefreduction"),
+      (ze.HIDEOUT = "Hideout"),
+      (ze.AQUAMARINE_HIDEOUT = "aquamarineHideout"),
+      (ze.GUARDS = "guardSize"),
+      (ze.SPY_SIZE = "spySize"),
+      (ze.GENERALS = "commanderSize"),
+      (ze.MARKET_CARRIAGES = "marketCarriages"),
+      (ze.BARONS = "baronSize"),
+      (ze.STONESTORAGE = "stoneStorage"),
+      (ze.FOODSTORAGE = "foodStorage"),
+      (ze.WOODSTORAGE = "woodStorage"),
+      (ze.COALSTORAGE = "coalStorage"),
+      (ze.OILSTORAGE = "oilStorage"),
+      (ze.GLASSSTORAGE = "glassStorage"),
+      (ze.IRONSTORAGE = "ironStorage"),
+      (ze.AQUAMARINESTORAGE = "aquamarineStorage"),
+      (ze.HONEYSTORAGE = "honeyStorage"),
+      (ze.MEADSTORAGE = "meadStorage"),
+      (ze.BEEFSTORAGE = "beefStorage"),
+      (ze.SIGHT_RADIUS_BONUS = "sightRadiusBonus"),
+      (ze.POPULATION = "Population"),
+      (ze.DECO_POINTS = "decoPoints"),
+      (ze.EVENT_IDS = "eventIDs"),
+      (ze.MAP_IDS = "mapIDs"),
+      (ze.UNLOCKING_IDS = "unlockIDs"),
+      (ze.UNLOCKING_HORSES = "unlockHorses"),
+      (ze.CONSTRUCTION_ITEM_GROUP_IDS = "constructionItemGroupIDs"),
+      (ze.SHOP_CATEGORY = "shopCategory"),
+      (ze.LEVEL = "level"),
+      (ze.DESTRUCTABLE = "destructable"),
+      (ze.BURNABLE = "burnable"),
+      (ze.DAMAGE_THRESHOLD = "damageTreshold"),
+      (ze.DUNGEON = "dungeon"),
+      (ze.COUNT_VICTORIES = "countVictories"),
+      (ze.DUNGEON_SKIP_COST = "skipCosts"),
+      (ze.UNIT_WALL_COUNT = "unitWallCount"),
+      (ze.TOOL_R = "toolR"),
+      (ze.TOOL_M = "toolM"),
+      (ze.TOOL_L = "toolL"),
+      (ze.UNIT_R = "unitsR"),
+      (ze.UNIT_M = "unitsM"),
+      (ze.UNIT_L = "unitsL"),
+      (ze.UNIT_K = "unitsK"),
+      (ze.UNITS = "units"),
+      (ze.SMASHABLE = "smashable"),
+      (ze.MORAL = "Moral"),
+      (ze.UNIT_SIZE = "unitSize"),
+      (ze.RESEARCH_BOOST = "researchBoost"),
+      (ze.RECRUIT_SPEED_BOOST = "recruitSpeedBoost"),
+      (ze.USAGE_EVENT_ID = "usageEventID"),
+      (ze.XP_BONUS = "xpBonus"),
+      (ze.AMOUNT_PER_WAVE = "amountPerWave"),
+      (ze.DECOS = "decos"),
+      (ze.TOHOME = "toHome"),
+      (ze.HIDDENFOOD = "hiddenFood"),
+      (ze.HIDDENMEAD = "hiddenMead"),
+      (ze.HIDDENBEEF = "hiddenBeef"),
+      (ze.DUNGEON_TYPE = "dungeonType"),
+      (ze.DUNGEON_TYPE_MAIN = "main"),
+      (ze.DUNGEON_TYPE_SUB = "sub"),
+      (ze.TREASUREMAP = "tmap"),
+      (ze.TREASUREMAP_ID = "mapID"),
+      (ze.TREASUREMAP_TYPE = "maptype"),
+      (ze.TREASURE_MAP_NODE_IDS = "tmapnodeIDs"),
+      (ze.TREASURE_RELATES_OLD_MAP = "relatesOld"),
+      (ze.STARTMAPPIECES = "initialpieces"),
+      (ze.TOTALMAPPIECES = "totalpieces"),
+      (ze.TREASURE_END_NODE_ID = "endNodeID"),
+      (ze.TREASURE_HAS_CAMP = "hasCamp"),
+      (ze.CONTINUE_AFTER_BOSS = "continueAfterBoss"),
+      (ze.TREASURE_MAP_NODE = "tmapnode"),
+      (ze.TREASURE_MAP_NODE_ID = "tmapnodeID"),
+      (ze.DEFENSE_STREGTH = "defStrength"),
+      (ze.RANDOMIZED_DEFENSE = "randomizedDefence"),
+      (ze.DEFENCE_UNITS = "defenceUnits"),
+      (ze.DEFENCE_TOOLS = "defenceTools"),
+      (ze.DEFENCE_P_TOOLS = "dungeonPTools"),
+      (ze.DISTANCE = "distance"),
+      (ze.COOLDOWN = "coolDown"),
+      (ze.DUNGEON_ID = "countVictories"),
+      (ze.LOOT_C1 = "lootc1"),
+      (ze.LOOT_C2 = "lootc2"),
+      (ze.LOOT_WOOD = "lootWood"),
+      (ze.LOOT_STONE = "lootStone"),
+      (ze.LOOT_FOOD = "lootFood"),
+      (ze.LOOT_COAL = "lootCoal"),
+      (ze.LOOT_OIL = "lootOil"),
+      (ze.LOOT_GLASS = "lootGlass"),
+      (ze.LOOT_IRON = "lootIron"),
+      (ze.LOOT_BEEF = "lootBeef"),
+      (ze.CAPTURED_PRODUCTION_WOOD = "capturedProductionWood"),
+      (ze.CAPTURED_PRODUCTION_STONE = "capturedProductionStone"),
+      (ze.CAPTURED_PRODUCTION_FOOD = "capturedProductionFood"),
+      (ze.TREASURE_UNLOCK_IDS_OR = "orUnlockIDs"),
+      (ze.TREASURE_UNLOCK_IDS_AND = "andUnlockIDs"),
+      (ze.TREASURE_TYPE = "type"),
+      (ze.TREASURE_TYPE_DUNGEON = "DUNGEON"),
+      (ze.TREASURE_TYPE_BRIDGE = "BRIDGE"),
+      (ze.TREASURE_TYPE_BRIDGEDUNGEON = "BRIDGEDUNGEON"),
+      (ze.TREASURE_TYPE_MORALE_BOOSTER = "MORALBOOSTER"),
+      (ze.TREASURE_TYPE_PORT = "PORT"),
+      (ze.TREASURE_TYPE_SWAMP = "SWAMP"),
+      (ze.TREASURE_TYPE_SAND = "SAND"),
+      (ze.TREASURE_CHEST_COSTC2 = "COSTC2"),
+      (ze.DUNGEONLEVEL = "dungeonlevel"),
+      (ze.MAPPIECEPRICE = "costpiece"),
+      (ze.DIFFICULTY = "difficulty"),
+      (ze.UNIT_BOOST = "unitBoost"),
+      (ze.MARKET_BOOST = "marketBoost"),
+      (ze.SPY_BOOST = "spyBoost"),
+      (ze.IS_INSTANT_SPY_HORSE = "isInstantSpyHorse"),
+      (ze.COST_FACTOR_C1 = "costFactorC1"),
+      (ze.COST_FACTOR_C2 = "costFactorC2"),
+      (ze.ALLOWED_FOR_NPC_ATTACK_IN_KIDS = "allowedForNpcAttackInKingdom"),
+      (ze.IS_LAST_TUTORIAL_QUEST = "isLastTutorialQuest"),
+      (ze.IS_RELIC_BUILDING = "isRelicBuilding"),
+      (ze.SELL_WOOD = "sellWood"),
+      (ze.SELL_STONE = "sellStone"),
+      (ze.SELL_AQUAMARINE = "sellAquamarine"),
+      (ze.SELL_FOOD = "sellFood"),
+      (ze.SELL_COAL = "sellCoal"),
+      (ze.SELL_OIL = "sellOil"),
+      (ze.SELL_GLASS = "sellGlass"),
+      (ze.SELL_IRON = "sellIron"),
+      (ze.SELL_HONEY = "sellHoney"),
+      (ze.SELL_MEAD = "sellMead"),
+      (ze.SELL_BEEF = "sellBeef"),
+      (ze.SELL_CURRENCY1 = "sellC1"),
+      (ze.SELL_CURRENCY2 = "sellC2"),
+      (ze.WISHING_WELL = "wishingwell"),
+      (ze.WISHING_WELL_COIN = "wishingWellCoin"),
+      (ze.COST_WISHING_WELL_COINS = "costWishingWellCoin"),
+      (ze.ENTRY_COSTS = "entryCosts"),
+      (ze.EVENT = "event"),
+      (ze.EVENTID = "eventID"),
+      (ze.TRAVEL_TIME = "travelTime"),
+      (ze.SKIP_COST_C2 = "skipCostC2"),
+      (ze.REQUIRED_MAP_ID = "requiredMapID"),
+      (ze.THRESHOLD = "threshold"),
+      (ze.TOP_X = "topX"),
+      (ze.BOOSTED_WODS = "boostedWodIDs"),
+      (ze.REDUCTION = "reduction"),
+      (ze.ENABLE_WODS = "enabledWodIDs"),
+      (ze.ALLIANCE_FAME_BOOST = "allianceFameBoost"),
+      (ze.MAX_SOLDIERS = "maxSoldiers"),
+      (ze.RETURN_UNITS = "returnUnits"),
+      (ze.START_TMAP_WITH_UNITS = "startWithUnits"),
+      (ze.FAME_LEVEL = "fameLevel"),
+      (ze.FAME_DECREASE_PERCENT = "fameLoss"),
+      (ze.EVENT_TYPE = "eventType"),
+      (ze.PACKAGE_IDS = "packageIDs"),
+      (ze.PACKAGES = "packages"),
+      (ze.ARTIFACT = "artifact"),
+      (ze.ARTIFACT_LEAGUE = "artifactsLeague"),
+      (ze.ARTIFACT_LEAGUE_ID = "artifactsLeagueID"),
+      (ze.ARTIFACT_ID = "artifactID"),
+      (ze.ARTIFACT_PARTS = "artifactParts"),
+      (ze.ARTIFACT_PRICE = "artifactPrice"),
+      (ze.ARTIFACT_PART_PRICE = "artifactPartPrice"),
+      (ze.DROP_FACTOR = "dropFactor"),
+      (ze.EXPONENT = "exponent"),
+      (ze.OFFSET = "offset"),
+      (ze.AVERAGE_DUNGEON_LEVEL = "averageDungeonLevel"),
+      (ze.PACKAGE_ID = "packageID"),
+      (ze.PACKAGE_TYPE = "packageType"),
+      (ze.PACKAGE_PRICE_C1 = "packagePriceC1"),
+      (ze.PACKAGE_PRICE_C2 = "packagePriceC2"),
+      (ze.PACKAGE_PRICE_WOOD = "packagePriceWood"),
+      (ze.PACKAGE_PRICE_STONE = "packagePriceStone"),
+      (ze.PACKAGE_PRICE_FOOD = "packagePriceFood"),
+      (ze.PACKAGE_PRICE_COAL = "packagePriceCoal"),
+      (ze.PACKAGE_PRICE_OIL = "packagePriceOil"),
+      (ze.PACKAGE_PRICE_GLASS = "packagePriceGlass"),
+      (ze.PACKAGE_PRICE_IRON = "packagePriceIron"),
+      (ze.PACKAGE_PRICE_AQUAMARINE = "packagePriceAquamarine"),
+      (ze.PACKAGE_PRICE_HONEY = "packagePriceHoney"),
+      (ze.PACKAGE_PRICE_MEAD = "packagePriceMead"),
+      (ze.PACKAGE_PRICE_BEEF = "packagePriceBeef"),
+      (ze.BUY_AGAIN_REDUCED_COST_C2 = "buyAgainReducedCostC2"),
+      (ze.AMOUNT_WOOD = "amountWood"),
+      (ze.AMOUNT_STONE = "amountStone"),
+      (ze.AMOUNT_FOOD = "amountFood"),
+      (ze.AMOUNT_COAL = "amountCoal"),
+      (ze.AMOUNT_OIL = "amountOil"),
+      (ze.AMOUNT_GLASS = "amountGlass"),
+      (ze.AMOUNT_IRON = "amountIron"),
+      (ze.AMOUNT_C1 = "amountC1"),
+      (ze.WOD_AMOUNT = "wodAmount"),
+      (ze.PACKAGE_STOCK = "stock"),
+      (ze.FILL_UP_RESOURCE_STORAGE = "fillUpResourceStorage"),
+      (ze.FILL_ALL_KINGDOMS = "fillAllStorages"),
+      (ze.EXCLUDED_AREA_TYPES = "excludedAreaTypes"),
+      (ze.AMOUNT_SILVER_RUNES = "amountSilverRunes"),
+      (ze.IS_GIFT_PACKAGE = "isGiftPackage"),
+      (ze.AMOUNT_XP = "amountXP"),
+      (ze.MAX_BUY_PER_CLICK = "maxBuyPerClick"),
+      (ze.BOUNTY_TARGET_SKIP_COST_C2 = "targetSkipCostC2"),
+      (ze.FAME_AS_OFF = "fameAsOff"),
+      (ze.FAME_AS_DEF = "fameAsDef"),
+      (ze.DEFENCE_P_TOOLS_STACK = "dungeonPToolStacks"),
+      (ze.DEFENCE_NP_TOOLS_STACK = "dungeonNPToolStacks"),
+      (ze.HIDDEN_SOLDIERS_SPACE = "hiddenSoldiersSpace"),
+      (ze.KINGDOM_TRAVELLING_COST = "kingdomTravellingCost"),
+      (ze.CAN_BE_PRIME_SALE_OFFER = "canBePrimeSaleOffer"),
+      (ze.HOSPITAL_CAPACITY = "hospitalCapacity"),
+      (ze.HOSPITAL_SURVIVE_BOOST = "surviveBoost"),
+      (ze.HOSPITAL_SLOTS = "hospitalSlots"),
+      (ze.HEAL_SPEED = "healSpeed"),
+      (ze.RESEARCH = "research"),
+      (ze.RESEARCH_ID = "researchID"),
+      (ze.RESEARCH_GROUP_ID = "groupID"),
+      (ze.RESEARCH_LEVEL = "level"),
+      (ze.RESEARCH_PREREQUISITE_IDS = "prerequisiteIDs"),
+      (ze.RESEARCH_DURATION = "researchDuration"),
+      (ze.RECRUIT_SOLDIER_BOOST = "recruitSoldierBoost"),
+      (ze.BUILD_TOOL_BOOST = "buildToolBoost"),
+      (ze.TRAVEL_STATION_UNIT_BOOST = "travelStationUnitBoost"),
+      (ze.TRAVEL_SPY_BOOST = "travelSpyBoost"),
+      (ze.TRAVEL_MARKET_OWN_BOOST = "travelMarketOwnBoost"),
+      (ze.TAX_COLLECTOR_BOOST = "taxCollectorBoost"),
+      (ze.BUILDING_XP_BOOST = "buildingXPBoost"),
+      (ze.PRODUCTIVITY_WOOD_BOOST = "productivityWoodBoost"),
+      (ze.PRODUCTIVITY_STONE_BOOST = "productivityStoneBoost"),
+      (ze.PRODUCTIVITY_FOOD_BOOST = "productivityFoodBoost"),
+      (ze.BATTLE_XP_BOOST = "battleXPBoost"),
+      (ze.LOOT_BOOST = "lootBoost"),
+      (ze.RESEARCH_LOCK_WOD_IDS = "lockWodIDs"),
+      (ze.RESEARCH_UNLOCK_WOD_IDS = "unlockWodIDs"),
+      (ze.RESEARCH_SPEED_BOOST = "researchBoost"),
+      (ze.FAME_BOOST = "fameBoost"),
+      (ze.HONOR_BOOST = "honorBoost"),
+      (ze.PERCEPTION_BOOST = "perceptionBoost"),
+      (ze.MAGIC_FIND_BOOST = "magicFindBoost"),
+      (ze.POPULATION_BOOST = "populationAmountBoost"),
+      (ze.POPULATION_CONVERSION_BOOST = "peasantAmountBoost"),
+      (ze.CRAFT_COST_REDUCTION = "forgeCostReduction"),
+      (ze.STEALTH_BOOST = "stealthBoost"),
+      (ze.ONLY_WITH_RESEARCH_EXPERT = "onlyWithResearchExpert"),
+      (ze.REQUIRED_BUILDINGS = "requiredBuildings"),
+      (ze.REQUIRED_BUILDINGS_CONDITION = "requiredBuildingsCondition"),
+      (ze.RESEARCH_RECRUIT_SOLDIER_BOOST_ABSOLUTE =
         "recruitSoldierBoostAbsolute"),
-      (Ye.RESEARCH_BUILD_TOOL_BOOST_ABSOLUTE = "buildToolBoostAbsolute"),
-      (Ye.RESEARCH_PLUNDER_CAPACITY = "plunderCapacity"),
-      (Ye.RESEARCH_PRODUCT_WOOD_BOOST_ABSOLUTE =
+      (ze.RESEARCH_BUILD_TOOL_BOOST_ABSOLUTE = "buildToolBoostAbsolute"),
+      (ze.RESEARCH_PLUNDER_CAPACITY = "plunderCapacity"),
+      (ze.RESEARCH_PRODUCT_WOOD_BOOST_ABSOLUTE =
         "productivityWoodBoostAbsolute"),
-      (Ye.RESEARCH_PRODUCT_STONE_BOOST_ABSOLUTE =
+      (ze.RESEARCH_PRODUCT_STONE_BOOST_ABSOLUTE =
         "productivityStoneBoostAbsolute"),
-      (Ye.RESEARCH_PRODUCT_FOOD_BOOST_ABSOLUTE =
+      (ze.RESEARCH_PRODUCT_FOOD_BOOST_ABSOLUTE =
         "productivityFoodBoostAbsolute"),
-      (Ye.RESEARCH_BOOST_ABSOLUTE_ABSOLUTE = "researchBoostAbsolute"),
-      (Ye.RESEARCH_POPULATION_BOOST_ABSOLUTE = "populationAmountBoostAbsolute"),
-      (Ye.RESEARCH_XP_BONUS_ABSOLUTE = "xpBonusAbsolute"),
-      (Ye.VILLAGE = "village"),
-      (Ye.KINGDOM_ID = "kID"),
-      (Ye.TRIGGER_KINGDOM_ID = "triggerKingdomID"),
-      (Ye.RELATED_ID = "groupID"),
-      (Ye.WALL_WOD_ID = "wallWodId"),
-      (Ye.GATE_WOD_ID = "gateWodId"),
-      (Ye.KEEP_WOD_ID = "keepWodId"),
-      (Ye.MOAT_WOD_ID = "moatWodId"),
-      (Ye.PEASANTS = "peasants"),
-      (Ye.GUARDS_COUNT = "guards"),
-      (Ye.BOSS_DUNGEON = "bossdungeon"),
-      (Ye.COOLDOWN_DELAY = "cooldownDelay"),
-      (Ye.ATTACK_DELAY_RANGE = "attackDelayRange"),
-      (Ye.ATTACK_STRENGTH = "attackStrength"),
-      (Ye.PLAYER_COOLDOWN_DELAY = "playerCooldownDelay"),
-      (Ye.OWNER_ID = "ownerID"),
-      (Ye.KINGDOM_IDS = "kIDs"),
-      (Ye.KINGDOM = "kingdom"),
-      (Ye.UNIT_TRAVEL_TIME = "unitTravelTime"),
-      (Ye.RESOURCE_TRAVEL_TIME = "resourceTravelTime"),
-      (Ye.UNIT_TRAVEL_TAX_RATE = "unitTravelTaxRate"),
-      (Ye.RESOURCE_TRAVEL_TAX_RATE = "resourceTravelTaxRate"),
-      (Ye.MIN_LEVEL = "minLevel"),
-      (Ye.SKIP_UNIT_TRAVEL_C2_COST = "skipUnitTravelC2Cost"),
-      (Ye.SKIP_RESOURCE_TRAVEL_C2_COST = "skipResourceTravelC2Cost"),
-      (Ye.NOOB_PROTECTION_TIME = "noobProtectionTime"),
-      (Ye.REQUIRED_KINGDOM_ID = "requiredKingdomID"),
-      (Ye.VILLAGE_CAP_WOOD = "villageCapWood"),
-      (Ye.VILLAGE_CAP_STONE = "villageCapStone"),
-      (Ye.VILLAGE_CAP_FOOD = "villageCapFood"),
-      (Ye.NPC_COOLDOWN_FACTOR = "npcCooldownFactor"),
-      (Ye.MIN_C2_LEVEL = "minC2Level"),
-      (Ye.FAME_BONUS = "fameBonus"),
-      (Ye.FACTION_POINT_BONUS = "pointBonus"),
-      (Ye.C1_BONUS = "c1Bonus"),
-      (Ye.REPUTATION_BONUS = "reputationBonus"),
-      (Ye.RAGE_POINT_BONUS = "ragePointBonus"),
-      (Ye.IS_YARD_TOOL = "isYardTool"),
-      (Ye.IS_ALLOWED_TO_DEFEND = "allowedToDefend"),
-      (Ye.TOURNAMENT_PRIZE_DECO = "prizeDeco"),
-      (Ye.TOURNAMENT_FAME_PER_DAY = "famePerDay"),
-      (Ye.EVENT_DUNGEON_PROTECTION_TIME = "dungeonProtectionTime"),
-      (Ye.EVENT_DUNGEON_LOOT_C2 = "dungeonLootC2"),
-      (Ye.CAN_BE_USED_TO_ATTACK_NPC = "canBeUsedToAttackNPC"),
-      (Ye.CAN_BE_USED_BY_NPC = "canBeUsedByNPC"),
-      (Ye.INITIAL_WOOD = "initialWood"),
-      (Ye.INITIAL_FOOD = "initialFood"),
-      (Ye.INITIAL_STONE = "initialStone"),
-      (Ye.C2_FOR_REWARD = "c2ForReward"),
-      (Ye.REWARD_CAP = "rewardCap"),
-      (Ye.IGNORE_RESOURCE_STORAGE_CAPACITY = "ignoreResourceStorageCapacity"),
-      (Ye.MAIN_QUEST = "mainquest"),
-      (Ye.MAIN_QUEST_ID = "mainQuestID"),
-      (Ye.ANNOUNCEMENT_REQUIREMENTS = "IDsForAnnounced"),
-      (Ye.RUNNING_REQUIREMENTS = "IDsForRunning"),
-      (Ye.DONE_REQUIREMENTS = "IDsForDone"),
-      (Ye.PART_PAY_PRICE = "partpayprice"),
-      (Ye.PARTPAYPRICE_ID = "partPayPriceID"),
-      (Ye.PARTPAYMENT_SKIPPABLE = "skippable"),
-      (Ye.MODE = "mode"),
-      (Ye.FIXED = "fixed"),
-      (Ye.HOURLY_ROUNDED_TO_DAYS = "hourlyRoundedToDays"),
-      (Ye.PREMIUM_UNLOCK_C2 = "premiumUnlockCurrency2"),
-      (Ye.PREMIUM_UNLOCK_DISCOUNT = "premiumUnlockDiscount"),
-      (Ye.TRAVEL_KINGDOM_MARKET_TIME_REDUCTION =
+      (ze.RESEARCH_BOOST_ABSOLUTE_ABSOLUTE = "researchBoostAbsolute"),
+      (ze.RESEARCH_POPULATION_BOOST_ABSOLUTE = "populationAmountBoostAbsolute"),
+      (ze.RESEARCH_XP_BONUS_ABSOLUTE = "xpBonusAbsolute"),
+      (ze.VILLAGE = "village"),
+      (ze.KINGDOM_ID = "kID"),
+      (ze.TRIGGER_KINGDOM_ID = "triggerKingdomID"),
+      (ze.RELATED_ID = "groupID"),
+      (ze.WALL_WOD_ID = "wallWodId"),
+      (ze.GATE_WOD_ID = "gateWodId"),
+      (ze.KEEP_WOD_ID = "keepWodId"),
+      (ze.MOAT_WOD_ID = "moatWodId"),
+      (ze.PEASANTS = "peasants"),
+      (ze.GUARDS_COUNT = "guards"),
+      (ze.BOSS_DUNGEON = "bossdungeon"),
+      (ze.COOLDOWN_DELAY = "cooldownDelay"),
+      (ze.ATTACK_DELAY_RANGE = "attackDelayRange"),
+      (ze.ATTACK_STRENGTH = "attackStrength"),
+      (ze.PLAYER_COOLDOWN_DELAY = "playerCooldownDelay"),
+      (ze.OWNER_ID = "ownerID"),
+      (ze.KINGDOM_IDS = "kIDs"),
+      (ze.KINGDOM = "kingdom"),
+      (ze.UNIT_TRAVEL_TIME = "unitTravelTime"),
+      (ze.RESOURCE_TRAVEL_TIME = "resourceTravelTime"),
+      (ze.UNIT_TRAVEL_TAX_RATE = "unitTravelTaxRate"),
+      (ze.RESOURCE_TRAVEL_TAX_RATE = "resourceTravelTaxRate"),
+      (ze.MIN_LEVEL = "minLevel"),
+      (ze.SKIP_UNIT_TRAVEL_C2_COST = "skipUnitTravelC2Cost"),
+      (ze.SKIP_RESOURCE_TRAVEL_C2_COST = "skipResourceTravelC2Cost"),
+      (ze.NOOB_PROTECTION_TIME = "noobProtectionTime"),
+      (ze.REQUIRED_KINGDOM_ID = "requiredKingdomID"),
+      (ze.VILLAGE_CAP_WOOD = "villageCapWood"),
+      (ze.VILLAGE_CAP_STONE = "villageCapStone"),
+      (ze.VILLAGE_CAP_FOOD = "villageCapFood"),
+      (ze.NPC_COOLDOWN_FACTOR = "npcCooldownFactor"),
+      (ze.MIN_C2_LEVEL = "minC2Level"),
+      (ze.FAME_BONUS = "fameBonus"),
+      (ze.FACTION_POINT_BONUS = "pointBonus"),
+      (ze.C1_BONUS = "c1Bonus"),
+      (ze.REPUTATION_BONUS = "reputationBonus"),
+      (ze.RAGE_POINT_BONUS = "ragePointBonus"),
+      (ze.IS_YARD_TOOL = "isYardTool"),
+      (ze.IS_ALLOWED_TO_DEFEND = "allowedToDefend"),
+      (ze.TOURNAMENT_PRIZE_DECO = "prizeDeco"),
+      (ze.TOURNAMENT_FAME_PER_DAY = "famePerDay"),
+      (ze.EVENT_DUNGEON_PROTECTION_TIME = "dungeonProtectionTime"),
+      (ze.EVENT_DUNGEON_LOOT_C2 = "dungeonLootC2"),
+      (ze.CAN_BE_USED_TO_ATTACK_NPC = "canBeUsedToAttackNPC"),
+      (ze.CAN_BE_USED_BY_NPC = "canBeUsedByNPC"),
+      (ze.INITIAL_WOOD = "initialWood"),
+      (ze.INITIAL_FOOD = "initialFood"),
+      (ze.INITIAL_STONE = "initialStone"),
+      (ze.C2_FOR_REWARD = "c2ForReward"),
+      (ze.REWARD_CAP = "rewardCap"),
+      (ze.IGNORE_RESOURCE_STORAGE_CAPACITY = "ignoreResourceStorageCapacity"),
+      (ze.MAIN_QUEST = "mainquest"),
+      (ze.MAIN_QUEST_ID = "mainQuestID"),
+      (ze.ANNOUNCEMENT_REQUIREMENTS = "IDsForAnnounced"),
+      (ze.RUNNING_REQUIREMENTS = "IDsForRunning"),
+      (ze.DONE_REQUIREMENTS = "IDsForDone"),
+      (ze.PART_PAY_PRICE = "partpayprice"),
+      (ze.PARTPAYPRICE_ID = "partPayPriceID"),
+      (ze.PARTPAYMENT_SKIPPABLE = "skippable"),
+      (ze.MODE = "mode"),
+      (ze.FIXED = "fixed"),
+      (ze.HOURLY_ROUNDED_TO_DAYS = "hourlyRoundedToDays"),
+      (ze.PREMIUM_UNLOCK_C2 = "premiumUnlockCurrency2"),
+      (ze.PREMIUM_UNLOCK_DISCOUNT = "premiumUnlockDiscount"),
+      (ze.TRAVEL_KINGDOM_MARKET_TIME_REDUCTION =
         "travelKingdomMarketTimeReduction"),
-      (Ye.TRAVEL_KINGDOM_TROOP_TIME_REDUCTION =
+      (ze.TRAVEL_KINGDOM_TROOP_TIME_REDUCTION =
         "travelKingdomTroopTimeReduction"),
-      (Ye.TAX_COLLECTOR_NO_RUBIES = "taxCollectorNoRubies"),
-      (Ye.MARKET_CARRIAGE_CAPACITY_BOOST = "marketCarriageCapacityBoost"),
-      (Ye.GUARDS_BOOST = "guardsBoost"),
-      (Ye.MIN_RESEARCH_TOWER_LEVEL = "minResearchTowerLevel"),
-      (Ye.UNIT_BOOST_SPEED = "boostUnitSpeed"),
-      (Ye.CONSTRUCTION_EXPERT = "constructionExpert"),
-      (Ye.CUSTOM_DECO = "customDeco"),
-      (Ye.SLUM_LEVEL_NEEDED = "slumLevelNeeded"),
-      (Ye.HUNTER_RATIO = "hunterRatio"),
-      (Ye.HUNTER_MAX = "hunterMax"),
-      (Ye.ONLY_IN_AREA_TYPES = "onlyInAreaTypes"),
-      (Ye.ALLI_FOOD_PRODUCTION_BONUS = "alliFoodProductionBonus"),
-      (Ye.KINGDOM_FAME_BOOST = "kingdomFameBoost"),
-      (Ye.TAG_SPECIAL_CAMP = "specialcamp"),
-      (Ye.TYPE_CAPITAL = "CAPITAL"),
-      (Ye.TYPE_TOWER = "DUNGEON"),
-      (Ye.TYPE_VILLAGES = "VILLAGES"),
-      (Ye.LOOT_VALUE_MODIFIER = "lootValueModifier"),
-      (Ye.ATTRIBUTE_CAMP_ID = "specialcampID"),
-      (Ye.ATTRIBUTE_POSITION_X = "CampPosX"),
-      (Ye.ATTRIBUTE_POSITION_Y = "CampPosY"),
-      (Ye.ATTRIBUTE_PROTECTOR_ID = "unlockIDs"),
-      (Ye.ATTRIBUTE_ATTACKS_UNTIL_DESTROYED = "attacksUntilDestroyed"),
-      (Ye.ATTRIBUTE_VILLAGE_COUNT = "villageCount"),
-      (Ye.ATTRIBUTE_AREA_TYPES = "areaTypes"),
-      (Ye.PLAGUEMONK_COUNT = "plagueMonkCount"),
-      (Ye.MAX_REPEAT_COUNT = "maxRepeatCount"),
-      (Ye.FACTION_ID = "factionID"),
-      (Ye.FIRE_BRIGADE_BOOST = "fireBrigadeBoost"),
-      (Ye.IS_HIDDEN = "hidden"),
-      (Ye.RESOURCE_POINTS = "resourcePoints"),
-      (Ye.BUILDING_COST_REDUCTION = "buildingCostReduction"),
-      (Ye.RECRUIT_COST_REDUCTION = "recruitCostReduction"),
-      (Ye.HOSPITAL_SLOT_BOOST = "hospitalSlotBoost"),
-      (Ye.LEAGUE_TYPE = "leaguetype"),
-      (Ye.LEAGUE_TYPE_ID = "leaguetypeID"),
-      (Ye.SUB_TYPE_ID = "subType"),
-      (Ye.LEAGUE_INVISIBLE_RANKING = "hasInvisibleRanking"),
-      (Ye.ALLIANCE_REWARD_THRESHOLD_POINTS = "allianceRewardThresholdPoints"),
-      (Ye.LEAGUE_TYPE_CV_MIN = "countVictoryMin"),
-      (Ye.LEAGUE_TYPE_CV_MAX = "countVictoryMax"),
-      (Ye.TAG_HIGHSCOREBONI = "highscoreboni"),
-      (Ye.ATTRIBUTE_HIGH_RANK = "highestRank"),
-      (Ye.ATTRIBUTE_LOW_RANK = "lowestRank"),
-      (Ye.ATTRIBUTE_UNIT_REWARD = "unitReward"),
-      (Ye.ATTRIBUTE_C1_REWARD = "c1Reward"),
-      (Ye.ATTRIBUTE_MIN_AMOUNT = "minAmount"),
-      (Ye.ATTRIBUTE_TOOL_REWARD = "toolReward"),
-      (Ye.ATTRIBUTE_TOOL_MIN_AMOUNT = "toolMinAmount"),
-      (Ye.ATTRIBUTE_TOOL_OFFSET = "toolOffset"),
-      (Ye.EQ_DROP_CHANCE = "equipment_drop"),
-      (Ye.EQ_SLOT = "equipment_slot"),
-      (Ye.EQUIPMENT_EFFECT = "equipment_effect"),
-      (Ye.EQ_RARENESS = "equipment_rareness"),
-      (Ye.EQ_EFFECTSTRENGTH = "equipment_effectstrength"),
-      (Ye.EQ_WEARER = "equipment_wearer"),
-      (Ye.EQ_UNIQUE = "equipment"),
-      (Ye.EQ_SET = "equipment_set"),
-      (Ye.MAGIC_FIND_STRENGTH = "magicFindStrength"),
-      (Ye.EQ_GROUP = "equipment_group"),
-      (Ye.EFFECT_TYPE = "effecttype"),
-      (Ye.HERO_AMOUNT = "heroAmount"),
-      (Ye.HERO_SPECIAL_RARENESS_ID = "specialHeroOfRarenessID"),
-      (Ye.HERO_DROP_CHANCE = "heroDropChance"),
-      (Ye.EFFECT = "effect"),
-      (Ye.SLOT_ID = "slotID"),
-      (Ye.SLOT_IDS = "slotIDs"),
-      (Ye.BONUS = "bonus"),
-      (Ye.SINGLE_BONUS = "singleBonus"),
-      (Ye.DROPRATE = "dropRate"),
-      (Ye.DROP_CHANCE = "dropChance"),
-      (Ye.LEVEL_FACTOR = "levelFactor"),
-      (Ye.EFFECT_ID = "effectID"),
-      (Ye.STRENGTH_ID = "strengthID"),
-      (Ye.WEARER_ID = "wearerID"),
-      (Ye.RARENESS_ID = "rarenessID"),
-      (Ye.SECONDARY_ATTRIBUTES = "secondaryAttributes"),
-      (Ye.SALE_VALUE = "saleValue"),
-      (Ye.EQ_IDS = "equipmentIDs"),
-      (Ye.ENCHANTED_EQ_IDS = "enchantedEquipmentIDs"),
-      (Ye.EQ_ID = "equipmentID"),
-      (Ye.ENCHANTED_EQ_ID = "enchantedEquipmentID"),
-      (Ye.EFFECTS = "effects"),
-      (Ye.PRIMARY = "primary"),
-      (Ye.APPEARANCE_COUNT = "appearanceCount"),
-      (Ye.SET_ID = "setID"),
-      (Ye.NEEDED_ITEMS = "neededItems"),
-      (Ye.EFFECT_BONUS_LIMIT = "maxTotalBonus"),
-      (Ye.PICTURE_ID = "picID"),
-      (Ye.ENCHANT_PRIMARY_BONUS = "enchantmentPrimaryBonus"),
-      (Ye.ENCHANT_SECONDARY_BONUS = "enchantmentSecondaryBonus"),
-      (Ye.ITEM_GROUP_ID = "itemGroupID"),
-      (Ye.EXCLUDE_EFFECT = "excludedMali"),
-      (Ye.AREA_TYPE_ID = "areaTypeID"),
-      (Ye.DROP_ID = "dropID"),
-      (Ye.EFFECT_TYPE_ID = "effectTypeID"),
-      (Ye.IGNORE_CAP = "ignoreCap"),
-      (Ye.EQUIPMENT_EFFECT_ID = "equipmentEffectID"),
-      (Ye.CAN_SLOT_GEM = "canSlotGem"),
-      (Ye.SELL_PRICE_OVERRIDE = "sellPriceOverride"),
-      (Ye.SPECIAL_LORDS = "lord"),
-      (Ye.LORD_ID = "lordID"),
-      (Ye.EQUIPMENT_DUNGEON_LEVEL = "equipmentDungeonLevel"),
-      (Ye.EQUIPMENT_AMOUNT = "equipmentAmount"),
-      (Ye.SPECIAL_EQUIPMENT_OF_RARENESS_ID = "specialEquipmentOfRarenessID"),
-      (Ye.EQUIPMENT_IDS = "equipmentIDs"),
-      (Ye.SHADOW_LORD_MIN_LEVEL = "minLevel"),
-      (Ye.SHADOW_LORD_MAX_LEVEL = "maxLevel"),
-      (Ye.REWARD = "reward"),
-      (Ye.DECO_WOD_ID = "decoWodID"),
-      (Ye.IGNORE_VIP_POINT_CAP = "ignoreVipPointCap"),
-      (Ye.EXTINGUISH_FIRE = "extinguishFire"),
-      (Ye.ALLIANCE_GIFT = "allianceGift"),
-      (Ye.GIFT_PACKAGE_IDS = "giftPackageIDs"),
-      (Ye.IGNORE_GIFT_CAP = "ignoreGiftCapacity"),
-      (Ye.GLORY_BOOSTER = "gloryBooster"),
-      (Ye.PERSONAL_GLORY_BOOSTER = "personalGloryBooster"),
-      (Ye.GLORY_BOOSTER_DURATION = "gloryBoosterDuration"),
-      (Ye.KHAN_TABLET_BOOSTER = "khanTabletBooster"),
-      (Ye.KHAN_BOOSTER_DURATION = "khanBoosterDuration"),
-      (Ye.XP_BOOSTER = "xpBooster"),
-      (Ye.XP_BOOSTER_BUILDING = "xpBoosterBuilding"),
-      (Ye.XP_BOOSTER_DURATION = "xpBoosterDuration"),
-      (Ye.KHAN_MEDAL_BOOSTER = "khanMedalBooster"),
-      (Ye.RAGE_POINT_BOOSTER = "ragePointBooster"),
-      (Ye.REPUTATION_POINT_BOOSTER = "reputationPointBooster"),
-      (Ye.GALLANTRY_POINT_BOOSTER = "gallantryPointBooster"),
-      (Ye.SAMURAI_TOKENS_BOOSTER = "samuraiTokenBooster"),
-      (Ye.CARAVAN_OVERLOADER_BOOSTER = "caravanOverloaderBooster"),
-      (Ye.INSTRUCTOR_BOOSTER = "instructorBooster"),
-      (Ye.TAX_COLLECTOR_BOOSTER = "taxCollectorBooster"),
-      (Ye.MARAUDER_BOOSTER = "maraduerBooster"),
-      (Ye.RETURNING_SPEED_BOOSTER = "returningSpeedBooster"),
-      (Ye.RANDOM_GROUP = "randomgroup"),
-      (Ye.RANDOM_GROUP_TYPE = "groupType"),
-      (Ye.RANDOM_GROUP_ENTRY_ID = "randomGroupEntryID"),
-      (Ye.PROBABILITY = "probability"),
-      (Ye.AMOUNT = "amount"),
-      (Ye.PAYMENTREWARD = "paymentreward"),
-      (Ye.PAYMENTREWARD_ID = "paymentrewardID"),
-      (Ye.LIFETIME_SPENT_C2_MIN = "c2LifetimeSpentMin"),
-      (Ye.LIFETIME_SPENT_C2_MAX = "c2LifetimeSpentMax"),
-      (Ye.C2_PURCHASED_90DAYS_MIN = "C290daysMin"),
-      (Ye.C2_PURCHASED_90DAYS_MAX = "C290daysMax"),
-      (Ye.BOOSTERS = "boosters"),
-      (Ye.ABTEST_GROUP_COUNT = "abGoupCount"),
-      (Ye.ABTEST_GROUP_IDS = "abGroupIDs"),
-      (Ye.REWARDS = "rewards"),
-      (Ye.SLOTS = "slots"),
-      (Ye.RANDOM_GROUP_KEY = "RG"),
-      (Ye.DEFAULT_SKIN_ID = "skinID"),
-      (Ye.DAYS_SINCE_LAST_PAYMENT_MIN = "daysSinceLastPaymentMin"),
-      (Ye.DAYS_SINCE_LAST_PAYMENT_MAX = "daysSinceLastPaymentMax"),
-      (Ye.PAYMENTREWARD_IDS = "paymentRewardIDs"),
-      (Ye.PRIMEDAY = "primeDay"),
-      (Ye.PRIMEDAY_ID = "primeDayID"),
-      (Ye.C2_STOCK_MIN = "currentC2StockMin"),
-      (Ye.C2_STOCK_MAX = "currentC2StockMax"),
-      (Ye.PAYMENTS_LAST14_DAYS_MIN = "paymentsLast14DaysMin"),
-      (Ye.PAYMENTS_LAST14_DAYS_MAX = "paymentsLast14DaysMax"),
-      (Ye.ACTIVITY_CHEST = "activityreward"),
-      (Ye.ACTIVITY_CHEST_ID = "activityRewardID"),
-      (Ye.REWARD_ID = "rewardID"),
-      (Ye.WAITING_TIME = "waitingTime"),
-      (Ye.BEGINNER_LOGIN_REWARD_ID = "beginnerLoginRewardID"),
-      (Ye.JUDGEMENT_CITIZEN_EVENT = "judgement"),
-      (Ye.JUDGEMENT_CITIZEN_ID = "judgementID"),
-      (Ye.CONDTYP_A = "conditionTypeA"),
-      (Ye.CONDTYP_B = "conditionTypeB"),
-      (Ye.REWARDTYP_A = "rewardTypeA"),
-      (Ye.REWARDTYP_B = "rewardTypeB"),
-      (Ye.DAILY_REWARD = "dailyreward"),
-      (Ye.DAILY_REWARD_ID = "dailyRewardID"),
-      (Ye.REWARD_POINTS = "rewardPoints"),
-      (Ye.UNITS_A = "unitA"),
-      (Ye.UNITS_B = "unitB"),
-      (Ye.UNITS_C = "unitC"),
-      (Ye.DAILY_QUEST_ID = "dailyQuestID"),
-      (Ye.LEVEL_CALCULATED = "levelCalculated"),
-      (Ye.EQUIPMENT = "equipment"),
-      (Ye.REWARD_IDS = "rewardIDs"),
-      (Ye.DURATION = "duration"),
-      (Ye.REPUTATION = "reputation"),
-      (Ye.SLUM = "slum"),
-      (Ye.SLUM_ID = "slumID"),
-      (Ye.SLUM_LEVEL = "slumLevel"),
-      (Ye.WINNER_REWARD_IDS = "winnerRewardIDs"),
-      (Ye.TOP_X_REWARD_IDS = "topXRewardIDs"),
-      (Ye.BOOBY_REWARD_IDS = "boobyRewardIDs"),
-      (Ye.FAMERANK = "famerank"),
-      (Ye.MIGHT_RANK = "mightrank"),
-      (Ye.FAME_ID = "fameID"),
-      (Ye.MIGHT_ID = "mightID"),
-      (Ye.ATTACK_BOOST = "attackBoost"),
-      (Ye.ATTACK_BOOST_PVP = "pvpAttackBoost"),
-      (Ye.MOVEMENT_BOOST = "movementBoost"),
-      (Ye.PVP_COIN_BOOST = "pvpCoinBoost"),
-      (Ye.ALLIANCEFAMERANK = "alliancefamerank"),
-      (Ye.BEGINNER_LOGINREWARD = "beginner_loginreward"),
-      (Ye.PACKAGE = "package"),
-      (Ye.VALID_KINGDOMS = "validKingdoms"),
-      (Ye.IS_NOT_REBUYABLE = "notRebuyable"),
-      (Ye.SPECIAL_EQUIPMENT_WITH_SLOT_ID = "specialEquipmentWithSlotID"),
-      (Ye.EQUIPMENTDROPCHANCE = "equipmentDropChance"),
-      (Ye.LUCKYWHEEL_TICKETS = "luckyWheelTickets"),
-      (Ye.NOMAD_CAMP = "nomadCamp"),
-      (Ye.COUNT_VICTORY = "countVictory"),
-      (Ye.MIN_SIGHT_LEVEL = "minSightLevel"),
-      (Ye.MAX_SIGHT_LEVEL = "maxSightLevel"),
-      (Ye.SAMURAI_CAMP = "samuraiCamp"),
-      (Ye.FACTION_INVASION_CAMP = "factioninvasioncamp"),
-      (Ye.FACTION_INVASION_CAMP_ID = "factionInvasionCampID"),
-      (Ye.MINE_TYPE = "mineType"),
-      (Ye.MINE_TYPE_ID = "mineTypeID"),
-      (Ye.AMOUNT_LOOTABLE = "amountLootable"),
-      (Ye.AMOUNT_PER_COLLECT_C1 = "amountPerCollectC1"),
-      (Ye.AMOUNT_PER_COLLECT_C2 = "amountPerCollectC2"),
-      (Ye.AMOUNT_INFLUENCE_PER_MINUTE = "amountInfluencePerMinute"),
-      (Ye.MAX_INFLUENCE_POINTS = "maxInfluencePoints"),
-      (Ye.EMPTY_AREA = "emptyArea"),
-      (Ye.AREA_TYPE = "areaType"),
-      (Ye.STARTING_FOOD = "startingFood"),
-      (Ye.EXPANSION = "expansion"),
-      (Ye.EXPANSION_ID = "expansionID"),
-      (Ye.SPACE_IDS = "spaceIDs"),
-      (Ye.EXPANSION_LEVEL = "expansionLevel"),
-      (Ye.CONSTRUCTIONSLOTCOUNT = "constructionSlotCount"),
-      (Ye.LOW_LEVEL_MAINCASTLE_COSTC2 = "lowLevelMainCastleCostC2"),
-      (Ye.MIN_SCORE_FOR_BOOBY = "minScoreForBooby"),
-      (Ye.POINT_EVENT_QUEST = "pointeventquest"),
-      (Ye.POINT_EVENT_TYPE = "pointeventtype"),
-      (Ye.POINT_EVENT_REWARD_SET = "pointeventrewardset"),
-      (Ye.POINT_EVENT_QUESTS_ID = "pointEventQuestIDs"),
-      (Ye.POINT_EVENT_QUEST_ID = "pointEventQuestID"),
-      (Ye.POINT_EVENT_TYPE_ID = "pointEventTypeID"),
-      (Ye.THRESHOLD_NAME = "neededPointsForReward"),
-      (Ye.THRESHOLDS = "neededPointsForRewards"),
-      (Ye.INCREMENTAL = "incremental"),
-      (Ye.POINTS_FOR_CONDITION = "pointsPerTier"),
-      (Ye.NEXT_ACTIVITY_REWARD_ID = "nextActivityRewardID"),
-      (Ye.REWARD_THRESHOLDS = "rewardThresholds"),
-      (Ye.THRESHOLD_REWARD_IDS = "thresholdRewardIDs"),
-      (Ye.REWARD_RANKS = "rewardRanks"),
-      (Ye.RANK_REWARD_IDS = "rankRewardIDs"),
-      (Ye.LONGTERM_POINT_EVENT_QUEST = "longtermpointeventquest"),
-      (Ye.SUB_EVENT_ID = "subEventID"),
-      (Ye.LONGTERM_POINT_EVENT_LEAGUE = "leaguetypelongtermpointevent"),
-      (Ye.LONGTERM_POINT_EVENT_LEAGUE_TYPE = "leaguetypeLongtermpointEventsID"),
-      (Ye.DIFFICULTY_IDS_MAX_POINTS = "difficultyIDforMaxPoints"),
-      (Ye.DIFFICULTY_MAX_POINTS = "difficultyMaxPoints"),
-      (Ye.DIFFICULTY_THRESHOLDS = "difficultyScalingNeededPointsForRewards"),
-      (Ye.DIFFICULTY_REWARDS_IDS = "difficultyScalingRewardIDs"),
-      (Ye.BOOSTER = "booster"),
-      (Ye.TOOLS = "tools"),
-      (Ye.ITEM_RARENESS = "equipmentRarenessID"),
-      (Ye.C1_MYSTERY = "c1"),
-      (Ye.C2_MYSTERY = "c2"),
-      (Ye.REWARD_CHOICE_MYSTERY = "choice"),
-      (Ye.REWARD_VIP_MYSTERY = "vip"),
-      (Ye.REWARD_ALLIANCE_MYSTERY = "alliance"),
-      (Ye.DAY = "day"),
-      (Ye.LEVEL_BRACKET = "levelBracket"),
-      (Ye.REWARD_STEP = "rewardStep"),
-      (Ye.VIP_POINTS = "vipPoints"),
-      (Ye.VIP_TIME = "vipTime"),
-      (Ye.VIP_LEVEL = "viplevel"),
-      (Ye.VIP_LEVEL_ID = "vipLevelID"),
-      (Ye.THRESHOLD_MIN = "thresholdMin"),
-      (Ye.THRESHOLD_MAX = "thresholdMax"),
-      (Ye.WOOD_BOOSTS = "woodBoosts"),
-      (Ye.STONE_BOOSTS = "stoneBoosts"),
-      (Ye.FOOD_BOOSTS = "foodBoosts"),
-      (Ye.BONUS_LOGIN_KEYS = "bonusLoginKeys"),
-      (Ye.ATTACK_SPEED_BOOST = "attackSpeedBoost"),
-      (Ye.ATTACK_FAME_BOOST = "attackFameBoost"),
-      (Ye.PRODUCTION_BONUS_SLOTS = "productionBonusSlots"),
-      (Ye.RECRUITMENT_BONUS_SLOTS = "recruitmentBonusSlots"),
-      (Ye.FREE_PREMIUM_GENERALS_PER_DAY = "freePremiumGeneralsPerDay"),
-      (Ye.TAX_COLLECTOR_NO_RUBIES_12 = "taxCollectorNoRubies12"),
-      (Ye.TAX_COLLECTOR_NO_RUBIES_24 = "taxCollectorNoRubies24"),
-      (Ye.MOVABLE = "movable"),
-      (Ye.FORCED_POSITION = "forcedPosition"),
-      (Ye.EXPANSION_REWARD_POSITION = "ExpansionRewardPosition"),
-      (Ye.LEAGUE_TYPE_EVENT_ID = "leaguetypeEventsID"),
-      (Ye.RESSOURCE_FACTORS = "ressourceFactors"),
-      (Ye.TOPXVALUE = "topXValue"),
-      (Ye.LEAGUETYPEEVENT = "leaguetypeevent"),
-      (Ye.LEAGUE_TYPE_TOPX = "leaguetypeTopXSize"),
-      (Ye.HARD_MODE_START = "hardModeStart"),
-      (Ye.ALLIANCEHELPREQUEST = "alliancehelprequest"),
-      (Ye.ALLIANCEHELPREQUEST_ID = "allianceHelpRequestID"),
-      (Ye.ALLIANCEHELPREQUEST_MAX_HELPERS_COUNT = "maxHelpersCount"),
-      (Ye.ALLIANCEHELPREQUEST_UNIT_COUNT_BONUS = "unitCountBonus"),
-      (Ye.ALLIANCEHELPREQUEST_UNIT_HEAL_TIME_REDUCTION =
+      (ze.TAX_COLLECTOR_NO_RUBIES = "taxCollectorNoRubies"),
+      (ze.MARKET_CARRIAGE_CAPACITY_BOOST = "marketCarriageCapacityBoost"),
+      (ze.GUARDS_BOOST = "guardsBoost"),
+      (ze.MIN_RESEARCH_TOWER_LEVEL = "minResearchTowerLevel"),
+      (ze.UNIT_BOOST_SPEED = "boostUnitSpeed"),
+      (ze.CONSTRUCTION_EXPERT = "constructionExpert"),
+      (ze.CUSTOM_DECO = "customDeco"),
+      (ze.SLUM_LEVEL_NEEDED = "slumLevelNeeded"),
+      (ze.HUNTER_RATIO = "hunterRatio"),
+      (ze.HUNTER_MAX = "hunterMax"),
+      (ze.ONLY_IN_AREA_TYPES = "onlyInAreaTypes"),
+      (ze.ALLI_FOOD_PRODUCTION_BONUS = "alliFoodProductionBonus"),
+      (ze.KINGDOM_FAME_BOOST = "kingdomFameBoost"),
+      (ze.TAG_SPECIAL_CAMP = "specialcamp"),
+      (ze.TYPE_CAPITAL = "CAPITAL"),
+      (ze.TYPE_TOWER = "DUNGEON"),
+      (ze.TYPE_VILLAGES = "VILLAGES"),
+      (ze.LOOT_VALUE_MODIFIER = "lootValueModifier"),
+      (ze.ATTRIBUTE_CAMP_ID = "specialcampID"),
+      (ze.ATTRIBUTE_POSITION_X = "CampPosX"),
+      (ze.ATTRIBUTE_POSITION_Y = "CampPosY"),
+      (ze.ATTRIBUTE_PROTECTOR_ID = "unlockIDs"),
+      (ze.ATTRIBUTE_ATTACKS_UNTIL_DESTROYED = "attacksUntilDestroyed"),
+      (ze.ATTRIBUTE_VILLAGE_COUNT = "villageCount"),
+      (ze.ATTRIBUTE_AREA_TYPES = "areaTypes"),
+      (ze.PLAGUEMONK_COUNT = "plagueMonkCount"),
+      (ze.MAX_REPEAT_COUNT = "maxRepeatCount"),
+      (ze.FACTION_ID = "factionID"),
+      (ze.FIRE_BRIGADE_BOOST = "fireBrigadeBoost"),
+      (ze.IS_HIDDEN = "hidden"),
+      (ze.RESOURCE_POINTS = "resourcePoints"),
+      (ze.BUILDING_COST_REDUCTION = "buildingCostReduction"),
+      (ze.RECRUIT_COST_REDUCTION = "recruitCostReduction"),
+      (ze.HOSPITAL_SLOT_BOOST = "hospitalSlotBoost"),
+      (ze.LEAGUE_TYPE = "leaguetype"),
+      (ze.LEAGUE_TYPE_ID = "leaguetypeID"),
+      (ze.SUB_TYPE_ID = "subType"),
+      (ze.LEAGUE_INVISIBLE_RANKING = "hasInvisibleRanking"),
+      (ze.ALLIANCE_REWARD_THRESHOLD_POINTS = "allianceRewardThresholdPoints"),
+      (ze.LEAGUE_TYPE_CV_MIN = "countVictoryMin"),
+      (ze.LEAGUE_TYPE_CV_MAX = "countVictoryMax"),
+      (ze.TAG_HIGHSCOREBONI = "highscoreboni"),
+      (ze.ATTRIBUTE_HIGH_RANK = "highestRank"),
+      (ze.ATTRIBUTE_LOW_RANK = "lowestRank"),
+      (ze.ATTRIBUTE_UNIT_REWARD = "unitReward"),
+      (ze.ATTRIBUTE_C1_REWARD = "c1Reward"),
+      (ze.ATTRIBUTE_MIN_AMOUNT = "minAmount"),
+      (ze.ATTRIBUTE_TOOL_REWARD = "toolReward"),
+      (ze.ATTRIBUTE_TOOL_MIN_AMOUNT = "toolMinAmount"),
+      (ze.ATTRIBUTE_TOOL_OFFSET = "toolOffset"),
+      (ze.EQ_DROP_CHANCE = "equipment_drop"),
+      (ze.EQ_SLOT = "equipment_slot"),
+      (ze.EQUIPMENT_EFFECT = "equipment_effect"),
+      (ze.EQ_RARENESS = "equipment_rareness"),
+      (ze.EQ_EFFECTSTRENGTH = "equipment_effectstrength"),
+      (ze.EQ_WEARER = "equipment_wearer"),
+      (ze.EQ_UNIQUE = "equipment"),
+      (ze.EQ_SET = "equipment_set"),
+      (ze.MAGIC_FIND_STRENGTH = "magicFindStrength"),
+      (ze.EQ_GROUP = "equipment_group"),
+      (ze.EFFECT_TYPE = "effecttype"),
+      (ze.HERO_AMOUNT = "heroAmount"),
+      (ze.HERO_SPECIAL_RARENESS_ID = "specialHeroOfRarenessID"),
+      (ze.HERO_DROP_CHANCE = "heroDropChance"),
+      (ze.EFFECT = "effect"),
+      (ze.SLOT_ID = "slotID"),
+      (ze.SLOT_IDS = "slotIDs"),
+      (ze.BONUS = "bonus"),
+      (ze.SINGLE_BONUS = "singleBonus"),
+      (ze.DROPRATE = "dropRate"),
+      (ze.DROP_CHANCE = "dropChance"),
+      (ze.LEVEL_FACTOR = "levelFactor"),
+      (ze.EFFECT_ID = "effectID"),
+      (ze.STRENGTH_ID = "strengthID"),
+      (ze.WEARER_ID = "wearerID"),
+      (ze.RARENESS_ID = "rarenessID"),
+      (ze.SECONDARY_ATTRIBUTES = "secondaryAttributes"),
+      (ze.SALE_VALUE = "saleValue"),
+      (ze.EQ_IDS = "equipmentIDs"),
+      (ze.ENCHANTED_EQ_IDS = "enchantedEquipmentIDs"),
+      (ze.EQ_ID = "equipmentID"),
+      (ze.ENCHANTED_EQ_ID = "enchantedEquipmentID"),
+      (ze.EFFECTS = "effects"),
+      (ze.PRIMARY = "primary"),
+      (ze.APPEARANCE_COUNT = "appearanceCount"),
+      (ze.SET_ID = "setID"),
+      (ze.NEEDED_ITEMS = "neededItems"),
+      (ze.EFFECT_BONUS_LIMIT = "maxTotalBonus"),
+      (ze.PICTURE_ID = "picID"),
+      (ze.ENCHANT_PRIMARY_BONUS = "enchantmentPrimaryBonus"),
+      (ze.ENCHANT_SECONDARY_BONUS = "enchantmentSecondaryBonus"),
+      (ze.ITEM_GROUP_ID = "itemGroupID"),
+      (ze.EXCLUDE_EFFECT = "excludedMali"),
+      (ze.AREA_TYPE_ID = "areaTypeID"),
+      (ze.DROP_ID = "dropID"),
+      (ze.EFFECT_TYPE_ID = "effectTypeID"),
+      (ze.IGNORE_CAP = "ignoreCap"),
+      (ze.EQUIPMENT_EFFECT_ID = "equipmentEffectID"),
+      (ze.CAN_SLOT_GEM = "canSlotGem"),
+      (ze.SELL_PRICE_OVERRIDE = "sellPriceOverride"),
+      (ze.SPECIAL_LORDS = "lord"),
+      (ze.LORD_ID = "lordID"),
+      (ze.EQUIPMENT_DUNGEON_LEVEL = "equipmentDungeonLevel"),
+      (ze.EQUIPMENT_AMOUNT = "equipmentAmount"),
+      (ze.SPECIAL_EQUIPMENT_OF_RARENESS_ID = "specialEquipmentOfRarenessID"),
+      (ze.EQUIPMENT_IDS = "equipmentIDs"),
+      (ze.SHADOW_LORD_MIN_LEVEL = "minLevel"),
+      (ze.SHADOW_LORD_MAX_LEVEL = "maxLevel"),
+      (ze.REWARD = "reward"),
+      (ze.DECO_WOD_ID = "decoWodID"),
+      (ze.IGNORE_VIP_POINT_CAP = "ignoreVipPointCap"),
+      (ze.EXTINGUISH_FIRE = "extinguishFire"),
+      (ze.ALLIANCE_GIFT = "allianceGift"),
+      (ze.GIFT_PACKAGE_IDS = "giftPackageIDs"),
+      (ze.IGNORE_GIFT_CAP = "ignoreGiftCapacity"),
+      (ze.GLORY_BOOSTER = "gloryBooster"),
+      (ze.PERSONAL_GLORY_BOOSTER = "personalGloryBooster"),
+      (ze.GLORY_BOOSTER_DURATION = "gloryBoosterDuration"),
+      (ze.KHAN_TABLET_BOOSTER = "khanTabletBooster"),
+      (ze.KHAN_BOOSTER_DURATION = "khanBoosterDuration"),
+      (ze.XP_BOOSTER = "xpBooster"),
+      (ze.XP_BOOSTER_BUILDING = "xpBoosterBuilding"),
+      (ze.XP_BOOSTER_DURATION = "xpBoosterDuration"),
+      (ze.KHAN_MEDAL_BOOSTER = "khanMedalBooster"),
+      (ze.RAGE_POINT_BOOSTER = "ragePointBooster"),
+      (ze.REPUTATION_POINT_BOOSTER = "reputationPointBooster"),
+      (ze.GALLANTRY_POINT_BOOSTER = "gallantryPointBooster"),
+      (ze.SAMURAI_TOKENS_BOOSTER = "samuraiTokenBooster"),
+      (ze.CARAVAN_OVERLOADER_BOOSTER = "caravanOverloaderBooster"),
+      (ze.INSTRUCTOR_BOOSTER = "instructorBooster"),
+      (ze.TAX_COLLECTOR_BOOSTER = "taxCollectorBooster"),
+      (ze.MARAUDER_BOOSTER = "maraduerBooster"),
+      (ze.RETURNING_SPEED_BOOSTER = "returningSpeedBooster"),
+      (ze.RANDOM_GROUP = "randomgroup"),
+      (ze.RANDOM_GROUP_TYPE = "groupType"),
+      (ze.RANDOM_GROUP_ENTRY_ID = "randomGroupEntryID"),
+      (ze.PROBABILITY = "probability"),
+      (ze.AMOUNT = "amount"),
+      (ze.PAYMENTREWARD = "paymentreward"),
+      (ze.PAYMENTREWARD_ID = "paymentrewardID"),
+      (ze.LIFETIME_SPENT_C2_MIN = "c2LifetimeSpentMin"),
+      (ze.LIFETIME_SPENT_C2_MAX = "c2LifetimeSpentMax"),
+      (ze.C2_PURCHASED_90DAYS_MIN = "C290daysMin"),
+      (ze.C2_PURCHASED_90DAYS_MAX = "C290daysMax"),
+      (ze.BOOSTERS = "boosters"),
+      (ze.ABTEST_GROUP_COUNT = "abGoupCount"),
+      (ze.ABTEST_GROUP_IDS = "abGroupIDs"),
+      (ze.REWARDS = "rewards"),
+      (ze.SLOTS = "slots"),
+      (ze.RANDOM_GROUP_KEY = "RG"),
+      (ze.DEFAULT_SKIN_ID = "skinID"),
+      (ze.DAYS_SINCE_LAST_PAYMENT_MIN = "daysSinceLastPaymentMin"),
+      (ze.DAYS_SINCE_LAST_PAYMENT_MAX = "daysSinceLastPaymentMax"),
+      (ze.PAYMENTREWARD_IDS = "paymentRewardIDs"),
+      (ze.PRIMEDAY = "primeDay"),
+      (ze.PRIMEDAY_ID = "primeDayID"),
+      (ze.C2_STOCK_MIN = "currentC2StockMin"),
+      (ze.C2_STOCK_MAX = "currentC2StockMax"),
+      (ze.PAYMENTS_LAST14_DAYS_MIN = "paymentsLast14DaysMin"),
+      (ze.PAYMENTS_LAST14_DAYS_MAX = "paymentsLast14DaysMax"),
+      (ze.ACTIVITY_CHEST = "activityreward"),
+      (ze.ACTIVITY_CHEST_ID = "activityRewardID"),
+      (ze.REWARD_ID = "rewardID"),
+      (ze.WAITING_TIME = "waitingTime"),
+      (ze.BEGINNER_LOGIN_REWARD_ID = "beginnerLoginRewardID"),
+      (ze.JUDGEMENT_CITIZEN_EVENT = "judgement"),
+      (ze.JUDGEMENT_CITIZEN_ID = "judgementID"),
+      (ze.CONDTYP_A = "conditionTypeA"),
+      (ze.CONDTYP_B = "conditionTypeB"),
+      (ze.REWARDTYP_A = "rewardTypeA"),
+      (ze.REWARDTYP_B = "rewardTypeB"),
+      (ze.DAILY_REWARD = "dailyreward"),
+      (ze.DAILY_REWARD_ID = "dailyRewardID"),
+      (ze.REWARD_POINTS = "rewardPoints"),
+      (ze.UNITS_A = "unitA"),
+      (ze.UNITS_B = "unitB"),
+      (ze.UNITS_C = "unitC"),
+      (ze.DAILY_QUEST_ID = "dailyQuestID"),
+      (ze.LEVEL_CALCULATED = "levelCalculated"),
+      (ze.EQUIPMENT = "equipment"),
+      (ze.REWARD_IDS = "rewardIDs"),
+      (ze.DURATION = "duration"),
+      (ze.REPUTATION = "reputation"),
+      (ze.SLUM = "slum"),
+      (ze.SLUM_ID = "slumID"),
+      (ze.SLUM_LEVEL = "slumLevel"),
+      (ze.WINNER_REWARD_IDS = "winnerRewardIDs"),
+      (ze.TOP_X_REWARD_IDS = "topXRewardIDs"),
+      (ze.BOOBY_REWARD_IDS = "boobyRewardIDs"),
+      (ze.FAMERANK = "famerank"),
+      (ze.MIGHT_RANK = "mightrank"),
+      (ze.FAME_ID = "fameID"),
+      (ze.MIGHT_ID = "mightID"),
+      (ze.ATTACK_BOOST = "attackBoost"),
+      (ze.ATTACK_BOOST_PVP = "pvpAttackBoost"),
+      (ze.MOVEMENT_BOOST = "movementBoost"),
+      (ze.PVP_COIN_BOOST = "pvpCoinBoost"),
+      (ze.ALLIANCEFAMERANK = "alliancefamerank"),
+      (ze.BEGINNER_LOGINREWARD = "beginner_loginreward"),
+      (ze.PACKAGE = "package"),
+      (ze.VALID_KINGDOMS = "validKingdoms"),
+      (ze.IS_NOT_REBUYABLE = "notRebuyable"),
+      (ze.SPECIAL_EQUIPMENT_WITH_SLOT_ID = "specialEquipmentWithSlotID"),
+      (ze.EQUIPMENTDROPCHANCE = "equipmentDropChance"),
+      (ze.LUCKYWHEEL_TICKETS = "luckyWheelTickets"),
+      (ze.NOMAD_CAMP = "nomadCamp"),
+      (ze.COUNT_VICTORY = "countVictory"),
+      (ze.MIN_SIGHT_LEVEL = "minSightLevel"),
+      (ze.MAX_SIGHT_LEVEL = "maxSightLevel"),
+      (ze.SAMURAI_CAMP = "samuraiCamp"),
+      (ze.FACTION_INVASION_CAMP = "factioninvasioncamp"),
+      (ze.FACTION_INVASION_CAMP_ID = "factionInvasionCampID"),
+      (ze.MINE_TYPE = "mineType"),
+      (ze.MINE_TYPE_ID = "mineTypeID"),
+      (ze.AMOUNT_LOOTABLE = "amountLootable"),
+      (ze.AMOUNT_PER_COLLECT_C1 = "amountPerCollectC1"),
+      (ze.AMOUNT_PER_COLLECT_C2 = "amountPerCollectC2"),
+      (ze.AMOUNT_INFLUENCE_PER_MINUTE = "amountInfluencePerMinute"),
+      (ze.MAX_INFLUENCE_POINTS = "maxInfluencePoints"),
+      (ze.EMPTY_AREA = "emptyArea"),
+      (ze.AREA_TYPE = "areaType"),
+      (ze.STARTING_FOOD = "startingFood"),
+      (ze.EXPANSION = "expansion"),
+      (ze.EXPANSION_ID = "expansionID"),
+      (ze.SPACE_IDS = "spaceIDs"),
+      (ze.EXPANSION_LEVEL = "expansionLevel"),
+      (ze.CONSTRUCTIONSLOTCOUNT = "constructionSlotCount"),
+      (ze.LOW_LEVEL_MAINCASTLE_COSTC2 = "lowLevelMainCastleCostC2"),
+      (ze.MIN_SCORE_FOR_BOOBY = "minScoreForBooby"),
+      (ze.POINT_EVENT_QUEST = "pointeventquest"),
+      (ze.POINT_EVENT_TYPE = "pointeventtype"),
+      (ze.POINT_EVENT_REWARD_SET = "pointeventrewardset"),
+      (ze.POINT_EVENT_QUESTS_ID = "pointEventQuestIDs"),
+      (ze.POINT_EVENT_QUEST_ID = "pointEventQuestID"),
+      (ze.POINT_EVENT_TYPE_ID = "pointEventTypeID"),
+      (ze.THRESHOLD_NAME = "neededPointsForReward"),
+      (ze.THRESHOLDS = "neededPointsForRewards"),
+      (ze.INCREMENTAL = "incremental"),
+      (ze.POINTS_FOR_CONDITION = "pointsPerTier"),
+      (ze.NEXT_ACTIVITY_REWARD_ID = "nextActivityRewardID"),
+      (ze.REWARD_THRESHOLDS = "rewardThresholds"),
+      (ze.THRESHOLD_REWARD_IDS = "thresholdRewardIDs"),
+      (ze.REWARD_RANKS = "rewardRanks"),
+      (ze.RANK_REWARD_IDS = "rankRewardIDs"),
+      (ze.LONGTERM_POINT_EVENT_QUEST = "longtermpointeventquest"),
+      (ze.SUB_EVENT_ID = "subEventID"),
+      (ze.LONGTERM_POINT_EVENT_LEAGUE = "leaguetypelongtermpointevent"),
+      (ze.LONGTERM_POINT_EVENT_LEAGUE_TYPE = "leaguetypeLongtermpointEventsID"),
+      (ze.DIFFICULTY_IDS_MAX_POINTS = "difficultyIDforMaxPoints"),
+      (ze.DIFFICULTY_MAX_POINTS = "difficultyMaxPoints"),
+      (ze.DIFFICULTY_THRESHOLDS = "difficultyScalingNeededPointsForRewards"),
+      (ze.DIFFICULTY_REWARDS_IDS = "difficultyScalingRewardIDs"),
+      (ze.BOOSTER = "booster"),
+      (ze.TOOLS = "tools"),
+      (ze.ITEM_RARENESS = "equipmentRarenessID"),
+      (ze.C1_MYSTERY = "c1"),
+      (ze.C2_MYSTERY = "c2"),
+      (ze.REWARD_CHOICE_MYSTERY = "choice"),
+      (ze.REWARD_VIP_MYSTERY = "vip"),
+      (ze.REWARD_ALLIANCE_MYSTERY = "alliance"),
+      (ze.DAY = "day"),
+      (ze.LEVEL_BRACKET = "levelBracket"),
+      (ze.REWARD_STEP = "rewardStep"),
+      (ze.VIP_POINTS = "vipPoints"),
+      (ze.VIP_TIME = "vipTime"),
+      (ze.VIP_LEVEL = "viplevel"),
+      (ze.VIP_LEVEL_ID = "vipLevelID"),
+      (ze.THRESHOLD_MIN = "thresholdMin"),
+      (ze.THRESHOLD_MAX = "thresholdMax"),
+      (ze.WOOD_BOOSTS = "woodBoosts"),
+      (ze.STONE_BOOSTS = "stoneBoosts"),
+      (ze.FOOD_BOOSTS = "foodBoosts"),
+      (ze.BONUS_LOGIN_KEYS = "bonusLoginKeys"),
+      (ze.ATTACK_SPEED_BOOST = "attackSpeedBoost"),
+      (ze.ATTACK_FAME_BOOST = "attackFameBoost"),
+      (ze.PRODUCTION_BONUS_SLOTS = "productionBonusSlots"),
+      (ze.RECRUITMENT_BONUS_SLOTS = "recruitmentBonusSlots"),
+      (ze.FREE_PREMIUM_GENERALS_PER_DAY = "freePremiumGeneralsPerDay"),
+      (ze.TAX_COLLECTOR_NO_RUBIES_12 = "taxCollectorNoRubies12"),
+      (ze.TAX_COLLECTOR_NO_RUBIES_24 = "taxCollectorNoRubies24"),
+      (ze.MOVABLE = "movable"),
+      (ze.FORCED_POSITION = "forcedPosition"),
+      (ze.EXPANSION_REWARD_POSITION = "ExpansionRewardPosition"),
+      (ze.LEAGUE_TYPE_EVENT_ID = "leaguetypeEventsID"),
+      (ze.RESSOURCE_FACTORS = "ressourceFactors"),
+      (ze.TOPXVALUE = "topXValue"),
+      (ze.LEAGUETYPEEVENT = "leaguetypeevent"),
+      (ze.LEAGUE_TYPE_TOPX = "leaguetypeTopXSize"),
+      (ze.HARD_MODE_START = "hardModeStart"),
+      (ze.ALLIANCEHELPREQUEST = "alliancehelprequest"),
+      (ze.ALLIANCEHELPREQUEST_ID = "allianceHelpRequestID"),
+      (ze.ALLIANCEHELPREQUEST_MAX_HELPERS_COUNT = "maxHelpersCount"),
+      (ze.ALLIANCEHELPREQUEST_UNIT_COUNT_BONUS = "unitCountBonus"),
+      (ze.ALLIANCEHELPREQUEST_UNIT_HEAL_TIME_REDUCTION =
         "unitHealTimeReduction"),
-      (Ye.ALLIANCEHELPREQUEST_DECREASE_BUILDING_TIME =
+      (ze.ALLIANCEHELPREQUEST_DECREASE_BUILDING_TIME =
         "decreaseBuildingTimeAbsolute"),
-      (Ye.ISLE = "isle"),
-      (Ye.ISLE_ID = "IsleID"),
-      (Ye.FIXED_LOOT_WOOD = "fixedLootWood"),
-      (Ye.FIXED_LOOT_STONE = "fixedLootStone"),
-      (Ye.FIXED_LOOT_AQUAMARINE = "fixedLootAquamarine"),
-      (Ye.GLOBAL_COOLDOWN = "globalCooldown"),
-      (Ye.LOCAL_COOLDOWN = "localCooldown"),
-      (Ye.OCCUPATION_TIME = "occupationTime"),
-      (Ye.MAX_COUNT_VICTORIES = "maxCountVictories"),
-      (Ye.LOOT_AQUAMARINE = "lootAquamarine"),
-      (Ye.AQUA_POINTS = "islandAlliancePoints"),
-      (Ye.MAX_DIFF_LOOT_AQUAMARINE = "maxDiffLootAquamarine"),
-      (Ye.MAX_DIFF_LOOT_RESOURCES = "maxDiffLootResources"),
-      (Ye.ISLAND_REWARD_RANK = "islandrewardrank"),
-      (Ye.ISLAND_REWARD_SET_ID = "islandRewardSetID"),
-      (Ye.ISLAND_REWARD_RANK_ID = "islandRewardRankID"),
-      (Ye.ISLAND_REWARD_CARGO_POINTS = "cargoPointRequirement"),
-      (Ye.LOOT_CARGO_POINTS = "lootCargoPoints"),
-      (Ye.MAX_DIFF_LOOT_CARGO_POINTS = "maxDiffLootCargoPoints"),
-      (Ye.ISLAND_PLAYER_REWARD = "islandPlayerReward"),
-      (Ye.ISLAND_PLAYER_REWARD_ID = "islandPlayerRewardID"),
-      (Ye.TITLE = "title"),
-      (Ye.TITLE_ID = "titleID"),
-      (Ye.TITLE_IS_POSITIVE = "isPositive"),
-      (Ye.TITLE_IS_KING = "isKing"),
-      (Ye.TITLE_FOOD_PRODUCTION_BOOST = "foodProductionBoost"),
-      (Ye.TITLE_ATTACK_BONUS = "attackBonus"),
-      (Ye.TITLE_RECRUITMENT_SPEED_BOOST = "recruitmentSpeedBoost"),
-      (Ye.TITLE_SPY_COUNT_BOOST = "spyCountBoost"),
-      (Ye.TITLE_TRAVEL_BOOST = "travelBoost"),
-      (Ye.TITLE_RECRUITMENT_COSTS = "recruitmentCosts"),
-      (Ye.TITLE_PUBLIC_ORDER_POINTS = "publicOrderPoints"),
-      (Ye.TITLE_FAME_AND_LOOT_ENEMY_BOOST = "fameAndLootEnemyBoost"),
-      (Ye.ALLIANCEBUFFS = "alliancebuff"),
-      (Ye.ALLIANCEBUFF_ID = "allianceBuffID"),
-      (Ye.ALLIANCEBUFF_SERIES_ID = "allianceBuffSeriesID"),
-      (Ye.ALLIANCEBUFF_LEVEL = "level"),
-      (Ye.ALLIANCEBUFF_MAXLEVEL = "maxLevel"),
-      (Ye.ALLIANCEBUFF_MEMBERCOUNT = "memberCount"));
-    ((Ye.ALLIANCEBUFF_COST_WOOD = "costWood"),
-      (Ye.ALLIANCEBUFF_COST_STONE = "costStone"),
-      (Ye.ALLIANCEBUFF_COST_C1 = "costC1"),
-      (Ye.ALLIANCEBUFF_COST_C2 = "costC2"),
-      (Ye.ALLIANCEBUFF_COST_COAL = "costCoal"),
-      (Ye.ALLIANCEBUFF_COST_GLASS = "costGlass"),
-      (Ye.ALLIANCEBUFF_COST_OIL = "costOil"),
-      (Ye.ALLIANCEBUFF_COST_IRON = "costIron"),
-      (Ye.ALLIANCEBUFF_ALLIANCE_TRAVEL_SUPPORT_BOOST =
+      (ze.ISLE = "isle"),
+      (ze.ISLE_ID = "IsleID"),
+      (ze.FIXED_LOOT_WOOD = "fixedLootWood"),
+      (ze.FIXED_LOOT_STONE = "fixedLootStone"),
+      (ze.FIXED_LOOT_AQUAMARINE = "fixedLootAquamarine"),
+      (ze.GLOBAL_COOLDOWN = "globalCooldown"),
+      (ze.LOCAL_COOLDOWN = "localCooldown"),
+      (ze.OCCUPATION_TIME = "occupationTime"),
+      (ze.MAX_COUNT_VICTORIES = "maxCountVictories"),
+      (ze.LOOT_AQUAMARINE = "lootAquamarine"),
+      (ze.AQUA_POINTS = "islandAlliancePoints"),
+      (ze.MAX_DIFF_LOOT_AQUAMARINE = "maxDiffLootAquamarine"),
+      (ze.MAX_DIFF_LOOT_RESOURCES = "maxDiffLootResources"),
+      (ze.ISLAND_REWARD_RANK = "islandrewardrank"),
+      (ze.ISLAND_REWARD_SET_ID = "islandRewardSetID"),
+      (ze.ISLAND_REWARD_RANK_ID = "islandRewardRankID"),
+      (ze.ISLAND_REWARD_CARGO_POINTS = "cargoPointRequirement"),
+      (ze.LOOT_CARGO_POINTS = "lootCargoPoints"),
+      (ze.MAX_DIFF_LOOT_CARGO_POINTS = "maxDiffLootCargoPoints"),
+      (ze.ISLAND_PLAYER_REWARD = "islandPlayerReward"),
+      (ze.ISLAND_PLAYER_REWARD_ID = "islandPlayerRewardID"),
+      (ze.TITLE = "title"),
+      (ze.TITLE_ID = "titleID"),
+      (ze.TITLE_IS_POSITIVE = "isPositive"),
+      (ze.TITLE_IS_KING = "isKing"),
+      (ze.TITLE_FOOD_PRODUCTION_BOOST = "foodProductionBoost"),
+      (ze.TITLE_ATTACK_BONUS = "attackBonus"),
+      (ze.TITLE_RECRUITMENT_SPEED_BOOST = "recruitmentSpeedBoost"),
+      (ze.TITLE_SPY_COUNT_BOOST = "spyCountBoost"),
+      (ze.TITLE_TRAVEL_BOOST = "travelBoost"),
+      (ze.TITLE_RECRUITMENT_COSTS = "recruitmentCosts"),
+      (ze.TITLE_PUBLIC_ORDER_POINTS = "publicOrderPoints"),
+      (ze.TITLE_FAME_AND_LOOT_ENEMY_BOOST = "fameAndLootEnemyBoost"),
+      (ze.ALLIANCEBUFFS = "alliancebuff"),
+      (ze.ALLIANCEBUFF_ID = "allianceBuffID"),
+      (ze.ALLIANCEBUFF_SERIES_ID = "allianceBuffSeriesID"),
+      (ze.ALLIANCEBUFF_LEVEL = "level"),
+      (ze.ALLIANCEBUFF_MAXLEVEL = "maxLevel"),
+      (ze.ALLIANCEBUFF_MEMBERCOUNT = "memberCount"));
+    ((ze.ALLIANCEBUFF_COST_WOOD = "costWood"),
+      (ze.ALLIANCEBUFF_COST_STONE = "costStone"),
+      (ze.ALLIANCEBUFF_COST_C1 = "costC1"),
+      (ze.ALLIANCEBUFF_COST_C2 = "costC2"),
+      (ze.ALLIANCEBUFF_COST_COAL = "costCoal"),
+      (ze.ALLIANCEBUFF_COST_GLASS = "costGlass"),
+      (ze.ALLIANCEBUFF_COST_OIL = "costOil"),
+      (ze.ALLIANCEBUFF_COST_IRON = "costIron"),
+      (ze.ALLIANCEBUFF_ALLIANCE_TRAVEL_SUPPORT_BOOST =
         "allianceTravelSupportBoost"),
-      (Ye.ALLIANCEBUFF_ALLIANCE_TRAVEL_MARKET_BOOST =
+      (ze.ALLIANCEBUFF_ALLIANCE_TRAVEL_MARKET_BOOST =
         "allianceTravelMarketBoost"),
-      (Ye.ALLIANCEBUFF_ALLIANCE_RESOURCE_DEPOSIT_BOOST =
+      (ze.ALLIANCEBUFF_ALLIANCE_RESOURCE_DEPOSIT_BOOST =
         "resourceDepositBoost"),
-      (Ye.ALLIANCEBUFF_WAR_LOOT_BOOST = "warLootBoost"),
-      (Ye.ALLIANCEBUFF_TRAVEL_WAR_ATTACK_BOOST = "travelWarAttackBoost"),
-      (Ye.ALLIANCEBUFF_RARE_CHANCE = "rareChance"),
-      (Ye.ALLIANCEBUFF_EPIC_CHANCE = "epicChance"),
-      (Ye.ALLIANCEBUFF_LEGENDARY_CHANCE = "legendaryChance"),
-      (Ye.ALLIANCEBUFF_FORGING_COST_C1 = "forgingCostC1"),
-      (Ye.ALLIANCEBUFF_GEM_1_CHANCE = "gem1Chance"),
-      (Ye.ALLIANCEBUFF_GEM_2_CHANCE = "gem2Chance"),
-      (Ye.ALLIANCEBUFF_GEM_3_CHANCE = "gem3Chance"),
-      (Ye.ALLIANCEBUFF_GEM_4_CHANCE = "gem4Chance"),
-      (Ye.ALLIANCEBUFF_GEM_5_CHANCE = "gem5Chance"),
-      (Ye.ALLIANCEBUFF_GLORY_BOOST_ATTACK = "allianceFameBoost"),
-      (Ye.ALLIANCEBUFF_ATTACK_STRENGTH_BOOST = "allianceAttackBoost"),
-      (Ye.ALLIANCEBUFF_DEFENSE_STRENGTH_BOOST = "allianceDefenseBoost"),
-      (Ye.ALLIANCEBUFF_DURATION = "duration"),
-      (Ye.ALLIANCEBUFF_REQUIRED_MEMBER_BUFF_LEVEL = "requiredMemberBuffLevel"),
-      (Ye.ALLIANCEBUFF_REQUIRED_MIGHT_POINTS = "requiredMightPoints"),
-      (Ye.ALLIANCEBUFF_REQUIRED_RANK_ID = "requiredRankID"),
-      (Ye.ALLIANCEBUFF_ALLIANCE_FAME = "requiredAllianceFame"),
-      (Ye.ALLIANCEBUFF_IS_DEFAULT_LEVEL = "isDefaultLevel"),
-      (Ye.ALLIANCE_BUFF_REQUIRED_BUFF_ID = "requiredBuffID"),
-      (Ye.ALLIANCE_BUFF_RESET_ON_EVENT_END = "resetOnEventEnd"),
-      (Ye.ALLIANCEBUFF_IS_UPGRADEABLE = "isUpgradeable"),
-      (Ye.ALLIANCEBUFF_IS_TEMPORARY = "isTemporary"),
-      (Ye.ALLIANCE_FORGE = "allianceForge"),
-      (Ye.ALLIANCE_FORGE_ID = "allianceForgeID"),
-      (Ye.ALLIANCE_FORGE_FORGING_COST_C1 = "forgingCostC1"),
-      (Ye.ALLIANCE_FORGE_LEVEL = "level"),
-      (Ye.LUCKYWHEEL_CLASSES = "luckywheelclass"),
-      (Ye.LUCKYWHEEL_CLASSES_ID = "luckyWheelClassID"),
-      (Ye.LUCKYWHEEL_CLASSES_SPINS = "neededSpinsForNextClass"),
-      (Ye.LUCKYWHEEL_JACKPOT_SETS = "luckywheelrewardset"),
-      (Ye.LUCKYWHEEL_JACKPOT_SET_ID = "luckyWheelRewardSetID"),
-      (Ye.LUCKYWHEEL_ACTIVITY_REWARD_THRESHOLD = "activityRewardThreshold"),
-      (Ye.LUCKYWHEEL_C2_PER_SKIPPED_SPIN = "C2PerSkippedSpin"),
-      (Ye.LUCKYWHEEL_SD_CLASSES = "saleDaysLuckyWheelClass"),
-      (Ye.LUCKYWHEEL_SALE_DAYS_CLASSES = "saleDaysLuckyWheelClass"),
-      (Ye.LUCKYWHEEL_SALE_DAYS_CLASSES_ID = "saleDaysLuckyWheelClassID"),
-      (Ye.LUCKYWHEEL_SALE_DAYS_JACKPOT_SETS = "saleDaysLuckyWheelRewardSet"),
-      (Ye.LUCKYWHEEL_SALE_DAYS_JACKPOT_SET_ID =
+      (ze.ALLIANCEBUFF_WAR_LOOT_BOOST = "warLootBoost"),
+      (ze.ALLIANCEBUFF_TRAVEL_WAR_ATTACK_BOOST = "travelWarAttackBoost"),
+      (ze.ALLIANCEBUFF_RARE_CHANCE = "rareChance"),
+      (ze.ALLIANCEBUFF_EPIC_CHANCE = "epicChance"),
+      (ze.ALLIANCEBUFF_LEGENDARY_CHANCE = "legendaryChance"),
+      (ze.ALLIANCEBUFF_FORGING_COST_C1 = "forgingCostC1"),
+      (ze.ALLIANCEBUFF_GEM_1_CHANCE = "gem1Chance"),
+      (ze.ALLIANCEBUFF_GEM_2_CHANCE = "gem2Chance"),
+      (ze.ALLIANCEBUFF_GEM_3_CHANCE = "gem3Chance"),
+      (ze.ALLIANCEBUFF_GEM_4_CHANCE = "gem4Chance"),
+      (ze.ALLIANCEBUFF_GEM_5_CHANCE = "gem5Chance"),
+      (ze.ALLIANCEBUFF_GLORY_BOOST_ATTACK = "allianceFameBoost"),
+      (ze.ALLIANCEBUFF_ATTACK_STRENGTH_BOOST = "allianceAttackBoost"),
+      (ze.ALLIANCEBUFF_DEFENSE_STRENGTH_BOOST = "allianceDefenseBoost"),
+      (ze.ALLIANCEBUFF_DURATION = "duration"),
+      (ze.ALLIANCEBUFF_REQUIRED_MEMBER_BUFF_LEVEL = "requiredMemberBuffLevel"),
+      (ze.ALLIANCEBUFF_REQUIRED_MIGHT_POINTS = "requiredMightPoints"),
+      (ze.ALLIANCEBUFF_REQUIRED_RANK_ID = "requiredRankID"),
+      (ze.ALLIANCEBUFF_ALLIANCE_FAME = "requiredAllianceFame"),
+      (ze.ALLIANCEBUFF_IS_DEFAULT_LEVEL = "isDefaultLevel"),
+      (ze.ALLIANCE_BUFF_REQUIRED_BUFF_ID = "requiredBuffID"),
+      (ze.ALLIANCE_BUFF_RESET_ON_EVENT_END = "resetOnEventEnd"),
+      (ze.ALLIANCEBUFF_IS_UPGRADEABLE = "isUpgradeable"),
+      (ze.ALLIANCEBUFF_IS_TEMPORARY = "isTemporary"),
+      (ze.ALLIANCE_FORGE = "allianceForge"),
+      (ze.ALLIANCE_FORGE_ID = "allianceForgeID"),
+      (ze.ALLIANCE_FORGE_FORGING_COST_C1 = "forgingCostC1"),
+      (ze.ALLIANCE_FORGE_LEVEL = "level"),
+      (ze.LUCKYWHEEL_CLASSES = "luckywheelclass"),
+      (ze.LUCKYWHEEL_CLASSES_ID = "luckyWheelClassID"),
+      (ze.LUCKYWHEEL_CLASSES_SPINS = "neededSpinsForNextClass"),
+      (ze.LUCKYWHEEL_JACKPOT_SETS = "luckywheelrewardset"),
+      (ze.LUCKYWHEEL_JACKPOT_SET_ID = "luckyWheelRewardSetID"),
+      (ze.LUCKYWHEEL_ACTIVITY_REWARD_THRESHOLD = "activityRewardThreshold"),
+      (ze.LUCKYWHEEL_C2_PER_SKIPPED_SPIN = "C2PerSkippedSpin"),
+      (ze.LUCKYWHEEL_SD_CLASSES = "saleDaysLuckyWheelClass"),
+      (ze.LUCKYWHEEL_SALE_DAYS_CLASSES = "saleDaysLuckyWheelClass"),
+      (ze.LUCKYWHEEL_SALE_DAYS_CLASSES_ID = "saleDaysLuckyWheelClassID"),
+      (ze.LUCKYWHEEL_SALE_DAYS_JACKPOT_SETS = "saleDaysLuckyWheelRewardSet"),
+      (ze.LUCKYWHEEL_SALE_DAYS_JACKPOT_SET_ID =
         "saleDaysLuckyWheelRewardSetID"),
-      (Ye.LUCKYWHEEL_CATEGORY_SELECTION_SALE_DAYS =
+      (ze.LUCKYWHEEL_CATEGORY_SELECTION_SALE_DAYS =
         "saleDaysLuckyWheelInitialCategorySelection"),
-      (Ye.CHANCE = "chance"),
-      (Ye.CATEGORY = "category"),
-      (Ye.GEM = "gem"),
-      (Ye.GEM_ID = "gemID"),
-      (Ye.GEM_FOLLOWING_GEM_ID = "followingGemID"),
-      (Ye.GEM_LEVEL_ID = "gemLevelID"),
-      (Ye.GEM_COLOR_ID = "gemColorID"),
-      (Ye.GEM_EFFECT_TYPE = "effectType"),
-      (Ye.GEM_EFFECT_VALUE = "effectValue"),
-      (Ye.GEM_TRIGGER_CHANCE = "triggerChance"),
-      (Ye.GEM_LEVEL = "gemlevel"),
-      (Ye.GEM_CRAFT_SUCCESS_CHANCE = "craftSuccessChance"),
-      (Ye.GEM_CRAFT_COST_C1 = "craftCostC1"),
-      (Ye.GEM_CRAFT_COST_C2 = "craftCostC2"),
-      (Ye.GEM_INSERT_COST_C1 = "insertCostC1"),
-      (Ye.GEM_SALE_VALUE = "saleValue"),
-      (Ye.GEM_AMOUNT = "gemAmount"),
-      (Ye.GEM_IDS = "gemIDs"),
-      (Ye.GEM_LEVEL_IDS = "gemLevelIDs"),
-      (Ye.GEM_SPECIAL_LEVEL_ID = "specialGemOfLevelID"),
-      (Ye.GEM_DROP_CHANCE = "gemDropChance"),
-      (Ye.GEM_REMOVAL_COST_C2 = "removalCostC2"),
-      (Ye.CREST_SYMBOL = "crestsymbol"),
-      (Ye.CREST_SYMBOL_ID = "crestSymbolID"),
-      (Ye.SPECIAL_EVENT_DONT_SEND_TO_CLIEN = "invisible"),
-      (Ye.SPECIAL_EVENT_ONLY_PAY_USER = "onlyPayUser"),
-      (Ye.SPECIAL_EVENT_ONLY_ALLIANCE_MEMBER = "onlyAllianceMember"),
-      (Ye.FOR_PAYUSER = "playerIsPayuser"),
-      (Ye.GRANT_TYPE = "grantType"),
-      (Ye.REWARD_DECO_TO_GLOBAL_STORAGE = "toDecoGlobalStorage"),
-      (Ye.REWARD_TO_KINGDOM_CASTLE = "sendToKingdomCastle"),
-      (Ye.POTIONABLE = "potionable"),
-      (Ye.FEAST = "feast"),
-      (Ye.FEAST_ID = "feastID"),
-      (Ye.PRODUCTION_BOOST = "productionBoost"),
-      (Ye.MONUMENT = "monument"),
-      (Ye.REQUIRED_POINTS = "requiredPoints"),
-      (Ye.AB_TEST_GROUP_IDS = "ABTestGroupIDs"),
-      (Ye.AB_TEST_AUTO_ASSIGN = "autoAssignABTest"),
-      (Ye.AB_TEST_PARAM = "ABTestParam"),
-      (Ye.SUCCEED_ON_WRONG_CASE_ID = "succeedOnWrongCaseID"),
-      (Ye.LEVEL_UP = "levelup"),
-      (Ye.REQUIRED_LEGEND_LEVEL = "requiredLegendLevel"),
-      (Ye.IS_LEGEND = "isLegend"),
-      (Ye.MIN_LEGEND_LEVEL = "minLegendLevel"),
-      (Ye.MAX_LEGEND_LEVEL = "maxLegendLevel"),
-      (Ye.LEGEND_SKILL = "legendskill"),
-      (Ye.SCEAT_SKILL_TREE = "sceatSkillTree"),
-      (Ye.SCEAT_SKILL_TIER = "sceatSkillTier"),
-      (Ye.SCEAT_SKILL = "sceatSkill"),
-      (Ye.SKILL_ID = "skillID"),
-      (Ye.REQUIRED_SKILL_ID = "requiredSkillID"),
-      (Ye.PREVIOUS_SKILL_ID = "previousSkillID"),
-      (Ye.REQUIRED_SKILL_IDS = "requiredSkillIDs"),
-      (Ye.FOLLOWING_SKILL_ID = "followingSkillID"),
-      (Ye.SKILL_TREE_ID = "skillTreeID"),
-      (Ye.SKILL_TIER = "tier"),
-      (Ye.LEGEND_SKILL_COSTS = "costSkillPoints"),
-      (Ye.LEGEND_SKILL_EFFECT_TYPE = "effectType"),
-      (Ye.LEGEND_SKILL_EFFECT_VALUE = "effectValue"),
-      (Ye.LEGEND_TOTAL_SKILL_EFFECT_VALUE = "totalEffectValue"),
-      (Ye.LEGEND_TOTAL_SKILL_COSTS = "totalCostSkillPoints"),
-      (Ye.LEGEND_SKILL_POINTS = "skillPoints"),
-      (Ye.LEGEND_SKILL_SPECIAL_TYPE = "specialType"),
-      (Ye.SKILL_TIER_ID = "tierID"),
-      (Ye.ACTIVATION_TIME = "activationTime"),
-      (Ye.SCEAT_SKILL_CATEGORY = "tabID"),
-      (Ye.EFFECT_LOCKED = "effectLocked"),
-      (Ye.SCEAT_SKILL_LOCKED = "sceatSkillLocked"),
-      (Ye.SKILL_GROUP_ID = "skillGroupID"),
-      (Ye.REQUIRE_PREVIOUS_TIER_UNLOCKED = "requirePreviousTierUnlocked"),
-      (Ye.BUILDING = "building"),
-      (Ye.BUILDING_ID = "buildingID"),
-      (Ye.BUILDING_AMOUNT = "buildingAmount"),
-      (Ye.UNIT = "unit"),
-      (Ye.UNIT_ID = "unitID"),
-      (Ye.UNIT_AMOUNT = "unitAmount"),
-      (Ye.HORSE = "horse"),
-      (Ye.BUILDING_POSITION = "buildingPosition"),
-      (Ye.BUILDING_POSITION_ID = "buildingPositionID"),
-      (Ye.BUILDING_WOD_ID = "buildingWodID"),
-      (Ye.X = "x"),
-      (Ye.Y = "y"),
-      (Ye.ROTATION = "rotation"),
-      (Ye.PRE_BUILT_CASTLE_ID = "preBuiltCastleID"),
-      (Ye.SPACE_ID = "spaceID"),
-      (Ye.IS_MAIN_CASTLE_COPY = "isMainCastleCopy"),
-      (Ye.MIGHT_VALUE = "mightValue"),
-      (Ye.MINUTE_SKIP_1 = "minuteSkip1"),
-      (Ye.MINUTE_SKIP_2 = "minuteSkip2"),
-      (Ye.MINUTE_SKIP_3 = "minuteSkip3"),
-      (Ye.MINUTE_SKIP_4 = "minuteSkip4"),
-      (Ye.MINUTE_SKIP_5 = "minuteSkip5"),
-      (Ye.MINUTE_SKIP_6 = "minuteSkip6"),
-      (Ye.MINUTE_SKIP_7 = "minuteSkip7"),
-      (Ye.IGNORE_MINUTE_SKIP_CAPACITY = "ignoreMinuteSkipCapacity"),
-      (Ye.LABORATORY = "laboratory"),
-      (Ye.IRON_ALLIANCE_BOOST = "ironAllianceBoost"),
-      (Ye.GLASS_ALLIANCE_BOOST = "glassAllianceBoost"),
-      (Ye.CHARCOAL_ALLIANCE_BOOST = "charcoalAllianceBoost"),
-      (Ye.OLIVE_OIL_ALLIANCE_BOOST = "oliveOilAllianceBoost"),
-      (Ye.AB_TEST = "abTest"),
-      (Ye.DAILY_ACTIVITIES = "dailyActivities"),
-      (Ye.IS_DEFAULT_QUEST = "isDefaultQuest"),
-      (Ye.NEEDS_ALLIANCE = "needsAlliance"),
-      (Ye.IS_TEMP_SERVER_QUEST = "isTempServerQuest"),
-      (Ye.LEVEL_BRACKET_NODE = "levelbracket"),
-      (Ye.BASIC_LEVEL_BRACKET_ID = "bracketID"),
-      (Ye.LEVEL_BRACKET_MIN_LEVEL = "minLevel"),
-      (Ye.LEVEL_BRACKET_MAX_LEVEL = "maxLevel"),
-      (Ye.EVENT_ANNOUNCEMENT_ID = "eventAnnouncementID"),
-      (Ye.EVENT_ANNOUNCEMENT_REWARD_ID = "messageRewardID"),
-      (Ye.EVENT_ANNOUNCEMENT = "eventannouncement"),
-      (Ye.TUTORIAL = "tutorial"),
-      (Ye.TUTORIAL_STEP_ID = "tutorialStepID"),
-      (Ye.CHAPTER = "chapter"),
-      (Ye.CHAPTER_STEP = "chapterStep"),
-      (Ye.ALLIANCE_RIGHTS = "alliancerankright"),
-      (Ye.RIGHT_ID = "rankRightID"),
-      (Ye.NEEDED_ALLIANCE_RANK = "neededMemberRank"),
-      (Ye.ALLIANCE_RANKS = "alliancerank"),
-      (Ye.RANK_ID = "rankID"),
-      (Ye.RERANK_RIGHT = "rerankRight"),
-      (Ye.MISSION_REWARD = "mercenary"),
-      (Ye.MISSION_PROPERTY = "missionProperty"),
-      (Ye.MISSION_ID = "missionID"),
-      (Ye.UNIT_SLOT = "unitSlot"),
-      (Ye.TOOL_SLOT = "toolSlot"),
-      (Ye.IS_AUXILIARY = "isAuxiliary"),
-      (Ye.STACK_SIZE = "stackSize"),
-      (Ye.AUXILIARY_CAPACITY = "auxiliaryCapacity"),
-      (Ye.PRE_BUILT_CASTLE = "prebuiltcastle"),
-      (Ye.EVENT_SKIN = "eventSkin"),
-      (Ye.EVENT_SKIN_ID = "eventSkinID"),
-      (Ye.FORCED = "forced"),
-      (Ye.POINT_LOSS = "decay"),
-      (Ye.TITLE_EFFECT_ID = "titleEffectID"),
-      (Ye.TITLE_VALUE = "value"),
-      (Ye.DISPLAY_TYPE = "displayType"),
-      (Ye.PREVIOUS_TITLE_ID = "previousTitleID"),
-      (Ye.TITLE_EFFECTS = "titleEffect"),
-      (Ye.QUEST_PROGRESS = "questProgress"),
-      (Ye.GRANT_TITLE = "grantTitle"),
-      (Ye.LEVEL_BOOSTER = "levelBooster"),
-      (Ye.BOOSTER_ID = "boosterID"),
-      (Ye.BOOSTER_LEVEL = "level"),
-      (Ye.BOOST_PERCENTAGE = "boostPercentage"),
-      (Ye.BOOSTER_TYPE = "boosterType"),
-      (Ye.LONGTERM_POINT_EVENT_BOOSTER = "longTermPointEventBooster"),
-      (Ye.CONSTRUCTION_ITEM = "constructionItem"),
-      (Ye.CONSTRUCTION_ITEM_ID = "constructionItemID"),
-      (Ye.CONSTRUCTION_ITEM_GROUP_ID = "constructionItemGroupID"),
-      (Ye.CONSTRUCTION_ITEM_EFFECT_GROUP_ID = "constructionItemEffectGroupID"),
-      (Ye.CONSTRUCTION_ITEM_EFFECT_GROUP = "constructionItemsEffectGroup"),
-      (Ye.CONSTRUCTION_ITEM_AREA_LIMIT = "areaLimit"),
-      (Ye.CONSTRUCTION_ITEM_OWNER_GLOBAL_EFFECT = "ownerGlobalEffect"),
-      (Ye.CONSTRUCTION_ITEM_RECIPE = "constructionItemRecipe"),
-      (Ye.CONSTRUCTION_ITEM_RECIPE_ID = "constructionItemRecipeID"),
-      (Ye.DEFAULT_UNLOCKED = "defaultUnlocked"),
-      (Ye.CONSTRUCTION_ITEM_IDS = "constructionItemIDs"),
-      (Ye.CONSTRUCTION_ITEM_AMOUNT = "constructionItemAmount"),
-      (Ye.SLOT_TYPE_ID = "slotTypeID"),
-      (Ye.REMOVAL_COST_C1 = "removalCostC1"),
-      (Ye.XP_BOOST_PERCENTAGE = "xpBoostPercentage"),
-      (Ye.LOCK_REMOVAL = "lockRemoval"),
-      (Ye.BOOST_CONSUMABLE = "boostConsumable"),
-      (Ye.PROPERTY = "property"),
-      (Ye.PROPERTY_ID = "propertyID"),
-      (Ye.VALUE = "value"),
-      (Ye.META_TYPE = "metaType"),
-      (Ye.PRIME_TIME = "primeTime"),
-      (Ye.PAYMENT_META_DATA_PRIVATE = "private"),
-      (Ye.PLAYER_RELATION = "playerRelation"),
-      (Ye.PLAYER_RELATION_NOT_SET = ""),
-      (Ye.PLAYER_RELATION_NONE = "none"),
-      (Ye.PLAYER_RELATION_SAME_PLAYER = "samePlayer"),
-      (Ye.PLAYER_RELATION_SAME_ALLIANCE = "sameAlliance"),
-      (Ye.PLAYER_RELATION_ALLIANCE_WAR = "allianceInWar"),
-      (Ye.PLAYER_RELATION_ALLIANCE_FRIENDLY = "allianceFriendly"),
-      (Ye.CLIENT_ONLY = "clientOnly"),
-      (Ye.SHOPPING_CART = "shoppingCart"),
-      (Ye.CART_OPTION_ID = "cartOptionID"),
-      (Ye.TYPE_ID = "typeID"),
-      (Ye.GROUP_ID = "groupID"),
-      (Ye.AMOUNT_BUYABLE = "amountBuyable"),
-      (Ye.UNBOOSTED_WOOD_PRODUCTION = "unboostedWoodProduction"),
-      (Ye.UNBOOSTED_STONE_PRODUCTION = "unboostedStoneProduction"),
-      (Ye.UNBOOSTED_FOOD_PRODUCTION = "unboostedFoodProduction"),
-      (Ye.LEVEL_UP_PRICE = "levelUpPrice"),
-      (Ye.LEVEL_UP_PRICE_ID = "levelUpPriceID"),
-      (Ye.FROM_LEVEL = "fromLevel"),
-      (Ye.TO_LEVEL = "toLevel"),
-      (Ye.CURRENCY2_COST = "c2Cost"),
-      (Ye.AUTO_RECRUITMENT_PRICE = "autoRecruitmentPrice"),
-      (Ye.AUTO_RECRUITMENT_PRICE_ID = "autoRecruitmentPriceID"),
-      (Ye.LOOP = "loop"),
-      (Ye.TYPE_AUXILIARY = "auxiliaries"),
-      (Ye.TYPE_SOLDIER = "soldiers"),
-      (Ye.TYPE_TOOL = "tools"),
-      (Ye.CRAFTING_MATERIAL = "craftingMaterial"),
-      (Ye.MATERIAL_ID = "materialID"),
-      (Ye.MATERIAL_NAME = "materialName"),
-      (Ye.DECONSTRUCT_MATERIAL_NAME = "deconstructMaterialName"),
-      (Ye.NEEDED_CONSTRUCTION_ITEM_ID = "neededConstructionItemID"),
-      (Ye.MATERIAL_BAG = "rewardBag"),
-      (Ye.MATERIAL_BAGS = "rewardBags"),
-      (Ye.BAG_ID = "bagID"),
-      (Ye.MATERIAL_STATIC_SUFFIX = "static"),
-      (Ye.MATERIAL_STACK_SIZE_SUFFIX = "stackSize"),
-      (Ye.MATERIAL_PERCENTAGES_SUFFIX = "percentages"),
-      (Ye.FEAST_COST_REDUCTION = "feastCostsReduction"),
-      (Ye.OFFENSIVE_TOOLS_COSTS_REDUCTION = "offensiveToolsCostsReduction"),
-      (Ye.DEFENSIVE_TOOLS_COSTS_REDUCTION = "defensiveToolsCostsReduction"),
-      (Ye.ESPIONAGE_TRAVEL_BOOST = "espionageTravelBoost"),
-      (Ye.OFFENSIVE_TOOLS_SPEED_BOOST = "offensiveToolsSpeedBoost"),
-      (Ye.DEFENSIVE_TOOLS_SPEED_BOOST = "defensiveToolsSpeedBoost"),
-      (Ye.RESEARCH_RESOURCE_COSTS_REDUCTION = "ReduceResearchResourceCosts"),
-      (Ye.BUILD_BUILDINGS_XP_BOOST = "XPBoostBuildBuildings"),
-      (Ye.ATTACK_SETUP_SLOT = "attackSetupSlot"),
-      (Ye.CRAFTING_DURATION = "craftingDuration"),
-      (Ye.SUBSCRIPTION_BUFFS = "subscriptionsBuff"),
-      (Ye.SUBSCRIPTION_BUFF_ID = "subscriptionBuffID"),
-      (Ye.SUBSCRIPTION_BUFF_TYPE_ID = "subscriptionTypeID"),
-      (Ye.SUBSCRIPTION_BUFF_SERIES_ID = "seriesID"),
-      (Ye.SUBSCRIPTION_BUFF_REQUIRED_ALLIANCE_MEMBER_COUNT = "requiredMembers"),
-      (Ye.PVP_FIGHT_ONLY = "isPvPFight"),
-      (Ye.SUBSCRIPTION_CONVENIENCE_FEATURE = "subscriptionsConvenienceFeature"),
-      (Ye.SUBSCRIPTION_CONVENIENCE_FEATURE_ID = "convenienceFeatureID"),
-      (Ye.SUBSCRIPTION_LOYALTY = "subscriptionLoyalty"),
-      (Ye.SUBSCRIPTION_LOYALTY_ID = "subscriptionLoyaltyID"),
-      (Ye.SUBSCRIPTION_LOYALTY_MONTH = "month"),
-      (Ye.SUBSCRIPTION_LOYALTY_BOOST = "boost"),
-      (Ye.SUBSCRIPTION_REWARDS = "subscriptionsReward"),
-      (Ye.SUBSCRIPTION_REWARD_ID = "subscriptionsRewardID"),
-      (Ye.ALLIANCE_INVASION_CAMP = "allianceInvasionCamp"),
-      (Ye.ALLIANCE_INVASION_CAMP_ID = "allianceInvasionCampID"),
-      (Ye.RAGE_NEEDED_FOR_LEVEL_UP = "rageNeededForLevelUp"),
-      (Ye.PLAYER_RAGE_CAP = "playerRageCap"),
-      (Ye.COOLDOWN_INCREASE = "cooldownIncrease"),
-      (Ye.SKIP_COST_INCREASE = "skipCostIncrease"),
-      (Ye.INCREASE_MULTIPLIER = "increaseMultiplier"),
-      (Ye.INCREASE_INTERVAL = "increaseInterval"),
-      (Ye.COOLDOWN_INCREASE_CAP = "cooldownIncreaseCap"),
-      (Ye.SKIP_COST_INCREASE_CAP = "skipCostIncreaseCap"),
-      (Ye.GENERATED_RAGE_PER_ATTACK = "generatedRagePerAttack"),
-      (Ye.CHANCE_FOR_CRITICAL_RAGE_GENERATION =
+      (ze.CHANCE = "chance"),
+      (ze.CATEGORY = "category"),
+      (ze.GEM = "gem"),
+      (ze.GEM_ID = "gemID"),
+      (ze.GEM_FOLLOWING_GEM_ID = "followingGemID"),
+      (ze.GEM_LEVEL_ID = "gemLevelID"),
+      (ze.GEM_COLOR_ID = "gemColorID"),
+      (ze.GEM_EFFECT_TYPE = "effectType"),
+      (ze.GEM_EFFECT_VALUE = "effectValue"),
+      (ze.GEM_TRIGGER_CHANCE = "triggerChance"),
+      (ze.GEM_LEVEL = "gemlevel"),
+      (ze.GEM_CRAFT_SUCCESS_CHANCE = "craftSuccessChance"),
+      (ze.GEM_CRAFT_COST_C1 = "craftCostC1"),
+      (ze.GEM_CRAFT_COST_C2 = "craftCostC2"),
+      (ze.GEM_INSERT_COST_C1 = "insertCostC1"),
+      (ze.GEM_SALE_VALUE = "saleValue"),
+      (ze.GEM_AMOUNT = "gemAmount"),
+      (ze.GEM_IDS = "gemIDs"),
+      (ze.GEM_LEVEL_IDS = "gemLevelIDs"),
+      (ze.GEM_SPECIAL_LEVEL_ID = "specialGemOfLevelID"),
+      (ze.GEM_DROP_CHANCE = "gemDropChance"),
+      (ze.GEM_REMOVAL_COST_C2 = "removalCostC2"),
+      (ze.CREST_SYMBOL = "crestsymbol"),
+      (ze.CREST_SYMBOL_ID = "crestSymbolID"),
+      (ze.SPECIAL_EVENT_DONT_SEND_TO_CLIEN = "invisible"),
+      (ze.SPECIAL_EVENT_ONLY_PAY_USER = "onlyPayUser"),
+      (ze.SPECIAL_EVENT_ONLY_ALLIANCE_MEMBER = "onlyAllianceMember"),
+      (ze.FOR_PAYUSER = "playerIsPayuser"),
+      (ze.GRANT_TYPE = "grantType"),
+      (ze.REWARD_DECO_TO_GLOBAL_STORAGE = "toDecoGlobalStorage"),
+      (ze.REWARD_TO_KINGDOM_CASTLE = "sendToKingdomCastle"),
+      (ze.POTIONABLE = "potionable"),
+      (ze.FEAST = "feast"),
+      (ze.FEAST_ID = "feastID"),
+      (ze.PRODUCTION_BOOST = "productionBoost"),
+      (ze.MONUMENT = "monument"),
+      (ze.REQUIRED_POINTS = "requiredPoints"),
+      (ze.AB_TEST_GROUP_IDS = "ABTestGroupIDs"),
+      (ze.AB_TEST_AUTO_ASSIGN = "autoAssignABTest"),
+      (ze.AB_TEST_PARAM = "ABTestParam"),
+      (ze.SUCCEED_ON_WRONG_CASE_ID = "succeedOnWrongCaseID"),
+      (ze.LEVEL_UP = "levelup"),
+      (ze.REQUIRED_LEGEND_LEVEL = "requiredLegendLevel"),
+      (ze.IS_LEGEND = "isLegend"),
+      (ze.MIN_LEGEND_LEVEL = "minLegendLevel"),
+      (ze.MAX_LEGEND_LEVEL = "maxLegendLevel"),
+      (ze.LEGEND_SKILL = "legendskill"),
+      (ze.SCEAT_SKILL_TREE = "sceatSkillTree"),
+      (ze.SCEAT_SKILL_TIER = "sceatSkillTier"),
+      (ze.SCEAT_SKILL = "sceatSkill"),
+      (ze.SKILL_ID = "skillID"),
+      (ze.REQUIRED_SKILL_ID = "requiredSkillID"),
+      (ze.PREVIOUS_SKILL_ID = "previousSkillID"),
+      (ze.REQUIRED_SKILL_IDS = "requiredSkillIDs"),
+      (ze.FOLLOWING_SKILL_ID = "followingSkillID"),
+      (ze.SKILL_TREE_ID = "skillTreeID"),
+      (ze.SKILL_TIER = "tier"),
+      (ze.LEGEND_SKILL_COSTS = "costSkillPoints"),
+      (ze.LEGEND_SKILL_EFFECT_TYPE = "effectType"),
+      (ze.LEGEND_SKILL_EFFECT_VALUE = "effectValue"),
+      (ze.LEGEND_TOTAL_SKILL_EFFECT_VALUE = "totalEffectValue"),
+      (ze.LEGEND_TOTAL_SKILL_COSTS = "totalCostSkillPoints"),
+      (ze.LEGEND_SKILL_POINTS = "skillPoints"),
+      (ze.LEGEND_SKILL_SPECIAL_TYPE = "specialType"),
+      (ze.SKILL_TIER_ID = "tierID"),
+      (ze.ACTIVATION_TIME = "activationTime"),
+      (ze.SCEAT_SKILL_CATEGORY = "tabID"),
+      (ze.EFFECT_LOCKED = "effectLocked"),
+      (ze.SCEAT_SKILL_LOCKED = "sceatSkillLocked"),
+      (ze.SKILL_GROUP_ID = "skillGroupID"),
+      (ze.REQUIRE_PREVIOUS_TIER_UNLOCKED = "requirePreviousTierUnlocked"),
+      (ze.BUILDING = "building"),
+      (ze.BUILDING_ID = "buildingID"),
+      (ze.BUILDING_AMOUNT = "buildingAmount"),
+      (ze.UNIT = "unit"),
+      (ze.UNIT_ID = "unitID"),
+      (ze.UNIT_AMOUNT = "unitAmount"),
+      (ze.HORSE = "horse"),
+      (ze.BUILDING_POSITION = "buildingPosition"),
+      (ze.BUILDING_POSITION_ID = "buildingPositionID"),
+      (ze.BUILDING_WOD_ID = "buildingWodID"),
+      (ze.X = "x"),
+      (ze.Y = "y"),
+      (ze.ROTATION = "rotation"),
+      (ze.PRE_BUILT_CASTLE_ID = "preBuiltCastleID"),
+      (ze.SPACE_ID = "spaceID"),
+      (ze.IS_MAIN_CASTLE_COPY = "isMainCastleCopy"),
+      (ze.MIGHT_VALUE = "mightValue"),
+      (ze.MINUTE_SKIP_1 = "minuteSkip1"),
+      (ze.MINUTE_SKIP_2 = "minuteSkip2"),
+      (ze.MINUTE_SKIP_3 = "minuteSkip3"),
+      (ze.MINUTE_SKIP_4 = "minuteSkip4"),
+      (ze.MINUTE_SKIP_5 = "minuteSkip5"),
+      (ze.MINUTE_SKIP_6 = "minuteSkip6"),
+      (ze.MINUTE_SKIP_7 = "minuteSkip7"),
+      (ze.IGNORE_MINUTE_SKIP_CAPACITY = "ignoreMinuteSkipCapacity"),
+      (ze.LABORATORY = "laboratory"),
+      (ze.IRON_ALLIANCE_BOOST = "ironAllianceBoost"),
+      (ze.GLASS_ALLIANCE_BOOST = "glassAllianceBoost"),
+      (ze.CHARCOAL_ALLIANCE_BOOST = "charcoalAllianceBoost"),
+      (ze.OLIVE_OIL_ALLIANCE_BOOST = "oliveOilAllianceBoost"),
+      (ze.AB_TEST = "abTest"),
+      (ze.DAILY_ACTIVITIES = "dailyActivities"),
+      (ze.IS_DEFAULT_QUEST = "isDefaultQuest"),
+      (ze.NEEDS_ALLIANCE = "needsAlliance"),
+      (ze.IS_TEMP_SERVER_QUEST = "isTempServerQuest"),
+      (ze.LEVEL_BRACKET_NODE = "levelbracket"),
+      (ze.BASIC_LEVEL_BRACKET_ID = "bracketID"),
+      (ze.LEVEL_BRACKET_MIN_LEVEL = "minLevel"),
+      (ze.LEVEL_BRACKET_MAX_LEVEL = "maxLevel"),
+      (ze.EVENT_ANNOUNCEMENT_ID = "eventAnnouncementID"),
+      (ze.EVENT_ANNOUNCEMENT_REWARD_ID = "messageRewardID"),
+      (ze.EVENT_ANNOUNCEMENT = "eventannouncement"),
+      (ze.TUTORIAL = "tutorial"),
+      (ze.TUTORIAL_STEP_ID = "tutorialStepID"),
+      (ze.CHAPTER = "chapter"),
+      (ze.CHAPTER_STEP = "chapterStep"),
+      (ze.ALLIANCE_RIGHTS = "alliancerankright"),
+      (ze.RIGHT_ID = "rankRightID"),
+      (ze.NEEDED_ALLIANCE_RANK = "neededMemberRank"),
+      (ze.ALLIANCE_RANKS = "alliancerank"),
+      (ze.RANK_ID = "rankID"),
+      (ze.RERANK_RIGHT = "rerankRight"),
+      (ze.MISSION_REWARD = "mercenary"),
+      (ze.MISSION_PROPERTY = "missionProperty"),
+      (ze.MISSION_ID = "missionID"),
+      (ze.UNIT_SLOT = "unitSlot"),
+      (ze.TOOL_SLOT = "toolSlot"),
+      (ze.IS_AUXILIARY = "isAuxiliary"),
+      (ze.STACK_SIZE = "stackSize"),
+      (ze.AUXILIARY_CAPACITY = "auxiliaryCapacity"),
+      (ze.PRE_BUILT_CASTLE = "prebuiltcastle"),
+      (ze.EVENT_SKIN = "eventSkin"),
+      (ze.EVENT_SKIN_ID = "eventSkinID"),
+      (ze.FORCED = "forced"),
+      (ze.POINT_LOSS = "decay"),
+      (ze.TITLE_EFFECT_ID = "titleEffectID"),
+      (ze.TITLE_VALUE = "value"),
+      (ze.DISPLAY_TYPE = "displayType"),
+      (ze.PREVIOUS_TITLE_ID = "previousTitleID"),
+      (ze.TITLE_EFFECTS = "titleEffect"),
+      (ze.QUEST_PROGRESS = "questProgress"),
+      (ze.GRANT_TITLE = "grantTitle"),
+      (ze.LEVEL_BOOSTER = "levelBooster"),
+      (ze.BOOSTER_ID = "boosterID"),
+      (ze.BOOSTER_LEVEL = "level"),
+      (ze.BOOST_PERCENTAGE = "boostPercentage"),
+      (ze.BOOSTER_TYPE = "boosterType"),
+      (ze.LONGTERM_POINT_EVENT_BOOSTER = "longTermPointEventBooster"),
+      (ze.CONSTRUCTION_ITEM = "constructionItem"),
+      (ze.CONSTRUCTION_ITEM_ID = "constructionItemID"),
+      (ze.CONSTRUCTION_ITEM_GROUP_ID = "constructionItemGroupID"),
+      (ze.CONSTRUCTION_ITEM_EFFECT_GROUP_ID = "constructionItemEffectGroupID"),
+      (ze.CONSTRUCTION_ITEM_EFFECT_GROUP = "constructionItemsEffectGroup"),
+      (ze.CONSTRUCTION_ITEM_AREA_LIMIT = "areaLimit"),
+      (ze.CONSTRUCTION_ITEM_OWNER_GLOBAL_EFFECT = "ownerGlobalEffect"),
+      (ze.CONSTRUCTION_ITEM_RECIPE = "constructionItemRecipe"),
+      (ze.CONSTRUCTION_ITEM_RECIPE_ID = "constructionItemRecipeID"),
+      (ze.DEFAULT_UNLOCKED = "defaultUnlocked"),
+      (ze.CONSTRUCTION_ITEM_IDS = "constructionItemIDs"),
+      (ze.CONSTRUCTION_ITEM_AMOUNT = "constructionItemAmount"),
+      (ze.SLOT_TYPE_ID = "slotTypeID"),
+      (ze.REMOVAL_COST_C1 = "removalCostC1"),
+      (ze.XP_BOOST_PERCENTAGE = "xpBoostPercentage"),
+      (ze.LOCK_REMOVAL = "lockRemoval"),
+      (ze.BOOST_CONSUMABLE = "boostConsumable"),
+      (ze.PROPERTY = "property"),
+      (ze.PROPERTY_ID = "propertyID"),
+      (ze.VALUE = "value"),
+      (ze.META_TYPE = "metaType"),
+      (ze.PRIME_TIME = "primeTime"),
+      (ze.PAYMENT_META_DATA_PRIVATE = "private"),
+      (ze.PLAYER_RELATION = "playerRelation"),
+      (ze.PLAYER_RELATION_NOT_SET = ""),
+      (ze.PLAYER_RELATION_NONE = "none"),
+      (ze.PLAYER_RELATION_SAME_PLAYER = "samePlayer"),
+      (ze.PLAYER_RELATION_SAME_ALLIANCE = "sameAlliance"),
+      (ze.PLAYER_RELATION_ALLIANCE_WAR = "allianceInWar"),
+      (ze.PLAYER_RELATION_ALLIANCE_FRIENDLY = "allianceFriendly"),
+      (ze.CLIENT_ONLY = "clientOnly"),
+      (ze.SHOPPING_CART = "shoppingCart"),
+      (ze.CART_OPTION_ID = "cartOptionID"),
+      (ze.TYPE_ID = "typeID"),
+      (ze.GROUP_ID = "groupID"),
+      (ze.AMOUNT_BUYABLE = "amountBuyable"),
+      (ze.UNBOOSTED_WOOD_PRODUCTION = "unboostedWoodProduction"),
+      (ze.UNBOOSTED_STONE_PRODUCTION = "unboostedStoneProduction"),
+      (ze.UNBOOSTED_FOOD_PRODUCTION = "unboostedFoodProduction"),
+      (ze.LEVEL_UP_PRICE = "levelUpPrice"),
+      (ze.LEVEL_UP_PRICE_ID = "levelUpPriceID"),
+      (ze.FROM_LEVEL = "fromLevel"),
+      (ze.TO_LEVEL = "toLevel"),
+      (ze.CURRENCY2_COST = "c2Cost"),
+      (ze.AUTO_RECRUITMENT_PRICE = "autoRecruitmentPrice"),
+      (ze.AUTO_RECRUITMENT_PRICE_ID = "autoRecruitmentPriceID"),
+      (ze.LOOP = "loop"),
+      (ze.TYPE_AUXILIARY = "auxiliaries"),
+      (ze.TYPE_SOLDIER = "soldiers"),
+      (ze.TYPE_TOOL = "tools"),
+      (ze.CRAFTING_MATERIAL = "craftingMaterial"),
+      (ze.MATERIAL_ID = "materialID"),
+      (ze.MATERIAL_NAME = "materialName"),
+      (ze.DECONSTRUCT_MATERIAL_NAME = "deconstructMaterialName"),
+      (ze.NEEDED_CONSTRUCTION_ITEM_ID = "neededConstructionItemID"),
+      (ze.MATERIAL_BAG = "rewardBag"),
+      (ze.MATERIAL_BAGS = "rewardBags"),
+      (ze.BAG_ID = "bagID"),
+      (ze.MATERIAL_STATIC_SUFFIX = "static"),
+      (ze.MATERIAL_STACK_SIZE_SUFFIX = "stackSize"),
+      (ze.MATERIAL_PERCENTAGES_SUFFIX = "percentages"),
+      (ze.FEAST_COST_REDUCTION = "feastCostsReduction"),
+      (ze.OFFENSIVE_TOOLS_COSTS_REDUCTION = "offensiveToolsCostsReduction"),
+      (ze.DEFENSIVE_TOOLS_COSTS_REDUCTION = "defensiveToolsCostsReduction"),
+      (ze.ESPIONAGE_TRAVEL_BOOST = "espionageTravelBoost"),
+      (ze.OFFENSIVE_TOOLS_SPEED_BOOST = "offensiveToolsSpeedBoost"),
+      (ze.DEFENSIVE_TOOLS_SPEED_BOOST = "defensiveToolsSpeedBoost"),
+      (ze.RESEARCH_RESOURCE_COSTS_REDUCTION = "ReduceResearchResourceCosts"),
+      (ze.BUILD_BUILDINGS_XP_BOOST = "XPBoostBuildBuildings"),
+      (ze.ATTACK_SETUP_SLOT = "attackSetupSlot"),
+      (ze.CRAFTING_DURATION = "craftingDuration"),
+      (ze.SUBSCRIPTION_BUFFS = "subscriptionsBuff"),
+      (ze.SUBSCRIPTION_BUFF_ID = "subscriptionBuffID"),
+      (ze.SUBSCRIPTION_BUFF_TYPE_ID = "subscriptionTypeID"),
+      (ze.SUBSCRIPTION_BUFF_SERIES_ID = "seriesID"),
+      (ze.SUBSCRIPTION_BUFF_REQUIRED_ALLIANCE_MEMBER_COUNT = "requiredMembers"),
+      (ze.PVP_FIGHT_ONLY = "isPvPFight"),
+      (ze.SUBSCRIPTION_CONVENIENCE_FEATURE = "subscriptionsConvenienceFeature"),
+      (ze.SUBSCRIPTION_CONVENIENCE_FEATURE_ID = "convenienceFeatureID"),
+      (ze.SUBSCRIPTION_LOYALTY = "subscriptionLoyalty"),
+      (ze.SUBSCRIPTION_LOYALTY_ID = "subscriptionLoyaltyID"),
+      (ze.SUBSCRIPTION_LOYALTY_MONTH = "month"),
+      (ze.SUBSCRIPTION_LOYALTY_BOOST = "boost"),
+      (ze.SUBSCRIPTION_REWARDS = "subscriptionsReward"),
+      (ze.SUBSCRIPTION_REWARD_ID = "subscriptionsRewardID"),
+      (ze.ALLIANCE_INVASION_CAMP = "allianceInvasionCamp"),
+      (ze.ALLIANCE_INVASION_CAMP_ID = "allianceInvasionCampID"),
+      (ze.RAGE_NEEDED_FOR_LEVEL_UP = "rageNeededForLevelUp"),
+      (ze.PLAYER_RAGE_CAP = "playerRageCap"),
+      (ze.COOLDOWN_INCREASE = "cooldownIncrease"),
+      (ze.SKIP_COST_INCREASE = "skipCostIncrease"),
+      (ze.INCREASE_MULTIPLIER = "increaseMultiplier"),
+      (ze.INCREASE_INTERVAL = "increaseInterval"),
+      (ze.COOLDOWN_INCREASE_CAP = "cooldownIncreaseCap"),
+      (ze.SKIP_COST_INCREASE_CAP = "skipCostIncreaseCap"),
+      (ze.GENERATED_RAGE_PER_ATTACK = "generatedRagePerAttack"),
+      (ze.CHANCE_FOR_CRITICAL_RAGE_GENERATION =
         "chanceForCriticalRageGeneration"),
-      (Ye.GENERATED_RAGE_PER_DEFENSE = "generatedRagePerDefense"),
-      (Ye.LOOT_RESOURCES = "lootResources"),
-      (Ye.LOOT_WOOD_PERCENT_MIN = "lootWoodPercentMin"),
-      (Ye.LOOT_WOOD_PERCENT_MAX = "lootWoodPercentMax"),
-      (Ye.LOOT_STONE_PERCENT_MIN = "lootStonePercentMin"),
-      (Ye.LOOT_STONE_PERCENT_MAX = "lootStonePercentMax"),
-      (Ye.LOOT_IRON_PERCENT_MIN = "lootIronPercentMin"),
-      (Ye.LOOT_IRON_PERCENT_MAX = "lootIronPercentMax"),
-      (Ye.LOOT_COAL_PERCENT_MIN = "lootCoalPercentMin"),
-      (Ye.LOOT_COAL_PERCENT_MAX = "lootCoalPercentMax"),
-      (Ye.LOOT_OIL_PERCENT_MIN = "lootOilPercentMin"),
-      (Ye.LOOT_OIL_PERCENT_MAX = "lootOilPercentMax"),
-      (Ye.LOOT_GLASS_PERCENT_MIN = "lootGlassPercentMin"),
-      (Ye.LOOT_GLASS_PERCENT_MAX = "lootGlassPercentMax"),
-      (Ye.PAYMENT_DOPPLER = "paymentDoppler"),
-      (Ye.REWARD_SET_ID = "rewardSetID"),
-      (Ye.QUEST_C2_COST = "c2Cost"),
-      (Ye.QUEST_C2_REDUCTION = "c2Reduction"),
-      (Ye.CURRENCY = "currency"),
-      (Ye.CURRENCY_ID = "currencyID"),
-      (Ye.CURRENCY_NAME = "Name"),
-      (Ye.CURRENCY_CAP = "currencyCap"),
-      (Ye.CURRENCY_SOFT_CAP = "softCap"),
-      (Ye.CURRENCY_HARD_CAP = "hardCap"),
-      (Ye.CURRENCY_BOOST = "currencyBooster"),
-      (Ye.CURRENCY_BOOST_NAME = "currencyBoosterName"),
-      (Ye.JSON_KEY = "JSONKey"),
-      (Ye.CURRENCY_RANDOM_BONUS = "currencyRandomBonus"),
-      (Ye.CURRENCY_RANDOM_BONUS_NAME = "RandomBonusName"),
-      (Ye.CURRENCY_COLLECT_TASK_TYPE = "currencyCollectTaskType"),
-      (Ye.CURRENCY_SPEND_TASK_TYPE = "currencySpendTaskType"),
-      (Ye.CURRENCY_TASK_TYPE = "taskType"),
-      (Ye.CURRENCY_MINUTE_SKIP_VALUE = "currencyMinutesSkipValue"),
-      (Ye.CURRENCY_MINUTE_SKIP_TIME = "MinutesSkipValue"),
-      (Ye.CURRENCY_MINUTE_SKIP_INDEX = "MinuteSkipIndex"),
-      (Ye.CURRENCY_TYPE = "currencyType"),
-      (Ye.CURRENCY_TYPE_ID = "typeID"),
-      (Ye.CURRENCY_TYPE_ID_RANGE = "currencyIDRange"),
-      (Ye.IGNORE_CURRENCY_SOFT_CAP = "ignoreCurrencySoftCap"),
-      (Ye.FUSION_SYSTEM = "fusionSystem"),
-      (Ye.FUSION_SYSTEM_ID = "id"),
-      (Ye.FUSION_SYSTEM_ENERGY_RECHARGE_INTERVAL =
+      (ze.GENERATED_RAGE_PER_DEFENSE = "generatedRagePerDefense"),
+      (ze.LOOT_RESOURCES = "lootResources"),
+      (ze.LOOT_WOOD_PERCENT_MIN = "lootWoodPercentMin"),
+      (ze.LOOT_WOOD_PERCENT_MAX = "lootWoodPercentMax"),
+      (ze.LOOT_STONE_PERCENT_MIN = "lootStonePercentMin"),
+      (ze.LOOT_STONE_PERCENT_MAX = "lootStonePercentMax"),
+      (ze.LOOT_IRON_PERCENT_MIN = "lootIronPercentMin"),
+      (ze.LOOT_IRON_PERCENT_MAX = "lootIronPercentMax"),
+      (ze.LOOT_COAL_PERCENT_MIN = "lootCoalPercentMin"),
+      (ze.LOOT_COAL_PERCENT_MAX = "lootCoalPercentMax"),
+      (ze.LOOT_OIL_PERCENT_MIN = "lootOilPercentMin"),
+      (ze.LOOT_OIL_PERCENT_MAX = "lootOilPercentMax"),
+      (ze.LOOT_GLASS_PERCENT_MIN = "lootGlassPercentMin"),
+      (ze.LOOT_GLASS_PERCENT_MAX = "lootGlassPercentMax"),
+      (ze.PAYMENT_DOPPLER = "paymentDoppler"),
+      (ze.REWARD_SET_ID = "rewardSetID"),
+      (ze.QUEST_C2_COST = "c2Cost"),
+      (ze.QUEST_C2_REDUCTION = "c2Reduction"),
+      (ze.CURRENCY = "currency"),
+      (ze.CURRENCY_ID = "currencyID"),
+      (ze.CURRENCY_NAME = "Name"),
+      (ze.CURRENCY_CAP = "currencyCap"),
+      (ze.CURRENCY_SOFT_CAP = "softCap"),
+      (ze.CURRENCY_HARD_CAP = "hardCap"),
+      (ze.CURRENCY_BOOST = "currencyBooster"),
+      (ze.CURRENCY_BOOST_NAME = "currencyBoosterName"),
+      (ze.JSON_KEY = "JSONKey"),
+      (ze.CURRENCY_RANDOM_BONUS = "currencyRandomBonus"),
+      (ze.CURRENCY_RANDOM_BONUS_NAME = "RandomBonusName"),
+      (ze.CURRENCY_COLLECT_TASK_TYPE = "currencyCollectTaskType"),
+      (ze.CURRENCY_SPEND_TASK_TYPE = "currencySpendTaskType"),
+      (ze.CURRENCY_TASK_TYPE = "taskType"),
+      (ze.CURRENCY_MINUTE_SKIP_VALUE = "currencyMinutesSkipValue"),
+      (ze.CURRENCY_MINUTE_SKIP_TIME = "MinutesSkipValue"),
+      (ze.CURRENCY_MINUTE_SKIP_INDEX = "MinuteSkipIndex"),
+      (ze.CURRENCY_TYPE = "currencyType"),
+      (ze.CURRENCY_TYPE_ID = "typeID"),
+      (ze.CURRENCY_TYPE_ID_RANGE = "currencyIDRange"),
+      (ze.IGNORE_CURRENCY_SOFT_CAP = "ignoreCurrencySoftCap"),
+      (ze.FUSION_SYSTEM = "fusionSystem"),
+      (ze.FUSION_SYSTEM_ID = "id"),
+      (ze.FUSION_SYSTEM_ENERGY_RECHARGE_INTERVAL =
         "energyRechargeIntervalInSeconds"),
-      (Ye.FUSION_SYSTEM_ASSEMBLE_CATALYST_ENERGY_COST =
+      (ze.FUSION_SYSTEM_ASSEMBLE_CATALYST_ENERGY_COST =
         "assembleCatalystEnergyCost"),
-      (Ye.FUSION_SYSTEM_DISASSEMBLE_CATALYST_ENERGY_COST =
+      (ze.FUSION_SYSTEM_DISASSEMBLE_CATALYST_ENERGY_COST =
         "disassembleCatalystEnergyCost"),
-      (Ye.FUSION_SYSTEM_BASE_BONUS_XP_CHANCE = "baseBonusFusionXPChance"),
-      (Ye.FUSION_SYSTEM_PREMIUM_BONUS_XP_CHANCE = "premiumBonusFusionXPChance"),
-      (Ye.FUSION_SYSTEM_SKIP_RECHARGE_C2_COST = "skipRechargeHardCurrencyCost"),
-      (Ye.FUSION_SYSTEM_SKIP_RECHARGE_C2_COST_FACTOR =
+      (ze.FUSION_SYSTEM_BASE_BONUS_XP_CHANCE = "baseBonusFusionXPChance"),
+      (ze.FUSION_SYSTEM_PREMIUM_BONUS_XP_CHANCE = "premiumBonusFusionXPChance"),
+      (ze.FUSION_SYSTEM_SKIP_RECHARGE_C2_COST = "skipRechargeHardCurrencyCost"),
+      (ze.FUSION_SYSTEM_SKIP_RECHARGE_C2_COST_FACTOR =
         "skipRechargeHardCurrencyCostFactor"),
-      (Ye.FUSION_SYSTEM_FUSION_CURRENCY_ID = "fusionCurrencyID"),
-      (Ye.FORGE = "fusionForge"),
-      (Ye.FORGE_ID = "forgeID"),
-      (Ye.FORGE_DUST_CURRENCY_ID = "dustCurrencyID"),
-      (Ye.FORGE_USABLE_TIMESKIPS_PER_DAY = "usableMinuteSkipsPerDay"),
-      (Ye.FORGE_MINUTE_SKIP = "forgeMinuteSkip"),
-      (Ye.FORGE_MINUTE_SKIP_ID = "id"),
-      (Ye.CATALYST = "catalyst"),
-      (Ye.CATALYST_DEPRECATED = "deprecated"),
-      (Ye.CATALYST_MAX_USABLE_FUSION_LEVEL = "maxUsableFusionLevel"),
-      (Ye.CATALYST_TIER = "tier"),
-      (Ye.FUSION_COST_SEQUENCE = "fusionCostSequence"),
-      (Ye.FUSION_COST_SEQUENCE_ID = "id"),
-      (Ye.FUSION_COST_SEQUENCE_FUSION_TARGET_LEVEL =
+      (ze.FUSION_SYSTEM_FUSION_CURRENCY_ID = "fusionCurrencyID"),
+      (ze.FORGE = "fusionForge"),
+      (ze.FORGE_ID = "forgeID"),
+      (ze.FORGE_DUST_CURRENCY_ID = "dustCurrencyID"),
+      (ze.FORGE_USABLE_TIMESKIPS_PER_DAY = "usableMinuteSkipsPerDay"),
+      (ze.FORGE_MINUTE_SKIP = "forgeMinuteSkip"),
+      (ze.FORGE_MINUTE_SKIP_ID = "id"),
+      (ze.CATALYST = "catalyst"),
+      (ze.CATALYST_DEPRECATED = "deprecated"),
+      (ze.CATALYST_MAX_USABLE_FUSION_LEVEL = "maxUsableFusionLevel"),
+      (ze.CATALYST_TIER = "tier"),
+      (ze.FUSION_COST_SEQUENCE = "fusionCostSequence"),
+      (ze.FUSION_COST_SEQUENCE_ID = "id"),
+      (ze.FUSION_COST_SEQUENCE_FUSION_TARGET_LEVEL =
         "fusionTargetLevelIterationIndex"),
-      (Ye.FUSION_COST_SEQUENCE_COST_JSON_KEY = "costJSONKey"),
-      (Ye.FUSION_COST_SEQUENCE_COST_AMOUNT = "costAmount"),
-      (Ye.FUSION_IS_SOURCE = "isFusionSource"),
-      (Ye.FUSION_IS_TARGET = "isFusionTarget"),
-      (Ye.FUSION_INITIAL_FUSION_LEVEL = "initialFusionLevel"),
-      (Ye.FUSION_SHOP = "fusionShop"),
-      (Ye.PRIVATE_RESOURCE_VILLAGE = "privateVillage"),
-      (Ye.VILLAGE_ID = "villageID"),
-      (Ye.VILLAGE_LEVEL = "villageLevel"),
-      (Ye.RESOURCE_VILLAGE_TOKEN_COST = "costResourceVillageToken"),
-      (Ye.RESOURCE_VILLAGE_TOKEN_COST_TOTAL = "costResourceVillageTokenTotal"),
-      (Ye.VILLAGE_CAP_COAL = "villageCapCoal"),
-      (Ye.VILLAGE_CAP_OIL = "villageCapOil"),
-      (Ye.VILLAGE_CAP_GLASS = "villageCapGlass"),
-      (Ye.VILLAGE_CAP_IRON = "villageCapIron"),
-      (Ye.VILLAGE_TYPE = "type"),
-      (Ye.KINGS_MARKET = "kingsMarket"),
-      (Ye.TEMP_SERVER_REPAIR_COST_WOOD = "tempServerCostWood"),
-      (Ye.TEMP_SERVER_REPAIR_COST_STONE = "tempServerCostStone"),
-      (Ye.TEMP_SERVER_REPAIR_TIME = "tempServerTime"),
-      (Ye.TEMP_SERVER_RANK_ID = "tempServerRankID"),
-      (Ye.TEMP_SERVER_RANK_REWARD_ID = "tempServerRankRewardID"),
-      (Ye.MIN_RANK = "minRank"),
-      (Ye.MAX_RANK = "maxRank"),
-      (Ye.RANK_POINTS = "rankPoints"),
-      (Ye.TEMP_SERVER_RANK_POINTS = "tempServerRankPoint"),
-      (Ye.IS_HIDDEN_ON_TEMP_SERVER = "hiddenTempServer"),
-      (Ye.IS_HIDDEN_ON_CROSS_PLAY_SERVER = "hiddenCrossPlayServer"),
-      (Ye.DESTRUCTIBLE_ON_TEMP_SERVER = "tempServerDestructable"),
-      (Ye.BURNABLE_ON_TEMP_SERVER = "tempServerBurnable"),
-      (Ye.TEMP_SERVER_COST_CURRENCY2 = "tempServerCostC2"),
-      (Ye.START_PLAYER_LEVEL = "startPlayerLevel"),
-      (Ye.START_PLAYER_LEGEND_LEVEL = "startPlayerLegendLevel"),
-      (Ye.QUESTS_TO_FINISH = "questsToFinish"),
-      (Ye.TEMP_SERVER_RANK_REWARD = "tempServerRankReward"),
-      (Ye.RANK = "rank"),
-      (Ye.GAME_ID = "gameID"),
-      (Ye.ZONE_ID = "zoneID"),
-      (Ye.ZONE_IDS = "zoneIDs"),
-      (Ye.DATA = "data"),
-      (Ye.PLAYER_ID = "playerId"),
-      (Ye.PAYMENT_TYPE = "paymentType"),
-      (Ye.PAYMENT_TYPE_INCENTIVE = "incentive"),
-      (Ye.CURRENCY_PREMIUM = "currencyPremium"),
-      (Ye.PAYOUT = "payout"),
-      (Ye.ORDER_ID = "orderId"),
-      (Ye.MESSAGE = "message"),
-      (Ye.COMMAND_TYPE = "commandType"),
-      (Ye.COMMAND_TYPE_CUSTOM_PAYMENT_3 = "CUSTOM_PAYMENT_3"),
-      (Ye.CAMP_ID = "campID"),
-      (Ye.START_RESOURCE_ID = "startResourceID"),
-      (Ye.CASTLE_PASSAGE_TOKEN_PACKAGE_ID = "castlePassageTokenPackageID"),
-      (Ye.WOD_C1 = "c1"),
-      (Ye.START_RESOURCE = "startResource"),
-      (Ye.TEMP_SEVER_SETTING = "tempServerSetting"),
-      (Ye.SETTING_ID = "settingID"),
-      (Ye.PRESET_IDS = "presetIDs"),
-      (Ye.PEACE_MODE = "peaceMode"),
-      (Ye.SCORING_SYSTEM = "scoringSystem"),
-      (Ye.TEMP_SERVER_PREBUILT_CASTLE = "tempServerPreBuiltCastle"),
-      (Ye.START_CURRENCY_AMOUNT = "startCurrencyAmount"),
-      (Ye.CURRENCY_LOOTFACTOR_MIN = "currencyLootFactorMin"),
-      (Ye.CURRENCY_LOOTFACTOR_MAX = "currencyLootFactorMax"),
-      (Ye.BOOSTER_CURRENCY_ID = "boosterCurrencyID"),
-      (Ye.BOOSTER_CURRENCY_VALUE = "boosterCurrencyValue"),
-      (Ye.BOOSTER_CURRENCY_LIMIT = "boosterCurrencyLimit"),
-      (Ye.BOOSTER_CURRENCY_PACKAGE_ID = "boosterCurrencyPackageID"),
-      (Ye.TEMPSERVER_PAYOUT = "tempserver-payout"),
-      (Ye.SOURCE = "source"),
-      (Ye.TEMP_SERVER_DAILY_TASK_REWARD_ID = "tempServerDailyTaskRewardID"),
-      (Ye.TEMP_SERVER_MIN_DAILY_TASK_POINTS_PER_DAY =
+      (ze.FUSION_COST_SEQUENCE_COST_JSON_KEY = "costJSONKey"),
+      (ze.FUSION_COST_SEQUENCE_COST_AMOUNT = "costAmount"),
+      (ze.FUSION_IS_SOURCE = "isFusionSource"),
+      (ze.FUSION_IS_TARGET = "isFusionTarget"),
+      (ze.FUSION_INITIAL_FUSION_LEVEL = "initialFusionLevel"),
+      (ze.FUSION_SHOP = "fusionShop"),
+      (ze.PRIVATE_RESOURCE_VILLAGE = "privateVillage"),
+      (ze.VILLAGE_ID = "villageID"),
+      (ze.VILLAGE_LEVEL = "villageLevel"),
+      (ze.RESOURCE_VILLAGE_TOKEN_COST = "costResourceVillageToken"),
+      (ze.RESOURCE_VILLAGE_TOKEN_COST_TOTAL = "costResourceVillageTokenTotal"),
+      (ze.VILLAGE_CAP_COAL = "villageCapCoal"),
+      (ze.VILLAGE_CAP_OIL = "villageCapOil"),
+      (ze.VILLAGE_CAP_GLASS = "villageCapGlass"),
+      (ze.VILLAGE_CAP_IRON = "villageCapIron"),
+      (ze.VILLAGE_TYPE = "type"),
+      (ze.KINGS_MARKET = "kingsMarket"),
+      (ze.TEMP_SERVER_REPAIR_COST_WOOD = "tempServerCostWood"),
+      (ze.TEMP_SERVER_REPAIR_COST_STONE = "tempServerCostStone"),
+      (ze.TEMP_SERVER_REPAIR_TIME = "tempServerTime"),
+      (ze.TEMP_SERVER_RANK_ID = "tempServerRankID"),
+      (ze.TEMP_SERVER_RANK_REWARD_ID = "tempServerRankRewardID"),
+      (ze.MIN_RANK = "minRank"),
+      (ze.MAX_RANK = "maxRank"),
+      (ze.RANK_POINTS = "rankPoints"),
+      (ze.TEMP_SERVER_RANK_POINTS = "tempServerRankPoint"),
+      (ze.IS_HIDDEN_ON_TEMP_SERVER = "hiddenTempServer"),
+      (ze.IS_HIDDEN_ON_CROSS_PLAY_SERVER = "hiddenCrossPlayServer"),
+      (ze.DESTRUCTIBLE_ON_TEMP_SERVER = "tempServerDestructable"),
+      (ze.BURNABLE_ON_TEMP_SERVER = "tempServerBurnable"),
+      (ze.TEMP_SERVER_COST_CURRENCY2 = "tempServerCostC2"),
+      (ze.START_PLAYER_LEVEL = "startPlayerLevel"),
+      (ze.START_PLAYER_LEGEND_LEVEL = "startPlayerLegendLevel"),
+      (ze.QUESTS_TO_FINISH = "questsToFinish"),
+      (ze.TEMP_SERVER_RANK_REWARD = "tempServerRankReward"),
+      (ze.RANK = "rank"),
+      (ze.GAME_ID = "gameID"),
+      (ze.ZONE_ID = "zoneID"),
+      (ze.ZONE_IDS = "zoneIDs"),
+      (ze.DATA = "data"),
+      (ze.PLAYER_ID = "playerId"),
+      (ze.PAYMENT_TYPE = "paymentType"),
+      (ze.PAYMENT_TYPE_INCENTIVE = "incentive"),
+      (ze.CURRENCY_PREMIUM = "currencyPremium"),
+      (ze.PAYOUT = "payout"),
+      (ze.ORDER_ID = "orderId"),
+      (ze.MESSAGE = "message"),
+      (ze.COMMAND_TYPE = "commandType"),
+      (ze.COMMAND_TYPE_CUSTOM_PAYMENT_3 = "CUSTOM_PAYMENT_3"),
+      (ze.CAMP_ID = "campID"),
+      (ze.START_RESOURCE_ID = "startResourceID"),
+      (ze.CASTLE_PASSAGE_TOKEN_PACKAGE_ID = "castlePassageTokenPackageID"),
+      (ze.WOD_C1 = "c1"),
+      (ze.START_RESOURCE = "startResource"),
+      (ze.TEMP_SEVER_SETTING = "tempServerSetting"),
+      (ze.SETTING_ID = "settingID"),
+      (ze.PRESET_IDS = "presetIDs"),
+      (ze.PEACE_MODE = "peaceMode"),
+      (ze.SCORING_SYSTEM = "scoringSystem"),
+      (ze.TEMP_SERVER_PREBUILT_CASTLE = "tempServerPreBuiltCastle"),
+      (ze.START_CURRENCY_AMOUNT = "startCurrencyAmount"),
+      (ze.CURRENCY_LOOTFACTOR_MIN = "currencyLootFactorMin"),
+      (ze.CURRENCY_LOOTFACTOR_MAX = "currencyLootFactorMax"),
+      (ze.BOOSTER_CURRENCY_ID = "boosterCurrencyID"),
+      (ze.BOOSTER_CURRENCY_VALUE = "boosterCurrencyValue"),
+      (ze.BOOSTER_CURRENCY_LIMIT = "boosterCurrencyLimit"),
+      (ze.BOOSTER_CURRENCY_PACKAGE_ID = "boosterCurrencyPackageID"),
+      (ze.TEMPSERVER_PAYOUT = "tempserver-payout"),
+      (ze.SOURCE = "source"),
+      (ze.TEMP_SERVER_DAILY_TASK_REWARD_ID = "tempServerDailyTaskRewardID"),
+      (ze.TEMP_SERVER_MIN_DAILY_TASK_POINTS_PER_DAY =
         "minDailyTaskPointsPerDay"),
-      (Ye.TEMP_SERVER_DAILY_TASK_REWARD = "tempServerDailyTaskReward"),
-      (Ye.RETURN_CURRENCY_FACTOR = "returnCurrencyFactor"),
-      (Ye.DISABLED_ON_GLOBAL_SERVER = "disabledOnGlobalServer"),
-      (Ye.DEFENSE_STREGTH_INCREASE = "defStrengthIncrease"),
-      (Ye.LEVEL_INCREASE = "levelIncrease"),
-      (Ye.MAX_VALUE = "maxValue"),
-      (Ye.MINIMUM_CURRENCY_AMOUNT_TO_SCORE = "minimumCurrencyAmountToScore"),
-      (Ye.PEACE_DURATION = "peaceDuration"),
-      (Ye.GLOBAL_SERVER_RESEARCH_DURATION = "globalServerResearchDuration"),
-      (Ye.GLOBAL_SERVER_COST_C1 = "globalServerCostC1"),
-      (Ye.GLOBAL_SERVER_COST_C2 = "globalServerCostC2"),
-      (Ye.GLOBAL_SERVER_COST_WOOD = "globalServerCostWood"),
-      (Ye.GLOBAL_SERVER_COST_STONE = "globalServerCostStone"),
-      (Ye.GLOBAL_SERVER_COST_COAL = "globalServerCostCoal"),
-      (Ye.GLOBAL_SERVER_COST_OIL = "globalServerCostOil"),
-      (Ye.GLOBAL_SERVER_COST_GLASS = "globalServerCostGlass"),
-      (Ye.GLOBAL_SERVER_COST_IRON = "globalServerCostIron"),
-      (Ye.GLOBAL_SERVER_COST_FOOD = "globalServerCostFood"),
-      (Ye.GLOBAL_SERVER_COST_MEAD = "globalServerCostMead"),
-      (Ye.GLOBAL_SERVER_COST_HONEY = "globalServerCostHoney"),
-      (Ye.GLOBAL_SERVER_COST_AQUAMARINE = "globalServerCostAquamarine"),
-      (Ye.GLOBAL_SERVER_COST_BEEF = "globalServerCostBeef"),
-      (Ye.COLLECTOR_EVENT_REWARDS_ID = "collectorEventRewardsID"),
-      (Ye.COLLECTOR_EVENT_REWARD_EVENT_OPTION_ID = "eventOptionID"),
-      (Ye.COLLECTOR_EVENT_CURRENCY_THRESHOLD = "minCurrencyAmount"),
-      (Ye.COLLECTOR_EVENT_OPTION_ID = "collectorEventOptionID"),
-      (Ye.COLLECTOR_CURRENCY_ID = "collectorCurrencyID"),
-      (Ye.COLLECTOR_KEY_CURRENCY_ID = "collectorKeyCurrencyID"),
-      (Ye.COLLECTOR_KEY_BOOST = "collectorKeyBoost"),
-      (Ye.COLLECTOR_KEY_LIMIT = "collectorKeyLimit"),
-      (Ye.BASE_COLLECTOR_BOOST = "baseCollectorBoost"),
-      (Ye.EVENT_START_CURRENCY_AMOUNT = "eventStartCurrencyAmount"),
-      (Ye.DAILY_CURRENCY_INCREASE = "dailyCurrencyIncrease"),
-      (Ye.COLLECTOR_EVENT_OPTION = "collectorEventOption"),
-      (Ye.COLLECTOR_EVENT_REWARD = "collectorEventReward"),
-      (Ye.NPC_PLAYER_ID = "npcPlayerID"),
-      (Ye.SEASON_MEDAL = "seasonMedal"),
-      (Ye.SEASON_MEDAL_ID = "medalID"),
-      (Ye.SEASON_MEDAL_POINTS = "medalPoints"),
-      (Ye.SEASON_RANK = "seasonRank"),
-      (Ye.SEASON_RANK_ID = "rankID"),
-      (Ye.SEASON_MIN_MEDAL_POINTS_FOR_UNLOCK = "minMedalPointsForUnlock"),
-      (Ye.SEASON_EVENT_REWARD = "seasonEventReward"),
-      (Ye.SEASON_END_REWARD = "seasonEndReward"),
-      (Ye.SEASON_PROMOTION_REWARD = "seasonPromotionReward"),
-      (Ye.SEASON_NEEDS_PASS = "needsSeasonPass"),
-      (Ye.SEASON_MIN_HIGHSCORE_RANK = "minHighscoreRank"),
-      (Ye.USE_MIN_LEVEL_OF_EVENTS = "useMinLevelOfEvents"),
-      (Ye.SEASON_SETTING = "seasonSetting"),
-      (Ye.SEASON_PASS_PROMOTION_PRICE = "seasonPassPromotionPrice"),
-      (Ye.SEASON_PASS_EVENT_END_PRICE = "seasonPassEventEndPrice"),
-      (Ye.SEASON_PASS_FULL_DISCOUNT = "seasonPassFullDiscount"),
-      (Ye.SEASON_PASS_SINGLE_DISCOUNT = "seasonPassSingleDiscount"),
-      (Ye.REROLL_COST = "rerollCost"),
-      (Ye.REROLL_COUNT = "rerollCount"),
-      (Ye.REROLL_COST_C1 = "c1Cost"),
-      (Ye.REROLL_COST_C2 = "c2Cost"),
-      (Ye.GLOBAL_EFFECT = "globalEffect"),
-      (Ye.GLOBAL_EFFECT_ID = "globalEffectID"),
-      (Ye.REFRESH_AREA = "refreshArea"),
-      (Ye.EFFECT_CAP = "effectCap"),
-      (Ye.CAP_ID = "capID"),
-      (Ye.RELIC_POWER_DISTRIBUTION = "relicPowerDistribution"),
-      (Ye.POWER = "power"),
-      (Ye.SHARES = "shares"),
-      (Ye.RELIC_EFFECT = "relicEffect"),
-      (Ye.MINIMUM_VALUE = "minimumValue"),
-      (Ye.MAXIMUM_VALUE = "maximumValue"),
-      (Ye.RELIC_EFFECT_LIST = "relicEffectList"),
-      (Ye.RELIC_EFFECT_IDS = "relicEffectIDs"),
-      (Ye.RELIC_TYPES = "relicType"),
-      (Ye.RELIC_BLUE_PRINTS = "relicBluePrint"),
-      (Ye.NORMAL_AMOUNT = "normalAmount"),
-      (Ye.SPECIAL_AMOUNT = "specialAmount"),
-      (Ye.NORMAL_EFFECT_LIST_ID = "normalRelicEffectListID"),
-      (Ye.SPECIAL_EFFECT_LIST_ID = "specialRelicEffectListID"),
-      (Ye.RELIC_TYPE_ID = "relicTypeID"),
-      (Ye.BASE_EFFECT_IDS = "baseRelicEffectIDs"),
-      (Ye.RELIC_EFFECT_POWER_RATING = "relicEffectPowerRating"),
-      (Ye.RELIC_CATEGORY = "relicCategory"),
-      (Ye.NEEDED_RATINGS = "neededRatings"),
-      (Ye.IS_GEM = "isGem"),
-      (Ye.RELIC_EFFECT_TYPE = "relicEffectType"),
-      (Ye.VALUE_TEXT_TYPE = "valueTextType"),
-      (Ye.EFFECT_VALUE_KEYS = "effectValueKeys"),
-      (Ye.RELIC_ITEM_REWARDS = "relicEquipments"),
-      (Ye.PVE_FIGHT_ONLY = "isPvEFight"),
-      (Ye.SUCCESS_CHANCE = "chance"),
-      (Ye.EFFECT_INCREASE = "relicNormalEffectBoost"),
-      (Ye.RELIC_ENCHANTER = "relicEnchanter"),
-      (Ye.IS_RELIC_ENCHANTER = "isRelicEnchanter"),
-      (Ye.RELIC_FRAGMENT_BOOST = "relicFragmentBoost"),
-      (Ye.EQUIPMENT_STORAGE = "addEquipmentStorageCapacity"),
-      (Ye.GEM_STORAGE = "addGemStorageCapacity"),
-      (Ye.RELIC_LOOT_TABLE = "relicLootOption"),
-      (Ye.TOMBOLA_ID = "tombolaID"),
-      (Ye.OFFICERS_SCHOOL_POWER_DISTRIBUTION =
+      (ze.TEMP_SERVER_DAILY_TASK_REWARD = "tempServerDailyTaskReward"),
+      (ze.RETURN_CURRENCY_FACTOR = "returnCurrencyFactor"),
+      (ze.DISABLED_ON_GLOBAL_SERVER = "disabledOnGlobalServer"),
+      (ze.DEFENSE_STREGTH_INCREASE = "defStrengthIncrease"),
+      (ze.LEVEL_INCREASE = "levelIncrease"),
+      (ze.MAX_VALUE = "maxValue"),
+      (ze.MINIMUM_CURRENCY_AMOUNT_TO_SCORE = "minimumCurrencyAmountToScore"),
+      (ze.PEACE_DURATION = "peaceDuration"),
+      (ze.GLOBAL_SERVER_RESEARCH_DURATION = "globalServerResearchDuration"),
+      (ze.GLOBAL_SERVER_COST_C1 = "globalServerCostC1"),
+      (ze.GLOBAL_SERVER_COST_C2 = "globalServerCostC2"),
+      (ze.GLOBAL_SERVER_COST_WOOD = "globalServerCostWood"),
+      (ze.GLOBAL_SERVER_COST_STONE = "globalServerCostStone"),
+      (ze.GLOBAL_SERVER_COST_COAL = "globalServerCostCoal"),
+      (ze.GLOBAL_SERVER_COST_OIL = "globalServerCostOil"),
+      (ze.GLOBAL_SERVER_COST_GLASS = "globalServerCostGlass"),
+      (ze.GLOBAL_SERVER_COST_IRON = "globalServerCostIron"),
+      (ze.GLOBAL_SERVER_COST_FOOD = "globalServerCostFood"),
+      (ze.GLOBAL_SERVER_COST_MEAD = "globalServerCostMead"),
+      (ze.GLOBAL_SERVER_COST_HONEY = "globalServerCostHoney"),
+      (ze.GLOBAL_SERVER_COST_AQUAMARINE = "globalServerCostAquamarine"),
+      (ze.GLOBAL_SERVER_COST_BEEF = "globalServerCostBeef"),
+      (ze.COLLECTOR_EVENT_REWARDS_ID = "collectorEventRewardsID"),
+      (ze.COLLECTOR_EVENT_REWARD_EVENT_OPTION_ID = "eventOptionID"),
+      (ze.COLLECTOR_EVENT_CURRENCY_THRESHOLD = "minCurrencyAmount"),
+      (ze.COLLECTOR_EVENT_OPTION_ID = "collectorEventOptionID"),
+      (ze.COLLECTOR_CURRENCY_ID = "collectorCurrencyID"),
+      (ze.COLLECTOR_KEY_CURRENCY_ID = "collectorKeyCurrencyID"),
+      (ze.COLLECTOR_KEY_BOOST = "collectorKeyBoost"),
+      (ze.COLLECTOR_KEY_LIMIT = "collectorKeyLimit"),
+      (ze.BASE_COLLECTOR_BOOST = "baseCollectorBoost"),
+      (ze.EVENT_START_CURRENCY_AMOUNT = "eventStartCurrencyAmount"),
+      (ze.DAILY_CURRENCY_INCREASE = "dailyCurrencyIncrease"),
+      (ze.COLLECTOR_EVENT_OPTION = "collectorEventOption"),
+      (ze.COLLECTOR_EVENT_REWARD = "collectorEventReward"),
+      (ze.NPC_PLAYER_ID = "npcPlayerID"),
+      (ze.SEASON_MEDAL = "seasonMedal"),
+      (ze.SEASON_MEDAL_ID = "medalID"),
+      (ze.SEASON_MEDAL_POINTS = "medalPoints"),
+      (ze.SEASON_RANK = "seasonRank"),
+      (ze.SEASON_RANK_ID = "rankID"),
+      (ze.SEASON_MIN_MEDAL_POINTS_FOR_UNLOCK = "minMedalPointsForUnlock"),
+      (ze.SEASON_EVENT_REWARD = "seasonEventReward"),
+      (ze.SEASON_END_REWARD = "seasonEndReward"),
+      (ze.SEASON_PROMOTION_REWARD = "seasonPromotionReward"),
+      (ze.SEASON_NEEDS_PASS = "needsSeasonPass"),
+      (ze.SEASON_MIN_HIGHSCORE_RANK = "minHighscoreRank"),
+      (ze.USE_MIN_LEVEL_OF_EVENTS = "useMinLevelOfEvents"),
+      (ze.SEASON_SETTING = "seasonSetting"),
+      (ze.SEASON_PASS_PROMOTION_PRICE = "seasonPassPromotionPrice"),
+      (ze.SEASON_PASS_EVENT_END_PRICE = "seasonPassEventEndPrice"),
+      (ze.SEASON_PASS_FULL_DISCOUNT = "seasonPassFullDiscount"),
+      (ze.SEASON_PASS_SINGLE_DISCOUNT = "seasonPassSingleDiscount"),
+      (ze.REROLL_COST = "rerollCost"),
+      (ze.REROLL_COUNT = "rerollCount"),
+      (ze.REROLL_COST_C1 = "c1Cost"),
+      (ze.REROLL_COST_C2 = "c2Cost"),
+      (ze.GLOBAL_EFFECT = "globalEffect"),
+      (ze.GLOBAL_EFFECT_ID = "globalEffectID"),
+      (ze.REFRESH_AREA = "refreshArea"),
+      (ze.EFFECT_CAP = "effectCap"),
+      (ze.CAP_ID = "capID"),
+      (ze.RELIC_POWER_DISTRIBUTION = "relicPowerDistribution"),
+      (ze.POWER = "power"),
+      (ze.SHARES = "shares"),
+      (ze.RELIC_EFFECT = "relicEffect"),
+      (ze.MINIMUM_VALUE = "minimumValue"),
+      (ze.MAXIMUM_VALUE = "maximumValue"),
+      (ze.RELIC_EFFECT_LIST = "relicEffectList"),
+      (ze.RELIC_EFFECT_IDS = "relicEffectIDs"),
+      (ze.RELIC_TYPES = "relicType"),
+      (ze.RELIC_BLUE_PRINTS = "relicBluePrint"),
+      (ze.NORMAL_AMOUNT = "normalAmount"),
+      (ze.SPECIAL_AMOUNT = "specialAmount"),
+      (ze.NORMAL_EFFECT_LIST_ID = "normalRelicEffectListID"),
+      (ze.SPECIAL_EFFECT_LIST_ID = "specialRelicEffectListID"),
+      (ze.RELIC_TYPE_ID = "relicTypeID"),
+      (ze.BASE_EFFECT_IDS = "baseRelicEffectIDs"),
+      (ze.RELIC_EFFECT_POWER_RATING = "relicEffectPowerRating"),
+      (ze.RELIC_CATEGORY = "relicCategory"),
+      (ze.NEEDED_RATINGS = "neededRatings"),
+      (ze.IS_GEM = "isGem"),
+      (ze.RELIC_EFFECT_TYPE = "relicEffectType"),
+      (ze.VALUE_TEXT_TYPE = "valueTextType"),
+      (ze.EFFECT_VALUE_KEYS = "effectValueKeys"),
+      (ze.RELIC_ITEM_REWARDS = "relicEquipments"),
+      (ze.PVE_FIGHT_ONLY = "isPvEFight"),
+      (ze.SUCCESS_CHANCE = "chance"),
+      (ze.EFFECT_INCREASE = "relicNormalEffectBoost"),
+      (ze.RELIC_ENCHANTER = "relicEnchanter"),
+      (ze.IS_RELIC_ENCHANTER = "isRelicEnchanter"),
+      (ze.RELIC_FRAGMENT_BOOST = "relicFragmentBoost"),
+      (ze.EQUIPMENT_STORAGE = "addEquipmentStorageCapacity"),
+      (ze.GEM_STORAGE = "addGemStorageCapacity"),
+      (ze.RELIC_LOOT_TABLE = "relicLootOption"),
+      (ze.TOMBOLA_ID = "tombolaID"),
+      (ze.OFFICERS_SCHOOL_POWER_DISTRIBUTION =
         "officersSchoolPowerDistribution"),
-      (Ye.OFFICERS_SCHOOL_UNIT_PAIR = "officersSchoolUnitPair"),
-      (Ye.OFFICERS_SCHOOL_EFFECT = "officersSchoolEffect"),
-      (Ye.OFFICERS_SCHOOL_CURRENCY = "officersSchoolCurrency"),
-      (Ye.OFFICERS_SCHOOL_DURATIION = "officersSchoolDuration"),
-      (Ye.UNLOCK_BUILDING_WOD_ID = "unlockBuildingWodID"),
-      (Ye.USED_FOR_PROGRAM = "usedForProgram"),
-      (Ye.USED_FOR_REROLL = "usedForReroll"),
-      (Ye.MINIMUM_VALUE_1 = "minimumEffectValueSlot1"),
-      (Ye.MAXIMUM_VALUE_1 = "maximumEffectValueSlot1"),
-      (Ye.MINIMUM_VALUE_2 = "minimumEffectValueSlot2"),
-      (Ye.MAXIMUM_VALUE_2 = "maximumEffectValueSlot2"),
-      (Ye.MINIMUM_VALUE_3 = "minimumEffectValueSlot3"),
-      (Ye.MAXIMUM_VALUE_3 = "maximumEffectValueSlot3"),
-      (Ye.C1_COST = "c1Cost"),
-      (Ye.C2_COST = "c2Cost"),
-      (Ye.DAIMYO_CASTLE = "daimyoCastle"),
-      (Ye.DAIMYO_TOWNSHIP = "daimyoTownship"),
-      (Ye.DAIMYO_CASTLE_ALLIANCE_CONTRACT = "daimyoCastleAllianceContract"),
-      (Ye.DAIMYO_TOWNSHIP_ALLIANCE_CONTRACT = "daimyoTownshipAllianceContract"),
-      (Ye.DAIMYO_ALLIANCE_CONTRACT_ENABLE_ON_START = "enableOnStart"),
-      (Ye.DAIMYO_ALLIANCE_CONTRACT_NEXT_CONTRACT = "nextContract"),
-      (Ye.DAIMYO_SHOGUN_POINTS = "shogunPoints"),
-      (Ye.DAIMYO_WAR_EFFORT_POINTS = "warEffortPoints"),
-      (Ye.DAIMYO_NEEDED_SHOGUN_POINTS = "shogunPointsNeededForLevelUp"),
-      (Ye.DAIMYO_MIN_HIGHSCORE_RANK = "minHighscoreRank"),
-      (Ye.DAIMYO_END_REWARD = "daimyoEndReward"),
-      (Ye.UNIT_CAPACITY = "unitCapacity"),
-      (Ye.SKIN = "skin"),
-      (Ye.ALLIANCE_BATTLE_GROUND_SETTING = "allianceBattleGroundSetting"),
-      (Ye.ALLIANCE_BATTLE_GROUND_PREBUILT_CASTLE =
+      (ze.OFFICERS_SCHOOL_UNIT_PAIR = "officersSchoolUnitPair"),
+      (ze.OFFICERS_SCHOOL_EFFECT = "officersSchoolEffect"),
+      (ze.OFFICERS_SCHOOL_CURRENCY = "officersSchoolCurrency"),
+      (ze.OFFICERS_SCHOOL_DURATIION = "officersSchoolDuration"),
+      (ze.UNLOCK_BUILDING_WOD_ID = "unlockBuildingWodID"),
+      (ze.USED_FOR_PROGRAM = "usedForProgram"),
+      (ze.USED_FOR_REROLL = "usedForReroll"),
+      (ze.MINIMUM_VALUE_1 = "minimumEffectValueSlot1"),
+      (ze.MAXIMUM_VALUE_1 = "maximumEffectValueSlot1"),
+      (ze.MINIMUM_VALUE_2 = "minimumEffectValueSlot2"),
+      (ze.MAXIMUM_VALUE_2 = "maximumEffectValueSlot2"),
+      (ze.MINIMUM_VALUE_3 = "minimumEffectValueSlot3"),
+      (ze.MAXIMUM_VALUE_3 = "maximumEffectValueSlot3"),
+      (ze.C1_COST = "c1Cost"),
+      (ze.C2_COST = "c2Cost"),
+      (ze.DAIMYO_CASTLE = "daimyoCastle"),
+      (ze.DAIMYO_TOWNSHIP = "daimyoTownship"),
+      (ze.DAIMYO_CASTLE_ALLIANCE_CONTRACT = "daimyoCastleAllianceContract"),
+      (ze.DAIMYO_TOWNSHIP_ALLIANCE_CONTRACT = "daimyoTownshipAllianceContract"),
+      (ze.DAIMYO_ALLIANCE_CONTRACT_ENABLE_ON_START = "enableOnStart"),
+      (ze.DAIMYO_ALLIANCE_CONTRACT_NEXT_CONTRACT = "nextContract"),
+      (ze.DAIMYO_SHOGUN_POINTS = "shogunPoints"),
+      (ze.DAIMYO_WAR_EFFORT_POINTS = "warEffortPoints"),
+      (ze.DAIMYO_NEEDED_SHOGUN_POINTS = "shogunPointsNeededForLevelUp"),
+      (ze.DAIMYO_MIN_HIGHSCORE_RANK = "minHighscoreRank"),
+      (ze.DAIMYO_END_REWARD = "daimyoEndReward"),
+      (ze.UNIT_CAPACITY = "unitCapacity"),
+      (ze.SKIN = "skin"),
+      (ze.ALLIANCE_BATTLE_GROUND_SETTING = "allianceBattleGroundSetting"),
+      (ze.ALLIANCE_BATTLE_GROUND_PREBUILT_CASTLE =
         "allianceBattleGroundPreBuiltCastle"),
-      (Ye.SKIN_ID = "skinID"),
-      (Ye.ALLIANCE_BATTLE_GROUND_SKIN = "allianceBattleGroundSkin"),
-      (Ye.ALLIANCE_BATTLE_GROUND_SCORING = "allianceBattleGroundScoring"),
-      (Ye.ALLIANCE_BATTLE_GROUND_SCORING_ID = "allianceBattleGroundScoringID"),
-      (Ye.SCORING = "scoring"),
-      (Ye.SCORING_ID = "scoringID"),
-      (Ye.METROPOLIS_DECAY = "metropolisDecay"),
-      (Ye.KINGSTOWER_DECAY = "kingstowerDecay"),
-      (Ye.PLAYER_STEAL = "playerSteal"),
-      (Ye.ALLIANCE_STEAL = "allianceSteal"),
-      (Ye.MAX_ALLIANCE_SIZE = "maxAllianceSize"),
-      (Ye.ALLIANCE_BATTLE_GROUND_RANK_REWARD =
+      (ze.SKIN_ID = "skinID"),
+      (ze.ALLIANCE_BATTLE_GROUND_SKIN = "allianceBattleGroundSkin"),
+      (ze.ALLIANCE_BATTLE_GROUND_SCORING = "allianceBattleGroundScoring"),
+      (ze.ALLIANCE_BATTLE_GROUND_SCORING_ID = "allianceBattleGroundScoringID"),
+      (ze.SCORING = "scoring"),
+      (ze.SCORING_ID = "scoringID"),
+      (ze.METROPOLIS_DECAY = "metropolisDecay"),
+      (ze.KINGSTOWER_DECAY = "kingstowerDecay"),
+      (ze.PLAYER_STEAL = "playerSteal"),
+      (ze.ALLIANCE_STEAL = "allianceSteal"),
+      (ze.MAX_ALLIANCE_SIZE = "maxAllianceSize"),
+      (ze.ALLIANCE_BATTLE_GROUND_RANK_REWARD =
         "allianceBattleGroundRankReward"),
-      (Ye.ALLIANCE_BATTLE_GROUND_RANK_ID = "allianceBattleGroundRankID"),
-      (Ye.ALLIANCE_BATTLE_GROUND_RANK_REWARD_ID =
+      (ze.ALLIANCE_BATTLE_GROUND_RANK_ID = "allianceBattleGroundRankID"),
+      (ze.ALLIANCE_BATTLE_GROUND_RANK_REWARD_ID =
         "allianceBattleGroundRankRewardID"),
-      (Ye.ALLIANCE_BATTLE_GROUND_MAP = "allianceBattleGroundMap"),
-      (Ye.ALLIANCE_BATTLE_GROUND_DUNGEON = "allianceBattleGroundDungeon"),
-      (Ye.ALLIANCE_BATTLE_GROUND_DUNGEON_ID = "allianceBattleGroundDungeonID"),
-      (Ye.ALLIANCE_BATTLE_GROUND_PAYOUT = "battlegroundserver-payout"),
-      (Ye.IS_BATTLE_GROUND = "isBattleground"),
-      (Ye.ALLIANCE_CURRENCY_ID = "allianceCurrencyID"),
-      (Ye.IS_HIDDEN_ON_BATTLE_GROUND = "hiddenBattleGround"),
-      (Ye.ONLY_BATTLE_GROUND_SCORING_ID = "onlyBattleGroundScoringID"),
-      (Ye.ALLIANCE_CURRENCY_LOOT_FACTOR_MIN = "allianceCurrencyLootFactorMin"),
-      (Ye.ALLIANCE_REWARD_SET_ID = "allianceRewardSetID"),
-      (Ye.PLAYER_REWARD_SET_ID = "playerRewardSetID"),
-      (Ye.ALLIANCE_REWARD_ID = "allianceRewardID"),
-      (Ye.ALLIANCE_RANK_POINTS = "allianceRankPoints"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER = "allianceTower"),
-      (Ye.DIALOG_STATISTIC_IDS = "dialogStatisticIDs"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_ID = "allianceTowerID"),
-      (Ye.TOWER_BASE_POINTS = "addAllianceTowerPoints"),
-      (Ye.TOWER_LEVEL_MULTIPLIER = "allianceTowerLevelMultiplier"),
-      (Ye.DEFEATED_PLAYER_CASTLES_BASE_POINTS = "defeatedPVPBasePoints"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_ID = "allianceTowerEffectID"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_IDS = "allianceTowerEffectIDs"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT = "allianceTowerEffect"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_BASE = "effectStartValue"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_INCREASE = "effectIncrease"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_MAX = "effectMaxLevel"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_BASE_PRICE = "effectBasePrice"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_ACTIVATION =
+      (ze.ALLIANCE_BATTLE_GROUND_MAP = "allianceBattleGroundMap"),
+      (ze.ALLIANCE_BATTLE_GROUND_DUNGEON = "allianceBattleGroundDungeon"),
+      (ze.ALLIANCE_BATTLE_GROUND_DUNGEON_ID = "allianceBattleGroundDungeonID"),
+      (ze.ALLIANCE_BATTLE_GROUND_PAYOUT = "battlegroundserver-payout"),
+      (ze.IS_BATTLE_GROUND = "isBattleground"),
+      (ze.ALLIANCE_CURRENCY_ID = "allianceCurrencyID"),
+      (ze.IS_HIDDEN_ON_BATTLE_GROUND = "hiddenBattleGround"),
+      (ze.ONLY_BATTLE_GROUND_SCORING_ID = "onlyBattleGroundScoringID"),
+      (ze.ALLIANCE_CURRENCY_LOOT_FACTOR_MIN = "allianceCurrencyLootFactorMin"),
+      (ze.ALLIANCE_REWARD_SET_ID = "allianceRewardSetID"),
+      (ze.PLAYER_REWARD_SET_ID = "playerRewardSetID"),
+      (ze.ALLIANCE_REWARD_ID = "allianceRewardID"),
+      (ze.ALLIANCE_RANK_POINTS = "allianceRankPoints"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER = "allianceTower"),
+      (ze.DIALOG_STATISTIC_IDS = "dialogStatisticIDs"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_ID = "allianceTowerID"),
+      (ze.TOWER_BASE_POINTS = "addAllianceTowerPoints"),
+      (ze.TOWER_LEVEL_MULTIPLIER = "allianceTowerLevelMultiplier"),
+      (ze.DEFEATED_PLAYER_CASTLES_BASE_POINTS = "defeatedPVPBasePoints"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_ID = "allianceTowerEffectID"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_IDS = "allianceTowerEffectIDs"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT = "allianceTowerEffect"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_BASE = "effectStartValue"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_INCREASE = "effectIncrease"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_MAX = "effectMaxLevel"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_BASE_PRICE = "effectBasePrice"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_ACTIVATION =
         "allianceTowerEffectsActivation"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_ACTIVATION_ID =
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_EFFECT_ACTIVATION_ID =
         "allianceTowerEffectsActivationID"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_REMAINING = "remainingTime"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_COST = "cost"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_LOSS_MALUS = "defenceTowerLossMalus"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_MAX_MALUS = "defenceTowerLossMalusMax"),
-      (Ye.ALLIANCE_BATTLE_GROUND_TOWER_MALUS_CURRENCY = "malusCurrencyID"),
-      (Ye.BASE_LEVEL = "baseLevel"),
-      (Ye.INITINAL_ALLIANCE_FAME = "allianceFame"),
-      (Ye.INITINAL_ALLIANCE_MIGHT = "allianceMight"),
-      (Ye.LANDMARK = "landmark"),
-      (Ye.LANDMARK_ID = "landmarkID"),
-      (Ye.EMPTY_MIN_CONQUER_LEVEL = "emptyMinConquerLevel"),
-      (Ye.MIN_DEFENSE_LEVEL = "minDefenseLevel"),
-      (Ye.DEFAULT_LEVEL = "defaultLevel"),
-      (Ye.IS_DEFAULT = "isDefault"),
-      (Ye.METROPOLIS_LANDMARK_ID = "metropolisLandmarkID"),
-      (Ye.CAPITAL_LANDMARK_ID = "capitalLandmarkID"),
-      (Ye.FORTUNE_TELLER_CLASS = "fortuneTellerClass"),
-      (Ye.FORTUNE_TELLER_CLASS_ID = "fortuneTellerClassID"),
-      (Ye.TOP_REWARD_ID = "toprewardID"),
-      (Ye.DISTRICT_TYPE_ID = "districtTypeID"),
-      (Ye.IS_DISTRICT = "isDistrict"),
-      (Ye.DISTRICT_BUILDING_SLOTS = "districtSlots"),
-      (Ye.DISTRICT_TYPE = "districtType"),
-      (Ye.NEWSLETTER_REWARD = "newsletterReward"),
-      (Ye.NEWSLETTER_ID = "newsLetterID"),
-      (Ye.CURRENCY_RARENESS = "currencyRareness"),
-      (Ye.CURRENCY_RARENESS_RARENESS = "rareness"),
-      (Ye.ISLAND_PREBUILT_CASTLE = "islandPreBuiltCastle"),
-      (Ye.ALLIANCE_REWARD_IDs = "allianceRewardIDs"),
-      (Ye.PLAYER_REWARD_IDs = "playerRewardIDs"),
-      (Ye.CONSTRUCTION_ITEM_DISASSEMBLING_TOMBOLA =
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_REMAINING = "remainingTime"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_COST = "cost"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_LOSS_MALUS = "defenceTowerLossMalus"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_MAX_MALUS = "defenceTowerLossMalusMax"),
+      (ze.ALLIANCE_BATTLE_GROUND_TOWER_MALUS_CURRENCY = "malusCurrencyID"),
+      (ze.BASE_LEVEL = "baseLevel"),
+      (ze.INITINAL_ALLIANCE_FAME = "allianceFame"),
+      (ze.INITINAL_ALLIANCE_MIGHT = "allianceMight"),
+      (ze.LANDMARK = "landmark"),
+      (ze.LANDMARK_ID = "landmarkID"),
+      (ze.EMPTY_MIN_CONQUER_LEVEL = "emptyMinConquerLevel"),
+      (ze.MIN_DEFENSE_LEVEL = "minDefenseLevel"),
+      (ze.DEFAULT_LEVEL = "defaultLevel"),
+      (ze.IS_DEFAULT = "isDefault"),
+      (ze.METROPOLIS_LANDMARK_ID = "metropolisLandmarkID"),
+      (ze.CAPITAL_LANDMARK_ID = "capitalLandmarkID"),
+      (ze.FORTUNE_TELLER_CLASS = "fortuneTellerClass"),
+      (ze.FORTUNE_TELLER_CLASS_ID = "fortuneTellerClassID"),
+      (ze.TOP_REWARD_ID = "toprewardID"),
+      (ze.DISTRICT_TYPE_ID = "districtTypeID"),
+      (ze.IS_DISTRICT = "isDistrict"),
+      (ze.DISTRICT_BUILDING_SLOTS = "districtSlots"),
+      (ze.DISTRICT_TYPE = "districtType"),
+      (ze.NEWSLETTER_REWARD = "newsletterReward"),
+      (ze.NEWSLETTER_ID = "newsLetterID"),
+      (ze.CURRENCY_RARENESS = "currencyRareness"),
+      (ze.CURRENCY_RARENESS_RARENESS = "rareness"),
+      (ze.ISLAND_PREBUILT_CASTLE = "islandPreBuiltCastle"),
+      (ze.ALLIANCE_REWARD_IDs = "allianceRewardIDs"),
+      (ze.PLAYER_REWARD_IDs = "playerRewardIDs"),
+      (ze.CONSTRUCTION_ITEM_DISASSEMBLING_TOMBOLA =
         "constructionItemDisassemblingTombola"),
-      (Ye.CONSTRUCTION_ITEM_DISASSEMBLING_TOMBOLA_ID =
+      (ze.CONSTRUCTION_ITEM_DISASSEMBLING_TOMBOLA_ID =
         "constructionItemDisassemblingTombolaID"),
-      (Ye.DISASSEMBLING_TOMBOLA_ID = "disassemblingTombolaID"),
-      (Ye.CRAFTING_RECIPE = "craftingRecipe"),
-      (Ye.CRAFTING_RECIPE_ID = "craftingRecipeId"),
-      (Ye.QUEUE_TYPE_ID = "queueTypeId"),
-      (Ye.CRAFTING_QUEUE = "craftingQueue"),
-      (Ye.CRAFTING_QUEUE_ID = "craftingQueueId"),
-      (Ye.PERMANENT_PRODUCTION_SLOTS = "permanentProductionSlots"),
-      (Ye.TEMPORARY_PRODUCTION_SLOTS = "temporaryProductionSlots"),
-      (Ye.PRODUCTION_SLOT_UNLOCK_BASE_COST_C1 = "productionSlotUnlockCostC1"),
-      (Ye.PRODUCTION_SLOT_UNLOCK_DURATION = "productionSlotUnlockDuration"),
-      (Ye.PERMANENT_QUEUE_SLOTS = "permanentQueueSlots"),
-      (Ye.TEMPORARY_QUEUE_SLOTS = "temporaryQueueSlots"),
-      (Ye.QUEUE_SLOT_UNLOCK_BASE_COST_C1 = "queueSlotUnlockCostC1"),
-      (Ye.QUEUE_SLOT_UNLOCK_DURATION = "queueSlotUnlockDuration"),
-      (Ye.RECIPE_GROUP_ID = "recipeGroupID"),
-      (Ye.CRAFTING_RESEARCH_GROUP_ID = "researchGroupID"),
-      (Ye.CURRENCY_CLEAR_COMPENSATION = "currencyClearCompensation"),
-      (Ye.CURRENCY_CLEAR_COMPENSATION_ID = "currencyClearCompensationID"),
-      (Ye.MIN_CURRENCY_AMOUNT = "minCurrencyAmount"),
-      (Ye.EVENT_AUTO_SCALING = "eventAutoScaling"),
-      (Ye.EVENT_AUTO_SCALING_ID = "eventAutoScalingID"),
-      (Ye.WALL_REDUCTION_BOOST = "wallReductionBoost"),
-      (Ye.GATE_REDUCTION_BOOST = "gateReductionBoost"),
-      (Ye.MOAT_REDUCTION_BOOST = "moatReductionBoost"),
-      (Ye.GUARDS_REDUCTION_BOOST = "guardsReductionBoost"),
-      (Ye.DIFF_DEFENSE_STRENGTH_BOOST_NORMAL_MIN_DEFENSE =
+      (ze.DISASSEMBLING_TOMBOLA_ID = "disassemblingTombolaID"),
+      (ze.CRAFTING_RECIPE = "craftingRecipe"),
+      (ze.CRAFTING_RECIPE_ID = "craftingRecipeId"),
+      (ze.QUEUE_TYPE_ID = "queueTypeId"),
+      (ze.CRAFTING_QUEUE = "craftingQueue"),
+      (ze.CRAFTING_QUEUE_ID = "craftingQueueId"),
+      (ze.PERMANENT_PRODUCTION_SLOTS = "permanentProductionSlots"),
+      (ze.TEMPORARY_PRODUCTION_SLOTS = "temporaryProductionSlots"),
+      (ze.PRODUCTION_SLOT_UNLOCK_BASE_COST_C1 = "productionSlotUnlockCostC1"),
+      (ze.PRODUCTION_SLOT_UNLOCK_DURATION = "productionSlotUnlockDuration"),
+      (ze.PERMANENT_QUEUE_SLOTS = "permanentQueueSlots"),
+      (ze.TEMPORARY_QUEUE_SLOTS = "temporaryQueueSlots"),
+      (ze.QUEUE_SLOT_UNLOCK_BASE_COST_C1 = "queueSlotUnlockCostC1"),
+      (ze.QUEUE_SLOT_UNLOCK_DURATION = "queueSlotUnlockDuration"),
+      (ze.RECIPE_GROUP_ID = "recipeGroupID"),
+      (ze.CRAFTING_RESEARCH_GROUP_ID = "researchGroupID"),
+      (ze.CURRENCY_CLEAR_COMPENSATION = "currencyClearCompensation"),
+      (ze.CURRENCY_CLEAR_COMPENSATION_ID = "currencyClearCompensationID"),
+      (ze.MIN_CURRENCY_AMOUNT = "minCurrencyAmount"),
+      (ze.EVENT_AUTO_SCALING = "eventAutoScaling"),
+      (ze.EVENT_AUTO_SCALING_ID = "eventAutoScalingID"),
+      (ze.WALL_REDUCTION_BOOST = "wallReductionBoost"),
+      (ze.GATE_REDUCTION_BOOST = "gateReductionBoost"),
+      (ze.MOAT_REDUCTION_BOOST = "moatReductionBoost"),
+      (ze.GUARDS_REDUCTION_BOOST = "guardsReductionBoost"),
+      (ze.DIFF_DEFENSE_STRENGTH_BOOST_NORMAL_MIN_DEFENSE =
         "normalDiffDefStrengthBoostMinDefense"),
-      (Ye.DIFF_DEFENSE_STRENGTH_BOOST_NORMAL_MAX_DEFENSE =
+      (ze.DIFF_DEFENSE_STRENGTH_BOOST_NORMAL_MAX_DEFENSE =
         "normalDiffDefStrengthBoostMaxDefense"),
-      (Ye.DIFF_DEFENSE_STRENGTH_BOOST_PREMIUM_MIN_DEFENSE =
+      (ze.DIFF_DEFENSE_STRENGTH_BOOST_PREMIUM_MIN_DEFENSE =
         "premiumDiffDefStrengthBoostMinDefense"),
-      (Ye.DIFF_DEFENSE_STRENGTH_BOOST_PREMIUM_MAX_DEFENSE =
+      (ze.DIFF_DEFENSE_STRENGTH_BOOST_PREMIUM_MAX_DEFENSE =
         "premiumDiffDefStrengthBoostMaxDefense"),
-      (Ye.MAX_TROOP_CAPACITY_DEFENSE = "maxTroopCapacityDefense"),
-      (Ye.RANDOM_FACTOR_DEFENSE = "randomFactorDefense"),
-      (Ye.DIFF_DEFENSE_STRENGTH_BOOST_NORMAL_MIN_ATTACK =
+      (ze.MAX_TROOP_CAPACITY_DEFENSE = "maxTroopCapacityDefense"),
+      (ze.RANDOM_FACTOR_DEFENSE = "randomFactorDefense"),
+      (ze.DIFF_DEFENSE_STRENGTH_BOOST_NORMAL_MIN_ATTACK =
         "normalDiffDefStrengthBoostMinAttack"),
-      (Ye.DIFF_DEFENSE_STRENGTH_BOOST_NORMAL_MAX_ATTACK =
+      (ze.DIFF_DEFENSE_STRENGTH_BOOST_NORMAL_MAX_ATTACK =
         "normalDiffDefStrengthBoostMaxAttack"),
-      (Ye.DIFF_DEFENSE_STRENGTH_BOOST_PREMIUM_MIN_ATTACK =
+      (ze.DIFF_DEFENSE_STRENGTH_BOOST_PREMIUM_MIN_ATTACK =
         "premiumDiffDefStrengthBoostMinAttack"),
-      (Ye.DIFF_DEFENSE_STRENGTH_BOOST_PREMIUM_MAX_ATTACK =
+      (ze.DIFF_DEFENSE_STRENGTH_BOOST_PREMIUM_MAX_ATTACK =
         "premiumDiffDefStrengthBoostMaxAttack"),
-      (Ye.MAX_TROOP_CAPACITY_ATTACK = "maxTroopCapacityAttack"),
-      (Ye.RANDOM_FACTOR_ATTACK = "randomFactorAttack"),
-      (Ye.WAVES_PER_TOOL = "wavesPerTool"),
-      (Ye.MIN_DEF_STRENGTH = "minDefStrength"),
-      (Ye.DEFAULT_DEFENSE_UNITS = "defaultDefenseUnits"),
-      (Ye.TOOL_PLAYER_LEVEL = "toolPlayerLevel"),
-      (Ye.DEFAULT_WALL_DEFENSE_TOOLS = "defaultWallDefenseTools"),
-      (Ye.DEFAULT_GATE_DEFENSE_TOOLS = "defaultGateDefenseTools"),
-      (Ye.DEFAULT_MOAT_DEFENSE_TOOLS = "defaultMoatDefenseTools"),
-      (Ye.DEFAULT_RANGE_DEFENSE_TOOLS = "defaultRangeDefenseTools"),
-      (Ye.DEFAULT_MELEE_DEFENSE_TOOLS = "defaultMeleeDefenseTools"),
-      (Ye.DEFAULT_ATTACK_UNITS = "defaultAttackUnits"),
-      (Ye.DEFAULT_RANGE_ATTACK_TOOLS = "defaultRangeAttackTools"),
-      (Ye.DEFAULT_MELEE_ATTACK_TOOLS = "defaultMeleeAttackTools"),
-      (Ye.MAX_DEFENSE_STRENGTH_MULTIPLIER = "maxDefenseStrengthMultiplier"),
-      (Ye.NPC_DEFENSE_SCORE_MULTIPLIER = "npcDefenseScoreMultiplier"),
-      (Ye.EVENT_AUTO_SCALING_HOL_SKILL = "eventAutoScalingHoLSkill"),
-      (Ye.EVENT_AUTO_SCALING_LEGEND_ID = "eventAutoScalingLegendID"),
-      (Ye.PLAYER_LEGEND_SKILL_EFFECT = "playerLegendSkillEffect"),
-      (Ye.MAPPING_LEGEND_SKILL_EFFECT = "mappingLegendSkillEffect"),
-      (Ye.EVENT_AUTO_SCALING_CI = "eventAutoScalingCI"),
-      (Ye.EVENT_AUTO_SCALING_CI_ID = "eventAutoScalingCiID"),
-      (Ye.USEABLE_CI_GROUP_IDS = "useableConstructionItemGroupIDs"),
-      (Ye.EVENT_AUTO_SCALING_UNIT_PAIRING = "eventAutoScalingUnitPairing"),
-      (Ye.UNIT_PAIR_ID = "unitPairID"),
-      (Ye.PLAYER_WOD_ID = "playerWodID"),
-      (Ye.MAPPING_WOD_ID = "mappingWodID"),
-      (Ye.MIN_DIFFICULTY_ID = "minDifficultyID"),
-      (Ye.MAX_DIFFICULTY_ID = "maxDifficultyID"),
-      (Ye.EVENT_AUTO_SCALING_TOOL_PAIRING = "eventAutoScalingToolPairing"),
-      (Ye.TOOL_PAIR_ID = "toolPairID"),
-      (Ye.EVENT_AUTO_SCALING_BARON_EFFECT = "eventAutoScalingLordEffect"),
-      (Ye.EVENT_AUTO_SCALING_BARON_EFFECT_ID = "eventAutoScalingLordEffectID"),
-      (Ye.MIN_VALUE = "minValue"),
-      (Ye.EFFECT_GROUP = "effectGroup"),
-      (Ye.EVENT_AUTO_SCALING_DIFFICULTY = "eventAutoScalingDifficulty"),
-      (Ye.DIFFICULTY_ID = "difficultyID"),
-      (Ye.DIFFICULTY_TYPE_ID = "difficultyTypeID"),
-      (Ye.IS_LOCKED = "isLocked"),
-      (Ye.RENT_C2_COST = "rentC2Cost"),
-      (Ye.UNLOCKS_DIFFICULTY = "unlocksDifficulty"),
-      (Ye.EVENT_AUTO_SCALING_CAMP = "eventAutoScalingCamp"),
-      (Ye.EVENT_AUTO_SCALING_CAMP_ID = "eventAutoScalingCampID"),
-      (Ye.CAMP_LEVEL = "camplevel"),
-      (Ye.GENERATE_ATTACKS = "generateAttacks"),
-      (Ye.ATTACK_WAVE_AMOUNT = "attackWaveAmount"),
-      (Ye.ATTACK_WAVE_AMOUNT_MIN = "attackWaveAmountMin"),
-      (Ye.ATTACK_WAVE_AMOUNT_MAX = "attackWaveAmountMax"),
-      (Ye.FLANK_TOOLS_PER_WAVE = "flankToolsPerWave"),
-      (Ye.FLANK_TOOLS_PER_WAVE_MIN = "flankToolsPerWaveMin"),
-      (Ye.FLANK_TOOLS_PER_WAVE_MAX = "flankToolsPerWaveMax"),
-      (Ye.FRONT_TOOLS_PER_WAVE = "frontToolsPerWave"),
-      (Ye.FRONT_TOOLS_PER_WAVE_MIN = "frontToolsPerWaveMin"),
-      (Ye.FRONT_TOOLS_PER_WAVE_MAX = "frontToolsPerWaveMax"),
-      (Ye.SAVE_SETTING_FOR_NUMBER_OF_ATTACKS = "saveSettingForNumberOfAttacks"),
-      (Ye.BETA_SERVER_PREBUILT_CASTLE = "betaServerPreBuiltCastle"),
-      (Ye.PLAYER_NAME_CHANGE = "playerNameChange"),
-      (Ye.NAME_CHANGE_ID = "nameChangeID"),
-      (Ye.OLD_NAME = "oldName"),
-      (Ye.NEW_NAME = "newName"),
-      (Ye.WELCOME_BACK_REWARD = "welcomeBackReward"),
-      (Ye.WELCOME_BACK_REWARD_ID = "welcomeBackRewardID"),
-      (Ye.MIN_INACTIVE_DAYS = "minInactiveDays"),
-      (Ye.MAX_INACTIVE_DAYS = "maxInactiveDays"),
-      (Ye.ENTRY_ID = "entryID"),
-      (Ye.LOOT_BOX = "lootBox"),
-      (Ye.LOOT_BOX_TOMBOLA = "lootBoxTombola"),
-      (Ye.LOOT_BOX_KEY_TOMBOLA = "lootBoxKeyTombola"),
-      (Ye.LOOT_BOX_ID = "lootBoxID"),
-      (Ye.LOOT_BOX_THEME = "lootBoxTheme"),
-      (Ye.LOOT_BOX_TYPE = "lootBoxType"),
-      (Ye.LOOT_BOX_TYPE_ID = "lootBoxTypeID"),
-      (Ye.LOOT_BOX_TOMBOLA_ID = "lootBoxTombolaID"),
-      (Ye.DRAWS = "draws"),
-      (Ye.LOOT_BOX_KEY_TOMBOLA_ID = "lootBoxKeyTombolaID"),
-      (Ye.SORT_ORDER = "sortOrder"),
-      (Ye.LOOT_BOX_KEY_PAYOUT_THRESHOLD = "lootBoxKeyPayoutThreshold"),
-      (Ye.RARITY = "rarity"),
-      (Ye.REWARD_CATEGORY = "rewardCategory"),
-      (Ye.GENERAL = "general"),
-      (Ye.GENERAL_ID = "generalID"),
-      (Ye.MIN_GENERAL_STAR_TIER = "minGeneralStarTier"),
-      (Ye.GENERAL_RARITY = "generalRarity"),
-      (Ye.GENERAL_RARITY_ID = "generalRarityID"),
-      (Ye.MAX_STAR_LEVEL = "maxStarLevel"),
-      (Ye.XP_REQUIREMENTS = "xpRequirements"),
-      (Ye.UNLOCK_COSTS = "unlockCosts"),
-      (Ye.UPGRADE_COSTS = "upgradeCosts"),
-      (Ye.UNIVERSAL_SHARDS_PER_HUNDRED = "universalShardsPerHundred"),
-      (Ye.UNLOCK_CURRENCY_ID = "unlockCurrencyID"),
-      (Ye.UPGRADE_CURRENCY_IDS = "upgradeCurrencyIDs"),
-      (Ye.GENERAL_SKILL_TIER = "generalSkillTier"),
-      (Ye.GENERAL_SKILL = "generalSkill"),
-      (Ye.PREVIOUS_TIER_REQUIRED_SKILL_POINTS =
+      (ze.MAX_TROOP_CAPACITY_ATTACK = "maxTroopCapacityAttack"),
+      (ze.RANDOM_FACTOR_ATTACK = "randomFactorAttack"),
+      (ze.WAVES_PER_TOOL = "wavesPerTool"),
+      (ze.MIN_DEF_STRENGTH = "minDefStrength"),
+      (ze.DEFAULT_DEFENSE_UNITS = "defaultDefenseUnits"),
+      (ze.TOOL_PLAYER_LEVEL = "toolPlayerLevel"),
+      (ze.DEFAULT_WALL_DEFENSE_TOOLS = "defaultWallDefenseTools"),
+      (ze.DEFAULT_GATE_DEFENSE_TOOLS = "defaultGateDefenseTools"),
+      (ze.DEFAULT_MOAT_DEFENSE_TOOLS = "defaultMoatDefenseTools"),
+      (ze.DEFAULT_RANGE_DEFENSE_TOOLS = "defaultRangeDefenseTools"),
+      (ze.DEFAULT_MELEE_DEFENSE_TOOLS = "defaultMeleeDefenseTools"),
+      (ze.DEFAULT_ATTACK_UNITS = "defaultAttackUnits"),
+      (ze.DEFAULT_RANGE_ATTACK_TOOLS = "defaultRangeAttackTools"),
+      (ze.DEFAULT_MELEE_ATTACK_TOOLS = "defaultMeleeAttackTools"),
+      (ze.MAX_DEFENSE_STRENGTH_MULTIPLIER = "maxDefenseStrengthMultiplier"),
+      (ze.NPC_DEFENSE_SCORE_MULTIPLIER = "npcDefenseScoreMultiplier"),
+      (ze.EVENT_AUTO_SCALING_HOL_SKILL = "eventAutoScalingHoLSkill"),
+      (ze.EVENT_AUTO_SCALING_LEGEND_ID = "eventAutoScalingLegendID"),
+      (ze.PLAYER_LEGEND_SKILL_EFFECT = "playerLegendSkillEffect"),
+      (ze.MAPPING_LEGEND_SKILL_EFFECT = "mappingLegendSkillEffect"),
+      (ze.EVENT_AUTO_SCALING_CI = "eventAutoScalingCI"),
+      (ze.EVENT_AUTO_SCALING_CI_ID = "eventAutoScalingCiID"),
+      (ze.USEABLE_CI_GROUP_IDS = "useableConstructionItemGroupIDs"),
+      (ze.EVENT_AUTO_SCALING_UNIT_PAIRING = "eventAutoScalingUnitPairing"),
+      (ze.UNIT_PAIR_ID = "unitPairID"),
+      (ze.PLAYER_WOD_ID = "playerWodID"),
+      (ze.MAPPING_WOD_ID = "mappingWodID"),
+      (ze.MIN_DIFFICULTY_ID = "minDifficultyID"),
+      (ze.MAX_DIFFICULTY_ID = "maxDifficultyID"),
+      (ze.EVENT_AUTO_SCALING_TOOL_PAIRING = "eventAutoScalingToolPairing"),
+      (ze.TOOL_PAIR_ID = "toolPairID"),
+      (ze.EVENT_AUTO_SCALING_BARON_EFFECT = "eventAutoScalingLordEffect"),
+      (ze.EVENT_AUTO_SCALING_BARON_EFFECT_ID = "eventAutoScalingLordEffectID"),
+      (ze.MIN_VALUE = "minValue"),
+      (ze.EFFECT_GROUP = "effectGroup"),
+      (ze.EVENT_AUTO_SCALING_DIFFICULTY = "eventAutoScalingDifficulty"),
+      (ze.DIFFICULTY_ID = "difficultyID"),
+      (ze.DIFFICULTY_TYPE_ID = "difficultyTypeID"),
+      (ze.IS_LOCKED = "isLocked"),
+      (ze.RENT_C2_COST = "rentC2Cost"),
+      (ze.UNLOCKS_DIFFICULTY = "unlocksDifficulty"),
+      (ze.EVENT_AUTO_SCALING_CAMP = "eventAutoScalingCamp"),
+      (ze.EVENT_AUTO_SCALING_CAMP_ID = "eventAutoScalingCampID"),
+      (ze.CAMP_LEVEL = "camplevel"),
+      (ze.GENERATE_ATTACKS = "generateAttacks"),
+      (ze.ATTACK_WAVE_AMOUNT = "attackWaveAmount"),
+      (ze.ATTACK_WAVE_AMOUNT_MIN = "attackWaveAmountMin"),
+      (ze.ATTACK_WAVE_AMOUNT_MAX = "attackWaveAmountMax"),
+      (ze.FLANK_TOOLS_PER_WAVE = "flankToolsPerWave"),
+      (ze.FLANK_TOOLS_PER_WAVE_MIN = "flankToolsPerWaveMin"),
+      (ze.FLANK_TOOLS_PER_WAVE_MAX = "flankToolsPerWaveMax"),
+      (ze.FRONT_TOOLS_PER_WAVE = "frontToolsPerWave"),
+      (ze.FRONT_TOOLS_PER_WAVE_MIN = "frontToolsPerWaveMin"),
+      (ze.FRONT_TOOLS_PER_WAVE_MAX = "frontToolsPerWaveMax"),
+      (ze.SAVE_SETTING_FOR_NUMBER_OF_ATTACKS = "saveSettingForNumberOfAttacks"),
+      (ze.BETA_SERVER_PREBUILT_CASTLE = "betaServerPreBuiltCastle"),
+      (ze.PLAYER_NAME_CHANGE = "playerNameChange"),
+      (ze.NAME_CHANGE_ID = "nameChangeID"),
+      (ze.OLD_NAME = "oldName"),
+      (ze.NEW_NAME = "newName"),
+      (ze.WELCOME_BACK_REWARD = "welcomeBackReward"),
+      (ze.WELCOME_BACK_REWARD_ID = "welcomeBackRewardID"),
+      (ze.MIN_INACTIVE_DAYS = "minInactiveDays"),
+      (ze.MAX_INACTIVE_DAYS = "maxInactiveDays"),
+      (ze.ENTRY_ID = "entryID"),
+      (ze.LOOT_BOX = "lootBox"),
+      (ze.LOOT_BOX_TOMBOLA = "lootBoxTombola"),
+      (ze.LOOT_BOX_KEY_TOMBOLA = "lootBoxKeyTombola"),
+      (ze.LOOT_BOX_ID = "lootBoxID"),
+      (ze.LOOT_BOX_THEME = "lootBoxTheme"),
+      (ze.LOOT_BOX_TYPE = "lootBoxType"),
+      (ze.LOOT_BOX_TYPE_ID = "lootBoxTypeID"),
+      (ze.LOOT_BOX_TOMBOLA_ID = "lootBoxTombolaID"),
+      (ze.DRAWS = "draws"),
+      (ze.LOOT_BOX_KEY_TOMBOLA_ID = "lootBoxKeyTombolaID"),
+      (ze.SORT_ORDER = "sortOrder"),
+      (ze.LOOT_BOX_KEY_PAYOUT_THRESHOLD = "lootBoxKeyPayoutThreshold"),
+      (ze.RARITY = "rarity"),
+      (ze.REWARD_CATEGORY = "rewardCategory"),
+      (ze.GENERAL = "general"),
+      (ze.GENERAL_ID = "generalID"),
+      (ze.MIN_GENERAL_STAR_TIER = "minGeneralStarTier"),
+      (ze.GENERAL_RARITY = "generalRarity"),
+      (ze.GENERAL_RARITY_ID = "generalRarityID"),
+      (ze.MAX_STAR_LEVEL = "maxStarLevel"),
+      (ze.XP_REQUIREMENTS = "xpRequirements"),
+      (ze.UNLOCK_COSTS = "unlockCosts"),
+      (ze.UPGRADE_COSTS = "upgradeCosts"),
+      (ze.UNIVERSAL_SHARDS_PER_HUNDRED = "universalShardsPerHundred"),
+      (ze.UNLOCK_CURRENCY_ID = "unlockCurrencyID"),
+      (ze.UPGRADE_CURRENCY_IDS = "upgradeCurrencyIDs"),
+      (ze.GENERAL_SKILL_TIER = "generalSkillTier"),
+      (ze.GENERAL_SKILL = "generalSkill"),
+      (ze.PREVIOUS_TIER_REQUIRED_SKILL_POINTS =
         "previousTierRequiredSkillPoints"),
-      (Ye.CHARACTER = "character"),
-      (Ye.CHARACTER_ID = "characterID"),
-      (Ye.SPIN_RARITIES = "spinRarities"),
-      (Ye.TOMBOLAS = "tombolas"),
-      (Ye.COOL_DOWN_IN_SECONDS = "coolDownInSeconds"),
-      (Ye.BAD_LUCK_PROTECTION_DRAW_AMOUNT = "badLuckProtectionDrawAmount"),
-      (Ye.FREE_OPENING_TOMBOLA_ID = "freeOpeningTombolaID"),
-      (Ye.MAX_FREE_OPENINGS = "maxFreeOpenings"),
-      (Ye.BAD_LUCK_SPIN_RARITIES = "badLuckSpinRarities"),
-      (Ye.UNLUCKY_TOTAL_POINTS = "unluckyTotalPoints"),
-      (Ye.ATTACK_SLOT = "attackSlots"),
-      (Ye.DEFENSE_SLOT = "defenseSlots"),
-      (Ye.GENERALS_RESPEC_PACKAGE = "generalsRespecPackage"),
-      (Ye.IS_PREVIEW = "isPreview"),
-      (Ye.IS_NPC_GENERAL = "isNPCGeneral"),
-      (Ye.GENERAL_SKIP_FINISH_QUEST = "generalSkipFinishQuest"),
-      (Ye.GENERAL_SKIP_FINISH_QUEST_ID = "generalSkipFinishQuestID"),
-      (Ye.AFFECTS_ENEMY_ARMY = "affectsEnemyArmy"),
-      (Ye.GENERAL_ABILITY = "generalAbility"),
-      (Ye.ABILITY_ID = "abilityID"),
-      (Ye.ABILITY_GROUP_ID = "abilityGroupID"),
-      (Ye.ABILITY_TRIGGER_ID = "abilityTriggerID"),
-      (Ye.GENERAL_ABILITY_EFFECT = "generalAbilityEffect"),
-      (Ye.ABILITY_EFFECT_ID = "abilityEffectID"),
-      (Ye.ABILITY_ATTACK_EFFECT_ID = "abilityAttackEffectID"),
-      (Ye.ABILITY_DEFENSE_EFFECT_ID = "abilityDefenseEffectID"),
-      (Ye.PRIORITY = "priority"),
-      (Ye.TRIGGER_PER_WAVE = "triggerPerWave"),
-      (Ye.GENERAL_ABILITY_TRIGGER = "generalAbilityTrigger"),
-      (Ye.GENERAL_SLOT = "generalSlot"),
-      (Ye.ABILITY_GROUP_IDS = "abilityGroupIDs"),
-      (Ye.AREA_SPECIFIC_EFFECTS = "areaSpecificEffects"),
-      (Ye.GENERAL_XP_ITEM = "generalXpItem"),
-      (Ye.XP_AMOUNT = "xpAmount"),
-      (Ye.XP_PER_ITEM_ID = "xpPerItemID"),
-      (Ye.MESSAGE_RESTRICTION_ID = "messageRestrictionID"),
-      (Ye.MESSAGE_TYPE = "messageType"),
-      (Ye.DAILY_LIMIT_PER_PLAYER = "dailyLimitPerPlayer"),
-      (Ye.MIN_LEVEL_GLOBAL_SERVER = "minLevelGlobalServer"));
-    ((Ye.MESSAGE_RESTRICTION = "messageRestriction"),
-      (Ye.CROSSPLAY_ID = "crossplayID"),
-      (Ye.CROSSPLAY_MIN_LEVEL = "crossplayMinLevel"),
-      (Ye.RESOURCE = "resource"),
-      (Ye.RESOURCE_ID = "resourceID"),
-      (Ye.DONATION_TYPE = "donationType"),
-      (Ye.DONATION_TYPE_ID = "donationTypeID"),
-      (Ye.DONATION_SETTING = "donationSetting"),
-      (Ye.DONATION_SETTING_ID = "donationSettingID"),
-      (Ye.DONATION_ITEM = "donationItem"),
-      (Ye.DONATION_ITEM_ID = "donationItemID"),
-      (Ye.DONATION_ITEM_SET_ID = "donationItemSetID"),
-      (Ye.DONATION_ITEM_RATIO = "ratio"),
-      (Ye.DONATION_ITEM_MAX_POINT_LIMIT = "maxPointLimit"),
-      (Ye.DONATION_REWARD = "donationReward"),
-      (Ye.DONATION_REWARD_ID = "donationRewardID"),
-      (Ye.DONATION_REWARD_MIN_POINTS = "minPoints"),
-      (Ye.DONATION_ITEM_RESET = "reset"),
-      (Ye.GACHA_ID = "gachaID"),
-      (Ye.TOMBOLA_SPINS_AMOUNT = "tombolaSpinsAmount"),
-      (Ye.GACHA_LEVEL = "gachaLevel"),
-      (Ye.MIN_PULLS = "minPulls"),
-      (Ye.MAX_PULLS = "maxPulls"),
-      (Ye.MULTI_PULL_MAX = "multiPullMax"),
-      (Ye.FREE_CHEST_RESET_TIME = "freeChestResetTime"),
-      (Ye.FREE_CHEST_REWARD_ID = "freeChestRewardID"),
-      (Ye.GACHA = "gachaEvent"),
-      (Ye.LEAGUE_TYPE_IDS = "leagueTypeIDs"),
-      (Ye.ALLIANCE_COAT_LAYOUT = "allianceCoatLayout"),
-      (Ye.ALLIANCE_COAT_LAYOUT_ID = "allianceCoatLayoutID"),
-      (Ye.ALLIANCE_COAT_COLOR_ID = "allianceCoatColorID"),
-      (Ye.ALLIANCE_COAT_COLOR = "allianceCoatColor"),
-      (Ye.COLOR = "color"),
-      (Ye.NO_OF_COLORS = "noofColors"),
-      (Ye.ALLIANCE_COAT_LAYOUT_IDS = "allianceCoatLayoutIDs"),
-      (Ye.MAX_DURATION = "maxDuration"),
-      (Ye.LEADERBOARD_REWARD = "leaderboardReward"),
-      (Ye.LEADERBOARD_REWARD_ID = "leaderboardRewardID"),
-      (Ye.LEADERBOARD_REWARD_SET_ID = "leaderboardRewardSetID"),
-      (Ye.LEADERBOARD_REWARD_LEAGUE_ID = "leagueID"),
-      (Ye.ALLIANCE_FUNDS_DONATABLE = "allianceFundsDonatable"),
-      (Ye.ALLIANCE_FUNDS_DONATABLE_ID = "allianceFundsDonatableID"),
-      (Ye.DIRECTLY_BY_PLAYER = "directlyByPlayer"),
-      (Ye.ALLIANCE_QUEST = "allianceQuest"),
-      (Ye.ALLIANCE_QUEST_ID = "allianceQuestID"),
-      (Ye.COMMENT_2 = "comment2"),
-      (Ye.CANCEL_COST_C2 = "cancelCostC2"),
-      (Ye.DIVISION_ROUND = "divisionRound"),
-      (Ye.DIVISION_ROUND_ID = "divisionRoundID"),
-      (Ye.DIVISION_ROUND_DIVISIONS = "divisions"),
-      (Ye.DIVISION_ROUND_SUBDIVISIONS = "subdivisions"),
-      (Ye.DIVISION_ROUND_SUBDIVISION_SIZES = "subdivisionSizes"),
-      (Ye.DIVISION_ROUND_PROMOTES = "promotes"),
-      (Ye.DIVISION_ROUND_DEMOTES = "demotes"),
-      (Ye.DIVISION_ROUND_SOURCE_DIVISION_ROUND_ID = "sourceDivisionRoundID"),
-      (Ye.DIVISION_ROUND_TARGET_DIVISION_ROUND_ID = "targetDivisionRoundID"),
-      (Ye.DIVISION_ROUND_TEST_ONLY = "testOnly"),
-      (Ye.PREMIUM = "Premium"),
-      (Ye.RAID_BOSS = "raidBoss"),
-      (Ye.RAID_BOSS_ID = "raidBossID"),
-      (Ye.RAID_BOSS_LEVEL = "raidBossLevel"),
-      (Ye.RAID_BOSS_LEVEL_ID = "raidBossLevelID"),
-      (Ye.RAID_BOSS_LEVEL_LEVEL = "level"),
-      (Ye.RAID_BOSS_LEVEL_WALL_REGENERATION_TIME = "wallRegenerationTime"),
-      (Ye.RAID_BOSS_LEVEL_COURTYARD_RESERVE_UNITS = "courtyardReserveUnits"),
-      (Ye.RAID_BOSS_LEVEL_COURTYARD_SIZE = "courtyardSize"),
-      (Ye.RAID_BOSS_LEVEL_COURTYARD_MELEE_PERCENT = "courtyardMeleePercent"),
-      (Ye.RAID_BOSS_LEVEL_MIN_POINTS_FOR_BOSS_REWARDS =
+      (ze.CHARACTER = "character"),
+      (ze.CHARACTER_ID = "characterID"),
+      (ze.SPIN_RARITIES = "spinRarities"),
+      (ze.TOMBOLAS = "tombolas"),
+      (ze.COOL_DOWN_IN_SECONDS = "coolDownInSeconds"),
+      (ze.BAD_LUCK_PROTECTION_DRAW_AMOUNT = "badLuckProtectionDrawAmount"),
+      (ze.FREE_OPENING_TOMBOLA_ID = "freeOpeningTombolaID"),
+      (ze.MAX_FREE_OPENINGS = "maxFreeOpenings"),
+      (ze.BAD_LUCK_SPIN_RARITIES = "badLuckSpinRarities"),
+      (ze.UNLUCKY_TOTAL_POINTS = "unluckyTotalPoints"),
+      (ze.ATTACK_SLOT = "attackSlots"),
+      (ze.DEFENSE_SLOT = "defenseSlots"),
+      (ze.GENERALS_RESPEC_PACKAGE = "generalsRespecPackage"),
+      (ze.IS_PREVIEW = "isPreview"),
+      (ze.IS_NPC_GENERAL = "isNPCGeneral"),
+      (ze.GENERAL_SKIP_FINISH_QUEST = "generalSkipFinishQuest"),
+      (ze.GENERAL_SKIP_FINISH_QUEST_ID = "generalSkipFinishQuestID"),
+      (ze.AFFECTS_ENEMY_ARMY = "affectsEnemyArmy"),
+      (ze.GENERAL_ABILITY = "generalAbility"),
+      (ze.ABILITY_ID = "abilityID"),
+      (ze.ABILITY_GROUP_ID = "abilityGroupID"),
+      (ze.ABILITY_TRIGGER_ID = "abilityTriggerID"),
+      (ze.GENERAL_ABILITY_EFFECT = "generalAbilityEffect"),
+      (ze.ABILITY_EFFECT_ID = "abilityEffectID"),
+      (ze.ABILITY_ATTACK_EFFECT_ID = "abilityAttackEffectID"),
+      (ze.ABILITY_DEFENSE_EFFECT_ID = "abilityDefenseEffectID"),
+      (ze.PRIORITY = "priority"),
+      (ze.TRIGGER_PER_WAVE = "triggerPerWave"),
+      (ze.GENERAL_ABILITY_TRIGGER = "generalAbilityTrigger"),
+      (ze.GENERAL_SLOT = "generalSlot"),
+      (ze.ABILITY_GROUP_IDS = "abilityGroupIDs"),
+      (ze.AREA_SPECIFIC_EFFECTS = "areaSpecificEffects"),
+      (ze.GENERAL_XP_ITEM = "generalXpItem"),
+      (ze.XP_AMOUNT = "xpAmount"),
+      (ze.XP_PER_ITEM_ID = "xpPerItemID"),
+      (ze.MESSAGE_RESTRICTION_ID = "messageRestrictionID"),
+      (ze.MESSAGE_TYPE = "messageType"),
+      (ze.DAILY_LIMIT_PER_PLAYER = "dailyLimitPerPlayer"),
+      (ze.MIN_LEVEL_GLOBAL_SERVER = "minLevelGlobalServer"));
+    ((ze.MESSAGE_RESTRICTION = "messageRestriction"),
+      (ze.CROSSPLAY_ID = "crossplayID"),
+      (ze.CROSSPLAY_MIN_LEVEL = "crossplayMinLevel"),
+      (ze.RESOURCE = "resource"),
+      (ze.RESOURCE_ID = "resourceID"),
+      (ze.DONATION_TYPE = "donationType"),
+      (ze.DONATION_TYPE_ID = "donationTypeID"),
+      (ze.DONATION_SETTING = "donationSetting"),
+      (ze.DONATION_SETTING_ID = "donationSettingID"),
+      (ze.DONATION_ITEM = "donationItem"),
+      (ze.DONATION_ITEM_ID = "donationItemID"),
+      (ze.DONATION_ITEM_SET_ID = "donationItemSetID"),
+      (ze.DONATION_ITEM_RATIO = "ratio"),
+      (ze.DONATION_ITEM_MAX_POINT_LIMIT = "maxPointLimit"),
+      (ze.DONATION_REWARD = "donationReward"),
+      (ze.DONATION_REWARD_ID = "donationRewardID"),
+      (ze.DONATION_REWARD_MIN_POINTS = "minPoints"),
+      (ze.DONATION_ITEM_RESET = "reset"),
+      (ze.GACHA_ID = "gachaID"),
+      (ze.TOMBOLA_SPINS_AMOUNT = "tombolaSpinsAmount"),
+      (ze.GACHA_LEVEL = "gachaLevel"),
+      (ze.MIN_PULLS = "minPulls"),
+      (ze.MAX_PULLS = "maxPulls"),
+      (ze.MULTI_PULL_MAX = "multiPullMax"),
+      (ze.FREE_CHEST_RESET_TIME = "freeChestResetTime"),
+      (ze.FREE_CHEST_REWARD_ID = "freeChestRewardID"),
+      (ze.GACHA = "gachaEvent"),
+      (ze.LEAGUE_TYPE_IDS = "leagueTypeIDs"),
+      (ze.ALLIANCE_COAT_LAYOUT = "allianceCoatLayout"),
+      (ze.ALLIANCE_COAT_LAYOUT_ID = "allianceCoatLayoutID"),
+      (ze.ALLIANCE_COAT_COLOR_ID = "allianceCoatColorID"),
+      (ze.ALLIANCE_COAT_COLOR = "allianceCoatColor"),
+      (ze.COLOR = "color"),
+      (ze.NO_OF_COLORS = "noofColors"),
+      (ze.ALLIANCE_COAT_LAYOUT_IDS = "allianceCoatLayoutIDs"),
+      (ze.MAX_DURATION = "maxDuration"),
+      (ze.LEADERBOARD_REWARD = "leaderboardReward"),
+      (ze.LEADERBOARD_REWARD_ID = "leaderboardRewardID"),
+      (ze.LEADERBOARD_REWARD_SET_ID = "leaderboardRewardSetID"),
+      (ze.LEADERBOARD_REWARD_LEAGUE_ID = "leagueID"),
+      (ze.ALLIANCE_FUNDS_DONATABLE = "allianceFundsDonatable"),
+      (ze.ALLIANCE_FUNDS_DONATABLE_ID = "allianceFundsDonatableID"),
+      (ze.DIRECTLY_BY_PLAYER = "directlyByPlayer"),
+      (ze.ALLIANCE_QUEST = "allianceQuest"),
+      (ze.ALLIANCE_QUEST_ID = "allianceQuestID"),
+      (ze.COMMENT_2 = "comment2"),
+      (ze.CANCEL_COST_C2 = "cancelCostC2"),
+      (ze.DIVISION_ROUND = "divisionRound"),
+      (ze.DIVISION_ROUND_ID = "divisionRoundID"),
+      (ze.DIVISION_ROUND_DIVISIONS = "divisions"),
+      (ze.DIVISION_ROUND_SUBDIVISIONS = "subdivisions"),
+      (ze.DIVISION_ROUND_SUBDIVISION_SIZES = "subdivisionSizes"),
+      (ze.DIVISION_ROUND_PROMOTES = "promotes"),
+      (ze.DIVISION_ROUND_DEMOTES = "demotes"),
+      (ze.DIVISION_ROUND_SOURCE_DIVISION_ROUND_ID = "sourceDivisionRoundID"),
+      (ze.DIVISION_ROUND_TARGET_DIVISION_ROUND_ID = "targetDivisionRoundID"),
+      (ze.DIVISION_ROUND_TEST_ONLY = "testOnly"),
+      (ze.PREMIUM = "Premium"),
+      (ze.RAID_BOSS = "raidBoss"),
+      (ze.RAID_BOSS_ID = "raidBossID"),
+      (ze.RAID_BOSS_LEVEL = "raidBossLevel"),
+      (ze.RAID_BOSS_LEVEL_ID = "raidBossLevelID"),
+      (ze.RAID_BOSS_LEVEL_LEVEL = "level"),
+      (ze.RAID_BOSS_LEVEL_WALL_REGENERATION_TIME = "wallRegenerationTime"),
+      (ze.RAID_BOSS_LEVEL_COURTYARD_RESERVE_UNITS = "courtyardReserveUnits"),
+      (ze.RAID_BOSS_LEVEL_COURTYARD_SIZE = "courtyardSize"),
+      (ze.RAID_BOSS_LEVEL_COURTYARD_MELEE_PERCENT = "courtyardMeleePercent"),
+      (ze.RAID_BOSS_LEVEL_MIN_POINTS_FOR_BOSS_REWARDS =
         "minPointsForBossRewards"),
-      (Ye.RAID_BOSS_STAGE = "raidBossStage"),
-      (Ye.RAID_BOSS_STAGE_ID = "raidBossStageID"),
-      (Ye.RAID_BOSS_STAGE_HEALTH = "health"),
-      (Ye.RAID_BOSS_STAGE_DEFENDER_STAGE_EFFECTS = "defenderStageEffects"),
-      (Ye.RAID_BOSS_STAGE_ATTACKER_STAGE_EFFECTS = "attackerStageEffects"),
-      (Ye.RAID_BOSS_STAGE_DEFENDER_BATTLE_EFFECTS = "defenderBattleEffects"),
-      (Ye.RAID_BOSS_STAGE_ATTACKER_BATTLE_EFFECTS = "attackerBattleEffects"),
-      (Ye.RAID_BOSS_STAGE_DEFENDER_POST_BATTLE_EFFECTS =
+      (ze.RAID_BOSS_STAGE = "raidBossStage"),
+      (ze.RAID_BOSS_STAGE_ID = "raidBossStageID"),
+      (ze.RAID_BOSS_STAGE_HEALTH = "health"),
+      (ze.RAID_BOSS_STAGE_DEFENDER_STAGE_EFFECTS = "defenderStageEffects"),
+      (ze.RAID_BOSS_STAGE_ATTACKER_STAGE_EFFECTS = "attackerStageEffects"),
+      (ze.RAID_BOSS_STAGE_DEFENDER_BATTLE_EFFECTS = "defenderBattleEffects"),
+      (ze.RAID_BOSS_STAGE_ATTACKER_BATTLE_EFFECTS = "attackerBattleEffects"),
+      (ze.RAID_BOSS_STAGE_DEFENDER_POST_BATTLE_EFFECTS =
         "defenderPostBattleEffects"),
-      (Ye.RAID_BOSS_STAGE_ATTACKER_POST_BATTLE_EFFECTS =
+      (ze.RAID_BOSS_STAGE_ATTACKER_POST_BATTLE_EFFECTS =
         "attackerPostBattleEffects"),
-      (Ye.RAID_BOSS_STAGE_LEFT_WALL_UNITS = "leftWallUnits"),
-      (Ye.RAID_BOSS_STAGE_FRONT_WALL_UNITS = "frontWallUnits"),
-      (Ye.RAID_BOSS_STAGE_RIGHT_WALL_UNITS = "rightWallUnits"),
-      (Ye.RAID_BOSS_STAGE_COURTYARD_POINT_FACTOR = "courtyardPointFactor"),
-      (Ye.RAID_BOSS_STAGE_WALL_POINT_FACTOR = "wallPointFactor"),
-      (Ye.RAID_BOSS_STAGE_HIGHLIGHTED_EFFECT_IDS = "HighlightEffectIcon"),
-      (Ye.RAID_BOSS_STAGE_DEFENDER_WALL_REGENERATION_EFFECTS =
+      (ze.RAID_BOSS_STAGE_LEFT_WALL_UNITS = "leftWallUnits"),
+      (ze.RAID_BOSS_STAGE_FRONT_WALL_UNITS = "frontWallUnits"),
+      (ze.RAID_BOSS_STAGE_RIGHT_WALL_UNITS = "rightWallUnits"),
+      (ze.RAID_BOSS_STAGE_COURTYARD_POINT_FACTOR = "courtyardPointFactor"),
+      (ze.RAID_BOSS_STAGE_WALL_POINT_FACTOR = "wallPointFactor"),
+      (ze.RAID_BOSS_STAGE_HIGHLIGHTED_EFFECT_IDS = "HighlightEffectIcon"),
+      (ze.RAID_BOSS_STAGE_DEFENDER_WALL_REGENERATION_EFFECTS =
         "defenderWallRegenerationEffects"),
-      (Ye.MIN_RAID_BOSS_LEVEL = "minRaidBossLevel"),
-      (Ye.MAX_RAID_BOSS_LEVEL = "maxRaidBossLevel"),
-      (t.WODConst = Ye),
-      (Ye.__class = "WODConst"));
-    var ze = (function () {
+      (ze.MIN_RAID_BOSS_LEVEL = "minRaidBossLevel"),
+      (ze.MAX_RAID_BOSS_LEVEL = "maxRaidBossLevel"),
+      (t.WODConst = ze),
+      (ze.__class = "WODConst"));
+    var Ze = (function () {
       function WorldClassic() {}
       return (
         (WorldClassic.OUTPOST_TYPE_COUNT_$LI$ = function () {
@@ -88920,17 +89074,17 @@ and limitations under the License.
         WorldClassic
       );
     })();
-    ((ze.KINGDOM_ID = 0),
-      (ze.IS_EXTENSION = !1),
-      (ze.WOOD_PRODUCERS = 3),
-      (ze.STONE_PRODUCERS = 3),
-      (ze.FOOD_PRODUCERS = 3),
-      (ze.BEEF_PRODUCERS = 3),
-      (ze.IRON_PRODUCERS = 2),
-      (t.WorldClassic = ze),
-      (ze.__class = "WorldClassic"),
-      (ze.__interfaces = ["IAreaMap"]));
-    var Ze = (function () {
+    ((Ze.KINGDOM_ID = 0),
+      (Ze.IS_EXTENSION = !1),
+      (Ze.WOOD_PRODUCERS = 3),
+      (Ze.STONE_PRODUCERS = 3),
+      (Ze.FOOD_PRODUCERS = 3),
+      (Ze.BEEF_PRODUCERS = 3),
+      (Ze.IRON_PRODUCERS = 2),
+      (t.WorldClassic = Ze),
+      (Ze.__class = "WorldClassic"),
+      (Ze.__interfaces = ["IAreaMap"]));
+    var Xe = (function () {
       function WorldClassicBattleGroundGroundZero() {}
       return (
         (WorldClassicBattleGroundGroundZero.OUTPOST_TYPE_COUNT_$LI$ =
@@ -89177,16 +89331,16 @@ and limitations under the License.
         WorldClassicBattleGroundGroundZero
       );
     })();
-    ((Ze.KINGDOM_ID = 0),
-      (Ze.IS_EXTENSION = !0),
-      (Ze.WOOD_PRODUCERS = 3),
-      (Ze.STONE_PRODUCERS = 3),
-      (Ze.FOOD_PRODUCERS = 3),
-      (Ze.IRON_PRODUCERS = 2),
-      (t.WorldClassicBattleGroundGroundZero = Ze),
-      (Ze.__class = "WorldClassicBattleGroundGroundZero"),
-      (Ze.__interfaces = ["IAreaMap"]));
-    var Xe = (function () {
+    ((Xe.KINGDOM_ID = 0),
+      (Xe.IS_EXTENSION = !0),
+      (Xe.WOOD_PRODUCERS = 3),
+      (Xe.STONE_PRODUCERS = 3),
+      (Xe.FOOD_PRODUCERS = 3),
+      (Xe.IRON_PRODUCERS = 2),
+      (t.WorldClassicBattleGroundGroundZero = Xe),
+      (Xe.__class = "WorldClassicBattleGroundGroundZero"),
+      (Xe.__interfaces = ["IAreaMap"]));
+    var Qe = (function () {
       function WorldClassicBattleGroundHiddenStar() {}
       return (
         (WorldClassicBattleGroundHiddenStar.OUTPOST_TYPE_COUNT_$LI$ =
@@ -89434,16 +89588,16 @@ and limitations under the License.
         WorldClassicBattleGroundHiddenStar
       );
     })();
-    ((Xe.KINGDOM_ID = 0),
-      (Xe.IS_EXTENSION = !0),
-      (Xe.WOOD_PRODUCERS = 3),
-      (Xe.STONE_PRODUCERS = 3),
-      (Xe.FOOD_PRODUCERS = 3),
-      (Xe.IRON_PRODUCERS = 2),
-      (t.WorldClassicBattleGroundHiddenStar = Xe),
-      (Xe.__class = "WorldClassicBattleGroundHiddenStar"),
-      (Xe.__interfaces = ["IAreaMap"]));
-    var Qe = (function () {
+    ((Qe.KINGDOM_ID = 0),
+      (Qe.IS_EXTENSION = !0),
+      (Qe.WOOD_PRODUCERS = 3),
+      (Qe.STONE_PRODUCERS = 3),
+      (Qe.FOOD_PRODUCERS = 3),
+      (Qe.IRON_PRODUCERS = 2),
+      (t.WorldClassicBattleGroundHiddenStar = Qe),
+      (Qe.__class = "WorldClassicBattleGroundHiddenStar"),
+      (Qe.__interfaces = ["IAreaMap"]));
+    var $e = (function () {
       function WorldClassicBattleGroundLineBreak() {}
       return (
         (WorldClassicBattleGroundLineBreak.OUTPOST_TYPE_COUNT_$LI$ =
@@ -89690,16 +89844,16 @@ and limitations under the License.
         WorldClassicBattleGroundLineBreak
       );
     })();
-    ((Qe.KINGDOM_ID = 0),
-      (Qe.IS_EXTENSION = !0),
-      (Qe.WOOD_PRODUCERS = 3),
-      (Qe.STONE_PRODUCERS = 3),
-      (Qe.FOOD_PRODUCERS = 3),
-      (Qe.IRON_PRODUCERS = 2),
-      (t.WorldClassicBattleGroundLineBreak = Qe),
-      (Qe.__class = "WorldClassicBattleGroundLineBreak"),
-      (Qe.__interfaces = ["IAreaMap"]));
-    var $e = (function () {
+    (($e.KINGDOM_ID = 0),
+      ($e.IS_EXTENSION = !0),
+      ($e.WOOD_PRODUCERS = 3),
+      ($e.STONE_PRODUCERS = 3),
+      ($e.FOOD_PRODUCERS = 3),
+      ($e.IRON_PRODUCERS = 2),
+      (t.WorldClassicBattleGroundLineBreak = $e),
+      ($e.__class = "WorldClassicBattleGroundLineBreak"),
+      ($e.__interfaces = ["IAreaMap"]));
+    var Je = (function () {
       function WorldClassicBattleGroundTowers() {}
       return (
         (WorldClassicBattleGroundTowers.OUTPOST_TYPE_COUNT_$LI$ = function () {
@@ -89909,16 +90063,16 @@ and limitations under the License.
         WorldClassicBattleGroundTowers
       );
     })();
-    (($e.KINGDOM_ID = 0),
-      ($e.IS_EXTENSION = !0),
-      ($e.WOOD_PRODUCERS = 3),
-      ($e.STONE_PRODUCERS = 3),
-      ($e.FOOD_PRODUCERS = 3),
-      ($e.IRON_PRODUCERS = 2),
-      (t.WorldClassicBattleGroundTowers = $e),
-      ($e.__class = "WorldClassicBattleGroundTowers"),
-      ($e.__interfaces = ["IAreaMap"]));
-    var Je = (function () {
+    ((Je.KINGDOM_ID = 0),
+      (Je.IS_EXTENSION = !0),
+      (Je.WOOD_PRODUCERS = 3),
+      (Je.STONE_PRODUCERS = 3),
+      (Je.FOOD_PRODUCERS = 3),
+      (Je.IRON_PRODUCERS = 2),
+      (t.WorldClassicBattleGroundTowers = Je),
+      (Je.__class = "WorldClassicBattleGroundTowers"),
+      (Je.__interfaces = ["IAreaMap"]));
+    var et = (function () {
       function WorldConst() {}
       return (
         (WorldConst.ALIEN_CAMP_AREA_TYPES_$LI$ = function () {
@@ -89951,12 +90105,12 @@ and limitations under the License.
           return (
             null == WorldConst.WORLD_IDS &&
               (WorldConst.WORLD_IDS = [
-                ze.KINGDOM_ID,
-                et.KINGDOM_ID,
+                Ze.KINGDOM_ID,
                 tt.KINGDOM_ID,
-                at.KINGDOM_ID,
                 nt.KINGDOM_ID,
-                M.KINGDOM_ID,
+                st.KINGDOM_ID,
+                it.KINGDOM_ID,
+                U.KINGDOM_ID,
               ]),
             WorldConst.WORLD_IDS
           );
@@ -89972,95 +90126,95 @@ and limitations under the License.
         }),
         (WorldConst.isLaboratoryKingdom = function (e) {
           return (
-            ze.KINGDOM_ID === e ||
+            Ze.KINGDOM_ID === e ||
+            nt.KINGDOM_ID === e ||
             tt.KINGDOM_ID === e ||
-            et.KINGDOM_ID === e ||
-            at.KINGDOM_ID === e
+            st.KINGDOM_ID === e
           );
         }),
         WorldConst
       );
     })();
-    ((Je.SECTOR_WIDTH = 13),
-      (Je.SECTOR_HEIGHT = 13),
-      (Je.AREA_TYPE_EMPTY = 0),
-      (Je.AREA_TYPE_CASTLE = 1),
-      (Je.AREA_TYPE_DUNGEON = 2),
-      (Je.AREA_TYPE_CAPITAL = 3),
-      (Je.AREA_TYPE_OUTPOST = 4),
-      (Je.AREA_TYPE_TREASURE_DUNGEON = 7),
-      (Je.AREA_TYPE_TREASURE_CAMP = 8),
-      (Je.AREA_TYPE_SHADOW_AREA = 9),
-      (Je.AREA_TYPE_VILLAGE = 10),
-      (Je.AREA_TYPE_BOSS_DUNGEON = 11),
-      (Je.AREA_TYPE_KINGDOM_CASTLE = 12),
-      (Je.AREA_TYPE_EVENT_DUNGEON = 13),
-      (Je.AREA_TYPE_NO_LANDMARK = 14),
-      (Je.AREA_TYPE_FACTION_CAMP = 15),
-      (Je.AREA_TYPE_FACTION_VILLAGE = 16),
-      (Je.AREA_TYPE_FACTION_TOWER = 17),
-      (Je.AREA_TYPE_FACTION_CAPITAL = 18),
-      (Je.AREA_TYPE_PLAGUE_AREA = 19),
-      (Je.AREA_TYPE_TROOP_HOSTEL = 20),
-      (Je.AREA_TYPE_ALIEN_CAMP = 21),
-      (Je.AREA_TYPE_METROPOL = 22),
-      (Je.AREA_TYPE_KINGS_TOWER = 23),
-      (Je.AREA_TYPE_ISLE_RESOURCE = 24),
-      (Je.AREA_TYPE_ISLE_DUNGEON = 25),
-      (Je.AREA_TYPE_MONUMENT = 26),
-      (Je.AREA_TYPE_NOMAD_CAMP = 27),
-      (Je.AREA_TYPE_LABORATORY = 28),
-      (Je.AREA_TYPE_SAMURAI_CAMP = 29),
-      (Je.AREA_TYPE_FACTION_INVASION_CAMP = 30),
-      (Je.AREA_TYPE_DYNAMIC = 31),
-      (Je.AREA_TYPE_SAMURAI_ALIEN_CAMP = 33),
-      (Je.AREA_TYPE_RED_ALIEN_CAMP = 34),
-      (Je.AREA_TYPE_ALLIANCE_NOMAD_CAMP = 35),
-      (Je.AREA_TYPE_DAIMYO_CASTLE = 37),
-      (Je.AREA_TYPE_DAIMYO_TOWNSHIP = 38),
-      (Je.AREA_TYPE_ALLIANCE_BATTLE_GROUND_RESOURCE_TOWER = 40),
-      (Je.AREA_TYPE_ALLIANCE_BATTLE_GROUND_TOWER = 41),
-      (Je.AREA_TYPE_WOLF_KING = 42),
-      (Je.AREA_TYPE_ARE_PORTAL = 43),
-      (Je.AREA_TYPE_NO_OUTPOST = 99),
-      (Je.VILLAGE_TYPE_WOOD = 0),
-      (Je.VILLAGE_TYPE_STONE = 1),
-      (Je.VILLAGE_TYPE_FOOD = 2),
-      (Je.VILLAGE_TYPE_AQUAMARINE = 3),
-      (Je.VILLAGE_TYPE_WOOD_NON_PREMIUM = 4),
-      (Je.VILLAGE_TYPE_STONE_NON_PREMIUM = 5),
-      (Je.VILLAGE_TYPE_AQUAMARINE_NON_PREMIUM = 6),
-      (Je.VILLAGE_TYPE_COAL = 7),
-      (Je.VILLAGE_TYPE_OIL = 8),
-      (Je.VILLAGE_TYPE_GLASS = 9),
-      (Je.VILLAGE_TYPE_IRON = 10),
-      (Je.MONUMENT_TYPE_SMALL = 0),
-      (Je.MONUMENT_TYPE_BIG = 1),
-      (Je.LOOKUP_MAP_SIZE = 39),
-      (Je.CAPITAL_RANDOM_POS_OFFSET_XY1 = 5),
-      (Je.CAPITAL_RANDOM_POS_OFFSET_XY2 = 8),
-      (Je.SEED_VALUE_1 = 7),
-      (Je.SEED_VALUE_2 = 923),
-      (Je.CASTLES_PER_SECTOR = 14),
-      (Je.ALIEN_CAMPS_PER_SECTOR = 4),
-      (Je.NOMAD_CAMPS_PER_SECTOR = 4),
-      (Je.SAMURAI_CAMPS_PER_SECTOR = 4),
-      (Je.RED_FACTION_INVASION_CAMPS_PER_SECTOR = 5),
-      (Je.BLUE_FACTION_INVASION_CAMPS_PER_SECTOR = 5),
-      (Je.DAIMYO_CASTLES_PER_SECTOR = 2),
-      (Je.DAIMYO_TOWNSHIPS_PER_SECTOR = 2),
-      (Je.ARE_PORTALS_PER_SECTOR = 1),
-      (Je.ALLIANCE_NOMAD_CAMPS_PER_SECTOR = 1),
-      (Je.ALLIANCE_SAMURAI_CAMPS_PER_SECTOR = 0),
-      (Je.BLUE_ALLIANCE_FACTION_INVASION_CAMPS_PER_SECTOR = 0),
-      (Je.RED_ALLIANCE_FACTION_INVASION_CAMPS_PER_SECTOR = 0),
-      (Je.ZERO_ALLIANCE_CAMPS_PER_SECTOR = 0),
-      (Je.SECTOR_COUNT = 99),
-      (Je.SECTOR_COUNT_ON_TEST = 9),
-      (Je.AREA_ID_DYNAMIC_WORLDMAPOBJECT = -1),
-      (t.WorldConst = Je),
-      (Je.__class = "WorldConst"));
-    var et = (function () {
+    ((et.SECTOR_WIDTH = 13),
+      (et.SECTOR_HEIGHT = 13),
+      (et.AREA_TYPE_EMPTY = 0),
+      (et.AREA_TYPE_CASTLE = 1),
+      (et.AREA_TYPE_DUNGEON = 2),
+      (et.AREA_TYPE_CAPITAL = 3),
+      (et.AREA_TYPE_OUTPOST = 4),
+      (et.AREA_TYPE_TREASURE_DUNGEON = 7),
+      (et.AREA_TYPE_TREASURE_CAMP = 8),
+      (et.AREA_TYPE_SHADOW_AREA = 9),
+      (et.AREA_TYPE_VILLAGE = 10),
+      (et.AREA_TYPE_BOSS_DUNGEON = 11),
+      (et.AREA_TYPE_KINGDOM_CASTLE = 12),
+      (et.AREA_TYPE_EVENT_DUNGEON = 13),
+      (et.AREA_TYPE_NO_LANDMARK = 14),
+      (et.AREA_TYPE_FACTION_CAMP = 15),
+      (et.AREA_TYPE_FACTION_VILLAGE = 16),
+      (et.AREA_TYPE_FACTION_TOWER = 17),
+      (et.AREA_TYPE_FACTION_CAPITAL = 18),
+      (et.AREA_TYPE_PLAGUE_AREA = 19),
+      (et.AREA_TYPE_TROOP_HOSTEL = 20),
+      (et.AREA_TYPE_ALIEN_CAMP = 21),
+      (et.AREA_TYPE_METROPOL = 22),
+      (et.AREA_TYPE_KINGS_TOWER = 23),
+      (et.AREA_TYPE_ISLE_RESOURCE = 24),
+      (et.AREA_TYPE_ISLE_DUNGEON = 25),
+      (et.AREA_TYPE_MONUMENT = 26),
+      (et.AREA_TYPE_NOMAD_CAMP = 27),
+      (et.AREA_TYPE_LABORATORY = 28),
+      (et.AREA_TYPE_SAMURAI_CAMP = 29),
+      (et.AREA_TYPE_FACTION_INVASION_CAMP = 30),
+      (et.AREA_TYPE_DYNAMIC = 31),
+      (et.AREA_TYPE_SAMURAI_ALIEN_CAMP = 33),
+      (et.AREA_TYPE_RED_ALIEN_CAMP = 34),
+      (et.AREA_TYPE_ALLIANCE_NOMAD_CAMP = 35),
+      (et.AREA_TYPE_DAIMYO_CASTLE = 37),
+      (et.AREA_TYPE_DAIMYO_TOWNSHIP = 38),
+      (et.AREA_TYPE_ALLIANCE_BATTLE_GROUND_RESOURCE_TOWER = 40),
+      (et.AREA_TYPE_ALLIANCE_BATTLE_GROUND_TOWER = 41),
+      (et.AREA_TYPE_WOLF_KING = 42),
+      (et.AREA_TYPE_ARE_PORTAL = 43),
+      (et.AREA_TYPE_NO_OUTPOST = 99),
+      (et.VILLAGE_TYPE_WOOD = 0),
+      (et.VILLAGE_TYPE_STONE = 1),
+      (et.VILLAGE_TYPE_FOOD = 2),
+      (et.VILLAGE_TYPE_AQUAMARINE = 3),
+      (et.VILLAGE_TYPE_WOOD_NON_PREMIUM = 4),
+      (et.VILLAGE_TYPE_STONE_NON_PREMIUM = 5),
+      (et.VILLAGE_TYPE_AQUAMARINE_NON_PREMIUM = 6),
+      (et.VILLAGE_TYPE_COAL = 7),
+      (et.VILLAGE_TYPE_OIL = 8),
+      (et.VILLAGE_TYPE_GLASS = 9),
+      (et.VILLAGE_TYPE_IRON = 10),
+      (et.MONUMENT_TYPE_SMALL = 0),
+      (et.MONUMENT_TYPE_BIG = 1),
+      (et.LOOKUP_MAP_SIZE = 39),
+      (et.CAPITAL_RANDOM_POS_OFFSET_XY1 = 5),
+      (et.CAPITAL_RANDOM_POS_OFFSET_XY2 = 8),
+      (et.SEED_VALUE_1 = 7),
+      (et.SEED_VALUE_2 = 923),
+      (et.CASTLES_PER_SECTOR = 14),
+      (et.ALIEN_CAMPS_PER_SECTOR = 4),
+      (et.NOMAD_CAMPS_PER_SECTOR = 4),
+      (et.SAMURAI_CAMPS_PER_SECTOR = 4),
+      (et.RED_FACTION_INVASION_CAMPS_PER_SECTOR = 5),
+      (et.BLUE_FACTION_INVASION_CAMPS_PER_SECTOR = 5),
+      (et.DAIMYO_CASTLES_PER_SECTOR = 2),
+      (et.DAIMYO_TOWNSHIPS_PER_SECTOR = 2),
+      (et.ARE_PORTALS_PER_SECTOR = 1),
+      (et.ALLIANCE_NOMAD_CAMPS_PER_SECTOR = 1),
+      (et.ALLIANCE_SAMURAI_CAMPS_PER_SECTOR = 0),
+      (et.BLUE_ALLIANCE_FACTION_INVASION_CAMPS_PER_SECTOR = 0),
+      (et.RED_ALLIANCE_FACTION_INVASION_CAMPS_PER_SECTOR = 0),
+      (et.ZERO_ALLIANCE_CAMPS_PER_SECTOR = 0),
+      (et.SECTOR_COUNT = 99),
+      (et.SECTOR_COUNT_ON_TEST = 9),
+      (et.AREA_ID_DYNAMIC_WORLDMAPOBJECT = -1),
+      (t.WorldConst = et),
+      (et.__class = "WorldConst"));
+    var tt = (function () {
       function WorldDessert() {}
       return (
         (WorldDessert.VILLAGE_TYPE_COUNT_$LI$ = function () {
@@ -90267,17 +90421,17 @@ and limitations under the License.
         WorldDessert
       );
     })();
-    ((et.KINGDOM_ID = 1),
-      (et.IS_EXTENSION = !1),
-      (et.WOOD_PRODUCERS = 1),
-      (et.STONE_PRODUCERS = 1),
-      (et.FOOD_PRODUCERS = 2),
-      (et.BEEF_PRODUCERS = 2),
-      (et.OIL_PRODUCERS = 2),
-      (t.WorldDessert = et),
-      (et.__class = "WorldDessert"),
-      (et.__interfaces = ["IAreaMap"]));
-    var tt = (function () {
+    ((tt.KINGDOM_ID = 1),
+      (tt.IS_EXTENSION = !1),
+      (tt.WOOD_PRODUCERS = 1),
+      (tt.STONE_PRODUCERS = 1),
+      (tt.FOOD_PRODUCERS = 2),
+      (tt.BEEF_PRODUCERS = 2),
+      (tt.OIL_PRODUCERS = 2),
+      (t.WorldDessert = tt),
+      (tt.__class = "WorldDessert"),
+      (tt.__interfaces = ["IAreaMap"]));
+    var nt = (function () {
       function WorldIce() {}
       return (
         (WorldIce.VILLAGE_TYPE_COUNT_$LI$ = function () {
@@ -90484,18 +90638,18 @@ and limitations under the License.
         WorldIce
       );
     })();
-    ((tt.KINGDOM_ID = 2),
-      (tt.IS_EXTENSION = !1),
-      (tt.WOOD_PRODUCERS = 2),
-      (tt.STONE_PRODUCERS = 2),
-      (tt.FOOD_PRODUCERS = 2),
-      (tt.BEEF_PRODUCERS = 2),
-      (tt.COAL_PRODUCERS = 2),
-      (tt.ADDITIONAL_KINGDOM_CASTLES_COUNT = 2),
-      (t.WorldIce = tt),
-      (tt.__class = "WorldIce"),
-      (tt.__interfaces = ["IAreaMap"]));
-    var nt = (function () {
+    ((nt.KINGDOM_ID = 2),
+      (nt.IS_EXTENSION = !1),
+      (nt.WOOD_PRODUCERS = 2),
+      (nt.STONE_PRODUCERS = 2),
+      (nt.FOOD_PRODUCERS = 2),
+      (nt.BEEF_PRODUCERS = 2),
+      (nt.COAL_PRODUCERS = 2),
+      (nt.ADDITIONAL_KINGDOM_CASTLES_COUNT = 2),
+      (t.WorldIce = nt),
+      (nt.__class = "WorldIce"),
+      (nt.__interfaces = ["IAreaMap"]));
+    var it = (function () {
       function WorldIsland() {}
       return (
         (WorldIsland.ISLE_TYPE_COUNT_$LI$ = function () {
@@ -90704,20 +90858,20 @@ and limitations under the License.
         WorldIsland
       );
     })();
-    ((nt.KINGDOM_ID = 4),
-      (nt.IS_EXTENSION = !1),
-      (nt.HARD_R_ISLES_BELOW_ID = 4),
-      (nt.HARD_R_ISLES_APPEAR_PERCENTAGE = 20),
-      (nt.EASY_R_ISLES_APPEAR_PERCENTAGE = 40),
-      (nt.WOOD_PRODUCERS = 3),
-      (nt.STONE_PRODUCERS = 3),
-      (nt.FOOD_PRODUCERS = 2),
-      (nt.BEEF_PRODUCERS = 2),
-      (t.WorldIsland = nt),
-      (nt.__class = "WorldIsland"),
-      (nt.__interfaces = ["IAreaMap"]));
-    var it,
-      at = (function () {
+    ((it.KINGDOM_ID = 4),
+      (it.IS_EXTENSION = !1),
+      (it.HARD_R_ISLES_BELOW_ID = 4),
+      (it.HARD_R_ISLES_APPEAR_PERCENTAGE = 20),
+      (it.EASY_R_ISLES_APPEAR_PERCENTAGE = 40),
+      (it.WOOD_PRODUCERS = 3),
+      (it.STONE_PRODUCERS = 3),
+      (it.FOOD_PRODUCERS = 2),
+      (it.BEEF_PRODUCERS = 2),
+      (t.WorldIsland = it),
+      (it.__class = "WorldIsland"),
+      (it.__interfaces = ["IAreaMap"]));
+    var at,
+      st = (function () {
         function WorldVolcano() {}
         return (
           (WorldVolcano.VILLAGE_TYPE_COUNT_$LI$ = function () {
@@ -90925,16 +91079,16 @@ and limitations under the License.
           WorldVolcano
         );
       })();
-    ((at.KINGDOM_ID = 3),
-      (at.IS_EXTENSION = !1),
-      (at.WOOD_PRODUCERS = 1),
-      (at.STONE_PRODUCERS = 1),
-      (at.FOOD_PRODUCERS = 2),
-      (at.BEEF_PRODUCERS = 2),
-      (at.GLASS_PRODUCERS = 2),
-      (t.WorldVolcano = at),
-      (at.__class = "WorldVolcano"),
-      (at.__interfaces = ["IAreaMap"]),
+    ((st.KINGDOM_ID = 3),
+      (st.IS_EXTENSION = !1),
+      (st.WOOD_PRODUCERS = 1),
+      (st.STONE_PRODUCERS = 1),
+      (st.FOOD_PRODUCERS = 2),
+      (st.BEEF_PRODUCERS = 2),
+      (st.GLASS_PRODUCERS = 2),
+      (t.WorldVolcano = st),
+      (st.__class = "WorldVolcano"),
+      (st.__interfaces = ["IAreaMap"]),
       i.POTION_TO_DURATION_$LI$(),
       i.POTION_TO_BOOST_$LI$(),
       i.POTION_TO_INGREDIENT_TO_COST_$LI$(),
@@ -90956,73 +91110,73 @@ and limitations under the License.
       s.MIN_MEMBERSHIP_FOR_DONATE_$LI$(),
       s.MIN_XP_$LI$(),
       s.ALLIANCE_HELP_REPAIR_COOLDOWN_$LI$(),
-      d.PRIME_SALE_BOOSTER_IDS_$LI$(),
-      d.OVERSEER_DURATION_$LI$(),
-      d.MARAUDER_DURATION_$LI$(),
-      d.INSTRUCTOR_DURATION_$LI$(),
-      d.TAX_BRIBE_DURATION_$LI$(),
-      d.REMINDER_LEAD_TIME_SECONDS_$LI$(),
-      p.NPC_ATTACK_DEFAULT_SOLDIER_IDS_$LI$(),
-      p.GATE_WOD_IDS_VILLAGES_$LI$(),
-      p.WALL_WOD_IDS_VILLAGES_$LI$(),
-      p.FLANKBONUS_RAID_$LI$(),
-      p.FLANKBONUS_$LI$(),
-      p.WAVE_UNLOCK_LEVEL_$LI$(),
-      p.ITEMS_FINALWAVE_UNITS_$LI$(),
-      p.LEVELS_SUPPORT_TOOLS_HOME_AWORKSHOP_$LI$(),
-      p.ITEMS_ASUPPORT_TOOLS_$LI$(),
-      p.LEVELS_RIGHTWALL_UNITS_$LI$(),
-      p.ITEMS_RIGHTWALL_UNITS_$LI$(),
-      p.LEVELS_RIGHTWALL_TOOLS_$LI$(),
-      p.ITEMS_RIGHTWALL_TOOLS_$LI$(),
-      p.LEVELS_MIDDLEWALL_UNITS_CROSS_PLAY_$LI$(),
-      p.ITEMS_MIDDLEWALL_UNITS_CROSS_PLAY_$LI$(),
-      p.LEVELS_MIDDLEWALL_UNITS_$LI$(),
-      p.ITEMS_MIDDLEWALL_UNITS_$LI$(),
-      p.LEVELS_MIDDLEWALL_TOOLS_$LI$(),
-      p.ITEMS_MIDDLEWALL_TOOLS_$LI$(),
-      p.LEVELS_LEFTWALL_UNITS_$LI$(),
-      p.ITEMS_LEFTWALL_UNITS_$LI$(),
-      p.LEVELS_LEFTWALL_TOOLS_$LI$(),
-      p.ITEMS_LEFTWALL_TOOLS_$LI$(),
-      f.FREE_SKIP_TIME_$LI$(),
-      f.UNLOCK_DURATION_$LI$(),
-      T.SLOT_TYPE_COUNTS_$LI$(),
-      T.MAX_SLOTS_$LI$(),
-      S.RANDOM_REWARD_STEPS_$LI$(),
-      S.REWARD_STEPS_$LI$(),
-      v.LEVELS_RIGHTWALL_FACTION_$LI$(),
-      v.ITEMS_RIGHTWALL_FACTION_$LI$(),
-      v.LEVELS_MIDDLEWALL_FACTION_$LI$(),
-      v.ITEMS_MIDDLEWALL_FACTION_$LI$(),
-      v.LEVELS_LEFTWALL_FACTION_$LI$(),
-      v.ITEMS_LEFTWALL_FACTION_$LI$(),
-      v.LEVELS_RIGHTMOAT_$LI$(),
-      v.ITEMS_RIGHTMOAT_$LI$(),
-      v.LEVELS_MIDDLEMOAT_$LI$(),
-      v.ITEMS_MIDDLEMOAT_$LI$(),
-      v.LEVELS_LEFTMOAT_$LI$(),
-      v.ITEMS_LEFTMOAT_$LI$(),
-      v.LEVELS_SKILLS_RIGHTWALL_$LI$(),
-      v.ITEMS_SKILLS_RIGHTWALL_$LI$(),
-      v.LEVELS_RIGHTWALL_$LI$(),
-      v.ITEMS_RIGHTWALL_$LI$(),
-      v.PLAYER_LEVEL_GATE_$LI$(),
-      v.PLAYER_LEVEL_WALL_$LI$(),
-      v.LEVELS_MIDDLEWALL_$LI$(),
-      v.ITEMS_MIDDLEWALL_$LI$(),
-      v.LEVELS_SKILLS_LEFTWALL_$LI$(),
-      v.ITEMS_SKILLS_LEFTWALL_$LI$(),
-      v.LEVELS_LEFTWALL_$LI$(),
-      v.ITEMS_LEFTWALL_$LI$(),
-      v.LEVELS_SUPPORT_TOOLS_HOME_DWORKSHOP_$LI$(),
-      v.ITEMS_SUPPORT_TOOLS_$LI$(),
-      v.LEVELS_KEEP_$LI$(),
-      v.ITEMS_KEEP_$LI$(),
-      D.COOLDOWN_$LI$(),
-      R.PER_TEN_THOUSAND_$LI$(),
-      R.SLOT_IDS_FOR_GEMS_$LI$(),
-      R.SLOT_IDS_$LI$(),
+      h.PRIME_SALE_BOOSTER_IDS_$LI$(),
+      h.OVERSEER_DURATION_$LI$(),
+      h.MARAUDER_DURATION_$LI$(),
+      h.INSTRUCTOR_DURATION_$LI$(),
+      h.TAX_BRIBE_DURATION_$LI$(),
+      h.REMINDER_LEAD_TIME_SECONDS_$LI$(),
+      g.NPC_ATTACK_DEFAULT_SOLDIER_IDS_$LI$(),
+      g.GATE_WOD_IDS_VILLAGES_$LI$(),
+      g.WALL_WOD_IDS_VILLAGES_$LI$(),
+      g.FLANKBONUS_RAID_$LI$(),
+      g.FLANKBONUS_$LI$(),
+      g.WAVE_UNLOCK_LEVEL_$LI$(),
+      g.ITEMS_FINALWAVE_UNITS_$LI$(),
+      g.LEVELS_SUPPORT_TOOLS_HOME_AWORKSHOP_$LI$(),
+      g.ITEMS_ASUPPORT_TOOLS_$LI$(),
+      g.LEVELS_RIGHTWALL_UNITS_$LI$(),
+      g.ITEMS_RIGHTWALL_UNITS_$LI$(),
+      g.LEVELS_RIGHTWALL_TOOLS_$LI$(),
+      g.ITEMS_RIGHTWALL_TOOLS_$LI$(),
+      g.LEVELS_MIDDLEWALL_UNITS_CROSS_PLAY_$LI$(),
+      g.ITEMS_MIDDLEWALL_UNITS_CROSS_PLAY_$LI$(),
+      g.LEVELS_MIDDLEWALL_UNITS_$LI$(),
+      g.ITEMS_MIDDLEWALL_UNITS_$LI$(),
+      g.LEVELS_MIDDLEWALL_TOOLS_$LI$(),
+      g.ITEMS_MIDDLEWALL_TOOLS_$LI$(),
+      g.LEVELS_LEFTWALL_UNITS_$LI$(),
+      g.ITEMS_LEFTWALL_UNITS_$LI$(),
+      g.LEVELS_LEFTWALL_TOOLS_$LI$(),
+      g.ITEMS_LEFTWALL_TOOLS_$LI$(),
+      T.FREE_SKIP_TIME_$LI$(),
+      T.UNLOCK_DURATION_$LI$(),
+      S.SLOT_TYPE_COUNTS_$LI$(),
+      S.MAX_SLOTS_$LI$(),
+      y.RANDOM_REWARD_STEPS_$LI$(),
+      y.REWARD_STEPS_$LI$(),
+      A.LEVELS_RIGHTWALL_FACTION_$LI$(),
+      A.ITEMS_RIGHTWALL_FACTION_$LI$(),
+      A.LEVELS_MIDDLEWALL_FACTION_$LI$(),
+      A.ITEMS_MIDDLEWALL_FACTION_$LI$(),
+      A.LEVELS_LEFTWALL_FACTION_$LI$(),
+      A.ITEMS_LEFTWALL_FACTION_$LI$(),
+      A.LEVELS_RIGHTMOAT_$LI$(),
+      A.ITEMS_RIGHTMOAT_$LI$(),
+      A.LEVELS_MIDDLEMOAT_$LI$(),
+      A.ITEMS_MIDDLEMOAT_$LI$(),
+      A.LEVELS_LEFTMOAT_$LI$(),
+      A.ITEMS_LEFTMOAT_$LI$(),
+      A.LEVELS_SKILLS_RIGHTWALL_$LI$(),
+      A.ITEMS_SKILLS_RIGHTWALL_$LI$(),
+      A.LEVELS_RIGHTWALL_$LI$(),
+      A.ITEMS_RIGHTWALL_$LI$(),
+      A.PLAYER_LEVEL_GATE_$LI$(),
+      A.PLAYER_LEVEL_WALL_$LI$(),
+      A.LEVELS_MIDDLEWALL_$LI$(),
+      A.ITEMS_MIDDLEWALL_$LI$(),
+      A.LEVELS_SKILLS_LEFTWALL_$LI$(),
+      A.ITEMS_SKILLS_LEFTWALL_$LI$(),
+      A.LEVELS_LEFTWALL_$LI$(),
+      A.ITEMS_LEFTWALL_$LI$(),
+      A.LEVELS_SUPPORT_TOOLS_HOME_DWORKSHOP_$LI$(),
+      A.ITEMS_SUPPORT_TOOLS_$LI$(),
+      A.LEVELS_KEEP_$LI$(),
+      A.ITEMS_KEEP_$LI$(),
+      b.COOLDOWN_$LI$(),
+      N.PER_TEN_THOUSAND_$LI$(),
+      N.SLOT_IDS_FOR_GEMS_$LI$(),
+      N.SLOT_IDS_$LI$(),
       P.QUEST_SKIP_AUTO_START_EVENTS_$LI$(),
       P.LUCKY_WHEEL_EVENT_TYPES_$LI$(),
       P.EVENT_TYPES_FOR_OFFICERS_SCHOOL_$LI$(),
@@ -91046,110 +91200,108 @@ and limitations under the License.
       P.CRUSADE_EVENT_TYPES_$LI$(),
       P.DUNGEON_EVENT_TYPES_$LI$(),
       P.ARTIFACT_EVENT_TYPES_$LI$(),
-      B.GIFT_COOLDOWN_$LI$(),
-      M.TITLE_RESET_INTERVAL_SECONDS_$LI$(),
-      M.VILLAGE_COOLDOWN_$LI$(),
-      M.TOWER_COOLDOWN_$LI$(),
-      M.FACTIONS_$LI$(),
-      j.GLOBALSERVER_PREVIOUS_RUN_HIGHSCORES_ON_MAINSERVER_$LI$(),
-      j.NO_OFFSET_$LI$(),
-      j.MIN_XP_FOR_HIGHSCORE_$LI$(),
-      j.LEAGUED_HIGHSCORES_$LI$(),
-      j.TITLE_COOLDOWN_TEST_$LI$(),
-      j.TITLE_COOLDOWN_$LI$(),
-      j.POINTS_CAPITALS_$LI$(),
-      j.GLOBAL_SERVER_PREVIOUS_RUN_NUMBER_OF_ENTRIES_SHOWN_$LI$(),
-      j.DAIMYO_NUMBER_OF_ENTRIES_SHOWN_$LI$(),
-      j.SEASON_NUMBER_OF_ENTRIES_SHOWN_$LI$(),
-      K.FACTOR_FORMULA_1_REWARD_$LI$(),
-      K.EXPONENT_FORMULA_1_REWARD_$LI$(),
-      K.OFFSET_REWARD_$LI$(),
-      K.MAX_VALUE_$LI$(),
-      K.FACTORS_REWARD_$LI$(),
-      K.MIN_VALUE_$LI$(),
-      K.OFFSET_FORMULA_1_COND_$LI$(),
-      K.FACTOR_FORMULA_1_COND_$LI$(),
-      K.EXPONENT_FORMULA_1_COND_$LI$(),
-      z.TIER_UNLOCK_POINTS_$LI$(),
-      z.RESET_COOLDOWN_IN_SECONDS_$LI$(),
-      Z.SKINS_$LI$(),
-      ae.ABANDON_CANCEL_TIME_$LI$(),
-      ae.ABANDON_TIME_TEST_$LI$(),
-      ae.ABANDON_TIME_$LI$(),
-      ae.MIN_TIME_BEFORE_ABANDON_TEST_$LI$(),
-      ae.MIN_TIME_BEFORE_ABANDON_$LI$(),
-      ae.SIEGE_TIME_TEST_$LI$(),
-      ae.SIEGE_TIME_$LI$(),
-      re.PLAYER_NAME_CHANGE_COOLDOWN_$LI$(),
-      re.SAVE_ACCOUNT_LEVEL_CATEGORY_$LI$(),
-      re.LOGIN_BONUS_KEY_PRICES_$LI$(),
-      re.CUMULATED_LEVEL_CAP_$LI$(),
-      re.LEGEND_MAX_XP_$LI$(),
-      re.COMBINED_LEVEL_CAP_$LI$(),
-      re.LEVEL_CAP_XP_$LI$(),
-      re.LOGIN_LP_INCENTIVES_C2_$LI$(),
-      re.LOGIN_LP_INCENTIVES_C1_$LI$(),
-      re.MAIL_CONFIRM_C2_$LI$(),
-      re.PEACE_MODE_COOLDOWN_$LI$(),
-      re.PEACE_MODE_HEAT_UP_TEST_$LI$(),
-      re.PEACE_MODE_HEAT_UP_$LI$(),
-      re.PEACE_MODE_DURATION_$LI$(),
-      re.PEACE_MODE_C2_$LI$(),
-      re.OPEN_GATE_DURATION_$LI$(),
-      re.OPEN_GATE_C2_$LI$(),
-      re.NAME_SUFFIX_$LI$(),
-      re.NAME_MIDDLE_$LI$(),
-      re.NAME_PREFIX_$LI$(),
-      oe.POINTS_FOR_TASK_$LI$(),
-      ue.ALLIANCE_MOBILIZATION_POPUPS_$LI$(),
-      ue.SAMURAI_ALIEN_INVASION_POPUPS_$LI$(),
-      ue.ALLIANCE_RED_ALIEN_INVASION_POPUPS_$LI$(),
-      ue.FACTION_INVASION_POPUPS_$LI$(),
-      ue.ALLIANCE_TOURNAMENT_POPUPS_$LI$(),
-      ue.SAMURAI_INVASION_POPUPS_$LI$(),
-      ue.ALLIANCE_NOMAD_INVASION_POPUPS_$LI$(),
-      ue.ALLIANCE_ALIEN_INVASION_POPUPS_$LI$(),
-      _e.FACTOR_DONATE_ALLI_$LI$(),
-      _e.FACTOR_BRIBE_TAX_C2_$LI$(),
-      _e.FACTOR_C2_$LI$(),
-      _e.FACTOR_C1_$LI$(),
-      me.SKIN_LIST_$LI$(),
-      me.BRICK_SKIN_ID_$LI$(),
-      me.GOLD_SKIN_ID_$LI$(),
-      me.DEFAULT_SKIN_ID_$LI$(),
-      he.PUSHCATEGORY_FORWARDED_MESSAGES_$LI$(),
-      he.PUSHCATEGORY_ALLIANCE_ATTACK_$LI$(),
-      he.PUSHCATEGORY_INGAME_EVENTS_$LI$(),
-      he.PUSHCATEGORY_TAX_$LI$(),
-      he.PUSHCATEGORY_RESSOURCE_$LI$(),
-      he.PUSHCATEGORY_MISC_$LI$(),
-      he.PUSHCATEGORY_CONSTRUCTION_$LI$(),
-      Ee.TEST_RELOCATION_COOLDOWN_$LI$(),
-      Ee.TEST_RELOCATION_DURATION_$LI$(),
-      Ee.RELOCATION_COOLDOWN_$LI$(),
-      Ee.RELOCATION_COST_C2_$LI$(),
-      Ee.RELOCATION_DURATION_$LI$(),
-      Ce.RESOURCE_TYPES_TO_MODIFY_$LI$(),
-      fe.CHARGETIME_$LI$(),
-      Te.RESOURCE_FACTORS_$LI$(),
-      De.SABOTAGE_PROTECTION_WINDOW_$LI$(),
-      De.MAX_SABOTAGE_COOLDOWN_$LI$(),
-      De.SPY_VALIDITY_$LI$(),
-      Re.PLAYER_TYPE_PACKAGES_$LI$(),
+      M.GIFT_COOLDOWN_$LI$(),
+      U.TITLE_RESET_INTERVAL_SECONDS_$LI$(),
+      U.VILLAGE_COOLDOWN_$LI$(),
+      U.TOWER_COOLDOWN_$LI$(),
+      U.FACTIONS_$LI$(),
+      q.GLOBALSERVER_PREVIOUS_RUN_HIGHSCORES_ON_MAINSERVER_$LI$(),
+      q.NO_OFFSET_$LI$(),
+      q.MIN_XP_FOR_HIGHSCORE_$LI$(),
+      q.LEAGUED_HIGHSCORES_$LI$(),
+      q.TITLE_COOLDOWN_TEST_$LI$(),
+      q.TITLE_COOLDOWN_$LI$(),
+      q.POINTS_CAPITALS_$LI$(),
+      q.GLOBAL_SERVER_PREVIOUS_RUN_NUMBER_OF_ENTRIES_SHOWN_$LI$(),
+      q.DAIMYO_NUMBER_OF_ENTRIES_SHOWN_$LI$(),
+      q.SEASON_NUMBER_OF_ENTRIES_SHOWN_$LI$(),
+      Y.FACTOR_FORMULA_1_REWARD_$LI$(),
+      Y.EXPONENT_FORMULA_1_REWARD_$LI$(),
+      Y.OFFSET_REWARD_$LI$(),
+      Y.MAX_VALUE_$LI$(),
+      Y.FACTORS_REWARD_$LI$(),
+      Y.MIN_VALUE_$LI$(),
+      Y.OFFSET_FORMULA_1_COND_$LI$(),
+      Y.FACTOR_FORMULA_1_COND_$LI$(),
+      Y.EXPONENT_FORMULA_1_COND_$LI$(),
+      Z.TIER_UNLOCK_POINTS_$LI$(),
+      Z.RESET_COOLDOWN_IN_SECONDS_$LI$(),
+      X.SKINS_$LI$(),
+      se.ABANDON_CANCEL_TIME_$LI$(),
+      se.ABANDON_TIME_TEST_$LI$(),
+      se.ABANDON_TIME_$LI$(),
+      se.MIN_TIME_BEFORE_ABANDON_TEST_$LI$(),
+      se.MIN_TIME_BEFORE_ABANDON_$LI$(),
+      se.SIEGE_TIME_TEST_$LI$(),
+      se.SIEGE_TIME_$LI$(),
+      oe.PLAYER_NAME_CHANGE_COOLDOWN_$LI$(),
+      oe.SAVE_ACCOUNT_LEVEL_CATEGORY_$LI$(),
+      oe.LOGIN_BONUS_KEY_PRICES_$LI$(),
+      oe.CUMULATED_LEVEL_CAP_$LI$(),
+      oe.LEGEND_MAX_XP_$LI$(),
+      oe.COMBINED_LEVEL_CAP_$LI$(),
+      oe.LEVEL_CAP_XP_$LI$(),
+      oe.LOGIN_LP_INCENTIVES_C2_$LI$(),
+      oe.LOGIN_LP_INCENTIVES_C1_$LI$(),
+      oe.MAIL_CONFIRM_C2_$LI$(),
+      oe.PEACE_MODE_COOLDOWN_$LI$(),
+      oe.PEACE_MODE_HEAT_UP_TEST_$LI$(),
+      oe.PEACE_MODE_HEAT_UP_$LI$(),
+      oe.PEACE_MODE_DURATION_$LI$(),
+      oe.PEACE_MODE_C2_$LI$(),
+      oe.OPEN_GATE_DURATION_$LI$(),
+      oe.OPEN_GATE_C2_$LI$(),
+      oe.NAME_SUFFIX_$LI$(),
+      oe.NAME_MIDDLE_$LI$(),
+      oe.NAME_PREFIX_$LI$(),
+      le.POINTS_FOR_TASK_$LI$(),
+      _e.ALLIANCE_MOBILIZATION_POPUPS_$LI$(),
+      _e.SAMURAI_ALIEN_INVASION_POPUPS_$LI$(),
+      _e.ALLIANCE_RED_ALIEN_INVASION_POPUPS_$LI$(),
+      _e.FACTION_INVASION_POPUPS_$LI$(),
+      _e.ALLIANCE_TOURNAMENT_POPUPS_$LI$(),
+      _e.SAMURAI_INVASION_POPUPS_$LI$(),
+      _e.ALLIANCE_NOMAD_INVASION_POPUPS_$LI$(),
+      _e.ALLIANCE_ALIEN_INVASION_POPUPS_$LI$(),
+      ce.FACTOR_DONATE_ALLI_$LI$(),
+      ce.FACTOR_BRIBE_TAX_C2_$LI$(),
+      ce.FACTOR_C2_$LI$(),
+      ce.FACTOR_C1_$LI$(),
+      de.SKIN_LIST_$LI$(),
+      de.BRICK_SKIN_ID_$LI$(),
+      de.GOLD_SKIN_ID_$LI$(),
+      de.DEFAULT_SKIN_ID_$LI$(),
+      pe.PUSHCATEGORY_FORWARDED_MESSAGES_$LI$(),
+      pe.PUSHCATEGORY_ALLIANCE_ATTACK_$LI$(),
+      pe.PUSHCATEGORY_INGAME_EVENTS_$LI$(),
+      pe.PUSHCATEGORY_TAX_$LI$(),
+      pe.PUSHCATEGORY_RESSOURCE_$LI$(),
+      pe.PUSHCATEGORY_MISC_$LI$(),
+      pe.PUSHCATEGORY_CONSTRUCTION_$LI$(),
+      Ce.TEST_RELOCATION_COOLDOWN_$LI$(),
+      Ce.TEST_RELOCATION_DURATION_$LI$(),
+      Ce.RELOCATION_COOLDOWN_$LI$(),
+      Ce.RELOCATION_COST_C2_$LI$(),
+      Ce.RELOCATION_DURATION_$LI$(),
+      fe.RESOURCE_TYPES_TO_MODIFY_$LI$(),
+      Te.CHARGETIME_$LI$(),
+      Se.RESOURCE_FACTORS_$LI$(),
+      be.SABOTAGE_PROTECTION_WINDOW_$LI$(),
+      be.MAX_SABOTAGE_COOLDOWN_$LI$(),
+      be.SPY_VALIDITY_$LI$(),
+      Ne.PLAYER_TYPE_PACKAGES_$LI$(),
       Pe.COLLECTOR_LOSS_$LI$(),
       Pe.START_COST_C1_PERC_$LI$(),
       Pe.START_COST_C2_$LI$(),
       Pe.COLLECTOR_DURATION_$LI$(),
-      xe.PLAGUE_TRAVEL_TIME_$LI$(),
-      xe.MAX_SLOWDOWN_DURATION_IN_SECONDS_$LI$(),
-      xe.MAX_FALLBACK_TIME_$LI$(),
-      xe.BASIC_FIELD_TRAVEL_TIME_$LI$(),
-      We.STAGED_CRUSADE_MAPS_$LI$(),
-      We.CRUSADE_MAP_IDS_$LI$(),
-      He.TUTORIAL_TMAPS_$LI$(),
-      Ve.UNLOCK_DURATION_$LI$(),
-      ze.AREA_MAP_$LI$(),
-      ze.OUTPOST_TYPE_COUNT_$LI$(),
+      We.PLAGUE_TRAVEL_TIME_$LI$(),
+      We.MAX_SLOWDOWN_DURATION_IN_SECONDS_$LI$(),
+      We.MAX_FALLBACK_TIME_$LI$(),
+      We.BASIC_FIELD_TRAVEL_TIME_$LI$(),
+      He.STAGED_CRUSADE_MAPS_$LI$(),
+      He.CRUSADE_MAP_IDS_$LI$(),
+      Ve.TUTORIAL_TMAPS_$LI$(),
+      je.UNLOCK_DURATION_$LI$(),
       Ze.AREA_MAP_$LI$(),
       Ze.OUTPOST_TYPE_COUNT_$LI$(),
       Xe.AREA_MAP_$LI$(),
@@ -91158,17 +91310,19 @@ and limitations under the License.
       Qe.OUTPOST_TYPE_COUNT_$LI$(),
       $e.AREA_MAP_$LI$(),
       $e.OUTPOST_TYPE_COUNT_$LI$(),
-      Je.WORLD_IDS_$LI$(),
-      Je.OUTPOST_TYPE_LIST_$LI$(),
-      Je.ALIEN_CAMP_AREA_TYPES_$LI$(),
-      et.AREA_MAP_$LI$(),
-      et.VILLAGE_TYPE_COUNT_$LI$(),
+      Je.AREA_MAP_$LI$(),
+      Je.OUTPOST_TYPE_COUNT_$LI$(),
+      et.WORLD_IDS_$LI$(),
+      et.OUTPOST_TYPE_LIST_$LI$(),
+      et.ALIEN_CAMP_AREA_TYPES_$LI$(),
       tt.AREA_MAP_$LI$(),
       tt.VILLAGE_TYPE_COUNT_$LI$(),
       nt.AREA_MAP_$LI$(),
-      nt.ISLE_TYPE_COUNT_$LI$(),
-      at.AREA_MAP_$LI$(),
-      at.VILLAGE_TYPE_COUNT_$LI$(),
+      nt.VILLAGE_TYPE_COUNT_$LI$(),
+      it.AREA_MAP_$LI$(),
+      it.ISLE_TYPE_COUNT_$LI$(),
+      st.AREA_MAP_$LI$(),
+      st.VILLAGE_TYPE_COUNT_$LI$(),
       (function (e) {
         ((e[(e.ALL_OK = 0)] = "ALL_OK"),
           (e[(e.GENERAL_ERROR = 1)] = "GENERAL_ERROR"),
@@ -91681,6 +91835,10 @@ and limitations under the License.
             "INVALID_ALLIANCE_REWARD_ID"),
           (e[(e.QUEST_IN_PROGRESS_BY_OTHER_PLAYER = 459)] =
             "QUEST_IN_PROGRESS_BY_OTHER_PLAYER"),
+          (e[(e.RAID_BOSS_NOT_IN_POOL = 460)] = "RAID_BOSS_NOT_IN_POOL"),
+          (e[(e.RAID_ALREADY_IN_PROGRESS = 461)] = "RAID_ALREADY_IN_PROGRESS"),
+          (e[(e.RAID_BOSS_LOCKED = 462)] = "RAID_BOSS_LOCKED"),
+          (e[(e.RAID_NO_ACTIVE_BOSS = 463)] = "RAID_NO_ACTIVE_BOSS"),
           (e[(e.RESOURCE_PRODUCTION_CAP = 1001)] = "RESOURCE_PRODUCTION_CAP"),
           (e[(e.TOO_MANY_LEADERS = 1002)] = "TOO_MANY_LEADERS"),
           (e[(e.QUICK_ATTACK_ENABLED = 1003)] = "QUICK_ATTACK_ENABLED"),
@@ -91708,14 +91866,14 @@ and limitations under the License.
           (e[(e.INVALID_LANGUAGE = 1010)] = "INVALID_LANGUAGE"),
           (e[(e.ALLIANCE_LANGUAGE_CHANGE_NOT_ALLOWED = 1011)] =
             "ALLIANCE_LANGUAGE_CHANGE_NOT_ALLOWED"));
-      })(it || (it = {})),
-      (t.ERROR = it),
+      })(at || (at = {})),
+      (t.ERROR = at),
       (function (e) {
         e.getErrorText = function getErrorText(t) {
           return e[t];
         };
-      })(it || (it = {})),
-      (t.ERROR = it));
+      })(at || (at = {})),
+      (t.ERROR = at));
   },
   function (e, t, n) {
     "use strict";
@@ -93205,7 +93363,7 @@ and limitations under the License.
       function GeoIPUtils() {}
       return (
         (GeoIPUtils.hexStringToBytes = function (e) {
-          for (var t = []; e.length >= 2; )
+          for (var t = []; e.length >= 2;)
             (t.push(Number("0x" + e.substr(0, 2))),
               (e = e.substr(2, e.length - 2)));
           return t;
@@ -98123,7 +98281,7 @@ and limitations under the License.
             (s.target = this.target),
             (s.currentTarget = this.target),
             (s.signal = this));
-          for (var r = this.slots; r.nonEmpty; )
+          for (var r = this.slots; r.nonEmpty;)
             (r.head.execute(e), (r = r.tail));
           if (s && s.bubbles)
             for (
@@ -98233,7 +98391,7 @@ and limitations under the License.
             },
             set: function (e) {
               this._valueClasses = e ? e.slice() : [];
-              for (var t = this._valueClasses.length; t--; )
+              for (var t = this._valueClasses.length; t--;)
                 if (!(this._valueClasses[t] instanceof Object))
                   throw new Error(
                     "Invalid valueClasses argument: item at index " +
@@ -98284,13 +98442,11 @@ and limitations under the License.
                   ".",
               );
             for (var a = 0; a < n; a++)
-              if (
-                !(
-                  null === e[a] ||
-                  e[a] instanceof this._valueClasses[a] ||
-                  e[a].constructor === this._valueClasses[a]
-                )
-              )
+              if (!(
+                null === e[a] ||
+                e[a] instanceof this._valueClasses[a] ||
+                e[a].constructor === this._valueClasses[a]
+              ))
                 throw new Error(
                   "Value object <" +
                     e[a] +
@@ -98888,11 +99044,10 @@ and limitations under the License.
           var n = this._block, a = 0;
           this._blockOffset + e.length - a >= this._blockSize;
         ) {
-          for (var s = this._blockOffset; s < this._blockSize; )
-            n[s++] = e[a++];
+          for (var s = this._blockOffset; s < this._blockSize;) n[s++] = e[a++];
           (this._update(), (this._blockOffset = 0));
         }
-        for (; a < e.length; ) n[this._blockOffset++] = e[a++];
+        for (; a < e.length;) n[this._blockOffset++] = e[a++];
         for (var r = 0, o = 8 * e.length; o > 0; ++r)
           ((this._length[r] += o),
             (o = (this._length[r] / 4294967296) | 0) > 0 &&
@@ -99192,7 +99347,7 @@ and limitations under the License.
             key: "join",
             value: function join(e) {
               if (0 === this.length) return "";
-              for (var t = this.head, n = "" + t.data; (t = t.next); )
+              for (var t = this.head, n = "" + t.data; (t = t.next);)
                 n += e + t.data;
               return n;
             },
@@ -99244,7 +99399,7 @@ and limitations under the License.
               var t = this.head,
                 n = 1,
                 i = t.data;
-              for (e -= i.length; (t = t.next); ) {
+              for (e -= i.length; (t = t.next);) {
                 var a = t.data,
                   s = e > a.length ? a.length : e;
                 if (
@@ -99270,7 +99425,7 @@ and limitations under the License.
               var t = i.allocUnsafe(e),
                 n = this.head,
                 a = 1;
-              for (n.data.copy(t), e -= n.data.length; (n = n.next); ) {
+              for (n.data.copy(t), e -= n.data.length; (n = n.next);) {
                 var s = n.data,
                   r = e > s.length ? s.length : e;
                 if ((s.copy(t, t.length - e, 0, r), 0 === (e -= r))) {
@@ -119125,8 +119280,8 @@ and limitations under the License.
                           N = function (e) {
                             return e;
                           },
-                          P = "=",
-                          B = {
+                          B = "=",
+                          P = {
                             type: "literal",
                             value: "=",
                             description: '"="',
@@ -119496,7 +119651,7 @@ and limitations under the License.
                                               (e = []),
                                               (t = peg$parseselectForm()) !== i)
                                             )
-                                              for (; t !== i; )
+                                              for (; t !== i;)
                                                 (e.push(t),
                                                   (t = peg$parseselectForm()));
                                             else e = o;
@@ -119553,7 +119708,7 @@ and limitations under the License.
                             n !== i)
                           ) {
                             if (((a = []), (s = peg$parsepluralForm()) !== i))
-                              for (; s !== i; )
+                              for (; s !== i;)
                                 (a.push(s), (s = peg$parsepluralForm()));
                             else a = o;
                             a !== i
@@ -119575,8 +119730,8 @@ and limitations under the License.
                                 (t = n) === i &&
                                   ((t = Te),
                                   61 === e.charCodeAt(Te)
-                                    ? ((n = P), Te++)
-                                    : ((n = i), 0 === Ae && peg$fail(B)),
+                                    ? ((n = B), Te++)
+                                    : ((n = i), 0 === Ae && peg$fail(P)),
                                   n !== i && (a = peg$parsedigits()) !== i
                                     ? ((n = b(a)), (t = n))
                                     : ((Te = t), (t = o))),
@@ -119665,7 +119820,7 @@ and limitations under the License.
                               (t = peg$parsewhitespace()),
                             t !== i)
                           )
-                            for (; t !== i; )
+                            for (; t !== i;)
                               (e.push(t),
                                 (t = peg$parsechars()) === i &&
                                   (t = peg$parsewhitespace()));
@@ -119710,8 +119865,7 @@ and limitations under the License.
                         function peg$parsechars() {
                           var e, t;
                           if ((Te, (e = []), (t = peg$parsechar()) !== i))
-                            for (; t !== i; )
-                              (e.push(t), (t = peg$parsechar()));
+                            for (; t !== i;) (e.push(t), (t = peg$parsechar()));
                           else e = o;
                           return (e !== i && (e = K(e)), e);
                         }
@@ -119772,7 +119926,7 @@ and limitations under the License.
                               : ((n = i), 0 === Ae && peg$fail(me)),
                             n !== i)
                           )
-                            for (; n !== i; )
+                            for (; n !== i;)
                               (t.push(n),
                                 ce.test(e.charAt(Te))
                                   ? ((n = e.charAt(Te)), Te++)
@@ -119865,7 +120019,7 @@ and limitations under the License.
                             : s.push(propname(r) + ": " + e(t[r], n + 1)));
                       if (0 == n) return s.join("");
                       if (0 == s.length) return "{}";
-                      for (var a = "  "; --n; ) a += "  ";
+                      for (var a = "  "; --n;) a += "  ";
                       return "{\n" + s.join(",\n").replace(/^/gm, a) + "\n}";
                     };
                     return e(this, 0);
@@ -120664,7 +120818,7 @@ and limitations under the License.
                 }
                 return a;
               },
-              P = function (e, t) {
+              B = function (e, t) {
                 var i,
                   s,
                   r,
@@ -120757,9 +120911,9 @@ and limitations under the License.
                 }
                 return s;
               },
-              B = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"],
+              P = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"],
               M = function (e) {
-                return B.indexOf(e.supplemental.weekData.firstDay());
+                return P.indexOf(e.supplemental.weekData.firstDay());
               },
               U = function (e, t, n, i) {
                 var a, s;
@@ -121116,7 +121270,7 @@ and limitations under the License.
                     n.on("get", validateRequiredCldr),
                     p && ((g = validateRequiredIana(p)), n.on("get", g)));
                   try {
-                    (validateOptionsSkeleton((o = P(e, n)), e.skeleton),
+                    (validateOptionsSkeleton((o = B(e, n)), e.skeleton),
                       (u = (function (e, t, n) {
                         var s = {
                             numberFormatters: {},
@@ -121446,7 +121600,7 @@ and limitations under the License.
                                       break;
                                     }
                                   case "E":
-                                    ((l = B[e.getDay()]),
+                                    ((l = P[e.getDay()]),
                                       (l = n.days[u][c][l]));
                                     break;
                                   case "a":
@@ -121573,7 +121727,7 @@ and limitations under the License.
                   try {
                     (n.on("get", validateRequiredCldr),
                       g && n.on("get", validateRequiredIana(g)),
-                      validateOptionsSkeleton((h = P(e, n)), e.skeleton),
+                      validateOptionsSkeleton((h = B(e, n)), e.skeleton),
                       (f = (function (e, t, n) {
                         var u,
                           _ = { pattern: r(e) },
@@ -123142,8 +123296,8 @@ and limitations under the License.
         R = /^\./,
         N =
           /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
-        P = /^\s+|\s+$/g,
-        B = /\\(\\)?/g,
+        B = /^\s+|\s+$/g,
+        P = /\\(\\)?/g,
         M = /^[-+]0x[0-9a-f]+$/i,
         U = /^0b[01]+$/i,
         F = /^\[object .+?Constructor\]$/,
@@ -123190,7 +123344,7 @@ and limitations under the License.
         })(),
         z = Y && Y.isTypedArray;
       function arraySome(e, t) {
-        for (var n = -1, i = e ? e.length : 0; ++n < i; )
+        for (var n = -1, i = e ? e.length : 0; ++n < i;)
           if (t(e[n], n, e)) return !0;
         return !1;
       }
@@ -123271,7 +123425,7 @@ and limitations under the License.
       function Hash(e) {
         var t = -1,
           n = e ? e.length : 0;
-        for (this.clear(); ++t < n; ) {
+        for (this.clear(); ++t < n;) {
           var i = e[t];
           this.set(i[0], i[1]);
         }
@@ -123279,7 +123433,7 @@ and limitations under the License.
       function ListCache(e) {
         var t = -1,
           n = e ? e.length : 0;
-        for (this.clear(); ++t < n; ) {
+        for (this.clear(); ++t < n;) {
           var i = e[t];
           this.set(i[0], i[1]);
         }
@@ -123287,7 +123441,7 @@ and limitations under the License.
       function MapCache(e) {
         var t = -1,
           n = e ? e.length : 0;
-        for (this.clear(); ++t < n; ) {
+        for (this.clear(); ++t < n;) {
           var i = e[t];
           this.set(i[0], i[1]);
         }
@@ -123295,7 +123449,7 @@ and limitations under the License.
       function SetCache(e) {
         var t = -1,
           n = e ? e.length : 0;
-        for (this.__data__ = new MapCache(); ++t < n; ) this.add(e[t]);
+        for (this.__data__ = new MapCache(); ++t < n;) this.add(e[t]);
       }
       function Stack(e) {
         this.__data__ = new ListCache(e);
@@ -123304,7 +123458,7 @@ and limitations under the License.
         var n =
             De(e) || isArguments(e)
               ? (function baseTimes(e, t) {
-                  for (var n = -1, i = Array(e); ++n < e; ) i[n] = t(n);
+                  for (var n = -1, i = Array(e); ++n < e;) i[n] = t(n);
                   return i;
                 })(e.length, String)
               : [],
@@ -123317,7 +123471,7 @@ and limitations under the License.
         return n;
       }
       function assocIndexOf(e, t) {
-        for (var n = e.length; n--; ) if (eq(e[n][0], t)) return n;
+        for (var n = e.length; n--;) if (eq(e[n][0], t)) return n;
         return -1;
       }
       function baseGet(e, t) {
@@ -123398,8 +123552,8 @@ and limitations under the License.
                     R = C && ne.call(t, "__wrapped__");
                   if (b || R) {
                     var N = b ? e.value() : e,
-                      P = R ? t.value() : t;
-                    return (s || (s = new Stack()), n(N, P, i, a, s));
+                      B = R ? t.value() : t;
+                    return (s || (s = new Stack()), n(N, B, i, a, s));
                   }
                 }
                 if (!D) return !1;
@@ -123411,7 +123565,7 @@ and limitations under the License.
                       u = l.length,
                       _ = keys(t).length;
                     if (u != _ && !r) return !1;
-                    for (var c = u; c--; ) {
+                    for (var c = u; c--;) {
                       var m = l[c];
                       if (!(r ? m in t : ne.call(t, m))) return !1;
                     }
@@ -123419,7 +123573,7 @@ and limitations under the License.
                     if (d && s.get(t)) return d == t;
                     var h = !0;
                     (s.set(e, t), s.set(t, e));
-                    for (var p = r; ++c < u; ) {
+                    for (var p = r; ++c < u;) {
                       m = l[c];
                       var g = e[m],
                         E = t[m];
@@ -123485,7 +123639,7 @@ and limitations under the License.
                                   a = -1,
                                   s = (t = isKey(t, e) ? [t] : castPath(t))
                                     .length;
-                                for (; ++a < s; ) {
+                                for (; ++a < s;) {
                                   var r = toKey(t[a]);
                                   if (!(i = null != e && n(e, r))) break;
                                   e = e[r];
@@ -123507,7 +123661,7 @@ and limitations under the License.
                     var t = (function getMatchData(e) {
                       var t = keys(e),
                         n = t.length;
-                      for (; n--; ) {
+                      for (; n--;) {
                         var i = t[n],
                           a = e[i];
                         t[n] = [i, a, isStrictComparable(a)];
@@ -123524,12 +123678,12 @@ and limitations under the License.
                             s = a,
                             l = !i;
                           if (null == e) return !s;
-                          for (e = Object(e); a--; ) {
+                          for (e = Object(e); a--;) {
                             var u = n[a];
                             if (l && u[2] ? u[1] !== e[u[0]] : !(u[0] in e))
                               return !1;
                           }
-                          for (; ++a < s; ) {
+                          for (; ++a < s;) {
                             var _ = (u = n[a])[0],
                               c = e[_],
                               m = u[1];
@@ -123592,7 +123746,7 @@ and limitations under the License.
         var m = -1,
           d = !0,
           h = a & r ? new SetCache() : void 0;
-        for (s.set(e, t), s.set(t, e); ++m < u; ) {
+        for (s.set(e, t), s.set(t, e); ++m < u;) {
           var p = e[m],
             g = t[m];
           if (i) var E = l ? i(g, p, m, t, e, s) : i(p, g, m, e, t, s);
@@ -123803,7 +123957,7 @@ and limitations under the License.
         return (
           R.test(e) && t.push(""),
           e.replace(N, function (e, n, i, a) {
-            t.push(i ? a.replace(B, "$1") : n || e);
+            t.push(i ? a.replace(P, "$1") : n || e);
           }),
           t
         );
@@ -123856,7 +124010,7 @@ and limitations under the License.
                           e = isObject(t) ? t + "" : t;
                         }
                         if ("string" != typeof e) return 0 === e ? e : +e;
-                        e = e.replace(P, "");
+                        e = e.replace(B, "");
                         var n = U.test(e);
                         return n || G.test(e)
                           ? x(e.slice(2), n ? 2 : 8)
@@ -123877,7 +124031,7 @@ and limitations under the License.
         return (
           a < 0 && (a = _e(i + a, 0)),
           (function baseFindIndex(e, t, n, i) {
-            for (var a = e.length, s = n + (i ? 1 : -1); i ? s-- : ++s < a; )
+            for (var a = e.length, s = n + (i ? 1 : -1); i ? s-- : ++s < a;)
               if (t(e[s], s, e)) return s;
             return -1;
           })(e, baseIteratee(t), a)
@@ -124105,7 +124259,7 @@ and limitations under the License.
           (CascadeDurationFormat.prototype.apply = function (e, t) {
             if ((void 0 === t && (t = null), !t)) {
               var n = this._templates.length;
-              for (t = s.TimeType.MILLISECONDS; n--; )
+              for (t = s.TimeType.MILLISECONDS; n--;)
                 if (this._templates[n]) {
                   t = s.TimeType.values[n];
                   break;
@@ -124311,8 +124465,8 @@ and limitations under the License.
       b = n(382),
       R = n(383),
       N = n(384),
-      P = n(385),
-      B = n(387),
+      B = n(385),
+      P = n(387),
       M = n(388),
       U = n(389),
       F = n(390),
@@ -124505,7 +124659,7 @@ and limitations under the License.
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_VALIDATE_AGE,
-                P.BasicValidateAgeCommand,
+                B.BasicValidateAgeCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_TRACK_REGISTRATION_DATA,
@@ -124580,7 +124734,7 @@ and limitations under the License.
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.GTM_CALL_GGS_TRACK_EVENT,
-                B.GGSTrackEventCommand,
+                P.GGSTrackEventCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.GAMESIGHT_CALL_GGS_TRACK_EVENT,
@@ -130909,7 +131063,7 @@ and limitations under the License.
                   "Tried to select country, but failed: " + e.ggsCountryCode,
                 );
               }
-              for (; this.countryMC.mc_currentflag.numChildren > 0; )
+              for (; this.countryMC.mc_currentflag.numChildren > 0;)
                 this.countryMC.mc_currentflag.removeChildAt(0);
               var t = new (a.AssetManager.manager.getClass(
                 "country_" + e.ggsCountryCode,
@@ -134951,12 +135105,12 @@ and limitations under the License.
           }),
           (TiledBitmap.prototype.makeRects = function () {
             this._rectBitmapDict = new Map();
-            for (var e = Math.floor(this._height), t = 0; e > 0; ) {
+            for (var e = Math.floor(this._height), t = 0; e > 0;) {
               var n = void 0,
                 i = 0,
                 a = this._width;
               if (e >= 0 && e < TiledBitmap.MAX_ARCHIVE_HEIGHT) {
-                for (var s = a, r = 0; s > 0; )
+                for (var s = a, r = 0; s > 0;)
                   ((n = new Rectangle(
                     r,
                     t,
@@ -134968,7 +135122,7 @@ and limitations under the License.
                     (r += n.width));
                 e = 0;
               } else {
-                for (; a > 0; )
+                for (; a > 0;)
                   if (a >= TiledBitmap.MAX_ARCHIVE_WIDTH)
                     (((n = new Rectangle(
                       0,
@@ -135949,7 +136103,7 @@ and limitations under the License.
           var t,
             n = "",
             i = new Array(4);
-          for (e.position = 0; e.bytesAvailable > 0; ) {
+          for (e.position = 0; e.bytesAvailable > 0;) {
             t = new Array();
             for (var a = 0; a < 3 && e.bytesAvailable > 0; a++)
               t[a] = e.readUnsignedByte();
@@ -136397,7 +136551,7 @@ and limitations under the License.
             var e = null;
             if (this._state == Pathfinder.STATE_SOLUTION_FOUND) {
               e = [];
-              for (var t = this._nodeGoal; t != this._nodeStart; )
+              for (var t = this._nodeGoal; t != this._nodeStart;)
                 (e.push(
                   new i.IntPoint(
                     this._graph.getNodeX(t),
@@ -141837,7 +141991,7 @@ and limitations under the License.
             configurable: !0,
           }),
           (FpsMeasurement.prototype.cleanupSamples = function () {
-            for (; this._samples.length > 0; ) this._samples.shift();
+            for (; this._samples.length > 0;) this._samples.shift();
             this.logger.debug("Executing old method, result not guaranteed");
           }),
           (FpsMeasurement.prototype.measure = function (e) {
@@ -142724,7 +142878,7 @@ and limitations under the License.
             "object" == typeof t &&
               "number" == typeof t.maxStackSize &&
               (i = t.maxStackSize);
-            for (var a = arguments.callee; a && n.length < i && a.arguments; ) {
+            for (var a = arguments.callee; a && n.length < i && a.arguments;) {
               for (
                 var s = new Array(a.arguments.length), r = 0;
                 r < s.length;
@@ -142938,12 +143092,12 @@ and limitations under the License.
           var n = "000000000" + e;
           return n.substr(n.length - t);
         },
-        P = "object" == typeof window ? window : self,
-        B = 0;
-      for (var M in P) Object.hasOwnProperty.call(P, M) && B++;
+        B = "object" == typeof window ? window : self,
+        P = 0;
+      for (var M in B) Object.hasOwnProperty.call(B, M) && P++;
       var U = navigator.mimeTypes ? navigator.mimeTypes.length : 0,
         F = N(
-          (U + navigator.userAgent.length).toString(36) + B.toString(36),
+          (U + navigator.userAgent.length).toString(36) + P.toString(36),
           4,
         ),
         G = function fingerprint() {
@@ -143475,8 +143629,8 @@ and limitations under the License.
               }));
           },
         }).extractScriptContent = function (e, t) {
-          for (var n = t; n < e.length && !ve.test(e[n]); ) n++;
-          for (var i = n; n > 0 && !Ie.test(e[n]); ) n--;
+          for (var n = t; n < e.length && !ve.test(e[n]);) n++;
+          for (var i = n; n > 0 && !Ie.test(e[n]);) n--;
           var a = n,
             s = e.slice(a, i + 1);
           return (
@@ -143612,15 +143766,15 @@ and limitations under the License.
                   "hashchange",
                   function (t) {
                     var n = t.oldURL
-                      ? { from: Ne(t.oldURL), to: Ne(t.newURL), state: Be() }
+                      ? { from: Ne(t.oldURL), to: Ne(t.newURL), state: Pe() }
                       : { to: Ne(window.location.href) };
                     e.leaveBreadcrumb("Hash changed", n, "navigation");
                   },
                   !0,
                 ),
                 window.history.replaceState &&
-                  Pe(e, window.history, "replaceState"),
-                window.history.pushState && Pe(e, window.history, "pushState"),
+                  Be(e, window.history, "replaceState"),
+                window.history.pushState && Be(e, window.history, "pushState"),
                 e.leaveBreadcrumb("Bugsnag loaded", {}, "navigation"));
             }
           },
@@ -143638,7 +143792,7 @@ and limitations under the License.
           var t = document.createElement("A");
           return ((t.href = e), "" + t.pathname + t.search + t.hash);
         },
-        Pe = function (e, t, n) {
+        Be = function (e, t, n) {
           var i = t[n];
           ((t[n] = function (a, s, r) {
             (e.leaveBreadcrumb(
@@ -143648,7 +143802,7 @@ and limitations under the License.
                 return {
                   title: t,
                   state: e,
-                  prevState: Be(),
+                  prevState: Pe(),
                   to: n || i,
                   from: i,
                 };
@@ -143663,7 +143817,7 @@ and limitations under the License.
               t[n] = i;
             }));
         },
-        Be = function () {
+        Pe = function () {
           try {
             return window.history.state;
           } catch (e) {}
@@ -144862,7 +145016,7 @@ and limitations under the License.
               i.webkitMatchesSelector;
           }
           e.exports = function closest(e, t) {
-            for (; e && e.nodeType !== n; ) {
+            for (; e && e.nodeType !== n;) {
               if ("function" == typeof e.matches && e.matches(t)) return e;
               e = e.parentNode;
             }
@@ -145143,16 +145297,16 @@ and limitations under the License.
     i.length = function length(e) {
       var t = e.length;
       if (!t) return 0;
-      for (var n = 0; --t % 4 > 1 && "=" === e.charAt(t); ) ++n;
+      for (var n = 0; --t % 4 > 1 && "=" === e.charAt(t);) ++n;
       return Math.ceil(3 * e.length) / 4 - n;
     };
-    for (var a = new Array(64), s = new Array(123), r = 0; r < 64; )
+    for (var a = new Array(64), s = new Array(123), r = 0; r < 64;)
       s[
         (a[r] =
           r < 26 ? r + 65 : r < 52 ? r + 71 : r < 62 ? r - 4 : (r - 59) | 43)
       ] = r++;
     i.encode = function encode(e, t, n) {
-      for (var i, s = null, r = [], o = 0, l = 0; t < n; ) {
+      for (var i, s = null, r = [], o = 0, l = 0; t < n;) {
         var u = e[t++];
         switch (l) {
           case 0:
@@ -145176,7 +145330,7 @@ and limitations under the License.
       );
     };
     ((i.decode = function decode(e, t, n) {
-      for (var i, a = n, r = 0, o = 0; o < e.length; ) {
+      for (var i, a = n, r = 0, o = 0; o < e.length;) {
         var l = e.charCodeAt(o++);
         if (61 === l && r > 1) break;
         if (void 0 === (l = s[l])) throw Error("invalid encoding");
@@ -145222,16 +145376,15 @@ and limitations under the License.
         if (void 0 === e) this._listeners = {};
         else if (void 0 === t) this._listeners[e] = [];
         else
-          for (var n = this._listeners[e], i = 0; i < n.length; )
+          for (var n = this._listeners[e], i = 0; i < n.length;)
             n[i].fn === t ? n.splice(i, 1) : ++i;
         return this;
       }),
       (EventEmitter.prototype.emit = function emit(e) {
         var t = this._listeners[e];
         if (t) {
-          for (var n = [], i = 1; i < arguments.length; )
-            n.push(arguments[i++]);
-          for (i = 0; i < t.length; ) t[i].fn.apply(t[i++].ctx, n);
+          for (var n = [], i = 1; i < arguments.length;) n.push(arguments[i++]);
+          for (i = 0; i < t.length;) t[i].fn.apply(t[i++].ctx, n);
         }
         return this;
       }));
@@ -145502,7 +145655,7 @@ and limitations under the License.
     }),
       (i.read = function utf8_read(e, t, n) {
         if (n - t < 1) return "";
-        for (var i, a = null, s = [], r = 0; t < n; )
+        for (var i, a = null, s = [], r = 0; t < n;)
           ((i = e[t++]) < 128
             ? (s[r++] = i)
             : i > 191 && i < 224
@@ -145706,7 +145859,7 @@ and limitations under the License.
           }
         : function writeBytesBuffer_copy(e, t, n) {
             if (e.copy) e.copy(t, n, 0, e.length);
-            else for (var i = 0; i < e.length; ) t[n++] = e[i++];
+            else for (var i = 0; i < e.length;) t[n++] = e[i++];
           };
     function writeStringBuffer(e, t, n) {
       e.length < 40 ? a.utf8.write(e, t, n) : t.utf8Write(e, n);
@@ -145828,7 +145981,7 @@ and limitations under the License.
           }
           return Function(t)();
         }
-        for (var o = new Array(arguments.length - 1), l = 0; l < o.length; )
+        for (var o = new Array(arguments.length - 1), l = 0; l < o.length;)
           o[l] = arguments[++l];
         if (
           ((l = 0),
@@ -145928,7 +146081,7 @@ and limitations under the License.
           n = a(e),
           i = "";
         n && (i = t.shift() + "/");
-        for (var s = 0; s < t.length; )
+        for (var s = 0; s < t.length;)
           ".." === t[s]
             ? s > 0 && ".." !== t[s - 1]
               ? t.splice(--s, 2)
@@ -145986,8 +146139,8 @@ and limitations under the License.
         b = i(e, n.alternateCommentMode || !1),
         R = b.next,
         N = b.push,
-        P = b.peek,
-        B = b.skip,
+        B = b.peek,
+        P = b.skip,
         M = b.cmnt,
         U = !0,
         F = !1,
@@ -146019,7 +146172,7 @@ and limitations under the License.
           t = [];
         do {
           if ('"' !== (e = R()) && "'" !== e) throw illegal(e);
-          (t.push(R()), B(e), (e = P()));
+          (t.push(R()), P(e), (e = B()));
         } while ('"' === e || "'" === e);
         return t.join("");
       }
@@ -146067,11 +146220,11 @@ and limitations under the License.
       function readRanges(e, t) {
         var n, i;
         do {
-          !t || ('"' !== (n = P()) && "'" !== n)
-            ? e.push([(i = parseId(R())), B("to", !0) ? parseId(R()) : i])
+          !t || ('"' !== (n = B()) && "'" !== n)
+            ? e.push([(i = parseId(R())), P("to", !0) ? parseId(R()) : i])
             : e.push(readString());
-        } while (B(",", !0));
-        B(";");
+        } while (P(",", !0));
+        P(";");
       }
       function parseId(e, t) {
         switch (e) {
@@ -146091,11 +146244,11 @@ and limitations under the License.
       function parsePackage() {
         if (void 0 !== v) throw illegal("package");
         if (((v = R()), !y.test(v))) throw illegal(v, "name");
-        ((G = G.define(v)), B(";"));
+        ((G = G.define(v)), P(";"));
       }
       function parseImport() {
         var e,
-          t = P();
+          t = B();
         switch (t) {
           case "weak":
             ((e = O || (O = [])), R());
@@ -146105,19 +146258,19 @@ and limitations under the License.
           default:
             e = A || (A = []);
         }
-        ((t = readString()), B(";"), e.push(t));
+        ((t = readString()), P(";"), e.push(t));
       }
       function parseSyntax() {
         if (
-          (B("="), (L = readString()), !(F = "proto3" === L) && "proto2" !== L)
+          (P("="), (L = readString()), !(F = "proto3" === L) && "proto2" !== L)
         )
           throw illegal(L, "syntax");
-        B(";");
+        P(";");
       }
       function parseCommon(e, t) {
         switch (t) {
           case "option":
-            return (parseOption(e, t), B(";"), !0);
+            return (parseOption(e, t), P(";"), !0);
           case "message":
             return (
               (function parseType(e, t) {
@@ -146128,22 +146281,22 @@ and limitations under the License.
                     switch (e) {
                       case "map":
                         !(function parseMapField(e) {
-                          B("<");
+                          P("<");
                           var t = R();
                           if (void 0 === m.mapKey[t]) throw illegal(t, "type");
-                          B(",");
+                          P(",");
                           var n = R();
                           if (!y.test(n)) throw illegal(n, "type");
-                          B(">");
+                          P(">");
                           var i = R();
                           if (!S.test(i)) throw illegal(i, "name");
-                          B("=");
+                          P("=");
                           var a = new o(k(i), parseId(R()), t, n);
                           (ifBlock(
                             a,
                             function parseMapField_block(e) {
                               if ("option" !== e) throw illegal(e);
-                              (parseOption(a, e), B(";"));
+                              (parseOption(a, e), P(";"));
                             },
                             function parseMapField_line() {
                               parseInlineOptions(a);
@@ -146163,7 +146316,7 @@ and limitations under the License.
                           var n = new l(k(t));
                           (ifBlock(n, function parseOneOf_block(e) {
                             "option" === e
-                              ? (parseOption(n, e), B(";"))
+                              ? (parseOption(n, e), P(";"))
                               : (N(e), parseField(n, "optional"));
                           }),
                             e.add(n));
@@ -146192,7 +146345,7 @@ and limitations under the License.
                 (ifBlock(n, function parseEnum_block(e) {
                   switch (e) {
                     case "option":
-                      (parseOption(n, e), B(";"));
+                      (parseOption(n, e), P(";"));
                       break;
                     case "reserved":
                       readRanges(n.reserved || (n.reserved = []), !0);
@@ -146200,14 +146353,14 @@ and limitations under the License.
                     default:
                       !(function parseEnumValue(e, t) {
                         if (!S.test(t)) throw illegal(t, "name");
-                        B("=");
+                        P("=");
                         var n = parseId(R(), !0),
                           i = {};
                         (ifBlock(
                           i,
                           function parseEnumValue_block(e) {
                             if ("option" !== e) throw illegal(e);
-                            (parseOption(i, e), B(";"));
+                            (parseOption(i, e), P(";"));
                           },
                           function parseEnumValue_line() {
                             parseInlineOptions(i);
@@ -146237,19 +146390,19 @@ and limitations under the License.
                         s,
                         r,
                         o = t;
-                      (B("("), B("stream", !0) && (a = !0));
+                      (P("("), P("stream", !0) && (a = !0));
                       if (!y.test((t = R()))) throw illegal(t);
                       ((i = t),
-                        B(")"),
-                        B("returns"),
-                        B("("),
-                        B("stream", !0) && (r = !0));
+                        P(")"),
+                        P("returns"),
+                        P("("),
+                        P("stream", !0) && (r = !0));
                       if (!y.test((t = R()))) throw illegal(t);
-                      ((s = t), B(")"));
+                      ((s = t), P(")"));
                       var l = new c(o, n, i, s, a, r);
                       (ifBlock(l, function parseMethod_block(e) {
                         if ("option" !== e) throw illegal(e);
-                        (parseOption(l, e), B(";"));
+                        (parseOption(l, e), P(";"));
                       }),
                         e.add(l));
                     })(n, e);
@@ -146285,13 +146438,13 @@ and limitations under the License.
       function ifBlock(e, t, n) {
         var i = b.line;
         if (
-          (e && ((e.comment = M()), (e.filename = parse.filename)), B("{", !0))
+          (e && ((e.comment = M()), (e.filename = parse.filename)), P("{", !0))
         ) {
-          for (var a; "}" !== (a = R()); ) t(a);
-          B(";", !0);
+          for (var a; "}" !== (a = R());) t(a);
+          P(";", !0);
         } else
           (n && n(),
-            B(";"),
+            P(";"),
             e && "string" != typeof e.comment && (e.comment = M(i)));
       }
       function parseField(e, t, n) {
@@ -146300,13 +146453,13 @@ and limitations under the License.
           if (!y.test(i)) throw illegal(i, "type");
           var a = R();
           if (!S.test(a)) throw illegal(a, "name");
-          ((a = k(a)), B("="));
+          ((a = k(a)), P("="));
           var o = new r(a, parseId(R()), i, t, n);
           (ifBlock(
             o,
             function parseField_block(e) {
               if ("option" !== e) throw illegal(e);
-              (parseOption(o, e), B(";"));
+              (parseOption(o, e), P(";"));
             },
             function parseField_line() {
               parseInlineOptions(o);
@@ -146323,7 +146476,7 @@ and limitations under the License.
             if (!S.test(n)) throw illegal(n, "name");
             var i = d.lcFirst(n);
             n === i && (n = d.ucFirst(n));
-            B("=");
+            P("=");
             var a = parseId(R()),
               o = new s(n);
             o.group = !0;
@@ -146332,7 +146485,7 @@ and limitations under the License.
               ifBlock(o, function parseGroup_block(e) {
                 switch (e) {
                   case "option":
-                    (parseOption(o, e), B(";"));
+                    (parseOption(o, e), P(";"));
                     break;
                   case "required":
                   case "optional":
@@ -146347,44 +146500,44 @@ and limitations under the License.
           })(e, t);
       }
       function parseOption(e, t) {
-        var n = B("(", !0);
+        var n = P("(", !0);
         if (!y.test((t = R()))) throw illegal(t, "name");
         var i = t;
         (n &&
-          (B(")"),
+          (P(")"),
           (i = "(" + i + ")"),
-          (t = P()),
+          (t = B()),
           I.test(t) && ((i += t), R())),
-          B("="),
+          P("="),
           parseOptionValue(e, i));
       }
       function parseOptionValue(e, t) {
-        if (B("{", !0))
+        if (P("{", !0))
           do {
             if (!S.test((D = R()))) throw illegal(D, "name");
-            ("{" === P()
+            ("{" === B()
               ? parseOptionValue(e, t + "." + D)
-              : (B(":"),
-                "{" === P()
+              : (P(":"),
+                "{" === B()
                   ? parseOptionValue(e, t + "." + D)
                   : setOption(e, t + "." + D, readValue(!0))),
-              B(",", !0));
-          } while (!B("}", !0));
+              P(",", !0));
+          } while (!P("}", !0));
         else setOption(e, t, readValue(!0));
       }
       function setOption(e, t, n) {
         e.setOption && e.setOption(t, n);
       }
       function parseInlineOptions(e) {
-        if (B("[", !0)) {
+        if (P("[", !0)) {
           do {
             parseOption(e, "option");
-          } while (B(",", !0));
-          B("]");
+          } while (P(",", !0));
+          P("]");
         }
         return e;
       }
-      for (; null !== (D = R()); )
+      for (; null !== (D = R());)
         switch (D) {
           case "package":
             if (!U) throw illegal(D);
@@ -146400,7 +146553,7 @@ and limitations under the License.
             break;
           case "option":
             if (!U) throw illegal(D);
-            (parseOption(G, D), B(";"));
+            (parseOption(G, D), P(";"));
             break;
           default:
             if (parseCommon(G, D)) {
@@ -146496,4 +146649,4 @@ and limitations under the License.
       }));
   },
 ]);
-//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/dll/ggs.dll.c8e8631702714817a345.js.map
+//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/dll/ggs.dll.baad44188cfd15e3936c.js.map
