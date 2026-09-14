@@ -12841,6 +12841,8 @@
             (t._buildSpeedBoost = 0),
             (t._buildingCostReduction = 0),
             (t._foodReduction = 0),
+            (t._meadReduction = 0),
+            (t._beefReduction = 0),
             (t._commanders = 0),
             (t._barons = 0),
             (t._guards = 0),
@@ -12947,6 +12949,12 @@
               )),
               (this._foodReduction = l.int(
                 c.CastleXMLUtils.getIntAttribute("Foodreduction", t),
+              )),
+              (this._meadReduction = l.int(
+                c.CastleXMLUtils.getIntAttribute("Meadreduction", t),
+              )),
+              (this._beefReduction = l.int(
+                c.CastleXMLUtils.getIntAttribute("Beefreduction", t),
               )),
               (this._buildingCostReduction = l.int(
                 c.CastleXMLUtils.getIntAttribute("buildingCostReduction", t),
@@ -13176,6 +13184,20 @@
           Object.defineProperty(AEffectBuildingVO.prototype, "foodReduction", {
             get: function () {
               return this._foodReduction;
+            },
+            enumerable: !0,
+            configurable: !0,
+          }),
+          Object.defineProperty(AEffectBuildingVO.prototype, "meadReduction", {
+            get: function () {
+              return this._meadReduction;
+            },
+            enumerable: !0,
+            configurable: !0,
+          }),
+          Object.defineProperty(AEffectBuildingVO.prototype, "beefReduction", {
+            get: function () {
+              return this._beefReduction;
             },
             enumerable: !0,
             configurable: !0,
@@ -149617,7 +149639,7 @@
           n.__extends(FactionHuntertentBuildingVO, e),
           (FactionHuntertentBuildingVO.prototype.createInfoPanelItems =
             function (e) {
-              e.addInfoItem(
+              (e.addInfoItem(
                 Library.CastleInterfaceElements_Icons.Icon_FoodConsumption,
                 "foodwastage",
                 new s.LocalizedTextVO(
@@ -149626,7 +149648,27 @@
                 ),
                 r.ClientConstColor.FONT_DEFAULT_COLOR,
                 !0,
-              );
+              ),
+                e.addInfoItem(
+                  Library.CastleInterfaceElements_Icons.Icon_MeadConsumption,
+                  "meadwastage",
+                  new s.LocalizedTextVO(
+                    o.GenericTextIds.VALUE_PERCENTAGE_SUBTRACT,
+                    [this.meadReduction],
+                  ),
+                  r.ClientConstColor.FONT_DEFAULT_COLOR,
+                  !0,
+                ),
+                e.addInfoItem(
+                  Library.CastleInterfaceElements_Icons.Icon_BeefConsumption,
+                  "beefwastage",
+                  new s.LocalizedTextVO(
+                    o.GenericTextIds.VALUE_PERCENTAGE_SUBTRACT,
+                    [this.beefReduction],
+                  ),
+                  r.ClientConstColor.FONT_DEFAULT_COLOR,
+                  !0,
+                ));
             }),
           FactionHuntertentBuildingVO
         );
@@ -163011,7 +163053,7 @@
   function (e) {
     e.exports = {
       name: "@goodgamestudios/empire-createjs-assets",
-      version: "1.2.1387",
+      version: "1.2.1396",
       main: "generated/index.js",
       types: "generated/index.d.ts",
       description: "CreateJS Assets for Empire HTML5",
@@ -163143,7 +163185,7 @@
   function (e) {
     e.exports = {
       name: "TranspilationEmpire",
-      version: "1.168.11",
+      version: "1.169.10",
       description: "Transpiled version of the Flash game",
       main: "index.js",
       repository:
@@ -211873,6 +211915,21 @@
           n.__extends(CastleFestivalPremiumShopVO, e),
           Object.defineProperty(
             CastleFestivalPremiumShopVO.prototype,
+            "activeFestivalItemVO",
+            {
+              get: function () {
+                return this.isActive &&
+                  u.CastleModel.boostData &&
+                  u.CastleModel.boostData.festivalVO
+                  ? u.CastleModel.boostData.festivalVO.activeFestivalVO
+                  : null;
+              },
+              enumerable: !0,
+              configurable: !0,
+            },
+          ),
+          Object.defineProperty(
+            CastleFestivalPremiumShopVO.prototype,
             "isActive",
             {
               get: function () {
@@ -211916,11 +211973,8 @@
             {
               get: function () {
                 return this.isActive
-                  ? u.CastleModel.boostData.festivalVO.activeFestivalVO
-                    ? s.Localize.number(
-                        u.CastleModel.boostData.festivalVO.activeFestivalVO
-                          .cost,
-                      )
+                  ? this.activeFestivalItemVO
+                    ? s.Localize.number(this.activeFestivalItemVO.cost)
                     : "-"
                   : "variable";
               },
@@ -211956,8 +212010,8 @@
             "baseCosts",
             {
               get: function () {
-                return this.isActive
-                  ? u.CastleModel.boostData.festivalVO.activeFestivalVO.cost
+                return this.activeFestivalItemVO
+                  ? this.activeFestivalItemVO.cost
                   : 0;
               },
               enumerable: !0,
@@ -212040,13 +212094,12 @@
             {
               get: function () {
                 return (
+                  !!this.activeFestivalItemVO &&
                   this.isActive &&
                   (u.CastleModel.userData.level <
-                    u.CastleModel.boostData.festivalVO.activeFestivalVO
-                      .minLevel ||
+                    this.activeFestivalItemVO.minLevel ||
                     u.CastleModel.userData.level >
-                      u.CastleModel.boostData.festivalVO.activeFestivalVO
-                        .maxLevel)
+                      this.activeFestivalItemVO.maxLevel)
                 );
               },
               enumerable: !0,
@@ -212113,8 +212166,8 @@
             "payType",
             {
               get: function () {
-                return this.isActive &&
-                  u.CastleModel.boostData.festivalVO.activeFestivalVO.hasC2Costs()
+                return this.activeFestivalItemVO &&
+                  this.activeFestivalItemVO.hasC2Costs()
                   ? d.CastlePremiumMarketShopVO.PAYTYPE_C2
                   : d.CastlePremiumMarketShopVO.PAYTYPE_FOOD;
               },
@@ -404488,41 +404541,41 @@
           ((this._itxt_name =
             ConstructionItemToolTip.textFieldManager.registerTextField(
               this._disp.txt_name,
-              new d.TextVO(""),
+              new p.TextVO(""),
             )),
             (this._itxt_level =
               ConstructionItemToolTip.textFieldManager.registerTextField(
                 this._disp.txt_level,
-                new u.LocalizedTextVO(""),
+                new d.LocalizedTextVO(""),
               )),
             (this._itxt_info =
               ConstructionItemToolTip.textFieldManager.registerTextField(
                 this._disp.txt_info,
-                new u.LocalizedTextVO("value_dash_split"),
+                new d.LocalizedTextVO("value_dash_split"),
               )),
             (this._itxt_effect =
               ConstructionItemToolTip.textFieldManager.registerTextField(
                 this._disp.txt_effect,
-                new d.TextVO(""),
+                new p.TextVO(""),
               )),
             (this._itxt_flavor =
               ConstructionItemToolTip.textFieldManager.registerTextField(
                 this._disp.mc_flavor_area.txt_flavor,
-                new u.LocalizedTextVO(""),
+                new d.LocalizedTextVO(""),
               )),
             (this._itxt_temporary =
               ConstructionItemToolTip.textFieldManager.registerTextField(
                 this._disp.mc_temporary.txt_flavor,
-                new d.TextVO(""),
+                new p.TextVO(""),
               )),
             (this._itxt_limit =
               ConstructionItemToolTip.textFieldManager.registerTextField(
                 this._disp.txt_limit,
-                new u.LocalizedTextVO(""),
+                new d.LocalizedTextVO(""),
               )),
             ConstructionItemToolTip.textFieldManager.registerTextField(
               this._disp.mc_building_area.txt_building,
-              new u.LocalizedTextVO("ci_tooltip_appearance"),
+              new d.LocalizedTextVO("ci_tooltip_appearance"),
             ));
         }),
         (ConstructionItemToolTip.prototype.initToolTipByConstructionItem =
@@ -404577,7 +404630,7 @@
           (void 0 === t && (t = ConstructionItemToolTip.DEFAULT_COLOR),
             void 0 === i && (i = null),
             (this._itxt_name.textContentVO.stringValue =
-              c.Localize.text(e) + (i || "")),
+              u.Localize.text(e) + (i || "")),
             (this._itxt_name.color = t));
         }),
         (ConstructionItemToolTip.prototype.setLevelRarityText = function (
@@ -404591,7 +404644,7 @@
             (this._disp.line_level.visible = !0),
             t && e)
           ) {
-            var i = [c.Localize.text("ci_level", [t]), c.Localize.text(e)];
+            var i = [u.Localize.text("ci_level", [t]), u.Localize.text(e)];
             ((this._itxt_level.textContentVO.textId = "value_dash_split"),
               (this._itxt_level.textContentVO.textReplacements = i));
           } else
@@ -404603,7 +404656,7 @@
         (ConstructionItemToolTip.prototype.setInfoText = function (e) {
           var t = [
             e.applicableBuildingsString,
-            c.Localize.text(e.slotNameTextId),
+            u.Localize.text(e.slotNameTextId),
           ];
           this._itxt_info.textContentVO.textReplacements = t;
         }),
@@ -404611,16 +404664,24 @@
           e,
         ) {
           var t = e.flavourTextId;
-          ((this._disp.mc_flavor_area.visible = "" != t && null != t),
+          if (
+            ((this._disp.mc_flavor_area.visible = "" != t && null != t),
             t && (this._itxt_flavor.textContentVO.textId = t),
             (this._disp.mc_building_area.visible = e.isAppearanceItem),
-            e.isAppearanceItem &&
-              s.WodPicHelper.addWodPic(
-                e.skinnedBuildingVO,
-                this._disp.mc_building_area.mc_building_container,
-                this.maxIconWidth,
-                this.maxIconHeight,
-              ));
+            e.isAppearanceItem)
+          ) {
+            var i = e.skinnedBuildingVO;
+            i
+              ? s.WodPicHelper.addWodPic(
+                  i,
+                  this._disp.mc_building_area.mc_building_container,
+                  this.maxIconWidth,
+                  this.maxIconHeight,
+                )
+              : c.MovieClipHelper.clearMovieClip(
+                  this._disp.mc_building_area.mc_building_container,
+                );
+          }
         }),
         (ConstructionItemToolTip.prototype.setLimitText = function (e) {
           var t = e.areaLimit;
@@ -404647,40 +404708,40 @@
             o.visible = !0;
             var a = ConstructionItemToolTip.textFieldManager.registerTextField(
                 o.txt_bp_effect,
-                new d.TextVO(n),
+                new p.TextVO(n),
               ),
               s = ConstructionItemToolTip.textFieldManager.registerTextField(
                 o.txt_bp_first,
-                new u.LocalizedTextVO("ciblueprint_tooltip_firstLevel", [
+                new d.LocalizedTextVO("ciblueprint_tooltip_firstLevel", [
                   e.level,
                 ]),
               ),
               l = ConstructionItemToolTip.textFieldManager.registerTextField(
                 o.txt_bp_max,
-                new u.LocalizedTextVO("ciblueprint_tooltip_maxLevel", [
+                new d.LocalizedTextVO("ciblueprint_tooltip_maxLevel", [
                   t.level,
                 ]),
               ),
               c = ConstructionItemToolTip.textFieldManager.registerTextField(
                 o.txt_bp_firstValue,
-                new d.TextVO(e.getBlueprintEffectValueText(i)),
+                new p.TextVO(e.getBlueprintEffectValueText(i)),
               ),
-              p = ConstructionItemToolTip.textFieldManager.registerTextField(
+              u = ConstructionItemToolTip.textFieldManager.registerTextField(
                 o.txt_bp_maxValue,
-                new d.TextVO(t.getBlueprintEffectValueText(i)),
+                new p.TextVO(t.getBlueprintEffectValueText(i)),
               );
             ((s.color = e.rarityColor),
               (l.color = t.rarityColor),
               (c.color = e.rarityColor),
-              (p.color = t.rarityColor));
+              (u.color = t.rarityColor));
             var h = !r.ClientConstUtils.isTlfMode,
               g = h ? s.x : s.x + s.width;
             ((c.x = g + (h ? s.textWidth : -s.textWidth - c.width)),
-              (p.x = g + (h ? l.textWidth : -l.textWidth - p.width)),
+              (u.x = g + (h ? l.textWidth : -l.textWidth - u.width)),
               (s.y = a.textHeight - 3),
               (c.y = a.textHeight - 3),
               (l.y = s.y + s.textHeight - 3),
-              (p.y = c.y + c.textHeight - 3));
+              (u.y = c.y + c.textHeight - 3));
           }
         }),
         (ConstructionItemToolTip.prototype.setTemporaryText = function (e) {
@@ -404692,20 +404753,20 @@
                       e.isExpiring() ? e.getRemainingTime() : e.duration,
                     ))
                 : (this._itxt_temporary.textContentVO.stringValue =
-                    c.Localize.text("dialog_ci_tempCiExpired_header"))));
+                    u.Localize.text("dialog_ci_tempCiExpired_header"))));
         }),
         (ConstructionItemToolTip.prototype.getDurationText = function (e) {
           var t = Math.floor(e / 60),
             i = Math.floor(t / 60),
             n = Math.floor(i / 24);
           return n > 0
-            ? c.Localize.text("countdown_time_equipment_days", [n, i - 24 * n])
+            ? u.Localize.text("countdown_time_equipment_days", [n, i - 24 * n])
             : i > 0
-              ? c.Localize.text("countdown_time_equipment_hours", [
+              ? u.Localize.text("countdown_time_equipment_hours", [
                   i,
                   t - 60 * i,
                 ])
-              : c.Localize.text("countdown_time_equipment_minutes", [t]);
+              : u.Localize.text("countdown_time_equipment_minutes", [t]);
         }),
         (ConstructionItemToolTip.prototype.resize = function () {
           var e = -ConstructionItemToolTip.BOX_MARGIN;
@@ -404779,9 +404840,10 @@
       s = i(62),
       r = i(54),
       l = i(2),
-      c = i(3),
+      c = i(2),
       u = i(3),
-      d = i(3);
+      d = i(3),
+      p = i(3);
   },
   function (e, t, i) {
     "use strict";
@@ -408407,20 +408469,23 @@
           n.__extends(CIBlueprintScrollItem, e),
           (CIBlueprintScrollItem.prototype.customFillItem = function () {
             o.MovieClipHelper.clearMovieClip(this.disp);
-            var e = new h.CollectableItemConstructionItemBlueprintVO();
-            ((e.blueprintVO = this._scrollItemVO.blueprintVO),
-              g.CollectableRenderHelper.displaySingleItemComplete(
-                this.renderList,
-                new l.CollectableRenderClips(this.disp).addIconMc(this._disp),
-                e,
-                new u.CollectableRenderOptions(
-                  u.CollectableRenderOptions.SET_ICON,
-                  CIBlueprintScrollItem.ICON_SIZE,
+            var e = this._scrollItemVO;
+            if (e && e.blueprintVO) {
+              var t = new h.CollectableItemConstructionItemBlueprintVO();
+              ((t.blueprintVO = e.blueprintVO),
+                g.CollectableRenderHelper.displaySingleItemComplete(
+                  this.renderList,
+                  new l.CollectableRenderClips(this.disp).addIconMc(this._disp),
+                  t,
+                  new u.CollectableRenderOptions(
+                    u.CollectableRenderOptions.SET_ICON,
+                    CIBlueprintScrollItem.ICON_SIZE,
+                  ),
+                  null,
+                  this.bindFunction(this.onActiveStateChange),
                 ),
-                null,
-                this.bindFunction(this.onActiveStateChange),
-              ),
-              (this._disp.actLikeButton = !0));
+                (this._disp.actLikeButton = !0));
+            }
           }),
           (CIBlueprintScrollItem.prototype.hide = function () {
             (e.prototype.hide.call(this),
@@ -409318,6 +409383,7 @@
             function (e, t) {
               e &&
                 t &&
+                t.pos &&
                 (e.init(this.isoData),
                 (e.x = t.pos.x),
                 (e.y = t.pos.y),
@@ -419734,28 +419800,15 @@
     var n = i(0),
       o = i(2),
       a = i(1),
-      s = i(6),
-      r = i(22),
-      l = i(79),
-      c = i(16),
-      u = i(3),
-      d = (function (e) {
+      s = i(79),
+      r = i(16),
+      l = i(3),
+      c = (function (e) {
         function MeadDistilleryBuildingVO() {
-          var t = this;
-          return (
-            (t.meadReduction = 0),
-            CONSTRUCTOR_HACK,
-            (t = e.call(this) || this)
-          );
+          return (CONSTRUCTOR_HACK, e.call(this) || this);
         }
         return (
           n.__extends(MeadDistilleryBuildingVO, e),
-          (MeadDistilleryBuildingVO.prototype.parseXmlNode = function (t) {
-            (e.prototype.parseXmlNode.call(this, t),
-              (this.meadReduction = s.int(
-                r.CastleXMLUtils.getIntAttribute("Meadreduction", t),
-              )));
-          }),
           (MeadDistilleryBuildingVO.prototype.createInfoPanelItems = function (
             t,
           ) {
@@ -419763,7 +419816,7 @@
               t.addInfoItem(
                 Library.CastleInterfaceElements_Icons.Icon_MeadConsumption,
                 "meadwastage",
-                new u.LocalizedTextVO(
+                new l.LocalizedTextVO(
                   o.GenericTextIds.VALUE_PERCENTAGE_SUBTRACT,
                   [this.meadReduction],
                 ),
@@ -419771,8 +419824,8 @@
               t.addInfoItem(
                 Library.CastleInterfaceElements_Icons.Icon_LawAndOrder_neutral,
                 "publicOrder",
-                new l.CastleLocalizedNumberVO(this.decoPoints),
-                c.ClientConstColor.FONT_DEFAULT_COLOR,
+                new s.CastleLocalizedNumberVO(this.decoPoints),
+                r.ClientConstColor.FONT_DEFAULT_COLOR,
                 !0,
               ));
           }),
@@ -419782,26 +419835,26 @@
             (e.addInfoItem(
               Library.CastleInterfaceElements_Icons.Icon_MeadConsumption,
               "meadwastage",
-              new u.LocalizedTextVO(
+              new l.LocalizedTextVO(
                 o.GenericTextIds.VALUE_PERCENTAGE_SUBTRACT,
                 [this.meadReduction],
               ),
-              c.ClientConstColor.FONT_DEFAULT_COLOR,
+              r.ClientConstColor.FONT_DEFAULT_COLOR,
               !0,
             ),
               e.addInfoItem(
                 Library.CastleInterfaceElements_Icons.Icon_LawAndOrder_neutral,
                 "publicOrder",
-                new l.CastleLocalizedNumberVO(this.decoPoints),
-                c.ClientConstColor.FONT_DEFAULT_COLOR,
+                new s.CastleLocalizedNumberVO(this.decoPoints),
+                r.ClientConstColor.FONT_DEFAULT_COLOR,
                 !0,
               ));
           }),
           MeadDistilleryBuildingVO
         );
       })(i(66).AEffectBuildingVO);
-    ((t.MeadDistilleryBuildingVO = d),
-      a.classImplementsInterfaces(d, "IShopVO", "ICostVO", "IInventoryVO"));
+    ((t.MeadDistilleryBuildingVO = c),
+      a.classImplementsInterfaces(c, "IShopVO", "ICostVO", "IInventoryVO"));
   },
   function (e, t, i) {
     "use strict";
@@ -706634,11 +706687,11 @@
               configurable: !0,
             },
           ),
-          (ModernStartscreenComponent.USE_PROMO_BACKGROUND = !0),
+          (ModernStartscreenComponent.USE_PROMO_BACKGROUND = !1),
           ModernStartscreenComponent
         );
       })(l.CastleStartscreenComponent);
     t.ModernStartscreenComponent = p;
   },
 ]);
-//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/Game.bundle.7aaf02ced14b2048aaef.js.map
+//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/Game.bundle.ffc3a3f14892d62ec53c.js.map
