@@ -163053,7 +163053,7 @@
   function (e) {
     e.exports = {
       name: "@goodgamestudios/empire-createjs-assets",
-      version: "1.2.1396",
+      version: "1.2.1397",
       main: "generated/index.js",
       types: "generated/index.d.ts",
       description: "CreateJS Assets for Empire HTML5",
@@ -163185,7 +163185,7 @@
   function (e) {
     e.exports = {
       name: "TranspilationEmpire",
-      version: "1.169.10",
+      version: "1.169.11",
       description: "Transpiled version of the Flash game",
       main: "index.js",
       repository:
@@ -706694,4 +706694,4 @@
     t.ModernStartscreenComponent = p;
   },
 ]);
-//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/Game.bundle.ffc3a3f14892d62ec53c.js.map
+//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/Game.bundle.a4a25ae6d735e29092f6.js.map
