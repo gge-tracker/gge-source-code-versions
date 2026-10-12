@@ -20809,6 +20809,7 @@
               (CastleEffectEnum.IRONBOOST = new CastleEffectEnum("Ironboost")),
               (CastleEffectEnum.FOODREDUCTION = new CastleEffectEnum(
                 "Foodreduction",
+                n.GenericTextIds.VALUE_PERCENTAGE_SUBTRACT,
               )),
               (CastleEffectEnum.HIDEOUT = new CastleEffectEnum("Hideout")),
               (CastleEffectEnum.DECOPOINTS = new CastleEffectEnum(
@@ -24529,23 +24530,21 @@
                               [p.strength],
                             );
                     case D.EffectTypeEnum.EFFECT_TYPE_ATTACK_BONUS.id:
-                      if (
-                        g.effectID ==
+                      return g.effectID ==
                         CastleTitleSystemHelper.EFFECT_ATTACK_BONUS
-                      )
-                        return new f.LocalizedTextVO(
-                          "dialog_fame_rewardAttackBoost",
-                          [p.strength],
-                        );
-                      if (
-                        g.effectID ==
-                        CastleTitleSystemHelper.EFFECT_ATTACK_BONUS_PVP
-                      )
-                        return new f.LocalizedTextVO(
-                          "dialog_fame_rewardAttackBoostPvp",
-                          [p.strength],
-                        );
-                      break;
+                        ? new f.LocalizedTextVO(
+                            "dialog_fame_rewardAttackBoost",
+                            [p.strength],
+                          )
+                        : g.effectID ==
+                            CastleTitleSystemHelper.EFFECT_ATTACK_BONUS_PVP
+                          ? new f.LocalizedTextVO(
+                              "dialog_fame_rewardAttackBoostPvp",
+                              [p.strength],
+                            )
+                          : new f.LocalizedTextVO(p.effect.defaultTextID, [
+                              p.strength,
+                            ]);
                     default:
                       return new f.LocalizedTextVO(p.effect.defaultTextID, [
                         p.strength,
@@ -42203,44 +42202,45 @@
       d = i(119),
       p = i(130),
       h = i(26),
-      g = i(160),
-      C = i(12),
-      _ = i(15),
-      m = i(4),
-      f = i(260),
-      E = i(9),
-      O = i(18),
-      y = i(241),
-      b = i(8),
-      D = i(41),
-      I = i(915),
-      v = i(11),
-      T = i(219),
-      S = i(223),
-      A = i(3856),
-      L = i(114),
-      P = i(3876),
-      M = i(3877),
-      R = i(3878),
-      V = i(3883),
-      x = i(3884),
-      w = i(1805),
-      B = i(346),
-      F = i(3885),
-      N = i(3892),
-      k = i(1803),
-      U = (function (e) {
+      g = i(37),
+      C = i(160),
+      _ = i(12),
+      m = i(15),
+      f = i(4),
+      E = i(260),
+      O = i(9),
+      y = i(18),
+      b = i(241),
+      D = i(8),
+      I = i(41),
+      v = i(915),
+      T = i(11),
+      S = i(219),
+      A = i(223),
+      L = i(3856),
+      P = i(114),
+      M = i(3876),
+      R = i(3877),
+      V = i(3878),
+      x = i(3883),
+      w = i(3884),
+      B = i(1805),
+      F = i(346),
+      N = i(3885),
+      k = i(3892),
+      U = i(1803),
+      G = (function (e) {
         function AttackDialog() {
           var t = this;
           return (
-            (t.resizer = new V.AttackDialogResizer()),
-            (t.player_left = new R.AttackDialogPlayerInfo()),
-            (t.player_right = new R.AttackDialogPlayerInfo()),
-            (t.spyInfo = new x.AttackDialogSpyInfo()),
-            (t.detailView = new P.AttackDialogDetailView()),
-            (t.autoFill = new A.AttackDialogAutoFill()),
-            (t.waveHandler = new N.AttackDialogWaveHandler()),
-            (t._generalSelection = new M.AttackDialogGeneralSelection()),
+            (t.resizer = new x.AttackDialogResizer()),
+            (t.player_left = new V.AttackDialogPlayerInfo()),
+            (t.player_right = new V.AttackDialogPlayerInfo()),
+            (t.spyInfo = new w.AttackDialogSpyInfo()),
+            (t.detailView = new M.AttackDialogDetailView()),
+            (t.autoFill = new L.AttackDialogAutoFill()),
+            (t.waveHandler = new k.AttackDialogWaveHandler()),
+            (t._generalSelection = new R.AttackDialogGeneralSelection()),
             (t.generalSelectionVisible = !1),
             CONSTRUCTOR_HACK,
             (t = e.call(this, AttackDialog.NAME) || this)
@@ -42251,7 +42251,7 @@
           (AttackDialog.prototype.initLoaded = function (t) {
             (void 0 === t && (t = null),
               e.prototype.initLoaded.call(this, t),
-              b.ButtonHelper.initButtons(
+              D.ButtonHelper.initButtons(
                 [
                   this.dialogDisp.btn_close,
                   this.dialogDisp.btn_help,
@@ -42261,7 +42261,7 @@
                   this.dialogDisp.mc_bottom_800.btn_attack,
                   this.dialogDisp.pickerLists.btn_confirm,
                 ],
-                O.ClickFeedbackButtonHover,
+                y.ClickFeedbackButtonHover,
               ),
               this.resizer.initWithDialogDisp(this.dialogDisp),
               (this.dialogDisp.btn_help.toolTipText = "help"),
@@ -42271,124 +42271,142 @@
             if (
               (void 0 === t && (t = null),
               e.prototype.showLoaded.call(this, t),
-              B.AttackDialogTrackingHelper.getInstance().startAndResetSession(),
-              L.AttackDialogController.getInstance().initAttackVO(
+              F.AttackDialogTrackingHelper.getInstance().startAndResetSession(),
+              P.AttackDialogController.getInstance().initAttackVO(
                 this.dialogProperties.attackInfoVO,
               ),
               this.resizer.onShow(),
               this._generalSelection.init(this.dialogDisp.mc_general_selection),
-              this.player_left.init(
-                this.dialogDisp.mc_playerInfo,
-                R.AttackDialogPlayerInfo.TYPE_SOURCE,
-              ),
-              this.player_right.init(
-                this.dialogDisp.mc_targetInfo,
-                R.AttackDialogPlayerInfo.TYPE_TARGET,
-                this.dialogDisp.mc_generalInfoTooltip_target,
-              ),
-              this.updateGeneralIconLeft(),
-              this.updateGeneralIconRight(),
-              this.spyInfo.init(this.dialogDisp.mc_spyInfo),
-              this.detailView.init(
-                this.dialogDisp.mc_detailViewBG,
-                this.dialogDisp.mc_detailViewCastle,
-              ),
-              this.autoFill.init(
-                this.dialogDisp.mc_autofill_filter.mc_open,
-                this.dialogDisp.mc_autofill_filter.mc_closed,
-              ),
-              !L.AttackDialogController.getInstance().selectedLord)
+              this.isAreTargetWithoutBoss)
             )
-              return (
-                this.hide(),
-                void E.CastleDialogHandler.getInstance().registerDefaultDialogs(
-                  T.DarkOkDialog,
-                  new o.BasicStandardOkDialogProperties(
-                    "attention",
-                    "errorCode_404",
+              this.hide();
+            else {
+              if (
+                (this.player_left.init(
+                  this.dialogDisp.mc_playerInfo,
+                  V.AttackDialogPlayerInfo.TYPE_SOURCE,
+                ),
+                this.player_right.init(
+                  this.dialogDisp.mc_targetInfo,
+                  V.AttackDialogPlayerInfo.TYPE_TARGET,
+                  this.dialogDisp.mc_generalInfoTooltip_target,
+                ),
+                this.updateGeneralIconLeft(),
+                this.updateGeneralIconRight(),
+                this.spyInfo.init(this.dialogDisp.mc_spyInfo),
+                this.detailView.init(
+                  this.dialogDisp.mc_detailViewBG,
+                  this.dialogDisp.mc_detailViewCastle,
+                ),
+                this.autoFill.init(
+                  this.dialogDisp.mc_autofill_filter.mc_open,
+                  this.dialogDisp.mc_autofill_filter.mc_closed,
+                ),
+                !P.AttackDialogController.getInstance().selectedLord)
+              )
+                return (
+                  this.hide(),
+                  void O.CastleDialogHandler.getInstance().registerDefaultDialogs(
+                    S.DarkOkDialog,
+                    new o.BasicStandardOkDialogProperties(
+                      "attention",
+                      "errorCode_404",
+                    ),
+                  )
+                );
+              (this.waveHandler.init(
+                this.dialogDisp.mc_waveList,
+                this.dialogDisp.mc_autofill_filter.mc_open.mc_bottom,
+              ),
+                this.unitPicker
+                  ? this.unitPicker.onParentDialogShow()
+                  : (this.unitPicker = new N.AttackDialogUnitPicker(
+                      this.dialogDisp.pickerLists,
+                    )),
+                (this.dialogDisp.mc_general_selection.visible = !1),
+                P.AttackDialogController.getInstance().hideDialog.add(
+                  this.bindFunction(this.hide),
+                ),
+                P.AttackDialogController.getInstance().openGeneralSelection.add(
+                  this.bindFunction(this.openGeneralSelection),
+                ),
+                P.AttackDialogController.getInstance().closeGeneralSelection.add(
+                  this.bindFunction(this.closeGeneralSelection),
+                ),
+                P.AttackDialogController.getInstance().onLordChanged.add(
+                  this.bindFunction(this.onLordChanged),
+                ),
+                P.AttackDialogController.getInstance().showPlayerInfos.add(
+                  this.bindFunction(this.onShowPlayerInfo),
+                ),
+                P.AttackDialogController.getInstance().showTargetInfos.add(
+                  this.bindFunction(this.onShowTargetInfo),
+                ),
+                P.AttackDialogController.getInstance().hidePlayerInfos.add(
+                  this.bindFunction(this.onHidePlayerInfo),
+                ),
+                P.AttackDialogController.getInstance().hideTargetInfos.add(
+                  this.bindFunction(this.onHideTargetInfo),
+                ),
+                m.CastleBasicController.getInstance().addEventListener(
+                  d.CastleEquipmentEvent.GENERAL_ASSIGNED,
+                  this.bindFunction(this.onGeneralAssigned),
+                ),
+                s.GoodgameTextFieldManager.getInstance().registerTextField(
+                  this.dialogDisp.mc_autofill_filter.mc_open.mc_bottom
+                    .btn_attack.txt_copy,
+                  new c.TextVO(
+                    _.TextHelper.toUpperCaseLocaSafeTextId("attack"),
                   ),
-                )
-              );
-            (this.waveHandler.init(
-              this.dialogDisp.mc_waveList,
-              this.dialogDisp.mc_autofill_filter.mc_open.mc_bottom,
-            ),
-              this.unitPicker
-                ? this.unitPicker.onParentDialogShow()
-                : (this.unitPicker = new F.AttackDialogUnitPicker(
-                    this.dialogDisp.pickerLists,
+                ),
+                (this.dialogDisp.mc_bottom_800.btn_attack.toolTipText =
+                  "launchAttack"),
+                P.AttackDialogController.getInstance().onResizeDialog.dispatch(
+                  !0,
+                ),
+                f.CastleModel.tutorialData.isTutorialActive ||
+                  P.AttackDialogController.getInstance().onShowAutoFillOptions.dispatch(),
+                this.updateBackground(),
+                this.dialogDisp.mc_hornHolder &&
+                  ((this.attackHorn = new v.StatusIconAttackWarnings()),
+                  this.attackHorn.addToContainer(
+                    this.dialogDisp.mc_hornHolder,
                   )),
-              (this.dialogDisp.mc_general_selection.visible = !1),
-              L.AttackDialogController.getInstance().hideDialog.add(
-                this.bindFunction(this.hide),
-              ),
-              L.AttackDialogController.getInstance().openGeneralSelection.add(
-                this.bindFunction(this.openGeneralSelection),
-              ),
-              L.AttackDialogController.getInstance().closeGeneralSelection.add(
-                this.bindFunction(this.closeGeneralSelection),
-              ),
-              L.AttackDialogController.getInstance().onLordChanged.add(
-                this.bindFunction(this.onLordChanged),
-              ),
-              L.AttackDialogController.getInstance().showPlayerInfos.add(
-                this.bindFunction(this.onShowPlayerInfo),
-              ),
-              L.AttackDialogController.getInstance().showTargetInfos.add(
-                this.bindFunction(this.onShowTargetInfo),
-              ),
-              L.AttackDialogController.getInstance().hidePlayerInfos.add(
-                this.bindFunction(this.onHidePlayerInfo),
-              ),
-              L.AttackDialogController.getInstance().hideTargetInfos.add(
-                this.bindFunction(this.onHideTargetInfo),
-              ),
-              _.CastleBasicController.getInstance().addEventListener(
-                d.CastleEquipmentEvent.GENERAL_ASSIGNED,
-                this.bindFunction(this.onGeneralAssigned),
-              ),
-              s.GoodgameTextFieldManager.getInstance().registerTextField(
-                this.dialogDisp.mc_autofill_filter.mc_open.mc_bottom.btn_attack
-                  .txt_copy,
-                new c.TextVO(C.TextHelper.toUpperCaseLocaSafeTextId("attack")),
-              ),
-              (this.dialogDisp.mc_bottom_800.btn_attack.toolTipText =
-                "launchAttack"),
-              L.AttackDialogController.getInstance().onResizeDialog.dispatch(
-                !0,
-              ),
-              m.CastleModel.tutorialData.isTutorialActive ||
-                L.AttackDialogController.getInstance().onShowAutoFillOptions.dispatch(),
-              this.updateBackground(),
-              this.dialogDisp.mc_hornHolder &&
-                ((this.attackHorn = new I.StatusIconAttackWarnings()),
-                this.attackHorn.addToContainer(this.dialogDisp.mc_hornHolder)),
-              L.AttackDialogController.getInstance().applySavedFilterOptions(),
-              _.CastleBasicController.getInstance().addEventListener(
-                p.CastleMilitaryDataEvent.UNIT_UPDATED,
-                this.bindFunction(this.onUnitUpdated),
-              ),
-              L.AttackDialogController.getInstance().attackVO.targetArea
-                .areaType == l.WorldConst.AREA_TYPE_ARE_PORTAL &&
-                m.CastleModel.specialEventData.addEventListener(
-                  h.CastleSpecialEventEvent.REMOVE_SPECIALEVENT,
-                  this.bindFunction(this.onRemoveSpecialEvent),
-                ));
+                P.AttackDialogController.getInstance().applySavedFilterOptions(),
+                m.CastleBasicController.getInstance().addEventListener(
+                  p.CastleMilitaryDataEvent.UNIT_UPDATED,
+                  this.bindFunction(this.onUnitUpdated),
+                ),
+                P.AttackDialogController.getInstance().attackVO.targetArea
+                  .areaType == l.WorldConst.AREA_TYPE_ARE_PORTAL &&
+                  (f.CastleModel.specialEventData.addEventListener(
+                    h.CastleSpecialEventEvent.REMOVE_SPECIALEVENT,
+                    this.bindFunction(this.onRemoveSpecialEvent),
+                  ),
+                  f.CastleModel.raidBossData.addEventListener(
+                    g.CastleServerMessageArrivedEvent.ARE_BOSS_UPDATED_FULL,
+                    this.bindFunction(this.onRaidBossUpdated),
+                  ),
+                  f.CastleModel.raidBossData.addEventListener(
+                    g.CastleServerMessageArrivedEvent.ARE_BOSS_UPDATED_BASE,
+                    this.bindFunction(this.onRaidBossUpdated),
+                  )));
+            }
           }),
           (AttackDialog.prototype.onClick = function (t) {
             switch (
               (e.prototype.onClick.call(this, t),
               t.target.dragSource ||
                 t.target.dragTarget ||
-                t.target.dragTarget instanceof k.AttackDialogDragTarget ||
-                L.AttackDialogController.getInstance().stopDrag(),
+                t.target.dragTarget instanceof U.AttackDialogDragTarget ||
+                P.AttackDialogController.getInstance().stopDrag(),
               t.target)
             ) {
               case this.dialogDisp.btn_close:
                 this.hide();
                 break;
               case this.dialogDisp.btn_help:
-                E.CastleDialogHandler.getInstance().showHelper(
+                O.CastleDialogHandler.getInstance().showHelper(
                   "",
                   c.Localize.text("help_attack"),
                 );
@@ -42396,15 +42414,15 @@
               case this.dialogDisp.mc_autofill_filter.mc_open.mc_bottom
                 .btn_attack:
               case this.dialogDisp.mc_bottom_800.btn_attack:
-                (L.AttackDialogController.getInstance().attackVO.setAdvisor(
-                  g.AdvisorAttackHelper.getAdvisorTypeByAreaType(
-                    L.AttackDialogController.getInstance().attackVO.targetArea
+                (P.AttackDialogController.getInstance().attackVO.setAdvisor(
+                  C.AdvisorAttackHelper.getAdvisorTypeByAreaType(
+                    P.AttackDialogController.getInstance().attackVO.targetArea
                       .areaType,
                   ),
                   0,
                   !1,
                 ),
-                  w.AttackDialogStartAttackCheck.onAttack());
+                  B.AttackDialogStartAttackCheck.onAttack());
                 break;
               case this.dialogDisp.btn_back:
                 (this.hide(),
@@ -42412,33 +42430,33 @@
                     this.dialogProperties.attackInfoVO.targetArea,
                     "TreasureDungeonMapObjectVO",
                   ) ||
-                    y.AttackHelper.executeAttackCommand(
+                    b.AttackHelper.executeAttackCommand(
                       this.dialogProperties.attackInfoVO.targetArea,
                       this.dialogProperties.attackInfoVO.targetArea.attackType,
                       null,
                     ));
                 break;
               case this.dialogDisp.pickerLists.btn_confirm:
-                L.AttackDialogController.getInstance().setSelectedWaveInfoSlotMC(
+                P.AttackDialogController.getInstance().setSelectedWaveInfoSlotMC(
                   null,
                   null,
                   -1,
                 );
             }
-            (D.CastleMovieClipHelper.isDOPartOfDO(
+            (I.CastleMovieClipHelper.isDOPartOfDO(
               t.target,
               this.dialogDisp.pickerLists,
             ) ||
-              D.CastleMovieClipHelper.isDOPartOfDO(
+              I.CastleMovieClipHelper.isDOPartOfDO(
                 t.target,
                 this.dialogDisp.mc_waveList,
               ) ||
-              L.AttackDialogController.getInstance().setSelectedWaveInfoSlotMC(
+              P.AttackDialogController.getInstance().setSelectedWaveInfoSlotMC(
                 null,
                 null,
-                L.AttackDialogController.getInstance().selectedWaveIndex,
+                P.AttackDialogController.getInstance().selectedWaveIndex,
               ),
-              D.CastleMovieClipHelper.isDOPartOfDO(
+              I.CastleMovieClipHelper.isDOPartOfDO(
                 t.target,
                 this.dialogDisp.mc_playerInfo.mc_lord,
               ) || this.player_left.setLordSelectionVisibility(!1),
@@ -42451,7 +42469,7 @@
             (void 0 === t && (t = null),
               e.prototype.hideLoaded.call(this, t),
               this.autoFill.saveToggle &&
-                L.AttackDialogController.getInstance().saveAttackFilterOptions(
+                P.AttackDialogController.getInstance().saveAttackFilterOptions(
                   !this.autoFill.saveToggle.value,
                 ),
               this.resizer.onHide(),
@@ -42463,46 +42481,54 @@
               this.waveHandler.destroy(),
               this.unitPicker && this.unitPicker.destroy(),
               this._generalSelection.destroy(),
-              L.AttackDialogController.getInstance().hideDialog.remove(
+              P.AttackDialogController.getInstance().hideDialog.remove(
                 this.bindFunction(this.hide),
               ),
-              L.AttackDialogController.getInstance().openGeneralSelection.remove(
+              P.AttackDialogController.getInstance().openGeneralSelection.remove(
                 this.bindFunction(this.openGeneralSelection),
               ),
-              L.AttackDialogController.getInstance().closeGeneralSelection.remove(
+              P.AttackDialogController.getInstance().closeGeneralSelection.remove(
                 this.bindFunction(this.closeGeneralSelection),
               ),
-              L.AttackDialogController.getInstance().onLordChanged.remove(
+              P.AttackDialogController.getInstance().onLordChanged.remove(
                 this.bindFunction(this.onLordChanged),
               ),
-              _.CastleBasicController.getInstance().removeEventListener(
+              m.CastleBasicController.getInstance().removeEventListener(
                 d.CastleEquipmentEvent.GENERAL_ASSIGNED,
                 this.bindFunction(this.onGeneralAssigned),
               ),
-              L.AttackDialogController.getInstance().showPlayerInfos.remove(
+              P.AttackDialogController.getInstance().showPlayerInfos.remove(
                 this.bindFunction(this.onShowPlayerInfo),
               ),
-              L.AttackDialogController.getInstance().showTargetInfos.remove(
+              P.AttackDialogController.getInstance().showTargetInfos.remove(
                 this.bindFunction(this.onShowTargetInfo),
               ),
-              L.AttackDialogController.getInstance().hidePlayerInfos.remove(
+              P.AttackDialogController.getInstance().hidePlayerInfos.remove(
                 this.bindFunction(this.onHidePlayerInfo),
               ),
-              L.AttackDialogController.getInstance().hideTargetInfos.remove(
+              P.AttackDialogController.getInstance().hideTargetInfos.remove(
                 this.bindFunction(this.onHideTargetInfo),
               ),
               this._generalIconLeft && this._generalIconLeft.onHide(),
               this._generalIconRight && this._generalIconRight.onHide(),
               this.attackHorn &&
                 (this.attackHorn.dispose(), (this.attackHorn = null)),
-              B.AttackDialogTrackingHelper.getInstance().endSessionAndTrack(!1),
-              _.CastleBasicController.getInstance().removeEventListener(
+              F.AttackDialogTrackingHelper.getInstance().endSessionAndTrack(!1),
+              m.CastleBasicController.getInstance().removeEventListener(
                 p.CastleMilitaryDataEvent.UNIT_UPDATED,
                 this.bindFunction(this.onUnitUpdated),
               ),
-              m.CastleModel.specialEventData.removeEventListener(
+              f.CastleModel.specialEventData.removeEventListener(
                 h.CastleSpecialEventEvent.REMOVE_SPECIALEVENT,
                 this.bindFunction(this.onRemoveSpecialEvent),
+              ),
+              f.CastleModel.raidBossData.removeEventListener(
+                g.CastleServerMessageArrivedEvent.ARE_BOSS_UPDATED_FULL,
+                this.bindFunction(this.onRaidBossUpdated),
+              ),
+              f.CastleModel.raidBossData.removeEventListener(
+                g.CastleServerMessageArrivedEvent.ARE_BOSS_UPDATED_BASE,
+                this.bindFunction(this.onRaidBossUpdated),
               ));
           }),
           (AttackDialog.prototype.openGeneralSelection = function () {
@@ -42514,11 +42540,11 @@
           (AttackDialog.prototype.updateGeneralIconLeft = function () {
             var e = !0;
             this._generalIconLeft && (e = this._generalIconLeft.isVisible);
-            var t = L.AttackDialogController.getInstance().selectedLord,
+            var t = P.AttackDialogController.getInstance().selectedLord,
               i = t && t.assignedGeneralVO ? t.assignedGeneralVO : null;
             (this._generalIconLeft && this._generalIconLeft.onHide(),
               a.MovieClipHelper.clearMovieClip(this.dialogDisp.btn_player_left),
-              (this._generalIconLeft = new S.GeneralSelectionItem(
+              (this._generalIconLeft = new A.GeneralSelectionItem(
                 i,
                 this.dialogDisp.btn_player_left,
                 !1,
@@ -42548,7 +42574,7 @@
               a.MovieClipHelper.clearMovieClip(
                 this.dialogDisp.btn_player_right,
               ),
-              (this._generalIconRight = new S.GeneralSelectionItem(
+              (this._generalIconRight = new A.GeneralSelectionItem(
                 t,
                 this.dialogDisp.btn_player_right,
                 !1,
@@ -42557,17 +42583,17 @@
                 !1,
                 null,
                 !0,
-                L.AttackDialogController.getInstance().attackVO.targetOwner
-                  .playerID == m.CastleModel.userData.playerID,
+                P.AttackDialogController.getInstance().attackVO.targetOwner
+                  .playerID == f.CastleModel.userData.playerID,
               )),
               this._generalIconRight.onShow(),
               this._generalIconRight.onClickSignal.add(
                 this.bindFunction(this.onClickTarget),
               ),
-              L.AttackDialogController.getInstance().attackVO.targetArea
+              P.AttackDialogController.getInstance().attackVO.targetArea
                 .areaType == l.WorldConst.AREA_TYPE_ARE_PORTAL)
             ) {
-              var i = m.CastleModel.specialEventData.getActiveEventByEventId(
+              var i = f.CastleModel.specialEventData.getActiveEventByEventId(
                   l.EventConst.EVENTTYPE_ALLIANCE_RAID,
                 ),
                 n = i ? i.raidBossServerDataVO.getCurrentXMLBossDataVO() : null;
@@ -42603,28 +42629,54 @@
             this.updateGeneralIconLeft();
           }),
           (AttackDialog.prototype.onClickPlayer = function () {
-            L.AttackDialogController.getInstance().showPlayerInfos.dispatch();
+            P.AttackDialogController.getInstance().showPlayerInfos.dispatch();
           }),
           (AttackDialog.prototype.onClickTarget = function () {
-            L.AttackDialogController.getInstance().showTargetInfos.dispatch();
+            P.AttackDialogController.getInstance().showTargetInfos.dispatch();
           }),
           (AttackDialog.prototype.onRemoveSpecialEvent = function (e) {
-            f.AllianceRaidbossEventEventVO.getActiveEventVO() || this.hide();
+            E.AllianceRaidbossEventEventVO.getActiveEventVO() || this.hide();
+          }),
+          Object.defineProperty(
+            AttackDialog.prototype,
+            "isAreTargetWithoutBoss",
+            {
+              get: function () {
+                var e = P.AttackDialogController.getInstance().attackVO;
+                if (
+                  !e ||
+                  !e.targetArea ||
+                  e.targetArea.areaType != l.WorldConst.AREA_TYPE_ARE_PORTAL
+                )
+                  return !1;
+                var t = E.AllianceRaidbossEventEventVO.getActiveEventVO();
+                return (
+                  !t ||
+                  !t.raidBossServerDataVO ||
+                  !t.raidBossServerDataVO.hasActiveRaid
+                );
+              },
+              enumerable: !0,
+              configurable: !0,
+            },
+          ),
+          (AttackDialog.prototype.onRaidBossUpdated = function (e) {
+            this.isAreTargetWithoutBoss && this.hide();
           }),
           (AttackDialog.prototype.onUnitUpdated = function (e) {
             var t = u.int(e.params[0].AID),
               i = u.int(e.params[0].SID);
             if (
               t ==
-                L.AttackDialogController.getInstance().attackVO.sourceArea
+                P.AttackDialogController.getInstance().attackVO.sourceArea
                   .objectId &&
               i ==
-                L.AttackDialogController.getInstance().attackVO.sourceArea
+                P.AttackDialogController.getInstance().attackVO.sourceArea
                   .spaceID
             ) {
               var n = u.int(e.params[0].WID),
                 o = u.int(e.params[0].NUA);
-              L.AttackDialogController.getInstance().attackVO.unitInventory.addUnit(
+              P.AttackDialogController.getInstance().attackVO.unitInventory.addUnit(
                 n,
                 o,
               );
@@ -42645,7 +42697,7 @@
             configurable: !0,
           }),
           (AttackDialog.prototype.updatePosition = function () {
-            L.AttackDialogController.getInstance().onResizeDialog.dispatch();
+            P.AttackDialogController.getInstance().onResizeDialog.dispatch();
           }),
           Object.defineProperty(AttackDialog.prototype, "attackButton", {
             get: function () {
@@ -42661,10 +42713,10 @@
           (AttackDialog.NAME = "AttackScreen_APR2026"),
           AttackDialog
         );
-      })(v.CastleExternalDialog);
-    ((t.AttackDialog = U),
-      r.classImplementsInterfaces(U, "ICollectableRendererList"),
-      U.__initialize_static_members());
+      })(T.CastleExternalDialog);
+    ((t.AttackDialog = G),
+      r.classImplementsInterfaces(G, "ICollectableRendererList"),
+      G.__initialize_static_members());
   },
   function (e, t, i) {
     "use strict";
@@ -76390,7 +76442,7 @@
               i = _.int(o.DungeonConst.getDungeonOwnerID(e, 0));
             return (
               (t.playerID = i),
-              (t.playerName = C.Localize.text(
+              (t.playerName = CastleNPCOwnerFactory.getNPCPlayerName(
                 "kingdom_dungeon_playerName_" +
                   CastleNPCOwnerFactory.cleanPlayerName(String(i)),
               )),
@@ -76411,7 +76463,7 @@
               i = _.int(o.DungeonConst.getBossDungeonOwnerID(e));
             return (
               (t.playerID = i),
-              (t.playerName = C.Localize.text(
+              (t.playerName = CastleNPCOwnerFactory.getNPCPlayerName(
                 "kingdom_boss_dungeon_playerName_" +
                   CastleNPCOwnerFactory.cleanPlayerName("" + i),
               )),
@@ -76601,7 +76653,7 @@
               i = _.int(o.DungeonConst.getDungeonOwnerID(e, 0));
             return (
               (t.playerID = _.int(g.VillageConst.getVillageDefaultOwnerID(e))),
-              (t.playerName = C.Localize.text(
+              (t.playerName = CastleNPCOwnerFactory.getNPCPlayerName(
                 "kingdom_dungeon_playerName_" +
                   CastleNPCOwnerFactory.cleanPlayerName("" + i),
               )),
@@ -76695,7 +76747,7 @@
             var e = new A.WorldMapOwnerInfoVO();
             return (
               (e.playerID = _.int(c.OutpostConst.CAPITAL_ICE_DEFAULT_OWNER_ID)),
-              (e.playerName = C.Localize.text(
+              (e.playerName = CastleNPCOwnerFactory.getNPCPlayerName(
                 "kingdom_dungeon_playerName_" +
                   CastleNPCOwnerFactory.cleanPlayerName("-221"),
               )),
@@ -76719,7 +76771,7 @@
               (e.playerLevel = _.int(
                 b.CastleModel.landmark.defaultLandmark.defaultLevel,
               )),
-              (e.playerName = C.Localize.text(
+              (e.playerName = CastleNPCOwnerFactory.getNPCPlayerName(
                 "kingdom_dungeon_playerName_" +
                   CastleNPCOwnerFactory.cleanPlayerName("-220"),
               )),
@@ -76740,7 +76792,7 @@
               (e.playerLevel = _.int(
                 b.CastleModel.landmark.defaultLandmark.defaultLevel,
               )),
-              (e.playerName = C.Localize.text(
+              (e.playerName = CastleNPCOwnerFactory.getNPCPlayerName(
                 "kingdom_dungeon_playerName_" +
                   CastleNPCOwnerFactory.cleanPlayerName("-222"),
               )),
@@ -76809,7 +76861,7 @@
             t.playerID = _.int(c.OutpostConst.getLaboratoryDefaultOwnerFor(e));
             var i = _.int(o.DungeonConst.getDungeonOwnerID(e, 0));
             return (
-              (t.playerName = C.Localize.text(
+              (t.playerName = CastleNPCOwnerFactory.getNPCPlayerName(
                 "kingdom_dungeon_playerName_" +
                   (e == h.WorldClassic.KINGDOM_ID
                     ? "classic"
@@ -76966,6 +77018,11 @@
               ),
               t
             );
+          }),
+          (CastleNPCOwnerFactory.getNPCPlayerName = function (e) {
+            return C.Localize.hasText(e)
+              ? C.Localize.text(e)
+              : C.Localize.text("dungeon_playerName");
           }),
           (CastleNPCOwnerFactory.cleanPlayerName = function (e) {
             return e.split("-").join("NPC_");
@@ -163053,7 +163110,7 @@
   function (e) {
     e.exports = {
       name: "@goodgamestudios/empire-createjs-assets",
-      version: "1.2.1397",
+      version: "1.2.1407",
       main: "generated/index.js",
       types: "generated/index.d.ts",
       description: "CreateJS Assets for Empire HTML5",
@@ -163185,7 +163242,7 @@
   function (e) {
     e.exports = {
       name: "TranspilationEmpire",
-      version: "1.169.11",
+      version: "1.170.22",
       description: "Transpiled version of the Flash game",
       main: "index.js",
       repository:
@@ -243274,7 +243331,8 @@
       m = i(161),
       f = i(56),
       E = i(2719),
-      O = (function () {
+      O = i(33),
+      y = (function () {
         function ConstructionItemVO(e) {
           (void 0 === e && (e = null),
             (this._id = 0),
@@ -243518,32 +243576,52 @@
           }),
           Object.defineProperty(ConstructionItemVO.prototype, "effectText", {
             get: function () {
-              var e = "";
+              var e = this,
+                t = "";
               return (
-                this._effects.forEach(function (t) {
-                  ("" != e && (e += "\n"),
-                    (e +=
-                      o.Localize.text(t.constructionItemTextId, [t.value]) +
+                this._effects.forEach(function (e) {
+                  ("" != t && (t += "\n"),
+                    (t +=
+                      o.Localize.text(e.constructionItemTextId, [e.value]) +
                       (C.CastleDataHolder.instance.showEffectTypeIDs
-                        ? "  || Type: " + t.type.name + " ||"
+                        ? "  || Type: " + e.type.name + " ||"
                         : "")));
                 }),
-                this._boni.forEach(function (t) {
-                  "" != e && (e += "\n");
-                  var i =
-                      "ci_effect_" + t.effect.getEnhancedName(t.effectValue),
-                    n = t.effectValue.textReplacements;
-                  e +=
-                    o.Localize.text(i, n) +
+                this._boni.forEach(function (i) {
+                  "" != t && (t += "\n");
+                  var n =
+                      "ci_effect_" + i.effect.getEnhancedName(i.effectValue),
+                    a = e.getEffectTextReplacements(i);
+                  t +=
+                    o.Localize.text(n, a) +
                     (C.CastleDataHolder.instance.showEffectTypeIDs
-                      ? "  || TypeID: " + t.effect.effectTypeID + " ||"
+                      ? "  || TypeID: " + i.effect.effectTypeID + " ||"
                       : "");
                 }),
-                "" == e ? o.Localize.text("ci_effect_NA") : e
+                "" == t ? o.Localize.text("ci_effect_NA") : t
               );
             },
             enumerable: !0,
             configurable: !0,
+          }),
+          (ConstructionItemVO.prototype.getEffectTextReplacements = function (
+            e,
+          ) {
+            if (
+              e.effect.effectType.type !=
+              O.EffectTypeEnum.EFFECT_TYPE_ENABLE_UNITS
+            )
+              return e.effectValue.textReplacements;
+            for (
+              var t = [], i = 0, n = e.effectValue.rawValues;
+              i < n.length;
+              i++
+            ) {
+              var a = n[i],
+                s = _.CastleModel.wodData.getUnitVOByWodId(a);
+              s && t.push(o.Localize.text(s.getNameString()));
+            }
+            return [t.join(", ")];
           }),
           Object.defineProperty(ConstructionItemVO.prototype, "removalCostC1", {
             get: function () {
@@ -243908,7 +243986,7 @@
           ConstructionItemVO
         );
       })();
-    t.ConstructionItemVO = O;
+    t.ConstructionItemVO = y;
   },
   function (e, t, i) {
     "use strict";
@@ -329931,6 +330009,7 @@
           (AllianceRaidEventDialogBossRewards.prototype.setTabSelected =
             function (e, t) {
               (e.txt_selected && (e.txt_selected.visible = t),
+                e.mc_selected && (e.mc_selected.visible = t),
                 e.txt_not_selected && (e.txt_not_selected.visible = !t));
             }),
           Object.defineProperty(
@@ -337772,42 +337851,45 @@
               );
             }),
           (AllianceRaidBossDetailView.prototype.drawCastleVO = function () {
-            ((this._castleLayer = new c()),
-              (this._layerBackground = new c()),
-              (this._layerMoat = new c()),
-              (this._layerMoat.mouseChildren = !1),
-              (this._layerKeep = new c()),
-              (this._layerKeep.mouseChildren = !1),
-              (this._layerFront = new c()),
-              (this._layerLeft = new c()),
-              (this._layerLeft.mouseChildren = !1),
-              (this._layerRight = new c()),
-              (this._layerRight.mouseChildren = !1),
-              (this._layerMiddle = new c()),
-              (this._layerMiddle.mouseChildren = !1),
-              this._castleLayer.addChild(this._layerBackground),
-              this._layerFront.addChild(this._layerKeep),
-              this._layerFront.addChild(this._layerLeft),
-              this._layerFront.addChild(this._layerRight),
-              this._layerFront.addChild(this._layerMiddle),
-              this._castleLayer.addChild(this._layerFront),
-              (this._layerKeep.addChild(
-                this.getMovieClipByName(this.keepClassName),
-              ).x = -70),
-              (this._layerLeft.addChild(
-                this.getMovieClipByName(this.leftWallClassName),
-              ).x = -70),
-              (this._layerRight.addChild(
-                this.getMovieClipByName(this.rightWallClassName),
-              ).x = -70),
-              (this._layerMiddle.addChild(
-                this.getMovieClipByName(this.gateClassName),
-              ).x = -70));
-            try {
-              this._layerBackground.addChild(
-                this.getMovieClipByName(this.bgDecoClassName),
-              ).x = -70;
-            } catch (e) {}
+            if (this.currentRaidBossInfo) {
+              ((this._castleLayer = new c()),
+                (this._layerBackground = new c()),
+                (this._layerMoat = new c()),
+                (this._layerMoat.mouseChildren = !1),
+                (this._layerKeep = new c()),
+                (this._layerKeep.mouseChildren = !1),
+                (this._layerFront = new c()),
+                (this._layerLeft = new c()),
+                (this._layerLeft.mouseChildren = !1),
+                (this._layerRight = new c()),
+                (this._layerRight.mouseChildren = !1),
+                (this._layerMiddle = new c()),
+                (this._layerMiddle.mouseChildren = !1),
+                this._castleLayer.addChild(this._layerBackground),
+                this._layerFront.addChild(this._layerKeep),
+                this._layerFront.addChild(this._layerLeft),
+                this._layerFront.addChild(this._layerRight),
+                this._layerFront.addChild(this._layerMiddle),
+                this._castleLayer.addChild(this._layerFront),
+                this.currentGeneralID >= 0 &&
+                  (this._layerKeep.addChild(
+                    this.getMovieClipByName(this.keepClassName),
+                  ).x = -70),
+                (this._layerLeft.addChild(
+                  this.getMovieClipByName(this.leftWallClassName),
+                ).x = -70),
+                (this._layerRight.addChild(
+                  this.getMovieClipByName(this.rightWallClassName),
+                ).x = -70),
+                (this._layerMiddle.addChild(
+                  this.getMovieClipByName(this.gateClassName),
+                ).x = -70));
+              try {
+                this._layerBackground.addChild(
+                  this.getMovieClipByName(this.bgDecoClassName),
+                ).x = -70;
+              } catch (e) {}
+            }
           }),
           Object.defineProperty(
             AllianceRaidBossDetailView.prototype,
@@ -337827,7 +337909,8 @@
             "currentRaidBossInfo",
             {
               get: function () {
-                return this.eventVO.raidBossServerDataVO;
+                var e = this.eventVO;
+                return e ? e.raidBossServerDataVO : null;
               },
               enumerable: !0,
               configurable: !0,
@@ -337838,8 +337921,9 @@
             "currentGeneralID",
             {
               get: function () {
-                return this.eventVO.raidBossServerDataVO.getCurrentXMLBossStageDataVO()
-                  .generalID;
+                if (!this.currentRaidBossInfo) return -1;
+                var e = this.currentRaidBossInfo.getCurrentXMLBossStageDataVO();
+                return e ? e.generalID : -1;
               },
               enumerable: !0,
               configurable: !0,
@@ -371073,16 +371157,20 @@
               var e = d.CastleModel.userData.hasEmail
                 ? f.CastleSaveAccountDialog.TYPE_SAVE_PASSWORD
                 : f.CastleSaveAccountDialog.TYPE_SAVE_ACCOUNT;
-              h.CastleDialogHandler.getInstance().registerDefaultDialogs(
-                f.CastleSaveAccountDialog,
-                new E.CastleSaveAccountDialogProperties(
-                  e,
-                  f.CastleSaveAccountDialog.STYLE_MANDATORY,
-                  this.bindFunction(this.handleUnmapFacebook),
-                  null,
-                  !0,
-                ),
-              );
+              d.CastleModel.userData.isEmailTemporary ||
+              d.CastleModel.userData.isPasswordTemporary ||
+              d.CastleModel.userData.isPlayerNameTemporary
+                ? h.CastleDialogHandler.getInstance().registerDefaultDialogs(
+                    f.CastleSaveAccountDialog,
+                    new E.CastleSaveAccountDialogProperties(
+                      e,
+                      f.CastleSaveAccountDialog.STYLE_MANDATORY,
+                      this.bindFunction(this.handleUnmapFacebook),
+                      null,
+                      !0,
+                    ),
+                  )
+                : this.handleUnmapFacebook();
             }),
           (OptionsDialogFacebookItem.prototype.handleUnmapFacebook =
             function () {
@@ -384722,106 +384810,111 @@
           }),
           (AllianceRaidEventBossStageComponent.prototype.updateComponent =
             function () {
-              var e = this,
-                t = g.CastleModel.generalsData.npcGenerals.get(
-                  this.eventVO.raidBossServerDataVO.getCurrentXMLBossStageDataVO()
-                    .generalID,
-                );
-              ((this._generalIcon = new b.GeneralSelectionItem(
-                t,
-                this.disp.mc_general,
-                !1,
-                !1,
-                !1,
-                !0,
-                null,
-                !1,
-                !1,
-                !1,
-              )),
-                this._generalIcon.onShow(),
-                s.GoodgameTextFieldManager.getInstance().registerTextField(
-                  this.disp.mc_level.txt_level,
-                  new d.LocalizedNumberVO(
-                    this.eventVO.raidBossServerDataVO.getCurrentXMLBossLevelDataVO()
-                      .level,
-                  ),
-                ),
-                this.stages.forEach(function (t, i) {
-                  var n = e.disp.mc_bar["stage_" + i];
-                  n &&
-                    (e.initButtonState(n, i),
-                    E.ButtonHelper.initButtons(
-                      [n.mc_achieved, n.mc_next, n.mc_notAchieved],
-                      f.ClickFeedbackButtonHoverTabButton,
-                    ));
-                }),
-                this.updateSelectionState(),
-                (this.disp.mc_bar.healthbar_total.mask.scaleX =
-                  o.MathBase.clamp(
-                    this.eventVO.raidBossServerDataVO.raidBossHealth / 100,
-                    0,
-                    1,
-                  )),
-                (this.disp.mc_bar.healthbar_base.scaleX = o.MathBase.clamp(
-                  this.eventVO.raidBossServerDataVO
-                    .raidBossHealthWithoutReviveUnits / 100,
-                  0,
-                  1,
-                )));
-              var i,
-                n = new u.LocalizedTextVO(a.GenericTextIds.VALUE_PERCENTAGE, [
-                  this.eventVO.raidBossServerDataVO.raidBossHealth,
-                ]);
-              if (
-                this.eventVO.raidBossServerDataVO.raidBossReviveUnitPercentage >
-                0
-              ) {
-                var r = new c.HTMLTextCustomVO(),
-                  l = new u.LocalizedTextVO(
-                    a.GenericTextIds.VALUE_PERCENTAGE_ADD,
-                    [
-                      this.eventVO.raidBossServerDataVO
-                        .raidBossReviveUnitPercentage,
-                    ],
-                  ).compose(),
-                  h = new O.ColoredHTMLTextReplacementVO(
-                    new p.TextVO("(" + l + ")"),
-                    this.eventVO.raidBossServerDataVO.getCurrentXMLBossDataVO()
-                      .lifebarColor,
+              var e = this;
+              if (this.eventVO) {
+                var t =
+                    this.eventVO.raidBossServerDataVO.getCurrentXMLBossStageDataVO(),
+                  i =
+                    this.eventVO.raidBossServerDataVO.getCurrentXMLBossLevelDataVO();
+                if (t && i) {
+                  var n = g.CastleModel.generalsData.npcGenerals.get(
+                    t.generalID,
                   );
-                (r.addLocalizedTextVO(
-                  new u.LocalizedTextVO(a.GenericTextIds.VALUE_SIMPLE_COMP, [
+                  ((this._generalIcon = new b.GeneralSelectionItem(
                     n,
-                    h,
-                  ]),
-                ),
-                  (i = _.CastleComponent.textFieldManager.registerTextField(
-                    this.disp.mc_bar.txt_health,
-                    r,
-                  )));
-              } else
-                i = _.CastleComponent.textFieldManager.registerTextField(
-                  this.disp.mc_bar.txt_health,
-                  n,
-                );
-              this.disp.mc_bar.mc_healthBackground &&
-                (this.disp.mc_bar.mc_healthBackground.width =
-                  i.textWidth + 100);
-              var C = new y.HTMLTextLineBreakVO();
-              C.addLocalizedTextVO(
-                new u.LocalizedTextVO(
-                  "dialog_are_infoBoss_healthBar_tooltip_ep_" +
-                    this.eventVO.raidBossServerDataVO.getCurrentXMLBossDataVO()
-                      .name,
-                ),
-              );
-              var m = _.CastleComponent.textFieldManager.registerTextField(
-                this.disp.mc_tooltip.txt_text,
-                C,
-              );
-              ((m.height = m.textHeight),
-                (this.disp.mc_tooltip.bg.height = m.textHeight + 12));
+                    this.disp.mc_general,
+                    !1,
+                    !1,
+                    !1,
+                    !0,
+                    null,
+                    !1,
+                    !1,
+                    !1,
+                  )),
+                    this._generalIcon.onShow(),
+                    s.GoodgameTextFieldManager.getInstance().registerTextField(
+                      this.disp.mc_level.txt_level,
+                      new d.LocalizedNumberVO(i.level),
+                    ),
+                    this.stages.forEach(function (t, i) {
+                      var n = e.disp.mc_bar["stage_" + i];
+                      n &&
+                        (e.initButtonState(n, i),
+                        E.ButtonHelper.initButtons(
+                          [n.mc_achieved, n.mc_next, n.mc_notAchieved],
+                          f.ClickFeedbackButtonHoverTabButton,
+                        ));
+                    }),
+                    this.updateSelectionState(),
+                    (this.disp.mc_bar.healthbar_total.mask.scaleX =
+                      o.MathBase.clamp(
+                        this.eventVO.raidBossServerDataVO.raidBossHealth / 100,
+                        0,
+                        1,
+                      )),
+                    (this.disp.mc_bar.healthbar_base.scaleX = o.MathBase.clamp(
+                      this.eventVO.raidBossServerDataVO
+                        .raidBossHealthWithoutReviveUnits / 100,
+                      0,
+                      1,
+                    )));
+                  var r,
+                    l = new u.LocalizedTextVO(
+                      a.GenericTextIds.VALUE_PERCENTAGE,
+                      [this.eventVO.raidBossServerDataVO.raidBossHealth],
+                    );
+                  if (
+                    this.eventVO.raidBossServerDataVO
+                      .raidBossReviveUnitPercentage > 0
+                  ) {
+                    var h = new c.HTMLTextCustomVO(),
+                      C = new u.LocalizedTextVO(
+                        a.GenericTextIds.VALUE_PERCENTAGE_ADD,
+                        [
+                          this.eventVO.raidBossServerDataVO
+                            .raidBossReviveUnitPercentage,
+                        ],
+                      ).compose(),
+                      m = new O.ColoredHTMLTextReplacementVO(
+                        new p.TextVO("(" + C + ")"),
+                        this.eventVO.raidBossServerDataVO.getCurrentXMLBossDataVO()
+                          .lifebarColor,
+                      );
+                    (h.addLocalizedTextVO(
+                      new u.LocalizedTextVO(
+                        a.GenericTextIds.VALUE_SIMPLE_COMP,
+                        [l, m],
+                      ),
+                    ),
+                      (r = _.CastleComponent.textFieldManager.registerTextField(
+                        this.disp.mc_bar.txt_health,
+                        h,
+                      )));
+                  } else
+                    r = _.CastleComponent.textFieldManager.registerTextField(
+                      this.disp.mc_bar.txt_health,
+                      l,
+                    );
+                  this.disp.mc_bar.mc_healthBackground &&
+                    (this.disp.mc_bar.mc_healthBackground.width =
+                      r.textWidth + 100);
+                  var D = new y.HTMLTextLineBreakVO();
+                  D.addLocalizedTextVO(
+                    new u.LocalizedTextVO(
+                      "dialog_are_infoBoss_healthBar_tooltip_ep_" +
+                        this.eventVO.raidBossServerDataVO.getCurrentXMLBossDataVO()
+                          .name,
+                    ),
+                  );
+                  var I = _.CastleComponent.textFieldManager.registerTextField(
+                    this.disp.mc_tooltip.txt_text,
+                    D,
+                  );
+                  ((I.height = I.textHeight),
+                    (this.disp.mc_tooltip.bg.height = I.textHeight + 12));
+                }
+              }
             }),
           (AllianceRaidEventBossStageComponent.prototype.updateSelectionState =
             function () {
@@ -389148,10 +389241,12 @@
             "baseGateBonus",
             {
               get: function () {
-                return g.CastleModel.factionInvasionCampData.getFactionInvasion(
-                  this.dungeonLevel,
-                  this._ownerInfo.factionID,
-                ).gateBonus;
+                var e =
+                  g.CastleModel.factionInvasionCampData.getFactionInvasion(
+                    this.dungeonLevel,
+                    this._ownerInfo.factionID,
+                  );
+                return e ? e.gateBonus : 0;
               },
               set: function (e) {
                 Object.getOwnPropertyDescriptor(
@@ -389168,10 +389263,12 @@
             "baseWallBonus",
             {
               get: function () {
-                return g.CastleModel.factionInvasionCampData.getFactionInvasion(
-                  this.dungeonLevel,
-                  this._ownerInfo.factionID,
-                ).wallBonus;
+                var e =
+                  g.CastleModel.factionInvasionCampData.getFactionInvasion(
+                    this.dungeonLevel,
+                    this._ownerInfo.factionID,
+                  );
+                return e ? e.wallBonus : 0;
               },
               set: function (e) {
                 Object.getOwnPropertyDescriptor(
@@ -406366,13 +406463,19 @@
           }),
           (CastleConstructionItemsCraftingSublayer.prototype.updateItemInfo =
             function () {
-              this.recipeShown =
-                this.bluePrintShown.recipes[
-                  this.itemInfoComponent.selectedRecipeIndex
-                ];
-              var e = this.recipeShown.constructionItem;
-              (this.itemInfoComponent.update(e),
-                this.ingredientsComponent.update());
+              if (
+                this.bluePrintShown &&
+                this.bluePrintShown.recipes &&
+                ((this.recipeShown =
+                  this.bluePrintShown.recipes[
+                    this.itemInfoComponent.selectedRecipeIndex
+                  ]),
+                this.recipeShown)
+              ) {
+                var e = this.recipeShown.constructionItem;
+                (this.itemInfoComponent.update(e),
+                  this.ingredientsComponent.update());
+              }
             }),
           (CastleConstructionItemsCraftingSublayer.prototype.onInteractionUpdate =
             function (e) {
@@ -520433,18 +520536,20 @@
                 ),
                 this._detailScrollComponent.hide()),
               this.clearDetailItems(),
-              this.waveOverview.removeEventListener(
-                U.CLICK,
-                this.bindFunction(this.onClick),
-              ),
-              this.attackCosts.removeEventListener(
-                U.MOUSE_OVER,
-                this.bindFunction(this.onMouseOver),
-              ),
-              this.attackCosts.removeEventListener(
-                U.MOUSE_OUT,
-                this.bindFunction(this.onMouseOut),
-              ),
+              this.waveOverview &&
+                this.waveOverview.removeEventListener(
+                  U.CLICK,
+                  this.bindFunction(this.onClick),
+                ),
+              this.attackCosts &&
+                (this.attackCosts.removeEventListener(
+                  U.MOUSE_OVER,
+                  this.bindFunction(this.onMouseOver),
+                ),
+                this.attackCosts.removeEventListener(
+                  U.MOUSE_OUT,
+                  this.bindFunction(this.onMouseOut),
+                )),
               (this.defaultWaveCount = 0),
               h.CastleModel.generalsData.removeEventListener(
                 p.GeneralsEvent.GENERALS_UPDATED,
@@ -606364,13 +606469,9 @@
             (void 0 === t && (t = null), e.prototype.execute.call(this));
             var i = o.BasicController.commandDict;
             (i.set(
-              o.BasicSmartfoxConstants.S2C_GET_FORUM_LOGIN_DATA,
-              new o.GFLCommand(),
+              o.BasicSmartfoxConstants.S2C_SERVER_INFO_EVENT,
+              new D.NFOCastleCommand(),
             ),
-              i.set(
-                o.BasicSmartfoxConstants.S2C_SERVER_INFO_EVENT,
-                new D.NFOCastleCommand(),
-              ),
               i.set(
                 s.ClientConstSF.S2C_SERVER_INFO_EVENT_CORE,
                 new I.NFOCoreDuplicateCommand(),
@@ -706694,4 +706795,4 @@
     t.ModernStartscreenComponent = p;
   },
 ]);
-//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/Game.bundle.a4a25ae6d735e29092f6.js.map
+//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/Game.bundle.4230c06b48520e83ead4.js.map
