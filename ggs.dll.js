@@ -871,15 +871,15 @@ and limitations under the License.
                 o.timeline =
                   null),
               (o._paused = !1));
-            var N = function () {
+            var B = function () {
               u &&
                 D() - b > 2e3 &&
                 ("hidden" !== (i || {}).visibilityState || !l.lagSmoothing()) &&
                 l.wake();
-              var e = setTimeout(N, 2e3);
+              var e = setTimeout(B, 2e3);
               e.unref && e.unref();
             };
-            (N(),
+            (B(),
               (o.play = function (e, t) {
                 return (
                   null != e && this.seek(e, t),
@@ -1148,11 +1148,11 @@ and limitations under the License.
                   this
                 );
               }));
-            var B = S("core.SimpleTimeline", function (e) {
+            var N = S("core.SimpleTimeline", function (e) {
               (R.call(this, 0, e),
                 (this.autoRemoveChildren = this.smoothChildTiming = !0));
             });
-            (((o = B.prototype = new R()).constructor = B),
+            (((o = N.prototype = new R()).constructor = N),
               (o.kill()._gc = !1),
               (o._first = o._last = o._recent = null),
               (o._sortChildren = !1),
@@ -1543,8 +1543,8 @@ and limitations under the License.
                 true: 1,
                 false: 0,
               },
-              z = (R._rootFramesTimeline = new B()),
-              Z = (R._rootTimeline = new B()),
+              z = (R._rootFramesTimeline = new N()),
+              Z = (R._rootTimeline = new N()),
               X = 30,
               Q = (H.lazyRender = function () {
                 var e,
@@ -2410,10 +2410,10 @@ and limitations under the License.
     t.JointStyle = b.JointStyle;
     var R = n(571);
     t.LineScaleMode = R.LineScaleMode;
-    var N = n(572);
-    t.InterpolationMethod = N.InterpolationMethod;
-    var B = n(573);
-    t.GradientType = B.GradientType;
+    var B = n(572);
+    t.InterpolationMethod = B.InterpolationMethod;
+    var N = n(573);
+    t.GradientType = N.GradientType;
     var P = n(227);
     t.PixelSnapping = P.PixelSnapping;
     var M = n(574);
@@ -4177,8 +4177,8 @@ and limitations under the License.
       D = n(727),
       b = n(293),
       R = n(306),
-      N = n(728),
-      B = I.getLogger("Tracking.TrackingCache"),
+      B = n(728),
+      N = I.getLogger("Tracking.TrackingCache"),
       P = (function () {
         function TrackingCache(e, t) {
           (void 0 === e && (e = new s.TrackingVerifier()),
@@ -4262,7 +4262,7 @@ and limitations under the License.
               ),
               this._currentCache.set(
                 i.TrackingEventIds.FACBOOK_USER_EMAIL,
-                new N.FacebookUserEmailTrackingEvent(n),
+                new B.FacebookUserEmailTrackingEvent(n),
               ),
               this._currentCache.set(
                 i.TrackingEventIds.SHOP_LOADED,
@@ -4289,7 +4289,7 @@ and limitations under the License.
           }),
           (TrackingCache.prototype.sendEvent = function (e) {
             if (!this.isInitialized)
-              return (B.warn("tracking cache is not initalized"), !1);
+              return (N.warn("tracking cache is not initalized"), !1);
             var t = this.prepareEvent(e),
               n = JSON.stringify(t);
             if (this.validateTests) {
@@ -4325,25 +4325,25 @@ and limitations under the License.
             return (
               t.eventId
                 ? e !== t.eventId &&
-                  B.warn(
+                  N.warn(
                     "Expected event with with eventId " +
                       e +
                       ", but found " +
                       t.eventId,
                   )
                 : ((t.eventId = e),
-                  B.warn("assigning ID to tracking event ", e)),
+                  N.warn("assigning ID to tracking event ", e)),
               (t.gameId = this._gameId),
               (t.networkId = this._networkId),
               (t.accountId = this._accountId),
               ((t.hasOwnProperty("playerId") &&
                 O.isNullOrUndefined(t.playerId)) ||
                 0 == t.playerId) &&
-                B.warn("we are sending an event without playerID", t),
+                N.warn("we are sending an event without playerID", t),
               this.currentInstance
                 ? ((t.instanceId = this.currentInstance.instanceId),
                   (t.zoneId = this.currentInstance.zoneId))
-                : (B.warn(
+                : (N.warn(
                     "sending tracking " +
                       e +
                       " but currentInstance is null will try to use networkCookie",
@@ -4360,7 +4360,7 @@ and limitations under the License.
             var t = function (t, n) {
               ((e.hasOwnProperty(t) && O.isNullOrUndefined(e[t])) ||
                 0 == e[t]) &&
-                (B.warn(
+                (N.warn(
                   "event " +
                     e.eventId +
                     ": autofilling property " +
@@ -6174,10 +6174,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicCheckMaintenanceCommand = b.BasicCheckMaintenanceCommand;
     var R = n(36);
     t.BasicClientCommand = R.BasicClientCommand;
-    var N = n(410);
-    t.BasicConnectClientCommand = N.BasicConnectClientCommand;
-    var B = n(785);
-    t.BasicConnectToInstanceVOCommand = B.BasicConnectToInstanceVOCommand;
+    var B = n(410);
+    t.BasicConnectClientCommand = B.BasicConnectClientCommand;
+    var N = n(785);
+    t.BasicConnectToInstanceVOCommand = N.BasicConnectToInstanceVOCommand;
     var P = n(786);
     t.BasicConnectionFailedCommand = P.BasicConnectionFailedCommand;
     var M = n(787);
@@ -6296,11 +6296,11 @@ PERFORMANCE OF THIS SOFTWARE.
       be.BasicFacebookUserDataTrackingCommand;
     var Re = n(392);
     t.BasicInvitationTrackingCommand = Re.BasicInvitationTrackingCommand;
-    var Ne = n(393);
+    var Be = n(393);
     t.BasicPaymentShopClickTrackingCommand =
-      Ne.BasicPaymentShopClickTrackingCommand;
-    var Be = n(394);
-    t.BasicProfilingTrackingCommand = Be.BasicProfilingTrackingCommand;
+      Be.BasicPaymentShopClickTrackingCommand;
+    var Ne = n(394);
+    t.BasicProfilingTrackingCommand = Ne.BasicProfilingTrackingCommand;
     var Pe = n(395);
     t.BasicVerifyTrackingCommand = Pe.BasicVerifyTrackingCommand;
     var Me = n(397);
@@ -6411,11 +6411,11 @@ PERFORMANCE OF THIS SOFTWARE.
     t.ConcreteEnvironmentData = bt.ConcreteEnvironmentData;
     var Rt = n(456);
     t.ConcreteEnvironment = Rt.ConcreteEnvironment;
-    var Nt = n(836);
-    t.DevTestEnvironment = Nt.DevTestEnvironment;
-    var Bt = n(837);
+    var Bt = n(836);
+    t.DevTestEnvironment = Bt.DevTestEnvironment;
+    var Nt = n(837);
     t.FeatureBranchQualityAssuranceEnvironment =
-      Bt.FeatureBranchQualityAssuranceEnvironment;
+      Nt.FeatureBranchQualityAssuranceEnvironment;
     var Pt = n(186);
     t.LiveBranchingLiveEnvironment = Pt.LiveBranchingLiveEnvironment;
     var Mt = n(838);
@@ -6519,10 +6519,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicSessionData = bn.BasicSessionData;
     var Rn = n(852);
     t.BasicSharedObject = Rn.BasicSharedObject;
-    var Nn = n(121);
-    t.BasicSmartfoxClient = Nn.BasicSmartfoxClient;
-    var Bn = n(329);
-    t.BasicUserData = Bn.BasicUserData;
+    var Bn = n(121);
+    t.BasicSmartfoxClient = Bn.BasicSmartfoxClient;
+    var Nn = n(329);
+    t.BasicUserData = Nn.BasicUserData;
     var Pn = n(853);
     t.BasicWodData = Pn.BasicWodData;
     var Mn = n(330);
@@ -6635,10 +6635,10 @@ PERFORMANCE OF THIS SOFTWARE.
     var Ri = n(409);
     t.BasicGGSTextFieldMouseOverBehaviour =
       Ri.BasicGGSTextFieldMouseOverBehaviour;
-    var Ni = n(867);
-    t.AnimatedSpeechTextField = Ni.AnimatedSpeechTextField;
-    var Bi = n(868);
-    t.AgeGateValidationVO = Bi.AgeGateValidationVO;
+    var Bi = n(867);
+    t.AnimatedSpeechTextField = Bi.AnimatedSpeechTextField;
+    var Ni = n(868);
+    t.AgeGateValidationVO = Ni.AgeGateValidationVO;
     var Pi = n(368);
     t.BasicDialogVO = Pi.BasicDialogVO;
     var Mi = n(869);
@@ -6747,10 +6747,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.ServerErrorLOFactory = bs.ServerErrorLOFactory;
     var Rs = n(488);
     t.SocketErrorLOFactory = Rs.SocketErrorLOFactory;
-    var Ns = n(287);
-    t.TrackingIOErrorLOFactory = Ns.TrackingIOErrorLOFactory;
-    var Bs = n(288);
-    t.TrackingSecurityErrorLOFactory = Bs.TrackingSecurityErrorLOFactory;
+    var Bs = n(287);
+    t.TrackingIOErrorLOFactory = Bs.TrackingIOErrorLOFactory;
+    var Ns = n(288);
+    t.TrackingSecurityErrorLOFactory = Ns.TrackingSecurityErrorLOFactory;
     var Ps = n(283);
     t.TrackingVerificationErrorLOFactory =
       Ps.TrackingVerificationErrorLOFactory;
@@ -6859,10 +6859,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.PrivateOfferStateEnum = ba.PrivateOfferStateEnum;
     var Ra = n(469);
     t.BasicOfferDescriptionFactory = Ra.BasicOfferDescriptionFactory;
-    var Na = n(470);
-    t.OfferDescriptionAutoAccept = Na.OfferDescriptionAutoAccept;
-    var Ba = n(471);
-    t.OfferDescriptionCostC1 = Ba.OfferDescriptionCostC1;
+    var Ba = n(470);
+    t.OfferDescriptionAutoAccept = Ba.OfferDescriptionAutoAccept;
+    var Na = n(471);
+    t.OfferDescriptionCostC1 = Na.OfferDescriptionCostC1;
     var Pa = n(472);
     t.OfferDescriptionCostC2 = Pa.OfferDescriptionCostC2;
     var Ma = n(913);
@@ -6980,10 +6980,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.InteractiveBitmapClipComponent = br.InteractiveBitmapClipComponent;
     var Rr = n(932);
     t.BitmapClipContainer = Rr.BitmapClipContainer;
-    var Nr = n(496);
-    t.DisplayObjectClipContainer = Nr.DisplayObjectClipContainer;
-    var Br = n(933);
-    t.ArraySignal = Br.ArraySignal;
+    var Br = n(496);
+    t.DisplayObjectClipContainer = Br.DisplayObjectClipContainer;
+    var Nr = n(933);
+    t.ArraySignal = Nr.ArraySignal;
     var Pr = n(934);
     t.BooleanSignal = Pr.BooleanSignal;
     var Mr = n(51);
@@ -7086,11 +7086,11 @@ PERFORMANCE OF THIS SOFTWARE.
     t.ClientFunnelPlayTimeController = bo.ClientFunnelPlayTimeController;
     var Ro = n(38);
     t.ClientFunnelGameStates = Ro.ClientFunnelGameStates;
-    var No = n(290);
-    t.ConnectionTrackingEvent = No.ConnectionTrackingEvent;
-    var Bo = n(296);
+    var Bo = n(290);
+    t.ConnectionTrackingEvent = Bo.ConnectionTrackingEvent;
+    var No = n(296);
     t.DesktopDeviceInformationTrackingEvent =
-      Bo.DesktopDeviceInformationTrackingEvent;
+      No.DesktopDeviceInformationTrackingEvent;
     var Po = n(306);
     t.BrowserStateFullscreenTrackingEvent =
       Po.BrowserStateFullscreenTrackingEvent;
@@ -7198,10 +7198,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.AValueComponent = bl.AValueComponent;
     var Rl = n(500);
     t.ButtonsValueComponent = Rl.ButtonsValueComponent;
-    var Nl = n(501);
-    t.InputTextfieldValueComponent = Nl.InputTextfieldValueComponent;
-    var Bl = n(502);
-    t.SliderValueComponent = Bl.SliderValueComponent;
+    var Bl = n(501);
+    t.InputTextfieldValueComponent = Bl.InputTextfieldValueComponent;
+    var Nl = n(502);
+    t.SliderValueComponent = Nl.SliderValueComponent;
     var Pl = n(972);
     t.ValueChangerController = Pl.ValueChangerController;
     var Ml = n(503);
@@ -8083,10 +8083,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.Sabotage = b;
     var R = n(679);
     t.UnitsDismissed = R;
-    var N = n(680);
-    t.UnitsStarving = N;
-    var B = n(681);
-    t.WishingWellCoins = B;
+    var B = n(680);
+    t.UnitsStarving = B;
+    var N = n(681);
+    t.WishingWellCoins = N;
     var P = n(682);
     t.ClientFunnel = P;
     var M = n(683);
@@ -15881,7 +15881,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     ? "'"
                     : e.replace(/''/g, "'").slice(1, -1);
               },
-              N = function (e, t) {
+              B = function (e, t) {
                 if ("decimal" !== e && "percent" !== e)
                   throw new Error("Invalid style");
                 return t.main([
@@ -15890,7 +15890,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   "standard",
                 ]);
               },
-              B = /^([^0]*)(0+)([^0]*)$/,
+              N = /^([^0]*)(0+)([^0]*)$/,
               P = function (e, t, n) {
                 var i;
                 return 0 === e
@@ -15924,7 +15924,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     u(n),
                     n.on("get", l));
                   try {
-                    ((a = e.raw ? e.raw : N(e.style || "decimal", n)),
+                    ((a = e.raw ? e.raw : B(e.style || "decimal", n)),
                       (i = [(m = v(a, n, e))]));
                   } finally {
                     n.off("get", l);
@@ -15978,7 +15978,7 @@ PERFORMANCE OF THIS SOFTWARE.
                               L,
                               D,
                               b,
-                              N,
+                              B,
                               M;
                             return (
                               (c = t[2]),
@@ -16044,16 +16044,16 @@ PERFORMANCE OF THIS SOFTWARE.
                                         ? (e *= 100)
                                         : -1 !== C.indexOf("‰") && (e *= 1e3),
                                       a &&
-                                        ((N =
+                                        ((B =
                                           Math.abs(Math.floor(e)).toString()
                                             .length - 1),
-                                        (N = Math.min(N, a.maxExponent)) >= 3 &&
-                                          (O = a[N] && a[N].other),
+                                        (B = Math.min(B, a.maxExponent)) >= 3 &&
+                                          (O = a[B] && a[B].other),
                                         "0" === O
                                           ? (O = null)
                                           : O &&
                                             ((L = O.split("0").length - 1),
-                                            (b = N - (L - 1)),
+                                            (b = B - (L - 1)),
                                             (e /= Math.pow(10, b)))),
                                       (e = isNaN(m * u)
                                         ? (function (e, t, n, i, s, a) {
@@ -16119,8 +16119,8 @@ PERFORMANCE OF THIS SOFTWARE.
                                       a &&
                                         O &&
                                         ((M = n ? n(+e) : "other"),
-                                        (O = a[N][M] || O),
-                                        (D = O.match(B)),
+                                        (O = a[B][M] || O),
+                                        (D = O.match(N)),
                                         (i = function (e) {
                                           var t = [];
                                           return (
@@ -16324,7 +16324,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           },
                         ]
                       );
-                    })(e.raw ? e.raw : N(e.style || "decimal", n), n, e)),
+                    })(e.raw ? e.raw : B(e.style || "decimal", n), n, e)),
                     n.off("get", l),
                     (s = (function (e) {
                       return function numberParser(t) {
@@ -16445,7 +16445,7 @@ PERFORMANCE OF THIS SOFTWARE.
               (t._createErrorUnsupportedFeature = h),
               (t._numberNumberingSystem = E),
               (t._numberNumberingSystemDigitsMap = C),
-              (t._numberPattern = N),
+              (t._numberPattern = B),
               (t._numberSymbol = T),
               (t._looseMatching = D),
               (t._removeLiteralQuotes = R),
@@ -17708,8 +17708,8 @@ PERFORMANCE OF THIS SOFTWARE.
             return t.toUpperCase();
           },
           R = /(?:Left|Right|Width)/i,
-          N = /(M11|M12|M21|M22)=[\d\-\.e]+/gi,
-          B = /progid\:DXImageTransform\.Microsoft\.Matrix\(.+?\)/i,
+          B = /(M11|M12|M21|M22)=[\d\-\.e]+/gi,
+          N = /progid\:DXImageTransform\.Microsoft\.Matrix\(.+?\)/i,
           P = /,(?=[^\)]*(?:\(|$))/gi,
           M = /[\s,\(]/i,
           U = Math.PI / 180,
@@ -17872,11 +17872,11 @@ PERFORMANCE OF THIS SOFTWARE.
             if ((t = t || Q(e, null)))
               if ((n = t.length))
                 for (; --n > -1;)
-                  (-1 !== (s = t[n]).indexOf("-transform") && Be !== s) ||
+                  (-1 !== (s = t[n]).indexOf("-transform") && Ne !== s) ||
                     (a[s.replace(L, b)] = t.getPropertyValue(s));
               else
                 for (n in t)
-                  (-1 !== n.indexOf("Transform") && Ne !== n) || (a[n] = t[n]);
+                  (-1 !== n.indexOf("Transform") && Be !== n) || (a[n] = t[n]);
             else if ((t = e.currentStyle || e.style))
               for (n in t)
                 "string" == typeof n &&
@@ -18375,8 +18375,8 @@ PERFORMANCE OF THIS SOFTWARE.
               D,
               b = n.split(", ").join(",").split(" "),
               R = i.split(", ").join(",").split(" "),
-              N = b.length,
-              B = !1 !== u;
+              B = b.length,
+              N = !1 !== u;
             for (
               (-1 === i.indexOf(",") && -1 === n.indexOf(",")) ||
                 (-1 !== (i + n).indexOf("rgb") || -1 !== (i + n).indexOf("hsl")
@@ -18384,13 +18384,13 @@ PERFORMANCE OF THIS SOFTWARE.
                     (R = R.join(" ").replace(P, ", ").split(" ")))
                   : ((b = b.join(" ").split(",").join(", ").split(" ")),
                     (R = R.join(" ").split(",").join(", ").split(" "))),
-                (N = b.length)),
-                N !== R.length && (N = (b = (r || "").split(" ")).length),
+                (B = b.length)),
+                B !== R.length && (B = (b = (r || "").split(" ")).length),
                 o.plugin = _,
                 o.setRatio = c,
                 he.lastIndex = 0,
                 m = 0;
-              m < N;
+              m < B;
               m++
             )
               if (((f = b[m]), (S = R[m] + ""), (I = parseFloat(f)) || 0 === I))
@@ -18399,7 +18399,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   I,
                   oe(S, I),
                   S.replace(C, ""),
-                  !(!B || -1 === S.indexOf("px")) && Math.round,
+                  !(!N || -1 === S.indexOf("px")) && Math.round,
                   !0,
                 );
               else if (s && he.test(f))
@@ -18469,7 +18469,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       Number(O),
                       oe(y[d], O),
                       "",
-                      !(!B || "px" !== f.substr(A + O.length, 2)) && Math.round,
+                      !(!N || "px" !== f.substr(A + O.length, 2)) && Math.round,
                       0 === d,
                     ),
                     (h = A + O.length));
@@ -18627,8 +18627,8 @@ PERFORMANCE OF THIS SOFTWARE.
             "scaleX,scaleY,scaleZ,x,y,z,skewX,skewY,rotation,rotationX,rotationY,perspective,xPercent,yPercent".split(
               ",",
             ),
-          Ne = X("transform"),
-          Be = z + "transform",
+          Be = X("transform"),
+          Ne = z + "transform",
           Pe = X("transformOrigin"),
           Me = null !== X("perspective"),
           Ue = (V.Transform = function () {
@@ -18659,7 +18659,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 x: 100,
               })).getBoundingClientRect().width),
               (Le.style[Pe] = "50% 50%"),
-              (Le.style[Ne] = "scaleX(0.5)"),
+              (Le.style[Be] = "scaleX(0.5)"),
               (be = De === Le.getBoundingClientRect().width && !(m && Me)),
               ke.removeChild(Oe)),
             be),
@@ -18794,11 +18794,11 @@ PERFORMANCE OF THIS SOFTWARE.
               l = e._gsTransform || new Ue(),
               u = e.style;
             if (
-              (Ne
-                ? (i = $(e, Be, null, !0))
+              (Be
+                ? (i = $(e, Ne, null, !0))
                 : e.currentStyle &&
                   (i =
-                    (i = e.currentStyle.filter.match(N)) && 4 === i.length
+                    (i = e.currentStyle.filter.match(B)) && 4 === i.length
                       ? [
                           i[0].substr(4),
                           Number(i[2].substr(4)),
@@ -18809,20 +18809,20 @@ PERFORMANCE OF THIS SOFTWARE.
                         ].join(",")
                       : ""),
               (n = !i || "none" === i || "matrix(1, 0, 0, 1, 0, 0)" === i),
-              !Ne ||
+              !Be ||
                 (!(o = !Q(e) || "none" === Q(e).display) && e.parentNode) ||
                 (o && ((a = u.display), (u.display = "block")),
                 e.parentNode || ((r = 1), ke.appendChild(e)),
                 (n =
-                  !(i = $(e, Be, null, !0)) ||
+                  !(i = $(e, Ne, null, !0)) ||
                   "none" === i ||
                   "matrix(1, 0, 0, 1, 0, 0)" === i),
                 a ? (u.display = a) : o && Ze(u, "display"),
                 r && ke.removeChild(e)),
               (l.svg || (e.getCTM && He(e))) &&
                 (n &&
-                  -1 !== (u[Ne] + "").indexOf("matrix") &&
-                  ((i = u[Ne]), (n = 0)),
+                  -1 !== (u[Be] + "").indexOf("matrix") &&
+                  ((i = u[Be]), (n = 0)),
                 (s = e.getAttribute("transform")),
                 n &&
                   s &&
@@ -18897,35 +18897,35 @@ PERFORMANCE OF THIS SOFTWARE.
                   D = r[7],
                   b = r[8],
                   R = r[9],
-                  N = r[10],
-                  B = r[12],
+                  B = r[10],
+                  N = r[12],
                   P = r[13],
                   M = r[14],
                   U = r[11],
-                  F = Math.atan2(L, N);
+                  F = Math.atan2(L, B);
                 (m.zOrigin &&
-                  ((B = b * (M = -m.zOrigin) - r[12]),
+                  ((N = b * (M = -m.zOrigin) - r[12]),
                   (P = R * M - r[13]),
-                  (M = N * M + m.zOrigin - r[14])),
+                  (M = B * M + m.zOrigin - r[14])),
                   (m.rotationX = F * G),
                   F &&
                     ((g = A * (f = Math.cos(-F)) + b * (S = Math.sin(-F))),
                     (E = O * f + R * S),
-                    (C = L * f + N * S),
+                    (C = L * f + B * S),
                     (b = A * -S + b * f),
                     (R = O * -S + R * f),
-                    (N = L * -S + N * f),
+                    (B = L * -S + B * f),
                     (U = D * -S + U * f),
                     (A = g),
                     (O = E),
                     (L = C)),
-                  (F = Math.atan2(-I, N)),
+                  (F = Math.atan2(-I, B)),
                   (m.rotationY = F * G),
                   F &&
                     ((E = y * (f = Math.cos(-F)) - R * (S = Math.sin(-F))),
-                    (C = I * f - N * S),
+                    (C = I * f - B * S),
                     (R = y * S + R * f),
-                    (N = I * S + N * f),
+                    (B = I * S + B * f),
                     (U = v * S + U * f),
                     (T = g = T * f - b * S),
                     (y = E),
@@ -18952,7 +18952,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   (m.scaleY =
                     ((1e5 * Math.sqrt(O * O + L * L) + 0.5) | 0) / 1e5),
                   (m.scaleZ =
-                    ((1e5 * Math.sqrt(b * b + R * R + N * N) + 0.5) | 0) / 1e5),
+                    ((1e5 * Math.sqrt(b * b + R * R + B * B) + 0.5) | 0) / 1e5),
                   (T /= m.scaleX),
                   (A /= m.scaleY),
                   (y /= m.scaleX),
@@ -18963,7 +18963,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       "simple" !== m.skewType && (m.scaleY *= 1 / Math.cos(F)))
                     : (m.skewX = 0),
                   (m.perspective = U ? 1 / (U < 0 ? -U : U) : 0),
-                  (m.x = B),
+                  (m.x = N),
                   (m.y = P),
                   (m.z = M),
                   m.svg &&
@@ -19015,9 +19015,9 @@ PERFORMANCE OF THIS SOFTWARE.
               n &&
                 ((e._gsTransform = m),
                 m.svg &&
-                  (Ae && e.style[Ne]
+                  (Ae && e.style[Be]
                     ? i.default.delayedCall(0.001, function () {
-                        Ze(e.style, Ne);
+                        Ze(e.style, Be);
                       })
                     : !Ae &&
                       e.getAttribute("transform") &&
@@ -19072,7 +19072,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     ")"
                   : ", sizingMethod='auto expand')"),
                 -1 !== t.indexOf("DXImageTransform.Microsoft.Matrix(")
-                  ? (_.filter = t.replace(B, C))
+                  ? (_.filter = t.replace(N, C))
                   : (_.filter = C + " " + t),
                 (0 !== e && 1 !== e) ||
                   (1 === r &&
@@ -19156,8 +19156,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   D = I.scaleX,
                   b = I.scaleY,
                   R = I.scaleZ,
-                  N = I.x,
-                  B = I.y,
+                  B = I.x,
+                  N = I.y,
                   P = I.z,
                   M = I.svg,
                   G = I.perspective,
@@ -19199,21 +19199,21 @@ PERFORMANCE OF THIS SOFTWARE.
                           (n *= t = Math.sqrt(1 + t * t)),
                           (a *= t))),
                       M &&
-                        ((N +=
+                        ((B +=
                           I.xOrigin -
                           (I.xOrigin * n + I.yOrigin * i) +
                           I.xOffset),
-                        (B +=
+                        (N +=
                           I.yOrigin -
                           (I.xOrigin * a + I.yOrigin * r) +
                           I.yOffset),
                         Ae &&
                           (I.xPercent || I.yPercent) &&
                           ((g = this.t.getBBox()),
-                          (N += 0.01 * I.xPercent * g.width),
-                          (B += 0.01 * I.yPercent * g.height)),
-                        N < (g = 1e-6) && N > -g && (N = 0),
-                        B < g && B > -g && (B = 0)),
+                          (B += 0.01 * I.xPercent * g.width),
+                          (N += 0.01 * I.yPercent * g.height)),
+                        B < (g = 1e-6) && B > -g && (B = 0),
+                        N < g && N > -g && (N = 0)),
                       (S =
                         ((n * y) | 0) / y +
                         "," +
@@ -19223,13 +19223,13 @@ PERFORMANCE OF THIS SOFTWARE.
                         "," +
                         ((r * y) | 0) / y +
                         "," +
-                        N +
-                        "," +
                         B +
+                        "," +
+                        N +
                         ")"),
                       M && Ae
                         ? this.t.setAttribute("transform", "matrix(" + S)
-                        : (v[Ne] =
+                        : (v[Be] =
                             (I.xPercent || I.yPercent
                               ? "translate(" +
                                 I.xPercent +
@@ -19237,7 +19237,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                 I.yPercent +
                                 "%) matrix("
                               : "matrix(") + S))
-                    : (v[Ne] =
+                    : (v[Be] =
                         (I.xPercent || I.yPercent
                           ? "translate(" +
                             I.xPercent +
@@ -19249,9 +19249,9 @@ PERFORMANCE OF THIS SOFTWARE.
                         ",0,0," +
                         b +
                         "," +
-                        N +
-                        "," +
                         B +
+                        "," +
+                        N +
                         ")");
                 else {
                   if (
@@ -19280,7 +19280,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       (r = E));
                   else {
                     if (!(L || O || 1 !== R || G || M))
-                      return void (v[Ne] =
+                      return void (v[Be] =
                         (I.xPercent || I.yPercent
                           ? "translate(" +
                             I.xPercent +
@@ -19288,9 +19288,9 @@ PERFORMANCE OF THIS SOFTWARE.
                             I.yPercent +
                             "%) translate3d("
                           : "translate3d(") +
-                        N +
-                        "px," +
                         B +
+                        "px," +
+                        N +
                         "px," +
                         P +
                         "px)" +
@@ -19331,18 +19331,18 @@ PERFORMANCE OF THIS SOFTWARE.
                     1 !== b && ((i *= b), (r *= b), (u *= b), (d *= b)),
                     1 !== D && ((n *= D), (a *= D), (l *= D), (c *= D)),
                     (p || M) &&
-                      (p && ((N += s * -p), (B += o * -p), (P += _ * -p + p)),
+                      (p && ((B += s * -p), (N += o * -p), (P += _ * -p + p)),
                       M &&
-                        ((N +=
+                        ((B +=
                           I.xOrigin -
                           (I.xOrigin * n + I.yOrigin * i) +
                           I.xOffset),
-                        (B +=
+                        (N +=
                           I.yOrigin -
                           (I.xOrigin * a + I.yOrigin * r) +
                           I.yOffset)),
-                      N < g && N > -g && (N = "0"),
                       B < g && B > -g && (B = "0"),
+                      N < g && N > -g && (N = "0"),
                       P < g && P > -g && (P = 0)),
                     (S =
                       I.xPercent || I.yPercent
@@ -19383,8 +19383,8 @@ PERFORMANCE OF THIS SOFTWARE.
                           ","))
                       : (S += ",0,0,0,0,1,0,"),
                     (S +=
-                      N + "," + B + "," + P + "," + (G ? 1 + -P / G : 1) + ")"),
-                    (v[Ne] = S));
+                      B + "," + N + "," + P + "," + (G ? 1 + -P / G : 1) + ")"),
+                    (v[Be] = S));
                 }
               });
         (((l = Ue.prototype).x =
@@ -19436,9 +19436,9 @@ PERFORMANCE OF THIS SOFTWARE.
                   ((L.skewType = A.skewType || L.skewType || a.defaultSkewType),
                   (s._transform = L),
                   "rotationZ" in A && (A.rotation = A.rotationZ),
-                  D && "string" == typeof D && Ne)
+                  D && "string" == typeof D && Be)
                 )
-                  (((m = W.style)[Ne] = D),
+                  (((m = W.style)[Be] = D),
                     (m.display = "block"),
                     (m.position = "absolute"),
                     -1 !== D.indexOf("%") &&
@@ -19608,7 +19608,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       ))),
                     (D = "0px 0px")),
                   (D || (Me && d && L.zOrigin)) &&
-                    (Ne
+                    (Be
                       ? ((h = !0),
                         (T = Pe),
                         (D = (D || $(e, T, n, !1, "50% 50%")) + ""),
@@ -20036,7 +20036,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       : (n = "transformOrigin" === n ? Pe : o[n].p)),
                   Ze(r, n));
             s &&
-              (Ze(r, Ne),
+              (Ze(r, Be),
               (a = this.t._gsTransform) &&
                 (a.svg &&
                   (this.t.removeAttribute("data-svg-origin"),
@@ -20116,7 +20116,7 @@ PERFORMANCE OF THIS SOFTWARE.
             ) {
               for (
                 A = 3 === this._transformType,
-                  Ne
+                  Be
                     ? c &&
                       ((_ = !0),
                       "" === O.zIndex &&
@@ -20136,7 +20136,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 C = C._next;
               ((v = new Ce(i, "transform", 0, 0, null, 2)),
                 this._linkCSSP(v, null, C),
-                (v.setRatio = Ne ? Ye : Ke),
+                (v.setRatio = Be ? Ye : Ke),
                 (v.data = this._transform || qe(i, n, !0)),
                 (v.tween = l),
                 (v.pr = -1),
@@ -24729,17 +24729,17 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
                 if (O) {
                   ((T *= Math.abs(v.a)), (y *= Math.abs(v.d)));
-                  var N,
-                    B,
+                  var B,
+                    N,
                     P =
                       void 0 !== E.customCenterHittestArea
                         ? E.customCenterHittestArea
                         : a.defaultCenterHittestArea;
                   if (
-                    ((N = Math.abs(v.tx + 0.5 * T * Math.sign(v.a) - r)),
-                    (B = Math.abs(v.ty + 0.5 * y * Math.sign(v.d) - o)),
-                    (L = N < T * P && B < y * P),
-                    !(N < 0.5 * T && B < 0.5 * y))
+                    ((B = Math.abs(v.tx + 0.5 * T * Math.sign(v.a) - r)),
+                    (N = Math.abs(v.ty + 0.5 * y * Math.sign(v.d) - o)),
+                    (L = B < T * P && N < y * P),
+                    !(B < 0.5 * T && N < 0.5 * y))
                   )
                     continue;
                   if (
@@ -53734,6 +53734,148 @@ and limitations under the License.
         (ItemVersions.prototype.fill = function () {
           ((this.assets.Deco_Building_springBonfire =
             "itemassets/Building/Deco/Deco_Building_springBonfire/Deco_Building_springBonfire--1616681902168"),
+            (this.assets.Eventunit_Unit_BthRangeDefender =
+              "itemassets/Units/Eventunit/Eventunit_Unit_BthRangeDefender/Eventunit_Unit_BthRangeDefender--1792600603566"),
+            (this.assets.Eventunit_Unit_BthRangeAttacker =
+              "itemassets/Units/Eventunit/Eventunit_Unit_BthRangeAttacker/Eventunit_Unit_BthRangeAttacker--1792599504180"),
+            (this.assets.Eventunit_Unit_BthMeleeDefender =
+              "itemassets/Units/Eventunit/Eventunit_Unit_BthMeleeDefender/Eventunit_Unit_BthMeleeDefender--1792600603566"),
+            (this.assets.Eventunit_Unit_BthMeleeAttacker =
+              "itemassets/Units/Eventunit/Eventunit_Unit_BthMeleeAttacker/Eventunit_Unit_BthMeleeAttacker--1792599504180"),
+            (this.assets.Eventunit_Unit_BtHGaterer =
+              "itemassets/Units/Eventunit/Eventunit_Unit_BtHGaterer/Eventunit_Unit_BtHGaterer--1792599504180"),
+            (this.assets.Outpost_Mapobject_Special_LuxuriousMarket =
+              "itemassets/Worldmap/WorldmapObjects/Outposts/Outpost_Mapobject_Special_LuxuriousMarket/Outpost_Mapobject_Special_LuxuriousMarket--1792585970701"),
+            (this.assets.Skin_Mapmovement_TravellingStall_Eiland =
+              "itemassets/Worldmap/WorldmapObjects/Movements/Skins/Skin_Mapmovement_TravellingStall_Eiland/Skin_Mapmovement_TravellingStall_Eiland--1792585970701"),
+            (this.assets.Skin_Mapmovement_TravellingStall_Common =
+              "itemassets/Worldmap/WorldmapObjects/Movements/Skins/Skin_Mapmovement_TravellingStall_Common/Skin_Mapmovement_TravellingStall_Common--1792585970701"),
+            (this.assets.Skin_Mapmovement_AstrolabeKnight_Eiland =
+              "itemassets/Worldmap/WorldmapObjects/Movements/Skins/Skin_Mapmovement_AstrolabeKnight_Eiland/Skin_Mapmovement_AstrolabeKnight_Eiland--1792585970701"),
+            (this.assets.Skin_Mapmovement_AstrolabeKnight_Common =
+              "itemassets/Worldmap/WorldmapObjects/Movements/Skins/Skin_Mapmovement_AstrolabeKnight_Common/Skin_Mapmovement_AstrolabeKnight_Common--1792585970701"),
+            (this.assets.Metropol_Mapobject_Special_LuxuriousMarket =
+              "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_LuxuriousMarket/Metropol_Mapobject_Special_LuxuriousMarket--1792585970701"),
+            (this.assets.Capital_Mapobject_Special_LuxuriousMarket =
+              "itemassets/Worldmap/WorldmapObjects/Landmarks/Capital_Mapobject_Special_LuxuriousMarket/Capital_Mapobject_Special_LuxuriousMarket--1792585970701"),
+            (this.assets.Castle_Mapobject_Special_LuxuriousMarket =
+              "itemassets/Worldmap/WorldmapObjects/Castles/Castle_Mapobject_Special_LuxuriousMarket/Castle_Mapobject_Special_LuxuriousMarket--1792585970701"),
+            (this.assets.Item_Unique_1615 =
+              "itemassets/Equipment/Uniques/Item_Unique_1615/Item_Unique_1615--1792585970701"),
+            (this.assets.Item_Unique_1614 =
+              "itemassets/Equipment/Uniques/Item_Unique_1614/Item_Unique_1614--1792585970701"),
+            (this.assets.Item_Unique_1613 =
+              "itemassets/Equipment/Uniques/Item_Unique_1613/Item_Unique_1613--1792585970701"),
+            (this.assets.Item_Unique_1612 =
+              "itemassets/Equipment/Uniques/Item_Unique_1612/Item_Unique_1612--1792585970701"),
+            (this.assets.Item_Unique_1609 =
+              "itemassets/Equipment/Uniques/Item_Unique_1609/Item_Unique_1609--1792585970701"),
+            (this.assets.Item_Unique_1608 =
+              "itemassets/Equipment/Uniques/Item_Unique_1608/Item_Unique_1608--1792585970701"),
+            (this.assets.Item_Unique_1607 =
+              "itemassets/Equipment/Uniques/Item_Unique_1607/Item_Unique_1607--1792585970701"),
+            (this.assets.Item_Unique_1606 =
+              "itemassets/Equipment/Uniques/Item_Unique_1606/Item_Unique_1606--1792585970701"),
+            (this.assets.Item_Unique_1605 =
+              "itemassets/Equipment/Uniques/Item_Unique_1605/Item_Unique_1605--1792585970701"),
+            (this.assets.Item_Unique_1604 =
+              "itemassets/Equipment/Uniques/Item_Unique_1604/Item_Unique_1604--1792585970701"),
+            (this.assets.Item_Unique_1603 =
+              "itemassets/Equipment/Uniques/Item_Unique_1603/Item_Unique_1603--1792585970701"),
+            (this.assets.Item_Unique_1602 =
+              "itemassets/Equipment/Uniques/Item_Unique_1602/Item_Unique_1602--1792585970701"),
+            (this.assets.Item_Unique_1601 =
+              "itemassets/Equipment/Uniques/Item_Unique_1601/Item_Unique_1601--1792585970701"),
+            (this.assets.Item_Unique_1600 =
+              "itemassets/Equipment/Uniques/Item_Unique_1600/Item_Unique_1600--1792585970701"),
+            (this.assets.Item_Unique_1599 =
+              "itemassets/Equipment/Uniques/Item_Unique_1599/Item_Unique_1599--1792585970701"),
+            (this.assets.Item_Unique_1598 =
+              "itemassets/Equipment/Uniques/Item_Unique_1598/Item_Unique_1598--1792585970701"),
+            (this.assets.Item_Unique_1597 =
+              "itemassets/Equipment/Uniques/Item_Unique_1597/Item_Unique_1597--1792585970701"),
+            (this.assets.Item_Unique_1596 =
+              "itemassets/Equipment/Uniques/Item_Unique_1596/Item_Unique_1596--1792585970701"),
+            (this.assets.Item_Unique_1595 =
+              "itemassets/Equipment/Uniques/Item_Unique_1595/Item_Unique_1595--1792585970701"),
+            (this.assets.Item_Unique_1594 =
+              "itemassets/Equipment/Uniques/Item_Unique_1594/Item_Unique_1594--1792585970701"),
+            (this.assets.Item_Unique_1593 =
+              "itemassets/Equipment/Uniques/Item_Unique_1593/Item_Unique_1593--1792585970701"),
+            (this.assets.Item_Gem_Unique_538 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_538/Item_Gem_Unique_538--1792585970701"),
+            (this.assets.Item_Gem_Unique_537 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_537/Item_Gem_Unique_537--1792585970701"),
+            (this.assets.Item_Gem_Unique_536 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_536/Item_Gem_Unique_536--1792585970701"),
+            (this.assets.Item_Gem_Unique_535 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_535/Item_Gem_Unique_535--1792585970701"),
+            (this.assets.Item_Gem_Unique_534 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_534/Item_Gem_Unique_534--1792585970701"),
+            (this.assets.Item_Gem_Unique_533 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_533/Item_Gem_Unique_533--1792585970701"),
+            (this.assets.Item_Gem_Unique_532 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_532/Item_Gem_Unique_532--1792585970701"),
+            (this.assets.Item_Gem_Unique_531 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_531/Item_Gem_Unique_531--1792585970701"),
+            (this.assets.Item_Gem_Unique_530 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_530/Item_Gem_Unique_530--1792585970701"),
+            (this.assets.Item_Gem_Unique_529 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_529/Item_Gem_Unique_529--1792585970701"),
+            (this.assets.Item_Gem_Unique_528 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_528/Item_Gem_Unique_528--1792585970701"),
+            (this.assets.Item_Gem_Unique_527 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_527/Item_Gem_Unique_527--1792585970701"),
+            (this.assets.Item_Gem_Unique_526 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_526/Item_Gem_Unique_526--1792585970701"),
+            (this.assets.Hero_Unique_1609 =
+              "itemassets/Equipment/Heroes/Hero_Unique_1609/Hero_Unique_1609--1792585970701"),
+            (this.assets.Hero_Unique_1604 =
+              "itemassets/Equipment/Heroes/Hero_Unique_1604/Hero_Unique_1604--1792585970701"),
+            (this.assets.Hero_Unique_1599 =
+              "itemassets/Equipment/Heroes/Hero_Unique_1599/Hero_Unique_1599--1792585970701"),
+            (this.assets.Deco_Building_FallenColossus =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_FallenColossus/Deco_Building_FallenColossus--1792585970701"),
+            (this.assets.Deco_Building_ExaltedRedWaterfallPavilion =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedRedWaterfallPavilion/Deco_Building_ExaltedRedWaterfallPavilion--1792585970701"),
+            (this.assets.Deco_Building_ExaltedRedSwordKnight =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedRedSwordKnight/Deco_Building_ExaltedRedSwordKnight--1792585970701"),
+            (this.assets.Deco_Building_ExaltedRedShieldKnight =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedRedShieldKnight/Deco_Building_ExaltedRedShieldKnight--1792585970701"),
+            (this.assets.Deco_Building_ExaltedRedLuxuriousMarket =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedRedLuxuriousMarket/Deco_Building_ExaltedRedLuxuriousMarket--1792585970701"),
+            (this.assets.Deco_Building_ExaltedRedKnightlyFeastCourt =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedRedKnightlyFeastCourt/Deco_Building_ExaltedRedKnightlyFeastCourt--1792585970701"),
+            (this.assets.Deco_Building_ExaltedRedFallenColossus =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedRedFallenColossus/Deco_Building_ExaltedRedFallenColossus--1792585970701"),
+            (this.assets.Deco_Building_ExaltedPurpleWaterfallPavilion =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedPurpleWaterfallPavilion/Deco_Building_ExaltedPurpleWaterfallPavilion--1792585970701"),
+            (this.assets.Deco_Building_ExaltedPurpleSwordKnight =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedPurpleSwordKnight/Deco_Building_ExaltedPurpleSwordKnight--1792585970701"),
+            (this.assets.Deco_Building_ExaltedPurpleShieldKnight =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedPurpleShieldKnight/Deco_Building_ExaltedPurpleShieldKnight--1792585970701"),
+            (this.assets.Deco_Building_ExaltedPurpleLuxuriousMarket =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedPurpleLuxuriousMarket/Deco_Building_ExaltedPurpleLuxuriousMarket--1792585970701"),
+            (this.assets.Deco_Building_ExaltedPurpleKnightlyFeastCourt =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedPurpleKnightlyFeastCourt/Deco_Building_ExaltedPurpleKnightlyFeastCourt--1792585970701"),
+            (this.assets.Deco_Building_ExaltedPurpleFallenColossus =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedPurpleFallenColossus/Deco_Building_ExaltedPurpleFallenColossus--1792585970701"),
+            (this.assets.Deco_Building_ExaltedGreenWaterfallPavilion =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedGreenWaterfallPavilion/Deco_Building_ExaltedGreenWaterfallPavilion--1792585970701"),
+            (this.assets.Deco_Building_ExaltedGreenSwordKnight =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedGreenSwordKnight/Deco_Building_ExaltedGreenSwordKnight--1792585970701"),
+            (this.assets.Deco_Building_ExaltedGreenShieldKnight =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedGreenShieldKnight/Deco_Building_ExaltedGreenShieldKnight--1792585970701"),
+            (this.assets.Deco_Building_ExaltedGreenLuxuriousMarket =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedGreenLuxuriousMarket/Deco_Building_ExaltedGreenLuxuriousMarket--1792585970701"),
+            (this.assets.Deco_Building_ExaltedGreenKnightlyFeastCourt =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedGreenKnightlyFeastCourt/Deco_Building_ExaltedGreenKnightlyFeastCourt--1792585970701"),
+            (this.assets.Deco_Building_ExaltedGreenFallenColossus =
+              "itemassets/Building/Deco/EffectDecos/BlackFriday2026/Deco_Building_ExaltedGreenFallenColossus/Deco_Building_ExaltedGreenFallenColossus--1792585970701"),
+            (this.assets.JadeOasisTradeTroopSelectionExt =
+              "itemassets/Dialogs/AllianceBattleGrounds/JadeOasisTradeTroopSelectionExt/JadeOasisTradeTroopSelectionExt--1792510276769"),
+            (this.assets.JadeOasisTradeExt =
+              "itemassets/Dialogs/AllianceBattleGrounds/JadeOasisTradeExt/JadeOasisTradeExt--1792749465951"),
             (this.assets.Collectable_Currency_SilkVeil =
               "itemassets/Collectables/Collectable_Currency_SilkVeil/Collectable_Currency_SilkVeil--1791819495818"),
             (this.assets.Collectable_Currency_SilkCoat =
@@ -53743,11 +53885,11 @@ and limitations under the License.
             (this.assets.Collectable_Currency_JadeArrowheads =
               "itemassets/Collectables/Collectable_Currency_JadeArrowheads/Collectable_Currency_JadeArrowheads--1791819495818"),
             (this.assets.ModernOkBigBlue =
-              "itemassets/Dialogs/ModernOkBigBlue/ModernOkBigBlue--1791464590995"),
+              "itemassets/Dialogs/ModernOkBigBlue/ModernOkBigBlue--1792688157156"),
             (this.assets.Collectable_Currency_RestoredJadeStatuette =
               "itemassets/Collectables/Collectable_Currency_RestoredJadeStatuette/Collectable_Currency_RestoredJadeStatuette--1791464590995"),
             (this.assets.Collectable_Currency_CaravanIngot =
-              "itemassets/Collectables/Collectable_Currency_CaravanIngot/Collectable_Currency_CaravanIngot--1791464590995"),
+              "itemassets/Collectables/Collectable_Currency_CaravanIngot/Collectable_Currency_CaravanIngot--1792595990413"),
             (this.assets.Collectable_Currency_AncientJadeStatuette =
               "itemassets/Collectables/Collectable_Currency_AncientJadeStatuette/Collectable_Currency_AncientJadeStatuette--1791464590995"),
             (this.assets.Collectable_Currency_WovenSilk =
@@ -53997,9 +54139,9 @@ and limitations under the License.
             (this.assets.CastleAllianceBattleGroundStarter_Jade =
               "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundStarter_Jade/CastleAllianceBattleGroundStarter_Jade--1788510004109"),
             (this.assets.CastleAllianceBattleGroundPreBuildCastleJade =
-              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundPreBuildCastleJade/CastleAllianceBattleGroundPreBuildCastleJade--1789569247906"),
+              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundPreBuildCastleJade/CastleAllianceBattleGroundPreBuildCastleJade--1792601551587"),
             (this.assets.CastleAllianceBattleGroundEvent_Blue =
-              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundEvent_Blue/CastleAllianceBattleGroundEvent_Blue--1791819495818"),
+              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundEvent_Blue/CastleAllianceBattleGroundEvent_Blue--1792749465951"),
             (this.assets.CastleAllianceBattleGroundBuyInfo_Blue =
               "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundBuyInfo_Blue/CastleAllianceBattleGroundBuyInfo_Blue--1788510004109"),
             (this.assets.Citadel_Mapobject_Level5 =
@@ -54007,13 +54149,13 @@ and limitations under the License.
             (this.assets.Citadel_Mapobject_Level4 =
               "itemassets/Worldmap/WorldmapObjects/Landmarks/Citadel_Mapobject_Level4/Citadel_Mapobject_Level4--1787837807533"),
             (this.assets.Citadel_Mapobject_Level3 =
-              "itemassets/Worldmap/WorldmapObjects/Landmarks/Citadel_Mapobject_Level3/Citadel_Mapobject_Level3--1787837807533"),
+              "itemassets/Worldmap/WorldmapObjects/Landmarks/Citadel_Mapobject_Level3/Citadel_Mapobject_Level3--1792498123506"),
             (this.assets.Citadel_Mapobject_Level2 =
-              "itemassets/Worldmap/WorldmapObjects/Landmarks/Citadel_Mapobject_Level2/Citadel_Mapobject_Level2--1787837807533"),
+              "itemassets/Worldmap/WorldmapObjects/Landmarks/Citadel_Mapobject_Level2/Citadel_Mapobject_Level2--1792498123506"),
             (this.assets.Citadel_Mapobject_Level1 =
               "itemassets/Worldmap/WorldmapObjects/Landmarks/Citadel_Mapobject_Level1/Citadel_Mapobject_Level1--1787837807533"),
             (this.assets.DetailView_EventSkin_Jade_Wall =
-              "itemassets/CastleDetailView/ABG_Maya/DetailView_EventSkin_Jade_Wall/DetailView_EventSkin_Jade_Wall--1788178003787"),
+              "itemassets/CastleDetailView/ABG_Maya/DetailView_EventSkin_Jade_Wall/DetailView_EventSkin_Jade_Wall--1792498123506"),
             (this.assets.DetailView_EventSkin_Jade_Citadel =
               "itemassets/CastleDetailView/ABG_Maya/DetailView_EventSkin_Jade_Citadel/DetailView_EventSkin_Jade_Citadel--1788178003787"),
             (this.assets.DetailView_Background_EventSkin_Jade =
@@ -55189,9 +55331,9 @@ and limitations under the License.
             (this.assets.Deco_Building_ExaltedGreenCarnivalCanal =
               "itemassets/Building/Deco/EffectDecos/Carnival2026/Deco_Building_ExaltedGreenCarnivalCanal/Deco_Building_ExaltedGreenCarnivalCanal--1769425845517"),
             (this.assets.BarrelWorkshop_Building_PremiumCarnivalBarrelWorkshop =
-              "itemassets/Building/BarrelWorkshop/BarrelWorkshop_Building_PremiumCarnivalBarrelWorkshop/BarrelWorkshop_Building_PremiumCarnivalBarrelWorkshop--1770043600591"),
-            (this.assets.GachaEventMain_Animation_Idle_CarnivalGacha =
-              "itemassets/Dialogs/SeasonGacha/CarnivalGacha/GachaEventMain_Animation_Idle_CarnivalGacha/GachaEventMain_Animation_Idle_CarnivalGacha--1769438021105"),
+              "itemassets/Building/BarrelWorkshop/BarrelWorkshop_Building_PremiumCarnivalBarrelWorkshop/BarrelWorkshop_Building_PremiumCarnivalBarrelWorkshop--1770043600591"));
+          ((this.assets.GachaEventMain_Animation_Idle_CarnivalGacha =
+            "itemassets/Dialogs/SeasonGacha/CarnivalGacha/GachaEventMain_Animation_Idle_CarnivalGacha/GachaEventMain_Animation_Idle_CarnivalGacha--1769438021105"),
             (this.assets.GachaEventMain_Animation_Active_CarnivalGacha =
               "itemassets/Dialogs/SeasonGacha/CarnivalGacha/GachaEventMain_Animation_Active_CarnivalGacha/GachaEventMain_Animation_Active_CarnivalGacha--1769512283308"),
             (this.assets.Btn_CarnivalGacha =
@@ -55331,9 +55473,9 @@ and limitations under the License.
             (this.assets.Item_Unique_1379 =
               "itemassets/Equipment/Uniques/Item_Unique_1379/Item_Unique_1379--1762857156746"),
             (this.assets.Item_Unique_1378 =
-              "itemassets/Equipment/Uniques/Item_Unique_1378/Item_Unique_1378--1762857156746"));
-          ((this.assets.Item_Unique_1377 =
-            "itemassets/Equipment/Uniques/Item_Unique_1377/Item_Unique_1377--1762857156746"),
+              "itemassets/Equipment/Uniques/Item_Unique_1378/Item_Unique_1378--1762857156746"),
+            (this.assets.Item_Unique_1377 =
+              "itemassets/Equipment/Uniques/Item_Unique_1377/Item_Unique_1377--1762857156746"),
             (this.assets.Item_Unique_1376 =
               "itemassets/Equipment/Uniques/Item_Unique_1376/Item_Unique_1376--1762857156746"),
             (this.assets.Item_Unique_1375 =
@@ -56789,9 +56931,9 @@ and limitations under the License.
             (this.assets.BarrelWorkshop_Building_Level3 =
               "itemassets/Building/BarrelWorkshop/BarrelWorkshop_Building_Level3/BarrelWorkshop_Building_Level3--1719393229687"),
             (this.assets.Deco_Building_ExaltedGreenLavaShrineofDuality =
-              "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedGreenLavaShrineofDuality/Deco_Building_ExaltedGreenLavaShrineofDuality--1719314527862"),
-            (this.assets.Deco_Building_SpiralStoneoftheSunlitShore =
-              "itemassets/Building/Deco/Deco_Building_SpiralStoneoftheSunlitShore/Deco_Building_SpiralStoneoftheSunlitShore--1719314527862"),
+              "itemassets/Building/Deco/EffectDecos/Deco_Building_ExaltedGreenLavaShrineofDuality/Deco_Building_ExaltedGreenLavaShrineofDuality--1719314527862"));
+          ((this.assets.Deco_Building_SpiralStoneoftheSunlitShore =
+            "itemassets/Building/Deco/Deco_Building_SpiralStoneoftheSunlitShore/Deco_Building_SpiralStoneoftheSunlitShore--1719314527862"),
             (this.assets.Btn_BestsellerShop_2004summer2_Hub =
               "itemassets/StatusIcons/Btn_BestsellerShop_2004summer2_Hub/Btn_BestsellerShop_2004summer2_Hub--1719219865455"),
             (this.assets.Outpost_Mapobject_Special_SummerAppearence =
@@ -56931,9 +57073,9 @@ and limitations under the License.
             (this.assets.ReinforcedVault_Building_Level3 =
               "itemassets/Building/ReinforcedVault/ReinforcedVault_Building_Level3/ReinforcedVault_Building_Level3--1714489583597"),
             (this.assets.ReinforcedVault_Building_Level2 =
-              "itemassets/Building/ReinforcedVault/ReinforcedVault_Building_Level2/ReinforcedVault_Building_Level2--1714489583597"));
-          ((this.assets.ReinforcedVault_Building_Level1 =
-            "itemassets/Building/ReinforcedVault/ReinforcedVault_Building_Level1/ReinforcedVault_Building_Level1--1714489583597"),
+              "itemassets/Building/ReinforcedVault/ReinforcedVault_Building_Level2/ReinforcedVault_Building_Level2--1714489583597"),
+            (this.assets.ReinforcedVault_Building_Level1 =
+              "itemassets/Building/ReinforcedVault/ReinforcedVault_Building_Level1/ReinforcedVault_Building_Level1--1714489583597"),
             (this.assets.RecruitDialogExternal_May24 =
               "itemassets/Dialogs/recruitment/RecruitDialogExternal_May24/RecruitDialogExternal_May24--1731513329172"),
             (this.assets.Outpost_Mapobject_Level8 =
@@ -58389,9 +58531,9 @@ and limitations under the License.
             (this.assets.Item_Unique_1127 =
               "itemassets/Equipment/Uniques/Item_Unique_1127/Item_Unique_1127--1656325239176"),
             (this.assets.Deco_Building_BeerBarrelWell =
-              "itemassets/Building/Deco/Deco_Building_BeerBarrelWell/Deco_Building_BeerBarrelWell--1656325239176"),
-            (this.assets.MysteryBoxInfo2 =
-              "itemassets/Dialogs/RewardHub/MysteryBox/MysteryBoxInfo2/MysteryBoxInfo2--1657192012062"),
+              "itemassets/Building/Deco/Deco_Building_BeerBarrelWell/Deco_Building_BeerBarrelWell--1656325239176"));
+          ((this.assets.MysteryBoxInfo2 =
+            "itemassets/Dialogs/RewardHub/MysteryBox/MysteryBoxInfo2/MysteryBoxInfo2--1657192012062"),
             (this.assets.EventDifficultyTeaser_6 =
               "itemassets/Dialogs/Events/DifficultyScaling/EventDifficultyTeaser_6/EventDifficultyTeaser_6--1655465940060"),
             (this.assets.Collectable_MysteryBox_DrawCounter =
@@ -58531,9 +58673,9 @@ and limitations under the License.
             (this.assets.CastleLegendSkill_P =
               "itemassets/Dialogs/legend/CastleLegendSkill_P/CastleLegendSkill_P--1651134809167"),
             (this.assets.Outpost_Mapobject_Special_BaronSummer =
-              "itemassets/Worldmap/WorldmapObjects/Outposts/Outpost_Mapobject_Special_BaronSummer/Outpost_Mapobject_Special_BaronSummer--1650982358751"));
-          ((this.assets.Skin_Mapmovement_Generalsummer_Eiland =
-            "itemassets/Worldmap/WorldmapObjects/Movements/Skins/Skin_Mapmovement_Generalsummer_Eiland/Skin_Mapmovement_Generalsummer_Eiland--1650982358751"),
+              "itemassets/Worldmap/WorldmapObjects/Outposts/Outpost_Mapobject_Special_BaronSummer/Outpost_Mapobject_Special_BaronSummer--1650982358751"),
+            (this.assets.Skin_Mapmovement_Generalsummer_Eiland =
+              "itemassets/Worldmap/WorldmapObjects/Movements/Skins/Skin_Mapmovement_Generalsummer_Eiland/Skin_Mapmovement_Generalsummer_Eiland--1650982358751"),
             (this.assets.Skin_Mapmovement_Generalsummer_Common =
               "itemassets/Worldmap/WorldmapObjects/Movements/Skins/Skin_Mapmovement_Generalsummer_Common/Skin_Mapmovement_Generalsummer_Common--1650982358751"),
             (this.assets.Metropol_Mapobject_Special_BaronSummer =
@@ -59989,9 +60131,9 @@ and limitations under the License.
             (this.assets.SeasonLeagueEnd_W =
               "itemassets/Dialogs/Events/SeasonLeague/SeasonLeagueEnd_W/SeasonLeagueEnd_W--1603351884240"),
             (this.assets.SeasonLeagueBuyPasses =
-              "itemassets/Dialogs/Events/SeasonLeague/SeasonLeagueBuyPasses/SeasonLeagueBuyPasses--1604314000066"),
-            (this.assets.CastleChangeDescriptionEx_W =
-              "itemassets/Dialogs/Alliance/CastleChangeDescriptionEx_W/CastleChangeDescriptionEx_W--1602687457136"),
+              "itemassets/Dialogs/Events/SeasonLeague/SeasonLeagueBuyPasses/SeasonLeagueBuyPasses--1604314000066"));
+          ((this.assets.CastleChangeDescriptionEx_W =
+            "itemassets/Dialogs/Alliance/CastleChangeDescriptionEx_W/CastleChangeDescriptionEx_W--1602687457136"),
             (this.assets.Global_Effect_Icon_19 =
               "itemassets/Effects/Global_Effect_Icon_19/Global_Effect_Icon_19--1600785173406"),
             (this.assets.ModernPackageShopBuy_V =
@@ -60131,9 +60273,9 @@ and limitations under the License.
             (this.assets.MeadDistillery_Building_Level2 =
               "itemassets/Building/MeadDistillery/MeadDistillery_Building_Level2/MeadDistillery_Building_Level2--1597142801648"),
             (this.assets.MeadDistillery_Building_Level1 =
-              "itemassets/Building/MeadDistillery/MeadDistillery_Building_Level1/MeadDistillery_Building_Level1--1597142801648"));
-          ((this.assets.HoneyGardens_Building_Level2 =
-            "itemassets/Building/HoneyGardens/HoneyGardens_Building_Level2/HoneyGardens_Building_Level2--1597142801648"),
+              "itemassets/Building/MeadDistillery/MeadDistillery_Building_Level1/MeadDistillery_Building_Level1--1597142801648"),
+            (this.assets.HoneyGardens_Building_Level2 =
+              "itemassets/Building/HoneyGardens/HoneyGardens_Building_Level2/HoneyGardens_Building_Level2--1597142801648"),
             (this.assets.HoneyGardens_Building_Level1 =
               "itemassets/Building/HoneyGardens/HoneyGardens_Building_Level1/HoneyGardens_Building_Level1--1597142801648"),
             (this.assets.BarrelWorkshop_Building_Level2 =
@@ -61589,9 +61731,9 @@ and limitations under the License.
             (this.assets.Deco_Building_LoversFall =
               "itemassets/Building/Deco/Deco_Building_LoversFall/Deco_Building_LoversFall--1573584429307"),
             (this.assets.Deco_Building_MagnificentGarden =
-              "itemassets/Building/Deco/Deco_Building_MagnificentGarden/Deco_Building_MagnificentGarden--1573584429307"),
-            (this.assets.Deco_Building_MarchHaresHideout =
-              "itemassets/Building/Deco/Deco_Building_MarchHaresHideout/Deco_Building_MarchHaresHideout--1573584429307"),
+              "itemassets/Building/Deco/Deco_Building_MagnificentGarden/Deco_Building_MagnificentGarden--1573584429307"));
+          ((this.assets.Deco_Building_MarchHaresHideout =
+            "itemassets/Building/Deco/Deco_Building_MarchHaresHideout/Deco_Building_MarchHaresHideout--1573584429307"),
             (this.assets.Deco_Building_Marketbooth =
               "itemassets/Building/Deco/Deco_Building_Marketbooth/Deco_Building_Marketbooth--1573584429307"),
             (this.assets.Deco_Building_MastersCup =
@@ -61731,9 +61873,9 @@ and limitations under the License.
             (this.assets.Deco_Building_ThroneOfCommunity2 =
               "itemassets/Building/Deco/Deco_Building_ThroneOfCommunity2/Deco_Building_ThroneOfCommunity2--1573584429307"),
             (this.assets.Deco_Building_ThroneOfCommunity3 =
-              "itemassets/Building/Deco/Deco_Building_ThroneOfCommunity3/Deco_Building_ThroneOfCommunity3--1573584429307"));
-          ((this.assets.Deco_Building_ThroneOfCommunity4 =
-            "itemassets/Building/Deco/Deco_Building_ThroneOfCommunity4/Deco_Building_ThroneOfCommunity4--1573584429307"),
+              "itemassets/Building/Deco/Deco_Building_ThroneOfCommunity3/Deco_Building_ThroneOfCommunity3--1573584429307"),
+            (this.assets.Deco_Building_ThroneOfCommunity4 =
+              "itemassets/Building/Deco/Deco_Building_ThroneOfCommunity4/Deco_Building_ThroneOfCommunity4--1573584429307"),
             (this.assets.Deco_Building_thunderHorn =
               "itemassets/Building/Deco/Deco_Building_thunderHorn/Deco_Building_thunderHorn--1573584429307"),
             (this.assets.Deco_Building_TimelessKing =
@@ -63189,9 +63331,9 @@ and limitations under the License.
             (this.assets.QuestGiverBig_21 =
               "itemassets/Characters/Big/QuestGiverBig_21/QuestGiverBig_21--1573584429307"),
             (this.assets.QuestGiverBig_22 =
-              "itemassets/Characters/Big/QuestGiverBig_22/QuestGiverBig_22--1573584429307"),
-            (this.assets.QuestGiverBig_23 =
-              "itemassets/Characters/Big/QuestGiverBig_23/QuestGiverBig_23--1573584429307"),
+              "itemassets/Characters/Big/QuestGiverBig_22/QuestGiverBig_22--1573584429307"));
+          ((this.assets.QuestGiverBig_23 =
+            "itemassets/Characters/Big/QuestGiverBig_23/QuestGiverBig_23--1573584429307"),
             (this.assets.QuestGiverBig_24 =
               "itemassets/Characters/Big/QuestGiverBig_24/QuestGiverBig_24--1573584429307"),
             (this.assets.QuestGiverBig_25 =
@@ -63331,9 +63473,9 @@ and limitations under the License.
             (this.assets.QuestGiverSmall_27 =
               "itemassets/Characters/Small/QuestGiverSmall_27/QuestGiverSmall_27--1573584429307"),
             (this.assets.QuestGiverSmall_28 =
-              "itemassets/Characters/Small/QuestGiverSmall_28/QuestGiverSmall_28--1573584429307"));
-          ((this.assets.QuestGiverSmall_29 =
-            "itemassets/Characters/Small/QuestGiverSmall_29/QuestGiverSmall_29--1573584429307"),
+              "itemassets/Characters/Small/QuestGiverSmall_28/QuestGiverSmall_28--1573584429307"),
+            (this.assets.QuestGiverSmall_29 =
+              "itemassets/Characters/Small/QuestGiverSmall_29/QuestGiverSmall_29--1573584429307"),
             (this.assets.QuestGiverSmall_3 =
               "itemassets/Characters/Small/QuestGiverSmall_3/QuestGiverSmall_3--1573584429307"),
             (this.assets.QuestGiverSmall_31 =
@@ -64789,9 +64931,9 @@ and limitations under the License.
             (this.assets.CastleWelcomeNews104 =
               "itemassets/Dialogs/Homescreen/CastleWelcomeNews104/CastleWelcomeNews104--1573584429307"),
             (this.assets.CastleWelcomeNews105 =
-              "itemassets/Dialogs/Homescreen/CastleWelcomeNews105/CastleWelcomeNews105--1573584429307"),
-            (this.assets.CastleWelcomeNews106 =
-              "itemassets/Dialogs/Homescreen/CastleWelcomeNews106/CastleWelcomeNews106--1573584429307"),
+              "itemassets/Dialogs/Homescreen/CastleWelcomeNews105/CastleWelcomeNews105--1573584429307"));
+          ((this.assets.CastleWelcomeNews106 =
+            "itemassets/Dialogs/Homescreen/CastleWelcomeNews106/CastleWelcomeNews106--1573584429307"),
             (this.assets.CastleWelcomeNews107 =
               "itemassets/Dialogs/Homescreen/CastleWelcomeNews107/CastleWelcomeNews107--1573584429307"),
             (this.assets.CastleWelcomeNews108 =
@@ -64931,9 +65073,9 @@ and limitations under the License.
             (this.assets.CastleWelcomeNews56 =
               "itemassets/Dialogs/Homescreen/CastleWelcomeNews56/CastleWelcomeNews56--1573584429307"),
             (this.assets.CastleWelcomeNews57 =
-              "itemassets/Dialogs/Homescreen/CastleWelcomeNews57/CastleWelcomeNews57--1573584429307"));
-          ((this.assets.CastleWelcomeNews58 =
-            "itemassets/Dialogs/Homescreen/CastleWelcomeNews58/CastleWelcomeNews58--1573584429307"),
+              "itemassets/Dialogs/Homescreen/CastleWelcomeNews57/CastleWelcomeNews57--1573584429307"),
+            (this.assets.CastleWelcomeNews58 =
+              "itemassets/Dialogs/Homescreen/CastleWelcomeNews58/CastleWelcomeNews58--1573584429307"),
             (this.assets.CastleWelcomeNews59 =
               "itemassets/Dialogs/Homescreen/CastleWelcomeNews59/CastleWelcomeNews59--1573584429307"),
             (this.assets.CastleWelcomeNews60 =
@@ -66389,9 +66531,9 @@ and limitations under the License.
             (this.assets.Item_Armor04_LV4 =
               "itemassets/Equipment/Armors/Item_Armor04_LV4/Item_Armor04_LV4--1573584429307"),
             (this.assets.Item_Artifact01_LV1 =
-              "itemassets/Equipment/Artifacts/Item_Artifact01_LV1/Item_Artifact01_LV1--1573584429307"),
-            (this.assets.Item_Artifact01_LV2 =
-              "itemassets/Equipment/Artifacts/Item_Artifact01_LV2/Item_Artifact01_LV2--1573584429307"),
+              "itemassets/Equipment/Artifacts/Item_Artifact01_LV1/Item_Artifact01_LV1--1573584429307"));
+          ((this.assets.Item_Artifact01_LV2 =
+            "itemassets/Equipment/Artifacts/Item_Artifact01_LV2/Item_Artifact01_LV2--1573584429307"),
             (this.assets.Item_Artifact01_LV3 =
               "itemassets/Equipment/Artifacts/Item_Artifact01_LV3/Item_Artifact01_LV3--1573584429307"),
             (this.assets.Item_Artifact01_LV4 =
@@ -66531,9 +66673,9 @@ and limitations under the License.
             (this.assets.Hero_Generic_8 =
               "itemassets/Equipment/Heroes/Hero_Generic_8/Hero_Generic_8--1573584429307"),
             (this.assets.Hero_Generic_9 =
-              "itemassets/Equipment/Heroes/Hero_Generic_9/Hero_Generic_9--1573584429307"));
-          ((this.assets.Hero_Unique_227 =
-            "itemassets/Equipment/Heroes/Hero_Unique_227/Hero_Unique_227--1573584429307"),
+              "itemassets/Equipment/Heroes/Hero_Generic_9/Hero_Generic_9--1573584429307"),
+            (this.assets.Hero_Unique_227 =
+              "itemassets/Equipment/Heroes/Hero_Unique_227/Hero_Unique_227--1573584429307"),
             (this.assets.Hero_Unique_228 =
               "itemassets/Equipment/Heroes/Hero_Unique_228/Hero_Unique_228--1573584429307"),
             (this.assets.Hero_Unique_229 =
@@ -67989,9 +68131,9 @@ and limitations under the License.
             (this.assets.Package1214 =
               "itemassets/EventPackages/Package1214/Package1214--1573584429307"),
             (this.assets.Package1220 =
-              "itemassets/EventPackages/Package1220/Package1220--1573584429307"),
-            (this.assets.Package1369 =
-              "itemassets/EventPackages/Package1369/Package1369--1573584429307"),
+              "itemassets/EventPackages/Package1220/Package1220--1573584429307"));
+          ((this.assets.Package1369 =
+            "itemassets/EventPackages/Package1369/Package1369--1573584429307"),
             (this.assets.Package1400 =
               "itemassets/EventPackages/Package1400/Package1400--1573584429307"),
             (this.assets.Package1401 =
@@ -68131,9 +68273,9 @@ and limitations under the License.
             (this.assets.Package360 =
               "itemassets/EventPackages/Package360/Package360--1573584429307"),
             (this.assets.Package369 =
-              "itemassets/EventPackages/Package369/Package369--1573584429307"));
-          ((this.assets.Package370 =
-            "itemassets/EventPackages/Package370/Package370--1573584429307"),
+              "itemassets/EventPackages/Package369/Package369--1573584429307"),
+            (this.assets.Package370 =
+              "itemassets/EventPackages/Package370/Package370--1573584429307"),
             (this.assets.Package53 =
               "itemassets/EventPackages/Package53/Package53--1573584429307"),
             (this.assets.Package58 =
@@ -68187,7 +68329,7 @@ and limitations under the License.
             (this.assets.CastleKingdomOverview =
               "itemassets/KingdomOverview/CastleKingdomOverview/CastleKingdomOverview--1604998700426"),
             (this.assets.KingdomCrestsSymbols =
-              "itemassets/KingdomOverview/KingdomCrestsSymbols/KingdomCrestsSymbols--1573584429307"),
+              "itemassets/KingdomOverview/KingdomCrestsSymbols/KingdomCrestsSymbols--1792498123506"),
             (this.assets.CharCaravanOverloaderIcon =
               "itemassets/Misc/CharCaravanOverloaderIcon/CharCaravanOverloaderIcon--1573584429307"),
             (this.assets.CharMerchantIcon =
@@ -69589,9 +69731,9 @@ and limitations under the License.
             (this.assets.DaimyoTownship_Mapobject_Rank4 =
               "itemassets/Worldmap/WorldmapObjects/Events/DaimyoTownship_Mapobject_Rank4/DaimyoTownship_Mapobject_Rank4--1573584429307"),
             (this.assets.Eventdungeon_FlamesLayer =
-              "itemassets/Worldmap/WorldmapObjects/Events/Eventdungeon_FlamesLayer/Eventdungeon_FlamesLayer--1573584429307"),
-            (this.assets.Eventdungeon_Mapobject_502 =
-              "itemassets/Worldmap/WorldmapObjects/Events/Eventdungeon_Mapobject_502/Eventdungeon_Mapobject_502--1573584429307"),
+              "itemassets/Worldmap/WorldmapObjects/Events/Eventdungeon_FlamesLayer/Eventdungeon_FlamesLayer--1573584429307"));
+          ((this.assets.Eventdungeon_Mapobject_502 =
+            "itemassets/Worldmap/WorldmapObjects/Events/Eventdungeon_Mapobject_502/Eventdungeon_Mapobject_502--1573584429307"),
             (this.assets.Eventdungeon_Mapobject_503 =
               "itemassets/Worldmap/WorldmapObjects/Events/Eventdungeon_Mapobject_503/Eventdungeon_Mapobject_503--1573584429307"),
             (this.assets.Eventdungeon_Mapobject_Cow =
@@ -69731,9 +69873,9 @@ and limitations under the License.
             (this.assets.Metropol_Mapobject_Special_Emblem =
               "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_Emblem/Metropol_Mapobject_Special_Emblem--1573584429307"),
             (this.assets.Metropol_Mapobject_Special_EmperorsChessSet =
-              "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_EmperorsChessSet/Metropol_Mapobject_Special_EmperorsChessSet--1573584429307"));
-          ((this.assets.Metropol_Mapobject_Special_Ethereal =
-            "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_Ethereal/Metropol_Mapobject_Special_Ethereal--1573584429307"),
+              "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_EmperorsChessSet/Metropol_Mapobject_Special_EmperorsChessSet--1573584429307"),
+            (this.assets.Metropol_Mapobject_Special_Ethereal =
+              "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_Ethereal/Metropol_Mapobject_Special_Ethereal--1573584429307"),
             (this.assets.Metropol_Mapobject_Special_FlowerBracelet =
               "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_FlowerBracelet/Metropol_Mapobject_Special_FlowerBracelet--1573584429307"),
             (this.assets.Metropol_Mapobject_Special_Halloween =
@@ -74745,14 +74887,14 @@ and limitations under the License.
       D = createjs.TextEvent,
       b = n(238),
       R = n(143),
-      N = n(605),
-      B = n(606),
+      B = n(605),
+      N = n(606),
       P = createjs.GlowFilter,
       M = createjs.DropShadowFilter,
       U = n(229),
       G = n(16),
       F = m.getLogger(G.TEXT_FIELDS_LOGGER);
-    N.insertInputFieldElementCSS();
+    B.insertInputFieldElementCSS();
     var k,
       w = 0;
     document.addEventListener("copy", function (e) {
@@ -75074,7 +75216,7 @@ and limitations under the License.
             var u = T._workingContext;
             return (
               u.save(),
-              (this._INTERNAL_currentLayout = B.calculateLatestLayoutType(
+              (this._INTERNAL_currentLayout = N.calculateLatestLayoutType(
                 u,
                 s,
                 e,
@@ -75683,7 +75825,7 @@ and limitations under the License.
                 (t.spellcheck = !1));
             }
             ((this._htmlTextFieldElement = t),
-              (t.className = N.HTML_TEXTFIELD_CLASS),
+              (t.className = B.HTML_TEXTFIELD_CLASS),
               (t.id = this.name + "_" + ++w),
               (t.style.textAlign = this.textFormat
                 ? this.textFormat.align
@@ -76737,13 +76879,13 @@ and limitations under the License.
           R[I] =
           R["[object WeakMap]"] =
             !1));
-      var N = "object" == typeof e && e && e.Object === Object && e,
-        B = "object" == typeof self && self && self.Object === Object && self,
-        P = N || B || Function("return this")(),
+      var B = "object" == typeof e && e && e.Object === Object && e,
+        N = "object" == typeof self && self && self.Object === Object && self,
+        P = B || N || Function("return this")(),
         M = "object" == typeof t && t && !t.nodeType && t,
         U = M && "object" == typeof n && n && !n.nodeType && n,
         G = U && U.exports === M,
-        F = G && N.process,
+        F = G && B.process,
         k = (function () {
           try {
             return F && F.binding && F.binding("util");
@@ -76976,9 +77118,9 @@ and limitations under the License.
                   var b = S && K.call(e, "__wrapped__"),
                     R = A && K.call(t, "__wrapped__");
                   if (b || R) {
-                    var N = b ? e.value() : e,
-                      B = R ? t.value() : t;
-                    return (o || (o = new Stack()), s(N, B, n, i, o));
+                    var B = b ? e.value() : e,
+                      N = R ? t.value() : t;
+                    return (o || (o = new Stack()), s(B, N, n, i, o));
                   }
                 }
                 if (!D) return !1;
@@ -77653,12 +77795,12 @@ and limitations under the License.
             var b = D.text,
               R = e.measureText(b).width;
             if (d && "number" == typeof _ && I + R > _) {
-              var N = b.split(/([ \t\n\x0B\f\r-])/);
-              ((N = N.filter(function (e) {
+              var B = b.split(/([ \t\n\x0B\f\r-])/);
+              ((B = B.filter(function (e) {
                 return "" != e;
               })),
                 o &&
-                  (N = N.reduce(function (t, n) {
+                  (B = B.reduce(function (t, n) {
                     if (e.measureText(n).width > _) {
                       var i = n.split("").reduce(function (e, t) {
                         return (
@@ -77672,8 +77814,8 @@ and limitations under the License.
                     } else t.push(n);
                     return t;
                   }, [])));
-              for (var B = 0, P = N; B < P.length; B++) {
-                var M = P[B],
+              for (var N = 0, P = B; N < P.length; N++) {
+                var M = P[N],
                   U = e.measureText(M).width;
                 I + U > _ && " " != M && ((T = []), y.push(T), (I = 0));
                 var G = { type: "plain", text: M, width: U };
@@ -82716,13 +82858,13 @@ and limitations under the License.
           )
             D[b] = m[b] + d[b] === u[b];
           for (
-            var R, N = DefenseConst.getIndicesOfMaxToMinSorting(y), B = 0;
-            B < 3 && ((R = N[B]), !(O <= 0));
-            B++
+            var R, B = DefenseConst.getIndicesOfMaxToMinSorting(y), N = 0;
+            N < 3 && ((R = B[N]), !(O <= 0));
+            N++
           )
             D[R] || (m[R]++, O--, (D[R] = m[R] + d[R] === u[R]));
-          N = DefenseConst.getIndicesOfMaxToMinSorting(v);
-          for (var P = 0; P < 3 && ((R = N[P]), !(L <= 0)); P++)
+          B = DefenseConst.getIndicesOfMaxToMinSorting(v);
+          for (var P = 0; P < 3 && ((R = B[P]), !(L <= 0)); P++)
             D[R] || (d[R]++, L--, (D[R] = m[R] + d[R] === u[R]));
           for (
             var M = 2 * n.getUnitTypeCount(),
@@ -83089,7 +83231,7 @@ and limitations under the License.
       (R.DUMMY_VALUE = 0),
       (t.EffectConst = R),
       (R.__class = "EffectConst"));
-    var N = (function () {
+    var B = (function () {
       function EquipmentConst() {}
       return (
         (EquipmentConst.SLOT_IDS_$LI$ = function () {
@@ -83233,80 +83375,80 @@ and limitations under the License.
         EquipmentConst
       );
     })();
-    ((N.NORMAL_CRAFT_COUNT = 3),
-      (N.SUPER_CRAFT_COUNT = 6),
-      (N.EQUIPMENT_SIZE_NORMAL = 400),
-      (N.EQUIPMENT_SIZE_MAX = 420),
-      (N.UNDEFINED_WEARER_ID = -1),
-      (N.BARON_WEARER_ID = 1),
-      (N.COMMANDER_WEARER_ID = 2),
-      (N.SLOT_ARMOR = 1),
-      (N.SLOT_WEAPON = 2),
-      (N.SLOT_HELMET = 3),
-      (N.SLOT_ARTIFACT = 4),
-      (N.SLOT_SKIN = 5),
-      (N.SLOT_HERO = 6),
-      (N.RARENESS_UNIQUE = 0),
-      (N.RARENESS_COMMON = 1),
-      (N.RARENESS_RARE = 2),
-      (N.RARENESS_EPIC = 3),
-      (N.RARENESS_LEGENDARY = 4),
-      (N.RARENESS_RELIC = 5),
-      (N.RARENESS_HERO_UNIQUE = 10),
-      (N.RARENESS_HERO_COMMON = 11),
-      (N.RARENESS_HERO_RARE = 12),
-      (N.RARENESS_HERO_EPIC = 13),
-      (N.RARENESS_HERO_LEGENDARY = 14),
-      (N.RARENESS_HERO_RELIC = 15),
-      (N.RARENESS_HERO_BEGINN = 10),
-      (N.PRICE_COMMON = 10),
-      (N.PRICE_TORARE = 25),
-      (N.PRICE_RARE = 500),
-      (N.PRICE_TOEPIC = 2500),
-      (N.PRICE_EPIC = 4e3),
-      (N.PRICE_TOLEGENDARY = 2e4),
-      (N.PRICE_LEGENDARY = 25e3),
-      (N.PICK_BARON_CLASSIC = 0),
-      (N.PICK_BARON_ICE = 1),
-      (N.PICK_BARON_DESERT = 2),
-      (N.PICK_BARON_VULCAN = 3),
-      (N.PICK_BARON_CAPITAL_CLASSIC = 4),
-      (N.PICK_BARON_FACTION = 5),
-      (N.PICK_BARON_A1 = 6),
-      (N.PICK_BARON_A2 = 7),
-      (N.PICK_BARON_A3 = 8),
-      (N.PICK_BARON_METROPOL = 9),
-      (N.PICK_BARON_CAPITAL_ICE = 10),
-      (N.PICK_BARON_CAPITAL_DESERT = 11),
-      (N.PICK_BARON_CAPITAL_VULCAN = 12),
-      (N.PICK_BARON_ISLAND = 13),
-      (N.BARON_BOSS_DUNGEON = -51),
-      (N.WOLFKING_BARON = -214),
-      (N.BARON_FACTION_RED = -101),
-      (N.BARON_FACTION_BLUE = -102),
-      (N.NO_ENCHANTMENT = 0),
-      (N.MAX_ENCHANTMENTLEVEL_COMMON = 3),
-      (N.MAX_ENCHANTMENTLEVEL_RARE = 8),
-      (N.MAX_ENCHANTMENTLEVEL_EPIC = 12),
-      (N.MAX_ENCHANTMENTLEVEL_LEGENDARY = 16),
-      (N.MAX_ENCHANTMENTLEVEL_UNIQUE = 20),
-      (N.MAX_ENCHANTMENTLEVEL_RELIC = 50),
-      (N.LORD_NAME_MIN_LENGTH = 3),
-      (N.LORD_NAME_MAX_LENGTH = 15),
-      (N.EQUIPMENT_TYPE_ID_GENERATED = 0),
-      (N.EQUIPMENT_TYPE_ID_UNIQUE = 1),
-      (N.EQUIPMENT_TYPE_ID_UNIQUE_TEMPORARY = 2),
-      (N.EQUIPMENT_TYPE_ID_RELIC = 3),
-      (t.EquipmentConst = N),
-      (N.__class = "EquipmentConst"));
-    var B = (function () {
+    ((B.NORMAL_CRAFT_COUNT = 3),
+      (B.SUPER_CRAFT_COUNT = 6),
+      (B.EQUIPMENT_SIZE_NORMAL = 400),
+      (B.EQUIPMENT_SIZE_MAX = 420),
+      (B.UNDEFINED_WEARER_ID = -1),
+      (B.BARON_WEARER_ID = 1),
+      (B.COMMANDER_WEARER_ID = 2),
+      (B.SLOT_ARMOR = 1),
+      (B.SLOT_WEAPON = 2),
+      (B.SLOT_HELMET = 3),
+      (B.SLOT_ARTIFACT = 4),
+      (B.SLOT_SKIN = 5),
+      (B.SLOT_HERO = 6),
+      (B.RARENESS_UNIQUE = 0),
+      (B.RARENESS_COMMON = 1),
+      (B.RARENESS_RARE = 2),
+      (B.RARENESS_EPIC = 3),
+      (B.RARENESS_LEGENDARY = 4),
+      (B.RARENESS_RELIC = 5),
+      (B.RARENESS_HERO_UNIQUE = 10),
+      (B.RARENESS_HERO_COMMON = 11),
+      (B.RARENESS_HERO_RARE = 12),
+      (B.RARENESS_HERO_EPIC = 13),
+      (B.RARENESS_HERO_LEGENDARY = 14),
+      (B.RARENESS_HERO_RELIC = 15),
+      (B.RARENESS_HERO_BEGINN = 10),
+      (B.PRICE_COMMON = 10),
+      (B.PRICE_TORARE = 25),
+      (B.PRICE_RARE = 500),
+      (B.PRICE_TOEPIC = 2500),
+      (B.PRICE_EPIC = 4e3),
+      (B.PRICE_TOLEGENDARY = 2e4),
+      (B.PRICE_LEGENDARY = 25e3),
+      (B.PICK_BARON_CLASSIC = 0),
+      (B.PICK_BARON_ICE = 1),
+      (B.PICK_BARON_DESERT = 2),
+      (B.PICK_BARON_VULCAN = 3),
+      (B.PICK_BARON_CAPITAL_CLASSIC = 4),
+      (B.PICK_BARON_FACTION = 5),
+      (B.PICK_BARON_A1 = 6),
+      (B.PICK_BARON_A2 = 7),
+      (B.PICK_BARON_A3 = 8),
+      (B.PICK_BARON_METROPOL = 9),
+      (B.PICK_BARON_CAPITAL_ICE = 10),
+      (B.PICK_BARON_CAPITAL_DESERT = 11),
+      (B.PICK_BARON_CAPITAL_VULCAN = 12),
+      (B.PICK_BARON_ISLAND = 13),
+      (B.BARON_BOSS_DUNGEON = -51),
+      (B.WOLFKING_BARON = -214),
+      (B.BARON_FACTION_RED = -101),
+      (B.BARON_FACTION_BLUE = -102),
+      (B.NO_ENCHANTMENT = 0),
+      (B.MAX_ENCHANTMENTLEVEL_COMMON = 3),
+      (B.MAX_ENCHANTMENTLEVEL_RARE = 8),
+      (B.MAX_ENCHANTMENTLEVEL_EPIC = 12),
+      (B.MAX_ENCHANTMENTLEVEL_LEGENDARY = 16),
+      (B.MAX_ENCHANTMENTLEVEL_UNIQUE = 20),
+      (B.MAX_ENCHANTMENTLEVEL_RELIC = 50),
+      (B.LORD_NAME_MIN_LENGTH = 3),
+      (B.LORD_NAME_MAX_LENGTH = 15),
+      (B.EQUIPMENT_TYPE_ID_GENERATED = 0),
+      (B.EQUIPMENT_TYPE_ID_UNIQUE = 1),
+      (B.EQUIPMENT_TYPE_ID_UNIQUE_TEMPORARY = 2),
+      (B.EQUIPMENT_TYPE_ID_RELIC = 3),
+      (t.EquipmentConst = B),
+      (B.__class = "EquipmentConst"));
+    var N = (function () {
       return function EventAutoScalingConst() {};
     })();
-    ((B.DIFFICULTY_NOT_SELECTED = -1),
-      (B.CLASSIC_EVENT_DIFFICULTY = 0),
-      (B.ANY_EVENT_DIFFICULTY = 1),
-      (t.EventAutoScalingConst = B),
-      (B.__class = "EventAutoScalingConst"));
+    ((N.DIFFICULTY_NOT_SELECTED = -1),
+      (N.CLASSIC_EVENT_DIFFICULTY = 0),
+      (N.ANY_EVENT_DIFFICULTY = 1),
+      (t.EventAutoScalingConst = N),
+      (N.__class = "EventAutoScalingConst"));
     var P = (function () {
       function EventConst() {}
       return (
@@ -86823,7 +86965,7 @@ and limitations under the License.
       (Re.AQUAMARINE_FIRST_POINTS_TIMESTAMP = 21),
       (t.StatisticsConst = Re),
       (Re.__class = "StatisticsConst"));
-    var Ne = (function () {
+    var Be = (function () {
       function SubscriptionConst() {}
       return (
         (SubscriptionConst.PLAYER_TYPE_PACKAGES_$LI$ = function () {
@@ -86840,21 +86982,21 @@ and limitations under the License.
         SubscriptionConst
       );
     })();
-    ((Ne.PLAYER_SUBSCRIPTION_PACKAGE_TYPE_ID = 1),
-      (Ne.ALLIANCE_SUBSCRIPTION_PACKAGE_TYPE_ID = 2),
-      (Ne.PLAYER_SUBSCRIPTION_PREMIUM_PACKAGE_TYPE_ID = 3),
-      (Ne.PLAYER_SUBSCRIPTION_BARON_ADVISOR_PACKAGE_TYPE_ID = 4),
-      (t.SubscriptionConst = Ne),
-      (Ne.__class = "SubscriptionConst"));
-    var Be = (function () {
+    ((Be.PLAYER_SUBSCRIPTION_PACKAGE_TYPE_ID = 1),
+      (Be.ALLIANCE_SUBSCRIPTION_PACKAGE_TYPE_ID = 2),
+      (Be.PLAYER_SUBSCRIPTION_PREMIUM_PACKAGE_TYPE_ID = 3),
+      (Be.PLAYER_SUBSCRIPTION_BARON_ADVISOR_PACKAGE_TYPE_ID = 4),
+      (t.SubscriptionConst = Be),
+      (Be.__class = "SubscriptionConst"));
+    var Ne = (function () {
       return function SurveyConst() {};
     })();
-    ((Be.MAX_ANSWER_LENGTH = 1e3),
-      (Be.QUESTION_TYPE_TEXT = 0),
-      (Be.QUESTION_TYPE_RADIO = 1),
-      (Be.QUESTION_TYPE_CHECKBOX = 2),
-      (t.SurveyConst = Be),
-      (Be.__class = "SurveyConst"));
+    ((Ne.MAX_ANSWER_LENGTH = 1e3),
+      (Ne.QUESTION_TYPE_TEXT = 0),
+      (Ne.QUESTION_TYPE_RADIO = 1),
+      (Ne.QUESTION_TYPE_CHECKBOX = 2),
+      (t.SurveyConst = Ne),
+      (Ne.__class = "SurveyConst"));
     var Pe = (function () {
       function TaxConst() {}
       return (
@@ -91498,9 +91640,9 @@ and limitations under the License.
       A.LEVELS_KEEP_$LI$(),
       A.ITEMS_KEEP_$LI$(),
       b.COOLDOWN_$LI$(),
-      N.PER_TEN_THOUSAND_$LI$(),
-      N.SLOT_IDS_FOR_GEMS_$LI$(),
-      N.SLOT_IDS_$LI$(),
+      B.PER_TEN_THOUSAND_$LI$(),
+      B.SLOT_IDS_FOR_GEMS_$LI$(),
+      B.SLOT_IDS_$LI$(),
       P.QUEST_SKIP_AUTO_START_EVENTS_$LI$(),
       P.LUCKY_WHEEL_EVENT_TYPES_$LI$(),
       P.EVENT_TYPES_FOR_OFFICERS_SCHOOL_$LI$(),
@@ -91613,7 +91755,7 @@ and limitations under the License.
       be.SABOTAGE_PROTECTION_WINDOW_$LI$(),
       be.MAX_SABOTAGE_COOLDOWN_$LI$(),
       be.SPY_VALIDITY_$LI$(),
-      Ne.PLAYER_TYPE_PACKAGES_$LI$(),
+      Be.PLAYER_TYPE_PACKAGES_$LI$(),
       Pe.COLLECTOR_LOSS_$LI$(),
       Pe.START_COST_C1_PERC_$LI$(),
       Pe.START_COST_C2_$LI$(),
@@ -119601,10 +119743,10 @@ and limitations under the License.
                           R = function (e, t) {
                             return { key: e, val: t };
                           },
-                          N = function (e) {
+                          B = function (e) {
                             return e;
                           },
-                          B = "=",
+                          N = "=",
                           P = {
                             type: "literal",
                             value: "=",
@@ -120050,11 +120192,11 @@ and limitations under the License.
                               var t, n, s;
                               return (
                                 (t = Se),
-                                (n = peg$parseid()) !== i && (n = N(n)),
+                                (n = peg$parseid()) !== i && (n = B(n)),
                                 (t = n) === i &&
                                   ((t = Se),
                                   61 === e.charCodeAt(Se)
-                                    ? ((n = B), Se++)
+                                    ? ((n = N), Se++)
                                     : ((n = i), 0 === Ae && peg$fail(P)),
                                   n !== i && (s = peg$parsedigits()) !== i
                                     ? ((n = b(s)), (t = n))
@@ -121118,7 +121260,7 @@ and limitations under the License.
                 }
                 return s;
               },
-              N = function (e, t) {
+              B = function (e, t) {
                 var n,
                   i,
                   s,
@@ -121142,14 +121284,14 @@ and limitations under the License.
                 }
                 return s;
               },
-              B = function (e, t) {
+              N = function (e, t) {
                 var i,
                   a,
                   r,
                   o,
                   l,
                   u,
-                  _ = N;
+                  _ = B;
                 function combineDateTime(e, n, i) {
                   return s(
                     t.main(["dates/calendars/gregorian/dateTimeFormats", e]),
@@ -121594,7 +121736,7 @@ and limitations under the License.
                     n.on("get", validateRequiredCldr),
                     p && ((g = validateRequiredIana(p)), n.on("get", g)));
                   try {
-                    (validateOptionsSkeleton((o = B(e, n)), e.skeleton),
+                    (validateOptionsSkeleton((o = N(e, n)), e.skeleton),
                       (u = (function (e, t, n) {
                         var a = {
                             numberFormatters: {},
@@ -122051,7 +122193,7 @@ and limitations under the License.
                   try {
                     (n.on("get", validateRequiredCldr),
                       g && n.on("get", validateRequiredIana(g)),
-                      validateOptionsSkeleton((h = B(e, n)), e.skeleton),
+                      validateOptionsSkeleton((h = N(e, n)), e.skeleton),
                       (f = (function (e, t, n) {
                         var u,
                           _ = { pattern: r(e) },
@@ -123618,9 +123760,9 @@ and limitations under the License.
         D = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
         b = /^\w*$/,
         R = /^\./,
-        N =
+        B =
           /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
-        B = /^\s+|\s+$/g,
+        N = /^\s+|\s+$/g,
         P = /\\(\\)?/g,
         M = /^[-+]0x[0-9a-f]+$/i,
         U = /^0b[01]+$/i,
@@ -123875,9 +124017,9 @@ and limitations under the License.
                   var b = E && ne.call(e, "__wrapped__"),
                     R = C && ne.call(t, "__wrapped__");
                   if (b || R) {
-                    var N = b ? e.value() : e,
-                      B = R ? t.value() : t;
-                    return (a || (a = new Stack()), n(N, B, i, s, a));
+                    var B = b ? e.value() : e,
+                      N = R ? t.value() : t;
+                    return (a || (a = new Stack()), n(B, N, i, s, a));
                   }
                 }
                 if (!D) return !1;
@@ -124280,7 +124422,7 @@ and limitations under the License.
         var t = [];
         return (
           R.test(e) && t.push(""),
-          e.replace(N, function (e, n, i, s) {
+          e.replace(B, function (e, n, i, s) {
             t.push(i ? s.replace(P, "$1") : n || e);
           }),
           t
@@ -124334,7 +124476,7 @@ and limitations under the License.
                           e = isObject(t) ? t + "" : t;
                         }
                         if ("string" != typeof e) return 0 === e ? e : +e;
-                        e = e.replace(B, "");
+                        e = e.replace(N, "");
                         var n = U.test(e);
                         return n || F.test(e)
                           ? x(e.slice(2), n ? 2 : 8)
@@ -124788,8 +124930,8 @@ and limitations under the License.
       D = n(379),
       b = n(382),
       R = n(383),
-      N = n(384),
-      B = n(385),
+      B = n(384),
+      N = n(385),
       P = n(387),
       M = n(388),
       U = n(389),
@@ -124979,11 +125121,11 @@ and limitations under the License.
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_CHECK_AGE_GATE_ACTIVITY,
-                N.BasicCheckAgeGateActivityCommand,
+                B.BasicCheckAgeGateActivityCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_VALIDATE_AGE,
-                B.BasicValidateAgeCommand,
+                N.BasicValidateAgeCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_TRACK_REGISTRATION_DATA,
@@ -143412,15 +143554,15 @@ and limitations under the License.
           }
         }));
       var R = A,
-        N = function pad(e, t) {
+        B = function pad(e, t) {
           var n = "000000000" + e;
           return n.substr(n.length - t);
         },
-        B = "object" == typeof window ? window : self,
+        N = "object" == typeof window ? window : self,
         P = 0;
-      for (var M in B) Object.hasOwnProperty.call(B, M) && P++;
+      for (var M in N) Object.hasOwnProperty.call(N, M) && P++;
       var U = navigator.mimeTypes ? navigator.mimeTypes.length : 0,
-        G = N(
+        G = B(
           (U + navigator.userAgent.length).toString(36) + P.toString(36),
           4,
         ),
@@ -143432,11 +143574,11 @@ and limitations under the License.
         x = 36,
         W = Math.pow(x, w);
       function randomBlock() {
-        return N(((Math.random() * W) << 0).toString(x), w);
+        return B(((Math.random() * W) << 0).toString(x), w);
       }
       function cuid() {
         var e = new Date().getTime().toString(x),
-          t = N(
+          t = B(
             (function safeCounter() {
               return ((k = k < W ? k : 0), ++k - 1);
             })().toString(x),
@@ -144090,15 +144232,15 @@ and limitations under the License.
                   "hashchange",
                   function (t) {
                     var n = t.oldURL
-                      ? { from: Ne(t.oldURL), to: Ne(t.newURL), state: Pe() }
-                      : { to: Ne(window.location.href) };
+                      ? { from: Be(t.oldURL), to: Be(t.newURL), state: Pe() }
+                      : { to: Be(window.location.href) };
                     e.leaveBreadcrumb("Hash changed", n, "navigation");
                   },
                   !0,
                 ),
                 window.history.replaceState &&
-                  Be(e, window.history, "replaceState"),
-                window.history.pushState && Be(e, window.history, "pushState"),
+                  Ne(e, window.history, "replaceState"),
+                window.history.pushState && Ne(e, window.history, "pushState"),
                 e.leaveBreadcrumb("Bugsnag loaded", {}, "navigation"));
             }
           },
@@ -144112,17 +144254,17 @@ and limitations under the License.
             },
           },
         },
-        Ne = function (e) {
+        Be = function (e) {
           var t = document.createElement("A");
           return ((t.href = e), "" + t.pathname + t.search + t.hash);
         },
-        Be = function (e, t, n) {
+        Ne = function (e, t, n) {
           var i = t[n];
           ((t[n] = function (s, a, r) {
             (e.leaveBreadcrumb(
               "History " + n,
               (function (e, t, n) {
-                var i = Ne(window.location.href);
+                var i = Be(window.location.href);
                 return {
                   title: t,
                   state: e,
@@ -146462,8 +146604,8 @@ and limitations under the License.
         D,
         b = i(e, n.alternateCommentMode || !1),
         R = b.next,
-        N = b.push,
-        B = b.peek,
+        B = b.push,
+        N = b.peek,
         P = b.skip,
         M = b.cmnt,
         U = !0,
@@ -146496,7 +146638,7 @@ and limitations under the License.
           t = [];
         do {
           if ('"' !== (e = R()) && "'" !== e) throw illegal(e);
-          (t.push(R()), P(e), (e = B()));
+          (t.push(R()), P(e), (e = N()));
         } while ('"' === e || "'" === e);
         return t.join("");
       }
@@ -146505,7 +146647,7 @@ and limitations under the License.
         switch (t) {
           case "'":
           case '"':
-            return (N(t), readString());
+            return (B(t), readString());
           case "true":
           case "TRUE":
             return !0;
@@ -146544,7 +146686,7 @@ and limitations under the License.
       function readRanges(e, t) {
         var n, i;
         do {
-          !t || ('"' !== (n = B()) && "'" !== n)
+          !t || ('"' !== (n = N()) && "'" !== n)
             ? e.push([(i = parseId(R())), P("to", !0) ? parseId(R()) : i])
             : e.push(readString());
         } while (P(",", !0));
@@ -146572,7 +146714,7 @@ and limitations under the License.
       }
       function parseImport() {
         var e,
-          t = B();
+          t = N();
         switch (t) {
           case "weak":
             ((e = O || (O = [])), R());
@@ -146641,7 +146783,7 @@ and limitations under the License.
                           (ifBlock(n, function parseOneOf_block(e) {
                             "option" === e
                               ? (parseOption(n, e), P(";"))
-                              : (N(e), parseField(n, "optional"));
+                              : (B(e), parseField(n, "optional"));
                           }),
                             e.add(n));
                         })(n, e);
@@ -146654,7 +146796,7 @@ and limitations under the License.
                         break;
                       default:
                         if (!G || !y.test(e)) throw illegal(e);
-                        (N(e), parseField(n, "optional"));
+                        (B(e), parseField(n, "optional"));
                     }
                 }),
                   e.add(n));
@@ -146750,7 +146892,7 @@ and limitations under the License.
                       break;
                     default:
                       if (!G || !y.test(t)) throw illegal(t);
-                      (N(t), parseField(e, "optional", n));
+                      (B(t), parseField(e, "optional", n));
                   }
                 });
               })(e, t),
@@ -146830,7 +146972,7 @@ and limitations under the License.
         (n &&
           (P(")"),
           (i = "(" + i + ")"),
-          (t = B()),
+          (t = N()),
           I.test(t) && ((i += t), R())),
           P("="),
           parseOptionValue(e, i));
@@ -146839,10 +146981,10 @@ and limitations under the License.
         if (P("{", !0))
           do {
             if (!T.test((D = R()))) throw illegal(D, "name");
-            ("{" === B()
+            ("{" === N()
               ? parseOptionValue(e, t + "." + D)
               : (P(":"),
-                "{" === B()
+                "{" === N()
                   ? parseOptionValue(e, t + "." + D)
                   : setOption(e, t + "." + D, readValue(!0))),
               P(",", !0));
@@ -146973,4 +147115,4 @@ and limitations under the License.
       }));
   },
 ]);
-//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/dll/ggs.dll.375c3dca2ade50b26550.js.map
+//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/dll/ggs.dll.0062a820ff12c6e44e08.js.map
