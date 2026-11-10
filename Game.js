@@ -1756,15 +1756,15 @@
         );
       })(o.BasicDialogHandler);
     t.CastleDialogHandler = p;
-    var h = i(4250),
-      g = i(4251),
-      C = i(4252),
-      _ = i(4253),
-      m = i(4254),
-      f = i(4255),
-      E = i(4256),
-      O = i(4257),
-      y = i(4258);
+    var h = i(4251),
+      g = i(4252),
+      C = i(4253),
+      _ = i(4254),
+      m = i(4255),
+      f = i(4256),
+      E = i(4257),
+      O = i(4258),
+      y = i(4259);
   },
   function (e, t, i) {
     "use strict";
@@ -3361,7 +3361,7 @@
       T = i(1),
       S = i(122),
       A = i(6),
-      L = i(20),
+      L = i(19),
       P = i(1997),
       M = i(91),
       R = i(32),
@@ -5114,25 +5114,25 @@
       ae = i(35),
       se = i(9),
       re = i(3903),
-      le = i(3944),
-      ce = i(3946),
+      le = i(3945),
+      ce = i(3947),
       ue = i(112),
       de = i(206),
       pe = i(465),
       he = i(356),
       ge = i(1058),
-      Ce = i(3947),
-      _e = i(3953),
-      me = i(4170),
-      fe = i(4174),
-      Ee = i(4191),
-      Oe = i(4202),
-      ye = i(4239),
+      Ce = i(3948),
+      _e = i(3954),
+      me = i(4171),
+      fe = i(4175),
+      Ee = i(4192),
+      Oe = i(4203),
+      ye = i(4240),
       be = i(1114),
       De = i(675),
-      Ie = i(4241),
+      Ie = i(4242),
       ve = i(1885),
-      Te = i(4243),
+      Te = i(4244),
       Se = i(1870),
       Ae = i(1141),
       Le = i(107),
@@ -5181,158 +5181,6 @@
         );
       })(o.ClickFeedbackButton);
     t.ClickFeedbackButtonHover = r;
-  },
-  function (e, t, i) {
-    "use strict";
-    Object.defineProperty(t, "__esModule", { value: !0 });
-    var n = i(6),
-      o = i(2016),
-      a = i(2017),
-      s = i(2018),
-      r = i(2019),
-      l = i(2020),
-      c = (function () {
-        function CollectableRenderOptions(e, t) {
-          (void 0 === e && (e = n.int(CollectableRenderOptions.SET_ADVANCED)),
-            void 0 === t && (t = null),
-            (this._icon = new a.CollectableRenderOptionsIcon()),
-            (this._textfield = new r.CollectableRenderOptionsTextfield()),
-            (this._costTextfield =
-              new o.CollectableRenderOptionsCostTextfield()),
-            (this._tooltip = new l.CollectableRenderOptionsTooltip()),
-            (this._storage = new s.CollectableRenderOptionsStorage()),
-            (this._renderMask = 0),
-            (this._renderMask = e),
-            t && (this.icon.dimension = t));
-        }
-        return (
-          (CollectableRenderOptions.prototype.containsRenderOption = function (
-            e,
-          ) {
-            return (this._renderMask & e) == e;
-          }),
-          Object.defineProperty(CollectableRenderOptions.prototype, "icon", {
-            get: function () {
-              return this._icon;
-            },
-            enumerable: !0,
-            configurable: !0,
-          }),
-          Object.defineProperty(
-            CollectableRenderOptions.prototype,
-            "textfield",
-            {
-              get: function () {
-                return this._textfield;
-              },
-              enumerable: !0,
-              configurable: !0,
-            },
-          ),
-          Object.defineProperty(
-            CollectableRenderOptions.prototype,
-            "costTextfield",
-            {
-              get: function () {
-                return this._costTextfield;
-              },
-              enumerable: !0,
-              configurable: !0,
-            },
-          ),
-          Object.defineProperty(CollectableRenderOptions.prototype, "tooltip", {
-            get: function () {
-              return this._tooltip;
-            },
-            enumerable: !0,
-            configurable: !0,
-          }),
-          Object.defineProperty(CollectableRenderOptions.prototype, "storage", {
-            get: function () {
-              return this._storage;
-            },
-            enumerable: !0,
-            configurable: !0,
-          }),
-          Object.defineProperty(
-            CollectableRenderOptions.prototype,
-            "renderMask",
-            {
-              get: function () {
-                return this._renderMask;
-              },
-              set: function (e) {
-                this._renderMask = e;
-              },
-              enumerable: !0,
-              configurable: !0,
-            },
-          ),
-          (CollectableRenderOptions.__initialize_static_members = function () {
-            ((CollectableRenderOptions.ICON = 1),
-              (CollectableRenderOptions.TOOLTIP = 2),
-              (CollectableRenderOptions.TEXTFIELD = 4),
-              (CollectableRenderOptions.TEXT_BACKGROUND = 8),
-              (CollectableRenderOptions.INFO_BUTTON = 16),
-              (CollectableRenderOptions.ICON_TRANSFORM = 32),
-              (CollectableRenderOptions.COLOR_BACKGROUND = 64),
-              (CollectableRenderOptions.EQUIPMENT_BACKGROUND = 128),
-              (CollectableRenderOptions.COST_TEXTFIELD = 256),
-              (CollectableRenderOptions.MINUTESKIP_BACKGROUND = 512),
-              (CollectableRenderOptions.BUILDING_LEVEL_MC = 1024),
-              (CollectableRenderOptions.ALLIANCE_REWARD_BACKGROUND = 2048),
-              (CollectableRenderOptions.STORAGE_BAR = 4096),
-              (CollectableRenderOptions.DYNAMIC_LEVEL_INDICATOR = 8192),
-              (CollectableRenderOptions.SET_ICON =
-                CollectableRenderOptions.ICON |
-                CollectableRenderOptions.TOOLTIP |
-                CollectableRenderOptions.BUILDING_LEVEL_MC),
-              (CollectableRenderOptions.SET_BASIC =
-                CollectableRenderOptions.SET_ICON |
-                CollectableRenderOptions.INFO_BUTTON |
-                CollectableRenderOptions.EQUIPMENT_BACKGROUND |
-                CollectableRenderOptions.ALLIANCE_REWARD_BACKGROUND),
-              (CollectableRenderOptions.SET_DEFAULT =
-                CollectableRenderOptions.SET_BASIC |
-                CollectableRenderOptions.TEXTFIELD |
-                CollectableRenderOptions.TEXT_BACKGROUND),
-              (CollectableRenderOptions.SET_ADVANCED =
-                CollectableRenderOptions.SET_DEFAULT |
-                CollectableRenderOptions.ICON_TRANSFORM),
-              (CollectableRenderOptions.SET_TIME_CHALLENGE =
-                CollectableRenderOptions.SET_ADVANCED |
-                CollectableRenderOptions.COLOR_BACKGROUND),
-              (CollectableRenderOptions.SET_TOURNAMENT_DEFAULT =
-                CollectableRenderOptions.SET_ADVANCED |
-                CollectableRenderOptions.COLOR_BACKGROUND),
-              (CollectableRenderOptions.SET_STARTUP_LOGIN_BONUS =
-                CollectableRenderOptions.SET_ADVANCED |
-                CollectableRenderOptions.EQUIPMENT_BACKGROUND),
-              (CollectableRenderOptions.SET_RESOURCE_LIST =
-                CollectableRenderOptions.ICON |
-                CollectableRenderOptions.TEXTFIELD |
-                CollectableRenderOptions.TOOLTIP),
-              (CollectableRenderOptions.SET_COST_LIST =
-                CollectableRenderOptions.ICON |
-                CollectableRenderOptions.COST_TEXTFIELD |
-                CollectableRenderOptions.TOOLTIP),
-              (CollectableRenderOptions.SET_COST_LIST_NO_TOOLTIP =
-                CollectableRenderOptions.ICON |
-                CollectableRenderOptions.COST_TEXTFIELD),
-              (CollectableRenderOptions.SET_SAGA_MAP =
-                CollectableRenderOptions.ICON |
-                CollectableRenderOptions.TOOLTIP |
-                CollectableRenderOptions.INFO_BUTTON),
-              (CollectableRenderOptions.SET_STORAGE =
-                CollectableRenderOptions.ICON |
-                CollectableRenderOptions.TOOLTIP |
-                CollectableRenderOptions.TEXTFIELD |
-                CollectableRenderOptions.STORAGE_BAR));
-          }),
-          CollectableRenderOptions
-        );
-      })();
-    ((t.CollectableRenderOptions = c), c.__initialize_static_members());
   },
   function (e, t, i) {
     "use strict";
@@ -5716,9 +5564,15 @@
           (ClientConstCastle.MOAT_WOD_IDS = [
             455, 830, 1987, 2546, 456, 831, 1988, 2547,
           ]),
-          (ClientConstCastle.FACTION_WALL_WOD_IDS = [234, 235, 278]),
-          (ClientConstCastle.FACTION_GATE_WOD_IDS = [238, 239, 292]),
-          (ClientConstCastle.FACTION_MOAT_WOD_IDS = [240, 0, 0, 0, 9, 241, 10]),
+          (ClientConstCastle.FACTION_WALL_WOD_IDS = [
+            234, 235, 278, 4498, 4499,
+          ]),
+          (ClientConstCastle.FACTION_GATE_WOD_IDS = [
+            238, 239, 292, 4500, 4501,
+          ]),
+          (ClientConstCastle.FACTION_MOAT_WOD_IDS = [
+            240, 4502, 4503, 0, 9, 241, 10,
+          ]),
           (ClientConstCastle.INBOX_CATEGORY_TYPED_MAIL =
             "INBOX_CATEGORY_TYPED_MAIL"),
           (ClientConstCastle.INBOX_CATEGORY_PLAYER_MAIL =
@@ -5769,10 +5623,163 @@
           (ClientConstCastle.MINIMUM_RECRUITEMENT_TIME = 15),
           (ClientConstCastle.PLAYER_LEVEL_5 = 5),
           (ClientConstCastle.PLAYER_LEVEL_13 = 13),
+          (ClientConstCastle.LEGACY_EVENTTYPE_ALLIANCE_RAID_MOBILISATION = 137),
           ClientConstCastle
         );
       })();
     ((t.ClientConstCastle = r), r.__initialize_static_members());
+  },
+  function (e, t, i) {
+    "use strict";
+    Object.defineProperty(t, "__esModule", { value: !0 });
+    var n = i(6),
+      o = i(2016),
+      a = i(2017),
+      s = i(2018),
+      r = i(2019),
+      l = i(2020),
+      c = (function () {
+        function CollectableRenderOptions(e, t) {
+          (void 0 === e && (e = n.int(CollectableRenderOptions.SET_ADVANCED)),
+            void 0 === t && (t = null),
+            (this._icon = new a.CollectableRenderOptionsIcon()),
+            (this._textfield = new r.CollectableRenderOptionsTextfield()),
+            (this._costTextfield =
+              new o.CollectableRenderOptionsCostTextfield()),
+            (this._tooltip = new l.CollectableRenderOptionsTooltip()),
+            (this._storage = new s.CollectableRenderOptionsStorage()),
+            (this._renderMask = 0),
+            (this._renderMask = e),
+            t && (this.icon.dimension = t));
+        }
+        return (
+          (CollectableRenderOptions.prototype.containsRenderOption = function (
+            e,
+          ) {
+            return (this._renderMask & e) == e;
+          }),
+          Object.defineProperty(CollectableRenderOptions.prototype, "icon", {
+            get: function () {
+              return this._icon;
+            },
+            enumerable: !0,
+            configurable: !0,
+          }),
+          Object.defineProperty(
+            CollectableRenderOptions.prototype,
+            "textfield",
+            {
+              get: function () {
+                return this._textfield;
+              },
+              enumerable: !0,
+              configurable: !0,
+            },
+          ),
+          Object.defineProperty(
+            CollectableRenderOptions.prototype,
+            "costTextfield",
+            {
+              get: function () {
+                return this._costTextfield;
+              },
+              enumerable: !0,
+              configurable: !0,
+            },
+          ),
+          Object.defineProperty(CollectableRenderOptions.prototype, "tooltip", {
+            get: function () {
+              return this._tooltip;
+            },
+            enumerable: !0,
+            configurable: !0,
+          }),
+          Object.defineProperty(CollectableRenderOptions.prototype, "storage", {
+            get: function () {
+              return this._storage;
+            },
+            enumerable: !0,
+            configurable: !0,
+          }),
+          Object.defineProperty(
+            CollectableRenderOptions.prototype,
+            "renderMask",
+            {
+              get: function () {
+                return this._renderMask;
+              },
+              set: function (e) {
+                this._renderMask = e;
+              },
+              enumerable: !0,
+              configurable: !0,
+            },
+          ),
+          (CollectableRenderOptions.__initialize_static_members = function () {
+            ((CollectableRenderOptions.ICON = 1),
+              (CollectableRenderOptions.TOOLTIP = 2),
+              (CollectableRenderOptions.TEXTFIELD = 4),
+              (CollectableRenderOptions.TEXT_BACKGROUND = 8),
+              (CollectableRenderOptions.INFO_BUTTON = 16),
+              (CollectableRenderOptions.ICON_TRANSFORM = 32),
+              (CollectableRenderOptions.COLOR_BACKGROUND = 64),
+              (CollectableRenderOptions.EQUIPMENT_BACKGROUND = 128),
+              (CollectableRenderOptions.COST_TEXTFIELD = 256),
+              (CollectableRenderOptions.MINUTESKIP_BACKGROUND = 512),
+              (CollectableRenderOptions.BUILDING_LEVEL_MC = 1024),
+              (CollectableRenderOptions.ALLIANCE_REWARD_BACKGROUND = 2048),
+              (CollectableRenderOptions.STORAGE_BAR = 4096),
+              (CollectableRenderOptions.DYNAMIC_LEVEL_INDICATOR = 8192),
+              (CollectableRenderOptions.SET_ICON =
+                CollectableRenderOptions.ICON |
+                CollectableRenderOptions.TOOLTIP |
+                CollectableRenderOptions.BUILDING_LEVEL_MC),
+              (CollectableRenderOptions.SET_BASIC =
+                CollectableRenderOptions.SET_ICON |
+                CollectableRenderOptions.INFO_BUTTON |
+                CollectableRenderOptions.EQUIPMENT_BACKGROUND |
+                CollectableRenderOptions.ALLIANCE_REWARD_BACKGROUND),
+              (CollectableRenderOptions.SET_DEFAULT =
+                CollectableRenderOptions.SET_BASIC |
+                CollectableRenderOptions.TEXTFIELD |
+                CollectableRenderOptions.TEXT_BACKGROUND),
+              (CollectableRenderOptions.SET_ADVANCED =
+                CollectableRenderOptions.SET_DEFAULT |
+                CollectableRenderOptions.ICON_TRANSFORM),
+              (CollectableRenderOptions.SET_TIME_CHALLENGE =
+                CollectableRenderOptions.SET_ADVANCED |
+                CollectableRenderOptions.COLOR_BACKGROUND),
+              (CollectableRenderOptions.SET_TOURNAMENT_DEFAULT =
+                CollectableRenderOptions.SET_ADVANCED |
+                CollectableRenderOptions.COLOR_BACKGROUND),
+              (CollectableRenderOptions.SET_STARTUP_LOGIN_BONUS =
+                CollectableRenderOptions.SET_ADVANCED |
+                CollectableRenderOptions.EQUIPMENT_BACKGROUND),
+              (CollectableRenderOptions.SET_RESOURCE_LIST =
+                CollectableRenderOptions.ICON |
+                CollectableRenderOptions.TEXTFIELD |
+                CollectableRenderOptions.TOOLTIP),
+              (CollectableRenderOptions.SET_COST_LIST =
+                CollectableRenderOptions.ICON |
+                CollectableRenderOptions.COST_TEXTFIELD |
+                CollectableRenderOptions.TOOLTIP),
+              (CollectableRenderOptions.SET_COST_LIST_NO_TOOLTIP =
+                CollectableRenderOptions.ICON |
+                CollectableRenderOptions.COST_TEXTFIELD),
+              (CollectableRenderOptions.SET_SAGA_MAP =
+                CollectableRenderOptions.ICON |
+                CollectableRenderOptions.TOOLTIP |
+                CollectableRenderOptions.INFO_BUTTON),
+              (CollectableRenderOptions.SET_STORAGE =
+                CollectableRenderOptions.ICON |
+                CollectableRenderOptions.TOOLTIP |
+                CollectableRenderOptions.TEXTFIELD |
+                CollectableRenderOptions.STORAGE_BAR));
+          }),
+          CollectableRenderOptions
+        );
+      })();
+    ((t.CollectableRenderOptions = c), c.__initialize_static_members());
   },
   function (e, t, i) {
     "use strict";
@@ -6223,7 +6230,7 @@
       a = i(2035),
       s = i(1),
       r = i(1173),
-      l = i(20);
+      l = i(19);
   },
   function (e, t, i) {
     e.exports = i(125)(989);
@@ -11881,7 +11888,7 @@
       g = i(5),
       C = i(122),
       _ = i(6),
-      m = i(20),
+      m = i(19),
       f = i(4),
       E = i(274),
       O = i(1174),
@@ -13351,7 +13358,7 @@
       s = i(6),
       r = i(16),
       l = i(65),
-      c = i(19),
+      c = i(20),
       u = i(4),
       d = i(50),
       p = createjs.TextField,
@@ -16012,7 +16019,7 @@
       C = i(2032),
       _ = i(2033),
       m = i(2034),
-      f = i(19),
+      f = i(20),
       E = i(1173);
     a.__initialize_static_members();
   },
@@ -19869,7 +19876,7 @@
       o = i(1),
       a = i(5),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(59),
       c = i(28),
       u = i(103),
@@ -23192,7 +23199,7 @@
     })();
     t.CastleEffectsHelper = n;
     var o = i(115),
-      a = i(20),
+      a = i(19),
       s = i(5),
       r = i(6),
       l = i(4),
@@ -24650,7 +24657,7 @@
       v = i(26),
       T = i(32),
       S = i(65),
-      A = i(19),
+      A = i(20),
       L = i(29),
       P = i(665),
       M = i(4),
@@ -26687,7 +26694,7 @@
       p = i(3),
       h = i(3),
       g = i(6),
-      C = i(20),
+      C = i(19),
       _ = i(424),
       m = i(582),
       f = i(55),
@@ -29734,7 +29741,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(1),
       o = i(6),
-      a = i(20),
+      a = i(19),
       s = i(68),
       r = i(153),
       l = i(2054),
@@ -32175,7 +32182,7 @@
       O = i(41),
       y = i(188),
       b = i(295),
-      D = i(19),
+      D = i(20),
       I = createjs.Container,
       v = createjs.Point,
       T = (function (e) {
@@ -34021,7 +34028,7 @@
       h = i(30),
       g = i(65),
       C = i(118),
-      _ = i(19),
+      _ = i(20),
       m = i(4),
       f = i(8),
       E = i(163),
@@ -36200,7 +36207,7 @@
       r = i(3),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(2210),
       p = i(22),
       h = i(4),
@@ -40498,9 +40505,10 @@
             configurable: !0,
           }),
           (FactionEventVO.prototype.getOwnLeagueEventVO = function () {
-            return this._leaguetypes
-              .get(this._ownLeagueID)
-              .get(this._rewardSetId);
+            var e = this._leaguetypes.get(this._ownLeagueID);
+            if (!e) return null;
+            var t = e.get(this._rewardSetId);
+            return t || null;
           }),
           Object.defineProperty(FactionEventVO.prototype, "leaguetypes", {
             get: function () {
@@ -40517,18 +40525,21 @@
             configurable: !0,
           }),
           (FactionEventVO.prototype.setRankAndPoints = function (e, t, i) {
-            this.getOwnLeagueEventVO().setRankAndPoints([e[0]], [t[0]], null);
+            var n = this.getOwnLeagueEventVO();
+            n && n.setRankAndPoints(e ? [e[0]] : null, t ? [t[0]] : null, null);
           }),
           Object.defineProperty(FactionEventVO.prototype, "ownRank", {
             get: function () {
-              return this.getOwnLeagueEventVO().ownRank;
+              var e = this.getOwnLeagueEventVO();
+              return e ? e.ownRank : -1;
             },
             enumerable: !0,
             configurable: !0,
           }),
           Object.defineProperty(FactionEventVO.prototype, "ownPoints", {
             get: function () {
-              return this.getOwnLeagueEventVO().ownPoints;
+              var e = this.getOwnLeagueEventVO();
+              return e ? e.ownPoints : 0;
             },
             enumerable: !0,
             configurable: !0,
@@ -42041,7 +42052,7 @@
       o = i(1),
       a = i(3),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(4),
       c = i(104),
       u = i(561),
@@ -43834,7 +43845,7 @@
       r = i(5),
       l = i(5),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(139),
       p = i(4),
       h = i(384),
@@ -44587,7 +44598,7 @@
       u = i(1),
       d = i(1),
       p = i(5),
-      h = i(20),
+      h = i(19),
       g = i(685),
       C = i(221),
       _ = i(222),
@@ -45299,7 +45310,7 @@
       s = i(5),
       r = i(3),
       l = i(65),
-      c = i(19),
+      c = i(20),
       u = i(8),
       d = i(11),
       p = createjs.Point,
@@ -46535,7 +46546,7 @@
       l = i(5),
       c = i(3),
       u = i(6),
-      d = i(20),
+      d = i(19),
       p = i(52),
       h = i(54),
       g = i(4),
@@ -46960,7 +46971,7 @@
       s = i(5),
       r = i(3),
       l = i(6),
-      c = i(20),
+      c = i(19),
       u = i(13),
       d = i(42),
       p = i(47),
@@ -50014,7 +50025,7 @@
       d = i(3),
       p = i(3),
       h = i(6),
-      g = i(20),
+      g = i(19),
       C = i(59),
       _ = i(2662),
       m = i(2663),
@@ -52663,7 +52674,7 @@
     t.ClientConstEvent = n;
     var o = i(5),
       a = i(5),
-      s = i(20);
+      s = i(19);
     n.__initialize_static_members();
   },
   function (e, t, i) {
@@ -52997,7 +53008,8 @@
           }),
           (SublayerSwitcher.prototype.switchTo = function (e) {
             if (e < 0) throw new Error("Cannot switch to tab (null).");
-            e != this._activeTab &&
+            this.getInfo(e) &&
+              e != this._activeTab &&
               (this._activeTab >= 0 && this.hideCurrentSublayer(),
               this.showTab(e),
               this.isShown && this.onSwitched.dispatch(e));
@@ -53048,7 +53060,8 @@
             (this.hideCurrentSublayer(), (this.isShown = !1));
           }),
           (SublayerSwitcher.prototype.showHelp = function () {
-            this.getInfo(this.activeTab).sublayer.showHelp();
+            var e = this.getInfo(this.activeTab);
+            e && e.sublayer.showHelp();
           }),
           (SublayerSwitcher.prototype.getInfo = function (e) {
             return this.sublayers.get(e);
@@ -53087,14 +53100,20 @@
               var e = null;
               this.createPropertiesFunction &&
                 (e = this.createPropertiesFunction(this._activeTab));
-              var t = this.getInfo(this._activeTab).sublayer;
-              ((t.disp.visible = !0), t.show(e));
+              var t = this.getInfo(this._activeTab);
+              if (t) {
+                var i = t.sublayer;
+                ((i.disp.visible = !0), i.show(e));
+              }
             }
           }),
           (SublayerSwitcher.prototype.hideCurrentSublayer = function () {
             if (this.isShown) {
-              var e = this.getInfo(this._activeTab).sublayer;
-              ((e.disp.visible = !1), e.hide());
+              var e = this.getInfo(this._activeTab);
+              if (e) {
+                var t = e.sublayer;
+                ((t.disp.visible = !1), t.hide());
+              }
             }
           }),
           (SublayerSwitcher.prototype.updateTabButtons = function () {
@@ -55123,7 +55142,7 @@
       a = i(6),
       s = i(53),
       r = i(65),
-      l = i(19),
+      l = i(20),
       c = i(39),
       u = i(45),
       d = i(58),
@@ -59881,7 +59900,7 @@
       h = i(3),
       g = i(6),
       C = i(23),
-      _ = i(20),
+      _ = i(19),
       m = i(4);
   },
   function (e, t, i) {
@@ -61513,7 +61532,7 @@
       C = i(730),
       _ = i(235),
       m = i(30),
-      f = i(19),
+      f = i(20),
       E = i(8),
       O = i(24),
       y = i(39),
@@ -61985,7 +62004,7 @@
       r = i(3),
       l = i(6),
       c = i(65),
-      u = i(19),
+      u = i(20),
       d = i(39),
       p = createjs.Point,
       h = (function (e) {
@@ -63279,7 +63298,7 @@
       s = i(1),
       r = i(25),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(14),
       d = i(43),
       p = (function (e) {
@@ -65336,7 +65355,7 @@
       a = i(5),
       s = i(5),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(22),
       u = i(4),
       d = i(33),
@@ -65793,7 +65812,7 @@
       r = i(5),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(909),
       p = i(4),
       h = i(8),
@@ -67249,7 +67268,7 @@
       C = i(5),
       _ = i(3),
       m = i(6),
-      f = i(20),
+      f = i(19),
       E = i(4),
       O = i(1684),
       y = i(1685),
@@ -69688,7 +69707,7 @@
       c = i(29),
       u = i(28),
       d = i(27),
-      p = i(3958),
+      p = i(3959),
       h = createjs.MouseEvent,
       g = (function (e) {
         function AEventHubItemStatusIcon() {
@@ -69921,78 +69940,78 @@
       R = i(1),
       V = i(1168),
       x = i(273),
-      w = i(4259),
-      B = i(4260),
-      F = i(4261),
-      N = i(4262),
-      k = i(4263),
+      w = i(4260),
+      B = i(4261),
+      F = i(4262),
+      N = i(4263),
+      k = i(4264),
       U = i(759),
-      G = i(4264),
-      H = i(4265),
-      j = i(4266),
-      W = i(4269),
-      Y = i(4270),
-      K = i(4271),
-      z = i(4272),
-      q = i(4273),
-      X = i(4274),
-      Q = i(4275),
-      J = i(4276),
-      Z = i(4277),
-      $ = i(4279),
+      G = i(4265),
+      H = i(4266),
+      j = i(4267),
+      W = i(4270),
+      Y = i(4271),
+      K = i(4272),
+      z = i(4273),
+      q = i(4274),
+      X = i(4275),
+      Q = i(4276),
+      J = i(4277),
+      Z = i(4278),
+      $ = i(4280),
       ee = i(91),
       te = i(29),
       ie = i(15),
       ne = i(437),
       oe = i(4),
-      ae = i(4281),
-      se = i(4283),
-      re = i(4286),
+      ae = i(4282),
+      se = i(4284),
+      re = i(4287),
       le = i(227),
-      ce = i(4288),
+      ce = i(4289),
       ue = i(275),
-      de = i(4290),
-      pe = i(4292),
-      he = i(4294),
-      ge = i(4296),
-      Ce = i(4297),
-      _e = i(4305),
+      de = i(4291),
+      pe = i(4293),
+      he = i(4295),
+      ge = i(4297),
+      Ce = i(4298),
+      _e = i(4306),
       me = i(1893),
-      fe = i(4312),
-      Ee = i(4314),
-      Oe = i(4317),
-      ye = i(4319),
-      be = i(4322),
-      De = i(4324),
-      Ie = i(4334),
-      ve = i(4340),
-      Te = i(4341),
+      fe = i(4313),
+      Ee = i(4315),
+      Oe = i(4318),
+      ye = i(4320),
+      be = i(4323),
+      De = i(4325),
+      Ie = i(4335),
+      ve = i(4341),
+      Te = i(4342),
       Se = i(564),
-      Ae = i(4344),
-      Le = i(4345),
-      Pe = i(4346),
-      Me = i(4348),
-      Re = i(4349),
-      Ve = i(4350),
-      xe = i(4351),
-      we = i(4352),
-      Be = i(4353),
-      Fe = i(4354),
-      Ne = i(4355),
-      ke = i(4357),
+      Ae = i(4345),
+      Le = i(4346),
+      Pe = i(4347),
+      Me = i(4349),
+      Re = i(4350),
+      Ve = i(4351),
+      xe = i(4352),
+      we = i(4353),
+      Be = i(4354),
+      Fe = i(4355),
+      Ne = i(4356),
+      ke = i(4358),
       Ue = i(1664),
-      Ge = i(4359),
-      He = i(4361),
-      je = i(4376),
-      We = i(4377),
-      Ye = i(4379),
-      Ke = i(4381),
-      ze = i(4382),
-      qe = i(4383),
-      Xe = i(4385),
-      Qe = i(4391),
-      Je = i(4393),
-      Ze = i(4395),
+      Ge = i(4360),
+      He = i(4362),
+      je = i(4377),
+      We = i(4378),
+      Ye = i(4380),
+      Ke = i(4382),
+      ze = i(4383),
+      qe = i(4384),
+      Xe = i(4386),
+      Qe = i(4392),
+      Je = i(4394),
+      Ze = i(4396),
       $e = createjs.Ticker,
       et = createjs.Event,
       tt = createjs.DisplayObject,
@@ -70850,114 +70869,114 @@
         );
       })(d.BasicGame);
     t.CastleGame = it;
-    var nt = i(4397),
-      ot = i(4668),
-      at = i(4678),
-      st = i(4679),
-      rt = i(4680),
-      lt = i(4682),
-      ct = i(4683),
-      ut = i(5330),
-      dt = i(5332),
-      pt = i(5333),
-      ht = i(5334),
-      gt = i(5336),
+    var nt = i(4398),
+      ot = i(4669),
+      at = i(4679),
+      st = i(4680),
+      rt = i(4681),
+      lt = i(4683),
+      ct = i(4684),
+      ut = i(5331),
+      dt = i(5333),
+      pt = i(5334),
+      ht = i(5335),
+      gt = i(5337),
       Ct = i(31),
-      _t = i(5337),
-      mt = i(5339),
+      _t = i(5338),
+      mt = i(5340),
       ft = i(748),
-      Et = i(5395),
+      Et = i(5396),
       Ot = i(821),
-      yt = i(5400),
+      yt = i(5401),
       bt = i(322),
-      Dt = i(5402),
-      It = i(5404),
-      vt = i(5407),
+      Dt = i(5403),
+      It = i(5405),
+      vt = i(5408),
       Tt = i(930),
-      St = i(5414),
-      At = i(5421),
-      Lt = i(5424),
-      Pt = i(5425),
-      Mt = i(5426),
+      St = i(5415),
+      At = i(5422),
+      Lt = i(5425),
+      Pt = i(5426),
+      Mt = i(5427),
       Rt = i(590),
-      Vt = i(5428),
-      xt = i(5432),
-      wt = i(5438),
+      Vt = i(5429),
+      xt = i(5433),
+      wt = i(5439),
       Bt = i(1112),
       Ft = i(785),
-      Nt = i(5440),
-      kt = i(5607),
+      Nt = i(5441),
+      kt = i(5608),
       Ut = i(1387),
-      Gt = i(5610),
-      Ht = i(5612),
+      Gt = i(5611),
+      Ht = i(5613),
       jt = i(399),
       Wt = i(173),
       Yt = i(539),
-      Kt = i(5616),
-      zt = i(5623),
-      qt = i(5624),
-      Xt = i(5626),
-      Qt = i(5628),
-      Jt = i(5630),
-      Zt = i(5633),
-      $t = i(5635),
+      Kt = i(5617),
+      zt = i(5624),
+      qt = i(5625),
+      Xt = i(5627),
+      Qt = i(5629),
+      Jt = i(5631),
+      Zt = i(5634),
+      $t = i(5636),
       ei = i(560),
-      ti = i(5643),
-      ii = i(5646),
-      ni = i(5650),
-      oi = i(5652),
+      ti = i(5644),
+      ii = i(5647),
+      ni = i(5651),
+      oi = i(5653),
       ai = i(284),
       si = i(56),
-      ri = i(5654),
+      ri = i(5655),
       li = i(620),
-      ci = i(5657),
-      ui = i(5658),
-      di = i(5662),
-      pi = i(5663),
-      hi = i(5664),
-      gi = i(5671),
-      Ci = i(5673),
-      _i = i(5679),
+      ci = i(5658),
+      ui = i(5659),
+      di = i(5663),
+      pi = i(5664),
+      hi = i(5665),
+      gi = i(5672),
+      Ci = i(5674),
+      _i = i(5680),
       mi = i(688),
       fi = i(1126),
       Ei = i(1548),
-      Oi = i(5687),
-      yi = i(5689),
-      bi = i(5692),
+      Oi = i(5688),
+      yi = i(5690),
+      bi = i(5693),
       Di = i(784),
-      Ii = i(5694),
-      vi = i(5697),
-      Ti = i(5704),
+      Ii = i(5695),
+      vi = i(5698),
+      Ti = i(5705),
       Si = i(469),
       Ai = i(1441),
       Li = i(228),
-      Pi = i(5717),
+      Pi = i(5718),
       Mi = i(9),
       Ri = i(17),
       Vi = i(517),
       xi = i(657),
-      wi = i(5756),
-      Bi = i(5758),
-      Fi = i(5760),
-      Ni = i(5779),
-      ki = i(5786),
+      wi = i(5757),
+      Bi = i(5759),
+      Fi = i(5761),
+      Ni = i(5780),
+      ki = i(5787),
       Ui = i(649),
-      Gi = i(5788),
-      Hi = i(5792),
-      ji = i(5802),
-      Wi = i(5804),
-      Yi = i(5805),
-      Ki = i(5806),
-      zi = i(5808),
-      qi = i(5809),
+      Gi = i(5789),
+      Hi = i(5793),
+      ji = i(5803),
+      Wi = i(5805),
+      Yi = i(5806),
+      Ki = i(5807),
+      zi = i(5809),
+      qi = i(5810),
       Xi = i(1028),
-      Qi = i(5810),
+      Qi = i(5811),
       Ji = i(819),
-      Zi = i(5812),
-      $i = i(5814),
-      en = i(5819),
-      tn = i(5821),
-      nn = i(5822),
+      Zi = i(5813),
+      $i = i(5815),
+      en = i(5820),
+      tn = i(5822),
+      nn = i(5823),
       on = i(1394);
     R.classImplementsInterfaces(it, "Container");
   },
@@ -72577,7 +72596,7 @@
       E = i(3),
       O = i(3),
       y = i(6),
-      b = i(20),
+      b = i(19),
       D = i(16),
       I = i(59),
       v = i(40),
@@ -75513,7 +75532,7 @@
       l = i(5),
       c = i(5),
       u = i(6),
-      d = i(20),
+      d = i(19),
       p = i(59),
       h = i(135),
       g = i(4),
@@ -77263,7 +77282,7 @@
       h = i(3),
       g = i(3),
       C = i(6),
-      _ = i(20),
+      _ = i(19),
       m = i(52),
       f = i(16),
       E = i(59),
@@ -77287,7 +77306,7 @@
       F = i(26),
       N = i(32),
       k = i(30),
-      U = i(19),
+      U = i(20),
       G = i(55),
       H = i(139),
       j = i(4),
@@ -79683,7 +79702,7 @@
       o = i(1),
       a = i(6),
       s = i(65),
-      r = i(19),
+      r = i(20),
       l = (function (e) {
         function CastleCenteredRewardRendererListComponent(t, i, n, o) {
           (void 0 === i && (i = null),
@@ -81258,7 +81277,7 @@
       s = i(1),
       r = i(5),
       l = i(5),
-      c = i(20),
+      c = i(19),
       u = i(85),
       d = i(4),
       p = i(23),
@@ -82312,7 +82331,7 @@
       o = i(1),
       a = i(1),
       s = i(3),
-      r = i(20),
+      r = i(19),
       l = i(8),
       c = (function (e) {
         function CastlePremiumMarketPlaceDialog() {
@@ -83865,7 +83884,7 @@
       I = i(25),
       v = i(25),
       T = i(25),
-      S = i(20),
+      S = i(19),
       A = i(16),
       L = i(40),
       P = i(904),
@@ -87393,7 +87412,7 @@
       l = i(3),
       c = i(6),
       u = i(30),
-      d = i(19),
+      d = i(20),
       p = i(12),
       h = i(4),
       g = i(18),
@@ -89951,7 +89970,7 @@
       h = i(3),
       g = i(25),
       C = i(25),
-      _ = i(20),
+      _ = i(19),
       m = i(52),
       f = i(59),
       E = i(258),
@@ -91340,7 +91359,7 @@
       o = i(1),
       a = i(5),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(83),
       c = i(4),
       u = i(56),
@@ -92239,17 +92258,17 @@
     var n = i(0),
       o = i(5),
       a = i(1),
-      s = i(20),
+      s = i(19),
       r = i(91),
       l = i(132),
       c = i(1825),
-      u = i(3954),
-      d = i(3959),
-      p = i(3960),
-      h = i(3961),
-      g = i(3962),
-      C = i(3963),
-      _ = i(3964),
+      u = i(3955),
+      d = i(3960),
+      p = i(3961),
+      h = i(3962),
+      g = i(3963),
+      C = i(3964),
+      _ = i(3965),
       m = i(1123),
       f = createjs.MovieClip,
       E = createjs.Container,
@@ -92733,68 +92752,68 @@
       })(l.CastlePanel);
     t.CastleStatusPanel = O;
     var y = i(455),
-      b = i(3965),
-      D = i(3966),
-      I = i(3967),
-      v = i(3969),
-      T = i(3970),
-      S = i(3972),
-      A = i(3973),
-      L = i(3974),
-      P = i(3975),
-      M = i(3976),
+      b = i(3966),
+      D = i(3967),
+      I = i(3968),
+      v = i(3970),
+      T = i(3971),
+      S = i(3973),
+      A = i(3974),
+      L = i(3975),
+      P = i(3976),
+      M = i(3977),
       R = i(915),
-      V = i(3977),
-      x = i(3978),
-      w = i(3979),
-      B = i(3981),
-      F = i(3982),
-      N = i(3983),
-      k = i(3984),
-      U = i(3985),
-      G = i(3986),
-      H = i(3987),
-      j = i(3994),
-      W = i(4003),
-      Y = i(4004),
-      K = i(4005),
-      z = i(4006),
-      q = i(4009),
-      X = i(4011),
-      Q = i(4017),
-      J = i(4018),
-      Z = i(4019),
-      $ = i(4020),
-      ee = i(4032),
-      te = i(4033),
-      ie = i(4035),
-      ne = i(4036),
-      oe = i(4037),
-      ae = i(4038),
-      se = i(4052),
-      re = i(4053),
-      le = i(4054),
-      ce = i(4056),
-      ue = i(4057),
-      de = i(4059),
-      pe = i(4061),
-      he = i(4062),
-      ge = i(4064),
-      Ce = i(4065),
-      _e = i(4066),
-      me = i(4067),
-      fe = i(4069),
-      Ee = i(4070),
-      Oe = i(4072),
-      ye = i(4073),
-      be = i(4074),
-      De = i(4076),
-      Ie = i(4077),
-      ve = i(4078),
-      Te = i(4079),
-      Se = i(4080),
-      Ae = i(4081),
-      Le = i(4084);
+      V = i(3978),
+      x = i(3979),
+      w = i(3980),
+      B = i(3982),
+      F = i(3983),
+      N = i(3984),
+      k = i(3985),
+      U = i(3986),
+      G = i(3987),
+      H = i(3988),
+      j = i(3995),
+      W = i(4004),
+      Y = i(4005),
+      K = i(4006),
+      z = i(4007),
+      q = i(4010),
+      X = i(4012),
+      Q = i(4018),
+      J = i(4019),
+      Z = i(4020),
+      $ = i(4021),
+      ee = i(4033),
+      te = i(4034),
+      ie = i(4036),
+      ne = i(4037),
+      oe = i(4038),
+      ae = i(4039),
+      se = i(4053),
+      re = i(4054),
+      le = i(4055),
+      ce = i(4057),
+      ue = i(4058),
+      de = i(4060),
+      pe = i(4062),
+      he = i(4063),
+      ge = i(4065),
+      Ce = i(4066),
+      _e = i(4067),
+      me = i(4068),
+      fe = i(4070),
+      Ee = i(4071),
+      Oe = i(4073),
+      ye = i(4074),
+      be = i(4075),
+      De = i(4077),
+      Ie = i(4078),
+      ve = i(4079),
+      Te = i(4080),
+      Se = i(4081),
+      Ae = i(4082),
+      Le = i(4085);
     O.__initialize_static_members();
   },
   function (e, t, i) {
@@ -92923,12 +92942,12 @@
       p = i(5),
       h = i(27),
       g = i(1847),
-      C = i(4044),
-      _ = i(4046),
+      C = i(4045),
+      _ = i(4047),
       m = i(11),
-      f = i(4047),
-      E = i(4049),
-      O = i(4051),
+      f = i(4048),
+      E = i(4050),
+      O = i(4052),
       y = (function (e) {
         function CastleStormIslandsMainDialog() {
           var t = this;
@@ -97177,7 +97196,7 @@
     var n = i(0),
       o = i(1),
       a = i(5),
-      s = i(20),
+      s = i(19),
       r = i(4),
       l = i(194),
       c = (function (e) {
@@ -98384,7 +98403,7 @@
       c = i(5),
       u = i(3),
       d = i(6),
-      p = i(20),
+      p = i(19),
       h = i(44),
       g = i(4),
       C = i(105),
@@ -99011,7 +99030,7 @@
       r = i(5),
       l = i(5),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(59),
       p = i(103),
       h = i(55),
@@ -99096,6 +99115,14 @@
               !1
             );
           }),
+          (CastleMapobjectVO.getSkinClipNameForKeepLevel = function (e, t) {
+            for (var i = t; i >= 1; i--) {
+              var n = e + "_" + i;
+              if (a.BasicModel.basicLoaderData.isItemAssetVersioned(n))
+                return n;
+            }
+            return e;
+          }),
           (CastleMapobjectVO.prototype.getKeepClip = function () {
             if (M.WorldmapEasterEggHelper.isCatModeActive)
               return this.getAsExternalClip(
@@ -99124,13 +99151,14 @@
                     )
                   : null;
             if (i && i.hasSkinInfo()) {
-              var n = "";
+              var n = CastleMapobjectVO.SKIN_MAPOBJECT_PREFIX + i.skinAssetID;
               return (
                 i.skinDefinesAssetForAllCastleLevels &&
-                  (n = "_" + Math.max(1, this.keepLevel)),
-                this.getAsExternalClip(
-                  "Castle_Mapobject_Special_" + i.skinAssetID + n,
-                )
+                  (n = CastleMapobjectVO.getSkinClipNameForKeepLevel(
+                    n,
+                    Math.max(1, this.keepLevel),
+                  )),
+                this.getAsExternalClip(n)
               );
             }
             if (t)
@@ -99495,6 +99523,8 @@
           ),
           (CastleMapobjectVO.CASTLE_PART_MOAT = "Castlepart_Moat_"),
           (CastleMapobjectVO.MAPOBJECT_RUIN = "Ruin_Mapobject"),
+          (CastleMapobjectVO.SKIN_MAPOBJECT_PREFIX =
+            "Castle_Mapobject_Special_"),
           (CastleMapobjectVO.FILE_NAME_FLAG_SPECIAL = "_Special_"),
           CastleMapobjectVO
         );
@@ -99849,7 +99879,7 @@
       c = i(5),
       u = i(3),
       d = i(6),
-      p = i(20),
+      p = i(19),
       h = i(28),
       g = i(103),
       C = i(29),
@@ -100568,7 +100598,7 @@
       a = i(353),
       s = i(274),
       r = i(110),
-      l = i(20),
+      l = i(19),
       c = i(1),
       u = i(8),
       d = i(589),
@@ -105781,7 +105811,7 @@
       o = i(3),
       a = i(3),
       s = i(6),
-      r = i(19),
+      r = i(20),
       l = createjs.Point,
       c = (function () {
         function CastleScoreEventScoreBarProperties(e, t, i, n, o, a, s) {
@@ -106099,7 +106129,7 @@
       r = i(21),
       l = i(26),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(12),
       p = i(4),
       h = i(27),
@@ -106678,7 +106708,7 @@
       a = i(5),
       s = i(3),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(274),
       u = i(186),
       d = i(4),
@@ -107694,8 +107724,8 @@
       );
     })();
     t.ACastleLayoutStrategy = n;
-    var o = i(3948),
-      a = i(3950),
+    var o = i(3949),
+      a = i(3951),
       s = i(1823),
       r = i(69),
       l = i(2),
@@ -107722,7 +107752,7 @@
       m = i(8),
       f = i(11),
       E = i(108),
-      O = i(3955),
+      O = i(3956),
       y = (function (e) {
         function GachaEventMainDialog() {
           return (
@@ -107981,7 +108011,7 @@
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
-      o = i(20),
+      o = i(19),
       a = i(59),
       s = i(91),
       r = i(37),
@@ -108272,41 +108302,41 @@
       })(_.CastlePanel);
     t.CastleActionPanel = E;
     var O = i(17),
-      y = i(4128),
-      b = i(4130),
-      D = i(4132),
+      y = i(4129),
+      b = i(4131),
+      D = i(4133),
       I = i(1136),
       v = i(1861),
       T = i(1862),
-      S = i(4133),
-      A = i(4134),
+      S = i(4134),
+      A = i(4135),
       L = i(1863),
-      P = i(4135),
-      M = i(4136),
-      R = i(4137),
-      V = i(4139),
-      x = i(4140),
-      w = i(4141),
-      B = i(4142),
-      F = i(4143),
-      N = i(4144),
+      P = i(4136),
+      M = i(4137),
+      R = i(4138),
+      V = i(4140),
+      x = i(4141),
+      w = i(4142),
+      B = i(4143),
+      F = i(4144),
+      N = i(4145),
       k = i(1864),
-      U = i(4145),
-      G = i(4146),
-      H = i(4147),
+      U = i(4146),
+      G = i(4147),
+      H = i(4148),
       j = i(1865),
       W = i(851),
-      Y = i(4148),
-      K = i(4149),
-      z = i(4150),
-      q = i(4152),
-      X = i(4153),
-      Q = i(4154),
+      Y = i(4149),
+      K = i(4150),
+      z = i(4151),
+      q = i(4153),
+      X = i(4154),
+      Q = i(4155),
       J = i(1866),
       Z = i(1134),
       $ = i(696),
-      ee = i(4156),
-      te = i(4157);
+      ee = i(4157),
+      te = i(4158);
   },
   function (e, t, i) {
     "use strict";
@@ -109875,7 +109905,7 @@
     var n = i(1),
       o = i(1),
       a = i(30),
-      s = i(19),
+      s = i(20),
       r = createjs.Point,
       l = (function () {
         function EventOverviewDetailedEventView() {
@@ -110535,7 +110565,7 @@
     var n = i(0),
       o = i(47),
       a = i(82),
-      s = i(19),
+      s = i(20),
       r = i(65),
       l = i(24),
       c = i(492),
@@ -111052,7 +111082,7 @@
       b = i(224),
       D = i(24),
       I = i(30),
-      v = i(19);
+      v = i(20);
     s.classImplementsInterfaces(E, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -111087,7 +111117,7 @@
       a = i(5),
       s = i(5),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(4),
       u = i(105),
       d = i(347),
@@ -111336,15 +111366,11 @@
             "baseGateBonus",
             {
               get: function () {
-                return 0 == this.gateLevel
-                  ? 0
-                  : c.CastleModel.wodData
-                      .voSubList(g.CastleWodData.TYPE_BUILDING)
-                      .get(
-                        l.ClientConstCastle.FACTION_GATE_WOD_IDS[
-                          this.gateLevel - 1
-                        ],
-                      ).gateBonus;
+                var e = this.getDefenceBuildingVO(
+                  l.ClientConstCastle.FACTION_GATE_WOD_IDS,
+                  this.gateLevel,
+                );
+                return e ? e.gateBonus : 0;
               },
               set: function (e) {
                 Object.getOwnPropertyDescriptor(
@@ -111361,15 +111387,11 @@
             "baseMoatBonus",
             {
               get: function () {
-                return this.moatLevel
-                  ? c.CastleModel.wodData
-                      .voSubList(g.CastleWodData.TYPE_BUILDING)
-                      .get(
-                        l.ClientConstCastle.FACTION_MOAT_WOD_IDS[
-                          this.moatLevel - 1
-                        ],
-                      ).moatBonus
-                  : 0;
+                var e = this.getDefenceBuildingVO(
+                  l.ClientConstCastle.FACTION_MOAT_WOD_IDS,
+                  this.moatLevel,
+                );
+                return e ? e.moatBonus : 0;
               },
               set: function (e) {
                 Object.getOwnPropertyDescriptor(
@@ -111386,15 +111408,11 @@
             "baseWallBonus",
             {
               get: function () {
-                return this.wallLevel
-                  ? c.CastleModel.wodData
-                      .voSubList(g.CastleWodData.TYPE_BUILDING)
-                      .get(
-                        l.ClientConstCastle.FACTION_WALL_WOD_IDS[
-                          this.wallLevel - 1
-                        ],
-                      ).wallBonus
-                  : 0;
+                var e = this.getDefenceBuildingVO(
+                  l.ClientConstCastle.FACTION_WALL_WOD_IDS,
+                  this.wallLevel,
+                );
+                return e ? e.wallBonus : 0;
               },
               set: function (e) {
                 Object.getOwnPropertyDescriptor(
@@ -111406,6 +111424,18 @@
               configurable: !0,
             },
           ),
+          (FactionCampMapobjectVO.prototype.getDefenceBuildingVO = function (
+            e,
+            t,
+          ) {
+            if (!t || t < 1 || t > e.length) return null;
+            var i = e[t - 1];
+            return i
+              ? c.CastleModel.wodData
+                  .voSubList(g.CastleWodData.TYPE_BUILDING)
+                  .get(i)
+              : null;
+          }),
           Object.defineProperty(
             FactionCampMapobjectVO.prototype,
             "unitBaseLocation",
@@ -111863,7 +111893,7 @@
       l = i(5),
       c = i(3),
       u = i(6),
-      d = i(20),
+      d = i(19),
       p = i(28),
       h = i(103),
       g = i(576),
@@ -113943,7 +113973,7 @@
       r = i(5),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(28),
       p = i(103),
       h = i(55),
@@ -115254,7 +115284,7 @@
       c = i(3),
       u = i(6),
       d = i(30),
-      p = i(19),
+      p = i(20),
       h = i(4),
       g = i(50),
       C = i(126),
@@ -116025,7 +116055,7 @@
       l = i(5),
       c = i(3),
       u = i(6),
-      d = i(20),
+      d = i(19),
       p = i(172),
       h = i(235),
       g = i(26),
@@ -116956,7 +116986,7 @@
       r = i(5),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(28),
       p = i(103),
       h = i(29),
@@ -117601,7 +117631,7 @@
       r = i(5),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(28),
       p = i(1433),
       h = i(103),
@@ -117866,7 +117896,7 @@
       l = i(5),
       c = i(3),
       u = i(6),
-      d = i(20),
+      d = i(19),
       p = i(28),
       h = i(1433),
       g = i(103),
@@ -118203,7 +118233,7 @@
       r = i(5),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(488),
       p = i(57),
       h = i(4),
@@ -118986,7 +119016,7 @@
     t.CastleDecoShopItemArrayHelper = n;
     var o = i(35),
       a = i(17),
-      s = i(20),
+      s = i(19),
       r = i(1),
       l = i(6),
       c = i(4);
@@ -119445,7 +119475,7 @@
     var o = i(9),
       a = i(443),
       s = i(775),
-      r = i(20),
+      r = i(19),
       l = i(5),
       c = i(3),
       u = i(6),
@@ -120643,7 +120673,7 @@
       T = i(25),
       S = i(25),
       A = i(496),
-      L = i(20),
+      L = i(19),
       P = i(16),
       M = i(59),
       R = i(28),
@@ -125165,7 +125195,7 @@
       f = i(3),
       E = i(3),
       O = i(6),
-      y = i(20),
+      y = i(19),
       b = i(16),
       D = i(28),
       I = i(1073),
@@ -126554,7 +126584,7 @@
     t.CastleSpyArmyInfoVO = n;
     var o = i(724),
       a = i(587),
-      s = i(20),
+      s = i(19),
       r = i(5),
       l = i(6),
       c = i(28),
@@ -126566,7 +126596,7 @@
     var n = i(1),
       o = i(1),
       a = i(6),
-      s = i(20),
+      s = i(19),
       r = i(69),
       l = i(907),
       c = (function () {
@@ -126811,8 +126841,8 @@
       O = i(3),
       y = i(6),
       b = i(59),
-      D = i(3995),
-      I = i(3996),
+      D = i(3996),
+      I = i(3997),
       v = i(1436),
       T = i(1437),
       S = i(21),
@@ -127844,7 +127874,7 @@
     var o = i(24),
       a = i(49),
       s = i(30),
-      r = i(19),
+      r = i(20),
       l = i(8);
     n.__initialize_static_members();
   },
@@ -127860,7 +127890,7 @@
       c = i(25),
       u = i(25),
       d = i(218),
-      p = i(20),
+      p = i(19),
       h = i(59),
       g = i(586),
       C = i(91),
@@ -128559,19 +128589,19 @@
       V = i(128),
       x = i(1132),
       w = i(1134),
-      B = i(4107),
-      F = i(4108),
-      N = i(4113),
-      k = i(4114),
-      U = i(4115),
+      B = i(4108),
+      F = i(4109),
+      N = i(4114),
+      k = i(4115),
+      U = i(4116),
       G = i(1856),
-      H = i(4120),
-      j = i(4121),
+      H = i(4121),
+      j = i(4122),
       W = i(1),
       Y = i(1),
       K = i(293),
-      z = i(4124),
-      q = i(4126),
+      z = i(4125),
+      q = i(4127),
       X = i(401),
       Q = i(544),
       J = i(1723),
@@ -130357,7 +130387,7 @@
     var n = i(0),
       o = i(1),
       a = i(5),
-      s = i(20),
+      s = i(19),
       r = i(71),
       l = i(90),
       c = i(15),
@@ -130570,7 +130600,7 @@
       a = i(2),
       s = i(1),
       r = i(1),
-      l = i(20),
+      l = i(19),
       c = i(15),
       u = i(4),
       d = i(92),
@@ -134155,7 +134185,7 @@
       r = i(5),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(28),
       p = i(103),
       h = i(423),
@@ -137741,7 +137771,7 @@
     var n = i(0),
       o = i(1),
       a = i(6),
-      s = i(20),
+      s = i(19),
       r = i(4),
       l = i(33),
       c = i(507),
@@ -139119,7 +139149,7 @@
       y = i(3),
       b = i(3),
       D = i(6),
-      I = i(20),
+      I = i(19),
       v = i(16),
       T = i(28),
       S = i(732),
@@ -140174,7 +140204,7 @@
       E = i(3),
       O = i(3),
       y = i(6),
-      b = i(20),
+      b = i(19),
       D = i(16),
       I = i(59),
       v = i(28),
@@ -141398,7 +141428,7 @@
     var n = i(0),
       o = i(2),
       a = i(6),
-      s = i(20),
+      s = i(19),
       r = (function (e) {
         function CastleHighscoreDialogProperties(t, i) {
           void 0 === i && (i = a.int(s.ClientConstCastle.CATEGORY_HONOR));
@@ -141440,7 +141470,7 @@
       E = i(3),
       O = i(3),
       y = i(6),
-      b = i(20),
+      b = i(19),
       D = i(1353),
       I = i(387),
       v = i(175),
@@ -143041,7 +143071,7 @@
       q = i(12),
       X = i(145),
       Q = i(24),
-      J = i(19),
+      J = i(20),
       Z = i(30),
       $ = i(44);
     c.classImplementsInterfaces(k, "ICollectableRendererList");
@@ -143881,10 +143911,10 @@
       r = i(3),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(26),
       p = i(30),
-      h = i(19),
+      h = i(20),
       g = i(55),
       C = i(12),
       _ = i(4),
@@ -145168,7 +145198,7 @@
       r = i(5),
       l = i(5),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(4),
       p = i(33),
       h = i(217),
@@ -146581,7 +146611,8 @@
       L = i(1430),
       P = i(25),
       M = i(25),
-      R = (function (e) {
+      R = i(19),
+      V = (function (e) {
         function AllianceMobilizationEventDialog() {
           var t = e.call(this, AllianceMobilizationEventDialog.NAME) || this;
           return ((t.charClickCount = 0), t);
@@ -146912,7 +146943,8 @@
               switch (this.dialogProperties.eventID) {
                 case s.EventConst.EVENTTYPE_ALLIANCE_MOBILISATION:
                   return 1;
-                case s.EventConst.EVENTTYPE_ALLIANCE_RAID_MOBILISATION:
+                case R.ClientConstCastle
+                  .LEGACY_EVENTTYPE_ALLIANCE_RAID_MOBILISATION:
                   return 2;
               }
               return 1;
@@ -146961,8 +146993,8 @@
           AllianceMobilizationEventDialog
         );
       })(I.CastleExternalSubLayerDialog);
-    ((t.AllianceMobilizationEventDialog = R),
-      a.classImplementsInterfaces(R, "ICollectableRendererList"));
+    ((t.AllianceMobilizationEventDialog = V),
+      a.classImplementsInterfaces(V, "ICollectableRendererList"));
   },
   function (e, t, i) {
     "use strict";
@@ -146995,7 +147027,7 @@
       r = i(5),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(28),
       p = i(103),
       h = i(29),
@@ -147665,7 +147697,7 @@
     var I = i(62),
       v = i(24),
       T = i(30),
-      S = i(19);
+      S = i(20);
     (o.classImplementsInterfaces(D, "ICollectableRendererList"),
       D.__initialize_static_members());
   },
@@ -147678,7 +147710,7 @@
       s = i(373),
       r = i(32),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(4),
       d = i(34),
       p = createjs.Point,
@@ -148093,7 +148125,7 @@
       a = i(3),
       s = i(2731),
       r = i(30),
-      l = i(19),
+      l = i(20),
       c = i(4),
       u = i(8),
       d = i(11),
@@ -148422,7 +148454,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = (function (e) {
         function ATowerVO() {
           var t = e.call(this) || this;
@@ -149635,7 +149667,7 @@
       s = i(3),
       r = i(3),
       l = i(6),
-      c = i(20),
+      c = i(19),
       u = i(16),
       d = i(59),
       p = i(4),
@@ -150773,7 +150805,7 @@
       D = i(256),
       I = i(145),
       v = i(30),
-      T = i(19),
+      T = i(20),
       S = i(559),
       A = i(12),
       L = i(31),
@@ -151911,7 +151943,7 @@
       p = i(32),
       h = i(65),
       g = i(118),
-      C = i(19),
+      C = i(20),
       _ = i(12),
       m = i(4),
       f = i(50),
@@ -152263,7 +152295,7 @@
       s = i(1),
       r = i(3),
       l = i(65),
-      c = i(19),
+      c = i(20),
       u = i(8),
       d = (function (e) {
         function CastleTreasureChestOpenDialog() {
@@ -153973,7 +154005,7 @@
       I = i(1068),
       v = i(24),
       T = i(65),
-      S = i(19),
+      S = i(20),
       A = i(118),
       L = i(47),
       P = i(9),
@@ -154334,7 +154366,7 @@
       d = i(3),
       p = i(6),
       h = i(65),
-      g = i(19),
+      g = i(20),
       C = i(4),
       _ = i(68),
       m = i(203),
@@ -156098,7 +156130,7 @@
       r = i(69),
       l = i(32),
       c = i(65),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(34),
       h = i(247),
@@ -156269,7 +156301,7 @@
       l = i(16),
       c = i(26),
       u = i(65),
-      d = i(19),
+      d = i(20),
       p = i(12),
       h = i(4),
       g = i(9),
@@ -156760,7 +156792,7 @@
       o = i(3),
       a = i(65),
       s = i(118),
-      r = i(19),
+      r = i(20),
       l = i(24),
       c = createjs.Point,
       u = (function () {
@@ -157305,7 +157337,7 @@
       c = i(5),
       u = i(3),
       d = i(6),
-      p = i(20),
+      p = i(19),
       h = i(55),
       g = i(139),
       C = i(174),
@@ -157930,7 +157962,7 @@
       c = i(5),
       u = i(5),
       d = i(6),
-      p = i(20),
+      p = i(19),
       h = i(44),
       g = i(4),
       C = i(149),
@@ -158410,7 +158442,7 @@
       l = i(32),
       c = i(30),
       u = i(118),
-      d = i(19),
+      d = i(20),
       p = i(4),
       h = i(45),
       g = i(182),
@@ -159177,7 +159209,7 @@
       o = i(49),
       a = i(2),
       s = i(1),
-      r = i(20),
+      r = i(19),
       l = i(352),
       c = i(151),
       u = i(18),
@@ -159921,8 +159953,8 @@
       u = i(4),
       d = i(27),
       p = i(9),
-      h = i(4012),
-      g = i(4016),
+      h = i(4013),
+      g = i(4017),
       C = i(1842),
       _ = i(1845),
       m = i(313),
@@ -160202,7 +160234,7 @@
       p = i(3),
       h = i(3),
       g = i(6),
-      C = i(20),
+      C = i(19),
       _ = i(16),
       m = i(59),
       f = i(40),
@@ -160213,17 +160245,17 @@
       D = i(79),
       I = i(4),
       v = i(432),
-      T = i(4086),
+      T = i(4087),
       S = i(568),
       A = i(1738),
-      L = i(4087),
+      L = i(4088),
       P = i(599),
       M = i(8),
       R = i(41),
       V = i(132),
-      x = i(4088),
-      w = i(4090),
-      B = i(4091),
+      x = i(4089),
+      w = i(4091),
+      B = i(4092),
       F = createjs.Container,
       N = (function (e) {
         function CastleUserStatePanel() {
@@ -160755,7 +160787,7 @@
     t.CastleUserStatePanel = N;
     var k = i(9),
       U = i(429),
-      G = i(4093),
+      G = i(4094),
       H = i(1080),
       j = i(442),
       W = i(418),
@@ -161071,7 +161103,7 @@
       })(C.CastleDialogSubLayer);
     t.ACastleBaseInboxMessageList = f;
     var E = i(9),
-      O = i(4099),
+      O = i(4100),
       y = i(736);
     a.classImplementsInterfaces(f, "ICollectableRendererList", "ISublayer");
   },
@@ -161449,7 +161481,7 @@
       o = i(1),
       a = i(5),
       s = i(3),
-      r = i(20),
+      r = i(19),
       l = i(4),
       c = i(239),
       u = i(271),
@@ -161720,7 +161752,7 @@
       m = i(3),
       f = i(3),
       E = i(6),
-      O = i(20),
+      O = i(19),
       y = i(16),
       b = i(293),
       D = i(23),
@@ -162326,7 +162358,7 @@
         "IEventPackagesVO",
       ));
     var u = i(165),
-      d = i(4577);
+      d = i(4578);
   },
   function (e, t, i) {
     "use strict";
@@ -163140,7 +163172,7 @@
   function (e) {
     e.exports = {
       name: "@goodgamestudios/empire-createjs-assets",
-      version: "1.2.1423",
+      version: "1.2.1470",
       main: "generated/index.js",
       types: "generated/index.d.ts",
       description: "CreateJS Assets for Empire HTML5",
@@ -163273,7 +163305,7 @@
   function (e) {
     e.exports = {
       name: "TranspilationEmpire",
-      version: "1.171.9",
+      version: "1.172.14",
       description: "Transpiled version of the Flash game",
       main: "index.js",
       repository:
@@ -163428,7 +163460,7 @@
       dependencies: {
         "@goodgamestudios/core": "^6.12.6",
         "@goodgamestudios/empire-createjs-assets": "^1.2.298",
-        "@goodgamestudios/empire-shared-constants": "6.0.1832",
+        "@goodgamestudios/empire-shared-constants": "6.0.1951",
         "@goodgamestudios/message-handler": "1.3.1",
         axios: "^0.21.1",
         "bugsnag-js": "^4.7.2",
@@ -163871,7 +163903,7 @@
       C = i(46),
       _ = i(294),
       m = i(41),
-      f = i(19);
+      f = i(20);
     (o.classImplementsInterfaces(p, "ICollectableRendererList"),
       p.__initialize_static_members());
   },
@@ -166475,7 +166507,7 @@
       r = i(5),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(103),
       p = i(44),
       h = i(4),
@@ -166978,7 +167010,7 @@
       c = i(42),
       u = i(30),
       d = i(118),
-      p = i(19),
+      p = i(20),
       h = i(15),
       g = i(79),
       C = i(4),
@@ -167524,7 +167556,7 @@
       l = i(6),
       c = i(32),
       u = i(30),
-      d = i(19),
+      d = i(20),
       p = i(4),
       h = i(43),
       g = i(8),
@@ -168060,7 +168092,7 @@
       R = i(13),
       V = i(24),
       x = i(30),
-      w = i(19);
+      w = i(20);
     o.classImplementsInterfaces(m, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -168734,7 +168766,7 @@
     var a = i(2),
       s = i(5),
       r = i(6),
-      l = i(20);
+      l = i(19);
     o.__initialize_static_members();
   },
   function (e, t, i) {
@@ -168743,7 +168775,7 @@
     var n = i(0),
       o = i(2),
       a = i(1),
-      s = i(20),
+      s = i(19),
       r = i(41),
       l = i(64),
       c = i(262),
@@ -170777,7 +170809,7 @@
     var n = i(0),
       o = i(1),
       a = i(6),
-      s = i(20),
+      s = i(19),
       r = i(507),
       l = (function (e) {
         function SiegeMapmovementVO() {
@@ -173913,7 +173945,7 @@
   function (e, t, i) {
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
-    var n = i(20),
+    var n = i(19),
       o = (function () {
         function CastleAdvancedFightScreenConnectorHandler(e, t, i, n, o) {
           (void 0 === o && (o = null),
@@ -174077,7 +174109,7 @@
       _ = i(916),
       m = i(26),
       f = i(30),
-      E = i(19),
+      E = i(20),
       O = i(44),
       y = i(12),
       b = i(4),
@@ -175469,7 +175501,7 @@
       s = i(1),
       r = i(3),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(23),
       d = i(433),
       p = createjs.Point,
@@ -176543,7 +176575,7 @@
       o = i(5),
       a = i(3),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(135),
       c = i(28),
       u = i(4),
@@ -176718,7 +176750,7 @@
       l = i(5),
       c = i(3),
       u = i(6),
-      d = i(20),
+      d = i(19),
       p = i(135),
       h = i(28),
       g = i(732),
@@ -176971,7 +177003,7 @@
       l = i(5),
       c = i(3),
       u = i(6),
-      d = i(20),
+      d = i(19),
       p = i(28),
       h = i(103),
       g = i(4),
@@ -177656,7 +177688,7 @@
       a = i(5),
       s = i(3),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(28),
       u = i(103),
       d = i(85),
@@ -181034,7 +181066,7 @@
       r = i(13),
       l = i(42),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(12),
       p = i(50),
       h = i(8),
@@ -181650,7 +181682,7 @@
       m = i(153),
       f = i(71),
       E = i(30),
-      O = i(19),
+      O = i(20),
       y = i(12),
       b = i(4),
       D = i(50),
@@ -182599,7 +182631,7 @@
       p = i(21),
       h = i(32),
       g = i(30),
-      C = i(19),
+      C = i(20),
       _ = i(12),
       m = i(4),
       f = i(50),
@@ -185867,7 +185899,7 @@
       s = i(5),
       r = i(3),
       l = i(3),
-      c = i(20),
+      c = i(19),
       u = i(16),
       d = i(4),
       p = i(97),
@@ -186159,7 +186191,7 @@
       s = i(5),
       r = i(3),
       l = i(3),
-      c = i(20),
+      c = i(19),
       u = i(16),
       d = i(4),
       p = i(97),
@@ -186557,7 +186589,7 @@
       g = i(615),
       C = i(2961),
       _ = i(18),
-      m = i(19),
+      m = i(20),
       f = i(24),
       E = i(30),
       O = i(42),
@@ -187083,7 +187115,7 @@
       r = i(3),
       l = i(16),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(14),
       p = createjs.Point,
       h = (function (e) {
@@ -187188,7 +187220,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(71),
       r = i(90),
       l = i(15),
@@ -189859,7 +189891,7 @@
       o = i(1),
       a = i(41),
       s = i(73),
-      r = i(19),
+      r = i(20),
       l = (function (e) {
         function ACollectableItemEquipmentVE() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -190700,7 +190732,7 @@
       r = i(494),
       l = i(573),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(8),
       p = i(41),
       h = createjs.Event,
@@ -191136,7 +191168,7 @@
     var o = i(24),
       a = i(30),
       s = i(65),
-      r = i(19);
+      r = i(20);
   },
   function (e, t, i) {
     "use strict";
@@ -191266,7 +191298,7 @@
     var n = i(1),
       o = i(3),
       a = i(13),
-      s = i(19),
+      s = i(20),
       r = i(4),
       l = i(539),
       c = i(50),
@@ -191454,7 +191486,7 @@
       o = i(1),
       a = i(1),
       s = i(3),
-      r = i(19),
+      r = i(20),
       l = i(45),
       c = i(182),
       u = i(43),
@@ -192907,7 +192939,7 @@
       r = i(5),
       l = i(6),
       c = i(65),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(8),
       h = i(86),
@@ -193480,7 +193512,7 @@
       f = i(3),
       E = i(3),
       O = i(6),
-      y = i(20),
+      y = i(19),
       b = i(60),
       D = i(3675),
       I = i(164),
@@ -194004,7 +194036,7 @@
       h = i(60),
       g = i(21),
       C = i(65),
-      _ = i(19),
+      _ = i(20),
       m = i(4),
       f = i(131),
       E = i(27),
@@ -194477,7 +194509,7 @@
       c = i(6),
       u = i(60),
       d = i(65),
-      p = i(19),
+      p = i(20),
       h = i(4),
       g = i(131),
       C = i(27),
@@ -196688,7 +196720,7 @@
       r = i(654),
       l = i(26),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(1768),
       h = createjs.Point,
@@ -196943,7 +196975,7 @@
       b = i(3),
       D = i(3),
       I = i(6),
-      v = i(20),
+      v = i(19),
       T = i(52),
       S = i(16),
       A = i(21),
@@ -197684,7 +197716,7 @@
     })();
     t.CastleTroopSupportData = n;
     var o = i(3796),
-      a = i(20),
+      a = i(19),
       s = i(3797),
       r = i(4);
   },
@@ -197768,7 +197800,7 @@
       r = i(5),
       l = i(5),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(52),
       p = i(3806),
       h = i(4),
@@ -198598,8 +198630,7 @@
           return (
             (t.tabIndex = -1),
             (t.isTabActive = !1),
-            (t.enteredCheats = []),
-            (t.enteredCheatsArrowPosY = [-75, -57, -42, -25, -10]),
+            (t.listArrowPosY = [-75, -57, -42, -25, -10]),
             (t.historyTabIndex = 0),
             CONSTRUCTOR_HACK,
             ((t =
@@ -198608,6 +198639,8 @@
               t.panel.mc_moveArea.txt_input_cheat,
               new u.TextVO(""),
             )),
+            (t.enteredCheats = y.CheatHistory.load()),
+            (t.historyTabIndex = t.enteredCheats.length),
             t
           );
         }
@@ -198679,7 +198712,7 @@
               r.MovieClipHelper.clearMovieClip(
                 this.panel.mc_moveArea.mc_units1,
               ),
-              D.WodPicHelper.addUnitPic(
+              I.WodPicHelper.addUnitPic(
                 h.CastleModel.wodData.createVObyWOD(
                   714,
                   O.CastleWodData.TYPE_UNIT,
@@ -198721,7 +198754,7 @@
                 : ((this.panel.mc_moveArea.mc_units1.visible = !1),
                   (this.panel.mc_moveArea.btn_setAll.visible = !1)),
               (this.panel.mc_moveArea.mc_tab.visible = !1),
-              (this.allowCaching = !0),
+              (this.allowCaching = !1),
               this.i_cheat_txt_input.focusIn.add(
                 this.bindFunction(this.onFocusIn),
               ),
@@ -198730,17 +198763,17 @@
               ));
           }),
           (CastleCheatPanel.prototype.onFocusIn = function (e) {
-            I.CastleLayoutManager.getInstance().dispatchEvent(
-              new v.CastleLayoutManagerEvent(
-                v.CastleLayoutManagerEvent.LOCK_CAMERA,
+            v.CastleLayoutManager.getInstance().dispatchEvent(
+              new T.CastleLayoutManagerEvent(
+                T.CastleLayoutManagerEvent.LOCK_CAMERA,
                 [!0],
               ),
             );
           }),
           (CastleCheatPanel.prototype.onFocusOut = function (e) {
-            I.CastleLayoutManager.getInstance().dispatchEvent(
-              new v.CastleLayoutManagerEvent(
-                v.CastleLayoutManagerEvent.LOCK_CAMERA,
+            v.CastleLayoutManager.getInstance().dispatchEvent(
+              new T.CastleLayoutManagerEvent(
+                T.CastleLayoutManagerEvent.LOCK_CAMERA,
                 [!1],
               ),
             );
@@ -198759,55 +198792,50 @@
             configurable: !0,
           }),
           (CastleCheatPanel.prototype.handleEnter = function (e) {
-            (e.key != l.Keyboard.ENTER ||
-              this.layoutManager.isDialogVisible(y.CastleStandardOkDialog) ||
-              this.handleCommand(),
-              e.key == l.Keyboard.DOWN || e.key == l.Keyboard.UP
-                ? this.handleTab(e)
-                : this.endTabbing(),
-              e.key == l.Keyboard.PAGE_UP || e.key == l.Keyboard.PAGE_DOWN
-                ? this.handleCommandHistory(e.key == l.Keyboard.PAGE_UP)
-                : (this.panel.mc_moveArea.mc_tab.visible = !1));
+            e.key != l.Keyboard.DOWN && e.key != l.Keyboard.UP
+              ? (this.endTabbing(),
+                e.key != l.Keyboard.PAGE_UP && e.key != l.Keyboard.PAGE_DOWN
+                  ? ((this.panel.mc_moveArea.mc_tab.visible = !1),
+                    e.key != l.Keyboard.ENTER ||
+                      this.layoutManager.isDialogVisible(
+                        b.CastleStandardOkDialog,
+                      ) ||
+                      this.handleCommand())
+                  : this.handleCommandHistory(e.key == l.Keyboard.PAGE_UP))
+              : this.handleTab(e.key == l.Keyboard.DOWN);
           }),
           (CastleCheatPanel.prototype.handleCommandHistory = function (e) {
-            if (0 !== this.enteredCheats.length) {
-              (0 == this.historyTabIndex && e
-                ? (this.historyTabIndex = d.int(this.enteredCheats.length - 1))
-                : this.historyTabIndex != this.enteredCheats.length - 1 || e
-                  ? e
-                    ? this.historyTabIndex--
-                    : this.historyTabIndex++
-                  : (this.historyTabIndex = 0),
-                (this.i_cheat_txt_input.textContentVO.stringValue =
-                  this.enteredCheats[this.historyTabIndex]),
-                (this.panel.mc_moveArea.mc_tab.visible = !0));
-              for (
-                var t = "",
-                  i = 0,
-                  n = d.int(
-                    Math.max(
-                      Math.min(
-                        this.historyTabIndex - 2,
-                        this.enteredCheats.length - 5,
-                      ),
-                      0,
-                    ),
-                  );
-                n < this.enteredCheats.length &&
-                i < 5 &&
-                !(n >= this.enteredCheats.length);
-                n++
-              )
-                (t.length > 0 && (t += "\n"),
-                  (t +=
-                    this.enteredCheats[n].substring(0, 14) +
-                    (this.enteredCheats[n].length > 14 ? "..." : "")),
-                  this.historyTabIndex == n &&
-                    (this.panel.mc_moveArea.mc_tab.mc_arrow.y =
-                      this.enteredCheatsArrowPosY[i]),
-                  i++);
-              this.panel.mc_moveArea.mc_tab.txt_textTab.text = t;
-            }
+            var t = this.enteredCheats.length;
+            0 !== t &&
+              ((this.historyTabIndex = d.int(
+                (this.historyTabIndex + (e ? -1 : 1) + t + 1) % (t + 1),
+              )),
+              this.historyTabIndex == t &&
+                (this.historyTabIndex = d.int(e ? t - 1 : 0)),
+              this.setInputText(this.enteredCheats[this.historyTabIndex]),
+              this.showEntryList(this.enteredCheats, this.historyTabIndex));
+          }),
+          (CastleCheatPanel.prototype.showEntryList = function (e, t) {
+            for (
+              var i = this.panel.mc_moveArea.mc_tab,
+                n = d.int(Math.min(e.length, this.listArrowPosY.length)),
+                o = d.int(Math.max(Math.min(t - 2, e.length - n), 0)),
+                a = "",
+                s = o;
+              s < o + n;
+              s++
+            )
+              (a.length > 0 && (a += "\n"),
+                (a += e[s].substring(0, 14) + (e[s].length > 14 ? "..." : "")),
+                s == t && (i.mc_arrow.y = this.listArrowPosY[s - o]));
+            ((i.txt_textTab.text = a), (i.visible = !0));
+          }),
+          (CastleCheatPanel.prototype.setInputText = function (e) {
+            ((this.i_cheat_txt_input.text = e),
+              this.panel.mc_moveArea.txt_input_cheat.setSelection(
+                e.length,
+                e.length,
+              ));
           }),
           (CastleCheatPanel.prototype.show = function () {
             (e.prototype.show.call(this),
@@ -198819,42 +198847,24 @@
             );
           }),
           (CastleCheatPanel.prototype.handleTab = function (e) {
-            if (
-              (this.isTabActive &&
-                (e.key == l.Keyboard.DOWN ? this.tabIndex++ : this.tabIndex--,
-                this.tabIndex > this.fitCheats.length - 1 &&
-                  (this.tabIndex = 0),
-                this.tabIndex < 0 &&
-                  (this.tabIndex = d.int(this.fitCheats.length - 1)),
-                //!ST panel.mc_moveArea.txt_input_cheat.text =  fitCheats[ tabIndex ]
-                (this.i_cheat_txt_input.textContentVO.stringValue =
-                  this.fitCheats[this.tabIndex]),
-                this.panel.mc_moveArea.txt_input_cheat.setSelection(
-                  0,
-                  this.panel.mc_moveArea.txt_input_cheat.text.length,
+            if (this.isTabActive)
+              this.tabIndex = d.int(
+                (this.tabIndex + (e ? 1 : -1) + this.fitCheats.length) %
+                  this.fitCheats.length,
+              );
+            else {
+              if (
+                ((this.fitCheats = y.CheatHistory.getSuggestions(
+                  this.enteredCheats,
+                  this.i_cheat_txt_input.text,
                 )),
-              !this.isTabActive)
-            ) {
-              this.fitCheats = [];
-              var t = this.i_cheat_txt_input.text;
-              if (null != CastleCheatPanel.CHEAT_TABLE)
-                for (
-                  var i = 0, n = CastleCheatPanel.CHEAT_TABLE;
-                  i < n.length;
-                  i++
-                ) {
-                  var o = n[i];
-                  void 0 !== o &&
-                    -1 != o.toLowerCase().indexOf(t.toLowerCase()) &&
-                    this.fitCheats.push(o);
-                }
-              this.fitCheats.length > 0 &&
-                //!ST panel.mc_moveArea.txt_input_cheat.text =  fitCheats[ 0 ]
-                ((this.i_cheat_txt_input.textContentVO.stringValue =
-                  this.fitCheats[0]),
-                (this.tabIndex = 0),
-                (this.isTabActive = !0));
+                0 == this.fitCheats.length)
+              )
+                return void (this.panel.mc_moveArea.mc_tab.visible = !1);
+              ((this.tabIndex = 0), (this.isTabActive = !0));
             }
+            (this.setInputText(this.fitCheats[this.tabIndex]),
+              this.showEntryList(this.fitCheats, this.tabIndex));
           }),
           (CastleCheatPanel.prototype.endTabbing = function () {
             ((this.isTabActive = !1),
@@ -198865,9 +198875,9 @@
             switch ((e.prototype.onClick.call(this, t), t.target)) {
               case this.panel.mc_switchArea.btn_hide:
                 (this.fadeOutPanel(),
-                  I.CastleLayoutManager.getInstance().dispatchEvent(
-                    new v.CastleLayoutManagerEvent(
-                      v.CastleLayoutManagerEvent.LOCK_CAMERA,
+                  v.CastleLayoutManager.getInstance().dispatchEvent(
+                    new T.CastleLayoutManagerEvent(
+                      T.CastleLayoutManagerEvent.LOCK_CAMERA,
                       [!1],
                     ),
                   ));
@@ -198877,9 +198887,9 @@
                 break;
               case this.panel.mc_moveArea.btn_send:
                 (this.handleCommand(),
-                  I.CastleLayoutManager.getInstance().dispatchEvent(
-                    new v.CastleLayoutManagerEvent(
-                      v.CastleLayoutManagerEvent.LOCK_CAMERA,
+                  v.CastleLayoutManager.getInstance().dispatchEvent(
+                    new T.CastleLayoutManagerEvent(
+                      T.CastleLayoutManagerEvent.LOCK_CAMERA,
                       [!1],
                     ),
                   ));
@@ -198922,9 +198932,10 @@
           }),
           (CastleCheatPanel.prototype.handleCommand = function () {
             var e = this.i_cheat_txt_input.text.trim();
-            (this.enteredCheats.push(e),
-              (this.historyTabIndex = d.int(this.enteredCheats.length - 1)),
-              b.ClientCheatsHelper.performCommand(e));
+            "" != e &&
+              (y.CheatHistory.add(this.enteredCheats, e),
+              (this.historyTabIndex = this.enteredCheats.length),
+              D.ClientCheatsHelper.performCommand(e));
           }),
           (CastleCheatPanel.prototype.switchTravelBoost = function () {
             ((CastleCheatPanel.isTravelBoostActive =
@@ -198983,31 +198994,7 @@
               this.updateCache());
           }),
           (CastleCheatPanel.__initialize_static_members = function () {
-            ((CastleCheatPanel.NAME = "CastleCheatPanel"),
-              (CastleCheatPanel.CHEAT_TABLE = [
-                "/grant",
-                "/grant chips",
-                "/grant XP",
-                "/grant premium",
-                "/resources",
-                "/resources wood",
-                "/resources stone",
-                "/resources food",
-                "/boost",
-                "/moneyBoost",
-                "/giveAll",
-                "/setAll",
-                "/fame",
-                "/honor",
-                "/troops",
-                "/killRats",
-                "/hitMeHard",
-                "/clearmoat",
-                "/setKeep",
-                "/payuser",
-                "/noob",
-                "unitInfo",
-              ]));
+            CastleCheatPanel.NAME = "CastleCheatPanel";
           }),
           (CastleCheatPanel.isTravelBoostActive = !1),
           (CastleCheatPanel.isQuickAttackActive = !1),
@@ -199016,11 +199003,12 @@
       })(i(132).CastlePanel);
     t.CastleCheatPanel = E;
     var O = i(56),
-      y = i(38),
-      b = i(201),
-      D = i(62),
-      I = i(17),
-      v = i(91);
+      y = i(3944),
+      b = i(38),
+      D = i(201),
+      I = i(62),
+      v = i(17),
+      T = i(91);
     E.__initialize_static_members();
   },
   function (e, t, i) {
@@ -199537,7 +199525,7 @@
       u = i(3),
       d = i(3),
       p = i(174),
-      h = i(3945),
+      h = i(3946),
       g = (function (e) {
         function CastleWorldSelectionDialog() {
           return (
@@ -200643,7 +200631,7 @@
       u = i(15),
       d = i(57),
       p = i(4),
-      h = i(3997),
+      h = i(3998),
       g = (function (e) {
         function CastleLoginBonusData() {
           var t = e.call(this) || this;
@@ -200825,7 +200813,7 @@
       r = i(3),
       l = i(3),
       c = i(6),
-      u = i(3998),
+      u = i(3999),
       d = i(1839),
       p = i(32),
       h = i(521),
@@ -201317,11 +201305,11 @@
     var m = i(13),
       f = i(42),
       E = i(9),
-      O = i(3999),
+      O = i(4e3),
       y = i(672),
-      b = i(4e3),
-      D = i(4001),
-      I = i(4002);
+      b = i(4001),
+      D = i(4002),
+      I = i(4003);
     a.classImplementsInterfaces(_, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -201547,13 +201535,13 @@
       s = i(5),
       r = i(3),
       l = i(3),
-      c = i(20),
-      u = i(4096),
+      c = i(19),
+      u = i(4097),
       d = i(137),
       p = i(167),
       h = i(4),
       g = i(18),
-      C = i(4097),
+      C = i(4098),
       _ = i(43),
       m = i(8),
       f = (function (e) {
@@ -202208,14 +202196,14 @@
       })(i(108).CastleExternalSubLayerDialog);
     t.CastleMessageInboxDialog = f;
     var E = i(9),
-      O = i(4098),
-      y = i(4100),
-      b = i(4101),
-      D = i(4102),
+      O = i(4099),
+      y = i(4101),
+      b = i(4102),
+      D = i(4103),
       I = i(1133),
-      v = i(4103),
-      T = i(4104),
-      S = i(4106);
+      v = i(4104),
+      T = i(4105),
+      S = i(4107);
     a.classImplementsInterfaces(f, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -203099,7 +203087,7 @@
       r = i(6),
       l = i(16),
       c = i(424),
-      u = i(4205),
+      u = i(4206),
       d = i(91),
       p = i(37),
       h = i(205),
@@ -203112,8 +203100,8 @@
       O = i(153),
       y = i(4),
       b = i(897),
-      D = i(4206),
-      I = i(4207),
+      D = i(4207),
+      I = i(4208),
       v = i(852),
       T = createjs.Container,
       S = (function (e) {
@@ -203457,13 +203445,13 @@
       })(v.CastleScreen);
     t.CastleWorldMapScreen = S;
     var A = i(31),
-      L = i(4208),
+      L = i(4209),
       P = i(9),
       M = i(17),
-      R = i(4210),
+      R = i(4211),
       V = i(1302),
       x = i(1142),
-      w = i(4237),
+      w = i(4238),
       B = i(1);
   },
   function (e, t, i) {
@@ -203473,7 +203461,7 @@
       o = i(3),
       a = i(3),
       s = i(92),
-      r = i(4212),
+      r = i(4213),
       l = i(8);
     var c = (function (e) {
       function WorldMapCastleInfoMenu() {
@@ -203674,28 +203662,28 @@
       );
     })(i(1883).WorldMapRingMenu);
     t.WorldMapCastleInfoMenu = c;
-    var u = i(4213),
-      d = i(4221),
+    var u = i(4214),
+      d = i(4222),
       p = i(610),
-      h = i(4222),
-      g = i(4223),
-      C = i(4224),
-      _ = i(4225),
-      m = i(4226),
+      h = i(4223),
+      g = i(4224),
+      C = i(4225),
+      _ = i(4226),
+      m = i(4227),
       f = i(1323),
-      E = i(4227),
+      E = i(4228),
       O = i(1884),
       y = i(1271),
       b = i(1309),
       D = i(1378),
-      I = i(4228),
-      v = i(4229),
+      I = i(4229),
+      v = i(4230),
       T = i(1869),
       S = i(1376),
-      A = i(4230),
-      L = i(4234),
-      P = i(4235),
-      M = i(4236);
+      A = i(4231),
+      L = i(4235),
+      P = i(4236),
+      M = i(4237);
   },
   function (e, t, i) {
     "use strict";
@@ -203871,7 +203859,7 @@
       p = i(21),
       h = i(26),
       g = i(30),
-      C = i(19),
+      C = i(20),
       _ = i(12),
       m = i(4),
       f = i(27),
@@ -204128,8 +204116,8 @@
       v = i(42),
       T = i(24),
       S = i(11),
-      A = i(4443),
-      L = i(4444),
+      A = i(4444),
+      L = i(4445),
       P = i(36);
     r.classImplementsInterfaces(D, "ICollectableRendererList");
   },
@@ -204142,7 +204130,7 @@
       s = i(5),
       r = i(3),
       l = i(1890),
-      c = i(4463),
+      c = i(4464),
       u = i(21),
       d = i(26),
       p = i(13),
@@ -204161,8 +204149,8 @@
       v = i(108),
       T = i(417),
       S = i(1910),
-      A = i(4464),
-      L = i(4468),
+      A = i(4465),
+      L = i(4469),
       P = (function (e) {
         function DonationEventDialog() {
           return e.call(this, DonationEventDialog.NAME) || this;
@@ -205291,10 +205279,10 @@
       })(i(108).CastleExternalSubLayerDialog);
     t.CastleTemporaryServerEventDialog = f;
     var E = i(11),
-      O = i(4586),
-      y = i(4588),
-      b = i(4592),
-      D = i(4593),
+      O = i(4587),
+      y = i(4589),
+      b = i(4593),
+      D = i(4594),
       I = i(36);
     o.classImplementsInterfaces(f, "ICollectableRendererList");
   },
@@ -205308,12 +205296,12 @@
       r = i(1),
       l = i(5),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(456),
       p = i(4),
       h = i(41),
       g = i(1257),
-      C = i(4634),
+      C = i(4635),
       _ = createjs.Shape,
       m = createjs.Container,
       f = createjs.MouseEvent,
@@ -206114,15 +206102,15 @@
       _ = i(32),
       m = i(30),
       f = i(189),
-      E = i(19),
+      E = i(20),
       O = i(4),
       y = i(204),
       b = i(192),
       D = i(8),
       I = i(73),
       v = i(11),
-      T = i(4880),
-      S = i(4881),
+      T = i(4881),
+      S = i(4882),
       A = createjs.TimerEvent,
       L = (function (e) {
         function CastleEquipmentMerchantEventIncomingDialog() {
@@ -206864,13 +206852,13 @@
         );
       })(i(88).CastleEnum);
     t.AreaDataEnum = a;
-    var s = i(5281),
-      r = i(5305),
-      l = i(5306),
-      c = i(5307),
-      u = i(5310),
-      d = i(5311),
-      p = i(5312);
+    var s = i(5282),
+      r = i(5306),
+      l = i(5307),
+      c = i(5308),
+      u = i(5311),
+      d = i(5312),
+      p = i(5313);
     a.__initialize_static_members();
   },
   function (e, t, i) {
@@ -207400,9 +207388,9 @@
       o = i(3),
       a = i(96),
       s = i(99),
-      r = i(5595),
-      l = i(5596),
-      c = i(5597),
+      r = i(5596),
+      l = i(5597),
+      c = i(5598),
       u = (function (e) {
         function MessageDowntimeStatusVO() {
           var t = this;
@@ -207605,7 +207593,7 @@
       g = i(54),
       C = i(475),
       _ = i(30),
-      m = i(19),
+      m = i(20),
       f = i(4),
       E = i(50),
       O = i(11),
@@ -208887,7 +208875,7 @@
     var n = i(0),
       o = i(2),
       a = i(1),
-      s = i(20),
+      s = i(19),
       r = i(91),
       l = i(26),
       c = i(4),
@@ -210905,7 +210893,7 @@
     t.CastleShoppingCartPrimeDayAbstractItem = o;
     var a = i(24),
       s = i(30),
-      r = i(19),
+      r = i(20),
       l = i(4),
       c = i(8);
     o.__initialize_static_members();
@@ -211269,7 +211257,7 @@
       b = i(32),
       D = i(71),
       I = i(30),
-      v = i(19),
+      v = i(20),
       T = i(4),
       S = i(8),
       A = (function (e) {
@@ -212455,7 +212443,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(279),
       r = i(28),
       l = i(103),
@@ -212818,7 +212806,7 @@
       a = i(1),
       s = i(5),
       r = i(3),
-      l = i(20),
+      l = i(19),
       c = i(4),
       u = i(260),
       d = i(105),
@@ -214822,7 +214810,7 @@
       o = i(2),
       a = i(5),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(69),
       c = i(4),
       u = i(126),
@@ -215699,7 +215687,7 @@
       s = i(3),
       r = i(236),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(4),
       d = i(50),
       p = i(43),
@@ -217241,7 +217229,7 @@
     var n = i(0),
       o = i(1),
       a = i(6),
-      s = i(20),
+      s = i(19),
       r = i(103),
       l = i(69),
       c = i(899),
@@ -218793,7 +218781,7 @@
       r = i(1),
       l = i(6),
       c = i(53),
-      u = i(20),
+      u = i(19),
       d = i(91),
       p = i(85),
       h = i(70),
@@ -219694,7 +219682,7 @@
     })();
     t.AttackerFlankEffectVO = n;
     var o = i(6),
-      a = i(20),
+      a = i(19),
       s = i(907),
       r = i(33);
   },
@@ -222929,7 +222917,7 @@
     var n = i(0),
       o = i(1),
       a = i(6),
-      s = i(20),
+      s = i(19),
       r = i(507),
       l = (function (e) {
         function SpyMapmovementVO() {
@@ -234816,7 +234804,7 @@
       a = i(5),
       s = i(5),
       r = i(3),
-      l = i(20),
+      l = i(19),
       c = i(52),
       u = i(55),
       d = i(4),
@@ -241227,7 +241215,7 @@
       d = i(13),
       p = i(42),
       h = i(30),
-      g = i(19),
+      g = i(20),
       C = i(4),
       _ = i(138),
       m = i(14),
@@ -241407,7 +241395,8 @@
       c = i(975),
       u = i(34),
       d = i(2616),
-      p = (function (e) {
+      p = i(19),
+      h = (function (e) {
         function AllianceMobilizationEventDialogLeaderboard(t) {
           var i = e.call(this, t) || this;
           return ((i._eventID = 0), i.init(), i);
@@ -241462,9 +241451,10 @@
                   case a.EventConst.EVENTTYPE_ALLIANCE_MOBILISATION:
                     n = a.HighscoreConst.ALLIANCE_MOBILISATION_EVENT;
                     break;
-                  case a.EventConst.EVENTTYPE_ALLIANCE_RAID_MOBILISATION:
+                  case p.ClientConstCastle
+                    .LEGACY_EVENTTYPE_ALLIANCE_RAID_MOBILISATION:
                   case a.EventConst.EVENTTYPE_ALLIANCE_RAID:
-                    n = a.HighscoreConst.ALLIANCE_RAID_MOBILISATION_EVENT;
+                    n = a.HighscoreConst.ALLIANCE_RAID_EVENT;
                 }
                 (this._leaderBoardComponent.init(n, null, i.leagueID, t),
                   this._leaderBoardComponent.onShow());
@@ -241489,8 +241479,8 @@
           AllianceMobilizationEventDialogLeaderboard
         );
       })(u.CastleDialogSubLayer);
-    ((t.AllianceMobilizationEventDialogLeaderboard = p),
-      o.classImplementsInterfaces(p, "ICollectableRendererList", "ISublayer"));
+    ((t.AllianceMobilizationEventDialogLeaderboard = h),
+      o.classImplementsInterfaces(h, "ICollectableRendererList", "ISublayer"));
   },
   function (e, t, i) {
     "use strict";
@@ -244180,7 +244170,7 @@
       g = i(3),
       C = i(6),
       _ = i(53),
-      m = i(20),
+      m = i(19),
       f = i(40),
       E = i(329),
       O = i(4),
@@ -248404,7 +248394,7 @@
       s = i(1),
       r = i(3),
       l = i(6),
-      c = i(20),
+      c = i(19),
       u = i(4),
       d = i(2723),
       p = i(2724),
@@ -248683,7 +248673,7 @@
       o = i(2),
       a = i(2),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(193),
       c = (function (e) {
         function ComboboxItemRendererBuildingGroundTypeSelector() {
@@ -249293,7 +249283,7 @@
       r = i(145),
       l = i(30),
       c = i(65),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(50),
       h = i(9),
@@ -250959,7 +250949,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(781),
       r = (function (e) {
         function FactionEmptyTowerVO() {
@@ -251453,7 +251443,7 @@
       o = i(1),
       a = i(3),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(1498),
       c = i(1003),
       u = (function (e) {
@@ -255677,7 +255667,7 @@
       a = i(1),
       s = i(3),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(22),
       u = i(4),
       d = i(97),
@@ -257799,7 +257789,7 @@
       a = i(5),
       s = i(3),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(59),
       u = i(40),
       d = i(2982),
@@ -258450,7 +258440,7 @@
       l = i(3),
       c = i(3),
       u = i(6),
-      d = i(20),
+      d = i(19),
       p = i(16),
       h = i(986),
       g = i(172),
@@ -259720,7 +259710,7 @@
       o = i(1),
       a = i(30),
       s = i(65),
-      r = i(19),
+      r = i(20),
       l = i(533),
       c = i(39),
       u = createjs.Point,
@@ -259826,7 +259816,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(802),
       r = i(1581),
       l = createjs.MouseEvent,
@@ -261137,7 +261127,7 @@
       r = i(3),
       l = i(6),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(12),
       p = i(4),
       h = i(8),
@@ -262620,7 +262610,7 @@
       r = i(1),
       l = i(3),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(1617),
       p = createjs.Point,
       h = (function (e) {
@@ -264310,7 +264300,7 @@
       o = i(1),
       a = i(250),
       s = i(73),
-      r = i(19),
+      r = i(20),
       l = i(162),
       c = createjs.Point,
       u = (function (e) {
@@ -264995,7 +264985,7 @@
     var n = i(0),
       o = i(2),
       a = i(3),
-      s = i(19),
+      s = i(20),
       r = i(23),
       l = i(14),
       c = i(537),
@@ -267312,7 +267302,7 @@
       p = i(3381),
       h = i(26),
       g = i(65),
-      C = i(19),
+      C = i(20),
       _ = i(12),
       m = i(4),
       f = i(45),
@@ -270071,7 +270061,7 @@
       u = i(21),
       d = i(127),
       p = i(30),
-      h = i(19),
+      h = i(20),
       g = i(29),
       C = i(4),
       _ = i(18),
@@ -270842,7 +270832,7 @@
       l = i(13),
       c = i(30),
       u = i(118),
-      d = i(19),
+      d = i(20),
       p = i(12),
       h = i(9),
       g = i(18),
@@ -272245,7 +272235,7 @@
       c = i(3),
       u = i(6),
       d = i(30),
-      p = i(19),
+      p = i(20),
       h = i(12),
       g = i(126),
       C = i(68),
@@ -273923,7 +273913,7 @@
     var h = i(359),
       g = i(24),
       C = i(65),
-      _ = i(19),
+      _ = i(20),
       m = i(118),
       f = i(9),
       E = i(4),
@@ -274053,7 +274043,7 @@
       r = i(3),
       l = i(6),
       c = i(65),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(11),
       h = createjs.Point,
@@ -274375,7 +274365,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(19),
+      a = i(20),
       s = i(11),
       r = createjs.Point,
       l = (function (e) {
@@ -274463,7 +274453,7 @@
       o = i(1),
       a = i(3),
       s = i(30),
-      r = i(19),
+      r = i(20),
       l = i(4),
       c = i(43),
       u = i(11),
@@ -278080,7 +278070,7 @@
       l = i(60),
       c = i(21),
       u = i(30),
-      d = i(19),
+      d = i(20),
       p = i(4),
       h = i(131),
       g = i(27),
@@ -278427,7 +278417,7 @@
       d = i(148),
       p = i(21),
       h = i(30),
-      g = i(19),
+      g = i(20),
       C = i(4),
       _ = i(131),
       m = i(27),
@@ -278633,7 +278623,7 @@
       g = i(3690),
       C = i(148),
       _ = i(65),
-      m = i(19),
+      m = i(20),
       f = i(12),
       E = i(4),
       O = i(131),
@@ -279623,7 +279613,7 @@
     var n = i(0),
       o = i(2),
       a = i(1),
-      s = i(20),
+      s = i(19),
       r = i(4),
       l = (function (e) {
         function OpenTipDialogCommand() {
@@ -279880,7 +279870,7 @@
       a = i(1),
       s = i(5),
       r = i(5),
-      l = i(20),
+      l = i(19),
       c = i(654),
       u = i(3714),
       d = i(4),
@@ -280638,7 +280628,7 @@
       r = i(3),
       l = i(16),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(43),
       h = i(8),
@@ -283205,7 +283195,7 @@
       g = i(42),
       C = i(75),
       _ = i(30),
-      m = i(19),
+      m = i(20),
       f = i(4),
       E = i(27),
       O = i(23),
@@ -284192,7 +284182,7 @@
       _ = i(32),
       m = i(145),
       f = i(30),
-      E = i(19),
+      E = i(20),
       O = i(160),
       y = i(12),
       b = i(15),
@@ -284670,7 +284660,7 @@
     var n = i(0),
       o = i(2),
       a = i(1),
-      s = i(20),
+      s = i(19),
       r = i(352),
       l = i(151),
       c = i(18),
@@ -284910,7 +284900,7 @@
       a = i(5),
       s = i(3),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(52),
       u = i(59),
       d = i(31),
@@ -286197,7 +286187,7 @@
       r = i(13),
       l = i(30),
       c = i(118),
-      u = i(19),
+      u = i(20),
       d = i(12),
       p = i(4),
       h = i(23),
@@ -287202,7 +287192,7 @@
       s = i(5),
       r = i(6),
       l = i(1),
-      c = i(20),
+      c = i(19),
       u = i(130),
       d = i(71),
       p = i(4),
@@ -288096,7 +288086,7 @@
       o = i(32),
       a = i(145),
       s = i(30),
-      r = i(19),
+      r = i(20),
       l = i(4),
       c = i(14),
       u = i(24),
@@ -288669,14 +288659,14 @@
       a = i(3),
       s = i(273),
       r = i(7),
-      l = i(3956),
+      l = i(3957),
       c = i(518),
       u = i(107),
       d = i(292),
       p = i(32),
       h = i(75),
       g = i(30),
-      C = i(19),
+      C = i(20),
       _ = i(12),
       m = i(4),
       f = i(14),
@@ -288978,7 +288968,7 @@
       s = i(3),
       r = i(292),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(9),
       d = i(14),
       p = i(18),
@@ -289104,7 +289094,7 @@
       m = i(8),
       f = i(363),
       E = i(551),
-      O = i(3957),
+      O = i(3958),
       y = createjs.Point,
       b = (function (e) {
         function GachaComponentRewards(t) {
@@ -289527,10 +289517,10 @@
       o = i(2),
       a = i(1),
       s = i(3),
-      r = i(4010),
+      r = i(4011),
       l = i(552),
       c = i(65),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(8),
       h = i(11),
@@ -289734,7 +289724,7 @@
       c = i(3),
       u = i(3),
       d = i(3),
-      p = i(4013),
+      p = i(4014),
       h = i(252),
       g = i(1843),
       C = i(37),
@@ -289753,8 +289743,8 @@
       A = i(591),
       L = i(592),
       P = i(1844),
-      M = i(4014),
-      R = i(4015),
+      M = i(4015),
+      R = i(4016),
       V = (function (e) {
         function AdvisorAttackOverviewDialog() {
           return e.call(this, AdvisorAttackOverviewDialog.NAME) || this;
@@ -290175,7 +290165,7 @@
       u = i(13),
       d = i(75),
       p = i(65),
-      h = i(19),
+      h = i(20),
       g = i(12),
       C = i(79),
       _ = i(50),
@@ -290378,16 +290368,16 @@
       p = i(45),
       h = i(74),
       g = i(468),
-      C = i(4039),
+      C = i(4040),
       _ = i(77),
       m = i(12),
       f = i(4),
       E = i(5),
-      O = i(4040),
+      O = i(4041),
       y = i(752),
       b = i(604),
       D = i(9),
-      I = i(4043),
+      I = i(4044),
       v = i(2),
       T = i(31),
       S = i(164),
@@ -291606,7 +291596,7 @@
       o = i(1),
       a = i(5),
       s = i(3),
-      r = i(20),
+      r = i(19),
       l = i(92),
       c = i(4),
       u = i(239),
@@ -292132,7 +292122,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(2),
-      a = i(20),
+      a = i(19),
       s = i(91),
       r = i(21),
       l = i(4),
@@ -292249,10 +292239,10 @@
     var d = i(1136),
       p = i(1864),
       h = i(1865),
-      g = i(4158),
-      C = i(4159),
-      _ = i(4160),
-      m = i(4162),
+      g = i(4159),
+      C = i(4160),
+      _ = i(4161),
+      m = i(4163),
       f = i(1134);
   },
   function (e, t, i) {
@@ -292263,7 +292253,7 @@
       a = i(1),
       s = i(25),
       r = i(25),
-      l = i(20),
+      l = i(19),
       c = i(59),
       u = i(804),
       d = i(130),
@@ -292588,7 +292578,7 @@
     var I = i(35),
       v = i(452),
       T = i(229),
-      S = i(4163);
+      S = i(4164);
     D.__initialize_static_members();
   },
   function (e, t, i) {
@@ -292883,7 +292873,7 @@
       })(r.BasicSimpleWorldMapItem);
     t.ObstacleSeasonMapScreenItem = l;
     var c = i(9),
-      u = i(4184);
+      u = i(4185);
     o.classImplementsInterfaces(
       l,
       "ITreasureMapItem",
@@ -293027,8 +293017,8 @@
       F = i(25),
       N = i(16),
       k = i(372),
-      U = i(4192),
-      G = i(4193),
+      U = i(4193),
+      G = i(4194),
       H = i(1140),
       j = i(365),
       W = i(613),
@@ -293044,12 +293034,12 @@
       ee = i(8),
       te = i(41),
       ie = i(132),
-      ne = i(4194),
+      ne = i(4195),
       oe = i(1875),
       ae = i(392),
-      se = i(4195),
-      re = i(4196),
-      le = i(4197),
+      se = i(4196),
+      re = i(4197),
+      le = i(4198),
       ce = i(1876),
       ue = createjs.Point,
       de = createjs.TimerEvent,
@@ -294917,7 +294907,7 @@
       me = i(9),
       fe = i(1877),
       Ee = i(963),
-      Oe = i(4198),
+      Oe = i(4199),
       ye = i(337);
   },
   function (e, t, i) {
@@ -296816,7 +296806,7 @@
       d = i(3),
       p = i(3),
       h = i(6),
-      g = i(20),
+      g = i(19),
       C = i(40),
       _ = i(26),
       m = i(4),
@@ -297141,7 +297131,7 @@
     t.CastleNavigationPanel = I;
     var v = i(9),
       T = i(38),
-      S = i(4203),
+      S = i(4204),
       A = i(17);
   },
   function (e, t, i) {
@@ -297168,7 +297158,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(16),
       r = i(55),
       l = i(809),
@@ -297493,7 +297483,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(59),
       r = i(55),
       l = i(44),
@@ -297634,7 +297624,7 @@
       m = i(4),
       f = i(132),
       E = i(337),
-      O = i(4242),
+      O = i(4243),
       y = createjs.Container,
       b = i(15),
       D = (function (e) {
@@ -298120,7 +298110,7 @@
       o = i(1),
       a = i(3),
       s = i(30),
-      r = i(19),
+      r = i(20),
       l = i(276),
       c = i(1888),
       u = createjs.Point,
@@ -298214,7 +298204,7 @@
       d = i(4),
       p = i(27),
       h = i(11),
-      g = i(4248),
+      g = i(4249),
       C = (function (e) {
         function CastleTieredPrimeDayDialog() {
           var t = this;
@@ -298511,7 +298501,7 @@
       })(h.CastleExternalDialog);
     t.CastleTieredPrimeDayDialog = C;
     var _ = i(826),
-      m = i(4249),
+      m = i(4250),
       f = i(107);
     (o.classImplementsInterfaces(C, "ICollectableRendererList"),
       C.__initialize_static_members());
@@ -298594,8 +298584,8 @@
       m = i(15),
       f = i(4),
       E = i(179),
-      O = i(4267),
-      y = i(4268),
+      O = i(4268),
+      y = i(4269),
       b = i(9),
       D = i(17),
       I = i(1216),
@@ -298795,10 +298785,10 @@
     var n = i(0),
       o = i(1894),
       a = i(70),
-      s = i(4308),
-      r = i(4309),
-      l = i(4310),
-      c = i(4311),
+      s = i(4309),
+      r = i(4310),
+      l = i(4311),
+      c = i(4312),
       u = (function (e) {
         function CastleDonationEventData(t) {
           var i = this;
@@ -299322,7 +299312,7 @@
         );
       })(c.AScoreEventVO);
     t.AAlienInvasionEventVO = u;
-    var d = i(4400),
+    var d = i(4401),
       p = i(288),
       h = i(9),
       g = i(833),
@@ -299637,7 +299627,7 @@
       l = i(175),
       c = i(26),
       u = i(30),
-      d = i(19),
+      d = i(20),
       p = i(4),
       h = i(27),
       g = i(8),
@@ -300409,7 +300399,7 @@
       })(r.ASpecialEventVO);
     t.ArtifactEventVO = l;
     var c = i(51),
-      u = i(4426);
+      u = i(4427);
     (o.classImplementsInterfaces(l, "IEventOverviewable"),
       l.__initialize_static_members());
   },
@@ -300469,7 +300459,7 @@
       p = i(3),
       h = i(6),
       g = i(279),
-      C = i(4454),
+      C = i(4455),
       _ = i(730),
       m = i(26),
       f = i(4),
@@ -300731,7 +300721,7 @@
       g = i(6),
       C = i(279),
       _ = i(525),
-      m = i(4455),
+      m = i(4456),
       f = i(730),
       E = i(26),
       O = i(71),
@@ -301125,7 +301115,7 @@
       _ = i(25),
       m = i(25),
       f = i(16),
-      E = i(4470),
+      E = i(4471),
       O = i(520),
       y = i(905),
       b = i(119),
@@ -301140,7 +301130,7 @@
       M = i(8),
       R = i(41),
       V = i(73),
-      x = i(4471),
+      x = i(4472),
       w = i(969),
       B = createjs.Event,
       F = createjs.MouseEvent,
@@ -302653,7 +302643,7 @@
       c = i(3),
       u = i(3),
       d = i(6),
-      p = i(4489),
+      p = i(4490),
       h = i(37),
       g = i(21),
       C = i(26),
@@ -302663,8 +302653,8 @@
       E = i(9),
       O = i(8),
       y = i(11),
-      b = i(4490),
-      D = i(4491),
+      b = i(4491),
+      D = i(4492),
       I = createjs.TimerEvent,
       v = (function (e) {
         function FortuneTellerEventDialog() {
@@ -302903,7 +302893,7 @@
         );
       })(y.CastleExternalDialog);
     t.FortuneTellerEventDialog = v;
-    var T = i(4492);
+    var T = i(4493);
     o.classImplementsInterfaces(v, "ICollectableRendererList");
     var S = i(1),
       A = i(18),
@@ -302918,7 +302908,7 @@
       s = i(3),
       r = i(3),
       l = i(6),
-      c = i(4505),
+      c = i(4506),
       u = i(21),
       d = i(26),
       p = i(12),
@@ -302931,7 +302921,7 @@
       E = i(8),
       O = i(11),
       y = i(267),
-      b = i(4506),
+      b = i(4507),
       D = (function (e) {
         function GlobalEffectEventDialog() {
           return e.call(this, GlobalEffectEventDialog.NAME) || this;
@@ -303116,7 +303106,7 @@
         );
       })(O.CastleExternalDialog);
     t.GlobalEffectEventDialog = D;
-    var I = i(4507),
+    var I = i(4508),
       v = i(36),
       T = i(37);
     (o.classImplementsInterfaces(D, "ICollectableRendererList"),
@@ -303640,9 +303630,9 @@
       })(u.BuyPackagesEventVO);
     t.LuckyWheelEventVO = d;
     var p = i(565),
-      h = i(4510),
+      h = i(4511),
       g = i(1925),
-      C = i(4530),
+      C = i(4531),
       _ = i(5);
     o.classImplementsInterfaces(
       d,
@@ -303732,15 +303722,15 @@
       S = i(8),
       A = i(11),
       L = i(1149),
-      P = i(4513),
+      P = i(4514),
       M = i(1922),
-      R = i(4519),
-      V = i(4520),
+      R = i(4520),
+      V = i(4521),
       x = i(1923),
-      w = i(4521),
-      B = i(4522),
-      F = i(4523),
-      N = i(4524),
+      w = i(4522),
+      B = i(4523),
+      F = i(4524),
+      N = i(4525),
       k = (function (e) {
         function CastleBasicLuckyWheelDialog(t) {
           var i = this;
@@ -304534,16 +304524,16 @@
       r = i(81),
       l = i(13),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(9),
       h = i(17),
       g = i(24),
       C = i(38),
-      _ = i(4515),
+      _ = i(4516),
       m = i(1149),
-      f = i(4516),
-      E = i(4518),
+      f = i(4517),
+      E = i(4519),
       O = createjs.TimerEvent,
       y = createjs.Point,
       b = (function () {
@@ -305209,7 +305199,7 @@
       u = i(4),
       d = i(8),
       p = i(11),
-      h = i(4527),
+      h = i(4528),
       g = (function (e) {
         function CastleLuckyWheelTicketBuyDialog() {
           return e.call(this, CastleLuckyWheelTicketBuyDialog.NAME) || this;
@@ -305332,7 +305322,7 @@
         );
       })(p.CastleExternalDialog);
     t.CastleLuckyWheelTicketBuyDialog = g;
-    var C = i(4528);
+    var C = i(4529);
     a.classImplementsInterfaces(g, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -305594,7 +305584,7 @@
       o = i(1),
       a = i(69),
       s = i(4),
-      r = i(4597),
+      r = i(4598),
       l = i(8),
       c = i(1049),
       u = (function (e) {
@@ -305965,7 +305955,7 @@
       a = i(1),
       s = i(1),
       r = i(5),
-      l = i(20),
+      l = i(19),
       c = i(32),
       u = i(15),
       d = i(4),
@@ -307307,7 +307297,7 @@
     var _ = i(115),
       m = i(63),
       f = i(600),
-      E = i(4720);
+      E = i(4721);
     (o.classImplementsInterfaces(C, "ICollectableRendererList"),
       C.__initialize_static_members());
   },
@@ -307733,13 +307723,13 @@
       p = i(3),
       h = i(3),
       g = i(6),
-      C = i(5068),
+      C = i(5069),
       _ = i(645),
       m = i(4),
       f = i(533),
       E = i(196),
       O = i(27),
-      y = i(5069),
+      y = i(5070),
       b = i(174),
       D = i(1031),
       I = i(8),
@@ -308114,7 +308104,7 @@
       r = i(3),
       l = i(3),
       c = i(3),
-      u = i(5076),
+      u = i(5077),
       d = i(4),
       p = (function (e) {
         function CastleRelocateRuinDialog() {
@@ -309162,16 +309152,16 @@
       u = i(3),
       d = i(3),
       p = i(280),
-      h = i(5188),
-      g = i(5189),
+      h = i(5189),
+      g = i(5190),
       C = i(100),
       _ = i(4),
       m = i(48),
       f = i(8),
       E = i(11),
       O = i(101),
-      y = i(5190),
-      b = i(5191),
+      y = i(5191),
+      b = i(5192),
       D = (function (e) {
         function CastleForwardMessageDialog() {
           var t = this;
@@ -309520,8 +309510,8 @@
         );
       })(i(481).AIsoCommandPackage);
     t.IsoCommandPackageObjectsInit = o;
-    var a = i(5287),
-      s = i(5288),
+    var a = i(5288),
+      s = i(5289),
       r = i(870);
   },
   function (e, t, i) {
@@ -309830,7 +309820,7 @@
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
-      o = i(5469),
+      o = i(5470),
       a = i(120),
       s = i(96),
       r = i(99),
@@ -309967,7 +309957,7 @@
         );
       })(r.AMessageVO);
     t.MessageCancelledVO = l;
-    var c = i(5470);
+    var c = i(5471);
   },
   function (e, t, i) {
     "use strict";
@@ -310000,7 +309990,7 @@
       A = i(3),
       L = i(3),
       P = i(6),
-      M = i(20),
+      M = i(19),
       R = i(52),
       V = i(16),
       x = i(135),
@@ -310011,14 +310001,14 @@
       k = i(555),
       U = i(225),
       G = i(30),
-      H = i(19),
+      H = i(20),
       j = i(44),
       W = i(277),
       Y = i(4),
       K = i(50),
       z = i(33),
       q = i(27),
-      X = i(5474),
+      X = i(5475),
       Q = i(48),
       J = i(23),
       Z = i(18),
@@ -310035,7 +310025,7 @@
       ce = i(223),
       ue = i(101),
       de = i(271),
-      pe = i(5475),
+      pe = i(5476),
       he = createjs.Point,
       ge = (function (e) {
         function CastleBattleLogMessageAdvanced() {
@@ -312371,8 +312361,8 @@
       Se = i(102),
       Ae = i(229),
       Le = i(1963),
-      Pe = i(5476),
-      Me = i(5482),
+      Pe = i(5477),
+      Me = i(5483),
       Re = (function () {
         return function SpecialCurrencyInfoVO(e, t, i) {
           ((this.amount = 0),
@@ -312799,7 +312789,7 @@
       y = i(3),
       b = i(3),
       D = i(6),
-      I = i(20),
+      I = i(19),
       v = i(28),
       T = i(609),
       S = i(26),
@@ -313751,7 +313741,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(5),
-      a = i(5587),
+      a = i(5588),
       s = i(96),
       r = i(99),
       l = (function (e) {
@@ -313826,7 +313816,7 @@
         );
       })(r.AMessageVO);
     t.MessageUserVO = l;
-    var c = i(5588);
+    var c = i(5589);
   },
   function (e, t, i) {
     "use strict";
@@ -315180,7 +315170,7 @@
       o = i(1),
       a = i(1),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(4),
       c = (function (e) {
         function TutorialBuildToolsCommand() {
@@ -315861,14 +315851,14 @@
       I = i(122),
       v = i(366),
       T = i(811),
-      S = i(5823),
-      A = i(5824),
-      L = i(5825),
+      S = i(5824),
+      A = i(5825),
+      L = i(5826),
       P = i(612),
-      M = i(5826),
+      M = i(5827),
       R = i(853),
-      V = i(5827),
-      x = i(5831),
+      V = i(5828),
+      x = i(5832),
       w = i(581),
       B = i(337);
     ((window.ggs.fontConfigResolver = M.fontConfigResolver),
@@ -326084,7 +326074,7 @@
       p = i(28),
       h = i(21),
       g = i(30),
-      C = i(19),
+      C = i(20),
       _ = i(29),
       m = i(4),
       f = i(8),
@@ -327543,14 +327533,14 @@
       p = i(3),
       h = i(3),
       g = i(6),
-      C = i(20),
+      C = i(19),
       _ = i(52),
       m = i(124),
       f = i(567),
       E = i(164),
       O = i(37),
       y = i(30),
-      b = i(19),
+      b = i(20),
       D = i(4),
       I = i(568),
       v = i(374),
@@ -330166,7 +330156,7 @@
       c = i(3),
       u = i(156),
       d = i(65),
-      p = i(19),
+      p = i(20),
       h = i(12),
       g = i(79),
       C = i(74),
@@ -330329,7 +330319,7 @@
       a = i(89),
       s = i(1),
       r = i(3),
-      l = i(19),
+      l = i(20),
       c = i(260),
       u = i(76),
       d = i(571),
@@ -335019,7 +335009,7 @@
     t.CastleWorldMapAreaTilesDirectory = a;
     var s = i(500),
       r = i(149),
-      l = i(20),
+      l = i(19),
       c = i(2),
       u = i(2),
       d = i(2),
@@ -335222,7 +335212,7 @@
     })();
     t.CastleWorldMapBackgroundTilesDirectory = n;
     var o = i(2192),
-      a = i(20),
+      a = i(19),
       s = i(5),
       r = i(6),
       l = i(4);
@@ -335627,7 +335617,7 @@
       })();
     t.CastleWorldMapBackgroundTileVO = s;
     var r = i(17),
-      l = i(20),
+      l = i(19),
       c = i(2),
       u = i(2),
       d = i(1),
@@ -337436,7 +337426,7 @@
       );
     })();
     t.AttackerEffectVO = n;
-    var o = i(20);
+    var o = i(19);
   },
   function (e, t, i) {
     "use strict";
@@ -337497,7 +337487,7 @@
     })();
     t.DefenderEffectVO = n;
     var o = i(6),
-      a = i(20);
+      a = i(19);
   },
   function (e, t, i) {
     "use strict";
@@ -340900,7 +340890,7 @@
     var n = i(0),
       o = i(1),
       a = i(3),
-      s = i(20),
+      s = i(19),
       r = (function (e) {
         function CastleRecruitInfoDialogUnknown(t) {
           return e.call(this, t) || this;
@@ -342247,7 +342237,7 @@
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(6),
-      o = i(20),
+      o = i(19),
       a = (function () {
         function CastleCompactArmyVO() {}
         return (
@@ -345471,7 +345461,7 @@
       l = i(6),
       c = i(124),
       u = i(30),
-      d = i(19),
+      d = i(20),
       p = i(4),
       h = i(8),
       g = i(2299),
@@ -352389,7 +352379,7 @@
       d = i(1345),
       p = i(21),
       h = i(30),
-      g = i(19),
+      g = i(20),
       C = i(12),
       _ = i(4),
       m = i(27),
@@ -354246,7 +354236,7 @@
       d = i(3),
       p = i(3),
       h = i(6),
-      g = i(20),
+      g = i(19),
       C = i(55),
       _ = i(4),
       m = i(33),
@@ -358183,7 +358173,7 @@
     var n = i(0),
       o = i(1),
       a = i(30),
-      s = i(19),
+      s = i(20),
       r = i(4),
       l = i(33),
       c = i(23),
@@ -358487,7 +358477,7 @@
       s = i(3),
       r = i(6),
       l = i(65),
-      c = i(19),
+      c = i(20),
       u = i(12),
       d = i(4),
       p = i(23),
@@ -358935,7 +358925,7 @@
       a = i(3),
       s = i(6),
       r = i(30),
-      l = i(19),
+      l = i(20),
       c = i(4),
       u = i(23),
       d = i(39),
@@ -359687,7 +359677,7 @@
     })();
     t.UnitAllocator = n;
     var o = i(56),
-      a = i(20),
+      a = i(19),
       s = i(1),
       r = i(1),
       l = i(6),
@@ -359700,7 +359690,7 @@
     var n = i(0),
       o = i(1),
       a = i(1),
-      s = i(20),
+      s = i(19),
       r = i(4),
       l = (function (e) {
         function CastleAdvancedDefenceDialogHelper(t) {
@@ -361168,7 +361158,7 @@
       r = i(3),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(12),
       p = i(41),
       h = (function () {
@@ -361305,7 +361295,7 @@
       d = i(13),
       p = i(24),
       h = i(30),
-      g = i(19),
+      g = i(20),
       C = createjs.Point,
       _ = i(16),
       m = i(5),
@@ -362337,7 +362327,7 @@
       r = i(3),
       l = i(6),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(23),
       h = i(93),
@@ -362547,7 +362537,7 @@
       o = i(1),
       a = i(3),
       s = i(6),
-      r = i(19),
+      r = i(20),
       l = i(12),
       c = (function (e) {
         function ModernPackageShopBuyElementCommonInfoRelic() {
@@ -362639,7 +362629,7 @@
       l = i(32),
       c = i(71),
       u = i(30),
-      d = i(19),
+      d = i(20),
       p = i(4),
       h = i(126),
       g = i(433),
@@ -366085,7 +366075,7 @@
       h = i(3),
       g = i(3),
       C = i(6),
-      _ = i(20),
+      _ = i(19),
       m = i(52),
       f = i(2478),
       E = i(26),
@@ -366653,7 +366643,7 @@
       g = i(3),
       C = i(3),
       _ = i(6),
-      m = i(20),
+      m = i(19),
       f = i(52),
       E = i(4),
       O = i(226),
@@ -366896,7 +366886,7 @@
       h = i(3),
       g = i(3),
       C = i(6),
-      _ = i(20),
+      _ = i(19),
       m = i(52),
       f = i(226),
       E = i(1219),
@@ -367278,7 +367268,7 @@
       c = i(3),
       u = i(16),
       d = i(30),
-      p = i(19),
+      p = i(20),
       h = i(8),
       g = (function (e) {
         function CastleMinuteSkipScrollItem(t) {
@@ -371807,7 +371797,7 @@
       C = i(37),
       _ = i(47),
       m = i(30),
-      f = i(19),
+      f = i(20),
       E = i(44),
       O = i(12),
       y = i(4),
@@ -372129,7 +372119,7 @@
       v = i(32),
       T = i(47),
       S = i(30),
-      A = i(19),
+      A = i(20),
       L = i(44),
       P = i(12),
       M = i(15),
@@ -377735,7 +377725,7 @@
       r = i(6),
       l = i(32),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(8),
       h = i(11),
@@ -378784,7 +378774,7 @@
       g = i(13),
       C = i(42),
       _ = i(30),
-      m = i(19),
+      m = i(20),
       f = i(4),
       E = i(68),
       O = i(9),
@@ -379662,7 +379652,7 @@
       s = i(3),
       r = i(3),
       l = i(65),
-      c = i(19),
+      c = i(20),
       u = i(12),
       d = i(18),
       p = i(8),
@@ -380917,7 +380907,7 @@
       l = i(42),
       c = i(30),
       u = i(118),
-      d = i(19),
+      d = i(20),
       p = i(12),
       h = i(4),
       g = i(9),
@@ -381140,7 +381130,7 @@
       o = i(1),
       a = i(3),
       s = i(30),
-      r = i(19),
+      r = i(20),
       l = i(437),
       c = i(14),
       u = i(76),
@@ -381263,7 +381253,7 @@
       g = i(47),
       C = i(30),
       _ = i(118),
-      m = i(19),
+      m = i(20),
       f = i(46),
       E = i(12),
       O = i(4),
@@ -382056,7 +382046,7 @@
       d = i(4),
       p = i(24),
       h = i(30),
-      g = i(19),
+      g = i(20),
       C = i(223),
       _ = (function (e) {
         function GeneralsHubDialogIMultiRewardItem() {
@@ -382310,7 +382300,7 @@
       c = i(21),
       u = i(30),
       d = i(118),
-      p = i(19),
+      p = i(20),
       h = i(12),
       g = i(4),
       C = i(27),
@@ -383034,7 +383024,7 @@
       a = i(89),
       s = i(1),
       r = i(3),
-      l = i(19),
+      l = i(20),
       c = i(18),
       u = i(76),
       d = i(8),
@@ -383849,7 +383839,7 @@
       b = i(136),
       D = i(156),
       I = i(65),
-      v = i(19),
+      v = i(20),
       T = i(12),
       S = i(79),
       A = i(4),
@@ -386229,7 +386219,8 @@
       D = i(11),
       I = i(2609),
       v = i(1427),
-      T = (function (e) {
+      T = i(19),
+      S = (function (e) {
         function AllianceMobilizationEventQuestInfoDialog() {
           return (
             e.call(this, AllianceMobilizationEventQuestInfoDialog.NAME) || this
@@ -386409,7 +386400,7 @@
                 );
               } else if (
                 this.dialogProperties.questSlotVO.eventID ==
-                r.EventConst.EVENTTYPE_ALLIANCE_RAID_MOBILISATION
+                T.ClientConstCastle.LEGACY_EVENTTYPE_ALLIANCE_RAID_MOBILISATION
               ) {
                 var n = "General";
                 if (
@@ -386704,8 +386695,8 @@
           AllianceMobilizationEventQuestInfoDialog
         );
       })(D.CastleExternalDialog);
-    ((t.AllianceMobilizationEventQuestInfoDialog = T),
-      s.classImplementsInterfaces(T, "ICollectableRendererList"));
+    ((t.AllianceMobilizationEventQuestInfoDialog = S),
+      s.classImplementsInterfaces(S, "ICollectableRendererList"));
   },
   function (e, t, i) {
     "use strict";
@@ -388099,7 +388090,7 @@
       l = i(1),
       c = i(3),
       u = i(3),
-      d = i(19),
+      d = i(20),
       p = i(4),
       h = i(138),
       g = i(238),
@@ -388949,7 +388940,7 @@
       o = i(1),
       a = i(5),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(135),
       c = i(28),
       u = i(103),
@@ -395181,7 +395172,7 @@
       r = i(3),
       l = i(3),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = createjs.Point,
       p = (function (e) {
         function CastlePrimeSaleScrollItem(t) {
@@ -395465,7 +395456,7 @@
       M = i(71),
       R = i(340),
       V = i(30),
-      x = i(19),
+      x = i(20),
       w = i(92),
       B = i(4),
       F = i(485),
@@ -397858,7 +397849,7 @@
       u = i(6),
       d = i(59),
       p = i(30),
-      h = i(19),
+      h = i(20),
       g = i(92),
       C = i(12),
       _ = i(4),
@@ -398175,7 +398166,7 @@
     var M = i(1),
       R = i(129),
       V = i(36),
-      x = i(20);
+      x = i(19);
   },
   function (e, t, i) {
     "use strict";
@@ -398492,7 +398483,7 @@
       a = i(1),
       s = i(32),
       r = i(30),
-      l = i(19),
+      l = i(20),
       c = i(4),
       u = i(220),
       d = i(39),
@@ -398645,7 +398636,7 @@
       o = i(1),
       a = i(5),
       s = i(30),
-      r = i(19),
+      r = i(20),
       l = i(4),
       c = i(220),
       u = i(1460),
@@ -399513,7 +399504,7 @@
       l = i(3),
       c = i(32),
       u = i(30),
-      d = i(19),
+      d = i(20),
       p = i(4),
       h = i(23),
       g = i(39),
@@ -399968,7 +399959,7 @@
       d = i(2686),
       p = i(32),
       h = i(30),
-      g = i(19),
+      g = i(20),
       C = i(12),
       _ = i(4),
       m = i(220),
@@ -400606,7 +400597,7 @@
       s = i(3),
       r = i(3),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(39),
       d = i(326),
       p = i(8),
@@ -400815,7 +400806,7 @@
       p = i(6),
       h = i(124),
       g = i(30),
-      C = i(19),
+      C = i(20),
       _ = i(12),
       m = i(4),
       f = i(328),
@@ -401289,7 +401280,7 @@
       s = i(3),
       r = i(6),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(4),
       d = i(220),
       p = i(8),
@@ -401393,7 +401384,7 @@
       l = i(6),
       c = i(124),
       u = i(30),
-      d = i(19),
+      d = i(20),
       p = i(4),
       h = i(1461),
       g = createjs.Point,
@@ -401798,7 +401789,7 @@
       u = i(6),
       d = i(153),
       p = i(30),
-      h = i(19),
+      h = i(20),
       g = i(4),
       C = i(39),
       _ = i(326),
@@ -405460,7 +405451,7 @@
       r = i(3),
       l = i(30),
       c = i(118),
-      u = i(19),
+      u = i(20),
       d = i(8),
       p = createjs.Point,
       h = (function (e) {
@@ -405929,7 +405920,7 @@
       c = i(340),
       u = i(24),
       d = i(30),
-      p = i(19),
+      p = i(20),
       h = createjs.Point,
       g = (function (e) {
         function ConstructionItemExpiredDialogListItem() {
@@ -406763,12 +406754,12 @@
       r = i(3),
       l = i(3),
       c = i(3),
-      u = i(20),
+      u = i(19),
       d = i(16),
       p = i(37),
       h = i(524),
       g = i(30),
-      C = i(19),
+      C = i(20),
       _ = i(15),
       m = i(4),
       f = i(43),
@@ -407724,7 +407715,7 @@
       _ = i(118),
       m = i(24),
       f = i(30),
-      E = i(19),
+      E = i(20),
       O = i(27);
     o.classImplementsInterfaces(p, "ICollectableRendererList");
   },
@@ -408624,7 +408615,7 @@
       r = i(1),
       l = i(30),
       c = i(118),
-      u = i(19),
+      u = i(20),
       d = createjs.Point,
       p = (function (e) {
         function CIBlueprintScrollItem(t) {
@@ -411419,7 +411410,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(6),
-      a = i(20),
+      a = i(19),
       s = i(4),
       r = i(358),
       l = createjs.Point,
@@ -411712,7 +411703,7 @@
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
-      o = i(20),
+      o = i(19),
       a = i(358),
       s = createjs.Point,
       r = (function (e) {
@@ -411785,7 +411776,7 @@
       o = i(2),
       a = i(1),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(54),
       c = i(90),
       u = (function (e) {
@@ -413561,7 +413552,7 @@
       o = i(2),
       a = i(1),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(60),
       c = i(4),
       u = (function (e) {
@@ -414675,7 +414666,7 @@
       c = i(3),
       u = i(3),
       d = i(6),
-      p = i(20),
+      p = i(19),
       h = i(436),
       g = i(37),
       C = i(428),
@@ -418807,7 +418798,7 @@
       a = i(1),
       s = i(3),
       r = i(3),
-      l = i(20),
+      l = i(19),
       c = i(16),
       u = i(4),
       d = i(792),
@@ -423478,7 +423469,7 @@
       _ = i(3),
       m = i(3),
       f = i(6),
-      E = i(20),
+      E = i(19),
       O = i(2971),
       y = i(2972),
       b = i(619),
@@ -425212,7 +425203,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(3),
-      a = i(20),
+      a = i(19),
       s = (function (e) {
         function UnitReviveListComponent(t, i) {
           var n = e.call(this, t, i) || this;
@@ -426882,7 +426873,7 @@
       c = i(3),
       u = i(3),
       d = i(3),
-      p = i(20),
+      p = i(19),
       h = i(16),
       g = i(714),
       C = i(130),
@@ -427746,7 +427737,7 @@
       s = i(1),
       r = i(3),
       l = i(3),
-      c = i(20),
+      c = i(19),
       u = i(16),
       d = i(714),
       p = i(130),
@@ -429021,7 +429012,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(155),
       r = i(1571),
       l = (function (e) {
@@ -429359,7 +429350,7 @@
       s = i(3),
       r = i(25),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(4),
       d = i(453),
       p = i(27),
@@ -429596,7 +429587,7 @@
       a = i(1),
       s = i(5),
       r = i(3),
-      l = i(20),
+      l = i(19),
       c = i(16),
       u = i(164),
       d = i(37),
@@ -429605,7 +429596,7 @@
       g = i(224),
       C = i(30),
       _ = i(118),
-      m = i(19),
+      m = i(20),
       f = i(84),
       E = i(35),
       O = i(12),
@@ -430118,7 +430109,7 @@
       a = i(535),
       s = i(127),
       r = i(30),
-      l = i(19),
+      l = i(20),
       c = i(15),
       u = i(18),
       d = i(8),
@@ -430685,7 +430676,7 @@
       o = i(1),
       a = i(1),
       s = i(3),
-      r = i(20),
+      r = i(19),
       l = i(271),
       c = (function (e) {
         function RingMenuButtonFactionBarracks() {
@@ -433019,7 +433010,7 @@
       _ = i(1041),
       m = i(145),
       f = i(30),
-      E = i(19),
+      E = i(20),
       O = i(355),
       y = i(12),
       b = i(4),
@@ -433661,7 +433652,7 @@
       u = i(3),
       d = i(3117),
       p = i(30),
-      h = i(19),
+      h = i(20),
       g = i(355),
       C = i(12),
       _ = i(4),
@@ -434680,7 +434671,7 @@
       d = i(119),
       p = i(26),
       h = i(65),
-      g = i(19),
+      g = i(20),
       C = i(12),
       _ = i(4),
       m = i(50),
@@ -435669,7 +435660,7 @@
       o = i(1),
       a = i(53),
       s = i(30),
-      r = i(19),
+      r = i(20),
       l = i(23),
       c = i(39),
       u = i(8),
@@ -436256,7 +436247,7 @@
     var n = i(0),
       o = i(1),
       a = i(3),
-      s = i(19),
+      s = i(20),
       r = i(4),
       l = i(50),
       c = i(77),
@@ -437279,7 +437270,7 @@
       s = i(1),
       r = i(5),
       l = i(6),
-      c = i(20),
+      c = i(19),
       u = i(16),
       d = i(428),
       p = i(79),
@@ -437801,7 +437792,7 @@
       o = i(1),
       a = i(1),
       s = i(3),
-      r = i(20),
+      r = i(19),
       l = i(271),
       c = (function (e) {
         function RingMenuButtonStronghold() {
@@ -439021,7 +439012,7 @@
       a = i(1),
       s = i(3),
       r = i(3),
-      l = i(20),
+      l = i(19),
       c = i(37),
       u = i(84),
       d = i(35),
@@ -444380,7 +444371,7 @@
       s = i(113),
       r = i(116),
       l = i(62),
-      c = i(19),
+      c = i(20),
       u = i(200),
       d = i(4),
       p = (function (e) {
@@ -446209,7 +446200,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(203),
       r = i(14),
       l = i(314),
@@ -447419,7 +447410,7 @@
       p = i(3),
       h = i(3),
       g = i(30),
-      C = i(19);
+      C = i(20);
     o.__initialize_static_members();
   },
   function (e, t, i) {
@@ -448309,7 +448300,7 @@
       c = i(42),
       u = i(30),
       d = i(118),
-      p = i(19),
+      p = i(20),
       h = i(12),
       g = i(4),
       C = i(50),
@@ -449001,7 +448992,7 @@
       l = i(1),
       c = i(3),
       u = i(30),
-      d = i(19),
+      d = i(20),
       p = i(12),
       h = i(23),
       g = i(14),
@@ -449179,7 +449170,7 @@
       c = i(3),
       u = i(25),
       d = i(25),
-      p = i(19),
+      p = i(20),
       h = i(12),
       g = i(14),
       C = i(45),
@@ -449307,7 +449298,7 @@
       a = i(1),
       s = i(3),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(4),
       u = i(144),
       d = i(398),
@@ -450703,7 +450694,7 @@
       r = i(5),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(4),
       p = i(144),
       h = i(398),
@@ -452510,7 +452501,7 @@
       c = i(3),
       u = i(6),
       d = i(21),
-      p = i(19),
+      p = i(20),
       h = i(12),
       g = i(4),
       C = i(27),
@@ -452748,7 +452739,7 @@
       l = i(3),
       c = i(21),
       u = i(813),
-      d = i(19),
+      d = i(20),
       p = i(12),
       h = i(4),
       g = i(27),
@@ -459510,7 +459501,7 @@
       d = i(742),
       p = i(30),
       h = i(65),
-      g = i(19),
+      g = i(20),
       C = i(12),
       _ = i(4),
       m = i(33),
@@ -462967,7 +462958,7 @@
       d = i(100),
       p = i(26),
       h = i(30),
-      g = i(19),
+      g = i(20),
       C = i(12),
       _ = i(4),
       m = i(460),
@@ -464148,7 +464139,7 @@
       o = i(1),
       a = i(3),
       s = i(65),
-      r = i(19),
+      r = i(20),
       l = i(4),
       c = i(177),
       u = i(39),
@@ -465025,7 +465016,7 @@
       g = i(24),
       C = i(30),
       _ = i(50),
-      m = i(19),
+      m = i(20),
       f = createjs.Point,
       E = (function (e) {
         function RewardHubDialogMysteryBoxItem() {
@@ -465300,8 +465291,9 @@
       y = i(24),
       b = i(30),
       D = i(50),
-      I = i(19),
-      v = (function (e) {
+      I = i(20),
+      v = i(19),
+      T = (function (e) {
         function RewardHubDialogItem() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -465365,7 +465357,8 @@
                   : (e = new (o.getDefinitionByName("Icon_Promotion"))());
                 break;
               case C.EventConst.EVENTTYPE_ALLIANCE_MOBILISATION:
-              case C.EventConst.EVENTTYPE_ALLIANCE_RAID_MOBILISATION:
+              case v.ClientConstCastle
+                .LEGACY_EVENTTYPE_ALLIANCE_RAID_MOBILISATION:
                 e = new (o.getDefinitionByName("Icon_Alliance"))();
                 break;
               case C.EventConst.EVENTTYPE_ALLIANCE_RAID:
@@ -465679,8 +465672,8 @@
           RewardHubDialogItem
         );
       })(u.AInfiniteScrollListItem);
-    ((t.RewardHubDialogItem = v),
-      o.classImplementsInterfaces(v, "ICollectableRendererList"));
+    ((t.RewardHubDialogItem = T),
+      o.classImplementsInterfaces(T, "ICollectableRendererList"));
   },
   function (e, t, i) {
     "use strict";
@@ -465816,7 +465809,7 @@
       s = i(3),
       r = i(13),
       l = i(65),
-      c = i(19),
+      c = i(20),
       u = i(12),
       d = i(76),
       p = i(24),
@@ -466114,7 +466107,7 @@
       a = i(3),
       s = i(3),
       r = i(65),
-      l = i(19),
+      l = i(20),
       c = i(12),
       u = i(18),
       d = i(537),
@@ -466316,7 +466309,7 @@
       o = i(1),
       a = i(3),
       s = i(65),
-      r = i(19),
+      r = i(20),
       l = (function (e) {
         function GenericRewardDialog() {
           return (
@@ -466433,7 +466426,7 @@
       c = i(340),
       u = i(30),
       d = i(118),
-      p = i(19),
+      p = i(20),
       h = i(46),
       g = i(12),
       C = i(4),
@@ -467442,7 +467435,7 @@
       a = i(3),
       s = i(3),
       r = i(30),
-      l = i(19),
+      l = i(20),
       c = i(12),
       u = i(4),
       d = i(76),
@@ -467975,7 +467968,7 @@
       a = i(3),
       s = i(3),
       r = i(30),
-      l = i(19),
+      l = i(20),
       c = i(12),
       u = i(14),
       d = i(76),
@@ -468791,7 +468784,7 @@
       s = i(3),
       r = i(6),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = (function (e) {
         function CastleBookmarkRewardDialog() {
           return (
@@ -468916,7 +468909,7 @@
     var n = i(0),
       o = i(47),
       a = i(82),
-      s = i(19),
+      s = i(20),
       r = i(65),
       l = i(24),
       c = i(492),
@@ -469462,7 +469455,7 @@
       o = i(2),
       a = i(1),
       s = i(30),
-      r = i(19),
+      r = i(20),
       l = createjs.Point,
       c = (function (e) {
         function RewardScrollItem(t) {
@@ -469778,7 +469771,7 @@
       h = i(6),
       g = i(21),
       C = i(26),
-      _ = i(19),
+      _ = i(20),
       m = i(355),
       f = i(4),
       E = i(27),
@@ -470608,7 +470601,7 @@
       o = i(1),
       a = i(3),
       s = i(65),
-      r = i(19),
+      r = i(20),
       l = i(8),
       c = (function (e) {
         function CastleDailyQuestThresholdRewardDialog() {
@@ -470833,7 +470826,7 @@
       o = i(1),
       a = i(3),
       s = i(30),
-      r = i(19),
+      r = i(20),
       l = i(8),
       c = i(24),
       u = i(11),
@@ -471148,7 +471141,7 @@
       s = i(3),
       r = i(3),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(12),
       d = i(4),
       p = i(8),
@@ -471376,7 +471369,7 @@
     var n = i(0),
       o = i(1),
       a = i(65),
-      s = i(19),
+      s = i(20),
       r = i(24),
       l = i(34),
       c = createjs.Point,
@@ -471794,7 +471787,7 @@
       u = i(9),
       d = i(24),
       p = i(65),
-      h = i(19),
+      h = i(20),
       g = createjs.Point,
       C = i(118),
       _ = i(18),
@@ -473333,7 +473326,7 @@
       c = i(2),
       u = i(571),
       d = i(12),
-      p = i(19),
+      p = i(20),
       h = (function (e) {
         function CastleCollectorEventRewardDialog() {
           return e.call(this, CastleCollectorEventRewardDialog.NAME) || this;
@@ -473915,7 +473908,7 @@
       l = i(3),
       c = i(3),
       u = i(65),
-      d = i(19),
+      d = i(20),
       p = i(4),
       h = i(8),
       g = i(11),
@@ -478886,7 +478879,7 @@
       C = i(3585),
       _ = i(24),
       m = i(65),
-      f = i(19),
+      f = i(20),
       E = i(118),
       O = i(9),
       y = i(8),
@@ -479404,7 +479397,7 @@
       r = i(3),
       l = i(26),
       c = i(65),
-      u = i(19),
+      u = i(20),
       d = i(12),
       p = i(4),
       h = i(177),
@@ -480899,7 +480892,7 @@
       h = i(3),
       g = i(6),
       C = i(30),
-      _ = i(19),
+      _ = i(20),
       m = i(15),
       f = i(4),
       E = i(23),
@@ -480929,7 +480922,7 @@
       E = i(26),
       O = i(369),
       y = i(65),
-      b = i(19),
+      b = i(20),
       D = i(4),
       I = i(8),
       v = i(34),
@@ -481243,80 +481236,77 @@
             }
           }),
           (FactionEventOverviewSublayer.prototype.setNextReward = function () {
-            var e,
-              t = !1,
-              i = 0;
-            for (
-              this.subLayerDisp.mc_nextReward.mc_checkmark.visible = !1, i = 0;
-              i < this.ownLeagueVO.pointThresholds.length;
-              i++
-            )
-              if (
-                this.ownLeagueVO.ownPoints < this.ownLeagueVO.pointThresholds[i]
-              ) {
-                e = this.ownLeagueVO.rewardLists[i];
-                break;
-              }
-            if (!e) {
-              ((t = !0),
-                (e =
-                  this.ownLeagueVO.rewardLists[
-                    this.ownLeagueVO.rewardLists.length - 1
-                  ]),
-                (this.subLayerDisp.mc_nextReward.mc_checkmark.visible =
-                  1 == this.ownLeagueVO.ownRank));
-              for (var n = 0; n < this.ownLeagueVO.topX.length; n++)
-                if (this.ownLeagueVO.ownRank > this.ownLeagueVO.topX[n]) {
-                  ((e = this.ownLeagueVO.rewardLists[n + i]),
-                    (this.subLayerDisp.mc_nextReward.mc_checkmark.visible =
-                      !1));
+            var e = this.ownLeagueVO;
+            if (e) {
+              var t,
+                i = !1,
+                n = 0;
+              for (
+                this.subLayerDisp.mc_nextReward.mc_checkmark.visible = !1,
+                  n = 0;
+                n < e.pointThresholds.length;
+                n++
+              )
+                if (e.ownPoints < e.pointThresholds[n]) {
+                  t = e.rewardLists[n];
                   break;
                 }
-            }
-            ((this.subLayerDisp.mc_nextReward.rewards1.visible = 1 == e.length),
-              (this.subLayerDisp.mc_nextReward.rewards2.visible =
-                2 == e.length),
-              R.CollectableRenderHelper.displayMultipleItemsComplete(
-                this,
-                new y.CollectableRenderClipsList(
-                  this.subLayerDisp.mc_nextReward["rewards" + e.length],
-                  "reward",
-                )
-                  .addItemMcs("mc_item")
-                  .addInfoBtns("parent.btn_info")
-                  .addTextfields("txt_reward"),
-                e,
-                new b.CollectableRenderOptions(
-                  b.CollectableRenderOptions.SET_DEFAULT,
-                  new T(58, 58),
-                ),
-              ),
-              1 == this.ownLeagueVO.ownRank && t
-                ? this.textFieldManager.registerTextField(
-                    this.subLayerDisp.mc_nextReward.txt_header,
-                    new c.LocalizedTextVO(
-                      "dialog_factionOverview_nextReward_headerFinal",
-                    ),
+              if (!t) {
+                ((i = !0),
+                  (t = e.rewardLists[e.rewardLists.length - 1]),
+                  (this.subLayerDisp.mc_nextReward.mc_checkmark.visible =
+                    1 == e.ownRank));
+                for (var o = 0; o < e.topX.length; o++)
+                  if (e.ownRank > e.topX[o]) {
+                    ((t = e.rewardLists[o + n]),
+                      (this.subLayerDisp.mc_nextReward.mc_checkmark.visible =
+                        !1));
+                    break;
+                  }
+              }
+              ((this.subLayerDisp.mc_nextReward.rewards1.visible =
+                1 == t.length),
+                (this.subLayerDisp.mc_nextReward.rewards2.visible =
+                  2 == t.length),
+                R.CollectableRenderHelper.displayMultipleItemsComplete(
+                  this,
+                  new y.CollectableRenderClipsList(
+                    this.subLayerDisp.mc_nextReward["rewards" + t.length],
+                    "reward",
                   )
-                : this.textFieldManager.registerTextField(
-                    this.subLayerDisp.mc_nextReward.txt_header,
-                    new c.LocalizedTextVO(
-                      "dialog_factionOverview_nextReward_header",
-                    ),
-                  ));
-            var o = t
-              ? new l.LocalizedNumberVO(this.ownLeagueVO.ownPoints)
-              : new c.LocalizedTextVO(
-                  "dialog_factionOverview_nextReward_points",
-                  [
-                    this.ownLeagueVO.ownPoints,
-                    this.ownLeagueVO.pointThresholds[i],
-                  ],
-                );
-            this.textFieldManager.registerTextField(
-              this.subLayerDisp.mc_nextReward.txt_points,
-              o,
-            );
+                    .addItemMcs("mc_item")
+                    .addInfoBtns("parent.btn_info")
+                    .addTextfields("txt_reward"),
+                  t,
+                  new b.CollectableRenderOptions(
+                    b.CollectableRenderOptions.SET_DEFAULT,
+                    new T(58, 58),
+                  ),
+                ),
+                1 == e.ownRank && i
+                  ? this.textFieldManager.registerTextField(
+                      this.subLayerDisp.mc_nextReward.txt_header,
+                      new c.LocalizedTextVO(
+                        "dialog_factionOverview_nextReward_headerFinal",
+                      ),
+                    )
+                  : this.textFieldManager.registerTextField(
+                      this.subLayerDisp.mc_nextReward.txt_header,
+                      new c.LocalizedTextVO(
+                        "dialog_factionOverview_nextReward_header",
+                      ),
+                    ));
+              var a = i
+                ? new l.LocalizedNumberVO(e.ownPoints)
+                : new c.LocalizedTextVO(
+                    "dialog_factionOverview_nextReward_points",
+                    [e.ownPoints, e.pointThresholds[n]],
+                  );
+              this.textFieldManager.registerTextField(
+                this.subLayerDisp.mc_nextReward.txt_points,
+                a,
+              );
+            }
           }),
           (FactionEventOverviewSublayer.prototype.setNextTitle = function () {
             var e,
@@ -484686,7 +484676,7 @@
       r = i(3),
       l = i(3),
       c = i(3),
-      u = i(20),
+      u = i(19),
       d = i(52),
       p = i(21),
       h = i(136),
@@ -488129,7 +488119,7 @@
       r = i(6),
       l = i(40),
       c = i(65),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(8),
       h = (function (e) {
@@ -488390,7 +488380,7 @@
       u = i(6),
       d = i(21),
       p = i(30),
-      h = i(19),
+      h = i(20),
       g = i(4),
       C = i(27),
       _ = i(11),
@@ -488589,7 +488579,7 @@
       r = i(1),
       l = i(3),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(11),
       p = createjs.MovieClip,
       h = createjs.Point,
@@ -489620,9 +489610,9 @@
       o = i(2),
       a = i(1),
       s = i(3),
-      r = i(20),
+      r = i(19),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(4),
       d = (function (e) {
         function CastlePrivateOfferDecorationFinishDialog() {
@@ -490066,7 +490056,7 @@
       o = i(1),
       a = i(3),
       s = i(65),
-      r = i(19),
+      r = i(20),
       l = i(11),
       c = createjs.Point,
       u = (function (e) {
@@ -490172,7 +490162,7 @@
       o = i(1),
       a = i(3),
       s = i(65),
-      r = i(19),
+      r = i(20),
       l = i(4),
       c = i(43),
       u = (function (e) {
@@ -490427,7 +490417,7 @@
     var n = i(0),
       o = i(2),
       a = i(30),
-      s = i(19),
+      s = i(20),
       r = i(546),
       l = createjs.Point,
       c = (function (e) {
@@ -490495,7 +490485,7 @@
       l = i(6),
       c = i(60),
       u = i(65),
-      d = i(19),
+      d = i(20),
       p = i(231),
       h = i(73),
       g = i(11),
@@ -490779,7 +490769,7 @@
       d = i(60),
       p = i(24),
       h = i(30),
-      g = i(19),
+      g = i(20),
       C = i(17),
       _ = i(2),
       m = i(131),
@@ -491067,7 +491057,7 @@
       r = i(5),
       l = i(3),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(23),
       h = i(11),
@@ -492458,7 +492448,7 @@
       f = i(3),
       E = i(6),
       O = i(218),
-      y = i(20),
+      y = i(19),
       b = i(281),
       D = i(37),
       I = i(90),
@@ -495007,7 +494997,7 @@
       c = i(40),
       u = i(175),
       d = i(30),
-      p = i(19),
+      p = i(20),
       h = i(4),
       g = i(8),
       C = i(34),
@@ -499696,7 +499686,7 @@
       c = createjs.Point,
       u = i(12),
       d = i(24),
-      p = i(19),
+      p = i(20),
       h = i(8),
       g = i(18),
       C = i(65),
@@ -503225,7 +503215,7 @@
     var n = i(0),
       o = i(1),
       a = i(30),
-      s = i(19),
+      s = i(20),
       r = i(176),
       l = (function (e) {
         function CastleSamuraiInvasionDaimyoShopScrollItem(t) {
@@ -504281,7 +504271,7 @@
       o = i(2),
       a = i(1),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(4),
       c = i(3790),
       u = i(3791),
@@ -504942,7 +504932,7 @@
       u = i(28),
       d = i(21),
       p = i(30),
-      h = i(19),
+      h = i(20),
       g = i(12),
       C = i(4),
       _ = i(27),
@@ -505432,7 +505422,7 @@
       g = i(3),
       C = i(6),
       _ = i(273),
-      m = i(20),
+      m = i(19),
       f = i(52),
       E = i(16),
       O = i(107),
@@ -506163,7 +506153,7 @@
       m = i(6),
       f = i(25),
       E = i(25),
-      O = i(20),
+      O = i(19),
       y = i(52),
       b = i(16),
       D = i(28),
@@ -506827,7 +506817,7 @@
       s = i(3),
       r = i(6),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(4),
       d = i(14),
       p = i(82),
@@ -509153,7 +509143,7 @@
       o = i(42),
       a = i(75),
       s = i(30),
-      r = i(19),
+      r = i(20),
       l = i(18),
       c = i(8),
       u = i(24),
@@ -509464,7 +509454,7 @@
       h = i(6),
       g = i(32),
       C = i(30),
-      _ = i(19),
+      _ = i(20),
       m = i(4),
       f = i(192),
       E = i(23),
@@ -510211,7 +510201,7 @@
       g = i(6),
       C = i(13),
       _ = i(30),
-      m = i(19),
+      m = i(20),
       f = i(4),
       E = i(27),
       O = i(18),
@@ -511902,7 +511892,7 @@
       a = i(1),
       s = i(5),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(4),
       u = (function (e) {
         function SwitchKingdomCommand() {
@@ -513433,7 +513423,7 @@
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(1),
-      o = i(20),
+      o = i(19),
       a = i(54),
       s = (function () {
         function AFillWaveStrategy() {
@@ -513597,7 +513587,7 @@
     var n = i(0),
       o = i(1),
       a = i(6),
-      s = i(20),
+      s = i(19),
       r = i(722),
       l = i(1275),
       c = (function (e) {
@@ -518436,7 +518426,7 @@
       a = i(1),
       s = i(3),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(718),
       u = i(130),
       d = i(15),
@@ -518710,7 +518700,7 @@
       r = i(5),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(83),
       p = i(4),
       h = i(56),
@@ -519785,7 +519775,7 @@
       r = i(3),
       l = i(6),
       c = i(755),
-      u = i(20),
+      u = i(19),
       d = i(16),
       p = i(184),
       h = i(4),
@@ -522049,6 +522039,7 @@
                 : void (
                     this.isShown &&
                     this.isKey(e, " ", "Space", 32) &&
+                    !this.isTypingInInputField(e) &&
                     this.clearLayer()
                   );
           }),
@@ -522057,6 +522048,14 @@
               !(!e.key || e.key.toLowerCase() != t) ||
               !(!e.code || e.code != i) ||
               e.keyCode == n
+            );
+          }),
+          (CastleLocationCheatPanel.prototype.isTypingInInputField = function (
+            e,
+          ) {
+            var t = e.target;
+            return (
+              null != t && ("INPUT" == t.tagName || "TEXTAREA" == t.tagName)
             );
           }),
           (CastleLocationCheatPanel.prototype.onClick = function (t) {
@@ -522071,13 +522070,17 @@
             e,
           ) {
             this.clearLayer();
-            var t = this.textFieldManager.textFieldList;
+            var t = this.textFieldManager.textFieldList,
+              i = this.layoutManager.getPanel(D.CastleCheatPanel),
+              n = i ? i.disp : null;
             if (null != t)
-              for (var i = 0, n = Array.from(t.values()); i < n.length; i++) {
-                var o = n[i];
-                void 0 !== o &&
-                  this.isTfVisible(o) &&
-                  this.setTextBoxByTextfield(o, e);
+              for (var o = 0, a = Array.from(t.values()); o < a.length; o++) {
+                var s = a[o];
+                void 0 !== s &&
+                  ((n &&
+                    s.originalTextField &&
+                    n.contains(s.originalTextField)) ||
+                    (this.isTfVisible(s) && this.setTextBoxByTextfield(s, e)));
               }
             this.isShown = !0;
           }),
@@ -525267,6 +525270,56 @@
   function (e, t, i) {
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
+    var n = (function () {
+      function CheatHistory() {}
+      return (
+        (CheatHistory.load = function () {
+          try {
+            var e = JSON.parse(
+              window.localStorage.getItem(CheatHistory.STORAGE_KEY),
+            );
+            return Array.isArray(e) ? e : [];
+          } catch (e) {
+            return [];
+          }
+        }),
+        (CheatHistory.add = function (e, t) {
+          var i = e.indexOf(t);
+          (-1 != i && e.splice(i, 1),
+            e.push(t),
+            e.length > CheatHistory.MAX_ENTRIES &&
+              e.splice(0, e.length - CheatHistory.MAX_ENTRIES));
+          try {
+            window.localStorage.setItem(
+              CheatHistory.STORAGE_KEY,
+              JSON.stringify(e),
+            );
+          } catch (e) {}
+        }),
+        (CheatHistory.getSuggestions = function (e, t) {
+          for (
+            var i = t.trim().replace(/^\/+/, "").toLowerCase(),
+              n = [],
+              o = [],
+              a = e.length - 1;
+            a >= 0;
+            a--
+          ) {
+            var s = e[a].replace(/^\/+/, "").toLowerCase().indexOf(i);
+            0 == s ? n.push(e[a]) : s > 0 && o.push(e[a]);
+          }
+          return n.concat(o);
+        }),
+        (CheatHistory.STORAGE_KEY = "ggs_cheatPanel_history"),
+        (CheatHistory.MAX_ENTRIES = 50),
+        CheatHistory
+      );
+    })();
+    t.CheatHistory = n;
+  },
+  function (e, t, i) {
+    "use strict";
+    Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(2),
       o = i(1),
       a = (function () {
@@ -525529,7 +525582,7 @@
       l = i(3),
       c = i(3),
       u = i(6),
-      d = i(3949),
+      d = i(3950),
       p = i(1819),
       h = i(4),
       g = i(132),
@@ -525841,7 +525894,7 @@
       r = i(5),
       l = i(6),
       c = i(25),
-      u = i(20),
+      u = i(19),
       d = i(59),
       p = i(423),
       h = i(130),
@@ -525857,7 +525910,7 @@
       D = i(1121),
       I = i(1822),
       v = i(845),
-      T = i(3951),
+      T = i(3952),
       S = (function (e) {
         function CastleResourcePanel() {
           var t = this;
@@ -526609,7 +526662,7 @@
       L = i(35),
       P = i(31),
       M = i(688),
-      R = i(3952),
+      R = i(3953),
       V = i(152);
   },
   function (e, t, i) {
@@ -527181,7 +527234,7 @@
       })(i(1824).CastleBasicLayout);
     t.CastleLayoutIso = u;
     var d = i(35),
-      p = i(4127),
+      p = i(4128),
       h = i(1858),
       g = i(1859),
       C = i(1860),
@@ -527190,8 +527243,8 @@
       f = i(1868),
       E = i(268),
       O = i(516),
-      y = i(4168),
-      b = i(4169),
+      y = i(4169),
+      b = i(4170),
       D = i(1823),
       I = i(1870);
   },
@@ -527353,7 +527406,7 @@
     var n = i(0),
       o = i(1),
       a = i(30),
-      s = i(19),
+      s = i(20),
       r = i(76),
       l = i(24),
       c = createjs.Point,
@@ -527812,7 +527865,7 @@
       })(i(133).AOfferHubItemStatusIcon);
     t.StatusIconSeasonPassSale = l;
     var c = i(9),
-      u = i(3968),
+      u = i(3969),
       d = i(178),
       p = i(27);
   },
@@ -527830,7 +527883,7 @@
       d = i(6),
       p = i(52),
       h = i(30),
-      g = i(19),
+      g = i(20),
       C = i(4),
       _ = i(374),
       m = createjs.Point,
@@ -528303,7 +528356,7 @@
       })(C.ACastleLabeledStatusIcon);
     t.StatusIconDailyQuest = m;
     var f = i(9),
-      E = i(3971);
+      E = i(3972);
     m.__initialize_static_members();
   },
   function (e, t, i) {
@@ -528321,7 +528374,7 @@
       p = i(21),
       h = i(269),
       g = i(65),
-      C = i(19),
+      C = i(20),
       _ = i(4),
       m = i(27),
       f = i(253),
@@ -529616,7 +529669,7 @@
       })(i(133).AOfferHubItemStatusIcon);
     t.StatusIconDynamicOffer = u;
     var d = i(9),
-      p = i(3980),
+      p = i(3981),
       h = i(109),
       g = i(27);
   },
@@ -530476,7 +530529,7 @@
       r = i(26),
       l = i(4),
       c = i(27),
-      u = i(3988),
+      u = i(3989),
       d = (function (e) {
         function StatusIconWorldCup() {
           var t =
@@ -530573,7 +530626,7 @@
       })(i(133).AOfferHubItemStatusIcon);
     t.StatusIconWorldCup = d;
     var p = i(9),
-      h = i(3989),
+      h = i(3990),
       g = i(109);
   },
   function (e, t, i) {
@@ -530708,9 +530761,9 @@
       })(i(11).CastleExternalDialog);
     t.CastleWorldCupDialog = l;
     var c = i(669),
-      u = i(3990),
-      d = i(3991),
-      p = i(3992);
+      u = i(3991),
+      d = i(3992),
+      p = i(3993);
     (o.classImplementsInterfaces(l, "ICollectableRendererList"),
       l.__initialize_static_members());
   },
@@ -530862,7 +530915,7 @@
     var n = i(0),
       o = i(1),
       a = i(3),
-      s = i(3993),
+      s = i(3994),
       r = i(4),
       l = i(8),
       c = i(776),
@@ -532159,7 +532212,7 @@
     t.StatusIconActivityBonusComponent = p;
     var h = i(9),
       g = i(17),
-      C = i(4007);
+      C = i(4008);
   },
   function (e, t, i) {
     "use strict";
@@ -532170,10 +532223,10 @@
       s = i(1),
       r = i(3),
       l = i(6),
-      c = i(4008),
+      c = i(4009),
       u = i(552),
       d = i(65),
-      p = i(19),
+      p = i(20),
       h = i(4),
       g = i(8),
       C = i(11),
@@ -533078,7 +533131,7 @@
       r = i(319),
       l = i(32),
       c = i(4),
-      u = i(4021),
+      u = i(4022),
       d = (function (e) {
         function StatusIconAllianceAction(t) {
           void 0 === t && (t = a.int(g.ACastleStatusIcon.PRIORITY_LOW));
@@ -533187,7 +533240,7 @@
       })(i(313).ACastleLabeledStatusIcon);
     t.StatusIconAllianceAction = d;
     var p = i(9),
-      h = i(4022),
+      h = i(4023),
       g = i(109);
   },
   function (e, t, i) {
@@ -533419,8 +533472,8 @@
       })(i(108).CastleExternalSubLayerDialog);
     t.CastleAllianceActionOverviewDialog = p;
     var h = i(9),
-      g = i(4023),
-      C = i(4027);
+      g = i(4024),
+      C = i(4028);
     (o.classImplementsInterfaces(p, "ICollectableRendererList"),
       p.__initialize_static_members());
   },
@@ -533435,7 +533488,7 @@
       l = i(847),
       c = i(4),
       u = i(34),
-      d = i(4024),
+      d = i(4025),
       p = (function (e) {
         function CastleAllianceActionOverviewDialogGift(t) {
           return e.call(this, t) || this;
@@ -533504,7 +533557,7 @@
         );
       })(u.CastleDialogSubLayer);
     t.CastleAllianceActionOverviewDialogGift = p;
-    var h = i(4025);
+    var h = i(4026);
     a.classImplementsInterfaces(p, "ICollectableRendererList", "ISublayer");
   },
   function (e, t, i) {
@@ -533533,10 +533586,10 @@
       r = i(1),
       l = i(3),
       c = i(3),
-      u = i(4026),
+      u = i(4027),
       d = i(21),
       p = i(30),
-      h = i(19),
+      h = i(20),
       g = i(4),
       C = i(8),
       _ = (function (e) {
@@ -533682,13 +533735,13 @@
       a = i(1),
       s = i(3),
       r = i(6),
-      l = i(4028),
+      l = i(4029),
       c = i(319),
       u = i(4),
       d = i(8),
       p = i(34),
-      h = i(4029),
-      g = i(4031),
+      h = i(4030),
+      g = i(4032),
       C = (function (e) {
         function CastleAllianceActionOverviewDialogHelpRequest(t) {
           return e.call(this, t) || this;
@@ -533843,7 +533896,7 @@
       l = i(5),
       c = i(3),
       u = i(3),
-      d = i(4030),
+      d = i(4031),
       p = i(4),
       h = i(8),
       g = createjs.MouseEvent,
@@ -534242,7 +534295,7 @@
       })(r.ACastleBoosterStatusIcon);
     t.StatusIconAllianceCoinBooster = l;
     var c = i(9),
-      u = i(4034),
+      u = i(4035),
       d = i(109);
   },
   function (e, t, i) {
@@ -534987,8 +535040,8 @@
       s = i(78),
       r = i(77),
       l = i(74),
-      c = i(4041),
-      u = i(4042),
+      c = i(4042),
+      u = i(4043),
       d = i(8),
       p = i(18),
       h = i(12),
@@ -535498,7 +535551,7 @@
       p = i(12),
       h = i(8),
       g = i(18),
-      C = i(4045),
+      C = i(4046),
       _ = i(5),
       m = (function (e) {
         function CastleStormIslandsMainDialogRanking(t) {
@@ -536106,7 +536159,7 @@
       d = i(267),
       p = i(265),
       h = i(151),
-      g = i(4048),
+      g = i(4049),
       C = i(266),
       _ = i(150),
       m = i(4),
@@ -536432,7 +536485,7 @@
       u = i(78),
       d = i(77),
       p = i(74),
-      h = i(4050),
+      h = i(4051),
       g = i(12),
       C = i(1772),
       _ = i(4),
@@ -536992,7 +537045,7 @@
       })(l.ACastleBoosterStatusIcon);
     t.StatusIconGallantryBooster = c;
     var u = i(9),
-      d = i(4055),
+      d = i(4056),
       p = i(109);
   },
   function (e, t, i) {
@@ -537284,7 +537337,7 @@
       })(l.ACastleBoosterStatusIcon);
     t.StatusIconKhanMedalBooster = c;
     var u = i(9),
-      d = i(4058),
+      d = i(4059),
       p = i(109);
   },
   function (e, t, i) {
@@ -537419,7 +537472,7 @@
       })(l.ACastleBoosterStatusIcon);
     t.StatusIconKhanTabletBooster = c;
     var u = i(9),
-      d = i(4060),
+      d = i(4061),
       p = i(109);
   },
   function (e, t, i) {
@@ -537793,7 +537846,7 @@
       _ = i(9),
       m = i(17),
       f = i(443),
-      E = i(4063);
+      E = i(4064);
   },
   function (e, t, i) {
     "use strict";
@@ -538419,7 +538472,7 @@
       })(c.ACastleBoosterStatusIcon);
     t.StatusIconPersonalFameBooster = u;
     var d = i(9),
-      p = i(4068),
+      p = i(4069),
       h = i(109);
   },
   function (e, t, i) {
@@ -538737,7 +538790,7 @@
       })(l.ACastleBoosterStatusIcon);
     t.StatusIconRageBooster = c;
     var u = i(9),
-      d = i(4071),
+      d = i(4072),
       p = i(109);
   },
   function (e, t, i) {
@@ -538950,7 +539003,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(2),
-      a = i(20),
+      a = i(19),
       s = i(71),
       r = i(4),
       l = i(109),
@@ -539072,7 +539125,7 @@
       })(r.ACastleBoosterStatusIcon);
     t.StatusIconSamuraiBooster = l;
     var c = i(9),
-      u = i(4075),
+      u = i(4076),
       d = i(109);
   },
   function (e, t, i) {
@@ -539998,7 +540051,7 @@
       o = i(5),
       a = i(3),
       s = i(4),
-      r = i(4082),
+      r = i(4083),
       l = i(336),
       c = (function (e) {
         function StatusIconXPBooster() {
@@ -540055,7 +540108,7 @@
       })(l.ACastleBoosterStatusIcon);
     t.StatusIconXPBooster = c;
     var u = i(9),
-      d = i(4083),
+      d = i(4084),
       p = i(109);
   },
   function (e, t, i) {
@@ -540305,7 +540358,7 @@
     t.StatusIconFactionInvasionBooster = c;
     var u = i(9),
       d = i(109),
-      p = i(4085);
+      p = i(4086);
   },
   function (e, t, i) {
     "use strict";
@@ -540596,7 +540649,7 @@
     var n = i(0),
       o = i(1),
       a = i(191),
-      s = i(4089),
+      s = i(4090),
       r = i(369),
       l = i(4),
       c = (function (e) {
@@ -540847,7 +540900,7 @@
       r = i(1),
       l = i(1),
       c = i(3),
-      u = i(4092),
+      u = i(4093),
       d = i(41),
       p = i(144),
       h = createjs.Event,
@@ -541061,7 +541114,7 @@
       a = i(5),
       s = i(3),
       r = i(6),
-      l = i(4094),
+      l = i(4095),
       c = i(167),
       u = i(4),
       d = i(588),
@@ -541140,7 +541193,7 @@
     var g = i(47),
       C = i(127),
       _ = i(9),
-      m = i(4095);
+      m = i(4096);
   },
   function (e, t, i) {
     "use strict";
@@ -542116,7 +542169,7 @@
       })(i(11).CastleExternalDialog);
     t.PlayerIgnoreListDialog = h;
     var g = i(78),
-      C = i(4105),
+      C = i(4106),
       _ = i(18);
     o.classImplementsInterfaces(h, "ICollectableRendererList");
   },
@@ -542349,7 +542402,7 @@
       s = i(1),
       r = i(5),
       l = i(3),
-      c = i(20),
+      c = i(19),
       u = i(329),
       d = i(4),
       p = i(485),
@@ -542618,7 +542671,7 @@
       })(u.APanelButton);
     t.AchievementPanelButton = d;
     var p = i(14),
-      h = i(4109);
+      h = i(4110);
     o.classImplementsInterfaces(d, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -542627,7 +542680,7 @@
     var n = i(0),
       o = i(1),
       a = i(3),
-      s = i(4110),
+      s = i(4111),
       r = i(1696),
       l = i(4),
       c = i(8),
@@ -542803,8 +542856,8 @@
         );
       })(i(108).CastleExternalSubLayerDialog);
     t.CastleAchievementDialog = u;
-    var d = i(4111),
-      p = i(4112);
+    var d = i(4112),
+      p = i(4113);
     (o.classImplementsInterfaces(u, "ICollectableRendererList"),
       u.__initialize_static_members());
   },
@@ -543540,7 +543593,7 @@
       })(d.APanelButton);
     t.LostAndFoundPanelButton = p;
     var h = i(14),
-      g = i(4116);
+      g = i(4117);
     o.classImplementsInterfaces(p, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -543555,7 +543608,7 @@
       c = i(3),
       u = i(6),
       d = i(1213),
-      p = i(4117),
+      p = i(4118),
       h = i(488),
       g = i(21),
       C = i(119),
@@ -543831,7 +543884,7 @@
     ((t.LostAndFoundDialog = T),
       o.classImplementsInterfaces(T, "ICollectableRendererList"));
     var S = i(78),
-      A = i(4118),
+      A = i(4119),
       L = i(36);
   },
   function (e, t, i) {
@@ -543862,9 +543915,9 @@
       a = i(2),
       s = i(3),
       r = i(3),
-      l = i(4119),
+      l = i(4120),
       c = i(30),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(27),
       h = i(76),
@@ -544765,8 +544818,8 @@
       k = i(128),
       U = i(102),
       G = i(63),
-      H = i(4122),
-      j = i(4123),
+      H = i(4123),
+      j = i(4124),
       W = i(1),
       Y = i(144);
   },
@@ -545022,7 +545075,7 @@
     var n = i(0),
       o = i(1),
       a = i(55),
-      s = i(4125),
+      s = i(4126),
       r = i(87),
       l = (function (e) {
         function ABGRankingPanelButton() {
@@ -545664,7 +545717,7 @@
       f = i(92),
       E = i(15),
       O = i(4),
-      y = i(4129),
+      y = i(4130),
       b = i(174);
   },
   function (e, t, i) {
@@ -545756,7 +545809,7 @@
       d = i(4),
       p = i(814),
       h = i(928),
-      g = i(4131),
+      g = i(4132),
       C = createjs.Event,
       _ = (function (e) {
         function CastleTaxComponent(t) {
@@ -546759,7 +546812,7 @@
     t.FactionCampsPanelButton = l;
     var c = i(17),
       u = i(14),
-      d = i(4138);
+      d = i(4139);
     o.classImplementsInterfaces(l, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -547750,7 +547803,7 @@
     var n = i(0),
       o = i(1),
       a = i(3),
-      s = i(20),
+      s = i(19),
       r = i(92),
       l = i(271),
       c = i(87),
@@ -547950,7 +548003,7 @@
       a = i(2),
       s = i(5),
       r = i(3),
-      l = i(20),
+      l = i(19),
       c = i(40),
       u = i(164),
       d = i(37),
@@ -548133,7 +548186,7 @@
     t.ResourceIslandsPanelButton = l;
     var c = i(17),
       u = i(14),
-      d = i(4151);
+      d = i(4152);
     o.classImplementsInterfaces(l, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -548706,7 +548759,7 @@
       o = i(1),
       a = i(5),
       s = i(5),
-      r = i(20),
+      r = i(19),
       l = i(1079),
       c = i(1763),
       u = i(26),
@@ -548971,7 +549024,7 @@
     var p = i(17),
       h = i(14),
       g = i(1298),
-      C = i(4155);
+      C = i(4156);
     o.classImplementsInterfaces(d, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -549301,7 +549354,7 @@
       })(a.APanelButton);
     t.SeasonOverviewPanelButton = s;
     var r = i(14),
-      l = i(4161);
+      l = i(4162);
     o.classImplementsInterfaces(s, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -549635,15 +549688,15 @@
       s = i(1),
       r = i(5),
       l = i(6),
-      c = i(20),
-      u = i(4164),
+      c = i(19),
+      u = i(4165),
       d = i(71),
       p = i(92),
       h = i(15),
       g = i(4),
       C = i(452),
       _ = i(18),
-      m = i(4165),
+      m = i(4166),
       f = createjs.MouseEvent,
       E = (function (e) {
         function CastleBuildingListComponent(t, i) {
@@ -549825,11 +549878,11 @@
     t.CastleBuildingListComponent = E;
     var O = i(35),
       y = i(9),
-      b = i(4166),
+      b = i(4167),
       D = i(8),
       I = i(268),
       v = i(623),
-      T = i(4167);
+      T = i(4168);
   },
   function (e, t, i) {
     "use strict";
@@ -549890,7 +549943,7 @@
       a = i(1),
       s = i(3),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(4),
       u = (function (e) {
         function CastleCraneTeaserDialog() {
@@ -550363,7 +550416,7 @@
       a = i(5),
       s = i(3),
       r = i(3),
-      l = i(20),
+      l = i(19),
       c = i(40),
       u = i(609),
       d = i(137),
@@ -550645,7 +550698,7 @@
       a = i(2),
       s = i(1),
       r = i(5),
-      l = i(20),
+      l = i(19),
       c = i(71),
       u = i(90),
       d = i(123),
@@ -551101,7 +551154,7 @@
       u = i(466),
       d = i(848),
       p = i(673),
-      h = i(4171);
+      h = i(4172);
   },
   function (e, t, i) {
     "use strict";
@@ -551124,7 +551177,7 @@
       f = i(3),
       E = i(3),
       O = i(40),
-      y = i(4172),
+      y = i(4173),
       b = i(21),
       D = i(195),
       I = i(26),
@@ -551132,7 +551185,7 @@
       T = i(4),
       S = i(68),
       A = i(23),
-      L = i(4173),
+      L = i(4174),
       P = i(852),
       M = createjs.MovieClip,
       R = createjs.Container,
@@ -551719,7 +551772,7 @@
       c = i(466),
       u = i(848),
       d = i(673),
-      p = i(4175);
+      p = i(4176);
   },
   function (e, t, i) {
     "use strict";
@@ -551734,7 +551787,7 @@
       u = i(1),
       d = i(6),
       p = i(281),
-      h = i(4176),
+      h = i(4177),
       g = i(91),
       C = i(205),
       _ = i(1798),
@@ -552184,7 +552237,7 @@
     t.CastleSeasonMapScreen = T;
     var S = i(31),
       A = i(729),
-      L = i(4177),
+      L = i(4178),
       P = i(5);
   },
   function (e, t, i) {
@@ -552220,8 +552273,8 @@
       o = i(5),
       a = i(4),
       s = i(1300),
-      r = i(4178),
-      l = i(4182),
+      r = i(4179),
+      l = i(4183),
       c = (function (e) {
         function CastleSeasonMapRenderer() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -552339,10 +552392,10 @@
         );
       })(s.CastleBaseTreasureMapRenderer);
     t.CastleSeasonMapRenderer = c;
-    var u = i(4183),
+    var u = i(4184),
       d = i(1137),
-      p = i(4187),
-      h = i(4188);
+      p = i(4188),
+      h = i(4189);
   },
   function (e, t, i) {
     "use strict";
@@ -552350,9 +552403,9 @@
     var n = i(1),
       o = i(6),
       a = i(559),
-      s = i(4179),
-      r = i(4180),
-      l = i(4181),
+      s = i(4180),
+      r = i(4181),
+      l = i(4182),
       c = (function () {
         function CastleSeasonAppearanceItemComponent() {}
         return (
@@ -552567,8 +552620,8 @@
         );
       })(i(1137).CastleSeasonMapItemCreator);
     t.CastleSeaQueenSeasonMapItemCreator = a;
-    var s = i(4185),
-      r = i(4186);
+    var s = i(4186),
+      r = i(4187);
     o.classImplementsInterfaces(a, "ITreasureMapItemCreator");
   },
   function (e, t, i) {
@@ -552934,7 +552987,7 @@
       })(i(1137).CastleSeasonMapItemCreator);
     t.CastleUnderworldSeasonMapItemCreator = r;
     var l = i(1138),
-      c = i(4189),
+      c = i(4190),
       u = i(1873),
       d = i(1139);
     o.classImplementsInterfaces(r, "ITreasureMapItemCreator");
@@ -552970,7 +553023,7 @@
       })(i(1872).ObstacleSeasonMapScreenItem);
     t.ObstacleUnderworldSeasonMapScreenItem = r;
     var l = i(9),
-      c = i(4190);
+      c = i(4191);
     o.classImplementsInterfaces(
       r,
       "ITreasureMapItem",
@@ -553065,8 +553118,8 @@
         );
       })(i(550).ACastleLayoutStrategy);
     t.CastleLayoutStartScreen = c;
-    var u = i(4199),
-      d = i(4201),
+    var u = i(4200),
+      d = i(4202),
       p = i(1879);
   },
   function (e, t, i) {
@@ -553905,7 +553958,7 @@
       })(i(11).CastleExternalDialog);
     t.CastleAgeGateCheckDialog = _;
     var m = i(9),
-      f = i(4200),
+      f = i(4201),
       E = i(31);
     (u.classImplementsInterfaces(_, "ICollectableRendererList"),
       _.__initialize_static_members());
@@ -555019,7 +555072,7 @@
     t.CastleWorldmapBookmarkListDialog = m;
     var f = i(83),
       E = i(9),
-      O = i(4204);
+      O = i(4205);
     (o.classImplementsInterfaces(m, "ICollectableRendererList"),
       m.__initialize_static_members());
   },
@@ -555371,7 +555424,7 @@
       f = i(3),
       E = i(6),
       O = i(233),
-      y = i(20),
+      y = i(19),
       b = i(16),
       D = i(195),
       I = i(85),
@@ -555383,7 +555436,7 @@
       P = i(407),
       M = i(41),
       R = i(581),
-      V = i(4209),
+      V = i(4210),
       x = i(262),
       w = i(226),
       B = i(895),
@@ -556513,7 +556566,7 @@
       c = i(3),
       u = i(6),
       d = i(40),
-      p = i(4211),
+      p = i(4212),
       h = i(4),
       g = i(11),
       C = createjs.Point,
@@ -556736,7 +556789,7 @@
       s = i(1),
       r = i(1),
       l = i(4),
-      c = i(4214),
+      c = i(4215),
       u = (function (e) {
         function ButtonAlienRerollComponent(t) {
           return e.call(this, t) || this;
@@ -556834,7 +556887,7 @@
       })(i(143).ButtonBasicComponent);
     t.ButtonAlienRerollComponent = u;
     var d = i(9),
-      p = i(4215);
+      p = i(4216);
     s.classImplementsInterfaces(u, "IWorldMapObjectRingmenuButtonComponent");
   },
   function (e, t, i) {
@@ -556895,9 +556948,9 @@
       l = i(3),
       c = i(3),
       u = i(6),
-      d = i(4216),
+      d = i(4217),
       p = i(30),
-      h = i(19),
+      h = i(20),
       g = i(12),
       C = i(4),
       _ = i(8),
@@ -557293,8 +557346,8 @@
       y = i(42),
       b = i(9),
       D = i(24),
-      I = i(4217),
-      v = i(4220),
+      I = i(4218),
+      v = i(4221),
       T = i(36);
     a.classImplementsInterfaces(E, "ICollectableRendererList");
   },
@@ -557386,7 +557439,7 @@
         );
       })(i(11).CastleExternalDialog);
     t.CastleRerollAlienChancesDialog = r;
-    var l = i(4218),
+    var l = i(4219),
       c = i(36);
     o.classImplementsInterfaces(r, "ICollectableRendererList");
   },
@@ -557537,7 +557590,7 @@
       })(l.CastleItemRenderer);
     t.CastleRerollAlienChanceDialogList = d;
     var p = i(82),
-      h = i(4219);
+      h = i(4220);
     (o.classImplementsInterfaces(d, "ICollectableRendererList"),
       d.__initialize_static_members());
   },
@@ -557708,7 +557761,7 @@
       s = i(1),
       r = i(5),
       l = i(5),
-      c = i(20),
+      c = i(19),
       u = i(4),
       d = i(23),
       p = i(610),
@@ -557863,7 +557916,7 @@
       a = i(1),
       s = i(5),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(4),
       u = (function (e) {
         function ButtonAttackKingstowerComponent(t) {
@@ -558047,7 +558100,7 @@
       s = i(1),
       r = i(5),
       l = i(6),
-      c = i(20),
+      c = i(19),
       u = i(28),
       d = i(4),
       p = (function (e) {
@@ -558357,7 +558410,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(27),
       r = i(1884),
       l = (function (e) {
@@ -558514,7 +558567,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(4),
       r = i(513),
       l = (function (e) {
@@ -558586,10 +558639,10 @@
       a = i(5),
       s = i(5),
       r = i(6),
-      l = i(4231),
+      l = i(4232),
       c = i(4),
       u = i(756),
-      d = i(4232),
+      d = i(4233),
       p = (function (e) {
         function ButtonTauntComponent(t) {
           return e.call(this, t) || this;
@@ -558724,7 +558777,7 @@
     var h = i(9),
       g = i(757),
       C = i(1778),
-      _ = i(4233);
+      _ = i(4234);
     o.classImplementsInterfaces(p, "IWorldMapObjectRingmenuButtonComponent");
   },
   function (e, t, i) {
@@ -559340,7 +559393,7 @@
           }),
           WorldMapArmyAttackMenu
         );
-      })(i(4238).WorldMapMovementRingMenu);
+      })(i(4239).WorldMapMovementRingMenu);
     t.WorldMapArmyAttackMenu = u;
     var d = i(31),
       p = i(9),
@@ -559434,7 +559487,7 @@
     t.CastleLayoutWorldmapRelocation = o;
     var a = i(1880),
       s = i(516),
-      r = i(4240),
+      r = i(4241),
       l = i(848),
       c = i(1141);
   },
@@ -559444,7 +559497,7 @@
     var n = i(0),
       o = i(2),
       a = i(3),
-      s = i(20),
+      s = i(19),
       r = i(4),
       l = i(23),
       c = (function (e) {
@@ -559912,7 +559965,7 @@
         );
       })(r.CastlePanel);
     t.PopoverPanel = c;
-    var u = i(4244),
+    var u = i(4245),
       d = i(302);
   },
   function (e, t, i) {
@@ -559979,9 +560032,9 @@
         );
       })(i(88).CastleEnum);
     t.PopoverEnum = s;
-    var r = i(4245),
-      l = i(4246),
-      c = i(4247);
+    var r = i(4246),
+      l = i(4247),
+      c = i(4248);
     s.__initialize_static_members();
   },
   function (e, t, i) {
@@ -559990,7 +560043,7 @@
     var n = i(0),
       o = i(1),
       a = i(30),
-      s = i(19),
+      s = i(20),
       r = i(1887),
       l = createjs.Point,
       c = (function (e) {
@@ -560027,7 +560080,7 @@
     var n = i(0),
       o = i(1),
       a = i(30),
-      s = i(19),
+      s = i(20),
       r = i(1887),
       l = createjs.Point,
       c = (function (e) {
@@ -560383,7 +560436,7 @@
       o = i(1),
       a = i(3),
       s = i(65),
-      r = i(19),
+      r = i(20),
       l = i(665),
       c = createjs.Point,
       u = (function () {
@@ -562059,7 +562112,7 @@
     var n = i(0),
       o = i(2),
       a = i(258),
-      s = i(4278),
+      s = i(4279),
       r = (function (e) {
         function AttackScreenGeneralsTrackingCommand() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -562185,7 +562238,7 @@
     var n = i(0),
       o = i(2),
       a = i(258),
-      s = i(4280),
+      s = i(4281),
       r = (function (e) {
         function AttackScreenWaveTrackingCommand() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -562309,7 +562362,7 @@
       l = i(29),
       c = i(57),
       u = i(4),
-      d = i(4282),
+      d = i(4283),
       p = (function (e) {
         function CastleActivityBonusData(t) {
           var i = this;
@@ -562471,8 +562524,8 @@
       o = i(2),
       a = i(70),
       s = i(4),
-      r = i(4284),
-      l = i(4285),
+      r = i(4285),
+      l = i(4286),
       c = i(315),
       u = (function (e) {
         function CastleAllianceCrestData(t) {
@@ -562759,7 +562812,7 @@
   function (e, t, i) {
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
-    var n = i(4287),
+    var n = i(4288),
       o = (function () {
         function AllianceQuestData(e) {
           var t = this;
@@ -563160,7 +563213,7 @@
       o = i(1),
       a = i(4),
       s = i(342),
-      r = i(4289),
+      r = i(4290),
       l = (function (e) {
         function CastleAllianceInvasionCampData(t) {
           var i = e.call(this) || this;
@@ -563593,7 +563646,7 @@
     t.CastleBuddyListData = n;
     var o = i(1819),
       a = i(15),
-      s = i(4291);
+      s = i(4292);
     n.__initialize_static_members();
   },
   function (e, t, i) {
@@ -563635,7 +563688,7 @@
     var n = i(0),
       o = i(1),
       a = i(57),
-      s = i(4293),
+      s = i(4294),
       r = (function (e) {
         function CastleBuyLevelData(t) {
           var i = e.call(this) || this;
@@ -563718,7 +563771,7 @@
       r = i(586),
       l = i(57),
       c = i(4),
-      u = i(4295),
+      u = i(4296),
       d = (function (e) {
         function CastleChatData() {
           var t = this;
@@ -563898,11 +563951,11 @@
     var n = i(0),
       o = i(5),
       a = i(1445),
-      s = i(4298),
-      r = i(4299),
-      l = i(4300),
-      c = i(4301),
-      u = i(4302),
+      s = i(4299),
+      r = i(4300),
+      l = i(4301),
+      c = i(4302),
+      u = i(4303),
       d = i(535),
       p = i(90),
       h = i(70),
@@ -563910,8 +563963,8 @@
       C = i(4),
       _ = i(110),
       m = i(805),
-      f = i(4303),
-      E = i(4304),
+      f = i(4304),
+      E = i(4305),
       O = i(453),
       y = i(140),
       b = i(33),
@@ -564703,8 +564756,8 @@
       l = i(559),
       c = i(70),
       u = i(4),
-      d = i(4306),
-      p = i(4307),
+      d = i(4307),
+      p = i(4308),
       h = (function (e) {
         function CastleCrestSymbolData(t) {
           var i = e.call(this) || this;
@@ -565471,7 +565524,7 @@
     var o = i(2),
       a = i(5),
       s = i(6),
-      r = i(4313);
+      r = i(4314);
   },
   function (e, t, i) {
     "use strict";
@@ -565597,9 +565650,9 @@
         );
       })();
     t.CastleEffectsData = o;
-    var a = i(4315),
+    var a = i(4316),
       s = i(1229),
-      r = i(4316);
+      r = i(4317);
   },
   function (e, t, i) {
     "use strict";
@@ -565725,7 +565778,7 @@
     var n = i(0),
       o = i(1),
       a = i(5),
-      s = i(4318),
+      s = i(4319),
       r = (function (e) {
         function CastleFactionInvasionCampData(t) {
           var i = this;
@@ -565825,7 +565878,7 @@
       l = i(29),
       c = i(70),
       u = i(4),
-      d = i(4320),
+      d = i(4321),
       p = (function (e) {
         function CastleHighscoreData(t) {
           var i = e.call(this) || this;
@@ -566084,7 +566137,7 @@
       );
     })();
     t.HighscoreBonusVO = n;
-    var o = i(4321);
+    var o = i(4322);
   },
   function (e, t, i) {
     "use strict";
@@ -566123,7 +566176,7 @@
       o = i(1),
       a = i(57),
       s = i(4),
-      r = i(4323),
+      r = i(4324),
       l = (function (e) {
         function CastleLeaderBoardRewardsData(t) {
           var i = this;
@@ -566916,18 +566969,18 @@
     var o = i(5),
       a = i(6),
       s = i(28),
-      r = i(4325),
-      l = i(4326),
+      r = i(4326),
+      l = i(4327),
       c = i(522),
       u = i(29),
       d = i(15),
       p = i(4),
       h = i(110),
       g = i(140),
-      C = i(4327),
+      C = i(4328),
       _ = i(1469),
       m = i(22),
-      f = i(4333),
+      f = i(4334),
       E = i(1470),
       O = i(624),
       y = i(1895);
@@ -566977,7 +567030,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(676),
-      a = i(4328),
+      a = i(4329),
       s = (function (e) {
         function CastleLegendSkillTreeRoot(t) {
           return e.call(this, t) || this;
@@ -567014,7 +567067,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(676),
-      a = i(4329),
+      a = i(4330),
       s = (function (e) {
         function CastleLegendSkillTree(t) {
           return e.call(this, t) || this;
@@ -567051,10 +567104,10 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(676),
-      a = i(4330),
+      a = i(4331),
       s = i(624),
       r = i(1895),
-      l = i(4332),
+      l = i(4333),
       c = (function (e) {
         function CastleLegendSkillTier(t) {
           var i = e.call(this, t) || this;
@@ -567122,7 +567175,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(676),
-      a = i(4331),
+      a = i(4332),
       s = i(624),
       r = (function (e) {
         function CastleLegendSkillGroup(t) {
@@ -567323,11 +567376,11 @@
     var n = i(0),
       o = i(2),
       a = i(1),
-      s = i(4335),
+      s = i(4336),
       r = i(820),
       l = i(1640),
       c = i(57),
-      u = i(4336),
+      u = i(4337),
       d = i(1896),
       p = (function (e) {
         function CastleLootboxData(t) {
@@ -567472,10 +567525,10 @@
       o = i(2),
       a = i(1),
       s = i(57),
-      r = i(4337),
-      l = i(4338),
+      r = i(4338),
+      l = i(4339),
       c = i(1896),
-      u = i(4339),
+      u = i(4340),
       d = (function (e) {
         function CastleLootBoxDataXML(t) {
           var i = e.call(this) || this;
@@ -567983,8 +568036,8 @@
       );
     })();
     t.CastlePrimeDayData = n;
-    var o = i(4342),
-      a = i(4343);
+    var o = i(4343),
+      a = i(4344);
   },
   function (e, t, i) {
     "use strict";
@@ -568627,7 +568680,7 @@
       s = i(5),
       r = i(6),
       l = i(4),
-      c = i(4347);
+      c = i(4348);
   },
   function (e, t, i) {
     "use strict";
@@ -569573,7 +569626,7 @@
       l = i(13),
       c = i(47),
       u = i(4),
-      d = i(4356);
+      d = i(4357);
   },
   function (e, t, i) {
     "use strict";
@@ -569597,7 +569650,7 @@
   function (e, t, i) {
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
-    var n = i(4358),
+    var n = i(4359),
       o = (function () {
         function DivisionData(e) {
           var t = this;
@@ -569757,7 +569810,7 @@
       C = i(31),
       _ = i(9),
       m = i(17),
-      f = i(4360),
+      f = i(4361),
       E = i(4),
       O = i(1415),
       y = i(1105),
@@ -570110,23 +570163,23 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(2),
-      a = i(4362),
+      a = i(4363),
       s = i(22),
       r = i(184),
       l = i(70),
       c = i(4),
       u = i(33),
-      d = i(4363),
-      p = i(4364),
-      h = i(4365),
-      g = i(4366),
+      d = i(4364),
+      p = i(4365),
+      h = i(4366),
+      g = i(4367),
       C = i(1418),
-      _ = i(4367),
+      _ = i(4368),
       m = i(726),
       f = i(919),
-      E = i(4368),
-      O = i(4373),
-      y = i(4375),
+      E = i(4369),
+      O = i(4374),
+      y = i(4376),
       b = (function (e) {
         function GeneralsData() {
           var t = e.call(this) || this;
@@ -571017,7 +571070,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(677),
-      a = i(4369),
+      a = i(4370),
       s = (function (e) {
         function GeneralSkillTreeRoot(t) {
           return e.call(this, t) || this;
@@ -571054,7 +571107,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(677),
-      a = i(4370),
+      a = i(4371),
       s = (function (e) {
         function GeneralSkillTree(t) {
           var i = e.call(this, t) || this;
@@ -571106,7 +571159,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(677),
-      a = i(4371),
+      a = i(4372),
       s = (function (e) {
         function GeneralSkillTier(t) {
           var i = e.call(this, t) || this;
@@ -571150,7 +571203,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(677),
-      a = i(4372),
+      a = i(4373),
       s = (function (e) {
         function GeneralSkillGroup(t) {
           return e.call(this, t) || this;
@@ -571215,7 +571268,7 @@
       s = i(4),
       r = i(33),
       l = i(686),
-      c = i(4374),
+      c = i(4375),
       u = (function (e) {
         function GeneralSkillVO() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -571635,7 +571688,7 @@
     var n = i(0),
       o = i(1),
       a = i(57),
-      s = i(4378),
+      s = i(4379),
       r = (function (e) {
         function LevelUpData(t) {
           var i = this;
@@ -571742,7 +571795,7 @@
       a = i(32),
       s = i(15),
       r = i(342),
-      l = i(4380),
+      l = i(4381),
       c = (function (e) {
         function MightData(t) {
           var i = this;
@@ -572174,7 +572227,7 @@
       a = i(15),
       s = i(57),
       r = i(1886),
-      l = i(4384),
+      l = i(4385),
       c = (function (e) {
         function PopoverData() {
           var t = (null !== e && e.apply(this, arguments)) || this;
@@ -572278,14 +572331,14 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(5),
-      a = i(4386),
+      a = i(4387),
       s = i(1424),
-      r = i(4387),
+      r = i(4388),
       l = i(70),
       c = i(4),
-      u = i(4388),
-      d = i(4389),
-      p = i(4390),
+      u = i(4389),
+      d = i(4390),
+      p = i(4391),
       h = (function (e) {
         function RaidBossData(t) {
           var i = e.call(this) || this;
@@ -573077,7 +573130,7 @@
     var n = i(0),
       o = i(1),
       a = i(70),
-      s = i(4392),
+      s = i(4393),
       r = (function (e) {
         function GachaData() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -573275,7 +573328,7 @@
       o = i(6),
       a = i(552),
       s = i(4),
-      r = i(4394),
+      r = i(4395),
       l = (function (e) {
         function CastleStartUpBonusData(t) {
           var i = this;
@@ -573423,7 +573476,7 @@
     var n = i(0),
       o = i(1),
       a = i(57),
-      s = i(4396),
+      s = i(4397),
       r = (function (e) {
         function CastleXmlPropertyData(t) {
           var i = e.call(this) || this;
@@ -573521,161 +573574,161 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(233),
       o = i(13),
-      a = i(4398),
-      s = i(4399),
-      r = i(4407),
+      a = i(4399),
+      s = i(4400),
+      r = i(4408),
       l = i(138),
-      c = i(4408),
+      c = i(4409),
       u = i(260),
-      d = i(4409),
-      p = i(4410),
-      h = i(4412),
-      g = i(4416),
-      C = i(4420),
-      _ = i(4421),
-      m = i(4422),
+      d = i(4410),
+      p = i(4411),
+      h = i(4413),
+      g = i(4417),
+      C = i(4421),
+      _ = i(4422),
+      m = i(4423),
       f = i(1905),
-      E = i(4430),
-      O = i(4432),
-      y = i(4437),
-      b = i(4442),
-      D = i(4446),
-      I = i(4447),
-      v = i(4457),
-      T = i(4461),
-      S = i(4462),
-      A = i(4469),
-      L = i(4472),
-      P = i(4475),
-      M = i(4479),
+      E = i(4431),
+      O = i(4433),
+      y = i(4438),
+      b = i(4443),
+      D = i(4447),
+      I = i(4448),
+      v = i(4458),
+      T = i(4462),
+      S = i(4463),
+      A = i(4470),
+      L = i(4473),
+      P = i(4476),
+      M = i(4480),
       R = i(1007),
-      V = i(4480),
+      V = i(4481),
       x = i(208),
-      w = i(4481),
-      B = i(4485),
-      F = i(4486),
-      N = i(4488),
-      k = i(4494),
-      U = i(4495),
-      G = i(4496),
-      H = i(4497),
-      j = i(4498),
-      W = i(4499),
-      Y = i(4500),
-      K = i(4501),
-      z = i(4502),
-      q = i(4503),
-      X = i(4504),
-      Q = i(4509),
+      w = i(4482),
+      B = i(4486),
+      F = i(4487),
+      N = i(4489),
+      k = i(4495),
+      U = i(4496),
+      G = i(4497),
+      H = i(4498),
+      j = i(4499),
+      W = i(4500),
+      Y = i(4501),
+      K = i(4502),
+      z = i(4503),
+      q = i(4504),
+      X = i(4505),
+      Q = i(4510),
       J = i(1918),
-      Z = i(4531),
-      $ = i(4532),
-      ee = i(4536),
-      te = i(4537),
+      Z = i(4532),
+      $ = i(4533),
+      ee = i(4537),
+      te = i(4538),
       ie = i(826),
-      ne = i(4538),
-      oe = i(4541),
-      ae = i(4544),
-      se = i(4547),
-      re = i(4549),
-      le = i(4551),
-      ce = i(4554),
-      ue = i(4555),
-      de = i(4558),
-      pe = i(4561),
-      he = i(4564),
-      ge = i(4565),
-      Ce = i(4568),
-      _e = i(4572),
+      ne = i(4539),
+      oe = i(4542),
+      ae = i(4545),
+      se = i(4548),
+      re = i(4550),
+      le = i(4552),
+      ce = i(4555),
+      ue = i(4556),
+      de = i(4559),
+      pe = i(4562),
+      he = i(4565),
+      ge = i(4566),
+      Ce = i(4569),
+      _e = i(4573),
       me = i(1780),
-      fe = i(4576),
-      Ee = i(4581),
-      Oe = i(4582),
-      ye = i(4583),
-      be = i(4584),
-      De = i(4585),
-      Ie = i(4594),
-      ve = i(4595),
-      Te = i(4600),
-      Se = i(4601),
-      Ae = i(4602),
-      Le = i(4603),
-      Pe = i(4606),
+      fe = i(4577),
+      Ee = i(4582),
+      Oe = i(4583),
+      ye = i(4584),
+      be = i(4585),
+      De = i(4586),
+      Ie = i(4595),
+      ve = i(4596),
+      Te = i(4601),
+      Se = i(4602),
+      Ae = i(4603),
+      Le = i(4604),
+      Pe = i(4607),
       Me = i(782),
-      Re = i(4609),
-      Ve = i(4610),
+      Re = i(4610),
+      Ve = i(4611),
       xe = i(669),
       we = i(1443),
-      Be = i(4614),
-      Fe = i(4615),
-      Ne = i(4616),
-      ke = i(4617),
-      Ue = i(4618),
-      Ge = i(4619),
-      He = i(4620),
-      je = i(4621),
-      We = i(4622),
-      Ye = i(4623),
-      Ke = i(4624),
-      ze = i(4625),
-      qe = i(4626),
-      Xe = i(4627),
-      Qe = i(4628),
-      Je = i(4629),
-      Ze = i(4631),
-      $e = i(4632),
-      et = i(4633),
+      Be = i(4615),
+      Fe = i(4616),
+      Ne = i(4617),
+      ke = i(4618),
+      Ue = i(4619),
+      Ge = i(4620),
+      He = i(4621),
+      je = i(4622),
+      We = i(4623),
+      Ye = i(4624),
+      Ke = i(4625),
+      ze = i(4626),
+      qe = i(4627),
+      Xe = i(4628),
+      Qe = i(4629),
+      Je = i(4630),
+      Ze = i(4632),
+      $e = i(4633),
+      et = i(4634),
       tt = i(1930),
       it = i(406),
-      nt = i(4635),
+      nt = i(4636),
       ot = i(1153),
       at = i(1931),
-      st = i(4636),
-      rt = i(4637),
-      lt = i(4638),
-      ct = i(4639),
-      ut = i(4640),
-      dt = i(4641),
-      pt = i(4642),
-      ht = i(4643),
-      gt = i(4644),
+      st = i(4637),
+      rt = i(4638),
+      lt = i(4639),
+      ct = i(4640),
+      ut = i(4641),
+      dt = i(4642),
+      pt = i(4643),
+      ht = i(4644),
+      gt = i(4645),
       Ct = i(896),
-      _t = i(4645),
-      mt = i(4646),
-      ft = i(4647),
+      _t = i(4646),
+      mt = i(4647),
+      ft = i(4648),
       Et = i(1932),
       Ot = i(1882),
-      yt = i(4648),
-      bt = i(4649),
-      Dt = i(4650),
+      yt = i(4649),
+      bt = i(4650),
+      Dt = i(4651),
       It = i(900),
       vt = i(1256),
-      Tt = i(4651),
-      St = i(4652),
-      At = i(4653),
-      Lt = i(4654),
-      Pt = i(4655),
-      Mt = i(4656),
+      Tt = i(4652),
+      St = i(4653),
+      At = i(4654),
+      Lt = i(4655),
+      Pt = i(4656),
+      Mt = i(4657),
       Rt = i(121),
-      Vt = i(4657),
-      xt = i(4658),
-      wt = i(4659),
-      Bt = i(4660),
+      Vt = i(4658),
+      xt = i(4659),
+      wt = i(4660),
+      Bt = i(4661),
       Ft = i(1386),
-      Nt = i(4661),
-      kt = i(4662),
+      Nt = i(4662),
+      kt = i(4663),
       Ut = i(1154),
-      Gt = i(4663),
-      Ht = i(4664),
-      jt = i(4665),
-      Wt = i(4666),
+      Gt = i(4664),
+      Ht = i(4665),
+      jt = i(4666),
+      Wt = i(4667),
       Yt = i(918),
       Kt = i(383),
       zt = i(727),
       qt = i(922),
       Xt = i(888),
       Qt = i(1435),
-      Jt = i(4667),
+      Jt = i(4668),
       Zt = i(954),
       $t = i(497),
       ei = i(499),
@@ -574034,7 +574087,7 @@
         );
       })(r.AAlienInvasionEventVO);
     t.AllianceAlienInvasionEventVO = l;
-    var c = i(4405);
+    var c = i(4406);
     (o.classImplementsInterfaces(
       l,
       "IEventOverviewable",
@@ -574329,8 +574382,8 @@
         );
       })(i(108).CastleExternalSubLayerDialog);
     t.CastleAllianceAlienInvasionEventDialog = h;
-    var g = i(4401),
-      C = i(4403),
+    var g = i(4402),
+      C = i(4404),
       _ = i(291);
     o.classImplementsInterfaces(h, "ICollectableRendererList");
   },
@@ -574523,7 +574576,7 @@
       })(u.CastleAllianceAlienInvasionEventDialogSublayer);
     t.CastleAllianceAlienInvasionEventDialogAlliance = d;
     var p = i(34),
-      h = i(4402),
+      h = i(4403),
       g = i(335);
     o.classImplementsInterfaces(d, "ICollectableRendererList", "ISublayer");
   },
@@ -574791,7 +574844,7 @@
       })(c.CastleAllianceAlienInvasionEventDialogSublayer);
     t.CastleAllianceAlienInvasionEventDialogPlayer = u;
     var d = i(34),
-      p = i(4404),
+      p = i(4405),
       h = i(335),
       g = i(655);
     o.classImplementsInterfaces(u, "ICollectableRendererList", "ISublayer");
@@ -575018,7 +575071,7 @@
         );
       })(o.BasicProperties);
     t.CastleAllianceAlienInvasionEventDialogProperties = d;
-    var p = i(4406);
+    var p = i(4407);
     a.classImplementsInterfaces(d, "IAlienInvasionEventDialogProperties");
   },
   function (e, t, i) {
@@ -575942,7 +575995,7 @@
     ((t.AlliPaymentBonusEventVO = u),
       a.classImplementsInterfaces(u, "IEventOverviewable"));
     var d = i(9),
-      p = i(4411);
+      p = i(4412);
   },
   function (e, t, i) {
     "use strict";
@@ -576102,7 +576155,7 @@
     var n = i(0),
       o = i(1),
       a = i(5),
-      s = i(4413),
+      s = i(4414),
       r = i(4),
       l = i(395),
       c = (function (e) {
@@ -576203,7 +576256,7 @@
         );
       })(l.AScoreEventVO);
     t.AlliTournamentEventVO = c;
-    var u = i(4414),
+    var u = i(4415),
       d = i(288);
     (o.classImplementsInterfaces(
       c,
@@ -576238,7 +576291,7 @@
       r = i(3),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(387),
       p = i(244),
       h = i(494),
@@ -576553,7 +576606,7 @@
       D = i(1737),
       I = i(334),
       v = i(1903),
-      T = i(4415);
+      T = i(4416);
     (o.classImplementsInterfaces(
       y,
       "ICollectableRendererList",
@@ -576707,7 +576760,7 @@
       o = i(1),
       a = i(52),
       s = i(181),
-      r = i(4417),
+      r = i(4418),
       l = i(169),
       c = (function (e) {
         function ApprenticeSmithEventVO() {
@@ -576803,7 +576856,7 @@
       p = i(50),
       h = i(43),
       g = i(259),
-      C = i(4418),
+      C = i(4419),
       _ = (function (e) {
         function CastleApprenticeSmithEventDialog() {
           return e.call(this, CastleApprenticeSmithEventDialog.NAME) || this;
@@ -576890,7 +576943,7 @@
     var n = i(0),
       o = i(1),
       a = i(176),
-      s = i(4419),
+      s = i(4420),
       r = (function (e) {
         function ApprenticeSmithScrollItem(t) {
           return e.call(this, t) || this;
@@ -577196,7 +577249,7 @@
         );
       })(r.BuyPackagesEventVO);
     t.ArmorerEventVO = l;
-    var c = i(4423);
+    var c = i(4424);
     (o.classImplementsInterfaces(
       l,
       "IEventOverviewable",
@@ -577334,7 +577387,7 @@
         );
       })(c.CastleGenericMerchantDialog);
     t.CastleArmorerEventDialog = d;
-    var p = i(4424);
+    var p = i(4425);
     (o.classImplementsInterfaces(d, "ICollectableRendererList"),
       d.__initialize_static_members());
   },
@@ -577371,7 +577424,7 @@
         );
       })(a.AMerchantScrollItem);
     t.ArmorerMerchantScrollItem = s;
-    var r = i(4425);
+    var r = i(4426);
     o.classImplementsInterfaces(s, "MovieClip");
   },
   function (e, t, i) {
@@ -577422,7 +577475,7 @@
       u = i(4),
       d = i(27),
       p = i(825),
-      h = i(4427),
+      h = i(4428),
       g = createjs.Point,
       C = (function (e) {
         function CastleArtifactEventDialog() {
@@ -577618,7 +577671,7 @@
     var _ = i(397),
       m = i(11),
       f = i(1761),
-      E = i(4428);
+      E = i(4429);
     (a.classImplementsInterfaces(C, "ICollectableRendererList"),
       C.__initialize_static_members());
   },
@@ -577652,7 +577705,7 @@
       d = i(6),
       p = i(16),
       h = i(40),
-      g = i(4429),
+      g = i(4430),
       C = i(172),
       _ = i(26),
       m = i(4),
@@ -577949,7 +578002,7 @@
         );
       })(s.ASpecialEventVO);
     t.AwardrewardEventVO = r;
-    var l = i(4431);
+    var l = i(4432);
     (a.classImplementsInterfaces(r, "IEventOverviewable"),
       r.__initialize_static_members());
   },
@@ -578163,7 +578216,7 @@
       })(l.ALeagueTypeScoreEventVO);
     t.BeggingKnightsEventVO = c;
     var u = i(13),
-      d = i(4433);
+      d = i(4434);
     (o.classImplementsInterfaces(
       c,
       "IEventOverviewable",
@@ -578439,8 +578492,8 @@
     t.CastleBeggingKnightsDialog = I;
     var v = i(334),
       T = i(540),
-      S = i(4434),
-      A = i(4435);
+      S = i(4435),
+      A = i(4436);
     o.classImplementsInterfaces(I, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -578548,7 +578601,7 @@
       u = i(3),
       d = i(3),
       p = i(6),
-      h = i(4436),
+      h = i(4437),
       g = i(525),
       C = i(730),
       _ = i(26),
@@ -578865,7 +578918,7 @@
       a = i(1),
       s = i(5),
       r = i(3),
-      l = i(4438),
+      l = i(4439),
       c = i(4),
       u = i(80),
       d = (function (e) {
@@ -579021,7 +579074,7 @@
       h = i(13),
       g = i(9),
       C = i(38),
-      _ = i(4439),
+      _ = i(4440),
       m = i(149);
     (a.classImplementsInterfaces(d, "IEventOverviewable"),
       d.__initialize_static_members());
@@ -579057,7 +579110,7 @@
       p = i(25),
       h = i(25),
       g = i(40),
-      C = i(4440),
+      C = i(4441),
       _ = i(21),
       m = i(26),
       f = i(4),
@@ -579362,7 +579415,7 @@
       })(i(11).CastleExternalDialog);
     t.CastleBountyhunterEventDialog = b;
     var D = i(31),
-      I = i(4441);
+      I = i(4442);
     l.classImplementsInterfaces(b, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -579546,7 +579599,7 @@
       h = i(13),
       g = i(42),
       C = i(30),
-      _ = i(19),
+      _ = i(20),
       m = i(12),
       f = i(4),
       E = i(23),
@@ -579555,7 +579608,7 @@
       b = i(74),
       D = i(24),
       I = i(34),
-      v = i(4445),
+      v = i(4446),
       T = createjs.Point,
       S = (function (e) {
         function CollectEventDialogMain(t) {
@@ -579942,9 +579995,9 @@
       r = i(5),
       l = i(6),
       c = i(29),
-      u = i(4448),
+      u = i(4449),
       d = i(80),
-      p = i(4449),
+      p = i(4450),
       h = (function (e) {
         function ColossusEventVO() {
           var t = this;
@@ -580148,7 +580201,7 @@
         );
       })(d.ASpecialEventVO);
     t.ColossusEventVO = h;
-    var g = i(4450);
+    var g = i(4451);
     (a.classImplementsInterfaces(h, "IEventOverviewable"),
       h.__initialize_static_members());
   },
@@ -580242,9 +580295,9 @@
       y = i(8),
       b = i(11),
       D = i(101),
-      I = i(4451),
-      v = i(4452),
-      T = i(4453),
+      I = i(4452),
+      v = i(4453),
+      T = i(4454),
       S = createjs.MovieClip,
       A = (function (e) {
         function CastleColossusEventDialog() {
@@ -580531,7 +580584,7 @@
     var L = i(102),
       P = i(1908),
       M = i(1909),
-      R = i(4456),
+      R = i(4457),
       V = i(41);
     l.classImplementsInterfaces(A, "ICollectableRendererList");
   },
@@ -581119,8 +581172,8 @@
     var n = i(0),
       o = i(1),
       a = i(1),
-      s = i(20),
-      r = i(4458),
+      s = i(19),
+      r = i(4459),
       l = i(4),
       c = i(80),
       u = (function (e) {
@@ -581224,7 +581277,7 @@
         );
       })(c.ASpecialEventVO);
     t.ConstructionExpertEventVO = u;
-    var d = i(4459),
+    var d = i(4460),
       p = i(56);
     (o.classImplementsInterfaces(u, "IEventOverviewable"),
       u.__initialize_static_members());
@@ -581368,7 +581421,7 @@
         );
       })(i(11).CastleExternalDialog);
     t.CastleConstructionExpertEventDialog = d;
-    var p = i(4460);
+    var p = i(4461);
     (a.classImplementsInterfaces(d, "ICollectableRendererList"),
       d.__initialize_static_members());
   },
@@ -581868,12 +581921,12 @@
       c = i(3),
       u = i(25),
       d = i(53),
-      p = i(4465),
+      p = i(4466),
       h = i(1894),
       g = i(47),
       C = i(30),
       _ = i(65),
-      m = i(19),
+      m = i(20),
       f = i(12),
       E = i(4),
       O = i(1893),
@@ -581888,8 +581941,8 @@
       L = i(34),
       P = i(417),
       M = i(1910),
-      R = i(4466),
-      V = i(4467),
+      R = i(4467),
+      V = i(4468),
       x = createjs.Point,
       w = (function (e) {
         function DonationEventDialogDonate(t) {
@@ -582796,7 +582849,7 @@
       l = i(13),
       c = i(30),
       u = i(118),
-      d = i(19),
+      d = i(20),
       p = i(4),
       h = i(50),
       g = i(23),
@@ -583666,7 +583719,7 @@
     var n = i(0),
       o = i(1),
       a = i(48),
-      s = i(4473),
+      s = i(4474),
       r = i(4),
       l = i(303),
       c = (function (e) {
@@ -583722,7 +583775,7 @@
       })(i(80).ASpecialEventVO);
     t.EquipmentEnhancerPrimeSaleEventVO = c;
     var u = i(9),
-      d = i(4474);
+      d = i(4475);
     o.classImplementsInterfaces(c, "IEventOverviewable");
   },
   function (e, t, i) {
@@ -583978,7 +584031,7 @@
         );
       })(r.BuyPackagesEventVO);
     t.EquipmentMerchantEventVO = l;
-    var c = i(4476);
+    var c = i(4477);
     (o.classImplementsInterfaces(
       l,
       "IEventOverviewable",
@@ -584115,7 +584168,7 @@
         );
       })(p.CastleGenericMerchantDialog);
     t.CastleEquipmentMerchantEventDialog = h;
-    var g = i(4477);
+    var g = i(4478);
     a.classImplementsInterfaces(h, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -584155,7 +584208,7 @@
         );
       })(a.AMerchantScrollItem);
     t.EquipmentMerchantScrollItem = s;
-    var r = i(4478);
+    var r = i(4479);
     o.classImplementsInterfaces(s, "MovieClip");
   },
   function (e, t, i) {
@@ -584487,7 +584540,7 @@
         );
       })(s.UnitDealerEventVO);
     t.FactionHunterEventVO = r;
-    var l = i(4482);
+    var l = i(4483);
     (o.classImplementsInterfaces(
       r,
       "IEventOverviewable",
@@ -584587,7 +584640,7 @@
         );
       })(r.CastleFactionArmorerEventDialog);
     t.FactionHunterEventDialog = l;
-    var c = i(4483);
+    var c = i(4484);
     (o.classImplementsInterfaces(l, "ICollectableRendererList"),
       l.__initialize_static_members());
   },
@@ -584624,7 +584677,7 @@
         );
       })(a.FactionArmorerMerchantScrollItem);
     t.FactionHunterMerchantScrollItem = s;
-    var r = i(4484);
+    var r = i(4485);
     o.classImplementsInterfaces(s, "MovieClip");
   },
   function (e, t, i) {
@@ -585003,7 +585056,7 @@
     var n = i(0),
       o = i(1),
       a = i(6),
-      s = i(4487),
+      s = i(4488),
       r = i(80),
       l = (function (e) {
         function FameboosterEventVO() {
@@ -585318,7 +585371,7 @@
       s = i(25),
       r = i(25),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(24),
       d = createjs.Point,
       p = (function () {
@@ -585486,7 +585539,7 @@
       p = i(74),
       h = i(8),
       g = i(11),
-      C = i(4493),
+      C = i(4494),
       _ = (function (e) {
         function FortuneTellerEventRewardInfoDialog() {
           return e.call(this, FortuneTellerEventRewardInfoDialog.NAME) || this;
@@ -585610,7 +585663,7 @@
       s = i(6),
       r = i(13),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(4),
       d = i(14),
       p = i(76),
@@ -586919,7 +586972,7 @@
       A = i(9),
       L = i(286),
       P = i(18),
-      M = i(4508),
+      M = i(4509),
       R = i(141),
       V = i(134);
     o.classImplementsInterfaces(
@@ -587139,8 +587192,8 @@
       l = i(3),
       c = i(3),
       u = i(6),
-      d = i(4511),
-      p = i(4512),
+      d = i(4512),
+      p = i(4513),
       h = i(1919),
       g = i(1920),
       C = i(26),
@@ -587156,9 +587209,9 @@
       v = i(1921),
       T = i(1149),
       S = i(1148),
-      A = i(4525),
+      A = i(4526),
       L = i(1924),
-      P = i(4526),
+      P = i(4527),
       M = i(1925),
       R = i(25),
       V = (function (e) {
@@ -587542,7 +587595,7 @@
       c = i(3),
       u = i(6),
       d = i(8),
-      p = i(4514),
+      p = i(4515),
       h = createjs.Event,
       g = createjs.MouseEvent,
       C = createjs.TimerEvent,
@@ -587890,7 +587943,7 @@
       o = i(1),
       a = i(65),
       s = i(118),
-      r = i(19),
+      r = i(20),
       l = (function (e) {
         function JackpotPrizeDisplayComponent(t, i) {
           void 0 === i && (i = null);
@@ -588392,7 +588445,7 @@
       })(i(11).CastleExternalDialog);
     t.CastleLuckyWheelJackpotDialog = p;
     var h = i(13),
-      g = i(4517);
+      g = i(4518);
     a.classImplementsInterfaces(p, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -588408,7 +588461,7 @@
       u = i(6),
       d = i(25),
       p = i(30),
-      h = i(19),
+      h = i(20),
       g = (function (e) {
         function CastleLuckyWheelJackpotCard(t, i, n, o, a) {
           void 0 === a && (a = null);
@@ -589792,7 +589845,7 @@
     t.CastleLuckyWheelScrollItem = g;
     var C = i(192),
       _ = i(9),
-      m = i(4529);
+      m = i(4530);
     r.classImplementsInterfaces(g, "MovieClip");
   },
   function (e, t, i) {
@@ -590041,7 +590094,7 @@
         );
       })(r.BuyPackagesEventVO);
     t.NomadHunterEventVO = l;
-    var c = i(4533);
+    var c = i(4534);
     (o.classImplementsInterfaces(
       l,
       "IEventOverviewable",
@@ -590103,7 +590156,7 @@
         );
       })(s.CastleGenericMerchantDialog);
     t.CastleNomadHunterEventDialog = r;
-    var l = i(4534);
+    var l = i(4535);
     (o.classImplementsInterfaces(r, "ICollectableRendererList"),
       r.__initialize_static_members());
   },
@@ -590140,7 +590193,7 @@
         );
       })(a.AMerchantScrollItem);
     t.CastleNomadHunterEventScrollItem = s;
-    var r = i(4535);
+    var r = i(4536);
     o.classImplementsInterfaces(s, "MovieClip");
   },
   function (e, t, i) {
@@ -590308,7 +590361,7 @@
     var n = i(0),
       o = i(1),
       a = i(52),
-      s = i(4539),
+      s = i(4540),
       r = i(169),
       l = (function (e) {
         function PlagueEventVO() {
@@ -590412,7 +590465,7 @@
         );
       })(r.BuyPackagesEventVO);
     t.PlagueEventVO = l;
-    var c = i(4540);
+    var c = i(4541);
     (o.classImplementsInterfaces(
       l,
       "IEventOverviewable",
@@ -590746,7 +590799,7 @@
         );
       })(r.BuyPackagesEventVO);
     t.PlayerGiftMerchantEventVO = l;
-    var c = i(4542);
+    var c = i(4543);
     (o.classImplementsInterfaces(
       l,
       "IEventOverviewable",
@@ -590912,7 +590965,7 @@
     t.PlayerGiftMerchantDialog = p;
     var h = i(13),
       g = i(9),
-      C = i(4543);
+      C = i(4544);
     (o.classImplementsInterfaces(p, "ICollectableRendererList"),
       p.__initialize_static_members());
   },
@@ -591058,7 +591111,7 @@
         );
       })(s.APointEventTypeScoreEventVO);
     t.PointEventEventVO = r;
-    var l = i(4545);
+    var l = i(4546);
     (o.classImplementsInterfaces(
       r,
       "IEventOverviewable",
@@ -591343,7 +591396,7 @@
     var S = i(9),
       A = i(334),
       L = i(540),
-      P = i(4546);
+      P = i(4547);
     (r.classImplementsInterfaces(T, "ICollectableRendererList"),
       T.__initialize_static_members());
   },
@@ -591482,7 +591535,7 @@
         );
       })(i(80).ASpecialEventVO);
     t.PrimeAlliBonusEventVO = s;
-    var r = i(4548);
+    var r = i(4549);
     o.classImplementsInterfaces(s, "IEventOverviewable");
   },
   function (e, t, i) {
@@ -591643,7 +591696,7 @@
     var n = i(0),
       o = i(1),
       a = i(48),
-      s = i(4550),
+      s = i(4551),
       r = i(4),
       l = i(303),
       c = (function (e) {
@@ -591733,7 +591786,7 @@
     var n = i(0),
       o = i(1),
       a = i(48),
-      s = i(4552),
+      s = i(4553),
       r = i(4),
       l = i(303),
       c = (function (e) {
@@ -591786,7 +591839,7 @@
       })(i(80).ASpecialEventVO);
     t.PrimeSaleReviveAllEventVO = c;
     var u = i(9),
-      d = i(4553);
+      d = i(4554);
     o.classImplementsInterfaces(c, "IEventOverviewable");
   },
   function (e, t, i) {
@@ -591815,7 +591868,7 @@
       r = i(3),
       l = i(3),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(52),
       p = i(164),
       h = i(37),
@@ -592024,7 +592077,7 @@
       s = i(5),
       r = i(6),
       l = i(103),
-      c = i(4556),
+      c = i(4557),
       u = i(64),
       d = i(4),
       p = i(80),
@@ -592219,7 +592272,7 @@
     t.RandomdungeonEventVO = h;
     var g = i(127),
       C = i(1057),
-      _ = i(4557),
+      _ = i(4558),
       m = i(955);
     (a.classImplementsInterfaces(h, "IEventOverviewable"),
       h.__initialize_static_members());
@@ -592582,7 +592635,7 @@
         );
       })(r.AAlienInvasionEventVO);
     t.RedAllianceAlienInvasionEventVO = l;
-    var c = i(4559);
+    var c = i(4560);
     (o.classImplementsInterfaces(
       l,
       "IEventOverviewable",
@@ -592705,7 +592758,7 @@
         );
       })(o.BasicProperties);
     t.CastleRedAllianceAlienInvasionEventDialogProperties = d;
-    var p = i(4560);
+    var p = i(4561);
     a.classImplementsInterfaces(d, "IAlienInvasionEventDialogProperties");
   },
   function (e, t, i) {
@@ -592817,8 +592870,8 @@
       a = i(6),
       s = i(48),
       r = i(9),
-      l = i(4562),
-      c = i(4563),
+      l = i(4563),
+      c = i(4564),
       u = i(4),
       d = i(303),
       p = (function (e) {
@@ -593063,7 +593116,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(4566),
+      a = i(4567),
       s = i(80),
       r = (function (e) {
         function ResearchExpertEventVO() {
@@ -593120,7 +593173,7 @@
         );
       })(s.ASpecialEventVO);
     t.ResearchExpertEventVO = r;
-    var l = i(4567);
+    var l = i(4568);
     (o.classImplementsInterfaces(r, "IEventOverviewable"),
       r.__initialize_static_members());
   },
@@ -593289,7 +593342,7 @@
     var n = i(0),
       o = i(1),
       a = i(5),
-      s = i(4569),
+      s = i(4570),
       r = i(1148),
       l = i(4),
       c = i(50),
@@ -593441,8 +593494,8 @@
       C = i(1172),
       _ = i(1171),
       m = i(1921),
-      f = i(4570),
-      E = i(4571),
+      f = i(4571),
+      E = i(4572),
       O = (function (e) {
         function CastleLuckWheelSalesDaysDialog() {
           return e.call(this, CastleLuckWheelSalesDaysDialog.NAME) || this;
@@ -593766,7 +593819,7 @@
         );
       })(r.BuyPackagesEventVO);
     t.SamuraiHunterEventVO = l;
-    var c = i(4573);
+    var c = i(4574);
     (o.classImplementsInterfaces(
       l,
       "IEventOverviewable",
@@ -593874,7 +593927,7 @@
         );
       })(u.CastleGenericMerchantDialog);
     t.CastleSamuraiHunterEventDialog = d;
-    var p = i(4574);
+    var p = i(4575);
     (o.classImplementsInterfaces(d, "ICollectableRendererList"),
       d.__initialize_static_members());
   },
@@ -593911,7 +593964,7 @@
         );
       })(a.AMerchantScrollItem);
     t.CastleSamuraiHunterEventScrollItem = s;
-    var r = i(4575);
+    var r = i(4576);
     o.classImplementsInterfaces(s, "MovieClip");
   },
   function (e, t, i) {
@@ -594021,7 +594074,7 @@
         );
       })(r.ASeasonEventVO);
     t.SeaqueenEventVO = l;
-    var c = i(4578);
+    var c = i(4579);
     o.classImplementsInterfaces(
       l,
       "IEventOverviewable",
@@ -594237,7 +594290,7 @@
     t.CastleSeaQueenEventDialog = r;
     var l = i(13),
       c = i(75),
-      u = i(4579);
+      u = i(4580);
     (o.classImplementsInterfaces(r, "ICollectableRendererList"),
       r.__initialize_static_members());
   },
@@ -594274,7 +594327,7 @@
         );
       })(a.AMerchantScrollItem);
     t.CastleSeaQueenMerchantScrollItem = s;
-    var r = i(4580);
+    var r = i(4581);
     o.classImplementsInterfaces(s, "MovieClip");
   },
   function (e, t, i) {
@@ -595017,7 +595070,7 @@
       v = i(58),
       T = i(8),
       S = i(34),
-      A = i(4587),
+      A = i(4588),
       L = (function (e) {
         function CastleTemporaryServerEventDialogOverview(t) {
           var i = this;
@@ -595361,9 +595414,9 @@
       y = i(58),
       b = i(8),
       D = i(34),
-      I = i(4589),
-      v = i(4590),
-      T = i(4591),
+      I = i(4590),
+      v = i(4591),
+      T = i(4592),
       S = createjs.TimerEvent,
       A = i(36),
       L = i(129),
@@ -597001,7 +597054,7 @@
         );
       })(l.ASeasonEventVO);
     t.ThornkingEventVO = c;
-    var u = i(4596);
+    var u = i(4597);
     o.classImplementsInterfaces(
       c,
       "IEventOverviewable",
@@ -597126,7 +597179,7 @@
     t.CastleThornkingEventDialog = r;
     var l = i(13),
       c = i(75),
-      u = i(4598);
+      u = i(4599);
     (o.classImplementsInterfaces(r, "ICollectableRendererList"),
       r.__initialize_static_members());
   },
@@ -597175,7 +597228,7 @@
         );
       })(a.AMerchantScrollItem);
     t.CastleThornkingMerchantScrollItem = s;
-    var r = i(4599);
+    var r = i(4600);
     o.classImplementsInterfaces(s, "MovieClip");
   },
   function (e, t, i) {
@@ -597573,7 +597626,7 @@
         );
       })(l.ASpecialEventVO);
     t.TournamentEventVO = c;
-    var u = i(4604);
+    var u = i(4605);
     (o.classImplementsInterfaces(c, "IEventOverviewable"),
       c.__initialize_static_members());
   },
@@ -597583,10 +597636,10 @@
     var n = i(0),
       o = i(1),
       a = i(3),
-      s = i(20),
+      s = i(19),
       r = i(387),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(4),
       d = i(1902),
       p = createjs.Point,
@@ -597782,7 +597835,7 @@
       C = i(13),
       _ = i(24),
       m = i(1903),
-      f = i(4605);
+      f = i(4606);
     (o.classImplementsInterfaces(h, "ICollectableRendererList"),
       h.__initialize_static_members());
   },
@@ -597954,7 +598007,7 @@
         );
       })(r.ASeasonEventVO);
     t.UnderworldEventVO = l;
-    var c = i(4607);
+    var c = i(4608);
     o.classImplementsInterfaces(
       l,
       "IEventOverviewable",
@@ -598103,7 +598156,7 @@
     t.CastleUnderworldEventDialog = l;
     var c = i(13),
       u = i(75),
-      d = i(4608);
+      d = i(4609);
     (o.classImplementsInterfaces(l, "ICollectableRendererList"),
       l.__initialize_static_members());
   },
@@ -598252,7 +598305,7 @@
         );
       })(r.BuyPackagesEventVO);
     t.WishingWellCoinVendorEventVO = l;
-    var c = i(4611);
+    var c = i(4612);
     (o.classImplementsInterfaces(
       l,
       "IEventOverviewable",
@@ -598357,7 +598410,7 @@
     t.CastleWishingWellCoinVendorEventDialog = h;
     var g = i(13),
       C = i(42),
-      _ = i(4612);
+      _ = i(4613);
     (o.classImplementsInterfaces(h, "ICollectableRendererList"),
       h.__initialize_static_members());
   },
@@ -598412,7 +598465,7 @@
         );
       })(a.AMerchantScrollItem);
     t.CastleWishingWellCoinVendorScrollItem = r;
-    var l = i(4613);
+    var l = i(4614);
     o.classImplementsInterfaces(r, "MovieClip");
   },
   function (e, t, i) {
@@ -598613,7 +598666,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(353),
       r = (function (e) {
         function BarracksUnitVO() {
@@ -598645,7 +598698,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(186),
       r = (function (e) {
         function DworkshopUnitVO() {
@@ -598690,7 +598743,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(589),
       r = i(186),
       l = (function (e) {
@@ -598739,7 +598792,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(22),
       r = i(589),
       l = i(186),
@@ -598807,7 +598860,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(353),
       r = (function (e) {
         function EventunitUnitVO() {
@@ -598881,7 +598934,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(186),
       r = (function (e) {
         function SceatToolsUnitVO() {
@@ -598966,7 +599019,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(186),
       r = (function (e) {
         function WorkshopUnitVO() {
@@ -599234,7 +599287,7 @@
       c = i(5),
       u = i(6),
       d = i(4),
-      p = i(4630),
+      p = i(4631),
       h = i(554),
       g = i(1929),
       C = createjs.Point,
@@ -604535,9 +604588,9 @@
       a = i(1),
       s = i(6),
       r = i(16),
-      l = i(4669),
-      c = i(4670),
-      u = i(4671),
+      l = i(4670),
+      c = i(4671),
+      u = i(4672),
       d = i(22),
       p = i(678),
       h = i(47),
@@ -604549,11 +604602,11 @@
       E = i(110),
       O = i(140),
       y = i(33),
-      b = i(4672),
-      D = i(4675),
-      I = i(4676),
+      b = i(4673),
+      D = i(4676),
+      I = i(4677),
       v = i(432),
-      T = i(4677),
+      T = i(4678),
       S = (function (e) {
         function SubscriptionData(t) {
           var i = this;
@@ -605022,7 +605075,7 @@
     var n = i(15),
       o = i(432),
       a = i(1405),
-      s = i(4673),
+      s = i(4674),
       r = (function () {
         function AutoSellVO() {
           ((this._equipments = new a.AutoSellEquipmentsVO()),
@@ -605079,7 +605132,7 @@
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
-      o = i(4674),
+      o = i(4675),
       a = i(4),
       s = (function (e) {
         function AutoSellGemsVO() {
@@ -605860,7 +605913,7 @@
       })(a.BasicHandleServerErrorCommand);
     t.CastleHandleServerErrorCommand = I;
     var v = i(9),
-      T = i(4681),
+      T = i(4682),
       S = i(350),
       A = i(141),
       L = i(878),
@@ -605987,560 +606040,560 @@
       o = i(2),
       a = i(1),
       s = i(7),
-      r = i(4684),
-      l = i(4685),
-      c = i(4687),
-      u = i(4688),
-      d = i(4689),
-      p = i(4690),
-      h = i(4691),
-      g = i(4692),
-      C = i(4693),
-      _ = i(4694),
-      m = i(4695),
-      f = i(4696),
-      E = i(4699),
-      O = i(4702),
-      y = i(4703),
-      b = i(4704),
-      D = i(4705),
-      I = i(4706),
-      v = i(4707),
-      T = i(4708),
-      S = i(4709),
-      A = i(4710),
-      L = i(4711),
-      P = i(4712),
-      M = i(4713),
-      R = i(4714),
-      V = i(4715),
-      x = i(4716),
-      w = i(4717),
-      B = i(4718),
-      F = i(4719),
-      N = i(4721),
-      k = i(4723),
-      U = i(4724),
-      G = i(4725),
-      H = i(4726),
-      j = i(4727),
-      W = i(4728),
-      Y = i(4729),
-      K = i(4730),
-      z = i(4731),
-      q = i(4732),
-      X = i(4734),
-      Q = i(4735),
-      J = i(4736),
-      Z = i(4737),
-      $ = i(4738),
-      ee = i(4739),
-      te = i(4740),
-      ie = i(4741),
-      ne = i(4742),
-      oe = i(4743),
-      ae = i(4744),
-      se = i(4745),
-      re = i(4746),
-      le = i(4747),
-      ce = i(4748),
-      ue = i(4749),
-      de = i(4750),
-      pe = i(4751),
-      he = i(4752),
-      ge = i(4753),
-      Ce = i(4754),
-      _e = i(4755),
-      me = i(4756),
-      fe = i(4757),
-      Ee = i(4758),
-      Oe = i(4759),
-      ye = i(4760),
-      be = i(4761),
-      De = i(4762),
-      Ie = i(4763),
-      ve = i(4764),
-      Te = i(4765),
-      Se = i(4766),
-      Ae = i(4769),
-      Le = i(4770),
-      Pe = i(4771),
-      Me = i(4772),
-      Re = i(4773),
-      Ve = i(4774),
-      xe = i(4775),
-      we = i(4776),
-      Be = i(4777),
-      Fe = i(4778),
-      Ne = i(4779),
-      ke = i(4780),
-      Ue = i(4781),
-      Ge = i(4782),
-      He = i(4783),
-      je = i(4784),
-      We = i(4785),
-      Ye = i(4786),
-      Ke = i(4787),
-      ze = i(4788),
-      qe = i(4789),
-      Xe = i(4790),
-      Qe = i(4791),
-      Je = i(4792),
-      Ze = i(4793),
-      $e = i(4794),
-      et = i(4795),
-      tt = i(4796),
-      it = i(4797),
-      nt = i(4798),
-      ot = i(4799),
-      at = i(4800),
-      st = i(4805),
-      rt = i(4806),
-      lt = i(4807),
-      ct = i(4808),
-      ut = i(4809),
-      dt = i(4810),
-      pt = i(4811),
-      ht = i(4812),
-      gt = i(4813),
-      Ct = i(4814),
-      _t = i(4815),
-      mt = i(4816),
-      ft = i(4817),
-      Et = i(4818),
-      Ot = i(4819),
-      yt = i(4820),
-      bt = i(4821),
-      Dt = i(4822),
-      It = i(4823),
-      vt = i(4824),
-      Tt = i(4825),
-      St = i(4826),
-      At = i(4827),
-      Lt = i(4828),
-      Pt = i(4829),
-      Mt = i(4830),
-      Rt = i(4831),
-      Vt = i(4832),
-      xt = i(4833),
-      wt = i(4834),
-      Bt = i(4835),
-      Ft = i(4836),
-      Nt = i(4837),
-      kt = i(4838),
-      Ut = i(4839),
-      Gt = i(4840),
-      Ht = i(4841),
-      jt = i(4842),
-      Wt = i(4843),
-      Yt = i(4844),
-      Kt = i(4845),
-      zt = i(4846),
-      qt = i(4847),
-      Xt = i(4848),
-      Qt = i(4849),
-      Jt = i(4850),
-      Zt = i(4851),
-      $t = i(4852),
-      ei = i(4853),
-      ti = i(4854),
-      ii = i(4855),
-      ni = i(4856),
-      oi = i(4857),
-      ai = i(4858),
-      si = i(4859),
-      ri = i(4860),
-      li = i(4861),
-      ci = i(4862),
-      ui = i(4863),
-      di = i(4864),
-      pi = i(4865),
-      hi = i(4866),
-      gi = i(4867),
-      Ci = i(4868),
-      _i = i(4869),
-      mi = i(4870),
-      fi = i(4871),
-      Ei = i(4872),
-      Oi = i(4873),
-      yi = i(4874),
-      bi = i(4877),
-      Di = i(4878),
-      Ii = i(4879),
-      vi = i(4882),
-      Ti = i(4883),
-      Si = i(4884),
-      Ai = i(4885),
-      Li = i(4886),
-      Pi = i(4887),
-      Mi = i(4888),
-      Ri = i(4889),
-      Vi = i(4890),
-      xi = i(4891),
-      wi = i(4892),
-      Bi = i(4893),
-      Fi = i(4894),
-      Ni = i(4895),
-      ki = i(4896),
-      Ui = i(4897),
-      Gi = i(4898),
-      Hi = i(4899),
-      ji = i(4900),
-      Wi = i(4901),
-      Yi = i(4902),
-      Ki = i(4903),
-      zi = i(4904),
-      qi = i(4905),
-      Xi = i(4906),
-      Qi = i(4907),
-      Ji = i(4908),
-      Zi = i(4909),
-      $i = i(4910),
-      en = i(4911),
-      tn = i(4912),
-      nn = i(4913),
-      on = i(4914),
-      an = i(4915),
-      sn = i(4916),
-      rn = i(4917),
-      ln = i(4918),
-      cn = i(4919),
-      un = i(4920),
-      dn = i(4921),
-      pn = i(4922),
-      hn = i(4923),
-      gn = i(4924),
-      Cn = i(4925),
-      _n = i(4926),
-      mn = i(4927),
-      fn = i(4928),
-      En = i(4929),
-      On = i(4930),
-      yn = i(4931),
-      bn = i(4932),
-      Dn = i(4933),
-      In = i(4935),
-      vn = i(4936),
+      r = i(4685),
+      l = i(4686),
+      c = i(4688),
+      u = i(4689),
+      d = i(4690),
+      p = i(4691),
+      h = i(4692),
+      g = i(4693),
+      C = i(4694),
+      _ = i(4695),
+      m = i(4696),
+      f = i(4697),
+      E = i(4700),
+      O = i(4703),
+      y = i(4704),
+      b = i(4705),
+      D = i(4706),
+      I = i(4707),
+      v = i(4708),
+      T = i(4709),
+      S = i(4710),
+      A = i(4711),
+      L = i(4712),
+      P = i(4713),
+      M = i(4714),
+      R = i(4715),
+      V = i(4716),
+      x = i(4717),
+      w = i(4718),
+      B = i(4719),
+      F = i(4720),
+      N = i(4722),
+      k = i(4724),
+      U = i(4725),
+      G = i(4726),
+      H = i(4727),
+      j = i(4728),
+      W = i(4729),
+      Y = i(4730),
+      K = i(4731),
+      z = i(4732),
+      q = i(4733),
+      X = i(4735),
+      Q = i(4736),
+      J = i(4737),
+      Z = i(4738),
+      $ = i(4739),
+      ee = i(4740),
+      te = i(4741),
+      ie = i(4742),
+      ne = i(4743),
+      oe = i(4744),
+      ae = i(4745),
+      se = i(4746),
+      re = i(4747),
+      le = i(4748),
+      ce = i(4749),
+      ue = i(4750),
+      de = i(4751),
+      pe = i(4752),
+      he = i(4753),
+      ge = i(4754),
+      Ce = i(4755),
+      _e = i(4756),
+      me = i(4757),
+      fe = i(4758),
+      Ee = i(4759),
+      Oe = i(4760),
+      ye = i(4761),
+      be = i(4762),
+      De = i(4763),
+      Ie = i(4764),
+      ve = i(4765),
+      Te = i(4766),
+      Se = i(4767),
+      Ae = i(4770),
+      Le = i(4771),
+      Pe = i(4772),
+      Me = i(4773),
+      Re = i(4774),
+      Ve = i(4775),
+      xe = i(4776),
+      we = i(4777),
+      Be = i(4778),
+      Fe = i(4779),
+      Ne = i(4780),
+      ke = i(4781),
+      Ue = i(4782),
+      Ge = i(4783),
+      He = i(4784),
+      je = i(4785),
+      We = i(4786),
+      Ye = i(4787),
+      Ke = i(4788),
+      ze = i(4789),
+      qe = i(4790),
+      Xe = i(4791),
+      Qe = i(4792),
+      Je = i(4793),
+      Ze = i(4794),
+      $e = i(4795),
+      et = i(4796),
+      tt = i(4797),
+      it = i(4798),
+      nt = i(4799),
+      ot = i(4800),
+      at = i(4801),
+      st = i(4806),
+      rt = i(4807),
+      lt = i(4808),
+      ct = i(4809),
+      ut = i(4810),
+      dt = i(4811),
+      pt = i(4812),
+      ht = i(4813),
+      gt = i(4814),
+      Ct = i(4815),
+      _t = i(4816),
+      mt = i(4817),
+      ft = i(4818),
+      Et = i(4819),
+      Ot = i(4820),
+      yt = i(4821),
+      bt = i(4822),
+      Dt = i(4823),
+      It = i(4824),
+      vt = i(4825),
+      Tt = i(4826),
+      St = i(4827),
+      At = i(4828),
+      Lt = i(4829),
+      Pt = i(4830),
+      Mt = i(4831),
+      Rt = i(4832),
+      Vt = i(4833),
+      xt = i(4834),
+      wt = i(4835),
+      Bt = i(4836),
+      Ft = i(4837),
+      Nt = i(4838),
+      kt = i(4839),
+      Ut = i(4840),
+      Gt = i(4841),
+      Ht = i(4842),
+      jt = i(4843),
+      Wt = i(4844),
+      Yt = i(4845),
+      Kt = i(4846),
+      zt = i(4847),
+      qt = i(4848),
+      Xt = i(4849),
+      Qt = i(4850),
+      Jt = i(4851),
+      Zt = i(4852),
+      $t = i(4853),
+      ei = i(4854),
+      ti = i(4855),
+      ii = i(4856),
+      ni = i(4857),
+      oi = i(4858),
+      ai = i(4859),
+      si = i(4860),
+      ri = i(4861),
+      li = i(4862),
+      ci = i(4863),
+      ui = i(4864),
+      di = i(4865),
+      pi = i(4866),
+      hi = i(4867),
+      gi = i(4868),
+      Ci = i(4869),
+      _i = i(4870),
+      mi = i(4871),
+      fi = i(4872),
+      Ei = i(4873),
+      Oi = i(4874),
+      yi = i(4875),
+      bi = i(4878),
+      Di = i(4879),
+      Ii = i(4880),
+      vi = i(4883),
+      Ti = i(4884),
+      Si = i(4885),
+      Ai = i(4886),
+      Li = i(4887),
+      Pi = i(4888),
+      Mi = i(4889),
+      Ri = i(4890),
+      Vi = i(4891),
+      xi = i(4892),
+      wi = i(4893),
+      Bi = i(4894),
+      Fi = i(4895),
+      Ni = i(4896),
+      ki = i(4897),
+      Ui = i(4898),
+      Gi = i(4899),
+      Hi = i(4900),
+      ji = i(4901),
+      Wi = i(4902),
+      Yi = i(4903),
+      Ki = i(4904),
+      zi = i(4905),
+      qi = i(4906),
+      Xi = i(4907),
+      Qi = i(4908),
+      Ji = i(4909),
+      Zi = i(4910),
+      $i = i(4911),
+      en = i(4912),
+      tn = i(4913),
+      nn = i(4914),
+      on = i(4915),
+      an = i(4916),
+      sn = i(4917),
+      rn = i(4918),
+      ln = i(4919),
+      cn = i(4920),
+      un = i(4921),
+      dn = i(4922),
+      pn = i(4923),
+      hn = i(4924),
+      gn = i(4925),
+      Cn = i(4926),
+      _n = i(4927),
+      mn = i(4928),
+      fn = i(4929),
+      En = i(4930),
+      On = i(4931),
+      yn = i(4932),
+      bn = i(4933),
+      Dn = i(4934),
+      In = i(4936),
+      vn = i(4937),
       Tn = i(1578),
-      Sn = i(4937),
-      An = i(4938),
-      Ln = i(4939),
-      Pn = i(4940),
-      Mn = i(4941),
-      Rn = i(4942),
-      Vn = i(4943),
-      xn = i(4944),
-      wn = i(4945),
-      Bn = i(4946),
-      Fn = i(4947),
-      Nn = i(4948),
-      kn = i(4949),
-      Un = i(4950),
-      Gn = i(4952),
-      Hn = i(4953),
-      jn = i(4954),
-      Wn = i(4955),
-      Yn = i(4959),
-      Kn = i(4960),
-      zn = i(4961),
-      qn = i(4962),
-      Xn = i(4963),
-      Qn = i(4964),
-      Jn = i(4965),
-      Zn = i(4966),
-      $n = i(4967),
-      eo = i(4968),
-      to = i(4969),
-      io = i(4970),
-      no = i(4971),
-      oo = i(4972),
-      ao = i(4973),
-      so = i(4974),
-      ro = i(4975),
-      lo = i(4976),
-      co = i(4977),
-      uo = i(4978),
-      po = i(4979),
-      ho = i(4980),
-      go = i(4981),
-      Co = i(4982),
-      _o = i(4983),
-      mo = i(4984),
-      fo = i(4985),
-      Eo = i(4986),
-      Oo = i(4987),
-      yo = i(4988),
-      bo = i(4989),
-      Do = i(4990),
-      Io = i(4991),
-      vo = i(4992),
-      To = i(4993),
-      So = i(4994),
-      Ao = i(4997),
-      Lo = i(4998),
-      Po = i(4999),
-      Mo = i(5e3),
-      Ro = i(5001),
-      Vo = i(5002),
-      xo = i(5003),
-      wo = i(5004),
-      Bo = i(5005),
-      Fo = i(5006),
-      No = i(5007),
-      ko = i(5008),
-      Uo = i(5009),
-      Go = i(5010),
-      Ho = i(5011),
-      jo = i(5012),
-      Wo = i(5013),
-      Yo = i(5014),
-      Ko = i(5015),
-      zo = i(5016),
-      qo = i(5017),
-      Xo = i(5018),
-      Qo = i(5019),
-      Jo = i(5020),
-      Zo = i(5021),
-      $o = i(5022),
-      ea = i(5023),
-      ta = i(5024),
-      ia = i(5025),
-      na = i(5026),
-      oa = i(5027),
-      aa = i(5028),
-      sa = i(5029),
-      ra = i(5030),
-      la = i(5031),
-      ca = i(5032),
-      ua = i(5033),
-      da = i(5034),
-      pa = i(5035),
-      ha = i(5036),
-      ga = i(5039),
-      Ca = i(5041),
-      _a = i(5042),
-      ma = i(5043),
-      fa = i(5044),
-      Ea = i(5045),
-      Oa = i(5046),
-      ya = i(5047),
-      ba = i(5049),
-      Da = i(5050),
-      Ia = i(5051),
-      va = i(5052),
-      Ta = i(5053),
-      Sa = i(5054),
-      Aa = i(5055),
-      La = i(5056),
-      Pa = i(5057),
-      Ma = i(5058),
-      Ra = i(5059),
-      Va = i(5060),
-      xa = i(5061),
-      wa = i(5062),
-      Ba = i(5063),
-      Fa = i(5064),
-      Na = i(5065),
-      ka = i(5066),
-      Ua = i(5072),
-      Ga = i(5073),
-      Ha = i(5074),
-      ja = i(5075),
-      Wa = i(5077),
-      Ya = i(5078),
-      Ka = i(5079),
-      za = i(5080),
-      qa = i(5081),
-      Xa = i(5082),
-      Qa = i(5083),
-      Ja = i(5084),
-      Za = i(5085),
-      $a = i(5086),
-      es = i(5087),
-      ts = i(5088),
-      is = i(5089),
-      ns = i(5090),
-      os = i(5091),
-      as = i(5093),
-      ss = i(5094),
-      rs = i(5095),
-      ls = i(5096),
-      cs = i(5097),
-      us = i(5098),
-      ds = i(5099),
-      ps = i(5100),
-      hs = i(5101),
-      gs = i(5102),
-      Cs = i(5103),
-      _s = i(5104),
-      ms = i(5105),
-      fs = i(5106),
-      Es = i(5107),
-      Os = i(5108),
-      ys = i(5109),
-      bs = i(5110),
-      Ds = i(5111),
-      Is = i(5112),
-      vs = i(5113),
-      Ts = i(5114),
-      Ss = i(5115),
-      As = i(5116),
-      Ls = i(5117),
-      Ps = i(5118),
-      Ms = i(5119),
-      Rs = i(5120),
-      Vs = i(5121),
-      xs = i(5122),
-      ws = i(5123),
-      Bs = i(5124),
-      Fs = i(5125),
-      Ns = i(5126),
-      ks = i(5127),
-      Us = i(5128),
-      Gs = i(5129),
-      Hs = i(5130),
-      js = i(5131),
-      Ws = i(5132),
-      Ys = i(5133),
-      Ks = i(5134),
-      zs = i(5135),
-      qs = i(5136),
-      Xs = i(5137),
-      Qs = i(5140),
-      Js = i(5141),
-      Zs = i(5142),
-      $s = i(5143),
-      er = i(5144),
-      tr = i(5145),
-      ir = i(5146),
-      nr = i(5147),
-      or = i(5150),
-      ar = i(5151),
-      sr = i(5154),
-      rr = i(5155),
-      lr = i(5156),
-      cr = i(5157),
-      ur = i(5158),
-      dr = i(5159),
-      pr = i(5160),
-      hr = i(5161),
-      gr = i(5162),
-      Cr = i(5163),
-      _r = i(5164),
-      mr = i(5165),
-      fr = i(5166),
-      Er = i(5167),
-      Or = i(5168),
-      yr = i(5169),
-      br = i(5170),
-      Dr = i(5171),
-      Ir = i(5172),
-      vr = i(5173),
-      Tr = i(5174),
-      Sr = i(5175),
-      Ar = i(5176),
-      Lr = i(5177),
-      Pr = i(5178),
-      Mr = i(5179),
-      Rr = i(5180),
-      Vr = i(5181),
-      xr = i(5182),
-      wr = i(5183),
-      Br = i(5184),
-      Fr = i(5185),
-      Nr = i(5186),
-      kr = i(5187),
-      Ur = i(5192),
-      Gr = i(5193),
-      Hr = i(5194),
-      jr = i(5195),
-      Wr = i(5196),
-      Yr = i(5197),
-      Kr = i(5198),
-      zr = i(5199),
-      qr = i(5200),
-      Xr = i(5203),
-      Qr = i(5204),
-      Jr = i(5205),
-      Zr = i(5206),
-      $r = i(5207),
-      el = i(5209),
-      tl = i(5210),
-      il = i(5211),
-      nl = i(5212),
-      ol = i(5213),
-      al = i(5214),
-      sl = i(5215),
-      rl = i(5216),
-      ll = i(5217),
-      cl = i(5218),
-      ul = i(5219),
-      dl = i(5220),
-      pl = i(5221),
-      hl = i(5222),
-      gl = i(5223),
-      Cl = i(5227),
-      _l = i(5228),
-      ml = i(5229),
-      fl = i(5230),
-      El = i(5231),
-      Ol = i(5232),
-      yl = i(5233),
-      bl = i(5234),
-      Dl = i(5235),
-      Il = i(5237),
-      vl = i(5238),
-      Tl = i(5239),
-      Sl = i(5240),
-      Al = i(5241),
-      Ll = i(5242),
-      Pl = i(5243),
-      Ml = i(5244),
-      Rl = i(5245),
-      Vl = i(5246),
-      xl = i(5247),
-      wl = i(5248),
-      Bl = i(5249),
-      Fl = i(5250),
-      Nl = i(5251),
-      kl = i(5252),
-      Ul = i(5253),
-      Gl = i(5254),
-      Hl = i(5256),
-      jl = i(5257),
-      Wl = i(5258),
-      Yl = i(5259),
-      Kl = i(5260),
-      zl = i(5261),
-      ql = i(5262),
-      Xl = i(5263),
-      Ql = i(5264),
-      Jl = i(5265),
-      Zl = i(5266),
-      $l = i(5267),
-      ec = i(5268),
-      tc = i(5269),
-      ic = i(5270),
-      nc = i(5274),
+      Sn = i(4938),
+      An = i(4939),
+      Ln = i(4940),
+      Pn = i(4941),
+      Mn = i(4942),
+      Rn = i(4943),
+      Vn = i(4944),
+      xn = i(4945),
+      wn = i(4946),
+      Bn = i(4947),
+      Fn = i(4948),
+      Nn = i(4949),
+      kn = i(4950),
+      Un = i(4951),
+      Gn = i(4953),
+      Hn = i(4954),
+      jn = i(4955),
+      Wn = i(4956),
+      Yn = i(4960),
+      Kn = i(4961),
+      zn = i(4962),
+      qn = i(4963),
+      Xn = i(4964),
+      Qn = i(4965),
+      Jn = i(4966),
+      Zn = i(4967),
+      $n = i(4968),
+      eo = i(4969),
+      to = i(4970),
+      io = i(4971),
+      no = i(4972),
+      oo = i(4973),
+      ao = i(4974),
+      so = i(4975),
+      ro = i(4976),
+      lo = i(4977),
+      co = i(4978),
+      uo = i(4979),
+      po = i(4980),
+      ho = i(4981),
+      go = i(4982),
+      Co = i(4983),
+      _o = i(4984),
+      mo = i(4985),
+      fo = i(4986),
+      Eo = i(4987),
+      Oo = i(4988),
+      yo = i(4989),
+      bo = i(4990),
+      Do = i(4991),
+      Io = i(4992),
+      vo = i(4993),
+      To = i(4994),
+      So = i(4995),
+      Ao = i(4998),
+      Lo = i(4999),
+      Po = i(5e3),
+      Mo = i(5001),
+      Ro = i(5002),
+      Vo = i(5003),
+      xo = i(5004),
+      wo = i(5005),
+      Bo = i(5006),
+      Fo = i(5007),
+      No = i(5008),
+      ko = i(5009),
+      Uo = i(5010),
+      Go = i(5011),
+      Ho = i(5012),
+      jo = i(5013),
+      Wo = i(5014),
+      Yo = i(5015),
+      Ko = i(5016),
+      zo = i(5017),
+      qo = i(5018),
+      Xo = i(5019),
+      Qo = i(5020),
+      Jo = i(5021),
+      Zo = i(5022),
+      $o = i(5023),
+      ea = i(5024),
+      ta = i(5025),
+      ia = i(5026),
+      na = i(5027),
+      oa = i(5028),
+      aa = i(5029),
+      sa = i(5030),
+      ra = i(5031),
+      la = i(5032),
+      ca = i(5033),
+      ua = i(5034),
+      da = i(5035),
+      pa = i(5036),
+      ha = i(5037),
+      ga = i(5040),
+      Ca = i(5042),
+      _a = i(5043),
+      ma = i(5044),
+      fa = i(5045),
+      Ea = i(5046),
+      Oa = i(5047),
+      ya = i(5048),
+      ba = i(5050),
+      Da = i(5051),
+      Ia = i(5052),
+      va = i(5053),
+      Ta = i(5054),
+      Sa = i(5055),
+      Aa = i(5056),
+      La = i(5057),
+      Pa = i(5058),
+      Ma = i(5059),
+      Ra = i(5060),
+      Va = i(5061),
+      xa = i(5062),
+      wa = i(5063),
+      Ba = i(5064),
+      Fa = i(5065),
+      Na = i(5066),
+      ka = i(5067),
+      Ua = i(5073),
+      Ga = i(5074),
+      Ha = i(5075),
+      ja = i(5076),
+      Wa = i(5078),
+      Ya = i(5079),
+      Ka = i(5080),
+      za = i(5081),
+      qa = i(5082),
+      Xa = i(5083),
+      Qa = i(5084),
+      Ja = i(5085),
+      Za = i(5086),
+      $a = i(5087),
+      es = i(5088),
+      ts = i(5089),
+      is = i(5090),
+      ns = i(5091),
+      os = i(5092),
+      as = i(5094),
+      ss = i(5095),
+      rs = i(5096),
+      ls = i(5097),
+      cs = i(5098),
+      us = i(5099),
+      ds = i(5100),
+      ps = i(5101),
+      hs = i(5102),
+      gs = i(5103),
+      Cs = i(5104),
+      _s = i(5105),
+      ms = i(5106),
+      fs = i(5107),
+      Es = i(5108),
+      Os = i(5109),
+      ys = i(5110),
+      bs = i(5111),
+      Ds = i(5112),
+      Is = i(5113),
+      vs = i(5114),
+      Ts = i(5115),
+      Ss = i(5116),
+      As = i(5117),
+      Ls = i(5118),
+      Ps = i(5119),
+      Ms = i(5120),
+      Rs = i(5121),
+      Vs = i(5122),
+      xs = i(5123),
+      ws = i(5124),
+      Bs = i(5125),
+      Fs = i(5126),
+      Ns = i(5127),
+      ks = i(5128),
+      Us = i(5129),
+      Gs = i(5130),
+      Hs = i(5131),
+      js = i(5132),
+      Ws = i(5133),
+      Ys = i(5134),
+      Ks = i(5135),
+      zs = i(5136),
+      qs = i(5137),
+      Xs = i(5138),
+      Qs = i(5141),
+      Js = i(5142),
+      Zs = i(5143),
+      $s = i(5144),
+      er = i(5145),
+      tr = i(5146),
+      ir = i(5147),
+      nr = i(5148),
+      or = i(5151),
+      ar = i(5152),
+      sr = i(5155),
+      rr = i(5156),
+      lr = i(5157),
+      cr = i(5158),
+      ur = i(5159),
+      dr = i(5160),
+      pr = i(5161),
+      hr = i(5162),
+      gr = i(5163),
+      Cr = i(5164),
+      _r = i(5165),
+      mr = i(5166),
+      fr = i(5167),
+      Er = i(5168),
+      Or = i(5169),
+      yr = i(5170),
+      br = i(5171),
+      Dr = i(5172),
+      Ir = i(5173),
+      vr = i(5174),
+      Tr = i(5175),
+      Sr = i(5176),
+      Ar = i(5177),
+      Lr = i(5178),
+      Pr = i(5179),
+      Mr = i(5180),
+      Rr = i(5181),
+      Vr = i(5182),
+      xr = i(5183),
+      wr = i(5184),
+      Br = i(5185),
+      Fr = i(5186),
+      Nr = i(5187),
+      kr = i(5188),
+      Ur = i(5193),
+      Gr = i(5194),
+      Hr = i(5195),
+      jr = i(5196),
+      Wr = i(5197),
+      Yr = i(5198),
+      Kr = i(5199),
+      zr = i(5200),
+      qr = i(5201),
+      Xr = i(5204),
+      Qr = i(5205),
+      Jr = i(5206),
+      Zr = i(5207),
+      $r = i(5208),
+      el = i(5210),
+      tl = i(5211),
+      il = i(5212),
+      nl = i(5213),
+      ol = i(5214),
+      al = i(5215),
+      sl = i(5216),
+      rl = i(5217),
+      ll = i(5218),
+      cl = i(5219),
+      ul = i(5220),
+      dl = i(5221),
+      pl = i(5222),
+      hl = i(5223),
+      gl = i(5224),
+      Cl = i(5228),
+      _l = i(5229),
+      ml = i(5230),
+      fl = i(5231),
+      El = i(5232),
+      Ol = i(5233),
+      yl = i(5234),
+      bl = i(5235),
+      Dl = i(5236),
+      Il = i(5238),
+      vl = i(5239),
+      Tl = i(5240),
+      Sl = i(5241),
+      Al = i(5242),
+      Ll = i(5243),
+      Pl = i(5244),
+      Ml = i(5245),
+      Rl = i(5246),
+      Vl = i(5247),
+      xl = i(5248),
+      wl = i(5249),
+      Bl = i(5250),
+      Fl = i(5251),
+      Nl = i(5252),
+      kl = i(5253),
+      Ul = i(5254),
+      Gl = i(5255),
+      Hl = i(5257),
+      jl = i(5258),
+      Wl = i(5259),
+      Yl = i(5260),
+      Kl = i(5261),
+      zl = i(5262),
+      ql = i(5263),
+      Xl = i(5264),
+      Ql = i(5265),
+      Jl = i(5266),
+      Zl = i(5267),
+      $l = i(5268),
+      ec = i(5269),
+      tc = i(5270),
+      ic = i(5271),
+      nc = i(5275),
       oc = i(1160),
-      ac = i(5275),
-      sc = i(5276),
-      rc = i(5277),
-      lc = i(5278),
-      cc = i(5279),
-      uc = i(5317),
-      dc = i(5318),
-      pc = i(5319),
-      hc = i(5320),
-      gc = i(5321),
-      Cc = i(5322),
-      _c = i(5323),
-      mc = i(5324),
-      fc = i(5325),
-      Ec = i(5326),
-      Oc = i(5327),
-      yc = i(5328),
-      bc = i(5329),
+      ac = i(5276),
+      sc = i(5277),
+      rc = i(5278),
+      lc = i(5279),
+      cc = i(5280),
+      uc = i(5318),
+      dc = i(5319),
+      pc = i(5320),
+      hc = i(5321),
+      gc = i(5322),
+      Cc = i(5323),
+      _c = i(5324),
+      mc = i(5325),
+      fc = i(5326),
+      Ec = i(5327),
+      Oc = i(5328),
+      yc = i(5329),
+      bc = i(5330),
       Dc = (function (e) {
         function CastleInitServerCommands() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -608393,7 +608446,7 @@
     t.CastleSPLCommand = b;
     var D = i(9),
       I = i(17),
-      v = i(4686),
+      v = i(4687),
       T = i(1936);
     b.__initialize_static_members();
   },
@@ -608860,7 +608913,7 @@
     var n = i(0),
       o = i(1),
       a = i(5),
-      s = i(20),
+      s = i(19),
       r = i(7),
       l = i(10),
       c = (function (e) {
@@ -609105,7 +609158,7 @@
       a = i(5),
       s = i(6),
       r = i(7),
-      l = i(4697),
+      l = i(4698),
       c = i(10),
       u = (function (e) {
         function LCBCommand() {
@@ -609145,7 +609198,7 @@
       })(c.CastleCommand);
     t.LCBCommand = u;
     var d = i(9),
-      p = i(4698);
+      p = i(4699);
     o.classImplementsInterfaces(u, "IExecCommand");
   },
   function (e, t, i) {
@@ -609267,8 +609320,8 @@
       b = i(437),
       D = i(4),
       I = i(1935),
-      v = i(4700),
-      T = i(4701),
+      v = i(4701),
+      T = i(4702),
       S = i(1936),
       A = i(10),
       L = (function (e) {
@@ -610011,7 +610064,7 @@
     var n = i(0),
       o = i(2),
       a = i(5),
-      s = i(20),
+      s = i(19),
       r = i(293),
       l = i(4),
       c = (function (e) {
@@ -610807,7 +610860,7 @@
       s = i(3),
       r = i(6),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(4),
       d = i(33),
       p = i(14),
@@ -610948,7 +611001,7 @@
       d = i(5),
       p = i(3),
       h = i(7),
-      g = i(4722),
+      g = i(4723),
       C = i(4),
       _ = i(10),
       m = (function (e) {
@@ -611598,7 +611651,7 @@
       r = i(7),
       l = i(4),
       c = i(1266),
-      u = i(4733),
+      u = i(4734),
       d = i(142),
       p = i(626),
       h = (function (e) {
@@ -613503,7 +613556,7 @@
       a = i(5),
       s = i(7),
       r = i(4),
-      l = i(4767),
+      l = i(4768),
       c = i(10),
       u = (function (e) {
         function AGCCommand() {
@@ -613544,7 +613597,7 @@
       })(c.CastleCommand);
     t.AGCCommand = u;
     var d = i(9),
-      p = i(4768);
+      p = i(4769);
     o.classImplementsInterfaces(u, "IExecCommand");
   },
   function (e, t, i) {
@@ -613570,7 +613623,7 @@
       o = i(1),
       a = i(3),
       s = i(65),
-      r = i(19),
+      r = i(20),
       l = (function (e) {
         function CastleAllianceGiftCollectedDialog() {
           return (
@@ -615272,7 +615325,7 @@
       a = i(5),
       s = i(7),
       r = i(4),
-      l = i(4801),
+      l = i(4802),
       c = i(10),
       u = (function (e) {
         function SDICommand() {
@@ -615314,7 +615367,7 @@
       })(c.CastleCommand);
     t.SDICommand = u;
     var d = i(9),
-      p = i(4802);
+      p = i(4803);
     o.classImplementsInterfaces(u, "IExecCommand");
   },
   function (e, t, i) {
@@ -615366,7 +615419,7 @@
       E = i(3),
       O = i(3),
       y = i(6),
-      b = i(20),
+      b = i(19),
       D = i(16),
       I = i(21),
       v = i(172),
@@ -616268,12 +616321,12 @@
     var W = i(83),
       Y = i(31),
       K = i(56),
-      z = i(4803),
+      z = i(4804),
       q = i(186),
       X = i(9),
       Q = i(112),
       J = i(1286),
-      Z = i(4804),
+      Z = i(4805),
       $ = i(63),
       ee = i(62),
       te = i(749),
@@ -619667,7 +619720,7 @@
       a = i(5),
       s = i(7),
       r = i(4),
-      l = i(4875),
+      l = i(4876),
       c = i(1773),
       u = i(10),
       d = (function (e) {
@@ -619764,7 +619817,7 @@
       })(u.CastleCommand);
     t.APTCommand = d;
     var p = i(9),
-      h = i(4876);
+      h = i(4877);
     o.classImplementsInterfaces(d, "IExecCommand");
   },
   function (e, t, i) {
@@ -622527,7 +622580,7 @@
       s = i(7),
       r = i(10),
       l = i(1594),
-      c = i(4934),
+      c = i(4935),
       u = (function (e) {
         function HFLCommand() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -623384,7 +623437,7 @@
       })(s.CPSCommand);
     t.CastleCPSCommand = d;
     var p = i(9),
-      h = i(4951);
+      h = i(4952);
   },
   function (e, t, i) {
     "use strict";
@@ -623593,8 +623646,8 @@
       u = i(47),
       d = i(4),
       p = i(10),
-      h = i(4956),
-      g = i(4958),
+      h = i(4957),
+      g = i(4959),
       C = i(9),
       _ = i(37),
       m = (function (e) {
@@ -623700,10 +623753,10 @@
       h = i(1682),
       g = i(3),
       C = i(12),
-      _ = i(4957),
+      _ = i(4958),
       m = i(4),
       f = i(2),
-      E = i(19),
+      E = i(20),
       O = i(65),
       y = i(24),
       b = i(25),
@@ -626302,7 +626355,7 @@
       c = i(6),
       u = i(7),
       d = i(4),
-      p = i(4995),
+      p = i(4996),
       h = i(134),
       g = i(986),
       C = i(618),
@@ -626419,7 +626472,7 @@
     t.BUPCommand = m;
     var f = i(56),
       E = i(9),
-      O = i(4996),
+      O = i(4997),
       y = i(141),
       b = i(38),
       D = i(67);
@@ -628532,7 +628585,7 @@
       l = i(5),
       c = i(7),
       u = i(4),
-      d = i(5037),
+      d = i(5038),
       p = i(10),
       h = (function (e) {
         function PARCommand() {
@@ -628608,7 +628661,7 @@
       C = i(9),
       _ = i(1084),
       m = i(1941),
-      f = i(5038);
+      f = i(5039);
     s.classImplementsInterfaces(h, "IExecCommand");
   },
   function (e, t, i) {
@@ -628648,7 +628701,7 @@
       r = i(3),
       l = i(6),
       c = i(65),
-      u = i(19),
+      u = i(20),
       d = i(4),
       p = i(11),
       h = createjs.Point,
@@ -628872,7 +628925,7 @@
     var C = i(47),
       _ = i(9),
       m = i(1084),
-      f = i(5040);
+      f = i(5041);
     s.classImplementsInterfaces(g, "IExecCommand");
   },
   function (e, t, i) {
@@ -629227,7 +629280,7 @@
       o = i(1),
       a = i(5),
       s = i(7),
-      r = i(5048),
+      r = i(5049),
       l = i(4),
       c = i(10),
       u = (function (e) {
@@ -630200,9 +630253,9 @@
       })(l.CastleCommand);
     t.LRICommand = c;
     var u = i(9),
-      d = i(5067),
-      p = i(5070),
-      h = i(5071);
+      d = i(5068),
+      p = i(5071),
+      h = i(5072);
     o.classImplementsInterfaces(c, "IExecCommand");
   },
   function (e, t, i) {
@@ -631544,7 +631597,7 @@
       })(r.CastleCommand);
     t.RAECommand = l;
     var c = i(9),
-      u = i(5092);
+      u = i(5093);
     o.classImplementsInterfaces(l, "IExecCommand");
   },
   function (e, t, i) {
@@ -633900,8 +633953,8 @@
     t.FJFCommand = p;
     var h = i(31),
       g = i(9),
-      C = i(5138),
-      _ = i(5139);
+      C = i(5139),
+      _ = i(5140);
     s.classImplementsInterfaces(p, "IExecCommand");
   },
   function (e, t, i) {
@@ -634350,7 +634403,7 @@
       l = i(3),
       c = i(7),
       u = i(4),
-      d = i(5148),
+      d = i(5149),
       p = i(10),
       h = (function (e) {
         function GPGCommand() {
@@ -634403,7 +634456,7 @@
     t.GPGCommand = h;
     var g = i(9),
       C = i(38),
-      _ = i(5149);
+      _ = i(5150);
     a.classImplementsInterfaces(h, "IExecCommand");
   },
   function (e, t, i) {
@@ -634555,7 +634608,7 @@
       r = i(6),
       l = i(7),
       c = i(4),
-      u = i(5152),
+      u = i(5153),
       d = i(10),
       p = (function (e) {
         function RGGCommand() {
@@ -634601,7 +634654,7 @@
     t.RGGCommand = p;
     var h = i(51),
       g = i(9),
-      C = i(5153);
+      C = i(5154);
     o.classImplementsInterfaces(p, "IExecCommand");
   },
   function (e, t, i) {
@@ -634657,7 +634710,7 @@
       d = i(1837),
       p = i(21),
       h = i(30),
-      g = i(19),
+      g = i(20),
       C = i(4),
       _ = i(8),
       m = i(24),
@@ -637124,7 +637177,7 @@
       s = i(6),
       r = i(7),
       l = i(4),
-      c = i(5201),
+      c = i(5202),
       u = i(10),
       d = (function (e) {
         function TXCCommand() {
@@ -637167,7 +637220,7 @@
       })(u.CastleCommand);
     t.TXCCommand = d;
     var p = i(9),
-      h = i(5202);
+      h = i(5203);
     o.classImplementsInterfaces(d, "IExecCommand");
   },
   function (e, t, i) {
@@ -637545,7 +637598,7 @@
         );
       })(r.CastleCommand);
     t.GPRCommand = l;
-    var c = i(5208),
+    var c = i(5209),
       u = i(15),
       d = i(1355);
     o.classImplementsInterfaces(l, "IExecCommand");
@@ -638292,7 +638345,7 @@
       l = i(7),
       c = i(40),
       u = i(4),
-      d = i(5224),
+      d = i(5225),
       p = i(10),
       h = (function (e) {
         function STICommand() {
@@ -638345,7 +638398,7 @@
     var g = i(1107),
       C = i(9),
       _ = i(38),
-      m = i(5225);
+      m = i(5226);
     a.classImplementsInterfaces(h, "IExecCommand");
   },
   function (e, t, i) {
@@ -638399,7 +638452,7 @@
       E = i(3),
       O = i(3),
       y = i(6),
-      b = i(20),
+      b = i(19),
       D = i(16),
       I = i(1731),
       v = i(21),
@@ -639297,7 +639350,7 @@
       G = i(186),
       H = i(9),
       j = i(112),
-      W = i(5226),
+      W = i(5227),
       Y = i(63),
       K = i(62),
       z = i(749),
@@ -639770,7 +639823,7 @@
       g = i(5),
       C = i(5),
       _ = i(6),
-      m = i(20),
+      m = i(19),
       f = i(372),
       E = i(7),
       O = i(678),
@@ -639783,7 +639836,7 @@
       S = i(228),
       A = i(960),
       L = i(179),
-      P = i(5236),
+      P = i(5237),
       M = i(1934),
       R = i(1127),
       V = i(1718),
@@ -640613,7 +640666,7 @@
     var m = i(9),
       f = i(822),
       E = i(659),
-      O = i(20),
+      O = i(19),
       y = i(660);
     r.classImplementsInterfaces(_, "IExecCommand");
   },
@@ -640970,7 +641023,7 @@
       r = i(10),
       l = i(4),
       c = i(2),
-      u = i(5255),
+      u = i(5256),
       d = (function (e) {
         function MVFCommand() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -641760,12 +641813,12 @@
       a = i(1),
       s = i(5),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(7),
       u = i(678),
       d = i(4),
-      p = i(5271),
-      h = i(5272),
+      p = i(5272),
+      h = i(5273),
       g = i(10),
       C = (function (e) {
         function FWDCommand() {
@@ -641832,7 +641885,7 @@
       })(g.CastleCommand);
     t.FWDCommand = C;
     var _ = i(9),
-      m = i(5273);
+      m = i(5274);
     a.classImplementsInterfaces(C, "IExecCommand");
   },
   function (e, t, i) {
@@ -642802,7 +642855,7 @@
       u = i(2),
       d = i(1),
       p = i(5),
-      h = i(20),
+      h = i(19),
       g = i(7),
       C = i(28),
       _ = i(37),
@@ -642943,7 +642996,7 @@
         );
       })(E.CastleCommand);
     t.JAACommand = O;
-    var y = i(5280),
+    var y = i(5281),
       b = i(147),
       D = i(35),
       I = i(31),
@@ -643024,7 +643077,7 @@
     var o = i(149),
       a = i(728),
       s = i(1162),
-      r = i(5314),
+      r = i(5315),
       l = i(4),
       c = i(1),
       u = i(5),
@@ -643036,7 +643089,7 @@
     var n = i(0),
       o = i(1),
       a = i(556),
-      s = i(5282),
+      s = i(5283),
       r = (function (e) {
         function IsoData() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -643080,8 +643133,8 @@
         );
       })(a.AAreaDataComponent);
     t.IsoData = r;
-    var l = i(5300),
-      c = i(5303);
+    var l = i(5301),
+      c = i(5304);
     o.classImplementsInterfaces(
       r,
       "ICollectableRendererList",
@@ -643511,14 +643564,14 @@
       v = i(1618),
       T = i(870),
       S = i(1195),
-      A = i(5283),
-      L = i(5286),
+      A = i(5284),
+      L = i(5287),
       P = i(1504),
       M = i(1955),
-      R = i(5289),
-      V = i(5292),
-      x = i(5295),
-      w = i(5298),
+      R = i(5290),
+      V = i(5293),
+      x = i(5296),
+      w = i(5299),
       B = i(1),
       F = i(1);
   },
@@ -643564,8 +643617,8 @@
         );
       })(i(630).AIsoCommandPackageObject);
     t.IsoCommandPackageObjectChangePos = o;
-    var a = i(5284),
-      s = i(5285),
+    var a = i(5285),
+      s = i(5286),
       r = i(410);
   },
   function (e, t, i) {
@@ -643783,8 +643836,8 @@
         );
       })(i(481).AIsoCommandPackage);
     t.IsoCommandPackageObjectsTriggerUpdate = o;
-    var a = i(5290),
-      s = i(5291);
+    var a = i(5291),
+      s = i(5292);
   },
   function (e, t, i) {
     "use strict";
@@ -643987,9 +644040,9 @@
     var s = i(46),
       r = i(691),
       l = i(692),
-      c = i(5293),
+      c = i(5294),
       u = i(1956),
-      d = i(5294),
+      d = i(5295),
       p = i(480),
       h = i(689);
   },
@@ -644222,8 +644275,8 @@
         );
       })(i(481).AIsoCommandPackage);
     t.IsoCommandPackageUpdateSlums = a;
-    var s = i(5296),
-      r = i(5297);
+    var s = i(5297),
+      r = i(5298);
   },
   function (e, t, i) {
     "use strict";
@@ -644421,7 +644474,7 @@
       c = i(146),
       u = i(46),
       d = i(35),
-      p = i(5299);
+      p = i(5300);
     o.classImplementsInterfaces(r, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -644551,8 +644604,8 @@
       a = i(122),
       s = i(6),
       r = i(104),
-      l = i(5301),
-      c = i(5302),
+      l = i(5302),
+      c = i(5303),
       u = createjs.Point,
       d = createjs.Rectangle,
       p = a.getLogger("createjs.ts Extensions"),
@@ -645363,7 +645416,7 @@
     t.IsoDataObjects = n;
     var o = i(146),
       a = i(46),
-      s = i(5304);
+      s = i(5305);
   },
   function (e, t, i) {
     "use strict";
@@ -646369,13 +646422,13 @@
       o = i(1),
       a = i(5),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(15),
       c = i(4),
       u = i(1957),
-      d = i(5308),
+      d = i(5309),
       p = i(140),
-      h = i(5309),
+      h = i(5310),
       g = i(110),
       C = i(71),
       _ = (function (e) {
@@ -647183,8 +647236,8 @@
     t.AreaDataStorage = p;
     var h = i(81),
       g = i(13),
-      C = i(5313),
-      _ = i(20),
+      C = i(5314),
+      _ = i(19),
       m = i(2);
     o.classImplementsInterfaces(
       p,
@@ -647587,7 +647640,7 @@
     })();
     t.AreaData = n;
     var o = i(1002),
-      a = i(5315),
+      a = i(5316),
       s = i(1162),
       r = i(4),
       l = i(1),
@@ -647603,7 +647656,7 @@
       o = i(1),
       a = i(5),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(37),
       c = i(4),
       u = i(14),
@@ -647842,7 +647895,7 @@
         );
       })(u.CastleComponent);
     t.AreaDataUpdater = p;
-    var h = i(5316),
+    var h = i(5317),
       g = i(480),
       C = i(146),
       _ = i(35);
@@ -648580,7 +648633,7 @@
       d = i(228),
       p = i(9),
       h = i(38),
-      g = i(5331),
+      g = i(5332),
       C = r.getLogger("Connection.CastleLoginCommand"),
       _ = (function (e) {
         function CastleLoginCommand() {
@@ -649040,7 +649093,7 @@
     var h = i(9),
       g = i(17),
       C = i(517),
-      _ = i(5335),
+      _ = i(5336),
       m = i(1120);
     l.classImplementsInterfaces(p, "ISimpleCommand");
   },
@@ -649358,7 +649411,7 @@
     t.CastleAllianceGiftData = l;
     var c = i(83),
       u = i(51),
-      d = i(5338);
+      d = i(5339);
     o.classImplementsInterfaces(l, "IUpdatable");
   },
   function (e, t, i) {
@@ -649445,20 +649498,20 @@
       s = i(6),
       r = i(60),
       l = i(4),
-      c = i(5340),
-      u = i(5361),
-      d = i(5362),
-      p = i(5363),
-      h = i(5364),
-      g = i(5365),
-      C = i(5366),
-      _ = i(5367),
-      m = i(5368),
-      f = i(5370),
-      E = i(5371),
-      O = i(5372),
-      y = i(5374),
-      b = i(5375),
+      c = i(5341),
+      u = i(5362),
+      d = i(5363),
+      p = i(5364),
+      h = i(5365),
+      g = i(5366),
+      C = i(5367),
+      _ = i(5368),
+      m = i(5369),
+      f = i(5371),
+      E = i(5372),
+      O = i(5373),
+      y = i(5375),
+      b = i(5376),
       D = (function (e) {
         function CastlePrivateOfferData() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -649613,22 +649666,22 @@
       })(c.BasicPrivateOfferData);
     t.CastlePrivateOfferData = D;
     var I = i(697),
-      v = i(5376),
-      T = i(5377),
-      S = i(5379),
-      A = i(5380),
-      L = i(5381),
-      P = i(5382),
-      M = i(5383),
-      R = i(5385),
-      V = i(5387),
-      x = i(5388),
-      w = i(5389),
-      B = i(5390),
-      F = i(5391),
-      N = i(5392),
-      k = i(5393),
-      U = i(5394);
+      v = i(5377),
+      T = i(5378),
+      S = i(5380),
+      A = i(5381),
+      L = i(5382),
+      P = i(5383),
+      M = i(5384),
+      R = i(5386),
+      V = i(5388),
+      x = i(5389),
+      w = i(5390),
+      B = i(5391),
+      F = i(5392),
+      N = i(5393),
+      k = i(5394),
+      U = i(5395);
     o.classImplementsInterfaces(D, "IUpdatable");
   },
   function (e, t, i) {
@@ -649641,29 +649694,29 @@
       r = i(1),
       l = i(6),
       c = i(60),
-      u = i(5341),
-      d = i(5342),
-      p = i(5343),
-      h = i(5344),
+      u = i(5342),
+      d = i(5343),
+      p = i(5344),
+      h = i(5345),
       g = i(1251),
       C = i(26),
       _ = i(15),
       m = i(57),
       f = i(4),
-      E = i(5345),
-      O = i(5346),
-      y = i(5347),
-      b = i(5348),
-      D = i(5349),
-      I = i(5350),
-      v = i(5351),
-      T = i(5352),
-      S = i(5353),
-      A = i(5354),
-      L = i(5355),
-      P = i(5356),
-      M = i(5357),
-      R = i(5358),
+      E = i(5346),
+      O = i(5347),
+      y = i(5348),
+      b = i(5349),
+      D = i(5350),
+      I = i(5351),
+      v = i(5352),
+      T = i(5353),
+      S = i(5354),
+      A = i(5355),
+      L = i(5356),
+      P = i(5357),
+      M = i(5358),
+      R = i(5359),
       V = i(131),
       x = i(231),
       w = (function (e) {
@@ -650140,7 +650193,7 @@
       })(m.CastleBasicData);
     t.BasicPrivateOfferData = w;
     var B = i(31),
-      F = i(5359);
+      F = i(5360);
     s.classImplementsInterfaces(w, "IUpdatable");
   },
   function (e, t, i) {
@@ -651663,7 +651716,7 @@
       _ = i(48),
       m = i(4),
       f = i(1958),
-      E = i(5360),
+      E = i(5361),
       O = i(231);
     n.__initialize_static_members();
   },
@@ -652089,7 +652142,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(1),
       o = i(60),
-      a = i(5369),
+      a = i(5370),
       s = (function () {
         function OfferDescriptionAdditionalPrimeSaleSkipBuilding() {}
         return (
@@ -652325,7 +652378,7 @@
     var n = i(0),
       o = i(1),
       a = i(60),
-      s = i(5373),
+      s = i(5374),
       r = (function (e) {
         function OfferQuestConditionIntegerPlayerLevel() {
           return e.call(this) || this;
@@ -652908,7 +652961,7 @@
         );
       })();
     t.OfferDescriptionAdditionalPrimeSaleUpgrade = a;
-    var s = i(5378);
+    var s = i(5379);
     n.classImplementsInterfaces(a, "IOfferDescriptionAdditionalParameter");
   },
   function (e, t, i) {
@@ -653478,7 +653531,7 @@
     t.OfferDescriptionVisualInterfaceButton = c;
     var u = i(17),
       d = i(466),
-      p = i(5384),
+      p = i(5385),
       h = i(545),
       g = i(1090);
     (o.classImplementsInterfaces(c, "IOfferDescriptionVisualParameter"),
@@ -653797,7 +653850,7 @@
     var n = i(1),
       o = i(60),
       a = i(231),
-      s = i(5386),
+      s = i(5387),
       r = (function () {
         function OfferDescriptionVisualIsoObject() {
           ((this._isVisible = !1), (this._hiddenByABTest = !1));
@@ -654749,10 +654802,10 @@
       d = i(319),
       p = i(29),
       h = i(57),
-      g = i(5396),
+      g = i(5397),
       C = i(4),
-      _ = i(5397),
-      m = i(5398),
+      _ = i(5398),
+      m = i(5399),
       f = (function (e) {
         function AllianceHelpRequestData(t) {
           var i = this;
@@ -655050,7 +655103,7 @@
       })(h.CastleBasicData);
     t.AllianceHelpRequestData = f;
     var E = i(17),
-      O = i(5399);
+      O = i(5400);
     o.classImplementsInterfaces(f, "IUpdatable");
   },
   function (e, t, i) {
@@ -655434,7 +655487,7 @@
       l = i(57),
       c = i(4),
       u = i(649),
-      d = i(5401),
+      d = i(5402),
       p = (function (e) {
         function CastleAlienRerollData(t) {
           var i = this;
@@ -655693,7 +655746,7 @@
       );
     })();
     t.CastleAllianceFameData = n;
-    var o = i(5403);
+    var o = i(5404);
   },
   function (e, t, i) {
     "use strict";
@@ -655757,7 +655810,7 @@
       u = i(15),
       d = i(57),
       p = i(17),
-      h = i(5405),
+      h = i(5406),
       g = i(4),
       C = (function (e) {
         function CastleArmyData() {
@@ -656390,7 +656443,7 @@
     ((t.CastleArmyData = C),
       o.classImplementsInterfaces(C, "IUpdatable", "ICastleBasicData"));
     var _ = i(1),
-      m = i(5406),
+      m = i(5407),
       f = i(157);
   },
   function (e, t, i) {
@@ -656479,7 +656532,7 @@
       u = i(1295),
       d = i(1296),
       p = i(1297),
-      h = i(20),
+      h = i(19),
       g = i(6);
   },
   function (e, t, i) {
@@ -656487,12 +656540,12 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(5),
       o = i(6),
-      a = i(20),
-      s = i(5408),
-      r = i(5409),
-      l = i(5410),
+      a = i(19),
+      s = i(5409),
+      r = i(5410),
+      l = i(5411),
       c = i(1959),
-      u = i(5411),
+      u = i(5412),
       d = i(55),
       p = i(15),
       h = i(346),
@@ -656793,9 +656846,9 @@
       })();
     t.CastleAttackData = _;
     var m = i(838),
-      f = i(5412),
+      f = i(5413),
       E = i(1),
-      O = i(5413);
+      O = i(5414);
   },
   function (e, t, i) {
     "use strict";
@@ -657215,12 +657268,12 @@
     var n = i(0),
       o = i(2),
       a = i(6),
-      s = i(5415),
-      r = i(5416),
-      l = i(5417),
-      c = i(5418),
+      s = i(5416),
+      r = i(5417),
+      l = i(5418),
+      c = i(5419),
       u = i(1377),
-      d = i(5419),
+      d = i(5420),
       p = (function (e) {
         function CastleCollectorEventData(t) {
           var i = e.call(this) || this;
@@ -657330,7 +657383,7 @@
         );
       })(createjs.EventDispatcher);
     t.CastleCollectorEventData = p;
-    var h = i(5420);
+    var h = i(5421);
   },
   function (e, t, i) {
     "use strict";
@@ -657939,7 +657992,7 @@
     t.CastleDailyQuestData = r;
     var l = i(83),
       c = i(51),
-      u = i(5422);
+      u = i(5423);
     o.classImplementsInterfaces(r, "IUpdatable");
   },
   function (e, t, i) {
@@ -657953,7 +658006,7 @@
       l = i(22),
       c = i(23),
       u = i(4),
-      d = i(5423),
+      d = i(5424),
       p = (function () {
         function DailyQuestVO() {
           ((this._questID = 0),
@@ -658430,7 +658483,7 @@
     t.CastleDecoShop = n;
     var o = i(84),
       a = i(56),
-      s = i(20),
+      s = i(19),
       r = i(4);
   },
   function (e, t, i) {
@@ -658956,7 +659009,7 @@
       s = i(373),
       r = i(15),
       l = i(70),
-      c = i(5427),
+      c = i(5428),
       u = (function (e) {
         function CastleEventPackageData() {
           var t = this;
@@ -659147,7 +659200,7 @@
       a = i(1739),
       s = i(44),
       r = i(57),
-      l = i(5429),
+      l = i(5430),
       c = (function (e) {
         function CastleJudgementData(t) {
           var i = e.call(this) || this;
@@ -659248,9 +659301,9 @@
     var u = i(146),
       d = i(35),
       p = i(9),
-      h = i(5430),
+      h = i(5431),
       g = i(1081),
-      C = i(5431);
+      C = i(5432);
     o.classImplementsInterfaces(c, "IUpdatable");
   },
   function (e, t, i) {
@@ -659827,11 +659880,11 @@
       })(u.CastleEventDispatcher);
     t.CastleKingdomData = p;
     var h = i(666),
-      g = i(5433),
-      C = i(5434),
-      _ = i(5435),
-      m = i(5436),
-      f = i(5437),
+      g = i(5434),
+      C = i(5435),
+      _ = i(5436),
+      m = i(5437),
+      f = i(5438),
       E = i(1164);
   },
   function (e, t, i) {
@@ -660807,7 +660860,7 @@
       c = i(15),
       u = i(4),
       d = i(1388),
-      p = i(5439),
+      p = i(5440),
       h = (function (e) {
         function CastleLaboratoryData(t) {
           var i = e.call(this) || this;
@@ -661004,21 +661057,21 @@
       o = i(1),
       a = i(5),
       s = i(6),
-      r = i(5441),
-      l = i(5442),
-      c = i(5443),
-      u = i(5444),
-      d = i(5445),
-      p = i(5446),
+      r = i(5442),
+      l = i(5443),
+      c = i(5444),
+      u = i(5445),
+      d = i(5446),
+      p = i(5447),
       h = i(1960),
       g = i(512),
-      C = i(5447),
+      C = i(5448),
       _ = i(137),
       m = i(29),
       f = i(15),
       E = i(57),
       O = i(4),
-      y = i(5448),
+      y = i(5449),
       b = (function (e) {
         function CastleMessageData(t) {
           var i = e.call(this) || this;
@@ -661507,9 +661560,9 @@
         );
       })(E.CastleBasicData);
     t.CastleMessageData = b;
-    var D = i(5449),
-      I = i(5598),
-      v = i(5606),
+    var D = i(5450),
+      I = i(5599),
+      v = i(5607),
       T = i(99);
     o.classImplementsInterfaces(b, "IUpdatable");
   },
@@ -661837,42 +661890,42 @@
         );
       })();
     t.CastleMessageFactory = o;
-    var a = i(5450),
-      s = i(5453),
-      r = i(5456),
-      l = i(5459),
-      c = i(5462),
-      u = i(5463),
-      d = i(5465),
-      p = i(5468),
-      h = i(5471),
-      g = i(5472),
-      C = i(5483),
-      _ = i(5488),
-      m = i(5491),
-      f = i(5494),
-      E = i(5499),
-      O = i(5506),
-      y = i(5507),
-      b = i(5509),
-      D = i(5513),
-      I = i(5515),
-      v = i(5518),
-      T = i(5521),
-      S = i(5524),
-      A = i(5525),
-      L = i(5565),
-      P = i(5566),
-      M = i(5567),
-      R = i(5574),
-      V = i(5577),
-      x = i(5581),
-      w = i(5584),
+    var a = i(5451),
+      s = i(5454),
+      r = i(5457),
+      l = i(5460),
+      c = i(5463),
+      u = i(5464),
+      d = i(5466),
+      p = i(5469),
+      h = i(5472),
+      g = i(5473),
+      C = i(5484),
+      _ = i(5489),
+      m = i(5492),
+      f = i(5495),
+      E = i(5500),
+      O = i(5507),
+      y = i(5508),
+      b = i(5510),
+      D = i(5514),
+      I = i(5516),
+      v = i(5519),
+      T = i(5522),
+      S = i(5525),
+      A = i(5526),
+      L = i(5566),
+      P = i(5567),
+      M = i(5568),
+      R = i(5575),
+      V = i(5578),
+      x = i(5582),
+      w = i(5585),
       B = i(1116),
       F = i(1968),
-      N = i(5589),
-      k = i(5590),
-      U = i(5594),
+      N = i(5590),
+      k = i(5591),
+      U = i(5595),
       G = i(1167);
   },
   function (e, t, i) {
@@ -661880,7 +661933,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(3),
-      a = i(5451),
+      a = i(5452),
       s = i(96),
       r = i(99),
       l = (function (e) {
@@ -661918,7 +661971,7 @@
         );
       })(r.AMessageVO);
     t.CastleMessageInfoVO = l;
-    var c = i(5452);
+    var c = i(5453);
   },
   function (e, t, i) {
     "use strict";
@@ -662040,7 +662093,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(3),
-      a = i(5454),
+      a = i(5455),
       s = i(96),
       r = i(99),
       l = (function (e) {
@@ -662111,7 +662164,7 @@
     var c = i(51),
       u = i(13),
       d = i(47),
-      p = i(5455);
+      p = i(5456);
   },
   function (e, t, i) {
     "use strict";
@@ -662138,7 +662191,7 @@
       s = i(3),
       r = i(3),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(11),
       d = createjs.Point,
       p = (function (e) {
@@ -662220,8 +662273,8 @@
       o = i(5),
       a = i(3),
       s = i(160),
-      r = i(5457),
-      l = i(5458),
+      r = i(5458),
+      l = i(5459),
       c = i(96),
       u = (function (e) {
         function MessageAdvisorFailureVO() {
@@ -662462,8 +662515,8 @@
       o = i(5),
       a = i(3),
       s = i(160),
-      r = i(5460),
-      l = i(5461),
+      r = i(5461),
+      l = i(5462),
       c = i(96),
       u = (function (e) {
         function MessageAdvisorSummaryVO() {
@@ -662801,7 +662854,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(3),
-      a = i(5464),
+      a = i(5465),
       s = i(96),
       r = i(99),
       l = (function (e) {
@@ -662875,7 +662928,7 @@
     var n = i(0),
       o = i(5),
       a = i(3),
-      s = i(5466),
+      s = i(5467),
       r = i(96),
       l = i(99),
       c = (function (e) {
@@ -663016,7 +663069,7 @@
         );
       })(l.AMessageVO);
     t.MessageAllianceWarVO = c;
-    var u = i(5467);
+    var u = i(5468);
   },
   function (e, t, i) {
     "use strict";
@@ -663533,7 +663586,7 @@
       a = i(5),
       s = i(3),
       r = i(44),
-      l = i(5473),
+      l = i(5474),
       c = i(120),
       u = i(96),
       d = i(99),
@@ -663873,7 +663926,7 @@
       h = i(3),
       g = i(3),
       C = i(6),
-      _ = i(20),
+      _ = i(19),
       m = i(16),
       f = i(555),
       E = i(44),
@@ -663892,7 +663945,7 @@
       R = i(223),
       V = i(166),
       x = i(1952),
-      w = i(5477),
+      w = i(5478),
       B = createjs.Point,
       F = (function (e) {
         function CastleBattleLogDetailAdvancedDialog() {
@@ -665120,12 +665173,12 @@
     var N = i(9),
       k = i(112),
       U = i(306),
-      G = i(5478),
+      G = i(5479),
       H = i(63),
       j = i(73),
       W = i(1953),
       Y = i(1963),
-      K = i(5479);
+      K = i(5480);
   },
   function (e, t, i) {
     "use strict";
@@ -665299,7 +665352,7 @@
       S = i(223),
       A = i(166),
       L = i(321),
-      P = i(5480),
+      P = i(5481),
       M = createjs.MovieClip,
       R = (function (e) {
         function CastleBattleLogPopUpDialog() {
@@ -666447,7 +666500,7 @@
     t.CastleBattleLogPopUpDialog = R;
     var V = i(56),
       x = i(63),
-      w = i(5481);
+      w = i(5482);
     l.classImplementsInterfaces(R, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -666671,7 +666724,7 @@
       s = i(1),
       r = i(3),
       l = i(30),
-      c = i(19),
+      c = i(20),
       u = i(188),
       d = createjs.Point,
       p = (function (e) {
@@ -666830,8 +666883,8 @@
         );
       })(s.AMessageVO);
     t.MessageChangelistVO = r;
-    var l = i(5484),
-      c = i(5487);
+    var l = i(5485),
+      c = i(5488);
     r.__initialize_static_members();
   },
   function (e, t, i) {
@@ -666848,12 +666901,12 @@
       d = i(3),
       p = i(3),
       h = i(6),
-      g = i(5485),
-      C = i(5486),
+      g = i(5486),
+      C = i(5487),
       _ = i(1940),
       m = i(137),
       f = i(65),
-      E = i(19),
+      E = i(20),
       O = i(29),
       y = i(4),
       b = i(196),
@@ -667217,8 +667270,8 @@
       a = i(5),
       s = i(3),
       r = i(44),
-      l = i(5489),
-      c = i(5490),
+      l = i(5490),
+      c = i(5491),
       u = i(120),
       d = i(96),
       p = i(99),
@@ -667656,10 +667709,12 @@
     var n = i(0),
       o = i(5),
       a = i(3),
-      s = i(5492),
-      r = i(5493),
+      s = i(5493),
+      r = i(5494),
       l = i(96),
-      c = (function (e) {
+      c = i(99),
+      u = i(19),
+      d = (function (e) {
         function MessageDivisionChangeVO() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -667700,7 +667755,8 @@
                 switch (this.eventID) {
                   case o.EventConst.EVENTTYPE_ALLIANCE_MOBILISATION:
                   case o.EventConst.EVENTTYPE_ALLIANCE_RAID:
-                  case o.EventConst.EVENTTYPE_ALLIANCE_RAID_MOBILISATION:
+                  case u.ClientConstCastle
+                    .LEGACY_EVENTTYPE_ALLIANCE_RAID_MOBILISATION:
                     return new l.DialogInfoVO(
                       s.AllianceMobilizationDivisionChangeDialog,
                       new r.AllianceMobilizationDivisionChangeDialogProperties(
@@ -667734,8 +667790,8 @@
           }),
           MessageDivisionChangeVO
         );
-      })(i(99).AMessageVO);
-    t.MessageDivisionChangeVO = c;
+      })(c.AMessageVO);
+    t.MessageDivisionChangeVO = d;
   },
   function (e, t, i) {
     "use strict";
@@ -668054,8 +668110,8 @@
     var n = i(0),
       o = i(5),
       a = i(3),
-      s = i(5495),
-      r = i(5496),
+      s = i(5496),
+      r = i(5497),
       l = i(96),
       c = i(99),
       u = (function (e) {
@@ -668142,8 +668198,8 @@
         );
       })(c.AMessageVO);
     t.MessageEilandRewardVO = u;
-    var d = i(5497),
-      p = i(5498),
+    var d = i(5498),
+      p = i(5499),
       h = i(666);
   },
   function (e, t, i) {
@@ -668200,7 +668256,7 @@
       c = i(512),
       u = i(137),
       d = i(30),
-      p = i(19),
+      p = i(20),
       h = i(4),
       g = i(8),
       C = i(11),
@@ -668521,14 +668577,14 @@
     var n = i(0),
       o = i(5),
       a = i(3),
-      s = i(5500),
+      s = i(5501),
       r = i(96),
       l = i(99),
-      c = i(5501),
-      u = i(5502),
-      d = i(5503),
-      p = i(5504),
-      h = i(5505),
+      c = i(5502),
+      u = i(5503),
+      d = i(5504),
+      p = i(5505),
+      h = i(5506),
       g = (function (e) {
         function MessageEilandTitleVO() {
           var t = this;
@@ -669198,7 +669254,7 @@
         );
       })(s.AMessageVO);
     t.MessageHighscoreBonusVO = r;
-    var l = i(5508);
+    var l = i(5509);
   },
   function (e, t, i) {
     "use strict";
@@ -669267,7 +669323,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(3),
-      a = i(5510),
+      a = i(5511),
       s = i(96),
       r = i(99),
       l = (function (e) {
@@ -669321,7 +669377,7 @@
         );
       })(r.AMessageVO);
     t.MessageMarketCarriageArrivedVO = l;
-    var c = i(5511);
+    var c = i(5512);
   },
   function (e, t, i) {
     "use strict";
@@ -669349,7 +669405,7 @@
       r = i(3),
       l = i(3),
       c = i(3),
-      u = i(5512),
+      u = i(5513),
       d = i(137),
       p = i(4),
       h = i(11),
@@ -669614,7 +669670,7 @@
         );
       })(s.AMessageVO);
     t.MessagePaymentDopplerVO = r;
-    var l = i(5514);
+    var l = i(5515);
   },
   function (e, t, i) {
     "use strict";
@@ -669674,7 +669730,7 @@
     var n = i(0),
       o = i(5),
       a = i(3),
-      s = i(5516),
+      s = i(5517),
       r = i(96),
       l = i(99),
       c = (function (e) {
@@ -669738,7 +669794,7 @@
         );
       })(l.AMessageVO);
     t.MessagePlayerGift = c;
-    var u = i(5517);
+    var u = i(5518);
   },
   function (e, t, i) {
     "use strict";
@@ -669767,7 +669823,7 @@
       l = i(3),
       c = i(3),
       u = i(30),
-      d = i(19),
+      d = i(20),
       p = i(4),
       h = i(48),
       g = i(8),
@@ -669919,7 +669975,7 @@
       a = i(5),
       s = i(3),
       r = i(44),
-      l = i(5519),
+      l = i(5520),
       c = i(1964),
       u = i(4),
       d = i(96),
@@ -670157,7 +670213,7 @@
       })(p.AMessageVO);
     t.MessagePrivateOfferVO = h;
     var g = i(31),
-      C = i(5520),
+      C = i(5521),
       _ = i(1165);
   },
   function (e, t, i) {
@@ -670288,7 +670344,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(3),
-      a = i(5522),
+      a = i(5523),
       s = i(4),
       r = i(96),
       l = i(99),
@@ -670350,7 +670406,7 @@
         );
       })(l.AMessageVO);
     t.MessageRebuyVO = c;
-    var u = i(5523);
+    var u = i(5524);
   },
   function (e, t, i) {
     "use strict";
@@ -670660,24 +670716,24 @@
       p = i(44),
       h = i(139),
       g = i(31),
-      C = i(5526),
-      _ = i(5527),
-      m = i(5528),
-      f = i(5529),
-      E = i(5530),
-      O = i(5531),
+      C = i(5527),
+      _ = i(5528),
+      m = i(5529),
+      f = i(5530),
+      E = i(5531),
+      O = i(5532),
       y = i(1964),
       b = i(978),
       D = i(1431),
       I = i(1432),
       v = i(1692),
       T = i(1693),
-      S = i(5533),
+      S = i(5534),
       A = i(1851),
       L = i(461),
-      P = i(5534),
-      M = i(5535),
-      R = i(5536),
+      P = i(5535),
+      M = i(5536),
+      R = i(5537),
       V = i(4),
       x = i(96),
       w = i(99),
@@ -671284,36 +671340,36 @@
       })(w.AMessageVO);
     t.MessageSpecialEventVO = B;
     var F = i(38),
-      N = i(5537),
-      k = i(5538),
-      U = i(5539),
-      G = i(5540),
-      H = i(5541),
-      j = i(5542),
-      W = i(5543),
-      Y = i(5544),
-      K = i(5545),
-      z = i(5546),
-      q = i(5547),
+      N = i(5538),
+      k = i(5539),
+      U = i(5540),
+      G = i(5541),
+      H = i(5542),
+      j = i(5543),
+      W = i(5544),
+      Y = i(5545),
+      K = i(5546),
+      z = i(5547),
+      q = i(5548),
       X = i(1165),
       Q = i(1965),
-      J = i(5548),
-      Z = i(5549),
+      J = i(5549),
+      Z = i(5550),
       $ = i(1852),
-      ee = i(5550),
-      te = i(5551),
-      ie = i(5552),
-      ne = i(5553),
-      oe = i(5554),
-      ae = i(5555),
-      se = i(5556),
-      re = i(5557),
-      le = i(5558),
-      ce = i(5559),
-      ue = i(5560),
-      de = i(5561),
-      pe = i(5562),
-      he = i(5563),
+      ee = i(5551),
+      te = i(5552),
+      ie = i(5553),
+      ne = i(5554),
+      oe = i(5555),
+      ae = i(5556),
+      se = i(5557),
+      re = i(5558),
+      le = i(5559),
+      ce = i(5560),
+      ue = i(5561),
+      de = i(5562),
+      pe = i(5563),
+      he = i(5564),
       ge = i(496);
   },
   function (e, t, i) {
@@ -671542,7 +671598,7 @@
     var n = i(0),
       o = i(2),
       a = i(53),
-      s = i(5532),
+      s = i(5533),
       r = i(1948),
       l = i(15),
       c = i(4),
@@ -672621,7 +672677,7 @@
       c = i(3),
       u = i(3),
       d = i(30),
-      p = i(19),
+      p = i(20),
       h = i(11),
       g = createjs.Point,
       C = (function (e) {
@@ -674256,7 +674312,7 @@
     var n = i(0),
       o = i(11),
       a = i(3),
-      s = i(5564),
+      s = i(5565),
       r = i(9),
       l = i(2),
       c = i(21),
@@ -674619,7 +674675,7 @@
       o = i(2),
       a = i(5),
       s = i(3),
-      r = i(5568),
+      r = i(5569),
       l = i(1966),
       c = i(120),
       u = i(96),
@@ -674766,9 +674822,9 @@
         );
       })(d.AMessageSpyVO);
     t.MessageSpyPlayerVO = p;
-    var h = i(5569),
+    var h = i(5570),
       g = i(1967),
-      C = i(5571);
+      C = i(5572);
   },
   function (e, t, i) {
     "use strict";
@@ -674940,7 +674996,7 @@
       })(i(11).CastleExternalDialog);
     t.CastleSabotageMessageDialog = g;
     var C = i(17),
-      _ = i(5570);
+      _ = i(5571);
     (a.classImplementsInterfaces(g, "ICollectableRendererList"),
       g.__initialize_static_members());
   },
@@ -675124,7 +675180,7 @@
         );
       })(i(11).CastleExternalDialog);
     t.CastlePlagueMessageDialog = l;
-    var c = i(5572);
+    var c = i(5573);
     (o.classImplementsInterfaces(l, "ICollectableRendererList"),
       l.__initialize_static_members());
   },
@@ -675136,7 +675192,7 @@
       a = i(3),
       s = i(6),
       r = i(4),
-      l = i(5573),
+      l = i(5574),
       c = createjs.Event,
       u = createjs.MouseEvent,
       d = (function (e) {
@@ -675310,7 +675366,7 @@
       r = i(3),
       l = i(6),
       c = i(477),
-      u = i(5575),
+      u = i(5576),
       d = i(96),
       p = i(99),
       h = (function (e) {
@@ -675459,7 +675515,7 @@
         );
       })(p.AMessageVO);
     t.MessageStarveInfoVO = h;
-    var g = i(5576),
+    var g = i(5577),
       C = i(526);
   },
   function (e, t, i) {
@@ -675522,7 +675578,7 @@
       l = i(3),
       c = i(3),
       u = i(6),
-      d = i(20),
+      d = i(19),
       p = i(16),
       h = i(221),
       g = i(164),
@@ -675808,9 +675864,9 @@
       s = i(6),
       r = i(1069),
       l = i(1720),
-      c = i(5578),
-      u = i(5579),
-      d = i(5580),
+      c = i(5579),
+      u = i(5580),
+      d = i(5581),
       p = i(307),
       h = i(4),
       g = i(96),
@@ -676191,7 +676247,7 @@
     var n = i(0),
       o = i(5),
       a = i(3),
-      s = i(5582),
+      s = i(5583),
       r = i(96),
       l = i(99),
       c = (function (e) {
@@ -676276,7 +676332,7 @@
         );
       })(l.AMessageVO);
     t.MessageThankYouPackageVO = c;
-    var u = i(5583);
+    var u = i(5584);
   },
   function (e, t, i) {
     "use strict";
@@ -676460,7 +676516,7 @@
       o = i(5),
       a = i(3),
       s = i(6),
-      r = i(5585),
+      r = i(5586),
       l = i(96),
       c = i(99),
       u = (function (e) {
@@ -676549,7 +676605,7 @@
         );
       })(c.AMessageVO);
     t.MessageTournamentOverVO = u;
-    var d = i(5586);
+    var d = i(5587);
   },
   function (e, t, i) {
     "use strict";
@@ -676595,7 +676651,7 @@
       c = i(3),
       u = i(3),
       d = i(30),
-      p = i(19),
+      p = i(20),
       h = i(8),
       g = i(11),
       C = createjs.Point,
@@ -677311,10 +677367,10 @@
       o = i(3),
       a = i(96),
       s = i(99),
-      r = i(5591),
+      r = i(5592),
       l = i(4),
       c = i(1),
-      u = i(5593),
+      u = i(5594),
       d = (function (e) {
         function MessageBuildingDisabledInfoVO() {
           var t = this;
@@ -677404,7 +677460,7 @@
       h = i(4),
       g = i(221),
       C = i(1028),
-      _ = i(5592),
+      _ = i(5593),
       m = i(1027),
       f = i(13),
       E = i(18),
@@ -678135,12 +678191,12 @@
       I = i(724),
       v = i(149),
       T = i(50),
-      S = i(5599),
-      A = i(5600),
+      S = i(5600),
+      A = i(5601),
       L = i(1969),
       P = i(1970),
-      M = i(5603),
-      R = i(5605),
+      M = i(5604),
+      R = i(5606),
       V = (function () {
         function BattleLogVO() {
           ((this._currentMessageID = 0),
@@ -679534,7 +679590,7 @@
       );
     })();
     t.DetailedBattleWaveVO = n;
-    var o = i(5601);
+    var o = i(5602);
     n.__initialize_static_members();
   },
   function (e, t, i) {
@@ -679688,8 +679744,8 @@
       );
     })();
     t.DetailedPlayerBattleWaveVO = n;
-    var o = i(5602),
-      a = i(20);
+    var o = i(5603),
+      a = i(19);
     n.__initialize_static_members();
   },
   function (e, t, i) {
@@ -679924,7 +679980,7 @@
       );
     })();
     t.MediumBattleWaveVO = n;
-    var o = i(5604);
+    var o = i(5605);
     n.__initialize_static_members();
   },
   function (e, t, i) {
@@ -680052,7 +680108,7 @@
       );
     })();
     t.MediumPlayerBattleWaveVO = n;
-    var o = i(20),
+    var o = i(19),
       a = i(1970);
     n.__initialize_static_members();
   },
@@ -680143,7 +680199,7 @@
       r = i(5),
       l = i(5),
       c = i(6),
-      u = i(20),
+      u = i(19),
       d = i(130),
       p = i(899),
       h = i(187),
@@ -680525,7 +680581,7 @@
     t.CastleMilitaryData = m;
     var f = i(84),
       E = i(35),
-      O = i(5608),
+      O = i(5609),
       y = i(548),
       b = i(157);
     s.classImplementsInterfaces(m, "IUpdatable");
@@ -680752,7 +680808,7 @@
         );
       })(i(1957).BasicBuildList);
     t.UnitPackageList = p;
-    var h = i(5609),
+    var h = i(5610),
       g = i(1971);
     o.classImplementsInterfaces(p, "IUpdatable", "IBuildList");
   },
@@ -680996,7 +681052,7 @@
       })(u.CastleBasicData);
     t.CastleOtherPlayerData = h;
     var g = i(385),
-      C = i(5611),
+      C = i(5612),
       _ = i(304);
     s.classImplementsInterfaces(h, "IUpdatable");
   },
@@ -681600,7 +681656,7 @@
         );
       })(s.CastleBasicData);
     t.CastlePermanentCastleData = c;
-    var u = i(5613);
+    var u = i(5614);
     o.classImplementsInterfaces(c, "IUpdatable");
   },
   function (e, t, i) {
@@ -681687,8 +681743,8 @@
         );
       })();
     t.CastlePermanentCastleVO = s;
-    var r = i(5614),
-      l = i(5615);
+    var r = i(5615),
+      l = i(5616);
   },
   function (e, t, i) {
     "use strict";
@@ -682081,7 +682137,7 @@
     t.CastleUnitsVO = n;
     var o = i(83),
       a = i(56),
-      s = i(20),
+      s = i(19),
       r = i(1),
       l = i(1),
       c = i(5),
@@ -682098,7 +682154,7 @@
       a = i(5),
       s = i(5),
       r = i(6),
-      l = i(20),
+      l = i(19),
       c = i(28),
       u = i(22),
       d = i(524),
@@ -682108,9 +682164,9 @@
       C = i(110),
       _ = i(140),
       m = i(33),
-      f = i(5617),
-      E = i(5618),
-      O = i(5619),
+      f = i(5618),
+      E = i(5619),
+      O = i(5620),
       y = (function (e) {
         function CastleResearchData(t) {
           var i = e.call(this) || this;
@@ -682451,7 +682507,7 @@
     ((t.CastleResearchData = y),
       o.classImplementsInterfaces(y, "ICastleBasicData"));
     var b = i(84),
-      D = i(5622),
+      D = i(5623),
       I = i(1972);
   },
   function (e, t, i) {
@@ -682462,7 +682518,7 @@
       a = i(2),
       s = i(3),
       r = i(30),
-      l = i(19),
+      l = i(20),
       c = i(23),
       u = i(41),
       d = i(24),
@@ -682892,8 +682948,8 @@
     var n = i(6),
       o = i(22),
       a = i(4),
-      s = i(5620),
-      r = i(5621),
+      s = i(5621),
+      r = i(5622),
       l = (function () {
         function ResearchTabVO() {
           ((this._tabId = 0),
@@ -683431,7 +683487,7 @@
         );
       })(i(342).CastleXmlData);
     t.CastleSagaMapData = a;
-    var s = i(5625);
+    var s = i(5626);
     o.classImplementsInterfaces(a, "IUpdatable");
   },
   function (e, t, i) {
@@ -683546,7 +683602,7 @@
     var n = i(0),
       o = i(5),
       a = i(6),
-      s = i(5627),
+      s = i(5628),
       r = i(456),
       l = i(70),
       c = i(4),
@@ -684532,7 +684588,7 @@
       I = i(35),
       v = i(31),
       T = i(854),
-      S = i(5629);
+      S = i(5630);
     l.classImplementsInterfaces(y, "IUpdatable");
   },
   function (e, t, i) {
@@ -684694,7 +684750,7 @@
     var n = i(0),
       o = i(1),
       a = i(6),
-      s = i(5631),
+      s = i(5632),
       r = i(390),
       l = i(15),
       c = i(70),
@@ -684844,7 +684900,7 @@
     t.CastleSpyData = g;
     var C = i(115),
       _ = i(1950),
-      m = i(5632);
+      m = i(5633);
   },
   function (e, t, i) {
     "use strict";
@@ -685111,7 +685167,7 @@
     })();
     t.CastleStartSpyVO = n;
     var o = i(115),
-      a = i(20),
+      a = i(19),
       s = i(1),
       r = i(5),
       l = i(5),
@@ -685125,7 +685181,7 @@
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
-      o = i(20),
+      o = i(19),
       a = (function (e) {
         function CastleSupportDefenceData() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -685146,7 +685202,7 @@
         );
       })(i(70).CastleEventDispatcher);
     t.CastleSupportDefenceData = a;
-    var s = i(5634);
+    var s = i(5635);
   },
   function (e, t, i) {
     "use strict";
@@ -685455,13 +685511,13 @@
       u = i(57),
       d = i(9),
       p = i(901),
-      h = i(5636),
-      g = i(5640),
+      h = i(5637),
+      g = i(5641),
       C = i(4),
       _ = i(161),
       m = i(384),
-      f = i(5641),
-      E = i(5642),
+      f = i(5642),
+      E = i(5643),
       O = i(1899),
       y = i(1164),
       b = (function (e) {
@@ -685744,9 +685800,9 @@
       s = i(3),
       r = i(3),
       l = i(3),
-      c = i(5637),
-      u = i(5638),
-      d = i(5639),
+      c = i(5638),
+      u = i(5639),
+      d = i(5640),
       p = i(1975),
       h = i(12),
       g = i(4),
@@ -686236,7 +686292,7 @@
         );
       })(i(70).CastleEventDispatcher);
     t.CastleTradeData = a;
-    var s = i(5644);
+    var s = i(5645);
   },
   function (e, t, i) {
     "use strict";
@@ -686266,7 +686322,7 @@
       );
     })();
     t.CastleTradeInfoVO = n;
-    var o = i(5645);
+    var o = i(5646);
   },
   function (e, t, i) {
     "use strict";
@@ -686422,8 +686478,8 @@
       s = i(1),
       r = i(5),
       l = i(6),
-      c = i(20),
-      u = i(5647),
+      c = i(19),
+      u = i(5648),
       d = i(1853),
       p = i(654),
       h = i(22),
@@ -686776,9 +686832,9 @@
       })(_.CastleBasicData);
     t.CastleTreasureMapData = f;
     var E = i(31),
-      O = i(5648),
+      O = i(5649),
       y = i(1764),
-      b = i(5649);
+      b = i(5650);
     a.classImplementsInterfaces(f, "IUpdatable");
   },
   function (e, t, i) {
@@ -688269,7 +688325,7 @@
       C = i(15),
       _ = i(57),
       m = i(4),
-      f = i(5651),
+      f = i(5652),
       E = i(1105),
       O = (function (e) {
         function CastleTutorialData(t) {
@@ -688770,7 +688826,7 @@
     t.CastleUserCastleListDetailed = n;
     var o = i(83),
       a = i(81),
-      s = i(5653),
+      s = i(5654),
       r = i(222),
       l = i(6),
       c = i(15);
@@ -689111,9 +689167,9 @@
       );
     })();
     t.ConstructionItemBlueprintData = n;
-    var o = i(5655),
+    var o = i(5656),
       a = i(2),
-      s = i(5656);
+      s = i(5657);
   },
   function (e, t, i) {
     "use strict";
@@ -689496,9 +689552,9 @@
       g = i(15),
       C = i(57),
       _ = i(50),
-      m = i(5659),
-      f = i(5660),
-      E = i(5661),
+      m = i(5660),
+      f = i(5661),
+      E = i(5662),
       O = (function (e) {
         function CurrencyData(t) {
           var i = e.call(this) || this;
@@ -690209,7 +690265,7 @@
       r = i(5),
       l = i(5),
       c = i(6),
-      u = i(5665),
+      u = i(5666),
       d = i(1220),
       p = i(15),
       h = i(57),
@@ -690367,8 +690423,8 @@
         );
       })(h.CastleBasicData);
     t.DecoStorageData = _;
-    var m = i(5666),
-      f = i(5667);
+    var m = i(5667),
+      f = i(5668);
     (a.classImplementsInterfaces(_, "IUpdatable"),
       _.__initialize_static_members());
   },
@@ -690469,10 +690525,10 @@
       l = i(329),
       c = i(15),
       u = i(4),
-      d = i(5668),
+      d = i(5669),
       p = i(328),
-      h = i(5669),
-      g = i(5670),
+      h = i(5670),
+      g = i(5671),
       C = (function () {
         function DecoStorageVO(e) {
           ((this._storageIDs = []),
@@ -691203,7 +691259,7 @@
         );
       })(s.CastleEventDispatcher);
     t.CastleEilandData = l;
-    var c = i(5672);
+    var c = i(5673);
   },
   function (e, t, i) {
     "use strict";
@@ -691507,7 +691563,7 @@
     var n = i(0),
       o = i(1),
       a = i(6),
-      s = i(5674),
+      s = i(5675),
       r = (function (e) {
         function FightPresetData(t) {
           var i = this;
@@ -691654,13 +691710,13 @@
     var l = i(81),
       c = i(42),
       u = i(47),
-      d = i(5675),
+      d = i(5676),
       p = i(53),
-      h = i(5676),
-      g = i(5677),
+      h = i(5677),
+      g = i(5678),
       C = i(22),
       _ = i(4),
-      m = i(5678);
+      m = i(5679);
     o.classImplementsInterfaces(r, "IUpdatable", "ICastleBasicData");
   },
   function (e, t, i) {
@@ -691896,7 +691952,7 @@
       d = i(4),
       p = i(220),
       h = i(441),
-      g = i(5680),
+      g = i(5681),
       C = (function (e) {
         function FusionForgeData(t) {
           var i = this;
@@ -692050,7 +692106,7 @@
     t.FusionForgeData = C;
     var _ = i(297),
       m = i(56),
-      f = i(5686);
+      f = i(5687);
     o.classImplementsInterfaces(C, "IUpdatable");
   },
   function (e, t, i) {
@@ -692274,11 +692330,11 @@
       a = i(22),
       s = i(4),
       r = i(220),
-      l = i(5681),
-      c = i(5682),
-      u = i(5683),
-      d = i(5684),
-      p = i(5685);
+      l = i(5682),
+      c = i(5683),
+      u = i(5684),
+      d = i(5685),
+      p = i(5686);
   },
   function (e, t, i) {
     "use strict";
@@ -692963,7 +693019,7 @@
       );
     })();
     t.CastlePartpaypriceData = n;
-    var o = i(5688);
+    var o = i(5689);
   },
   function (e, t, i) {
     "use strict";
@@ -693005,11 +693061,11 @@
       o = i(1),
       a = i(1),
       s = i(6),
-      r = i(20),
+      r = i(19),
       l = i(478),
       c = i(57),
       u = i(4),
-      d = i(5690),
+      d = i(5691),
       p = (function (e) {
         function PrebuiltCastleData(t) {
           var i = e.call(this) || this;
@@ -693171,7 +693227,7 @@
         );
       })(c.CastleBasicData);
     t.PrebuiltCastleData = p;
-    var h = i(5691),
+    var h = i(5692),
       g = i(1368),
       C = i(15);
     o.classImplementsInterfaces(p, "IUpdatable");
@@ -693454,7 +693510,7 @@
       })(l.CastleBasicData);
     t.AutoRecruitmentPriceData = u;
     var d = i(127),
-      p = i(5693);
+      p = i(5694);
     a.classImplementsInterfaces(u, "IUpdatable");
   },
   function (e, t, i) {
@@ -693606,8 +693662,8 @@
       })();
     t.CastleRewardData = o;
     var a = i(47),
-      s = i(5695),
-      r = i(5696);
+      s = i(5696),
+      r = i(5697);
   },
   function (e, t, i) {
     "use strict";
@@ -693695,7 +693751,7 @@
     var n = i(0),
       o = i(1),
       a = i(57),
-      s = i(5698),
+      s = i(5699),
       r = i(378),
       l = (function (e) {
         function SamuraiDaimyoData(t) {
@@ -693733,14 +693789,14 @@
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(6),
-      o = i(5699),
-      a = i(5700),
-      s = i(5701),
+      o = i(5700),
+      a = i(5701),
+      s = i(5702),
       r = i(15),
       l = i(1715),
       c = i(4),
-      u = i(5702),
-      d = i(5703),
+      u = i(5703),
+      d = i(5704),
       p = i(378),
       h = i(658),
       g = (function () {
@@ -694454,10 +694510,10 @@
       f = i(9),
       E = i(38),
       O = i(816),
-      y = i(5705),
+      y = i(5706),
       b = i(1965),
-      D = i(5706),
-      I = i(5710);
+      D = i(5707),
+      I = i(5711);
     s.classImplementsInterfaces(C, "IUpdatable");
   },
   function (e, t, i) {
@@ -694618,9 +694674,9 @@
       s = i(6),
       r = i(28),
       l = i(1680),
-      c = i(5707),
-      u = i(5708),
-      d = i(5709),
+      c = i(5708),
+      u = i(5709),
+      d = i(5710),
       p = i(29),
       h = i(15),
       g = i(4),
@@ -695072,11 +695128,11 @@
       r = i(901),
       l = i(4),
       c = i(460),
-      u = i(5711),
-      d = i(5712),
-      p = i(5713),
-      h = i(5714),
-      g = i(5715),
+      u = i(5712),
+      d = i(5713),
+      p = i(5714),
+      h = i(5715),
+      g = i(5716),
       C = (function () {
         function SeasonLeagueXml() {
           ((this._seasonMedals = new Map()),
@@ -695421,7 +695477,7 @@
     var _ = i(13),
       m = i(42),
       f = i(47),
-      E = i(5716);
+      E = i(5717);
   },
   function (e, t, i) {
     "use strict";
@@ -696121,41 +696177,41 @@
         );
       })();
     t.TutorialClientCommands = o;
-    var a = i(5718),
-      s = i(5721),
-      r = i(5723),
-      l = i(5724),
-      c = i(5725),
-      u = i(5726),
-      d = i(5727),
-      p = i(5728),
-      h = i(5729),
-      g = i(5730),
-      C = i(5731),
-      _ = i(5732),
-      m = i(5733),
-      f = i(5734),
-      E = i(5735),
-      O = i(5736),
-      y = i(5737),
-      b = i(5738),
-      D = i(5739),
-      I = i(5740),
-      v = i(5741),
-      T = i(5742),
-      S = i(5743),
-      A = i(5744),
-      L = i(5745),
-      P = i(5746),
-      M = i(5747),
-      R = i(5748),
-      V = i(5749),
-      x = i(5750),
-      w = i(5751),
-      B = i(5752),
-      F = i(5753),
-      N = i(5754),
-      k = i(5755);
+    var a = i(5719),
+      s = i(5722),
+      r = i(5724),
+      l = i(5725),
+      c = i(5726),
+      u = i(5727),
+      d = i(5728),
+      p = i(5729),
+      h = i(5730),
+      g = i(5731),
+      C = i(5732),
+      _ = i(5733),
+      m = i(5734),
+      f = i(5735),
+      E = i(5736),
+      O = i(5737),
+      y = i(5738),
+      b = i(5739),
+      D = i(5740),
+      I = i(5741),
+      v = i(5742),
+      T = i(5743),
+      S = i(5744),
+      A = i(5745),
+      L = i(5746),
+      P = i(5747),
+      M = i(5748),
+      R = i(5749),
+      V = i(5750),
+      x = i(5751),
+      w = i(5752),
+      B = i(5753),
+      F = i(5754),
+      N = i(5755),
+      k = i(5756);
   },
   function (e, t, i) {
     "use strict";
@@ -696165,8 +696221,8 @@
       a = i(1),
       s = i(4),
       r = i(17),
-      l = i(5719),
-      c = i(5720),
+      l = i(5720),
+      c = i(5721),
       u = (function (e) {
         function TutorialAskToSkipTutorialCommand() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -696651,7 +696707,7 @@
       v = i(465),
       T = i(1106),
       S = i(389),
-      A = i(5722),
+      A = i(5723),
       L = i(308),
       P = i(435),
       M = i(330),
@@ -698732,7 +698788,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(20),
+      a = i(19),
       s = i(1980),
       r = (function (e) {
         function TutorialRecruitUnitsCommand() {
@@ -699118,7 +699174,7 @@
     var n = i(0),
       o = i(1),
       a = i(57),
-      s = i(5757),
+      s = i(5758),
       r = (function (e) {
         function CastlePrivateResourceVillageData(t) {
           var i = e.call(this) || this;
@@ -699332,7 +699388,7 @@
       c = i(4),
       u = i(110),
       d = i(140),
-      p = i(5759),
+      p = i(5760),
       h = i(32),
       g = i(37),
       C = (function (e) {
@@ -699618,9 +699674,9 @@
       o = i(1),
       a = i(5),
       s = i(6),
-      r = i(5761),
-      l = i(5762),
-      c = i(5763),
+      r = i(5762),
+      l = i(5763),
+      c = i(5764),
       u = i(1954),
       d = i(119),
       p = i(51),
@@ -699634,10 +699690,10 @@
       O = i(4),
       y = i(479),
       b = i(204),
-      D = i(5764),
+      D = i(5765),
       I = i(1807),
-      v = i(5765),
-      T = i(5773),
+      v = i(5766),
+      T = i(5774),
       S = (function (e) {
         function CastleEquipmentData() {
           var t = this;
@@ -700510,14 +700566,14 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(6),
       o = i(22),
-      a = i(5766),
-      s = i(5767),
-      r = i(5768),
-      l = i(5769),
+      a = i(5767),
+      s = i(5768),
+      r = i(5769),
+      l = i(5770),
       c = i(487),
-      u = i(5770),
-      d = i(5771),
-      p = i(5772),
+      u = i(5771),
+      d = i(5772),
+      p = i(5773),
       h = (function () {
         function RelicEquipmentXml() {
           ((this._relicEffects = new Map()),
@@ -701220,11 +701276,11 @@
     var n = i(6),
       o = i(22),
       a = i(4),
-      s = i(5774),
-      r = i(5775),
-      l = i(5776),
-      c = i(5777),
-      u = i(5778),
+      s = i(5775),
+      r = i(5776),
+      l = i(5777),
+      c = i(5778),
+      u = i(5779),
       d = (function () {
         function EquipmentXml() {
           ((this._equipmentEffects = new Map()),
@@ -701927,10 +701983,10 @@
       s = i(6),
       r = i(51),
       l = i(81),
-      c = i(5780),
-      u = i(5781),
-      d = i(5782),
-      p = i(5783),
+      c = i(5781),
+      u = i(5782),
+      d = i(5783),
+      p = i(5784),
       h = i(236),
       g = i(15),
       C = i(70),
@@ -701939,8 +701995,8 @@
       f = i(601),
       E = i(1408),
       O = i(763),
-      y = i(5784),
-      b = i(5785),
+      y = i(5785),
+      b = i(5786),
       D = (function (e) {
         function CastleGemData() {
           var t = e.call(this) || this;
@@ -702671,7 +702727,7 @@
       s = i(1135),
       r = i(15),
       l = i(57),
-      c = i(5787),
+      c = i(5788),
       u = (function (e) {
         function CastleLostAndFoundData() {
           var t = this;
@@ -702834,7 +702890,7 @@
       a = i(2),
       s = i(1),
       r = i(6),
-      l = i(5789),
+      l = i(5790),
       c = i(22),
       u = i(1041),
       d = i(145),
@@ -702842,8 +702898,8 @@
       h = i(57),
       g = i(4),
       C = i(649),
-      _ = i(5790),
-      m = i(5791),
+      _ = i(5791),
+      m = i(5792),
       f = (function (e) {
         function OfficersSchoolData(t) {
           var i = this;
@@ -703355,18 +703411,18 @@
       u = i(29),
       d = i(15),
       p = i(57),
-      h = i(5793),
-      g = i(5794),
-      C = i(5795),
-      _ = i(5796),
-      m = i(5797),
-      f = i(5798),
-      E = i(5799),
+      h = i(5794),
+      g = i(5795),
+      C = i(5796),
+      _ = i(5797),
+      m = i(5798),
+      f = i(5799),
+      E = i(5800),
       O = i(1164),
       y = i(681),
-      b = i(5800),
+      b = i(5801),
       D = i(950),
-      I = i(5801),
+      I = i(5802),
       v = (function (e) {
         function CastleAllianceBattleGroundData(t) {
           var i = e.call(this) || this;
@@ -704406,7 +704462,7 @@
       o = i(1),
       a = i(55),
       s = i(57),
-      r = i(5803),
+      r = i(5804),
       l = (function (e) {
         function LandmarkData(t) {
           var i = e.call(this) || this;
@@ -704701,7 +704757,7 @@
       s = i(37),
       r = i(57),
       l = i(4),
-      c = i(5807),
+      c = i(5808),
       u = (function (e) {
         function CastleFortuneTellerData(t) {
           var i = e.call(this) || this;
@@ -704928,7 +704984,7 @@
   function (e, t, i) {
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
-    var n = i(5811),
+    var n = i(5812),
       o = (function () {
         function CastleNewsletterData(e) {
           this.parseXML(e);
@@ -704999,7 +705055,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(70),
-      a = i(5813),
+      a = i(5814),
       s = i(22),
       r = (function (e) {
         function DynamicTopXxmlData(t) {
@@ -705086,11 +705142,11 @@
     var n = i(0),
       o = i(1),
       a = i(57),
-      s = i(5815),
-      r = i(5816),
-      l = i(5817),
+      s = i(5816),
+      r = i(5817),
+      l = i(5818),
       c = i(1100),
-      u = i(5818),
+      u = i(5819),
       d = (function (e) {
         function CastleEventDifficultyScalingData(t) {
           var i = e.call(this) || this;
@@ -705958,7 +706014,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(70),
-      a = i(5820),
+      a = i(5821),
       s = i(29),
       r = i(28),
       l = i(37),
@@ -706235,9 +706291,9 @@
       s = i(1),
       r = i(1),
       l = i(1),
-      c = i(5828),
-      u = i(5829),
-      d = i(5830),
+      c = i(5829),
+      u = i(5830),
+      d = i(5831),
       p = (function (e) {
         function CastleTextFieldFactory() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -707113,4 +707169,4 @@
     t.ModernStartscreenComponent = p;
   },
 ]);
-//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/Game.bundle.e2ca3c4ee155ea53c7c7.js.map
+//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/Game.bundle.58d319efe36aacf6c6ab.js.map
