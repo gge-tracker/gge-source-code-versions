@@ -7516,6 +7516,8 @@
                 new EffectTypeEnum(34)),
               (EffectTypeEnum.EFFECT_TYPE_HIDEOUT_CAPACITY = new EffectTypeEnum(
                 35,
+                null,
+                a.GenericTextIds.VALUE_NOMINAL_ADD,
               )),
               (EffectTypeEnum.EFFECT_TYPE_ATTACK_BONUS = new EffectTypeEnum(
                 36,
@@ -30625,7 +30627,9 @@
               if (t) return new t();
             }
             var i = WorldmapObjectFactory.mapObjectVOs.get(e);
-            return i ? new i() : null;
+            if (i) return new i();
+            var n = WorldmapObjectFactory.jadeMapObjectVOs.get(e);
+            return n ? new n() : null;
           }),
           (WorldmapObjectFactory.parseWorldMapArea = function (e, t) {
             if ((void 0 === t && (t = !0), !e)) return null;
@@ -101792,10 +101796,10 @@
                   var l = r.int(a[1]),
                     c = r.int(a[2]);
                   if (a.length <= 0) return [];
-                  ((s = s
+                  (s = s
                     ? s.castAsAreaTypeAndParse(a)
-                    : O.WorldmapObjectFactory.parseWorldMapArea(a)),
-                    this.areaTiles.insertAreaVOByXY(s, l, c),
+                    : O.WorldmapObjectFactory.parseWorldMapArea(a)) &&
+                    (this.areaTiles.insertAreaVOByXY(s, l, c),
                     s.remainingCooldownTimeInSeconds > 0 &&
                       (this._areasWithCoolDown ||
                         (this._areasWithCoolDown = []),
@@ -137667,29 +137671,30 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(2),
       o = i(2),
-      a = i(5),
-      s = i(6),
-      r = i(28),
-      l = i(282),
-      c = i(21),
-      u = i(120),
-      d = i(1276),
-      p = i(42),
-      h = i(47),
-      g = i(39),
-      C = i(29),
-      _ = i(15),
-      m = i(1277),
-      f = i(4),
-      E = i(104),
-      O = i(2221),
-      y = i(50),
-      b = i(142),
-      D = i(33),
-      I = i(2222),
-      v = i(317),
-      T = i(2223),
-      S = (function () {
+      a = i(2),
+      s = i(5),
+      r = i(6),
+      l = i(28),
+      c = i(282),
+      u = i(21),
+      d = i(120),
+      p = i(1276),
+      h = i(42),
+      g = i(47),
+      C = i(39),
+      _ = i(29),
+      m = i(15),
+      f = i(1277),
+      E = i(4),
+      O = i(104),
+      y = i(2221),
+      b = i(50),
+      D = i(142),
+      I = i(33),
+      v = i(2222),
+      T = i(317),
+      S = i(2223),
+      A = (function () {
         function AllianceInfoVO() {
           ((this._mightPoints = 0),
             (this._allianceId = 0),
@@ -137714,8 +137719,8 @@
             (this.allianceForgeRelicUsagesHard = 0),
             (this._allianceLanguage = ""),
             (this._crestLayoutEndTimeStamps = new Map()),
-            (this._landmarksList = new P.AllianceLandmarksList()),
-            (this._allianceCrestVO = new v.AllianceCrestVO()));
+            (this._landmarksList = new M.AllianceLandmarksList()),
+            (this._allianceCrestVO = new T.AllianceCrestVO()));
         }
         return (
           (AllianceInfoVO.prototype.fillFromParamObject = function (e) {
@@ -137743,35 +137748,35 @@
               this._landmarksList.parseCompleteLandmarksList(e),
               this.parseStatusList(e.ADL),
               this.parseBuffList(e.ABL),
-              (this._allianceFamePoints = s.int(e.CF)),
-              (this._freeRenames = s.int(e.FR)),
+              (this._allianceFamePoints = r.int(e.CF)),
+              (this._freeRenames = r.int(e.FR)),
               (this._canInvitedForHardPact = 1 == e.HP),
               (this._canInvitedForSoftPact = 1 == e.SP),
               null != e.MF &&
                 null != e.IF &&
                 ((this.isAbleToForge = 1 == e.MF),
                 (this.isInventoryFull = 1 == e.IF),
-                (this.allianceForgeRelicUsagesSoft = s.int(e.SRFU)),
-                (this.allianceForgeRelicUsagesHard = s.int(e.HRFU)),
-                f.CastleModel.allianceData.dispatchEvent(
-                  new u.CastleEquipmentEvent(
-                    u.CastleEquipmentEvent.FORGE_DATA_RECEIVED,
+                (this.allianceForgeRelicUsagesSoft = r.int(e.SRFU)),
+                (this.allianceForgeRelicUsagesHard = r.int(e.HRFU)),
+                E.CastleModel.allianceData.dispatchEvent(
+                  new d.CastleEquipmentEvent(
+                    d.CastleEquipmentEvent.FORGE_DATA_RECEIVED,
                   ),
                 )),
               null != e.PO)
             ) {
               this._isInPeaceNegociations = !0;
               var t = e.PO.T < 0,
-                i = s.int(t ? -1 * e.PO.T : e.PO.T);
-              ((this._peaceOfferVO = new m.PeaceOfferVO(
+                i = r.int(t ? -1 * e.PO.T : e.PO.T);
+              ((this._peaceOfferVO = new f.PeaceOfferVO(
                 this.allianceId,
                 this.allianceName,
                 i,
                 t,
                 e.PO.TS,
               )),
-                f.CastleModel.timerData.addEventListener(
-                  c.CastleTimerEvent.TIMER_INTERVAL_SECOND,
+                E.CastleModel.timerData.addEventListener(
+                  u.CastleTimerEvent.TIMER_INTERVAL_SECOND,
                   this.bindFunction(this.onPeaceOfferCastleTimer),
                 ));
             } else this._isInPeaceNegociations = !1;
@@ -137782,15 +137787,15 @@
             ) {
               this._crestLayoutEndTimeStamps.clear();
               for (var o = 0, a = e.ACLS; o < a.length; o++) {
-                var l = a[o],
-                  d = l.ACLI,
+                var s = a[o],
+                  c = s.ACLI,
                   p =
-                    C.CachedTimer.getCachedTimer() +
-                    l.ACLET * r.ClientConstTime.SEC_2_MILLISEC;
-                this._crestLayoutEndTimeStamps.set(d, {
+                    _.CachedTimer.getCachedTimer() +
+                    s.ACLET * l.ClientConstTime.SEC_2_MILLISEC;
+                this._crestLayoutEndTimeStamps.set(c, {
                   endTime: p,
-                  active: 1 == l.ACIA,
-                  colors: l.ACLCS,
+                  active: 1 == s.ACIA,
+                  colors: s.ACLCS,
                 });
               }
             }
@@ -137800,57 +137805,57 @@
               i = this;
             if (
               e &&
-              ((this._storage = new h.CollectableList()),
+              ((this._storage = new g.CollectableList()),
               Array.from(
-                f.CastleModel.allianceData.allianceFundsDonateble.values(),
+                E.CastleModel.allianceData.allianceFundsDonateble.values(),
               ).forEach(function (t) {
                 var n = t.createCollectableItemVO(),
-                  o = p.CollectableHelper.getServerKeyByCollectable(n);
+                  o = h.CollectableHelper.getServerKeyByCollectable(n);
                 ((n.amount = e[o] || 0), i._storage.addItem(n));
               }),
-              g.ABGHelper.isOnABGServer)
+              C.ABGHelper.isOnABGServer)
             )
-              if (g.ABGHelper.abgEvent) {
+              if (C.ABGHelper.abgEvent) {
                 if (
-                  (((t = new A.CollectableItemGenericCurrencyVO(
-                    g.ABGHelper.abgEvent.settingVO.allianceCurrencyID,
+                  (((t = new L.CollectableItemGenericCurrencyVO(
+                    C.ABGHelper.abgEvent.settingVO.allianceCurrencyID,
                   )).amount = e[t.xmlCurrencyVO.jsonKey] || 0),
                   this._storage.addItem(t),
-                  g.ABGHelper.abgEvent.settingVO.malusCurrencyID > 0)
+                  C.ABGHelper.abgEvent.settingVO.malusCurrencyID > 0)
                 ) {
-                  var n = new A.CollectableItemGenericCurrencyVO(
-                    g.ABGHelper.abgEvent.settingVO.malusCurrencyID,
+                  var n = new L.CollectableItemGenericCurrencyVO(
+                    C.ABGHelper.abgEvent.settingVO.malusCurrencyID,
                   );
                   ((n.amount = e[n.xmlCurrencyVO.jsonKey] || 0),
                     this._storage.addItem(n));
                 }
               } else
                 e.AIN &&
-                  (((t = new A.CollectableItemGenericCurrencyVO(
-                    y.ClientConstCurrency.ID_ALLIANCE_INFLUENCE,
+                  (((t = new L.CollectableItemGenericCurrencyVO(
+                    b.ClientConstCurrency.ID_ALLIANCE_INFLUENCE,
                   )).amount = e[t.xmlCurrencyVO.jsonKey] || 0),
                   this._storage.addItem(t));
           }),
           (AllianceInfoVO.prototype.parseAMI = function (e) {
             if (((this._additionalMemberInfos = new Map()), e))
               for (var t = 0; t < e.length; t++) {
-                var i = new I.AdditionalMemberInfoVO();
+                var i = new v.AdditionalMemberInfoVO();
                 (i.parseAMI(e[t]),
                   this._additionalMemberInfos.set(i.playerId, i));
               }
           }),
           (AllianceInfoVO.prototype.parseAFA = function (e) {
-            ((this._allianceFamePoints = s.int(e.CF)),
-              (this._allianceFamePointsHighestReached = s.int(e.HF)),
-              _.CastleBasicController.getInstance().dispatchEvent(
-                new d.CastleFameDataEvent(
-                  d.CastleFameDataEvent.UPDATE_DATA_ALLY_FAME,
+            ((this._allianceFamePoints = r.int(e.CF)),
+              (this._allianceFamePointsHighestReached = r.int(e.HF)),
+              m.CastleBasicController.getInstance().dispatchEvent(
+                new p.CastleFameDataEvent(
+                  p.CastleFameDataEvent.UPDATE_DATA_ALLY_FAME,
                 ),
               ));
           }),
           (AllianceInfoVO.prototype.updateAllyFame = function (e, t) {
-            ((this._allianceFamePoints = s.int(e)),
-              (this._allianceFamePointsHighestReached = s.int(t)));
+            ((this._allianceFamePoints = r.int(e)),
+              (this._allianceFamePointsHighestReached = r.int(t)));
           }),
           (AllianceInfoVO.prototype.parseABL = function (e) {
             e && this.parseBuffList(e.ABL ? e.ABL : e);
@@ -137863,8 +137868,8 @@
                   o = e[t].L,
                   a = -1;
                 (-1 != n &&
-                  (a = s.int(C.CachedTimer.getCachedTimer() / 1e3 + n)),
-                  this._allianceBuffs.set(i, new O.BuffVO(o, a)));
+                  (a = r.int(_.CachedTimer.getCachedTimer() / 1e3 + n)),
+                  this._allianceBuffs.set(i, new y.BuffVO(o, a)));
               }
           }),
           (AllianceInfoVO.prototype.hasBoughtBuff = function (e) {
@@ -137879,7 +137884,7 @@
           (AllianceInfoVO.prototype.parseActionList = function (e) {
             this._actionList = [];
             for (var t = 0; t < e.length; t++) {
-              var i = new L.AllianceActionListItemVO();
+              var i = new P.AllianceActionListItemVO();
               (i.parseActionListItem(e[t]), this._actionList.push(i));
             }
             this._actionList.reverse();
@@ -137887,24 +137892,24 @@
           (AllianceInfoVO.prototype.parseMemberList = function (e) {
             this._memberList = [];
             for (
-              var t = C.CachedTimer.getCachedTimer(), i = 0;
+              var t = _.CachedTimer.getCachedTimer(), i = 0;
               i < e.length;
               i++
             )
               this._memberList.push(
-                f.CastleModel.otherPlayerData.parseOwnerInfo(e[i], t),
+                E.CastleModel.otherPlayerData.parseOwnerInfo(e[i], t),
               );
             this._memberList.sort(this.bindFunction(this.sortOnRank));
           }),
           (AllianceInfoVO.prototype.parseStatusList = function (e) {
             if (((this._otherAllianceStatusList = []), e))
               for (var t = 0; t < e.length; t++) {
-                var i = s.int(e[t].AID),
+                var i = r.int(e[t].AID),
                   n = e[t].AN,
-                  o = s.int(e[t].AS),
-                  a = s.int(e[t].AC);
+                  o = r.int(e[t].AS),
+                  a = r.int(e[t].AC);
                 this._otherAllianceStatusList.push(
-                  new T.OtherAllianceStatusListItemVO(i, n, o, a),
+                  new S.OtherAllianceStatusListItemVO(i, n, o, a),
                 );
               }
           }),
@@ -137926,7 +137931,7 @@
                 var o = n[i];
                 void 0 !== o &&
                   (e = this.getAdditionalMemberInfos(o.playerID)) &&
-                  e.loginActivity == a.AllianceConst.ONLINESTATE_ONLINE &&
+                  e.loginActivity == s.AllianceConst.ONLINESTATE_ONLINE &&
                   t.push(o);
               }
             return (t.sort(this.bindFunction(this.sortOnRank)), t);
@@ -137946,7 +137951,7 @@
           Object.defineProperty(AllianceInfoVO.prototype, "allianceHonor", {
             get: function () {
               for (var e = 0, t = 0; t < this._memberList.length; t++)
-                e += s.int(this._memberList[t].honor);
+                e += r.int(this._memberList[t].honor);
               return e / this._memberList.length;
             },
             enumerable: !0,
@@ -137995,14 +138000,14 @@
           }),
           Object.defineProperty(AllianceInfoVO.prototype, "memberMax", {
             get: function () {
-              return g.ABGHelper.isOnABGServer && g.ABGHelper.abgEvent
-                ? g.ABGHelper.abgEvent.settingVO.maxAllianceSize
-                : f.CastleModel.allianceBuffData
+              return C.ABGHelper.isOnABGServer && C.ABGHelper.abgEvent
+                ? C.ABGHelper.abgEvent.settingVO.maxAllianceSize
+                : E.CastleModel.allianceBuffData
                     .getAllianceBuffVoBySeriesIDAndLevel(
-                      a.AllianceConst.TYPE_MEMBERS,
+                      s.AllianceConst.TYPE_MEMBERS,
                       this.memberLevel,
                     )
-                    .getBonusVOByEffectType(D.EffectTypeEnum.EFFECT_TYPE_MEMBER)
+                    .getBonusVOByEffectType(I.EffectTypeEnum.EFFECT_TYPE_MEMBER)
                     .strength;
             },
             enumerable: !0,
@@ -138016,21 +138021,21 @@
             configurable: !0,
           }),
           (AllianceInfoVO.prototype.getBoostLevel = function (e) {
-            return s.int(this._allianceBuffs.get(e).level);
+            return r.int(this._allianceBuffs.get(e).level);
           }),
           (AllianceInfoVO.prototype.getBoostDuration = function (e, t) {
-            return s.int(f.CastleModel.allianceBuffData.getBuffDuration(e, t));
+            return r.int(E.CastleModel.allianceBuffData.getBuffDuration(e, t));
           }),
           (AllianceInfoVO.prototype.getRemainingBoostDuration = function (e) {
-            return s.int(this._allianceBuffs.get(e).remainingDuration);
+            return r.int(this._allianceBuffs.get(e).remainingDuration);
           }),
           (AllianceInfoVO.prototype.getBoostMaxLevel = function (e) {
-            return s.int(f.CastleModel.allianceBuffData.maxLevelOfBuff(e));
+            return r.int(E.CastleModel.allianceBuffData.maxLevelOfBuff(e));
           }),
           (AllianceInfoVO.prototype.isBoostUpgradeable = function (e) {
             return (
-              !(!f.CastleModel.allianceBuffData || !this._allianceBuffs) &&
-              f.CastleModel.allianceBuffData.isUpgradeAble(
+              !(!E.CastleModel.allianceBuffData || !this._allianceBuffs) &&
+              E.CastleModel.allianceBuffData.isUpgradeAble(
                 e,
                 this._allianceBuffs.get(e).level,
               )
@@ -138039,23 +138044,23 @@
           (AllianceInfoVO.prototype.canTemporaryBoostBeActivated = function (
             e,
           ) {
-            var t = s.int(
-              f.CastleModel.allianceBuffData.getRequiredBuffID(
+            var t = r.int(
+              E.CastleModel.allianceBuffData.getRequiredBuffID(
                 e,
                 this._allianceBuffs.get(e).level + 1,
               ),
             );
             if (-1 == t) return !0;
-            var i = s.int(
-                f.CastleModel.allianceBuffData.getBuffLevelByBuffID(t),
+            var i = r.int(
+                E.CastleModel.allianceBuffData.getBuffLevelByBuffID(t),
               ),
-              n = s.int(
-                f.CastleModel.allianceBuffData.getBuffSeriesIDByBuffID(t),
+              n = r.int(
+                E.CastleModel.allianceBuffData.getBuffSeriesIDByBuffID(t),
               );
             return this._allianceBuffs.get(n).level >= i;
           }),
           (AllianceInfoVO.prototype.isBoosterTemporary = function (e) {
-            return f.CastleModel.allianceBuffData.isTemporaryBuff(
+            return E.CastleModel.allianceBuffData.isTemporaryBuff(
               e,
               this._allianceBuffs.get(e).level + 1,
             );
@@ -138070,22 +138075,22 @@
             this.peaceOfferVO &&
               (this.peaceOfferVO.remainingTimeInSeconds--,
               this.peaceOfferVO.remainingTimeInSeconds <= 0 &&
-                (f.CastleModel.timerData.removeEventListener(
-                  c.CastleTimerEvent.TIMER_INTERVAL_SECOND,
+                (E.CastleModel.timerData.removeEventListener(
+                  u.CastleTimerEvent.TIMER_INTERVAL_SECOND,
                   this.bindFunction(this.onPeaceOfferCastleTimer),
                 ),
-                f.CastleModel.smartfoxClient.sendCommandVO(
-                  new l.C2SGetAllianceInfoVO(this._allianceId),
+                E.CastleModel.smartfoxClient.sendCommandVO(
+                  new c.C2SGetAllianceInfoVO(this._allianceId),
                 )));
           }),
           (AllianceInfoVO.prototype.getUpgradeCosts = function (e) {
             return this.isBoostUpgradeable(e)
-              ? f.CastleModel.allianceBuffData.getCosts(
+              ? E.CastleModel.allianceBuffData.getCosts(
                   e,
                   this._allianceBuffs.get(e).level + 1,
                 )
               : this.isBoosterTemporary
-                ? f.CastleModel.allianceBuffData.getCosts(
+                ? E.CastleModel.allianceBuffData.getCosts(
                     e,
                     this._allianceBuffs.get(e).level,
                   )
@@ -138097,12 +138102,12 @@
             {
               get: function () {
                 return (
-                  f.CastleModel.allianceBuffData
+                  E.CastleModel.allianceBuffData
                     .getAllianceBuffVoBySeriesIDAndLevel(
-                      a.AllianceConst.TYPE_MEMBERS,
+                      s.AllianceConst.TYPE_MEMBERS,
                       this.memberLevel + 1,
                     )
-                    .getBonusVOByEffectType(D.EffectTypeEnum.EFFECT_TYPE_MEMBER)
+                    .getBonusVOByEffectType(I.EffectTypeEnum.EFFECT_TYPE_MEMBER)
                     .strength - this.memberMax
                 );
               },
@@ -138115,29 +138120,50 @@
           }),
           (AllianceInfoVO.prototype.getUpgradeBoostValue = function (e, t) {
             return this.isBoostUpgradeable(e)
-              ? s.int(
+              ? r.int(
                   this.getBoostValue(
                     e,
                     this._allianceBuffs.get(e).level + 1,
                     t,
                   ),
                 )
-              : s.int(
+              : r.int(
                   this.getBoostValue(e, this._allianceBuffs.get(e).level, t),
                 );
           }),
           (AllianceInfoVO.prototype.getBoostValue = function (e, t, i) {
             var n = 0,
               o =
-                f.CastleModel.allianceBuffData.getAllianceBuffVoBySeriesIDAndLevel(
+                E.CastleModel.allianceBuffData.getAllianceBuffVoBySeriesIDAndLevel(
                   e,
                   t,
                 );
             if (o) {
               var a = o.getBonusVOByEffectType(i);
-              a && (n = s.int(a.strength));
+              a && (n = r.int(a.strength));
             }
             return n;
+          }),
+          (AllianceInfoVO.prototype.getBoostValueTextID = function (e, t) {
+            var i = t,
+              n = this._allianceBuffs ? this._allianceBuffs.get(e) : null;
+            if (n) {
+              var o = this.isBoostUpgradeable(e) ? n.level + 1 : n.level,
+                s =
+                  E.CastleModel.allianceBuffData.getAllianceBuffVoBySeriesIDAndLevel(
+                    e,
+                    o,
+                  ),
+                r = s ? s.getBonusVOByEffectType(t) : null;
+              r &&
+                r.effect &&
+                r.effect.effectType &&
+                r.effect.effectType.type &&
+                (i = r.effect.effectType.type);
+            }
+            return i
+              ? i.simpleValueTextID
+              : a.GenericTextIds.VALUE_PERCENTAGE_ADD;
           }),
           Object.defineProperty(
             AllianceInfoVO.prototype,
@@ -138189,22 +138215,22 @@
                   void 0 !== n &&
                   n.allianceID == e &&
                   n.allianceStatusConfirmed ==
-                    a.AllianceConst.DIPLOMACY_CONFIRMED
+                    s.AllianceConst.DIPLOMACY_CONFIRMED
                 )
                   return n.allianceStatus;
               }
-            return s.int(a.AllianceConst.DIPLOMACY_NEUTRAL);
+            return r.int(s.AllianceConst.DIPLOMACY_NEUTRAL);
           }),
           (AllianceInfoVO.prototype.getTestlist = function (e) {
             for (var t = [], i = 0; i < 20; i++)
               t.push(
-                new T.OtherAllianceStatusListItemVO(
+                new S.OtherAllianceStatusListItemVO(
                   i,
                   "Alli " + i,
                   e,
                   o.Random.boolean()
-                    ? a.AllianceConst.DIPLOMACY_REQUEST
-                    : a.AllianceConst.DIPLOMACY_CONFIRMED,
+                    ? s.AllianceConst.DIPLOMACY_REQUEST
+                    : s.AllianceConst.DIPLOMACY_CONFIRMED,
                 ),
               );
             return t;
@@ -138235,7 +138261,7 @@
                     if (
                       void 0 !== i &&
                       i.allianceStatusConfirmed ==
-                        a.AllianceConst.DIPLOMACY_REQUEST
+                        s.AllianceConst.DIPLOMACY_REQUEST
                     )
                       return !0;
                   }
@@ -138252,7 +138278,7 @@
               get: function () {
                 return Math.min(
                   this._allianceFamePoints,
-                  a.AllianceConst.FAME_CAP,
+                  s.AllianceConst.FAME_CAP,
                 );
               },
               enumerable: !0,
@@ -138261,7 +138287,7 @@
           ),
           Object.defineProperty(AllianceInfoVO.prototype, "allianceFameLevel", {
             get: function () {
-              return f.CastleModel.allianceFameData.getLevelFromFamePoints(
+              return E.CastleModel.allianceFameData.getLevelFromFamePoints(
                 this.allianceFamePoints,
               );
             },
@@ -138273,7 +138299,7 @@
             "highestReachedFameLevel",
             {
               get: function () {
-                return f.CastleModel.allianceFameData.getLevelFromFamePoints(
+                return E.CastleModel.allianceFameData.getLevelFromFamePoints(
                   this.allianceFamePointsHighestReached,
                 );
               },
@@ -138286,7 +138312,7 @@
             "allianceFamePointsNeedForNextLevel",
             {
               get: function () {
-                return f.CastleModel.allianceFameData.getFamePointsForLevel(
+                return E.CastleModel.allianceFameData.getFamePointsForLevel(
                   this.allianceFameLevel + 1,
                 );
               },
@@ -138299,7 +138325,7 @@
             "allianceFamePointsNeedForThisLevel",
             {
               get: function () {
-                return f.CastleModel.allianceFameData.getFamePointsForLevel(
+                return E.CastleModel.allianceFameData.getFamePointsForLevel(
                   this.allianceFameLevel,
                 );
               },
@@ -138339,7 +138365,7 @@
             "allianceNextFameLevelVO",
             {
               get: function () {
-                return f.CastleModel.allianceFameData.getFameVOByLevel(
+                return E.CastleModel.allianceFameData.getFameVOByLevel(
                   this.allianceFameLevel + 1,
                 );
               },
@@ -138352,7 +138378,7 @@
             "allianceCurrentFameLevelVO",
             {
               get: function () {
-                return f.CastleModel.allianceFameData.getFameVOByLevel(
+                return E.CastleModel.allianceFameData.getFameVOByLevel(
                   this.allianceFameLevel,
                 );
               },
@@ -138424,8 +138450,8 @@
               get: function () {
                 return (
                   this.allianceFameLevel >=
-                  f.CastleModel.allianceFameData.getLevelFromFamePoints(
-                    a.AllianceConst.FAME_CAP,
+                  E.CastleModel.allianceFameData.getLevelFromFamePoints(
+                    s.AllianceConst.FAME_CAP,
                   )
                 );
               },
@@ -138520,8 +138546,8 @@
           Object.defineProperty(AllianceInfoVO.prototype, "memberLevel", {
             get: function () {
               return void 0 !==
-                this._allianceBuffs.get(a.AllianceConst.TYPE_MEMBERS)
-                ? this._allianceBuffs.get(a.AllianceConst.TYPE_MEMBERS).level
+                this._allianceBuffs.get(s.AllianceConst.TYPE_MEMBERS)
+                ? this._allianceBuffs.get(s.AllianceConst.TYPE_MEMBERS).level
                 : this._externalMemberLevel;
             },
             enumerable: !0,
@@ -138538,10 +138564,10 @@
               void 0 === i && (i = -1),
               void 0 === n && (n = -1),
               void 0 === o && (o = null));
-            var a = E.CastleEffectsHelper.getTotalEffectValue(
+            var a = O.CastleEffectsHelper.getTotalEffectValue(
               this.getTotalAllianceBuffEffectsByType(
                 e,
-                new b.CastleEffectConditionVO(t, i, n, o),
+                new D.CastleEffectConditionVO(t, i, n, o),
               ),
               !0,
             );
@@ -138550,7 +138576,7 @@
           (AllianceInfoVO.prototype.getTotalAllianceBuffEffectsByType =
             function (e, t) {
               (void 0 === t && (t = null),
-                (t = t || b.CastleEffectConditionVO.NULL_CONDITION));
+                (t = t || D.CastleEffectConditionVO.NULL_CONDITION));
               var i = [];
               if (null != this._allianceBuffs)
                 for (
@@ -138562,7 +138588,7 @@
                   if (void 0 !== a) {
                     var s = this._allianceBuffs.get(a),
                       r =
-                        f.CastleModel.allianceBuffData.getAllianceBuffVoBySeriesIDAndLevel(
+                        E.CastleModel.allianceBuffData.getAllianceBuffVoBySeriesIDAndLevel(
                           a,
                           s.level,
                         );
@@ -138621,8 +138647,8 @@
           ) {
             var t = this.getEndTimeStampForLayout(e);
             return t > 0
-              ? (t - C.CachedTimer.getCachedTimer()) *
-                  r.ClientConstTime.MILLISEC_2_SEC
+              ? (t - _.CachedTimer.getCachedTimer()) *
+                  l.ClientConstTime.MILLISEC_2_SEC
               : -1;
           }),
           (AllianceInfoVO.prototype.isLayoutActive = function (e) {
@@ -138643,7 +138669,7 @@
               e &&
                 e.ACLI &&
                 e.ACCS &&
-                ((this._fallbackCrestVO = new v.AllianceCrestVO()),
+                ((this._fallbackCrestVO = new T.AllianceCrestVO()),
                 this._fallbackCrestVO.fillWithData(e)));
           }),
           (AllianceInfoVO.prototype.getEffectStrengthByType = function (
@@ -138673,7 +138699,7 @@
               void 0 === o && (o = null));
             var a = this.getLayoutEffectsByType(
                 e,
-                new b.CastleEffectConditionVO(t, i, n, o),
+                new D.CastleEffectConditionVO(t, i, n, o),
               ),
               s = a && a.length > 0 ? a[0] : null;
             return s ? s.strength : 0;
@@ -138684,7 +138710,7 @@
               !this._allianceCrestVO || !this._allianceCrestVO.layoutVO)
             )
               return [];
-            t = t || b.CastleEffectConditionVO.NULL_CONDITION;
+            t = t || D.CastleEffectConditionVO.NULL_CONDITION;
             var i = this._allianceCrestVO.layoutVO.effects;
             return i && 0 != i.length
               ? (i = i.filter(function (i) {
@@ -138719,10 +138745,10 @@
           AllianceInfoVO
         );
       })();
-    t.AllianceInfoVO = S;
-    var A = i(143),
-      L = i(2224),
-      P = i(1278);
+    t.AllianceInfoVO = A;
+    var L = i(143),
+      P = i(2224),
+      M = i(1278);
   },
   function (e, t, i) {
     "use strict";
@@ -140407,13 +140433,23 @@
               this._areaEffects = e
                 ? e.filter(function (e) {
                     return (
-                      !!e.effect && -1 == t.indexOf(e.effect.effectType.type)
+                      !!e.effect &&
+                      -1 == t.indexOf(e.effect.effectType.type) &&
+                      !LordVO.isZeroValueEffect(e)
                     );
                   })
                 : [];
             },
             enumerable: !0,
             configurable: !0,
+          }),
+          (LordVO.isZeroValueEffect = function (e) {
+            return (
+              !!e.effectValue &&
+              !u.instanceOfClass(e.effectValue, "EffectValueTools") &&
+              !u.instanceOfClass(e.effectValue, "EffectValueIdList") &&
+              0 === e.strength
+            );
           }),
           Object.defineProperty(LordVO.prototype, "assignedGeneralVO", {
             get: function () {
@@ -165922,7 +165958,7 @@
   function (e) {
     e.exports = {
       name: "TranspilationEmpire",
-      version: "1.173.7",
+      version: "1.173.9",
       description: "Transpiled version of the Flash game",
       main: "index.js",
       repository:
@@ -235764,14 +235800,20 @@
                     String(this.allianceInfoVO.memberAmount),
                     String(this.allianceInfoVO.memberMax),
                   ])
-                : new l.LocalizedTextVO("value_percentage_add", [
-                    String(
-                      this.allianceInfoVO.getCurrentBoostValue(
-                        this.buffVO.seriesID,
-                        u.EffectTypeEnum.EFFECT_TYPE_UNKNOWN,
-                      ),
+                : new l.LocalizedTextVO(
+                    this.allianceInfoVO.getBoostValueTextID(
+                      this.buffVO.seriesID,
+                      u.EffectTypeEnum.EFFECT_TYPE_UNKNOWN,
                     ),
-                  ]);
+                    [
+                      String(
+                        this.allianceInfoVO.getCurrentBoostValue(
+                          this.buffVO.seriesID,
+                          u.EffectTypeEnum.EFFECT_TYPE_UNKNOWN,
+                        ),
+                      ),
+                    ],
+                  );
             }),
           (CastleAllianceDialogTreasuryBoosterItem_OneEffect.prototype.updateButton =
             function () {
@@ -335083,8 +335125,9 @@
             (e.prototype.parseAreaInfo.call(this, t),
               t.length > 18 &&
                 ((this._resourceCampID = r.int(t[18][0])),
-                (this._remaining = r.int(t[18][1]))),
-              (this._ownerInfo.playerLevel = this.getResourceCampVO().level),
+                (this._remaining = r.int(t[18][1]))));
+            var i = this.getResourceCampVO();
+            (i && this._ownerInfo && (this._ownerInfo.playerLevel = i.level),
               this.dispatchEvent(
                 c.EventInstanceMapper.getEvent(
                   p.VisualVOEvent,
@@ -335222,8 +335265,9 @@
             (e.prototype.parseAreaInfo.call(this, t),
               t.length > 18 &&
                 ((this._tradingCampID = r.int(t[18][0])),
-                (this._remaining = r.int(t[18][1]))),
-              (this._ownerInfo.playerLevel = this.getTradingCampVO().level),
+                (this._remaining = r.int(t[18][1]))));
+            var i = this.getTradingCampVO();
+            (i && this._ownerInfo && (this._ownerInfo.playerLevel = i.level),
               this.dispatchEvent(
                 l.EventInstanceMapper.getEvent(
                   d.VisualVOEvent,
@@ -411231,45 +411275,48 @@
             (this._disp.mc_bluePrintEffect2.visible = !1),
             (this._disp.mc_bluePrintEffect3.visible = !1));
           for (var i = 0; i < t.effectsAmount; i++) {
-            var n = t.getBluePrintEffectName(i),
-              o = this._disp["mc_bluePrintEffect" + (i > 0 ? i : "")];
-            o.visible = !0;
-            var a = ConstructionItemToolTip.textFieldManager.registerTextField(
-                o.txt_bp_effect,
-                new p.TextVO(n),
-              ),
-              s = ConstructionItemToolTip.textFieldManager.registerTextField(
-                o.txt_bp_first,
-                new d.LocalizedTextVO("ciblueprint_tooltip_firstLevel", [
-                  e.level,
-                ]),
-              ),
-              l = ConstructionItemToolTip.textFieldManager.registerTextField(
-                o.txt_bp_max,
-                new d.LocalizedTextVO("ciblueprint_tooltip_maxLevel", [
-                  t.level,
-                ]),
-              ),
-              c = ConstructionItemToolTip.textFieldManager.registerTextField(
-                o.txt_bp_firstValue,
-                new p.TextVO(e.getBlueprintEffectValueText(i)),
-              ),
-              u = ConstructionItemToolTip.textFieldManager.registerTextField(
-                o.txt_bp_maxValue,
-                new p.TextVO(t.getBlueprintEffectValueText(i)),
-              );
-            ((s.color = e.rarityColor),
-              (l.color = t.rarityColor),
-              (c.color = e.rarityColor),
-              (u.color = t.rarityColor));
-            var h = !r.ClientConstUtils.isTlfMode,
-              g = h ? s.x : s.x + s.width;
-            ((c.x = g + (h ? s.textWidth : -s.textWidth - c.width)),
-              (u.x = g + (h ? l.textWidth : -l.textWidth - u.width)),
-              (s.y = a.textHeight - 3),
-              (c.y = a.textHeight - 3),
-              (l.y = s.y + s.textHeight - 3),
-              (u.y = c.y + c.textHeight - 3));
+            var n = this._disp["mc_bluePrintEffect" + (i > 0 ? i + 1 : "")];
+            if (n) {
+              var o = t.getBluePrintEffectName(i);
+              n.visible = !0;
+              var a =
+                  ConstructionItemToolTip.textFieldManager.registerTextField(
+                    n.txt_bp_effect,
+                    new p.TextVO(o),
+                  ),
+                s = ConstructionItemToolTip.textFieldManager.registerTextField(
+                  n.txt_bp_first,
+                  new d.LocalizedTextVO("ciblueprint_tooltip_firstLevel", [
+                    e.level,
+                  ]),
+                ),
+                l = ConstructionItemToolTip.textFieldManager.registerTextField(
+                  n.txt_bp_max,
+                  new d.LocalizedTextVO("ciblueprint_tooltip_maxLevel", [
+                    t.level,
+                  ]),
+                ),
+                c = ConstructionItemToolTip.textFieldManager.registerTextField(
+                  n.txt_bp_firstValue,
+                  new p.TextVO(e.getBlueprintEffectValueText(i)),
+                ),
+                u = ConstructionItemToolTip.textFieldManager.registerTextField(
+                  n.txt_bp_maxValue,
+                  new p.TextVO(t.getBlueprintEffectValueText(i)),
+                );
+              ((s.color = e.rarityColor),
+                (l.color = t.rarityColor),
+                (c.color = e.rarityColor),
+                (u.color = t.rarityColor));
+              var h = !r.ClientConstUtils.isTlfMode,
+                g = h ? s.x : s.x + s.width;
+              ((c.x = g + (h ? s.textWidth : -s.textWidth - c.width)),
+                (u.x = g + (h ? l.textWidth : -l.textWidth - u.width)),
+                (s.y = a.textHeight - 3),
+                (c.y = a.textHeight - 3),
+                (l.y = s.y + s.textHeight - 3),
+                (u.y = c.y + c.textHeight - 3));
+            }
           }
         }),
         (ConstructionItemToolTip.prototype.setTemporaryText = function (e) {
@@ -465613,7 +465660,7 @@
                       )
                     : c.Localize.text("dialog_alliance_activateEffect_header")
                 : c.Localize.text("dialog_alliance_raiseEffect")),
-              (o = c.Localize.text(s.GenericTextIds.VALUE_PERCENTAGE_ADD, [
+              (o = c.Localize.text(r.getBoostValueTextID(g, E), [
                 r.getUpgradeBoostValue(g, E),
               ])),
               g)
@@ -466053,10 +466100,14 @@
                   this.dialogProperties.buffSeriesID,
                   this.scrollComponent.currentValue,
                 );
-              ((this.itxt_level.textContentVO.textReplacements = [e.level]),
-                (this.itxt_value.textContentVO.textReplacements = [
-                  e.boni[0].strength,
-                ]),
+              this.itxt_level.textContentVO.textReplacements = [e.level];
+              var t = e.boni[0];
+              (t.effect &&
+                t.effect.effectType &&
+                t.effect.effectType.type &&
+                (this.itxt_value.textContentVO.textId =
+                  t.effect.effectType.type.simpleValueTextID),
+                (this.itxt_value.textContentVO.textReplacements = [t.strength]),
                 (this.itxt_duration.textContentVO.stringValue =
                   a.TimeStringHelper.getTimeToString(
                     this.allianceInfoVO.getBoostDuration(
@@ -475301,7 +475352,8 @@
                 this.updateCategory(),
                 this.requestJoinRequirements(),
                 (this.subLayerDisp.mc_beta.visible =
-                  _.ABGHelper.isOnABGAndBetaRun),
+                  _.ABGHelper.abgEvent.settingVO &&
+                  _.ABGHelper.abgEvent.settingVO.isBetaRun),
                 this.subLayerDisp.mc_beta.bg.gotoAndStop(1));
             }),
           (CastleAllianceBattlegroundEventJadeDialogOverview.prototype.hide =
@@ -721251,4 +721303,4 @@
     t.ModernStartscreenComponent = p;
   },
 ]);
-//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/Game.bundle.5161b7b1d4a7435b421f.js.map
+//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/Game.bundle.efded7cc2ea1e1d30527.js.map
