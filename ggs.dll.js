@@ -615,7 +615,7 @@ and limitations under the License.
               f = (e._gsDefine = function (e, t, n, i) {
                 return new C(e, t, n, i);
               }),
-              S = (d._class = function (e, t, n) {
+              T = (d._class = function (e, t, n) {
                 return (
                   (t = t || function () {}),
                   f(
@@ -630,14 +630,14 @@ and limitations under the License.
                 );
               });
             f.globals = s;
-            var T = [0, 0, 1, 1],
-              y = S(
+            var S = [0, 0, 1, 1],
+              y = T(
                 "easing.Ease",
                 function (e, t, n, i) {
                   ((this._func = e),
                     (this._type = n || 0),
                     (this._power = i || 0),
-                    (this._params = t ? T.concat(t) : T));
+                    (this._params = t ? S.concat(t) : S));
                 },
                 !0,
               ),
@@ -655,7 +655,7 @@ and limitations under the License.
                 )
                   for (
                     a = l[u],
-                      s = i ? S("easing." + a, null, !0) : d.easing[a] || {},
+                      s = i ? T("easing." + a, null, !0) : d.easing[a] || {},
                       r = _.length;
                     --r > -1;
                   )
@@ -708,7 +708,7 @@ and limitations under the License.
                 v(new y(null, null, 3, r), o, "easeInOut"));
             ((I.linear = d.easing.Linear.easeIn),
               (I.swing = d.easing.Quad.easeInOut));
-            var A = S("events.EventDispatcher", function (e) {
+            var A = T("events.EventDispatcher", function (e) {
               ((this._listeners = {}), (this._eventTarget = e || this));
             });
             (((o = A.prototype).addEventListener = function (e, t, n, i, s) {
@@ -764,7 +764,7 @@ and limitations under the License.
                 (L =
                   e[a[r] + "CancelAnimationFrame"] ||
                   e[a[r] + "CancelRequestAnimationFrame"]));
-            (S("Ticker", function (e, t) {
+            (T("Ticker", function (e, t) {
               var n,
                 s,
                 a,
@@ -844,7 +844,7 @@ and limitations under the License.
             }),
               ((o = d.Ticker.prototype =
                 new d.events.EventDispatcher()).constructor = d.Ticker));
-            var R = S("core.Animation", function (e, t) {
+            var R = T("core.Animation", function (e, t) {
               if (
                 ((this.vars = t = t || {}),
                 (this._duration = this._totalDuration = e || 0),
@@ -871,15 +871,15 @@ and limitations under the License.
                 o.timeline =
                   null),
               (o._paused = !1));
-            var B = function () {
+            var N = function () {
               u &&
                 D() - b > 2e3 &&
                 ("hidden" !== (i || {}).visibilityState || !l.lagSmoothing()) &&
                 l.wake();
-              var e = setTimeout(B, 2e3);
+              var e = setTimeout(N, 2e3);
               e.unref && e.unref();
             };
-            (B(),
+            (N(),
               (o.play = function (e, t) {
                 return (
                   null != e && this.seek(e, t),
@@ -1148,11 +1148,11 @@ and limitations under the License.
                   this
                 );
               }));
-            var N = S("core.SimpleTimeline", function (e) {
+            var B = T("core.SimpleTimeline", function (e) {
               (R.call(this, 0, e),
                 (this.autoRemoveChildren = this.smoothChildTiming = !0));
             });
-            (((o = N.prototype = new R()).constructor = N),
+            (((o = B.prototype = new R()).constructor = B),
               (o.kill()._gc = !1),
               (o._first = o._last = o._recent = null),
               (o._sortChildren = !1),
@@ -1220,7 +1220,7 @@ and limitations under the License.
               (o.rawTime = function () {
                 return (u || l.wake(), this._totalTime);
               }));
-            var P = S(
+            var P = T(
                 "TweenLite",
                 function (t, n, i) {
                   if (
@@ -1543,8 +1543,8 @@ and limitations under the License.
                 true: 1,
                 false: 0,
               },
-              z = (R._rootFramesTimeline = new N()),
-              Z = (R._rootTimeline = new N()),
+              z = (R._rootFramesTimeline = new B()),
+              Z = (R._rootTimeline = new B()),
               X = 30,
               Q = (H.lazyRender = function () {
                 var e,
@@ -2161,7 +2161,7 @@ and limitations under the License.
                   for (var i = P.getTweensOf(e, t), s = i.length; --s > -1;)
                     i[s]._kill(n, e);
                 }));
-            var ne = S(
+            var ne = T(
               "plugins.TweenPlugin",
               function (e, t) {
                 ((this._overwriteProps = (e || "").split(",")),
@@ -2249,7 +2249,7 @@ and limitations under the License.
                     mod: "_mod",
                     initAll: "_onInitAllProps",
                   },
-                  r = S(
+                  r = T(
                     "plugins." +
                       n.charAt(0).toUpperCase() +
                       n.substr(1) +
@@ -2388,10 +2388,10 @@ and limitations under the License.
     var f = n(220);
     ((t.getDefinitionByName = f.getDefinitionByName),
       (t.getDefinitionByNameFromLibrary = f.getDefinitionByNameFromLibrary));
-    var S = n(229);
-    t.navigateToURL = S.navigateToURL;
-    var T = n(563);
-    t.describeType = T.describeType;
+    var T = n(229);
+    t.navigateToURL = T.navigateToURL;
+    var S = n(563);
+    t.describeType = S.describeType;
     var y = n(564);
     t.getSize = y.getSize;
     var I = n(61);
@@ -2410,10 +2410,10 @@ and limitations under the License.
     t.JointStyle = b.JointStyle;
     var R = n(571);
     t.LineScaleMode = R.LineScaleMode;
-    var B = n(572);
-    t.InterpolationMethod = B.InterpolationMethod;
-    var N = n(573);
-    t.GradientType = N.GradientType;
+    var N = n(572);
+    t.InterpolationMethod = N.InterpolationMethod;
+    var B = n(573);
+    t.GradientType = B.GradientType;
     var P = n(227);
     t.PixelSnapping = P.PixelSnapping;
     var M = n(574);
@@ -2500,10 +2500,10 @@ and limitations under the License.
     t.Mouse = Ce.Mouse;
     var fe = n(143);
     ((t.CSSMouseCursor = fe.CSSMouseCursor), (t.MouseCursor = fe.MouseCursor));
-    var Se = n(593);
-    t.MouseCursorData = Se.MouseCursorData;
-    var Te = n(594);
-    t.Shader = Te.Shader;
+    var Te = n(593);
+    t.MouseCursorData = Te.MouseCursorData;
+    var Se = n(594);
+    t.Shader = Se.Shader;
     var ye = n(595);
     t.ExternalInterface = ye.ExternalInterface;
     var Ie = n(596);
@@ -2841,7 +2841,7 @@ and limitations under the License.
       E = n(38),
       C = createjs.EventDispatcher,
       f = h.getLogger(p.BASIC_CONTROLLER),
-      S = (function (e) {
+      T = (function (e) {
         function BasicController() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (
@@ -3269,7 +3269,7 @@ and limitations under the License.
           BasicController
         );
       })(C);
-    t.BasicController = S;
+    t.BasicController = T;
   },
   function (e, t, n) {
     "use strict";
@@ -4166,8 +4166,8 @@ and limitations under the License.
       E = n(301),
       C = n(302),
       f = n(303),
-      S = n(304),
-      T = n(305),
+      T = n(304),
+      S = n(305),
       y = n(3),
       I = n(2),
       v = n(4),
@@ -4177,8 +4177,8 @@ and limitations under the License.
       D = n(727),
       b = n(293),
       R = n(306),
-      B = n(728),
-      N = I.getLogger("Tracking.TrackingCache"),
+      N = n(728),
+      B = I.getLogger("Tracking.TrackingCache"),
       P = (function () {
         function TrackingCache(e, t) {
           (void 0 === e && (e = new s.TrackingVerifier()),
@@ -4262,7 +4262,7 @@ and limitations under the License.
               ),
               this._currentCache.set(
                 i.TrackingEventIds.FACBOOK_USER_EMAIL,
-                new B.FacebookUserEmailTrackingEvent(n),
+                new N.FacebookUserEmailTrackingEvent(n),
               ),
               this._currentCache.set(
                 i.TrackingEventIds.SHOP_LOADED,
@@ -4274,7 +4274,7 @@ and limitations under the License.
               ),
               this._currentCache.set(
                 i.TrackingEventIds.ASSETS_LOADING_SPEED,
-                new S.AssetLoadingSpeedTrackingEvent(n),
+                new T.AssetLoadingSpeedTrackingEvent(n),
               ),
               (this._isInitialized = !0));
           }),
@@ -4289,7 +4289,7 @@ and limitations under the License.
           }),
           (TrackingCache.prototype.sendEvent = function (e) {
             if (!this.isInitialized)
-              return (N.warn("tracking cache is not initalized"), !1);
+              return (B.warn("tracking cache is not initalized"), !1);
             var t = this.prepareEvent(e),
               n = JSON.stringify(t);
             if (this.validateTests) {
@@ -4304,7 +4304,7 @@ and limitations under the License.
             return (
               new a.TrackingLoader(
                 new y.URLRequest(
-                  T.TrackingConstants.JSON_TRACKING_URL,
+                  S.TrackingConstants.JSON_TRACKING_URL,
                   n,
                   "POST",
                 ),
@@ -4325,25 +4325,25 @@ and limitations under the License.
             return (
               t.eventId
                 ? e !== t.eventId &&
-                  N.warn(
+                  B.warn(
                     "Expected event with with eventId " +
                       e +
                       ", but found " +
                       t.eventId,
                   )
                 : ((t.eventId = e),
-                  N.warn("assigning ID to tracking event ", e)),
+                  B.warn("assigning ID to tracking event ", e)),
               (t.gameId = this._gameId),
               (t.networkId = this._networkId),
               (t.accountId = this._accountId),
               ((t.hasOwnProperty("playerId") &&
                 O.isNullOrUndefined(t.playerId)) ||
                 0 == t.playerId) &&
-                N.warn("we are sending an event without playerID", t),
+                B.warn("we are sending an event without playerID", t),
               this.currentInstance
                 ? ((t.instanceId = this.currentInstance.instanceId),
                   (t.zoneId = this.currentInstance.zoneId))
-                : (N.warn(
+                : (B.warn(
                     "sending tracking " +
                       e +
                       " but currentInstance is null will try to use networkCookie",
@@ -4360,7 +4360,7 @@ and limitations under the License.
             var t = function (t, n) {
               ((e.hasOwnProperty(t) && O.isNullOrUndefined(e[t])) ||
                 0 == e[t]) &&
-                (N.warn(
+                (B.warn(
                   "event " +
                     e.eventId +
                     ": autofilling property " +
@@ -4396,7 +4396,7 @@ and limitations under the License.
             configurable: !0,
           }),
           (TrackingCache.prototype.useTestValidationServer = function (e, t) {
-            (void 0 === t && (t = T.TrackingConstants.TEST_TRACKING_SERVER),
+            (void 0 === t && (t = S.TrackingConstants.TEST_TRACKING_SERVER),
               (this.validateTests = e),
               (this.testServer = t));
           }),
@@ -4443,10 +4443,10 @@ and limitations under the License.
     t.GlobalizeTextProcessor = C.GlobalizeTextProcessor;
     var f = n(756);
     t.LocalizationModule = f.LocalizationModule;
-    var S = n(97);
-    t.DateTimeStyle = S.DateTimeStyle;
-    var T = n(320);
-    t.ProcessorTypeConstants = T.ProcessorTypeConstants;
+    var T = n(97);
+    t.DateTimeStyle = T.DateTimeStyle;
+    var S = n(320);
+    t.ProcessorTypeConstants = S.ProcessorTypeConstants;
     var y = n(322);
     t.CLDRJSONData = y.CLDRJSONData;
     var I = n(765);
@@ -6152,10 +6152,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.IdentityManagementConstants = C.IdentityManagementConstants;
     var f = n(8);
     t.BasicController = f.BasicController;
-    var S = n(9);
-    t.BasicSmartfoxConstants = S.BasicSmartfoxConstants;
-    var T = n(780);
-    t.BasicSoundController = T.BasicSoundController;
+    var T = n(9);
+    t.BasicSmartfoxConstants = T.BasicSmartfoxConstants;
+    var S = n(780);
+    t.BasicSoundController = S.BasicSoundController;
     var y = n(372);
     t.LicenseRefresher = y.LicenseRefresher;
     var I = n(307);
@@ -6174,10 +6174,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicCheckMaintenanceCommand = b.BasicCheckMaintenanceCommand;
     var R = n(36);
     t.BasicClientCommand = R.BasicClientCommand;
-    var B = n(410);
-    t.BasicConnectClientCommand = B.BasicConnectClientCommand;
-    var N = n(785);
-    t.BasicConnectToInstanceVOCommand = N.BasicConnectToInstanceVOCommand;
+    var N = n(410);
+    t.BasicConnectClientCommand = N.BasicConnectClientCommand;
+    var B = n(785);
+    t.BasicConnectToInstanceVOCommand = B.BasicConnectToInstanceVOCommand;
     var P = n(786);
     t.BasicConnectionFailedCommand = P.BasicConnectionFailedCommand;
     var M = n(787);
@@ -6265,12 +6265,12 @@ PERFORMANCE OF THIS SOFTWARE.
     var fe = n(818);
     t.PrivateOfferFailedDialogClientCommand =
       fe.PrivateOfferFailedDialogClientCommand;
-    var Se = n(819);
+    var Te = n(819);
     t.PrivateOfferFinishDialogClientCommand =
-      Se.PrivateOfferFinishDialogClientCommand;
-    var Te = n(820);
+      Te.PrivateOfferFinishDialogClientCommand;
+    var Se = n(820);
     t.PrivateOfferInterfaceButtonClientCommand =
-      Te.PrivateOfferInterfaceButtonClientCommand;
+      Se.PrivateOfferInterfaceButtonClientCommand;
     var ye = n(821);
     t.PrivateOfferIsoObjectClientCommand =
       ye.PrivateOfferIsoObjectClientCommand;
@@ -6296,11 +6296,11 @@ PERFORMANCE OF THIS SOFTWARE.
       be.BasicFacebookUserDataTrackingCommand;
     var Re = n(392);
     t.BasicInvitationTrackingCommand = Re.BasicInvitationTrackingCommand;
-    var Be = n(393);
+    var Ne = n(393);
     t.BasicPaymentShopClickTrackingCommand =
-      Be.BasicPaymentShopClickTrackingCommand;
-    var Ne = n(394);
-    t.BasicProfilingTrackingCommand = Ne.BasicProfilingTrackingCommand;
+      Ne.BasicPaymentShopClickTrackingCommand;
+    var Be = n(394);
+    t.BasicProfilingTrackingCommand = Be.BasicProfilingTrackingCommand;
     var Pe = n(395);
     t.BasicVerifyTrackingCommand = Pe.BasicVerifyTrackingCommand;
     var Me = n(397);
@@ -6386,10 +6386,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.FlashCallbackFunctionName = Ct.FlashCallbackFunctionName;
     var ft = n(308);
     t.JavascriptCallDefaultFactory = ft.JavascriptCallDefaultFactory;
-    var St = n(49);
-    t.JavascriptFunctionName = St.JavascriptFunctionName;
-    var Tt = n(309);
-    t.JavascriptCallDefaultVO = Tt.JavascriptCallDefaultVO;
+    var Tt = n(49);
+    t.JavascriptFunctionName = Tt.JavascriptFunctionName;
+    var St = n(309);
+    t.JavascriptCallDefaultVO = St.JavascriptCallDefaultVO;
     var yt = n(380);
     t.JavascriptCallOnLoginCompleteFactory =
       yt.JavascriptCallOnLoginCompleteFactory;
@@ -6411,11 +6411,11 @@ PERFORMANCE OF THIS SOFTWARE.
     t.ConcreteEnvironmentData = bt.ConcreteEnvironmentData;
     var Rt = n(456);
     t.ConcreteEnvironment = Rt.ConcreteEnvironment;
-    var Bt = n(836);
-    t.DevTestEnvironment = Bt.DevTestEnvironment;
-    var Nt = n(837);
+    var Nt = n(836);
+    t.DevTestEnvironment = Nt.DevTestEnvironment;
+    var Bt = n(837);
     t.FeatureBranchQualityAssuranceEnvironment =
-      Nt.FeatureBranchQualityAssuranceEnvironment;
+      Bt.FeatureBranchQualityAssuranceEnvironment;
     var Pt = n(186);
     t.LiveBranchingLiveEnvironment = Pt.LiveBranchingLiveEnvironment;
     var Mt = n(838);
@@ -6497,10 +6497,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicModel = Cn.BasicModel;
     var fn = n(265);
     t.AgeGateData = fn.AgeGateData;
-    var Sn = n(849);
-    t.BasicAchievementData = Sn.BasicAchievementData;
-    var Tn = n(460);
-    t.BasicData = Tn.BasicData;
+    var Tn = n(849);
+    t.BasicAchievementData = Tn.BasicAchievementData;
+    var Sn = n(460);
+    t.BasicData = Sn.BasicData;
     var yn = n(84);
     t.BasicDialogHandler = yn.BasicDialogHandler;
     var In = n(850);
@@ -6519,10 +6519,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicSessionData = bn.BasicSessionData;
     var Rn = n(852);
     t.BasicSharedObject = Rn.BasicSharedObject;
-    var Bn = n(121);
-    t.BasicSmartfoxClient = Bn.BasicSmartfoxClient;
-    var Nn = n(329);
-    t.BasicUserData = Nn.BasicUserData;
+    var Nn = n(121);
+    t.BasicSmartfoxClient = Nn.BasicSmartfoxClient;
+    var Bn = n(329);
+    t.BasicUserData = Bn.BasicUserData;
     var Pn = n(853);
     t.BasicWodData = Pn.BasicWodData;
     var Mn = n(330);
@@ -6610,10 +6610,10 @@ PERFORMANCE OF THIS SOFTWARE.
     var fi = n(369);
     t.BasicMissingIDCheckDialogProperties =
       fi.BasicMissingIDCheckDialogProperties;
-    var Si = n(449);
-    t.BasicReconnectDialogProperties = Si.BasicReconnectDialogProperties;
-    var Ti = n(454);
-    t.BasicRegisterDialogProperties = Ti.BasicRegisterDialogProperties;
+    var Ti = n(449);
+    t.BasicReconnectDialogProperties = Ti.BasicReconnectDialogProperties;
+    var Si = n(454);
+    t.BasicRegisterDialogProperties = Si.BasicRegisterDialogProperties;
     var yi = n(65);
     t.BasicStandardOkDialogProperties = yi.BasicStandardOkDialogProperties;
     var Ii = n(448);
@@ -6635,10 +6635,10 @@ PERFORMANCE OF THIS SOFTWARE.
     var Ri = n(409);
     t.BasicGGSTextFieldMouseOverBehaviour =
       Ri.BasicGGSTextFieldMouseOverBehaviour;
-    var Bi = n(867);
-    t.AnimatedSpeechTextField = Bi.AnimatedSpeechTextField;
-    var Ni = n(868);
-    t.AgeGateValidationVO = Ni.AgeGateValidationVO;
+    var Ni = n(867);
+    t.AnimatedSpeechTextField = Ni.AnimatedSpeechTextField;
+    var Bi = n(868);
+    t.AgeGateValidationVO = Bi.AgeGateValidationVO;
     var Pi = n(368);
     t.BasicDialogVO = Pi.BasicDialogVO;
     var Mi = n(869);
@@ -6724,10 +6724,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.CookieErrorLOFactory = Cs.CookieErrorLOFactory;
     var fs = n(169);
     t.CookieLogLOFactory = fs.CookieLogLOFactory;
-    var Ss = n(404);
-    t.FileErrorLOFactory = Ss.FileErrorLOFactory;
-    var Ts = n(882);
-    t.GameVersionErrorFactory = Ts.GameVersionErrorFactory;
+    var Ts = n(404);
+    t.FileErrorLOFactory = Ts.FileErrorLOFactory;
+    var Ss = n(882);
+    t.GameVersionErrorFactory = Ss.GameVersionErrorFactory;
     var ys = n(286);
     t.HTTPErrorLOFactory = ys.HTTPErrorLOFactory;
     var Is = n(63);
@@ -6747,10 +6747,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.ServerErrorLOFactory = bs.ServerErrorLOFactory;
     var Rs = n(488);
     t.SocketErrorLOFactory = Rs.SocketErrorLOFactory;
-    var Bs = n(287);
-    t.TrackingIOErrorLOFactory = Bs.TrackingIOErrorLOFactory;
-    var Ns = n(288);
-    t.TrackingSecurityErrorLOFactory = Ns.TrackingSecurityErrorLOFactory;
+    var Ns = n(287);
+    t.TrackingIOErrorLOFactory = Ns.TrackingIOErrorLOFactory;
+    var Bs = n(288);
+    t.TrackingSecurityErrorLOFactory = Bs.TrackingSecurityErrorLOFactory;
     var Ps = n(283);
     t.TrackingVerificationErrorLOFactory =
       Ps.TrackingVerificationErrorLOFactory;
@@ -6837,10 +6837,10 @@ PERFORMANCE OF THIS SOFTWARE.
       Ca.PathfindingGoalConditionTargetRectAdjacent;
     var fa = n(907);
     t.PathfindingGraph = fa.PathfindingGraph;
-    var Sa = n(908);
-    t.PathfindingHeuristicEuclidian = Sa.PathfindingHeuristicEuclidian;
-    var Ta = n(909);
-    t.PathfindingHeuristicManhattan = Ta.PathfindingHeuristicManhattan;
+    var Ta = n(908);
+    t.PathfindingHeuristicEuclidian = Ta.PathfindingHeuristicEuclidian;
+    var Sa = n(909);
+    t.PathfindingHeuristicManhattan = Sa.PathfindingHeuristicManhattan;
     var ya = n(910);
     t.PathfindingHeuristicNone = ya.PathfindingHeuristicNone;
     var Ia = n(474);
@@ -6859,10 +6859,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.PrivateOfferStateEnum = ba.PrivateOfferStateEnum;
     var Ra = n(469);
     t.BasicOfferDescriptionFactory = Ra.BasicOfferDescriptionFactory;
-    var Ba = n(470);
-    t.OfferDescriptionAutoAccept = Ba.OfferDescriptionAutoAccept;
-    var Na = n(471);
-    t.OfferDescriptionCostC1 = Na.OfferDescriptionCostC1;
+    var Na = n(470);
+    t.OfferDescriptionAutoAccept = Na.OfferDescriptionAutoAccept;
+    var Ba = n(471);
+    t.OfferDescriptionCostC1 = Ba.OfferDescriptionCostC1;
     var Pa = n(472);
     t.OfferDescriptionCostC2 = Pa.OfferDescriptionCostC2;
     var Ma = n(913);
@@ -6957,10 +6957,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.GoodgameDisplayObjectClip = Cr.GoodgameDisplayObjectClip;
     var fr = n(928);
     t.GoodgameDisplayObjectClipExternal = fr.GoodgameDisplayObjectClipExternal;
-    var Sr = n(494);
-    t.AbstractClipSource = Sr.AbstractClipSource;
-    var Tr = n(127);
-    t.FlattenedImage = Tr.FlattenedImage;
+    var Tr = n(494);
+    t.AbstractClipSource = Tr.AbstractClipSource;
+    var Sr = n(127);
+    t.FlattenedImage = Sr.FlattenedImage;
     var yr = n(495);
     t.FrameStrip = yr.FrameStrip;
     var Ir = n(493);
@@ -6980,10 +6980,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.InteractiveBitmapClipComponent = br.InteractiveBitmapClipComponent;
     var Rr = n(932);
     t.BitmapClipContainer = Rr.BitmapClipContainer;
-    var Br = n(496);
-    t.DisplayObjectClipContainer = Br.DisplayObjectClipContainer;
-    var Nr = n(933);
-    t.ArraySignal = Nr.ArraySignal;
+    var Nr = n(496);
+    t.DisplayObjectClipContainer = Nr.DisplayObjectClipContainer;
+    var Br = n(933);
+    t.ArraySignal = Br.ArraySignal;
     var Pr = n(934);
     t.BooleanSignal = Pr.BooleanSignal;
     var Mr = n(51);
@@ -7064,10 +7064,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.KeyUpSignal = Co.KeyUpSignal;
     var fo = n(349);
     t.MouseOutSignal = fo.MouseOutSignal;
-    var So = n(350);
-    t.MouseOverSignal = So.MouseOverSignal;
-    var To = n(351);
-    t.RemovedFromStageSignal = To.RemovedFromStageSignal;
+    var To = n(350);
+    t.MouseOverSignal = To.MouseOverSignal;
+    var So = n(351);
+    t.RemovedFromStageSignal = So.RemovedFromStageSignal;
     var yo = n(352);
     t.ScrollSignal = yo.ScrollSignal;
     var Io = n(353);
@@ -7086,11 +7086,11 @@ PERFORMANCE OF THIS SOFTWARE.
     t.ClientFunnelPlayTimeController = bo.ClientFunnelPlayTimeController;
     var Ro = n(38);
     t.ClientFunnelGameStates = Ro.ClientFunnelGameStates;
-    var Bo = n(290);
-    t.ConnectionTrackingEvent = Bo.ConnectionTrackingEvent;
-    var No = n(296);
+    var No = n(290);
+    t.ConnectionTrackingEvent = No.ConnectionTrackingEvent;
+    var Bo = n(296);
     t.DesktopDeviceInformationTrackingEvent =
-      No.DesktopDeviceInformationTrackingEvent;
+      Bo.DesktopDeviceInformationTrackingEvent;
     var Po = n(306);
     t.BrowserStateFullscreenTrackingEvent =
       Po.BrowserStateFullscreenTrackingEvent;
@@ -7176,10 +7176,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.DynamicTimer = Cl.DynamicTimer;
     var fl = n(965);
     t.MouseWheel = fl.MouseWheel;
-    var Sl = n(77);
-    t.TimezoneUtil = Sl.TimezoneUtil;
-    var Tl = n(966);
-    t.TypeUtil = Tl.TypeUtil;
+    var Tl = n(77);
+    t.TimezoneUtil = Tl.TimezoneUtil;
+    var Sl = n(966);
+    t.TypeUtil = Sl.TypeUtil;
     var yl = n(967);
     t.UncaughtErrorEventHandler = yl.UncaughtErrorEventHandler;
     var Il = n(968);
@@ -7198,10 +7198,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.AValueComponent = bl.AValueComponent;
     var Rl = n(500);
     t.ButtonsValueComponent = Rl.ButtonsValueComponent;
-    var Bl = n(501);
-    t.InputTextfieldValueComponent = Bl.InputTextfieldValueComponent;
-    var Nl = n(502);
-    t.SliderValueComponent = Nl.SliderValueComponent;
+    var Nl = n(501);
+    t.InputTextfieldValueComponent = Nl.InputTextfieldValueComponent;
+    var Bl = n(502);
+    t.SliderValueComponent = Bl.SliderValueComponent;
     var Pl = n(972);
     t.ValueChangerController = Pl.ValueChangerController;
     var Ml = n(503);
@@ -8061,10 +8061,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.FinishedEvents = C;
     var f = n(668);
     t.GlobalFactionState = f;
-    var S = n(669);
-    t.LongTermPointEventTotalPoints = S;
-    var T = n(670);
-    t.LuckyWheelSpin = T;
+    var T = n(669);
+    t.LongTermPointEventTotalPoints = T;
+    var S = n(670);
+    t.LuckyWheelSpin = S;
     var y = n(671);
     t.MessageSent = y;
     var I = n(672);
@@ -8083,10 +8083,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.Sabotage = b;
     var R = n(679);
     t.UnitsDismissed = R;
-    var B = n(680);
-    t.UnitsStarving = B;
-    var N = n(681);
-    t.WishingWellCoins = N;
+    var N = n(680);
+    t.UnitsStarving = N;
+    var B = n(681);
+    t.WishingWellCoins = B;
     var P = n(682);
     t.ClientFunnel = P;
     var M = n(683);
@@ -8715,29 +8715,29 @@ PERFORMANCE OF THIS SOFTWARE.
               var s = n(t, i);
               return h(e._resolved, s);
             },
-            S = function (e) {
+            T = function (e) {
               this.init(e);
             };
           return (
-            (S._alwaysArray = g),
-            (S._coreLoad = C),
-            (S._createError = l),
-            (S._itemGetResolved = f),
-            (S._jsonMerge = E),
-            (S._pathNormalize = n),
-            (S._resourceGet = h),
-            (S._validatePresence = _),
-            (S._validateType = c),
-            (S._validateTypePath = m),
-            (S._validateTypePlainObject = d),
-            (S._availableBundleMap = {}),
-            (S._availableBundleMapQueue = []),
-            (S._resolved = {}),
-            (S.localeSep = "-"),
-            (S.load = function () {
-              S._resolved = C(S, S._resolved, arguments);
+            (T._alwaysArray = g),
+            (T._coreLoad = C),
+            (T._createError = l),
+            (T._itemGetResolved = f),
+            (T._jsonMerge = E),
+            (T._pathNormalize = n),
+            (T._resourceGet = h),
+            (T._validatePresence = _),
+            (T._validateType = c),
+            (T._validateTypePath = m),
+            (T._validateTypePlainObject = d),
+            (T._availableBundleMap = {}),
+            (T._availableBundleMapQueue = []),
+            (T._resolved = {}),
+            (T.localeSep = "-"),
+            (T.load = function () {
+              T._resolved = C(T, T._resolved, arguments);
             }),
-            (S.prototype.init = function (e) {
+            (T.prototype.init = function (e) {
               var t,
                 n,
                 i,
@@ -8748,17 +8748,17 @@ PERFORMANCE OF THIS SOFTWARE.
                 h,
                 p,
                 g,
-                E = S.localeSep,
+                E = T.localeSep,
                 C = "";
               (_(e, "locale"),
                 c((g = e), "locale", "string" == typeof g, "a string"),
                 5 === (m = r(e)).length &&
                   ((C = E + "u" + E + (h = m.pop())), m[3] || m.pop()),
                 (p = m[3]),
-                (n = (i = s(S, this, m, { force: !0 }) || m)[0]),
+                (n = (i = s(T, this, m, { force: !0 }) || m)[0]),
                 (u = i[1]),
                 (d = i[2]),
-                (l = a(S, this, i).join(E)),
+                (l = a(T, this, i).join(E)),
                 (this.attributes = t =
                   {
                     bundle: (function (e, t, n) {
@@ -8782,7 +8782,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           (e._availableBundleMapQueue = [])),
                         i[n] || null
                       );
-                    })(S, this, l),
+                    })(T, this, l),
                     minLanguageId: l + C,
                     maxLanguageId: i.join(E) + C,
                     language: n,
@@ -8800,10 +8800,10 @@ PERFORMANCE OF THIS SOFTWARE.
                   ),
                 (this.locale = e));
             }),
-            (S.prototype.get = function (e) {
-              return (_(e, "path"), m(e, "path"), f(S, e, this.attributes));
+            (T.prototype.get = function (e) {
+              return (_(e, "path"), m(e, "path"), f(T, e, this.attributes));
             }),
-            (S.prototype.main = function (e) {
+            (T.prototype.main = function (e) {
               return (
                 _(e, "path"),
                 m(e, "path"),
@@ -8814,7 +8814,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 this.get(["main/{bundle}"].concat(e))
               );
             }),
-            S
+            T
           );
         })
           ? i.call(t, n, t, e)
@@ -15702,8 +15702,8 @@ PERFORMANCE OF THIS SOFTWARE.
               },
               f =
                 /^(('([^']|'')*'|[^*#@0,.E])*)(\*.)?((([#,]*[0,]*0+)(\.0*[0-9]*#*)?)|([#,]*@+#*))(E\+?0+)?(('[^']+'|''|[^*#@0,.E])*)$/,
-              S = function (e) {
-                var t, n, i, s, a, r, o, l, u, _, c, m, d, p, g, E, C, S;
+              T = function (e) {
+                var t, n, i, s, a, r, o, l, u, _, c, m, d, p, g, E, C, T;
                 if (!(e = e.match(f))) throw new Error("Invalid pattern: " + e);
                 if (
                   ((m = e[1]),
@@ -15711,7 +15711,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   (s = e[5]),
                   (C = e[9]),
                   (g = e[10]),
-                  (S = e[11]),
+                  (T = e[11]),
                   C
                     ? C.replace(/(@+)(#*)/, function (e, t, n) {
                         ((_ = t.length), (o = _ + n.length));
@@ -15737,10 +15737,10 @@ PERFORMANCE OF THIS SOFTWARE.
                     ((n = s.split(".")[0]),
                     (d = n.length - t - 1),
                     -1 !== (n = s.lastIndexOf(",", t - 1)) && (E = t - 1 - n)),
-                  [m, c, u, l, r, _, o, p, d, E, S]
+                  [m, c, u, l, r, _, o, p, d, E, T]
                 );
               },
-              T = function (e, t) {
+              S = function (e, t) {
                 return t.main(["numbers/symbols-numberSystem-" + E(t), e]);
               },
               y = {
@@ -15765,7 +15765,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   (e = e.split(";")),
                   (o = e[0]),
                   (i = e[1] || "-" + o),
-                  (a = S(i)),
+                  (a = T(i)),
                   (s = a[0]),
                   (r = a[10]),
                   (_ =
@@ -15800,18 +15800,18 @@ PERFORMANCE OF THIS SOFTWARE.
                       ")"
                     );
                   }),
-                  (u = S(o).concat([
+                  (u = T(o).concat([
                     o,
                     s + o + r,
                     s,
                     r,
                     l,
-                    T("infinity", t),
-                    T("nan", t),
+                    S("infinity", t),
+                    S("nan", t),
                     (function (e) {
                       var t,
                         n = {};
-                      for (t in y) n[t] = T(y[t], e);
+                      for (t in y) n[t] = S(y[t], e);
                       return n;
                     })(t),
                     C(t),
@@ -15881,7 +15881,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     ? "'"
                     : e.replace(/''/g, "'").slice(1, -1);
               },
-              B = function (e, t) {
+              N = function (e, t) {
                 if ("decimal" !== e && "percent" !== e)
                   throw new Error("Invalid style");
                 return t.main([
@@ -15890,7 +15890,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   "standard",
                 ]);
               },
-              N = /^([^0]*)(0+)([^0]*)$/,
+              B = /^([^0]*)(0+)([^0]*)$/,
               P = function (e, t, n) {
                 var i;
                 return 0 === e
@@ -15924,7 +15924,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     u(n),
                     n.on("get", l));
                   try {
-                    ((a = e.raw ? e.raw : B(e.style || "decimal", n)),
+                    ((a = e.raw ? e.raw : N(e.style || "decimal", n)),
                       (i = [(m = v(a, n, e))]));
                   } finally {
                     n.off("get", l);
@@ -15969,8 +15969,8 @@ PERFORMANCE OF THIS SOFTWARE.
                               E,
                               C,
                               f,
-                              S,
                               T,
+                              S,
                               I,
                               v,
                               A,
@@ -15978,7 +15978,7 @@ PERFORMANCE OF THIS SOFTWARE.
                               L,
                               D,
                               b,
-                              B,
+                              N,
                               M;
                             return (
                               (c = t[2]),
@@ -15986,9 +15986,9 @@ PERFORMANCE OF THIS SOFTWARE.
                               (l = t[4]),
                               (m = t[5]),
                               (u = t[6]),
-                              (S = t[7]),
+                              (T = t[7]),
                               (E = t[8]),
-                              (T = t[9]),
+                              (S = t[9]),
                               (f = t[15]),
                               (r = t[16]),
                               (d = t[17]),
@@ -16044,16 +16044,16 @@ PERFORMANCE OF THIS SOFTWARE.
                                         ? (e *= 100)
                                         : -1 !== C.indexOf("‰") && (e *= 1e3),
                                       a &&
-                                        ((B =
+                                        ((N =
                                           Math.abs(Math.floor(e)).toString()
                                             .length - 1),
-                                        (B = Math.min(B, a.maxExponent)) >= 3 &&
-                                          (O = a[B] && a[B].other),
+                                        (N = Math.min(N, a.maxExponent)) >= 3 &&
+                                          (O = a[N] && a[N].other),
                                         "0" === O
                                           ? (O = null)
                                           : O &&
                                             ((L = O.split("0").length - 1),
-                                            (b = B - (L - 1)),
+                                            (b = N - (L - 1)),
                                             (e /= Math.pow(10, b)))),
                                       (e = isNaN(m * u)
                                         ? (function (e, t, n, i, s, a) {
@@ -16083,7 +16083,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                                 (e = e.join("."))),
                                               e
                                             );
-                                          })(e, c, _, l, f, S)
+                                          })(e, c, _, l, f, T)
                                         : (function (e, t, n, i) {
                                             var s, a;
                                             if (
@@ -16119,8 +16119,8 @@ PERFORMANCE OF THIS SOFTWARE.
                                       a &&
                                         O &&
                                         ((M = n ? n(+e) : "other"),
-                                        (O = a[B][M] || O),
-                                        (D = O.match(N)),
+                                        (O = a[N][M] || O),
+                                        (D = O.match(B)),
                                         (i = function (e) {
                                           var t = [];
                                           return (
@@ -16162,7 +16162,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                               a),
                                             e.join(".")
                                           );
-                                        })(e, E, T)),
+                                        })(e, E, S)),
                                       g.concat(I(e), v))
                                     : g.concat(
                                         { type: "infinity", value: r },
@@ -16210,7 +16210,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         E,
                         C,
                         f,
-                        S,
+                        T,
                         I,
                         A,
                         O,
@@ -16220,7 +16220,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         (c = L[4]),
                         (d = L[5]),
                         (m = L[6]),
-                        (S = L[8]),
+                        (T = L[8]),
                         (I = L[9]),
                         (A = D(L[10])),
                         (p = D(L[13])),
@@ -16235,7 +16235,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           (function (e) {
                             var t,
                               n = {};
-                            for (t in y) n[T(y[t], e)] = t;
+                            for (t in y) n[S(y[t], e)] = t;
                             return n;
                           })(t),
                           function (e) {
@@ -16266,7 +16266,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         (p = i[2]),
                         (g = i[3]),
                         (C = r + "+"),
-                        S &&
+                        T &&
                           (C =
                             "(" +
                             (i = I
@@ -16282,16 +16282,16 @@ PERFORMANCE OF THIS SOFTWARE.
                                 o +
                                 r +
                                 "{" +
-                                S +
+                                T +
                                 "}))"
                               : r +
                                 "{1," +
-                                S +
+                                T +
                                 "}(" +
                                 o +
                                 r +
                                 "{" +
-                                S +
+                                T +
                                 "})+") +
                             "|" +
                             C +
@@ -16324,7 +16324,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           },
                         ]
                       );
-                    })(e.raw ? e.raw : B(e.style || "decimal", n), n, e)),
+                    })(e.raw ? e.raw : N(e.style || "decimal", n), n, e)),
                     n.off("get", l),
                     (s = (function (e) {
                       return function numberParser(t) {
@@ -16445,8 +16445,8 @@ PERFORMANCE OF THIS SOFTWARE.
               (t._createErrorUnsupportedFeature = h),
               (t._numberNumberingSystem = E),
               (t._numberNumberingSystemDigitsMap = C),
-              (t._numberPattern = B),
-              (t._numberSymbol = T),
+              (t._numberPattern = N),
+              (t._numberSymbol = S),
               (t._looseMatching = D),
               (t._removeLiteralQuotes = R),
               (t._stringPad = o),
@@ -17292,8 +17292,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 E = this._startTime,
                 C = this._timeScale,
                 f = this._rawPrevTime,
-                S = this._paused,
-                T = this._cycle;
+                T = this._paused,
+                S = this._cycle;
               if (
                 (d !== this._time && (e += this._time - d),
                 e >= h - 1e-7 && e >= 0)
@@ -17369,7 +17369,7 @@ PERFORMANCE OF THIS SOFTWARE.
               ) {
                 if (
                   (e = this._time) >= d ||
-                  (this._repeat && T !== this._cycle)
+                  (this._repeat && S !== this._cycle)
                 )
                   for (s = this._first; s && s._startTime <= e && !c;)
                     (s._duration ||
@@ -17390,19 +17390,19 @@ PERFORMANCE OF THIS SOFTWARE.
                     e +
                     this._cycle * (this._totalDuration + this._repeatDelay)));
               }
-              if (this._cycle !== T && !this._locked) {
-                var y = this._yoyo && 0 != (1 & T),
+              if (this._cycle !== S && !this._locked) {
+                var y = this._yoyo && 0 != (1 & S),
                   I = y === (this._yoyo && 0 != (1 & this._cycle)),
                   v = this._totalTime,
                   A = this._cycle,
                   O = this._rawPrevTime,
                   L = this._time;
                 if (
-                  ((this._totalTime = T * p),
-                  this._cycle < T ? (y = !y) : (this._totalTime += p),
+                  ((this._totalTime = S * p),
+                  this._cycle < S ? (y = !y) : (this._totalTime += p),
                   (this._time = d),
                   (this._rawPrevTime = 0 === p ? f - 1e-4 : f),
-                  (this._cycle = T),
+                  (this._cycle = S),
                   (this._locked = !0),
                   (d = y ? 0 : p),
                   this.render(d, t, 0 === p),
@@ -17417,12 +17417,12 @@ PERFORMANCE OF THIS SOFTWARE.
                   return;
                 if (
                   (I &&
-                    ((this._cycle = T),
+                    ((this._cycle = S),
                     (this._locked = !0),
                     (d = y ? p + 1e-4 : -1e-4),
                     this.render(d, !0, !1)),
                   (this._locked = !1),
-                  this._paused && !S)
+                  this._paused && !T)
                 )
                   return;
                 ((this._time = L),
@@ -17448,7 +17448,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   for (
                     s = this._first;
                     s &&
-                    ((o = s._next), m === this._time && (!this._paused || S));
+                    ((o = s._next), m === this._time && (!this._paused || T));
                   )
                     ((s._active ||
                       (s._startTime <= this._time && !s._paused && !s._gc)) &&
@@ -17466,7 +17466,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   for (
                     s = this._last;
                     s &&
-                    ((o = s._prev), m === this._time && (!this._paused || S));
+                    ((o = s._prev), m === this._time && (!this._paused || T));
                   ) {
                     if (
                       s._active ||
@@ -17695,8 +17695,8 @@ PERFORMANCE OF THIS SOFTWARE.
           E = /(?:\-|\.|\b)(\d|\.|e\-)+/g,
           C = /(?:\d|\-\d|\.\d|\-\.\d|\+=\d|\-=\d|\+=.\d|\-=\.\d)+/g,
           f = /(?:\+=|\-=|\-|\b)[\d\-\.]+[a-zA-Z0-9]*(?:%|\b)/gi,
-          S = /(?![+-]?\d*\.?\d+|[+-]|e[+-]\d+)[^0-9]/g,
-          T = /(?:\d|\-|\+|=|#|\.)*/g,
+          T = /(?![+-]?\d*\.?\d+|[+-]|e[+-]\d+)[^0-9]/g,
+          S = /(?:\d|\-|\+|=|#|\.)*/g,
           y = /opacity *= *([^)]*)/i,
           I = /opacity:([^;]*)/i,
           v = /alpha\(opacity *=.+?\)/i,
@@ -17708,8 +17708,8 @@ PERFORMANCE OF THIS SOFTWARE.
             return t.toUpperCase();
           },
           R = /(?:Left|Right|Width)/i,
-          B = /(M11|M12|M21|M22)=[\d\-\.e]+/gi,
-          N = /progid\:DXImageTransform\.Microsoft\.Matrix\(.+?\)/i,
+          N = /(M11|M12|M21|M22)=[\d\-\.e]+/gi,
+          B = /progid\:DXImageTransform\.Microsoft\.Matrix\(.+?\)/i,
           P = /,(?=[^\)]*(?:\(|$))/gi,
           M = /[\s,\(]/i,
           U = Math.PI / 180,
@@ -17861,7 +17861,7 @@ PERFORMANCE OF THIS SOFTWARE.
             var i = "left" === t ? "Left" : "Top",
               s = $(e, "margin" + i, n);
             return (
-              e["offset" + i] - (J(e, t, parseFloat(s), s.replace(T, "")) || 0)
+              e["offset" + i] - (J(e, t, parseFloat(s), s.replace(S, "")) || 0)
             );
           }),
           te = function (e, t) {
@@ -17872,11 +17872,11 @@ PERFORMANCE OF THIS SOFTWARE.
             if ((t = t || Q(e, null)))
               if ((n = t.length))
                 for (; --n > -1;)
-                  (-1 !== (s = t[n]).indexOf("-transform") && Ne !== s) ||
+                  (-1 !== (s = t[n]).indexOf("-transform") && Be !== s) ||
                     (a[s.replace(L, b)] = t.getPropertyValue(s));
               else
                 for (n in t)
-                  (-1 !== n.indexOf("Transform") && Be !== n) || (a[n] = t[n]);
+                  (-1 !== n.indexOf("Transform") && Ne !== n) || (a[n] = t[n]);
             else if ((t = e.currentStyle || e.style))
               for (n in t)
                 "string" == typeof n &&
@@ -17917,7 +17917,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     "auto" !== a || ("left" !== r && "top" !== r)
                       ? ("" !== a && "auto" !== a && "none" !== a) ||
                         "string" != typeof t[r] ||
-                        "" === t[r].replace(S, "")
+                        "" === t[r].replace(T, "")
                         ? a
                         : 0
                       : ee(e, r)),
@@ -17979,8 +17979,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 (t.oyp = -1 !== a.indexOf("%")),
                 (t.oxr = "=" === s.charAt(1)),
                 (t.oyr = "=" === a.charAt(1)),
-                (t.ox = parseFloat(s.replace(S, ""))),
-                (t.oy = parseFloat(a.replace(S, ""))),
+                (t.ox = parseFloat(s.replace(T, ""))),
+                (t.oy = parseFloat(a.replace(T, ""))),
                 (t.v = e)),
               t || e
             );
@@ -18352,7 +18352,7 @@ PERFORMANCE OF THIS SOFTWARE.
             var r = new Ce(e, t, n, i - n, s, -1, a);
             return ((r.b = n), (r.e = r.xs0 = i), r);
           },
-          Se = (a.parseComplex = function (e, t, n, i, s, r, o, l, _, c) {
+          Te = (a.parseComplex = function (e, t, n, i, s, r, o, l, _, c) {
             ((n = n || r || ""),
               "function" == typeof i && (i = i(g, p)),
               (o = new Ce(e, t, 0, 0, o, c ? 2 : 1, null, !1, l, n, i)),
@@ -18364,8 +18364,8 @@ PERFORMANCE OF THIS SOFTWARE.
               d,
               h,
               f,
-              S,
               T,
+              S,
               y,
               I,
               v,
@@ -18375,8 +18375,8 @@ PERFORMANCE OF THIS SOFTWARE.
               D,
               b = n.split(", ").join(",").split(" "),
               R = i.split(", ").join(",").split(" "),
-              B = b.length,
-              N = !1 !== u;
+              N = b.length,
+              B = !1 !== u;
             for (
               (-1 === i.indexOf(",") && -1 === n.indexOf(",")) ||
                 (-1 !== (i + n).indexOf("rgb") || -1 !== (i + n).indexOf("hsl")
@@ -18384,31 +18384,31 @@ PERFORMANCE OF THIS SOFTWARE.
                     (R = R.join(" ").replace(P, ", ").split(" ")))
                   : ((b = b.join(" ").split(",").join(", ").split(" ")),
                     (R = R.join(" ").split(",").join(", ").split(" "))),
-                (B = b.length)),
-                B !== R.length && (B = (b = (r || "").split(" ")).length),
+                (N = b.length)),
+                N !== R.length && (N = (b = (r || "").split(" ")).length),
                 o.plugin = _,
                 o.setRatio = c,
                 he.lastIndex = 0,
                 m = 0;
-              m < B;
+              m < N;
               m++
             )
-              if (((f = b[m]), (S = R[m] + ""), (I = parseFloat(f)) || 0 === I))
+              if (((f = b[m]), (T = R[m] + ""), (I = parseFloat(f)) || 0 === I))
                 o.appendXtra(
                   "",
                   I,
-                  oe(S, I),
-                  S.replace(C, ""),
-                  !(!N || -1 === S.indexOf("px")) && Math.round,
+                  oe(T, I),
+                  T.replace(C, ""),
+                  !(!B || -1 === T.indexOf("px")) && Math.round,
                   !0,
                 );
               else if (s && he.test(f))
-                ((L = ")" + ((L = S.indexOf(")") + 1) ? S.substr(L) : "")),
-                  (D = -1 !== S.indexOf("hsl") && q),
-                  (A = S),
+                ((L = ")" + ((L = T.indexOf(")") + 1) ? T.substr(L) : "")),
+                  (D = -1 !== T.indexOf("hsl") && q),
+                  (A = T),
                   (f = me(f, D)),
-                  (S = me(S, D)),
-                  (v = f.length + S.length > 6) && !q && 0 === S[3]
+                  (T = me(T, D)),
+                  (v = f.length + T.length > 6) && !q && 0 === T[3]
                     ? ((o["xs" + o.l] += o.l ? " transparent" : "transparent"),
                       (o.e = o.e.split(R[m]).join("transparent")))
                     : (q || (v = !1),
@@ -18418,16 +18418,16 @@ PERFORMANCE OF THIS SOFTWARE.
                               A.substr(0, A.indexOf("hsl")) +
                                 (v ? "hsla(" : "hsl("),
                               f[0],
-                              oe(S[0], f[0]),
+                              oe(T[0], f[0]),
                               ",",
                               !1,
                               !0,
                             )
-                            .appendXtra("", f[1], oe(S[1], f[1]), "%,", !1)
+                            .appendXtra("", f[1], oe(T[1], f[1]), "%,", !1)
                             .appendXtra(
                               "",
                               f[2],
-                              oe(S[2], f[2]),
+                              oe(T[2], f[2]),
                               v ? "%," : "%" + L,
                               !1,
                             )
@@ -18436,16 +18436,16 @@ PERFORMANCE OF THIS SOFTWARE.
                               A.substr(0, A.indexOf("rgb")) +
                                 (v ? "rgba(" : "rgb("),
                               f[0],
-                              S[0] - f[0],
+                              T[0] - f[0],
                               ",",
                               Math.round,
                               !0,
                             )
-                            .appendXtra("", f[1], S[1] - f[1], ",", Math.round)
+                            .appendXtra("", f[1], T[1] - f[1], ",", Math.round)
                             .appendXtra(
                               "",
                               f[2],
-                              S[2] - f[2],
+                              T[2] - f[2],
                               v ? "," : L,
                               Math.round,
                             ),
@@ -18454,27 +18454,27 @@ PERFORMANCE OF THIS SOFTWARE.
                         o.appendXtra(
                           "",
                           f,
-                          (S.length < 4 ? 1 : S[3]) - f,
+                          (T.length < 4 ? 1 : T[3]) - f,
                           L,
                           !1,
                         ))),
                   (he.lastIndex = 0));
-              else if ((T = f.match(E))) {
-                if (!(y = S.match(C)) || y.length !== T.length) return o;
-                for (h = 0, d = 0; d < T.length; d++)
-                  ((O = T[d]),
+              else if ((S = f.match(E))) {
+                if (!(y = T.match(C)) || y.length !== S.length) return o;
+                for (h = 0, d = 0; d < S.length; d++)
+                  ((O = S[d]),
                     (A = f.indexOf(O, h)),
                     o.appendXtra(
                       f.substr(h, A - h),
                       Number(O),
                       oe(y[d], O),
                       "",
-                      !(!N || "px" !== f.substr(A + O.length, 2)) && Math.round,
+                      !(!B || "px" !== f.substr(A + O.length, 2)) && Math.round,
                       0 === d,
                     ),
                     (h = A + O.length));
                 o["xs" + o.l] += f.substr(h);
-              } else o["xs" + o.l] += o.l || o["xs" + o.l] ? " " + S : S;
+              } else o["xs" + o.l] += o.l || o["xs" + o.l] ? " " + T : T;
             if (-1 !== i.indexOf("=") && o.data) {
               for (L = o.xs0 + o.data.s, m = 1; m < o.l; m++)
                 L += o["xs" + m] + o.data["xn" + m];
@@ -18482,9 +18482,9 @@ PERFORMANCE OF THIS SOFTWARE.
             }
             return (o.l || ((o.type = -1), (o.xs0 = o.e)), o.xfirst || o);
           }),
-          Te = 9;
-        for ((l = Ce.prototype).l = l.pr = 0; --Te > 0;)
-          ((l["xn" + Te] = 0), (l["xs" + Te] = ""));
+          Se = 9;
+        for ((l = Ce.prototype).l = l.pr = 0; --Se > 0;)
+          ((l["xn" + Se] = 0), (l["xs" + Se] = ""));
         ((l.xs0 = ""),
           (l._next =
             l._prev =
@@ -18597,7 +18597,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     : -1 === _ && (o[r] += " " + m)));
             ((t = o.join(", ")), (n = l.join(", ")));
           }
-          return Se(e, this.p, t, n, this.clrs, this.dflt, i, this.pr, s, a);
+          return Te(e, this.p, t, n, this.clrs, this.dflt, i, this.pr, s, a);
         }),
           (l.parse = function (e, t, i, s, a, r, o) {
             return this.parseComplex(
@@ -18627,8 +18627,8 @@ PERFORMANCE OF THIS SOFTWARE.
             "scaleX,scaleY,scaleZ,x,y,z,skewX,skewY,rotation,rotationX,rotationY,perspective,xPercent,yPercent".split(
               ",",
             ),
-          Be = X("transform"),
-          Ne = z + "transform",
+          Ne = X("transform"),
+          Be = z + "transform",
           Pe = X("transformOrigin"),
           Me = null !== X("perspective"),
           Ue = (V.Transform = function () {
@@ -18659,7 +18659,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 x: 100,
               })).getBoundingClientRect().width),
               (Le.style[Pe] = "50% 50%"),
-              (Le.style[Be] = "scaleX(0.5)"),
+              (Le.style[Ne] = "scaleX(0.5)"),
               (be = De === Le.getBoundingClientRect().width && !(m && Me)),
               ke.removeChild(Oe)),
             be),
@@ -18677,10 +18677,10 @@ PERFORMANCE OF THIS SOFTWARE.
               E,
               C,
               f,
-              S,
-              T = e._gsTransform,
+              T,
+              S = e._gsTransform,
               y = je(e, !0);
-            (T && ((f = T.xOrigin), (S = T.yOrigin)),
+            (S && ((f = S.xOrigin), (T = S.yOrigin)),
               (!i || (o = i.split(" ")).length < 2) &&
                 (0 === (d = e.getBBox()).x &&
                   0 === d.y &&
@@ -18728,15 +18728,15 @@ PERFORMANCE OF THIS SOFTWARE.
                   (u = _ * (-d / C) + c * (m / C) - (m * E - d * g) / C),
                   (_ = n.xOrigin = o[0] = l),
                   (c = n.yOrigin = o[1] = u))),
-              T &&
+              S &&
                 (r &&
-                  ((n.xOffset = T.xOffset), (n.yOffset = T.yOffset), (T = n)),
+                  ((n.xOffset = S.xOffset), (n.yOffset = S.yOffset), (S = n)),
                 s || (!1 !== s && !1 !== a.defaultSmoothOrigin)
                   ? ((l = _ - f),
-                    (u = c - S),
-                    (T.xOffset += l * y[0] + u * y[2] - l),
-                    (T.yOffset += l * y[1] + u * y[3] - u))
-                  : (T.xOffset = T.yOffset = 0)),
+                    (u = c - T),
+                    (S.xOffset += l * y[0] + u * y[2] - l),
+                    (S.yOffset += l * y[1] + u * y[3] - u))
+                  : (S.xOffset = S.yOffset = 0)),
               r || e.setAttribute("data-svg-origin", o.join(" ")));
           },
           We = function (e) {
@@ -18794,11 +18794,11 @@ PERFORMANCE OF THIS SOFTWARE.
               l = e._gsTransform || new Ue(),
               u = e.style;
             if (
-              (Be
-                ? (i = $(e, Ne, null, !0))
+              (Ne
+                ? (i = $(e, Be, null, !0))
                 : e.currentStyle &&
                   (i =
-                    (i = e.currentStyle.filter.match(B)) && 4 === i.length
+                    (i = e.currentStyle.filter.match(N)) && 4 === i.length
                       ? [
                           i[0].substr(4),
                           Number(i[2].substr(4)),
@@ -18809,20 +18809,20 @@ PERFORMANCE OF THIS SOFTWARE.
                         ].join(",")
                       : ""),
               (n = !i || "none" === i || "matrix(1, 0, 0, 1, 0, 0)" === i),
-              !Be ||
+              !Ne ||
                 (!(o = !Q(e) || "none" === Q(e).display) && e.parentNode) ||
                 (o && ((a = u.display), (u.display = "block")),
                 e.parentNode || ((r = 1), ke.appendChild(e)),
                 (n =
-                  !(i = $(e, Ne, null, !0)) ||
+                  !(i = $(e, Be, null, !0)) ||
                   "none" === i ||
                   "matrix(1, 0, 0, 1, 0, 0)" === i),
                 a ? (u.display = a) : o && Ze(u, "display"),
                 r && ke.removeChild(e)),
               (l.svg || (e.getCTM && He(e))) &&
                 (n &&
-                  -1 !== (u[Be] + "").indexOf("matrix") &&
-                  ((i = u[Be]), (n = 0)),
+                  -1 !== (u[Ne] + "").indexOf("matrix") &&
+                  ((i = u[Ne]), (n = 0)),
                 (s = e.getAttribute("transform")),
                 n &&
                   s &&
@@ -18844,9 +18844,9 @@ PERFORMANCE OF THIS SOFTWARE.
               n)
             )
               return Ve;
-            for (s = (i || "").match(E) || [], Te = s.length; --Te > -1;)
-              ((a = Number(s[Te])),
-                (s[Te] = (r = a - (a |= 0))
+            for (s = (i || "").match(E) || [], Se = s.length; --Se > -1;)
+              ((a = Number(s[Se])),
+                (s[Se] = (r = a - (a |= 0))
                   ? ((1e5 * r + (r < 0 ? -0.5 : 0.5)) | 0) / 1e5 + a
                   : a));
             return t && s.length > 6
@@ -18886,8 +18886,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   E,
                   C,
                   f,
-                  S,
-                  T = r[0],
+                  T,
+                  S = r[0],
                   y = r[1],
                   I = r[2],
                   v = r[3],
@@ -18897,49 +18897,49 @@ PERFORMANCE OF THIS SOFTWARE.
                   D = r[7],
                   b = r[8],
                   R = r[9],
-                  B = r[10],
-                  N = r[12],
+                  N = r[10],
+                  B = r[12],
                   P = r[13],
                   M = r[14],
                   U = r[11],
-                  F = Math.atan2(L, B);
+                  F = Math.atan2(L, N);
                 (m.zOrigin &&
-                  ((N = b * (M = -m.zOrigin) - r[12]),
+                  ((B = b * (M = -m.zOrigin) - r[12]),
                   (P = R * M - r[13]),
-                  (M = B * M + m.zOrigin - r[14])),
+                  (M = N * M + m.zOrigin - r[14])),
                   (m.rotationX = F * G),
                   F &&
-                    ((g = A * (f = Math.cos(-F)) + b * (S = Math.sin(-F))),
-                    (E = O * f + R * S),
-                    (C = L * f + B * S),
-                    (b = A * -S + b * f),
-                    (R = O * -S + R * f),
-                    (B = L * -S + B * f),
-                    (U = D * -S + U * f),
+                    ((g = A * (f = Math.cos(-F)) + b * (T = Math.sin(-F))),
+                    (E = O * f + R * T),
+                    (C = L * f + N * T),
+                    (b = A * -T + b * f),
+                    (R = O * -T + R * f),
+                    (N = L * -T + N * f),
+                    (U = D * -T + U * f),
                     (A = g),
                     (O = E),
                     (L = C)),
-                  (F = Math.atan2(-I, B)),
+                  (F = Math.atan2(-I, N)),
                   (m.rotationY = F * G),
                   F &&
-                    ((E = y * (f = Math.cos(-F)) - R * (S = Math.sin(-F))),
-                    (C = I * f - B * S),
-                    (R = y * S + R * f),
-                    (B = I * S + B * f),
-                    (U = v * S + U * f),
-                    (T = g = T * f - b * S),
+                    ((E = y * (f = Math.cos(-F)) - R * (T = Math.sin(-F))),
+                    (C = I * f - N * T),
+                    (R = y * T + R * f),
+                    (N = I * T + N * f),
+                    (U = v * T + U * f),
+                    (S = g = S * f - b * T),
                     (y = E),
                     (I = C)),
-                  (F = Math.atan2(y, T)),
+                  (F = Math.atan2(y, S)),
                   (m.rotation = F * G),
                   F &&
-                    ((g = T * (f = Math.cos(F)) + y * (S = Math.sin(F))),
-                    (E = A * f + O * S),
-                    (C = b * f + R * S),
-                    (y = y * f - T * S),
-                    (O = O * f - A * S),
-                    (R = R * f - b * S),
-                    (T = g),
+                    ((g = S * (f = Math.cos(F)) + y * (T = Math.sin(F))),
+                    (E = A * f + O * T),
+                    (C = b * f + R * T),
+                    (y = y * f - S * T),
+                    (O = O * f - A * T),
+                    (R = R * f - b * T),
+                    (S = g),
                     (A = E),
                     (b = C)),
                   m.rotationX &&
@@ -18948,12 +18948,12 @@ PERFORMANCE OF THIS SOFTWARE.
                     (m.rotationY = 180 - m.rotationY)),
                   (F = Math.atan2(A, O)),
                   (m.scaleX =
-                    ((1e5 * Math.sqrt(T * T + y * y + I * I) + 0.5) | 0) / 1e5),
+                    ((1e5 * Math.sqrt(S * S + y * y + I * I) + 0.5) | 0) / 1e5),
                   (m.scaleY =
                     ((1e5 * Math.sqrt(O * O + L * L) + 0.5) | 0) / 1e5),
                   (m.scaleZ =
-                    ((1e5 * Math.sqrt(b * b + R * R + B * B) + 0.5) | 0) / 1e5),
-                  (T /= m.scaleX),
+                    ((1e5 * Math.sqrt(b * b + R * R + N * N) + 0.5) | 0) / 1e5),
+                  (S /= m.scaleX),
                   (A /= m.scaleY),
                   (y /= m.scaleX),
                   (O /= m.scaleY),
@@ -18963,11 +18963,11 @@ PERFORMANCE OF THIS SOFTWARE.
                       "simple" !== m.skewType && (m.scaleY *= 1 / Math.cos(F)))
                     : (m.skewX = 0),
                   (m.perspective = U ? 1 / (U < 0 ? -U : U) : 0),
-                  (m.x = N),
+                  (m.x = B),
                   (m.y = P),
                   (m.z = M),
                   m.svg &&
-                    ((m.x -= m.xOrigin - (m.xOrigin * T - m.yOrigin * A)),
+                    ((m.x -= m.xOrigin - (m.xOrigin * S - m.yOrigin * A)),
                     (m.y -= m.yOrigin - (m.yOrigin * y - m.xOrigin * O))));
               } else if (
                 !Me ||
@@ -19015,9 +19015,9 @@ PERFORMANCE OF THIS SOFTWARE.
               n &&
                 ((e._gsTransform = m),
                 m.svg &&
-                  (Ae && e.style[Be]
+                  (Ae && e.style[Ne]
                     ? i.default.delayedCall(0.001, function () {
-                        Ze(e.style, Be);
+                        Ze(e.style, Ne);
                       })
                     : !Ae &&
                       e.getAttribute("transform") &&
@@ -19056,23 +19056,23 @@ PERFORMANCE OF THIS SOFTWARE.
                   ", M22=" +
                   u,
                 f = i.x + (p * i.xPercent) / 100,
-                S = i.y + (g * i.yPercent) / 100;
+                T = i.y + (g * i.yPercent) / 100;
               if (
                 (null != i.ox &&
                   ((f +=
                     (m = (i.oxp ? p * i.ox * 0.01 : i.ox) - p / 2) -
                     (m * r +
                       (d = (i.oyp ? g * i.oy * 0.01 : i.oy) - g / 2) * o)),
-                  (S += d - (m * l + d * u))),
+                  (T += d - (m * l + d * u))),
                 (C += E
                   ? ", Dx=" +
                     ((m = p / 2) - (m * r + (d = g / 2) * o) + f) +
                     ", Dy=" +
-                    (d - (m * l + d * u) + S) +
+                    (d - (m * l + d * u) + T) +
                     ")"
                   : ", sizingMethod='auto expand')"),
                 -1 !== t.indexOf("DXImageTransform.Microsoft.Matrix(")
-                  ? (_.filter = t.replace(N, C))
+                  ? (_.filter = t.replace(B, C))
                   : (_.filter = C + " " + t),
                 (0 !== e && 1 !== e) ||
                   (1 === r &&
@@ -19098,27 +19098,27 @@ PERFORMANCE OF THIS SOFTWARE.
                     ),
                     i.ieOffsetY = Math.round(
                       (g - ((u < 0 ? -u : u) * g + (l < 0 ? -l : l) * p)) / 2 +
-                        S,
+                        T,
                     ),
-                    Te = 0;
-                  Te < 4;
-                  Te++
+                    Se = 0;
+                  Se < 4;
+                  Se++
                 )
                   ((A =
                     (n =
-                      -1 !== (I = c[(v = se[Te])]).indexOf("px")
+                      -1 !== (I = c[(v = se[Se])]).indexOf("px")
                         ? parseFloat(I)
-                        : J(this.t, v, parseFloat(I), I.replace(T, "")) ||
+                        : J(this.t, v, parseFloat(I), I.replace(S, "")) ||
                           0) !== i[v]
-                      ? Te < 2
+                      ? Se < 2
                         ? -i.ieOffsetX
                         : -i.ieOffsetY
-                      : Te < 2
+                      : Se < 2
                         ? m - i.ieOffsetX
                         : d - i.ieOffsetY),
                     (_[v] =
                       (i[v] = Math.round(
-                        n - A * (0 === Te || 2 === Te ? 1 : O),
+                        n - A * (0 === Se || 2 === Se ? 1 : O),
                       )) + "px"));
               }
             }
@@ -19145,8 +19145,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   E,
                   C,
                   f,
-                  S,
                   T,
+                  S,
                   y,
                   I = this.data,
                   v = this.t.style,
@@ -19156,8 +19156,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   D = I.scaleX,
                   b = I.scaleY,
                   R = I.scaleZ,
-                  B = I.x,
-                  N = I.y,
+                  N = I.x,
+                  B = I.y,
                   P = I.z,
                   M = I.svg,
                   G = I.perspective,
@@ -19183,15 +19183,15 @@ PERFORMANCE OF THIS SOFTWARE.
                 )
                   A || w || M
                     ? ((A *= U),
-                      (T = w * U),
+                      (S = w * U),
                       (y = 1e5),
                       (n = Math.cos(A) * D),
                       (a = Math.sin(A) * D),
-                      (i = Math.sin(A - T) * -b),
-                      (r = Math.cos(A - T) * b),
-                      T &&
+                      (i = Math.sin(A - S) * -b),
+                      (r = Math.cos(A - S) * b),
+                      S &&
                         "simple" === I.skewType &&
-                        ((t = Math.tan(T - k * U)),
+                        ((t = Math.tan(S - k * U)),
                         (i *= t = Math.sqrt(1 + t * t)),
                         (r *= t),
                         k &&
@@ -19199,22 +19199,22 @@ PERFORMANCE OF THIS SOFTWARE.
                           (n *= t = Math.sqrt(1 + t * t)),
                           (a *= t))),
                       M &&
-                        ((B +=
+                        ((N +=
                           I.xOrigin -
                           (I.xOrigin * n + I.yOrigin * i) +
                           I.xOffset),
-                        (N +=
+                        (B +=
                           I.yOrigin -
                           (I.xOrigin * a + I.yOrigin * r) +
                           I.yOffset),
                         Ae &&
                           (I.xPercent || I.yPercent) &&
                           ((g = this.t.getBBox()),
-                          (B += 0.01 * I.xPercent * g.width),
-                          (N += 0.01 * I.yPercent * g.height)),
-                        B < (g = 1e-6) && B > -g && (B = 0),
-                        N < g && N > -g && (N = 0)),
-                      (S =
+                          (N += 0.01 * I.xPercent * g.width),
+                          (B += 0.01 * I.yPercent * g.height)),
+                        N < (g = 1e-6) && N > -g && (N = 0),
+                        B < g && B > -g && (B = 0)),
+                      (T =
                         ((n * y) | 0) / y +
                         "," +
                         ((a * y) | 0) / y +
@@ -19223,21 +19223,21 @@ PERFORMANCE OF THIS SOFTWARE.
                         "," +
                         ((r * y) | 0) / y +
                         "," +
-                        B +
-                        "," +
                         N +
+                        "," +
+                        B +
                         ")"),
                       M && Ae
-                        ? this.t.setAttribute("transform", "matrix(" + S)
-                        : (v[Be] =
+                        ? this.t.setAttribute("transform", "matrix(" + T)
+                        : (v[Ne] =
                             (I.xPercent || I.yPercent
                               ? "translate(" +
                                 I.xPercent +
                                 "%," +
                                 I.yPercent +
                                 "%) matrix("
-                              : "matrix(") + S))
-                    : (v[Be] =
+                              : "matrix(") + T))
+                    : (v[Ne] =
                         (I.xPercent || I.yPercent
                           ? "translate(" +
                             I.xPercent +
@@ -19249,9 +19249,9 @@ PERFORMANCE OF THIS SOFTWARE.
                         ",0,0," +
                         b +
                         "," +
-                        B +
-                        "," +
                         N +
+                        "," +
+                        B +
                         ")");
                 else {
                   if (
@@ -19280,7 +19280,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       (r = E));
                   else {
                     if (!(L || O || 1 !== R || G || M))
-                      return void (v[Be] =
+                      return void (v[Ne] =
                         (I.xPercent || I.yPercent
                           ? "translate(" +
                             I.xPercent +
@@ -19288,9 +19288,9 @@ PERFORMANCE OF THIS SOFTWARE.
                             I.yPercent +
                             "%) translate3d("
                           : "translate3d(") +
-                        B +
-                        "px," +
                         N +
+                        "px," +
+                        B +
                         "px," +
                         P +
                         "px)" +
@@ -19331,20 +19331,20 @@ PERFORMANCE OF THIS SOFTWARE.
                     1 !== b && ((i *= b), (r *= b), (u *= b), (d *= b)),
                     1 !== D && ((n *= D), (a *= D), (l *= D), (c *= D)),
                     (p || M) &&
-                      (p && ((B += s * -p), (N += o * -p), (P += _ * -p + p)),
+                      (p && ((N += s * -p), (B += o * -p), (P += _ * -p + p)),
                       M &&
-                        ((B +=
+                        ((N +=
                           I.xOrigin -
                           (I.xOrigin * n + I.yOrigin * i) +
                           I.xOffset),
-                        (N +=
+                        (B +=
                           I.yOrigin -
                           (I.xOrigin * a + I.yOrigin * r) +
                           I.yOffset)),
-                      B < g && B > -g && (B = "0"),
                       N < g && N > -g && (N = "0"),
+                      B < g && B > -g && (B = "0"),
                       P < g && P > -g && (P = 0)),
-                    (S =
+                    (T =
                       I.xPercent || I.yPercent
                         ? "translate(" +
                           I.xPercent +
@@ -19352,13 +19352,13 @@ PERFORMANCE OF THIS SOFTWARE.
                           I.yPercent +
                           "%) matrix3d("
                         : "matrix3d("),
-                    (S +=
+                    (T +=
                       (n < g && n > -g ? "0" : n) +
                       "," +
                       (a < g && a > -g ? "0" : a) +
                       "," +
                       (l < g && l > -g ? "0" : l)),
-                    (S +=
+                    (T +=
                       "," +
                       (c < g && c > -g ? "0" : c) +
                       "," +
@@ -19366,14 +19366,14 @@ PERFORMANCE OF THIS SOFTWARE.
                       "," +
                       (r < g && r > -g ? "0" : r)),
                     O || L || 1 !== R
-                      ? ((S +=
+                      ? ((T +=
                           "," +
                           (u < g && u > -g ? "0" : u) +
                           "," +
                           (d < g && d > -g ? "0" : d) +
                           "," +
                           (s < g && s > -g ? "0" : s)),
-                        (S +=
+                        (T +=
                           "," +
                           (o < g && o > -g ? "0" : o) +
                           "," +
@@ -19381,10 +19381,10 @@ PERFORMANCE OF THIS SOFTWARE.
                           "," +
                           (h < g && h > -g ? "0" : h) +
                           ","))
-                      : (S += ",0,0,0,0,1,0,"),
-                    (S +=
-                      B + "," + N + "," + P + "," + (G ? 1 + -P / G : 1) + ")"),
-                    (v[Be] = S));
+                      : (T += ",0,0,0,0,1,0,"),
+                    (T +=
+                      N + "," + B + "," + P + "," + (G ? 1 + -P / G : 1) + ")"),
+                    (v[Ne] = T));
                 }
               });
         (((l = Ue.prototype).x =
@@ -19419,8 +19419,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   E,
                   C,
                   f,
-                  S,
                   T,
+                  S,
                   y = e._gsTransform,
                   I = e.style,
                   v = Re.length,
@@ -19436,9 +19436,9 @@ PERFORMANCE OF THIS SOFTWARE.
                   ((L.skewType = A.skewType || L.skewType || a.defaultSkewType),
                   (s._transform = L),
                   "rotationZ" in A && (A.rotation = A.rotationZ),
-                  D && "string" == typeof D && Be)
+                  D && "string" == typeof D && Ne)
                 )
-                  (((m = W.style)[Be] = D),
+                  (((m = W.style)[Ne] = D),
                     (m.display = "block"),
                     (m.position = "absolute"),
                     -1 !== D.indexOf("%") &&
@@ -19467,9 +19467,9 @@ PERFORMANCE OF THIS SOFTWARE.
                         (c.x -= D.xOffset - L.xOffset),
                         (c.y -= D.yOffset - L.yOffset)),
                       (C || f) &&
-                        ((S = je(W, !0)),
-                        (c.x -= C - (C * S[0] + f * S[2])),
-                        (c.y -= f - (C * S[1] + f * S[3])))),
+                        ((T = je(W, !0)),
+                        (c.x -= C - (C * T[0] + f * T[2])),
+                        (c.y -= f - (C * T[1] + f * T[3])))),
                     w.body.removeChild(W),
                     c.perspective || (c.perspective = L.perspective),
                     null != A.xPercent &&
@@ -19556,13 +19556,13 @@ PERFORMANCE OF THIS SOFTWARE.
                       (c.scaleZ = 1);
                   --v > -1;
                 )
-                  ((D = c[(T = Re[v])] - L[T]) > 1e-6 ||
+                  ((D = c[(S = Re[v])] - L[S]) > 1e-6 ||
                     D < -1e-6 ||
-                    null != A[T] ||
-                    null != F[T]) &&
+                    null != A[S] ||
+                    null != F[S]) &&
                     ((h = !0),
-                    (r = new Ce(L, T, L[T], D, r)),
-                    T in O && (r.e = O[T]),
+                    (r = new Ce(L, S, L[S], D, r)),
+                    S in O && (r.e = O[S]),
                     (r.xs0 = 0),
                     (r.plugin = o),
                     s._overwriteProps.push(r.n));
@@ -19608,12 +19608,12 @@ PERFORMANCE OF THIS SOFTWARE.
                       ))),
                     (D = "0px 0px")),
                   (D || (Me && d && L.zOrigin)) &&
-                    (Be
+                    (Ne
                       ? ((h = !0),
-                        (T = Pe),
-                        (D = (D || $(e, T, n, !1, "50% 50%")) + ""),
-                        ((r = new Ce(I, T, 0, 0, r, -1, "transformOrigin")).b =
-                          I[T]),
+                        (S = Pe),
+                        (D = (D || $(e, S, n, !1, "50% 50%")) + ""),
+                        ((r = new Ce(I, S, 0, 0, r, -1, "transformOrigin")).b =
+                          I[S]),
                         (r.plugin = o),
                         Me
                           ? ((m = L.zOrigin),
@@ -19665,8 +19665,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 E,
                 C,
                 f,
-                S,
                 T,
+                S,
                 y,
                 I,
                 v = [
@@ -19690,7 +19690,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   (d = _ = l[u]),
                   (h = parseFloat(m)),
                   (f = m.substr((h + "").length)),
-                  (S = "=" === d.charAt(1))
+                  (T = "=" === d.charAt(1))
                     ? ((p = parseInt(d.charAt(0) + "1", 10)),
                       (d = d.substr(2)),
                       (p *= parseFloat(d)),
@@ -19698,18 +19698,18 @@ PERFORMANCE OF THIS SOFTWARE.
                     : ((p = parseFloat(d)), (C = d.substr((p + "").length))),
                   "" === C && (C = t[s] || f),
                   C !== f &&
-                    ((T = J(e, "borderLeft", h, f)),
+                    ((S = J(e, "borderLeft", h, f)),
                     (y = J(e, "borderTop", h, f)),
                     "%" === C
-                      ? ((m = (T / g) * 100 + "%"), (c = (y / E) * 100 + "%"))
+                      ? ((m = (S / g) * 100 + "%"), (c = (y / E) * 100 + "%"))
                       : "em" === C
-                        ? ((m = T / (I = J(e, "borderLeft", 1, "em")) + "em"),
+                        ? ((m = S / (I = J(e, "borderLeft", 1, "em")) + "em"),
                           (c = y / I + "em"))
-                        : ((m = T + "px"), (c = y + "px")),
-                    S &&
+                        : ((m = S + "px"), (c = y + "px")),
+                    T &&
                       ((d = parseFloat(m) + p + C),
                       (_ = parseFloat(c) + p + C))),
-                  (r = Se(A, v[u], m + " " + c, d + " " + _, !1, "0px", r)));
+                  (r = Te(A, v[u], m + " " + c, d + " " + _, !1, "0px", r)));
               return r;
             },
             prefix: !0,
@@ -19720,7 +19720,7 @@ PERFORMANCE OF THIS SOFTWARE.
             {
               defaultValue: "0px",
               parser: function (e, t, i, s, a, r) {
-                return Se(
+                return Te(
                   e.style,
                   i,
                   this.format($(e, i, n, !1, "0px 0px")),
@@ -19844,7 +19844,7 @@ PERFORMANCE OF THIS SOFTWARE.
             parser: function (e, t, i, s, a, r) {
               var o = $(e, "borderTopWidth", n, !1, "0px"),
                 l = this.format(t).split(" "),
-                u = l[0].replace(T, "");
+                u = l[0].replace(S, "");
               return (
                 "px" !== u &&
                   (o = parseFloat(o) / J(e, "borderTopWidth", 1, u) + u),
@@ -20036,7 +20036,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       : (n = "transformOrigin" === n ? Pe : o[n].p)),
                   Ze(r, n));
             s &&
-              (Ze(r, Be),
+              (Ze(r, Ne),
               (a = this.t._gsTransform) &&
                 (a.svg &&
                   (this.t.removeAttribute("data-svg-origin"),
@@ -20058,10 +20058,10 @@ PERFORMANCE OF THIS SOFTWARE.
             },
           }),
             l = "bezier,throwProps,physicsProps,physics2D".split(","),
-            Te = l.length;
-          Te--;
+            Se = l.length;
+          Se--;
         )
-          ve(l[Te]);
+          ve(l[Se]);
         (((l = a.prototype)._firstPT =
           l._lastParsedTransform =
           l._transform =
@@ -20081,8 +20081,8 @@ PERFORMANCE OF THIS SOFTWARE.
               E,
               C,
               f,
-              S,
               T,
+              S,
               y,
               v,
               A,
@@ -20116,7 +20116,7 @@ PERFORMANCE OF THIS SOFTWARE.
             ) {
               for (
                 A = 3 === this._transformType,
-                  Be
+                  Ne
                     ? c &&
                       ((_ = !0),
                       "" === O.zIndex &&
@@ -20136,7 +20136,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 C = C._next;
               ((v = new Ce(i, "transform", 0, 0, null, 2)),
                 this._linkCSSP(v, null, C),
-                (v.setRatio = Be ? Ye : Ke),
+                (v.setRatio = Ne ? Ye : Ke),
                 (v.data = this._transform || qe(i, n, !0)),
                 (v.tween = l),
                 (v.pr = -1),
@@ -20144,10 +20144,10 @@ PERFORMANCE OF THIS SOFTWARE.
             }
             if (e) {
               for (; E;) {
-                for (T = E._next, C = f; C && C.pr > E.pr;) C = C._next;
-                ((E._prev = C ? C._prev : S) ? (E._prev._next = E) : (f = E),
-                  (E._next = C) ? (C._prev = E) : (S = E),
-                  (E = T));
+                for (S = E._next, C = f; C && C.pr > E.pr;) C = C._next;
+                ((E._prev = C ? C._prev : T) ? (E._prev._next = E) : (f = E),
+                  (E._next = C) ? (C._prev = E) : (T = E),
+                  (E = S));
               }
               this._firstPT = f;
             }
@@ -20164,7 +20164,7 @@ PERFORMANCE OF THIS SOFTWARE.
               E,
               C,
               f,
-              S = e.style;
+              T = e.style;
             for (r in i) {
               if (
                 ("function" == typeof (d = i[r]) && (d = d(g, p)), (l = o[r]))
@@ -20196,9 +20196,9 @@ PERFORMANCE OF THIS SOFTWARE.
                           ((d = me(d)).length > 3 ? "rgba(" : "rgb(") +
                           d.join(",") +
                           ")"),
-                      (s = Se(S, r, m, d, !0, "transparent", s, 0, a)))
+                      (s = Te(T, r, m, d, !0, "transparent", s, 0, a)))
                     : C && M.test(d)
-                      ? (s = Se(S, r, m, d, !0, null, s, 0, a))
+                      ? (s = Te(T, r, m, d, !0, null, s, 0, a))
                       : ((h =
                           (_ = parseFloat(m)) || 0 === _
                             ? m.substr((_ + "").length)
@@ -20213,9 +20213,9 @@ PERFORMANCE OF THIS SOFTWARE.
                           ? ((c = parseInt(d.charAt(0) + "1", 10)),
                             (d = d.substr(2)),
                             (c *= parseFloat(d)),
-                            (E = d.replace(T, "")))
+                            (E = d.replace(S, "")))
                           : ((c = parseFloat(d)),
-                            (E = C ? d.replace(T, "") : "")),
+                            (E = C ? d.replace(S, "") : "")),
                         "" === E && (E = r in t ? t[r] : h),
                         (d = c || 0 === c ? (f ? c + _ : c) + E : i[r]),
                         h !== E &&
@@ -20236,10 +20236,10 @@ PERFORMANCE OF THIS SOFTWARE.
                               f && (c || 0 === c) && (d = c + _ + E)))),
                         f && (c += _),
                         (!_ && 0 !== _) || (!c && 0 !== c)
-                          ? void 0 !== S[r] &&
+                          ? void 0 !== T[r] &&
                             (d || (d + "" != "NaN" && null != d))
                             ? ((s = new Ce(
-                                S,
+                                T,
                                 r,
                                 c || _ || 0,
                                 0,
@@ -20257,7 +20257,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                   : m)
                             : Y("invalid " + r + " tween value: " + i[r])
                           : ((s = new Ce(
-                              S,
+                              T,
                               r,
                               _,
                               c - _,
@@ -20577,8 +20577,8 @@ PERFORMANCE OF THIS SOFTWARE.
           E,
           C,
           f,
-          S,
           T,
+          S,
           y = e.length - 1,
           I = 0,
           v = e[0].a;
@@ -20588,13 +20588,13 @@ PERFORMANCE OF THIS SOFTWARE.
             (m = e[I + 1].d),
             s
               ? ((f = a[l]),
-                (T = (((S = r[l]) + f) * t * 0.25) / (i ? 0.5 : o[l] || 0.5)),
+                (S = (((T = r[l]) + f) * t * 0.25) / (i ? 0.5 : o[l] || 0.5)),
                 (g =
                   _ -
-                  ((h = _ - (_ - u) * (i ? 0.5 * t : 0 !== f ? T / f : 0)) +
-                    ((((p = _ + (m - _) * (i ? 0.5 * t : 0 !== S ? T / S : 0)) -
+                  ((h = _ - (_ - u) * (i ? 0.5 * t : 0 !== f ? S / f : 0)) +
+                    ((((p = _ + (m - _) * (i ? 0.5 * t : 0 !== T ? S / T : 0)) -
                       h) *
-                      ((3 * f) / (f + S) + 0.5)) /
+                      ((3 * f) / (f + T) + 0.5)) /
                       4 || 0))))
               : (g =
                   _ -
@@ -20656,8 +20656,8 @@ PERFORMANCE OF THIS SOFTWARE.
           E,
           C,
           f,
-          S = {},
-          T = [],
+          T = {},
+          S = [],
           y = u || e[0];
         for (c in ((s =
           "string" == typeof s
@@ -20665,10 +20665,10 @@ PERFORMANCE OF THIS SOFTWARE.
             : ",x,y,z,left,top,right,bottom,marginTop,marginLeft,marginRight,marginBottom,paddingLeft,paddingTop,paddingRight,paddingBottom,backgroundPosition,backgroundPosition_y,"),
         null == t && (t = 1),
         e[0]))
-          T.push(c);
+          S.push(c);
         if (e.length > 1) {
-          for (f = e[e.length - 1], C = !0, _ = T.length; --_ > -1;)
-            if (((c = T[_]), Math.abs(y[c] - f[c]) > 0.05)) {
+          for (f = e[e.length - 1], C = !0, _ = S.length; --_ > -1;)
+            if (((c = S[_]), Math.abs(y[c] - f[c]) > 0.05)) {
               C = !1;
               break;
             }
@@ -20678,25 +20678,25 @@ PERFORMANCE OF THIS SOFTWARE.
             e.push(e[1]),
             (u = e[e.length - 3]));
         }
-        for (a.length = r.length = o.length = 0, _ = T.length; --_ > -1;)
-          ((c = T[_]),
+        for (a.length = r.length = o.length = 0, _ = S.length; --_ > -1;)
+          ((c = S[_]),
             (l[c] = -1 !== s.indexOf("," + c + ",")),
-            (S[c] = d(e, c, l[c], u)));
+            (T[c] = d(e, c, l[c], u)));
         for (_ = a.length; --_ > -1;)
           ((a[_] = Math.sqrt(a[_])), (r[_] = Math.sqrt(r[_])));
         if (!i) {
-          for (_ = T.length; --_ > -1;)
+          for (_ = S.length; --_ > -1;)
             if (l[c])
-              for (E = (h = S[T[_]]).length - 1, p = 0; p < E; p++)
+              for (E = (h = T[S[_]]).length - 1, p = 0; p < E; p++)
                 ((g = h[p + 1].da / r[p] + h[p].da / a[p] || 0),
                   (o[p] = (o[p] || 0) + g * g));
           for (_ = o.length; --_ > -1;) o[_] = Math.sqrt(o[_]);
         }
-        for (_ = T.length, p = n ? 4 : 1; --_ > -1;)
-          ((h = S[(c = T[_])]),
+        for (_ = S.length, p = n ? 4 : 1; --_ > -1;)
+          ((h = T[(c = S[_])]),
             m(h, t, n, i, l[c]),
             C && (h.splice(0, p), h.splice(h.length - p, p)));
-        return S;
+        return T;
       },
       p = function (e, t, n) {
         for (
@@ -20958,13 +20958,13 @@ PERFORMANCE OF THIS SOFTWARE.
               E,
               C,
               f,
-              S,
               T,
+              S,
               y,
               I = this._autoRotate;
             for (i = I.length; --i > -1;)
               ((a = I[i][2]),
-                (T = I[i][3] || 0),
+                (S = I[i][3] || 0),
                 (y = !0 === I[i][4] ? 1 : s),
                 (r = this._beziers[I[i][0]]),
                 (g = this._beziers[I[i][1]]),
@@ -20976,10 +20976,10 @@ PERFORMANCE OF THIS SOFTWARE.
                   (E += ((f = r.b + (r.c - r.b) * o) - E) * o),
                   (f += (r.c + (r.d - r.c) * o - f) * o),
                   (C = g.a + (g.b - g.a) * o),
-                  (C += ((S = g.b + (g.c - g.b) * o) - C) * o),
-                  (S += (g.c + (g.d - g.c) * o - S) * o),
+                  (C += ((T = g.b + (g.c - g.b) * o) - C) * o),
+                  (T += (g.c + (g.d - g.c) * o - T) * o),
                   (l = p
-                    ? Math.atan2(S - C, f - E) * y + T
+                    ? Math.atan2(T - C, f - E) * y + S
                     : this._initialRotations[i]),
                   this._mod[a] && (l = this._mod[a](l, h)),
                   d[a] ? h[a](l) : (h[a] = l)));
@@ -22676,7 +22676,7 @@ PERFORMANCE OF THIS SOFTWARE.
       E = createjs.TimerEvent,
       C = m.getLogger(c.SMARTFOX_CLIENT),
       f = "<msg t='sys'>",
-      S = (function (e) {
+      T = (function (e) {
         function BasicSmartfoxClient() {
           var t = e.call(this) || this;
           return (
@@ -23233,7 +23233,7 @@ PERFORMANCE OF THIS SOFTWARE.
           BasicSmartfoxClient
         );
       })(g);
-    t.BasicSmartfoxClient = S;
+    t.BasicSmartfoxClient = T;
   },
   function (e, t, n) {
     "use strict";
@@ -24676,11 +24676,11 @@ PERFORMANCE OF THIS SOFTWARE.
             if (!C && E instanceof createjs.Container) {
               var f = void 0;
               if (c > 0) {
-                var S = E.getHitTestBounds(m, e.stage);
-                r >= S.x &&
-                  r <= S.right &&
-                  o >= S.y &&
-                  o <= S.y + S.height &&
+                var T = E.getHitTestBounds(m, e.stage);
+                r >= T.x &&
+                  r <= T.right &&
+                  o >= T.y &&
+                  o <= T.y + T.height &&
                   (f = E.__getObjectsUnderPoint(r, o, l, u, _, c + 1, m));
               } else f = E.__getObjectsUnderPoint(r, o, l, u, _, c + 1, m);
               if (!l && f) return u && !e.mouseChildren ? e : f;
@@ -24688,7 +24688,7 @@ PERFORMANCE OF THIS SOFTWARE.
               if (u && !_ && !E._hasMouseEventListener()) continue;
               if (E.stage && E.stage.name === t.BG_STAGE)
                 return u && !e.mouseChildren ? e : E;
-              var T = E.width / E.scaleX,
+              var S = E.width / E.scaleX,
                 y = E.height / E.scaleY,
                 I = E.getConcatenatedDisplayProps(E._props),
                 v = I.matrix;
@@ -24725,21 +24725,21 @@ PERFORMANCE OF THIS SOFTWARE.
                   }
                   O &&
                     D.bounds &&
-                    ((T = D.bounds.width), (y = D.bounds.height));
+                    ((S = D.bounds.width), (y = D.bounds.height));
                 }
                 if (O) {
-                  ((T *= Math.abs(v.a)), (y *= Math.abs(v.d)));
-                  var B,
-                    N,
+                  ((S *= Math.abs(v.a)), (y *= Math.abs(v.d)));
+                  var N,
+                    B,
                     P =
                       void 0 !== E.customCenterHittestArea
                         ? E.customCenterHittestArea
                         : a.defaultCenterHittestArea;
                   if (
-                    ((B = Math.abs(v.tx + 0.5 * T * Math.sign(v.a) - r)),
-                    (N = Math.abs(v.ty + 0.5 * y * Math.sign(v.d) - o)),
-                    (L = B < T * P && N < y * P),
-                    !(B < 0.5 * T && N < 0.5 * y))
+                    ((N = Math.abs(v.tx + 0.5 * S * Math.sign(v.a) - r)),
+                    (B = Math.abs(v.ty + 0.5 * y * Math.sign(v.d) - o)),
+                    (L = N < S * P && B < y * P),
+                    !(N < 0.5 * S && B < 0.5 * y))
                   )
                     continue;
                   if (
@@ -26752,11 +26752,11 @@ PERFORMANCE OF THIS SOFTWARE.
       E = n(351),
       C = n(352),
       f = n(353),
-      S = n(354),
-      T = n(2),
+      T = n(354),
+      S = n(2),
       y = n(355),
       I = n(3),
-      v = T.getLogger("GoodgameTextField"),
+      v = S.getLogger("GoodgameTextField"),
       A = (function () {
         function GoodgameTextField(e) {
           ((this._availableStrategies = []),
@@ -26764,7 +26764,7 @@ PERFORMANCE OF THIS SOFTWARE.
             (this._originalTextField = e),
             (this._originalFontConfig = new o.FontConfigVO()),
             this._originalFontConfig.initalize(this._originalTextField),
-            (this._model = new S.GGSTextFieldModel(this)),
+            (this._model = new T.GGSTextFieldModel(this)),
             this.useDefaultStrategy());
         }
         return (
@@ -33256,8 +33256,8 @@ and limitations under the License.
               ) +
             "$",
         ),
-        S = c.splice,
-        T = getNative(u, "Map"),
+        T = c.splice,
+        S = getNative(u, "Map"),
         y = getNative(Object, "create");
       function Hash(e) {
         var t = -1,
@@ -33389,7 +33389,7 @@ and limitations under the License.
         (ListCache.prototype.delete = function listCacheDelete(e) {
           var t = this.__data__,
             n = assocIndexOf(t, e);
-          return !(n < 0 || (n == t.length - 1 ? t.pop() : S.call(t, n, 1), 0));
+          return !(n < 0 || (n == t.length - 1 ? t.pop() : T.call(t, n, 1), 0));
         }),
         (ListCache.prototype.get = function listCacheGet(e) {
           var t = this.__data__,
@@ -33407,7 +33407,7 @@ and limitations under the License.
         (MapCache.prototype.clear = function mapCacheClear() {
           this.__data__ = {
             hash: new Hash(),
-            map: new (T || ListCache)(),
+            map: new (S || ListCache)(),
             string: new Hash(),
           };
         }),
@@ -36190,8 +36190,8 @@ and limitations under the License.
         E = n(75).codes,
         C = E.ERR_INVALID_ARG_TYPE,
         f = E.ERR_STREAM_PUSH_AFTER_EOF,
-        S = E.ERR_METHOD_NOT_IMPLEMENTED,
-        T = E.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
+        T = E.ERR_METHOD_NOT_IMPLEMENTED,
+        S = E.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
       n(94)(Readable, r);
       var y = p.errorOrDestroy,
         I = ["error", "close", "destroy", "pause", "resume"];
@@ -36287,7 +36287,7 @@ and limitations under the License.
               })(t)),
             i)
           )
-            r.endEmitted ? y(e, new T()) : addChunk(e, r, t, !0);
+            r.endEmitted ? y(e, new S()) : addChunk(e, r, t, !0);
           else if (r.ended) y(e, new f());
           else {
             if (r.destroyed) return !1;
@@ -36534,7 +36534,7 @@ and limitations under the License.
         );
       }),
         (Readable.prototype._read = function (e) {
-          y(this, new S("_read()"));
+          y(this, new T("_read()"));
         }),
         (Readable.prototype.pipe = function (e, t) {
           var n = this,
@@ -37106,8 +37106,8 @@ and limitations under the License.
         E = m.ERR_STREAM_DESTROYED,
         C = m.ERR_STREAM_NULL_VALUES,
         f = m.ERR_STREAM_WRITE_AFTER_END,
-        S = m.ERR_UNKNOWN_ENCODING,
-        T = _.errorOrDestroy;
+        T = m.ERR_UNKNOWN_ENCODING,
+        S = _.errorOrDestroy;
       function nop() {}
       function WritableState(e, t, a) {
         ((s = s || n(76)),
@@ -37151,10 +37151,10 @@ and limitations under the License.
                       ? (i.nextTick(a, s),
                         i.nextTick(finishMaybe, e, t),
                         (e._writableState.errorEmitted = !0),
-                        T(e, s))
+                        S(e, s))
                       : (a(s),
                         (e._writableState.errorEmitted = !0),
-                        T(e, s),
+                        S(e, s),
                         finishMaybe(e, t)));
                 })(e, n, s, t, a);
               else {
@@ -37264,7 +37264,7 @@ and limitations under the License.
       function callFinal(e, t) {
         e._final(function (n) {
           (t.pendingcb--,
-            n && T(e, n),
+            n && S(e, n),
             (t.prefinished = !0),
             e.emit("prefinish"),
             finishMaybe(e, t));
@@ -37328,7 +37328,7 @@ and limitations under the License.
               return e instanceof this;
             }),
         (Writable.prototype.pipe = function () {
-          T(this, new g());
+          S(this, new g());
         }),
         (Writable.prototype.write = function (e, t, n) {
           var s = this._writableState,
@@ -37350,7 +37350,7 @@ and limitations under the License.
             s.ending
               ? (function writeAfterEnd(e, t) {
                   var n = new f();
-                  (T(e, n), i.nextTick(t, n));
+                  (S(e, n), i.nextTick(t, n));
                 })(this, n)
               : (r ||
                   (function validChunk(e, t, n, s) {
@@ -37361,7 +37361,7 @@ and limitations under the License.
                         : "string" == typeof n ||
                           t.objectMode ||
                           (a = new d("chunk", ["string", "Buffer"], n)),
-                      !a || (T(e, a), i.nextTick(s, a), !1)
+                      !a || (S(e, a), i.nextTick(s, a), !1)
                     );
                   })(this, s, e, n)) &&
                 (s.pendingcb++,
@@ -37433,7 +37433,7 @@ and limitations under the License.
               ].indexOf((e + "").toLowerCase()) > -1
             ))
           )
-            throw new S(e);
+            throw new T(e);
           return ((this._writableState.defaultEncoding = e), this);
         }),
         Object.defineProperty(Writable.prototype, "writableBuffer", {
@@ -53367,12 +53367,12 @@ and limitations under the License.
                   E,
                   C = 0,
                   f = [],
-                  S = function () {
+                  T = function () {
                     (u.onComplete &&
                       u.onComplete.apply(u.onCompleteScope || this, arguments),
                       c.apply(d || u.callbackScope || this, m || l));
                   },
-                  T = u.cycle,
+                  S = u.cycle,
                   y = u.startAt && u.startAt.cycle;
                 for (
                   r(s) ||
@@ -53387,7 +53387,7 @@ and limitations under the License.
                 ) {
                   for (E in ((p = {}), u)) p[E] = u[E];
                   if (
-                    (T &&
+                    (S &&
                       (t(p, s, g),
                       null != p.duration &&
                         ((o = p.duration), delete p.duration)),
@@ -53398,7 +53398,7 @@ and limitations under the License.
                     t(p.startAt, s, g);
                   }
                   ((p.delay = C + (p.delay || 0)),
-                    g === h && c && (p.onComplete = S),
+                    g === h && c && (p.onComplete = T),
                     (f[g] = new n(s[g], o, p)),
                     (C += _));
                 }
@@ -53653,9 +53653,9 @@ and limitations under the License.
     var f = n(246);
     ((t.ClickFeedbackButton = f.ClickFeedbackButton),
       (window.ClickFeedbackButton = f.ClickFeedbackButton));
-    var S = n(616);
-    ((t.ClickFeedbackButtonHover = S.ClickFeedbackButtonHover),
-      (window.ClickFeedbackButtonHover = S.ClickFeedbackButtonHover));
+    var T = n(616);
+    ((t.ClickFeedbackButtonHover = T.ClickFeedbackButtonHover),
+      (window.ClickFeedbackButtonHover = T.ClickFeedbackButtonHover));
   },
   function (e, t, n) {
     "use strict";
@@ -53683,7 +53683,7 @@ and limitations under the License.
         }),
         (InterfaceVersions.prototype.fill = function () {
           ((this.assets.CastleInterfaceElements =
-            "interface/CastleInterfaceElements/CastleInterfaceElements--1793979720609"),
+            "interface/CastleInterfaceElements/CastleInterfaceElements--1794235489609"),
             (this.assets.CastleStartscreen5 =
               "interface/CastleStartscreen5/CastleStartscreen5--1776346071201"),
             (this.assets.CastleStartscreen4 =
@@ -53734,6 +53734,56 @@ and limitations under the License.
         (ItemVersions.prototype.fill = function () {
           ((this.assets.Deco_Building_springBonfire =
             "itemassets/Building/Deco/Deco_Building_springBonfire/Deco_Building_springBonfire--1616681902168"),
+            (this.assets.Icon_BetaTestServerBanner =
+              "itemassets/StatusIcons/Icon_BetaTestServerBanner/Icon_BetaTestServerBanner--1794576745427"),
+            (this.assets.Effect_Icon_810 =
+              "itemassets/Effects/Effect_Icon_810/Effect_Icon_810--1794497925196"),
+            (this.assets.Effect_Icon_809 =
+              "itemassets/Effects/Effect_Icon_809/Effect_Icon_809--1794497925196"),
+            (this.assets.Effect_Icon_808 =
+              "itemassets/Effects/Effect_Icon_808/Effect_Icon_808--1794497925196"),
+            (this.assets.Effect_Icon_803 =
+              "itemassets/Effects/Effect_Icon_803/Effect_Icon_803--1794497925196"),
+            (this.assets.Effect_Icon_800 =
+              "itemassets/Effects/Effect_Icon_800/Effect_Icon_800--1794497925196"),
+            (this.assets.Btn_JadeGacha =
+              "itemassets/StatusIcons/Btn_JadeGacha/Btn_JadeGacha--1794397188640"),
+            (this.assets.Rewards_Animation_JadeGacha =
+              "itemassets/Dialogs/SeasonGacha/JadeGacha/Rewards_Animation_JadeGacha/Rewards_Animation_JadeGacha--1794397188640"),
+            (this.assets.GachaEventMain_Elements_JadeGacha =
+              "itemassets/Dialogs/SeasonGacha/JadeGacha/GachaEventMain_Elements_JadeGacha/GachaEventMain_Elements_JadeGacha--1794399358362"),
+            (this.assets.GachaEventMain_Animation_Idle_JadeGacha =
+              "itemassets/Dialogs/SeasonGacha/JadeGacha/GachaEventMain_Animation_Idle_JadeGacha/GachaEventMain_Animation_Idle_JadeGacha--1794399358362"),
+            (this.assets.GachaEventMain_Animation_Active_JadeGacha =
+              "itemassets/Dialogs/SeasonGacha/JadeGacha/GachaEventMain_Animation_Active_JadeGacha/GachaEventMain_Animation_Active_JadeGacha--1794399358362"),
+            (this.assets.CastleMessageIconsJadeGacha =
+              "itemassets/Dialogs/SeasonGacha/JadeGacha/CastleMessageIconsJadeGacha/CastleMessageIconsJadeGacha--1794397188640"),
+            (this.assets.PivatePrimeDayDynamicDialog_TeaserImage_52 =
+              "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TeaserImages/PivatePrimeDayDynamicDialog_TeaserImage_52/PivatePrimeDayDynamicDialog_TeaserImage_52--1794397188640"),
+            (this.assets.EventStarterAnnouncementTeaser_139 =
+              "itemassets/Dialogs/EventAnnouncement/TeaserImages/EventStarterAnnouncementTeaser_139/EventStarterAnnouncementTeaser_139--1794397188640"),
+            (this.assets.EventEndTeaser_139 =
+              "itemassets/Dialogs/DistrictGatcha/EventEndTeaser/EventEndTeaser_139/EventEndTeaser_139--1794397188640"),
+            (this.assets.AllianceCrestLayout_22 =
+              "itemassets/Crest/Alliance/AllianceCrestLayout_22/AllianceCrestLayout_22--1794397188640"),
+            (this.assets.AllianceCrestLayout_22_simple =
+              "itemassets/Crest/Alliance/AllianceCrestLayout_22_simple/AllianceCrestLayout_22_simple--1794397188640"),
+            (this.assets.AllianceCrestLayout_21 =
+              "itemassets/Crest/Alliance/AllianceCrestLayout_21/AllianceCrestLayout_21--1794397188640"),
+            (this.assets.AllianceCrestLayout_21_simple =
+              "itemassets/Crest/Alliance/AllianceCrestLayout_21_simple/AllianceCrestLayout_21_simple--1794397188640"),
+            (this.assets.AllianceCrestLayout_20 =
+              "itemassets/Crest/Alliance/AllianceCrestLayout_20/AllianceCrestLayout_20--1794397188640"),
+            (this.assets.AllianceCrestLayout_20_simple =
+              "itemassets/Crest/Alliance/AllianceCrestLayout_20_simple/AllianceCrestLayout_20_simple--1794397188640"),
+            (this.assets.Collectable_Currency_JadeStone =
+              "itemassets/Collectables/Collectable_Currency_JadeStone/Collectable_Currency_JadeStone--1794397188640"),
+            (this.assets.Collectable_Currency_JadeGachaToken =
+              "itemassets/Collectables/Collectable_Currency_JadeGachaToken/Collectable_Currency_JadeGachaToken--1794397188640"),
+            (this.assets.Collectable_Currency_JadeGachaToken_DropShadow =
+              "itemassets/Collectables/Collectable_Currency_JadeGachaToken_DropShadow/Collectable_Currency_JadeGachaToken_DropShadow--1794397188640"),
+            (this.assets.Effect_Icon_872 =
+              "itemassets/Effects/Effect_Icon_872/Effect_Icon_872--1794239923423"),
             (this.assets.Effect_Icon_871 =
               "itemassets/Effects/Effect_Icon_871/Effect_Icon_871--1794225870283"),
             (this.assets.Effect_Icon_870 =
@@ -53929,21 +53979,21 @@ and limitations under the License.
             (this.assets.JadeOasisTradeExt =
               "itemassets/Dialogs/AllianceBattleGrounds/JadeOasisTradeExt/JadeOasisTradeExt--1793972179433"),
             (this.assets.Collectable_Currency_SilkVeil =
-              "itemassets/Collectables/Collectable_Currency_SilkVeil/Collectable_Currency_SilkVeil--1791819495818"),
+              "itemassets/Collectables/Collectable_Currency_SilkVeil/Collectable_Currency_SilkVeil--1794235489609"),
             (this.assets.Collectable_Currency_SilkCoat =
               "itemassets/Collectables/Collectable_Currency_SilkCoat/Collectable_Currency_SilkCoat--1791819495818"),
             (this.assets.Collectable_Currency_JadeBlades =
-              "itemassets/Collectables/Collectable_Currency_JadeBlades/Collectable_Currency_JadeBlades--1791819495818"),
+              "itemassets/Collectables/Collectable_Currency_JadeBlades/Collectable_Currency_JadeBlades--1794235489609"),
             (this.assets.Collectable_Currency_JadeArrowheads =
-              "itemassets/Collectables/Collectable_Currency_JadeArrowheads/Collectable_Currency_JadeArrowheads--1791819495818"),
+              "itemassets/Collectables/Collectable_Currency_JadeArrowheads/Collectable_Currency_JadeArrowheads--1794235489609"),
             (this.assets.ModernOkBigBlue =
               "itemassets/Dialogs/ModernOkBigBlue/ModernOkBigBlue--1792688157156"),
             (this.assets.Collectable_Currency_RestoredJadeStatuette =
-              "itemassets/Collectables/Collectable_Currency_RestoredJadeStatuette/Collectable_Currency_RestoredJadeStatuette--1791464590995"),
+              "itemassets/Collectables/Collectable_Currency_RestoredJadeStatuette/Collectable_Currency_RestoredJadeStatuette--1794235489609"),
             (this.assets.Collectable_Currency_CaravanIngot =
               "itemassets/Collectables/Collectable_Currency_CaravanIngot/Collectable_Currency_CaravanIngot--1792595990413"),
             (this.assets.Collectable_Currency_AncientJadeStatuette =
-              "itemassets/Collectables/Collectable_Currency_AncientJadeStatuette/Collectable_Currency_AncientJadeStatuette--1791464590995"),
+              "itemassets/Collectables/Collectable_Currency_AncientJadeStatuette/Collectable_Currency_AncientJadeStatuette--1794235489609"),
             (this.assets.Collectable_Currency_WovenSilk =
               "itemassets/Collectables/Collectable_Currency_WovenSilk/Collectable_Currency_WovenSilk--1791381950662"),
             (this.assets.Collectable_Currency_Varnish =
@@ -53951,7 +54001,7 @@ and limitations under the License.
             (this.assets.Collectable_Currency_RawSilk =
               "itemassets/Collectables/Collectable_Currency_RawSilk/Collectable_Currency_RawSilk--1791381950662"),
             (this.assets.Collectable_Currency_RawJadeite =
-              "itemassets/Collectables/Collectable_Currency_RawJadeite/Collectable_Currency_RawJadeite--1791381950662"),
+              "itemassets/Collectables/Collectable_Currency_RawJadeite/Collectable_Currency_RawJadeite--1794235489609"),
             (this.assets.Collectable_Currency_PolishedJade =
               "itemassets/Collectables/Collectable_Currency_PolishedJade/Collectable_Currency_PolishedJade--1791381950662"),
             (this.assets.Collectable_Currency_CaravanIngnot =
@@ -54189,11 +54239,11 @@ and limitations under the License.
             (this.assets.CastleMessageIconsAllianceBattlegroundJade =
               "itemassets/Dialogs/Messages/MessageIcons/CastleMessageIconsAllianceBattlegroundJade/CastleMessageIconsAllianceBattlegroundJade--1791380693287"),
             (this.assets.CastleAllianceBattleGroundStarter_Jade =
-              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundStarter_Jade/CastleAllianceBattleGroundStarter_Jade--1788510004109"),
+              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundStarter_Jade/CastleAllianceBattleGroundStarter_Jade--1794235489609"),
             (this.assets.CastleAllianceBattleGroundPreBuildCastleJade =
-              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundPreBuildCastleJade/CastleAllianceBattleGroundPreBuildCastleJade--1792601551587"),
+              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundPreBuildCastleJade/CastleAllianceBattleGroundPreBuildCastleJade--1794409756437"),
             (this.assets.CastleAllianceBattleGroundEvent_Blue =
-              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundEvent_Blue/CastleAllianceBattleGroundEvent_Blue--1793810749567"),
+              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundEvent_Blue/CastleAllianceBattleGroundEvent_Blue--1794577900778"),
             (this.assets.CastleAllianceBattleGroundBuyInfo_Blue =
               "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundBuyInfo_Blue/CastleAllianceBattleGroundBuyInfo_Blue--1788510004109"),
             (this.assets.Citadel_Mapobject_Level5 =
@@ -55281,9 +55331,9 @@ and limitations under the License.
             (this.assets.AllianceRaidEventMainExt_Feb26 =
               "itemassets/Dialogs/Events/AllianceRaidEvent/AllianceRaidEventMainExt_Feb26/AllianceRaidEventMainExt_Feb26--1771581829894"),
             (this.assets.AllianceRaidEventBG_FungalSwarm =
-              "itemassets/Dialogs/Events/AllianceRaidEvent/Backgrounds/AllianceRaidEventBG_FungalSwarm/AllianceRaidEventBG_FungalSwarm--1770300088084"),
-            (this.assets.GeneralPortrait_133 =
-              "itemassets/General/Portrait/GeneralPortrait_133/GeneralPortrait_133--1770040338308"),
+              "itemassets/Dialogs/Events/AllianceRaidEvent/Backgrounds/AllianceRaidEventBG_FungalSwarm/AllianceRaidEventBG_FungalSwarm--1770300088084"));
+          ((this.assets.GeneralPortrait_133 =
+            "itemassets/General/Portrait/GeneralPortrait_133/GeneralPortrait_133--1770040338308"),
             (this.assets.GeneralPortrait_132 =
               "itemassets/General/Portrait/GeneralPortrait_132/GeneralPortrait_132--1770040338308"),
             (this.assets.GeneralPortrait_131 =
@@ -55331,9 +55381,9 @@ and limitations under the License.
             (this.assets.ConstructionItem_PremiumCarnivalKeep =
               "itemassets/ConstructionItems/ConstructionItem_PremiumCarnivalKeep/ConstructionItem_PremiumCarnivalKeep--1769425845517"),
             (this.assets.ConstructionItem_PremiumCarnivalHoneyGardens =
-              "itemassets/ConstructionItems/ConstructionItem_PremiumCarnivalHoneyGardens/ConstructionItem_PremiumCarnivalHoneyGardens--1769425845517"));
-          ((this.assets.ConstructionItem_PremiumCarnivalHallofLegends =
-            "itemassets/ConstructionItems/ConstructionItem_PremiumCarnivalHallofLegends/ConstructionItem_PremiumCarnivalHallofLegends--1769425845517"),
+              "itemassets/ConstructionItems/ConstructionItem_PremiumCarnivalHoneyGardens/ConstructionItem_PremiumCarnivalHoneyGardens--1769425845517"),
+            (this.assets.ConstructionItem_PremiumCarnivalHallofLegends =
+              "itemassets/ConstructionItems/ConstructionItem_PremiumCarnivalHallofLegends/ConstructionItem_PremiumCarnivalHallofLegends--1769425845517"),
             (this.assets.ConstructionItem_PremiumCarnivalGranary =
               "itemassets/ConstructionItems/ConstructionItem_PremiumCarnivalGranary/ConstructionItem_PremiumCarnivalGranary--1769425845517"),
             (this.assets.ConstructionItem_PremiumCarnivalDwelling =
@@ -56881,9 +56931,9 @@ and limitations under the License.
             (this.assets.FoodDistrict_Building_Level1 =
               "itemassets/Building/FoodDistrict/FoodDistrict_Building_Level1/FoodDistrict_Building_Level1--1725024635501"),
             (this.assets.Btn_BestsellerShop_Oktoberfest2024 =
-              "itemassets/StatusIcons/Btn_BestsellerShop_Oktoberfest2024/Btn_BestsellerShop_Oktoberfest2024--1725012300183"),
-            (this.assets.PivatePrimeDayDynamicDialog_TeaserImage_42 =
-              "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TeaserImages/PivatePrimeDayDynamicDialog_TeaserImage_42/PivatePrimeDayDynamicDialog_TeaserImage_42--1725012300183"),
+              "itemassets/StatusIcons/Btn_BestsellerShop_Oktoberfest2024/Btn_BestsellerShop_Oktoberfest2024--1725012300183"));
+          ((this.assets.PivatePrimeDayDynamicDialog_TeaserImage_42 =
+            "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TeaserImages/PivatePrimeDayDynamicDialog_TeaserImage_42/PivatePrimeDayDynamicDialog_TeaserImage_42--1725012300183"),
             (this.assets.PrimeTimeDialog_Oktoberfest2024 =
               "itemassets/Dialogs/PrimeTimeSkins/PrimeTimeDialog_Oktoberfest2024/PrimeTimeDialog_Oktoberfest2024--1728568345182"),
             (this.assets.PrimeTimeDialog_Halloween2024 =
@@ -56931,9 +56981,9 @@ and limitations under the License.
             (this.assets.Deco_Building_exaltedLivestockHut =
               "itemassets/Building/Deco/EffectDecos/Deco_Building_exaltedLivestockHut/Deco_Building_exaltedLivestockHut--1721314159178"),
             (this.assets.Deco_Building_royalDesertTable =
-              "itemassets/Building/Deco/Deco_Building_royalDesertTable/Deco_Building_royalDesertTable--1722848375286"));
-          ((this.assets.ConstructionItem_UnboostedBeefProduction =
-            "itemassets/ConstructionItems/ConstructionItem_UnboostedBeefProduction/ConstructionItem_UnboostedBeefProduction--1721306757649"),
+              "itemassets/Building/Deco/Deco_Building_royalDesertTable/Deco_Building_royalDesertTable--1722848375286"),
+            (this.assets.ConstructionItem_UnboostedBeefProduction =
+              "itemassets/ConstructionItems/ConstructionItem_UnboostedBeefProduction/ConstructionItem_UnboostedBeefProduction--1721306757649"),
             (this.assets.ConstructionItem_HolToolsmith =
               "itemassets/ConstructionItems/ConstructionItem_HolToolsmith/ConstructionItem_HolToolsmith--1721306757649"),
             (this.assets.ConstructionItem_HolGranary =
@@ -58481,9 +58531,9 @@ and limitations under the License.
             (this.assets.Metropol_Mapobject_Special_CyberBaron =
               "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_CyberBaron/Metropol_Mapobject_Special_CyberBaron--1660123017859"),
             (this.assets.Capital_Mapobject_Special_CyberBaron =
-              "itemassets/Worldmap/WorldmapObjects/Landmarks/Capital_Mapobject_Special_CyberBaron/Capital_Mapobject_Special_CyberBaron--1660123017859"),
-            (this.assets.Castle_Mapobject_Special_CyberBaron =
-              "itemassets/Worldmap/WorldmapObjects/Castles/Castle_Mapobject_Special_CyberBaron/Castle_Mapobject_Special_CyberBaron--1660123017859"),
+              "itemassets/Worldmap/WorldmapObjects/Landmarks/Capital_Mapobject_Special_CyberBaron/Capital_Mapobject_Special_CyberBaron--1660123017859"));
+          ((this.assets.Castle_Mapobject_Special_CyberBaron =
+            "itemassets/Worldmap/WorldmapObjects/Castles/Castle_Mapobject_Special_CyberBaron/Castle_Mapobject_Special_CyberBaron--1660123017859"),
             (this.assets.Outpost_Mapobject_Special_CyberGeneral =
               "itemassets/Worldmap/WorldmapObjects/Outposts/Outpost_Mapobject_Special_CyberGeneral/Outpost_Mapobject_Special_CyberGeneral--1660054109001"),
             (this.assets.Metropol_Mapobject_Special_CyberGeneral =
@@ -58531,9 +58581,9 @@ and limitations under the License.
             (this.assets.Rewards_Animation =
               "itemassets/Dialogs/Generals/GeneralsHub/Animations/Rewards_Animation/Rewards_Animation--1660637188975"),
             (this.assets.Knight_Animation =
-              "itemassets/Dialogs/Generals/GeneralsHub/Animations/Knight_Animation/Knight_Animation--1671021558179"));
-          ((this.assets.GeneralIcon_1_Preview =
-            "itemassets/Dialogs/Generals/GeneralIcons/GeneralIcon_1_Preview/GeneralIcon_1_Preview--1657545011474"),
+              "itemassets/Dialogs/Generals/GeneralsHub/Animations/Knight_Animation/Knight_Animation--1671021558179"),
+            (this.assets.GeneralIcon_1_Preview =
+              "itemassets/Dialogs/Generals/GeneralIcons/GeneralIcon_1_Preview/GeneralIcon_1_Preview--1657545011474"),
             (this.assets.ConstructionItem_GenericAnniversaryKeep =
               "itemassets/ConstructionItems/ConstructionItem_GenericAnniversaryKeep/ConstructionItem_GenericAnniversaryKeep--1657523942700"),
             (this.assets.AttackScreen_Generals =
@@ -60081,9 +60131,9 @@ and limitations under the License.
             (this.assets.Deco_Building_StormIslandCrab =
               "itemassets/Building/Deco/Deco_Building_StormIslandCrab/Deco_Building_StormIslandCrab--1606752868278"),
             (this.assets.AquamarineRelic_Building_Level3 =
-              "itemassets/Building/AquamarineRelic/AquamarineRelic_Building_Level3/AquamarineRelic_Building_Level3--1606752868278"),
-            (this.assets.AquamarineRelic_Building_Level2 =
-              "itemassets/Building/AquamarineRelic/AquamarineRelic_Building_Level2/AquamarineRelic_Building_Level2--1606752868278"),
+              "itemassets/Building/AquamarineRelic/AquamarineRelic_Building_Level3/AquamarineRelic_Building_Level3--1606752868278"));
+          ((this.assets.AquamarineRelic_Building_Level2 =
+            "itemassets/Building/AquamarineRelic/AquamarineRelic_Building_Level2/AquamarineRelic_Building_Level2--1606752868278"),
             (this.assets.AquamarineRelic_Building_Level1 =
               "itemassets/Building/AquamarineRelic/AquamarineRelic_Building_Level1/AquamarineRelic_Building_Level1--1606752868278"),
             (this.assets.EventPackageBundle_Temporary =
@@ -60131,9 +60181,9 @@ and limitations under the License.
             (this.assets.CastleStormIslandsMainDialog =
               "itemassets/Dialogs/StormIslands/CastleStormIslandsMainDialog/CastleStormIslandsMainDialog--1604912984474"),
             (this.assets.ConstructionItem_WinterWorkshop =
-              "itemassets/ConstructionItems/ConstructionItem_WinterWorkshop/ConstructionItem_WinterWorkshop--1604912984474"));
-          ((this.assets.Workshop_Building_winterWorkshop =
-            "itemassets/Building/Workshop/Workshop_Building_winterWorkshop/Workshop_Building_winterWorkshop--1604912984474"),
+              "itemassets/ConstructionItems/ConstructionItem_WinterWorkshop/ConstructionItem_WinterWorkshop--1604912984474"),
+            (this.assets.Workshop_Building_winterWorkshop =
+              "itemassets/Building/Workshop/Workshop_Building_winterWorkshop/Workshop_Building_winterWorkshop--1604912984474"),
             (this.assets.Deco_Building_gluhweinstand =
               "itemassets/Building/Deco/Deco_Building_gluhweinstand/Deco_Building_gluhweinstand--1604912984474"),
             (this.assets.Deco_Building_christmastower =
@@ -60823,7 +60873,7 @@ and limitations under the License.
             (this.assets.DarkOK_ABG =
               "itemassets/Dialogs/DarkOK_ABG/DarkOK_ABG--1583763728871"),
             (this.assets.CastleAllianceBattleGroundEvent_3_0 =
-              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundEvent_3_0/CastleAllianceBattleGroundEvent_3_0--1603274148194"),
+              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundEvent_3_0/CastleAllianceBattleGroundEvent_3_0--1794239923423"),
             (this.assets.CastleABGTowerReassignment =
               "itemassets/Dialogs/AllianceBattleGrounds/CastleABGTowerReassignment/CastleABGTowerReassignment--1583763728871"),
             (this.assets.CastleABGTowerEffectsActivate =
@@ -61071,7 +61121,7 @@ and limitations under the License.
             (this.assets.Btn_AllianceCoinBooster_Hub =
               "itemassets/StatusIcons/Btn_AllianceCoinBooster_Hub/Btn_AllianceCoinBooster_Hub--1579175466347"),
             (this.assets.Btn_AllianceBattleground_Event_Hub =
-              "itemassets/StatusIcons/Btn_AllianceBattleground_Event_Hub/Btn_AllianceBattleground_Event_Hub--1791296308086"),
+              "itemassets/StatusIcons/Btn_AllianceBattleground_Event_Hub/Btn_AllianceBattleground_Event_Hub--1794235489609"),
             (this.assets.CastleMessageIconsSeaQueen =
               "itemassets/Dialogs/Messages/MessageIcons/CastleMessageIconsSeaQueen/CastleMessageIconsSeaQueen--1579175466347"),
             (this.assets.BuildingDistrictBackground_1 =
@@ -61681,9 +61731,9 @@ and limitations under the License.
             (this.assets.Deco_Building_Flagpole =
               "itemassets/Building/Deco/Deco_Building_Flagpole/Deco_Building_Flagpole--1573584429307"),
             (this.assets.Deco_Building_FlatEarth =
-              "itemassets/Building/Deco/Deco_Building_FlatEarth/Deco_Building_FlatEarth--1573584429307"),
-            (this.assets.Deco_Building_FlightNomadPrincess =
-              "itemassets/Building/Deco/Deco_Building_FlightNomadPrincess/Deco_Building_FlightNomadPrincess--1573584429307"),
+              "itemassets/Building/Deco/Deco_Building_FlatEarth/Deco_Building_FlatEarth--1573584429307"));
+          ((this.assets.Deco_Building_FlightNomadPrincess =
+            "itemassets/Building/Deco/Deco_Building_FlightNomadPrincess/Deco_Building_FlightNomadPrincess--1573584429307"),
             (this.assets.Deco_Building_FountainEvil =
               "itemassets/Building/Deco/Deco_Building_FountainEvil/Deco_Building_FountainEvil--1573584429307"),
             (this.assets.Deco_Building_FountainGood =
@@ -61731,9 +61781,9 @@ and limitations under the License.
             (this.assets.Deco_Building_HalloweenTree =
               "itemassets/Building/Deco/Deco_Building_HalloweenTree/Deco_Building_HalloweenTree--1573584429307"),
             (this.assets.Deco_Building_HanamiTeahouse =
-              "itemassets/Building/Deco/Deco_Building_HanamiTeahouse/Deco_Building_HanamiTeahouse--1573584429307"));
-          ((this.assets.Deco_Building_HeadsmansLair =
-            "itemassets/Building/Deco/Deco_Building_HeadsmansLair/Deco_Building_HeadsmansLair--1573584429307"),
+              "itemassets/Building/Deco/Deco_Building_HanamiTeahouse/Deco_Building_HanamiTeahouse--1573584429307"),
+            (this.assets.Deco_Building_HeadsmansLair =
+              "itemassets/Building/Deco/Deco_Building_HeadsmansLair/Deco_Building_HeadsmansLair--1573584429307"),
             (this.assets.Deco_Building_Herald =
               "itemassets/Building/Deco/Deco_Building_Herald/Deco_Building_Herald--1573584429307"),
             (this.assets.Deco_Building_HeroOgerFight =
@@ -63281,9 +63331,9 @@ and limitations under the License.
             (this.assets.DetailView_Moralbooster_Event73 =
               "itemassets/CastleDetailView/DetailView_Moralbooster_Event73/DetailView_Moralbooster_Event73--1573584429307"),
             (this.assets.DetailView_NomadCamp =
-              "itemassets/CastleDetailView/DetailView_NomadCamp/DetailView_NomadCamp--1573584429307"),
-            (this.assets.DetailView_RoyalCapital =
-              "itemassets/CastleDetailView/DetailView_RoyalCapital/DetailView_RoyalCapital--1573584429307"),
+              "itemassets/CastleDetailView/DetailView_NomadCamp/DetailView_NomadCamp--1573584429307"));
+          ((this.assets.DetailView_RoyalCapital =
+            "itemassets/CastleDetailView/DetailView_RoyalCapital/DetailView_RoyalCapital--1573584429307"),
             (this.assets.DetailView_SamuraiCamp =
               "itemassets/CastleDetailView/DetailView_SamuraiCamp/DetailView_SamuraiCamp--1573584429307"),
             (this.assets.DetailView_Shapeshifter =
@@ -63331,9 +63381,9 @@ and limitations under the License.
             (this.assets.CharLootMaster =
               "itemassets/Characters/Big/CharLootMaster/CharLootMaster--1573584429307"),
             (this.assets.CharMedicus =
-              "itemassets/Characters/Big/CharMedicus/CharMedicus--1573584429307"));
-          ((this.assets.CharMerchant =
-            "itemassets/Characters/Big/CharMerchant/CharMerchant--1573584429307"),
+              "itemassets/Characters/Big/CharMedicus/CharMedicus--1573584429307"),
+            (this.assets.CharMerchant =
+              "itemassets/Characters/Big/CharMerchant/CharMerchant--1573584429307"),
             (this.assets.CharPlagueMonk =
               "itemassets/Characters/Big/CharPlagueMonk/CharPlagueMonk--1573584429307"),
             (this.assets.CharTaxes =
@@ -64881,9 +64931,9 @@ and limitations under the License.
             (this.assets.WorldCupFlagTeam2 =
               "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam2/WorldCupFlagTeam2--1573584429307"),
             (this.assets.WorldCupFlagTeam20 =
-              "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam20/WorldCupFlagTeam20--1573584429307"),
-            (this.assets.WorldCupFlagTeam21 =
-              "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam21/WorldCupFlagTeam21--1573584429307"),
+              "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam20/WorldCupFlagTeam20--1573584429307"));
+          ((this.assets.WorldCupFlagTeam21 =
+            "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam21/WorldCupFlagTeam21--1573584429307"),
             (this.assets.WorldCupFlagTeam22 =
               "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam22/WorldCupFlagTeam22--1573584429307"),
             (this.assets.WorldCupFlagTeam23 =
@@ -64931,9 +64981,9 @@ and limitations under the License.
             (this.assets.Festival_Top_4 =
               "itemassets/Dialogs/festival/Festival_Top_4/Festival_Top_4--1573584429307"),
             (this.assets.Festival_Top_5 =
-              "itemassets/Dialogs/festival/Festival_Top_5/Festival_Top_5--1573584429307"));
-          ((this.assets.FightScreens_B =
-            "itemassets/Dialogs/FightScreens_B/FightScreens_B--1573584429307"),
+              "itemassets/Dialogs/festival/Festival_Top_5/Festival_Top_5--1573584429307"),
+            (this.assets.FightScreens_B =
+              "itemassets/Dialogs/FightScreens_B/FightScreens_B--1573584429307"),
             (this.assets.FightScreens_F =
               "itemassets/Dialogs/FightScreens_F/FightScreens_F--1642155659072"),
             (this.assets.FightScreens_H =
@@ -66481,9 +66531,9 @@ and limitations under the License.
             (this.assets.Effect_Icon_281 =
               "itemassets/Effects/Effect_Icon_281/Effect_Icon_281--1573584429307"),
             (this.assets.Effect_Icon_282 =
-              "itemassets/Effects/Effect_Icon_282/Effect_Icon_282--1573584429307"),
-            (this.assets.Effect_Icon_283 =
-              "itemassets/Effects/Effect_Icon_283/Effect_Icon_283--1573584429307"),
+              "itemassets/Effects/Effect_Icon_282/Effect_Icon_282--1573584429307"));
+          ((this.assets.Effect_Icon_283 =
+            "itemassets/Effects/Effect_Icon_283/Effect_Icon_283--1573584429307"),
             (this.assets.Effect_Icon_284 =
               "itemassets/Effects/Effect_Icon_284/Effect_Icon_284--1573584429307"),
             (this.assets.Effect_Icon_286 =
@@ -66531,9 +66581,9 @@ and limitations under the License.
             (this.assets.Global_Effect_Icon_2 =
               "itemassets/Effects/Global_Effect_Icon_2/Global_Effect_Icon_2--1573584429307"),
             (this.assets.Global_Effect_Icon_271 =
-              "itemassets/Effects/Global_Effect_Icon_271/Global_Effect_Icon_271--1573584429307"));
-          ((this.assets.Global_Effect_Icon_3 =
-            "itemassets/Effects/Global_Effect_Icon_3/Global_Effect_Icon_3--1573584429307"),
+              "itemassets/Effects/Global_Effect_Icon_271/Global_Effect_Icon_271--1573584429307"),
+            (this.assets.Global_Effect_Icon_3 =
+              "itemassets/Effects/Global_Effect_Icon_3/Global_Effect_Icon_3--1573584429307"),
             (this.assets.Global_Effect_Icon_4 =
               "itemassets/Effects/Global_Effect_Icon_4/Global_Effect_Icon_4--1573584429307"),
             (this.assets.Global_Effect_Icon_5 =
@@ -68081,9 +68131,9 @@ and limitations under the License.
             (this.assets.Item_Weapon02_LV2 =
               "itemassets/Equipment/Weapons/Item_Weapon02_LV2/Item_Weapon02_LV2--1573584429307"),
             (this.assets.Item_Weapon02_LV3 =
-              "itemassets/Equipment/Weapons/Item_Weapon02_LV3/Item_Weapon02_LV3--1573584429307"),
-            (this.assets.Item_Weapon02_LV4 =
-              "itemassets/Equipment/Weapons/Item_Weapon02_LV4/Item_Weapon02_LV4--1573584429307"),
+              "itemassets/Equipment/Weapons/Item_Weapon02_LV3/Item_Weapon02_LV3--1573584429307"));
+          ((this.assets.Item_Weapon02_LV4 =
+            "itemassets/Equipment/Weapons/Item_Weapon02_LV4/Item_Weapon02_LV4--1573584429307"),
             (this.assets.Item_Weapon03_LV1 =
               "itemassets/Equipment/Weapons/Item_Weapon03_LV1/Item_Weapon03_LV1--1573584429307"),
             (this.assets.Item_Weapon03_LV2 =
@@ -68131,9 +68181,9 @@ and limitations under the License.
             (this.assets.EventPackageBundle_Default =
               "itemassets/EventPackages/EventPackageBundle_Default/EventPackageBundle_Default--1573584429307"),
             (this.assets.Package1028 =
-              "itemassets/EventPackages/Package1028/Package1028--1573584429307"));
-          ((this.assets.Package1049 =
-            "itemassets/EventPackages/Package1049/Package1049--1573584429307"),
+              "itemassets/EventPackages/Package1028/Package1028--1573584429307"),
+            (this.assets.Package1049 =
+              "itemassets/EventPackages/Package1049/Package1049--1573584429307"),
             (this.assets.Package1055 =
               "itemassets/EventPackages/Package1055/Package1055--1573584429307"),
             (this.assets.Package1061 =
@@ -69681,9 +69731,9 @@ and limitations under the License.
             (this.assets.RelocationRuin_Mapobject =
               "itemassets/Worldmap/WorldmapObjects/Castles/RelocationRuin_Mapobject/RelocationRuin_Mapobject--1573584429307"),
             (this.assets.RelocationSet_Mapobject =
-              "itemassets/Worldmap/WorldmapObjects/Castles/RelocationSet_Mapobject/RelocationSet_Mapobject--1573584429307"),
-            (this.assets.Ruin_Mapobject =
-              "itemassets/Worldmap/WorldmapObjects/Castles/Ruin_Mapobject/Ruin_Mapobject--1573584429307"),
+              "itemassets/Worldmap/WorldmapObjects/Castles/RelocationSet_Mapobject/RelocationSet_Mapobject--1573584429307"));
+          ((this.assets.Ruin_Mapobject =
+            "itemassets/Worldmap/WorldmapObjects/Castles/Ruin_Mapobject/Ruin_Mapobject--1573584429307"),
             (this.assets.UnderConstruction_Mapobject =
               "itemassets/Worldmap/WorldmapObjects/Castles/UnderConstruction_Mapobject/UnderConstruction_Mapobject--1573584429307"),
             (this.assets.Castle_Mapobject_Special_Underworld_1 =
@@ -69731,9 +69781,9 @@ and limitations under the License.
             (this.assets.Bossdungeon_SpyLayer =
               "itemassets/Worldmap/WorldmapObjects/Dungeons/Bossdungeon_SpyLayer/Bossdungeon_SpyLayer--1573584429307"),
             (this.assets.Dungeon_Mapobject_ABG_Maya =
-              "itemassets/Worldmap/WorldmapObjects/Dungeons/Dungeon_Mapobject_ABG_Maya/Dungeon_Mapobject_ABG_Maya--1573584429307"));
-          ((this.assets.Dungeon_Mapobject_Level1_Classic =
-            "itemassets/Worldmap/WorldmapObjects/Dungeons/Dungeon_Mapobject_Level1_Classic/Dungeon_Mapobject_Level1_Classic--1573584429307"),
+              "itemassets/Worldmap/WorldmapObjects/Dungeons/Dungeon_Mapobject_ABG_Maya/Dungeon_Mapobject_ABG_Maya--1573584429307"),
+            (this.assets.Dungeon_Mapobject_Level1_Classic =
+              "itemassets/Worldmap/WorldmapObjects/Dungeons/Dungeon_Mapobject_Level1_Classic/Dungeon_Mapobject_Level1_Classic--1573584429307"),
             (this.assets.Dungeon_Mapobject_Level1_Dessert =
               "itemassets/Worldmap/WorldmapObjects/Dungeons/Dungeon_Mapobject_Level1_Dessert/Dungeon_Mapobject_Level1_Dessert--1615815152425"),
             (this.assets.Dungeon_Mapobject_Level1_Eiland =
@@ -73089,7 +73139,7 @@ and limitations under the License.
               C;
             )
               (E.unshift(C), (C = C.parent));
-            for (var f = 0, S = E.length; f < S && E[f] === p[f]; f++) _ = f;
+            for (var f = 0, T = E.length; f < T && E[f] === p[f]; f++) _ = f;
             g !== u && this._dispatchMouseEvent(g, "mouseout", !0, -1, a, r, u);
             for (f = p.length - 1; f > _; f--)
               this._dispatchMouseEvent(p[f], "rollout", !1, -1, a, r, u);
@@ -74928,8 +74978,8 @@ and limitations under the License.
       E = n(144),
       C = n(242),
       f = createjs.Shape,
-      S = createjs.DisplayObject,
-      T = createjs.Text,
+      T = createjs.DisplayObject,
+      S = createjs.Text,
       y = createjs.Point,
       I = createjs.Stage,
       v = n(603),
@@ -74939,14 +74989,14 @@ and limitations under the License.
       D = createjs.TextEvent,
       b = n(238),
       R = n(143),
-      B = n(605),
-      N = n(606),
+      N = n(605),
+      B = n(606),
       P = createjs.GlowFilter,
       M = createjs.DropShadowFilter,
       U = n(229),
       G = n(16),
       F = m.getLogger(G.TEXT_FIELDS_LOGGER);
-    B.insertInputFieldElementCSS();
+    N.insertInputFieldElementCSS();
     var k,
       w = 0;
     document.addEventListener("copy", function (e) {
@@ -75265,10 +75315,10 @@ and limitations under the License.
               });
               l >= 0 && (a = a.slice(0, l));
             }
-            var u = T._workingContext;
+            var u = S._workingContext;
             return (
               u.save(),
-              (this._INTERNAL_currentLayout = N.calculateLatestLayoutType(
+              (this._INTERNAL_currentLayout = B.calculateLatestLayoutType(
                 u,
                 s,
                 e,
@@ -75525,7 +75575,7 @@ and limitations under the License.
         (TextField.prototype.drawHTMLText = function (e, t, n) {
           var s = this,
             a = !!e;
-          if (!a && !(e = T._workingContext))
+          if (!a && !(e = S._workingContext))
             throw new Error("Did not get ctx");
           if (!e) throw new Error("Did not get ctx");
           var r = TextField.additionalCacheWidth;
@@ -75877,7 +75927,7 @@ and limitations under the License.
                 (t.spellcheck = !1));
             }
             ((this._htmlTextFieldElement = t),
-              (t.className = B.HTML_TEXTFIELD_CLASS),
+              (t.className = N.HTML_TEXTFIELD_CLASS),
               (t.id = this.name + "_" + ++w),
               (t.style.textAlign = this.textFormat
                 ? this.textFormat.align
@@ -76239,7 +76289,7 @@ and limitations under the License.
         }),
         (TextField.prototype.getLineMetrics = function (e) {
           var t = this.latestLayout.metrics.drawnLines[e],
-            n = T._workingContext;
+            n = S._workingContext;
           return (
             d.applyFormat(n, this.textFormat, TextField.FontRestriction),
             new u.TextLineMetrics(
@@ -76490,7 +76540,7 @@ and limitations under the License.
                   e.y >= s &&
                   e.y <= s + t.metrics.lineHeight
                 ) {
-                  var m = T._workingContext;
+                  var m = S._workingContext;
                   d.applyFormat(m, o, TextField.FontRestriction);
                   for (
                     var h = "",
@@ -76502,11 +76552,11 @@ and limitations under the License.
                     C < f.length;
                     C++
                   ) {
-                    var S = f[C],
-                      y = S[0];
+                    var T = f[C],
+                      y = T[0];
                     if (
                       ((p = g),
-                      (h += S[1]),
+                      (h += T[1]),
                       (g = n + m.measureText(h).width) > e.x)
                     )
                       return e.x - p > g - e.x ? a + y + 1 : a + y;
@@ -76718,7 +76768,7 @@ and limitations under the License.
         (TextField.CACHE_UPDATED_EVENTS_ENABLED = !1),
         TextField
       );
-    })(S);
+    })(T);
     function parsePlainText(e) {
       return e.split(/(\n)/).map(function (e) {
         return "\n" === e ? { type: "newline" } : { type: "plain", text: e };
@@ -76793,10 +76843,10 @@ and limitations under the License.
                 break;
               case "a":
                 var f = "",
-                  S = 1;
-                for (E = c.length; S < E; S++)
-                  if ("href" === c[S][0]) {
-                    f = c[S][1];
+                  T = 1;
+                for (E = c.length; T < E; T++)
+                  if ("href" === c[T][0]) {
+                    f = c[T][1];
                     break;
                   }
                 n.push({ type: "start-link", linkId: f, isAnchorLink: !0 });
@@ -76894,8 +76944,8 @@ and limitations under the License.
         E = "[object Number]",
         C = "[object Null]",
         f = "[object Object]",
-        S = "[object Proxy]",
-        T = "[object RegExp]",
+        T = "[object Proxy]",
+        S = "[object RegExp]",
         y = "[object Set]",
         I = "[object String]",
         v = "[object Symbol]",
@@ -76926,18 +76976,18 @@ and limitations under the License.
           R[g] =
           R[E] =
           R[f] =
-          R[T] =
+          R[S] =
           R[y] =
           R[I] =
           R["[object WeakMap]"] =
             !1));
-      var B = "object" == typeof e && e && e.Object === Object && e,
-        N = "object" == typeof self && self && self.Object === Object && self,
-        P = B || N || Function("return this")(),
+      var N = "object" == typeof e && e && e.Object === Object && e,
+        B = "object" == typeof self && self && self.Object === Object && self,
+        P = N || B || Function("return this")(),
         M = "object" == typeof t && t && !t.nodeType && t,
         U = M && "object" == typeof n && n && !n.nodeType && n,
         G = U && U.exports === M,
-        F = G && B.process,
+        F = G && N.process,
         k = (function () {
           try {
             return F && F.binding && F.binding("util");
@@ -77051,8 +77101,8 @@ and limitations under the License.
         this.size = t.size;
       }
       function arrayLikeKeys(e, t) {
-        var n = Te(e),
-          i = !n && Se(e),
+        var n = Se(e),
+          i = !n && Te(e),
           s = !n && !i && ye(e),
           a = !n && !i && !s && Ie(e),
           r = n || i || s || a,
@@ -77108,18 +77158,18 @@ and limitations under the License.
           (null == e || null == t || (!isObjectLike(e) && !isObjectLike(t))
             ? e != e && t != t
             : (function baseIsEqualDeep(e, t, n, i, s, o) {
-                var _ = Te(e),
-                  h = Te(t),
+                var _ = Se(e),
+                  h = Se(t),
                   p = _ ? u : fe(e),
                   C = h ? u : fe(t),
-                  S = (p = p == l ? f : p) == f,
+                  T = (p = p == l ? f : p) == f,
                   A = (C = C == l ? f : C) == f,
                   D = p == C;
                 if (D && ye(e)) {
                   if (!ye(t)) return !1;
-                  ((_ = !0), (S = !1));
+                  ((_ = !0), (T = !1));
                 }
-                if (D && !S)
+                if (D && !T)
                   return (
                     o || (o = new Stack()),
                     _ || Ie(e)
@@ -77144,7 +77194,7 @@ and limitations under the License.
                               return eq(+e, +t);
                             case d:
                               return e.name == t.name && e.message == t.message;
-                            case T:
+                            case S:
                             case I:
                               return e == t + "";
                             case g:
@@ -77167,12 +77217,12 @@ and limitations under the License.
                         })(e, t, p, n, i, s, o)
                   );
                 if (!(n & a)) {
-                  var b = S && K.call(e, "__wrapped__"),
+                  var b = T && K.call(e, "__wrapped__"),
                     R = A && K.call(t, "__wrapped__");
                   if (b || R) {
-                    var B = b ? e.value() : e,
-                      N = R ? t.value() : t;
-                    return (o || (o = new Stack()), s(B, N, n, i, o));
+                    var N = b ? e.value() : e,
+                      B = R ? t.value() : t;
+                    return (o || (o = new Stack()), s(N, B, n, i, o));
                   }
                 }
                 if (!D) return !1;
@@ -77206,15 +77256,15 @@ and limitations under the License.
                     }
                     if (h && !p) {
                       var f = e.constructor,
-                        S = t.constructor;
-                      f != S &&
+                        T = t.constructor;
+                      f != T &&
                         "constructor" in e &&
                         "constructor" in t &&
                         !(
                           "function" == typeof f &&
                           f instanceof f &&
-                          "function" == typeof S &&
-                          S instanceof S
+                          "function" == typeof T &&
+                          T instanceof T
                         ) &&
                         (h = !1);
                     }
@@ -77288,7 +77338,7 @@ and limitations under the License.
       function getAllKeys(e) {
         return (function baseGetAllKeys(e, t, n) {
           var i = t(e);
-          return Te(e)
+          return Se(e)
             ? i
             : (function arrayPush(e, t) {
                 for (var n = -1, i = t.length, s = e.length; ++n < i;)
@@ -77491,7 +77541,7 @@ and limitations under the License.
             }
           return t;
         });
-      var Se = baseIsArguments(
+      var Te = baseIsArguments(
           (function () {
             return arguments;
           })(),
@@ -77502,7 +77552,7 @@ and limitations under the License.
                 isObjectLike(e) && K.call(e, "callee") && !J.call(e, "callee")
               );
             },
-        Te = Array.isArray;
+        Se = Array.isArray;
       var ye =
         ie ||
         function stubFalse() {
@@ -77511,7 +77561,7 @@ and limitations under the License.
       function isFunction(e) {
         if (!isObject(e)) return !1;
         var t = baseGetTag(e);
-        return t == h || t == p || t == _ || t == S;
+        return t == h || t == p || t == _ || t == T;
       }
       function isLength(e) {
         return "number" == typeof e && e > -1 && e % 1 == 0 && e <= o;
@@ -77828,18 +77878,18 @@ and limitations under the License.
       var E = (n.size || 12) - 1,
         C = (m && n.leading) || 0,
         f = Math.round(1.2 * (E + 1) + C),
-        S = -(Math.max(p, 1) - 1) * f,
-        T = [],
-        y = [T];
+        T = -(Math.max(p, 1) - 1) * f,
+        S = [],
+        y = [S];
       ("textWidth" !== _ && (_ -= a.TEXT_GUTTER_WIDTH),
         (h -= 2 * a.TEXT_GUTTER_WIDTH));
       for (var I = 0, v = n, A = [], O = 0, L = t; O < L.length; O++) {
         var D = L[O];
         switch (D.type) {
           case "newline":
-            (T.push({ type: "plain", text: "\n", width: 0 }),
-              (T = []),
-              y.push(T),
+            (S.push({ type: "plain", text: "\n", width: 0 }),
+              (S = []),
+              y.push(S),
               (I = 0));
             break;
           case "plain":
@@ -77847,12 +77897,12 @@ and limitations under the License.
             var b = D.text,
               R = e.measureText(b).width;
             if (d && "number" == typeof _ && I + R > _) {
-              var B = b.split(/([ \t\n\x0B\f\r-])/);
-              ((B = B.filter(function (e) {
+              var N = b.split(/([ \t\n\x0B\f\r-])/);
+              ((N = N.filter(function (e) {
                 return "" != e;
               })),
                 o &&
-                  (B = B.reduce(function (t, n) {
+                  (N = N.reduce(function (t, n) {
                     if (e.measureText(n).width > _) {
                       var i = n.split("").reduce(function (e, t) {
                         return (
@@ -77866,27 +77916,27 @@ and limitations under the License.
                     } else t.push(n);
                     return t;
                   }, [])));
-              for (var N = 0, P = B; N < P.length; N++) {
-                var M = P[N],
+              for (var B = 0, P = N; B < P.length; B++) {
+                var M = P[B],
                   U = e.measureText(M).width;
-                I + U > _ && " " != M && ((T = []), y.push(T), (I = 0));
+                I + U > _ && " " != M && ((S = []), y.push(S), (I = 0));
                 var G = { type: "plain", text: M, width: U };
-                (T.push(G), (I += G.width));
+                (S.push(G), (I += G.width));
               }
-            } else (T.push({ type: "plain", text: b, width: R }), (I += R));
+            } else (S.push({ type: "plain", text: b, width: R }), (I += R));
             break;
           case "push-format-augmentation":
             ((A = A.concat([v])),
               (v = i.__assign({}, v, D.partialFormat)),
-              T.push({ type: "switch-to-format", format: v }));
+              S.push({ type: "switch-to-format", format: v }));
             break;
           case "pop-last-format-augmentation":
             ((v = A[A.length - 1]),
               (A = A.slice(0, A.length - 1)),
-              T.push({ type: "switch-to-format", format: v }));
+              S.push({ type: "switch-to-format", format: v }));
             break;
           default:
-            T.push(D);
+            S.push(D);
         }
       }
       var F = Math.max.apply(Math, y.map(lineTextWidth)),
@@ -77905,7 +77955,7 @@ and limitations under the License.
             r.unshift({
               type: "set-x-y",
               x: n,
-              y: S + t * f + a.TEXT_GUTTER_WIDTH,
+              y: T + t * f + a.TEXT_GUTTER_WIDTH,
             }),
             r
           );
@@ -78062,9 +78112,9 @@ and limitations under the License.
             })(e);
       }
       var f = Object.prototype.toString,
-        S = C.Symbol,
-        T = S ? S.prototype : void 0,
-        y = T ? T.toString : void 0;
+        T = C.Symbol,
+        S = T ? T.prototype : void 0,
+        y = S ? S.toString : void 0;
       function baseToString(e) {
         if ("string" == typeof e) return e;
         if (
@@ -78176,9 +78226,9 @@ and limitations under the License.
             })(e);
       }
       var f = Object.prototype.toString,
-        S = C.Symbol,
-        T = S ? S.prototype : void 0,
-        y = T ? T.toString : void 0;
+        T = C.Symbol,
+        S = T ? T.prototype : void 0,
+        y = S ? S.toString : void 0;
       function baseToString(e) {
         if ("string" == typeof e) return e;
         if (
@@ -78762,16 +78812,29 @@ and limitations under the License.
               s <= 45 ? s * n : 45 * n * Math.pow((s - 41) / 100 + 1, s - 45);
           return (i = Math.round(i));
         }),
+        (AllianceBattleGroundConst.canManageCitadel = function (e) {
+          return e === a.RANK_LEADER || e === a.RANK_COLEADER;
+        }),
         AllianceBattleGroundConst
       );
     })();
     ((s.NORMAL_SERVER_EVENT_JOIN_LEVEL = 30),
+      (s.ENTRY_CONDITION_BUILDINGS = "BUILDINGS"),
       (s.HIGHSCORE_ALLIANCE_COLLECTOR = "AllianceCollector"),
       (s.HIGHSCORE_ALLIANCE_TOWER = "AllianceTower"),
+      (s.HIGHSCORE_ALLIANCE_JADE = "AllianceJade"),
       (s.MAX_CONQUERABLE_METROPOLIS = 5),
       (s.MAX_CONQUERABLE_KINGSTOWER = 5),
       (s.MAX_ALLOWED_TOWER_CONNECTED_PLAYERS = 5),
       (s.JOIN_PERIOD_DAYS = 2),
+      (s.JADE_CITADEL_RADIUS_LEVEL_1 = 8),
+      (s.JADE_PHASE_BUILD_UP = 1),
+      (s.JADE_PHASE_FREE_FOR_ALL = 2),
+      (s.JADE_PHASE_TRIGGER_ELAPSED_TIME = 1),
+      (s.JADE_PHASE_TRIGGER_ALLIANCE_PROGRESSION = 2),
+      (s.JADE_ANCIENT_PER_RESTORED_EARLY = 2),
+      (s.JADE_ANCIENT_PER_RESTORED_EVENT_END = 1),
+      (s.JADE_CITADEL_PROTECTION_VARIANCE_SECONDS = 1800),
       (t.AllianceBattleGroundConst = s),
       (s.__class = "AllianceBattleGroundConst"));
     var a = (function () {
@@ -79145,6 +79208,18 @@ and limitations under the License.
       (a.TYPE_TEMP_RAID_BOSS_RARE_ATTACK_BOOST = 23),
       (a.TYPE_TEMP_RAID_BOSS_EPIC_ATTACK_BOOST = 24),
       (a.TYPE_TEMP_RAID_BOSS_LEGENDARY_ATTACK_BOOST = 25),
+      (a.TYPE_CITADEL_WALL_BONUS = 26),
+      (a.TYPE_CITADEL_GATE_BONUS = 27),
+      (a.TYPE_CITADEL_MOAT_BONUS = 28),
+      (a.TYPE_TEMP_CITADEL_WALL_UNITS_BOOST = 29),
+      (a.TYPE_TEMP_CITADEL_YARD_POWER_BOOST = 30),
+      (a.TYPE_FORTRESS_RAID_ANCIENT_STATUETTE_BONUS = 31),
+      (a.TYPE_OASIS_TRADE_RESTORED_STATUETTE_BONUS = 32),
+      (a.TYPE_OASIS_TRADE_RETURNING_UNITS_BONUS = 33),
+      (a.TYPE_HIDEOUT_BONUS = 34),
+      (a.TYPE_TEMP_FORTRESS_RAID_JADEITE_BOOST = 35),
+      (a.TYPE_TEMP_FORTRESS_RAID_VARNISH_BOOST = 36),
+      (a.TYPE_TEMP_FORTRESS_RAID_SILK_BOOST = 37),
       (a.FAME_CAP = 9e18),
       (a.DAILY_FAME_LOSS = 0.005),
       (a.REAL_ALLIED_CAP = 5),
@@ -80483,6 +80558,8 @@ and limitations under the License.
       (E.CONSTRUCTION_ITEM = "CI"),
       (E.CONSTRUCTION_ITEM_ID = "CID"),
       (E.CONSTRUCTION_ITEM_LIST = "CIL"),
+      (E.CONSTRUCTION_ITEM_INVENTORY = "CII"),
+      (E.EQUIPPED_CONSTRUCTION_ITEMS = "ECIT"),
       (E.MODE = "M"),
       (E.CONSTRUCTION_ITEM_SELECTED_UPGRADE_CURRENCY = "SUC"),
       (E.NEXT_EXPIRING_CI_REMAINING_SECONDS = "NCRS"),
@@ -80664,10 +80741,10 @@ and limitations under the License.
       (E.PORTAL_LOGIN_NAME = "PLN"),
       (E.DAY = "D"),
       (E.NAME_OR_MAIL = "NOM"),
-      (E.DISTRIBUTOR_ID = "ID"),
-      (E.SHOW_VIP_FLAG = "SVF"),
-      (E.CONFIRM_C2_THRESHOLD = "CC2T"));
-    ((E.USE_BIG_MESSAGE_BOX = "BIG"),
+      (E.DISTRIBUTOR_ID = "ID"));
+    ((E.SHOW_VIP_FLAG = "SVF"),
+      (E.CONFIRM_C2_THRESHOLD = "CC2T"),
+      (E.USE_BIG_MESSAGE_BOX = "BIG"),
       (E.MESSAGE_2 = "MSG"),
       (E.TIMESTAMP = "T"),
       (E.NEXT_RETENTION_REWARD = "NRR"),
@@ -80951,6 +81028,7 @@ and limitations under the License.
       (E.SKILL_IDS = "IDS"),
       (E.SKILL_IDS_2 = "SID"),
       (E.LEGEND_SKILLS = "LS"),
+      (E.SCEAT_SKILLS = "SCS"),
       (E.RESET_COUNT = "RC"),
       (E.SCEAT_SKILL_IDS = "SIDS"),
       (E.SCEAT_SKILL_ACTIVATIONS = "SSA"),
@@ -81157,6 +81235,9 @@ and limitations under the License.
       (E.EFFECT_LEVEL_AFTER_INCREASE = "ELAI"),
       (E.REMAINING_JOIN_TIME = "RJT"),
       (E.ALLIANCE_BATTLE_GROUND = "ABG"),
+      (E.ENTRY_CONDITIONS = "ENCO"),
+      (E.ENTRY_CONDITION_TYPE = "ECT"),
+      (E.MISSING_BUILDING_WOD_IDS = "MBW"),
       (E.GLOBAL_SERVER_INFO = "GSI"),
       (E.MAP_TYPE = "MTYP"),
       (E.END_TIMESTAMP = "ET"),
@@ -81324,6 +81405,7 @@ and limitations under the License.
       (E.EFFECT_SOURCE_RAID_BOSS_POST_BATTLE_DEFENDER = "RBPBD"),
       (E.EFFECT_SOURCE_RAID_BOSS_POST_BATTLE_ATTACKER = "RBPBA"),
       (E.EFFECT_SOURCE_RAID_BOSS_WALL_REGENERATION = "RBWR"),
+      (E.EFFECT_SOURCE_ALLIANCE_BATTLE_GROUND_SETTING = "ABGS"),
       (E.DATA = "DATA"),
       (E.DISABLE_HELPSHIFT_CHAT = "DHSC"),
       (E.LEADERBOARD_TYPE = "LT"),
@@ -81396,6 +81478,31 @@ and limitations under the License.
       (E.REVIVE_UNIT_PERCENTAGE = "RUP"),
       (E.ENABLE_NEWS_HUB = "ENH"),
       (E.ENABLE_FREE_BARON_ADVISOR = "EFBA"),
+      (E.CITADEL_INFO = "CI"),
+      (E.ENEMY_CITADEL_INFO = "ECI"),
+      (E.CITADEL_ALLIANCE_ANCIENT_STATUETTES = "ASJ"),
+      (E.CITADEL_ALLIANCE_RESTORED_STATUETTES = "RSJ"),
+      (E.LEADERBOARD_ANCIENT_STATUETTES = "LAJ"),
+      (E.LEADERBOARD_RESTORED_STATUETTES = "LRJ"),
+      (E.TRADING_CAMP_ID = "TCI"),
+      (E.TRADING_CAMP_REMAINING = "TCR"),
+      (E.TRADED_UNITS = "TRU"),
+      (E.TRADE_REPORT_TRADES = "T"),
+      (E.TRADE_REPORT_GOODS_USED = "MU"),
+      (E.TRADE_REPORT_GOODS_RETURNED = "MR"),
+      (E.CURRENT_RADIUS = "CR"),
+      (E.JADE_PHASE = "JP"),
+      (E.JADE_PHASE_REMAINING_TIME = "JPT"),
+      (E.JADE_PHASE_PROGRESSION = "JPP"),
+      (E.JADE_PHASE_TRIGGER_TYPE = "JPTT"),
+      (E.JADE_PHASE_ACTIVE_TRIGGERS = "JPAT"),
+      (E.CITADEL_DOWNGRADE = "CDG"),
+      (E.CITADEL_DOWNGRADE_OLD_LEVEL = "OL"),
+      (E.CITADEL_DOWNGRADE_NEW_LEVEL = "NL"),
+      (E.CITADEL_DOWNGRADE_STATUETTES_LOST = "SL"),
+      (E.CITADEL_DOWNGRADE_STATUETTES_LOOTED = "SLO"),
+      (E.CITADEL_DOWNGRADE_STATUETTES_SCATTERED = "SSC"),
+      (E.CITADEL_DOWNGRADE_SCATTER_LIST = "SCL"),
       (t.CommKeys = E),
       (E.__class = "CommKeys"));
     var C = (function () {
@@ -82165,6 +82272,8 @@ and limitations under the License.
       (f.C2S_TEMP_SERVER_PLAYER_HIGHSCORE = "tsh"),
       (f.S2C_TEMP_SERVER_SELECT_CAMP = "tsc"),
       (f.C2S_TEMP_SERVER_SELECT_CAMP = "tsc"),
+      (f.S2C_ALLIANCE_BATTLEGROUND_ENTRY_CONDITIONS = "bgc"),
+      (f.C2S_ALLIANCE_BATTLEGROUND_ENTRY_CONDITIONS = "bgc"),
       (f.S2C_TEMP_SERVER_GET_PLAYER_COLLECTOR_CURRENCY = "tpc"),
       (f.C2S_TEMP_SERVER_GET_PLAYER_COLLECTOR_CURRENCY = "tpc"),
       (f.S2C_CREATE_TEMP_SERVER_COLLECTOR_ARMY_ATTACK_MOVEMENT = "cam"),
@@ -82219,10 +82328,10 @@ and limitations under the License.
       (f.C2S_GET_DAIMYO_WAR_EFFORTS_EVENT = "gdw"),
       (f.S2C_GET_DAIMYO_WAR_EFFORTS_EVENT = "gdw"),
       (f.C2S_GET_DAIMYO_AREAS_EVENT = "gda"),
-      (f.S2C_GET_DAIMYO_AREAS_EVENT = "gda"),
-      (f.C2S_CREATE_DAIMYO_DEFENSE_MOVEMENT_EVENT = "cdd"),
-      (f.S2C_CREATE_DAIMYO_DEFENSE_MOVEMENT_EVENT = "cdd"));
-    ((f.C2S_LAUNCH_DAIMYO_TAUNT_ATTACK_EVENT = "ldt"),
+      (f.S2C_GET_DAIMYO_AREAS_EVENT = "gda"));
+    ((f.C2S_CREATE_DAIMYO_DEFENSE_MOVEMENT_EVENT = "cdd"),
+      (f.S2C_CREATE_DAIMYO_DEFENSE_MOVEMENT_EVENT = "cdd"),
+      (f.C2S_LAUNCH_DAIMYO_TAUNT_ATTACK_EVENT = "ldt"),
       (f.S2C_LAUNCH_DAIMYO_TAUNT_ATTACK_EVENT = "ldt"),
       (f.S2C_RELIC_ENCHANTER_ENABLED_EVENT = "ree"),
       (f.THIRD_PARTY_GET_MAPPING = "tgm"),
@@ -82235,6 +82344,12 @@ and limitations under the License.
         "abgcam"),
       (f.GET_ATTACK_ALLIANCE_BATTLE_GROUND_COLLECTOR_CASTLE_INFO = "abgati"),
       (f.GET_ALLIANCE_BATTLE_GROUND_ALLIANCE_HIGHSCORE = "abgph"),
+      (f.ALLIANCE_BATTLE_GROUND_INFO = "abgi"),
+      (f.GET_JADE_CITADEL_INFO = "jci"),
+      (f.UPGRADE_JADE_CITADEL = "ujc"),
+      (f.CONVERT_JADE_STATUETTES = "cjs"),
+      (f.TRADE_MOVEMENT = "jtr"),
+      (f.GET_TRADE_CAMP_INFO = "jtci"),
       (f.GO_TO_WORLD_MAP_AFTER_REMOVE_AREA = "gtwara"),
       (f.GET_PLAYER_EVENT_STATISTICS = "gpe"),
       (f.GET_ALLIANCE_EVENT_STATISTICS = "gae"),
@@ -82345,7 +82460,7 @@ and limitations under the License.
       (f.ABORT_RAID_EVENT = "arb"),
       (t.ConstantsSmartFox = f),
       (f.__class = "ConstantsSmartFox"));
-    var S = (function () {
+    var T = (function () {
       function ConstructionConst() {}
       return (
         (ConstructionConst.UNLOCK_DURATION_$LI$ = function () {
@@ -82499,30 +82614,30 @@ and limitations under the License.
         ConstructionConst
       );
     })();
-    ((S.MAX_SLOTS = 4),
-      (S.MAX_QUEUE_SLOTS = 2),
-      (S.MAX_SIMULTANEOUS_SLOTS = 2),
-      (S.SLOTSTATEUNLOCKED = -1),
-      (S.SLOTSTATELOCKED = -2),
-      (S.BUILT_TO_DISASSEMBLE_TIME_FACTOR = 0.5),
-      (S.BUILT_TO_REPAIR_TIME_FACTOR = 0.5),
-      (S.MAX_HP = 100),
-      (S.MIN_HP = 0),
-      (S.UPGRADE_RECRUITSPEED_BOOST = 5),
-      (S.INSTANT_COST_C2_PER_MINUTE = 2),
-      (S.INSTANT_REPAIR_ALL_COST_C2_PER_MINUTE = 2),
-      (S.UNLOCK_C2 = 625),
-      (S.PREMIUM_FACTOR_REPAIR_ALL = 0.5),
-      (S.RUBBLE_WOD_ID = 250),
-      (S.MAX_REPAIR_ALL_COST = 1e4),
-      (S.DAMAGE_TYPE_FIRE = 0),
-      (S.DAMAGE_TYPE_PLAGUE = 1),
-      (S.SELL_BONUS_FROM_BUY_COSTS_FACTOR = 0.25),
-      (S.SKIP_COST_FACTOR = 2),
-      (S.MAX_EXPANSION_LEVEL = 19),
-      (t.ConstructionConst = S),
-      (S.__class = "ConstructionConst"));
-    var T = (function () {
+    ((T.MAX_SLOTS = 4),
+      (T.MAX_QUEUE_SLOTS = 2),
+      (T.MAX_SIMULTANEOUS_SLOTS = 2),
+      (T.SLOTSTATEUNLOCKED = -1),
+      (T.SLOTSTATELOCKED = -2),
+      (T.BUILT_TO_DISASSEMBLE_TIME_FACTOR = 0.5),
+      (T.BUILT_TO_REPAIR_TIME_FACTOR = 0.5),
+      (T.MAX_HP = 100),
+      (T.MIN_HP = 0),
+      (T.UPGRADE_RECRUITSPEED_BOOST = 5),
+      (T.INSTANT_COST_C2_PER_MINUTE = 2),
+      (T.INSTANT_REPAIR_ALL_COST_C2_PER_MINUTE = 2),
+      (T.UNLOCK_C2 = 625),
+      (T.PREMIUM_FACTOR_REPAIR_ALL = 0.5),
+      (T.RUBBLE_WOD_ID = 250),
+      (T.MAX_REPAIR_ALL_COST = 1e4),
+      (T.DAMAGE_TYPE_FIRE = 0),
+      (T.DAMAGE_TYPE_PLAGUE = 1),
+      (T.SELL_BONUS_FROM_BUY_COSTS_FACTOR = 0.25),
+      (T.SKIP_COST_FACTOR = 2),
+      (T.MAX_EXPANSION_LEVEL = 19),
+      (t.ConstructionConst = T),
+      (T.__class = "ConstructionConst"));
+    var S = (function () {
       function ConstructionItemConst() {}
       return (
         (ConstructionItemConst.MAX_SLOTS_$LI$ = function () {
@@ -82549,21 +82664,21 @@ and limitations under the License.
         ConstructionItemConst
       );
     })();
-    ((T.APPEARANCE_SLOT_TYPE = 0),
-      (T.PRIMARY_SLOT_TYPE = 1),
-      (T.SECONDARY_SLOT_TYPE = 2),
-      (T.APPEARANCE_SLOT_COUNT = 1),
-      (T.PRIMARY_SLOT_COUNT = 1),
-      (T.SECONDARY_SLOT_COUNT = 1),
-      (T.RARENESS_UNIQUE = 0),
-      (T.RARENESS_COMMON = 1),
-      (T.RARENESS_RARE = 2),
-      (T.RARENESS_EPIC = 3),
-      (T.RARENESS_LEGENDARY = 4),
-      (T.INVENTORY_SOFTCAP = 5e3),
-      (T.INVENTORY_HARDCAP = 6e3),
-      (t.ConstructionItemConst = T),
-      (T.__class = "ConstructionItemConst"));
+    ((S.APPEARANCE_SLOT_TYPE = 0),
+      (S.PRIMARY_SLOT_TYPE = 1),
+      (S.SECONDARY_SLOT_TYPE = 2),
+      (S.APPEARANCE_SLOT_COUNT = 1),
+      (S.PRIMARY_SLOT_COUNT = 1),
+      (S.SECONDARY_SLOT_COUNT = 1),
+      (S.RARENESS_UNIQUE = 0),
+      (S.RARENESS_COMMON = 1),
+      (S.RARENESS_RARE = 2),
+      (S.RARENESS_EPIC = 3),
+      (S.RARENESS_LEGENDARY = 4),
+      (S.INVENTORY_SOFTCAP = 5e3),
+      (S.INVENTORY_HARDCAP = 6e3),
+      (t.ConstructionItemConst = S),
+      (S.__class = "ConstructionItemConst"));
     var y = (function () {
       function DailyQuestConst() {}
       return (
@@ -82612,8 +82727,8 @@ and limitations under the License.
           }
           if (t || U.KINGDOM_ID === e) return e;
           var i = !1;
-          for (n = 0; n < et.WORLD_IDS_$LI$().length; n++) {
-            if (et.WORLD_IDS_$LI$()[n] === e) {
+          for (n = 0; n < tt.WORLD_IDS_$LI$().length; n++) {
+            if (tt.WORLD_IDS_$LI$()[n] === e) {
               i = !0;
               break;
             }
@@ -82899,9 +83014,9 @@ and limitations under the License.
             for (var f = 0; f < 3; f++)
               ((h[f] = 0 === r ? 0 : (_ * h[f]) / g), (p[f] = u[f] - h[f]));
           else if (E > c)
-            for (var S = 0; S < 3; S++)
-              ((p[S] = 0 === o ? 0 : (c * p[S]) / E), (h[S] = u[S] - p[S]));
-          for (var T = 0; T < 3; T++) ((m[T] = 0 | h[T]), (d[T] = 0 | p[T]));
+            for (var T = 0; T < 3; T++)
+              ((p[T] = 0 === o ? 0 : (c * p[T]) / E), (h[T] = u[T] - p[T]));
+          for (var S = 0; S < 3; S++) ((m[S] = 0 | h[S]), (d[S] = 0 | p[S]));
           for (var y = new Array(3), I = 0; I < 3; I++) y[I] = h[I] - m[I];
           for (var v = new Array(3), A = 0; A < 3; A++) v[A] = p[A] - d[A];
           for (
@@ -82914,13 +83029,13 @@ and limitations under the License.
           )
             D[b] = m[b] + d[b] === u[b];
           for (
-            var R, B = DefenseConst.getIndicesOfMaxToMinSorting(y), N = 0;
-            N < 3 && ((R = B[N]), !(O <= 0));
-            N++
+            var R, N = DefenseConst.getIndicesOfMaxToMinSorting(y), B = 0;
+            B < 3 && ((R = N[B]), !(O <= 0));
+            B++
           )
             D[R] || (m[R]++, O--, (D[R] = m[R] + d[R] === u[R]));
-          B = DefenseConst.getIndicesOfMaxToMinSorting(v);
-          for (var P = 0; P < 3 && ((R = B[P]), !(L <= 0)); P++)
+          N = DefenseConst.getIndicesOfMaxToMinSorting(v);
+          for (var P = 0; P < 3 && ((R = N[P]), !(L <= 0)); P++)
             D[R] || (d[R]++, L--, (D[R] = m[R] + d[R] === u[R]));
           for (
             var M = 2 * n.getUnitTypeCount(),
@@ -83287,7 +83402,7 @@ and limitations under the License.
       (R.DUMMY_VALUE = 0),
       (t.EffectConst = R),
       (R.__class = "EffectConst"));
-    var B = (function () {
+    var N = (function () {
       function EquipmentConst() {}
       return (
         (EquipmentConst.SLOT_IDS_$LI$ = function () {
@@ -83399,11 +83514,11 @@ and limitations under the License.
           switch (e) {
             case Ze.KINGDOM_ID:
               return EquipmentConst.PICK_BARON_CAPITAL_CLASSIC;
-            case nt.KINGDOM_ID:
+            case it.KINGDOM_ID:
               return EquipmentConst.PICK_BARON_CAPITAL_ICE;
-            case tt.KINGDOM_ID:
+            case nt.KINGDOM_ID:
               return EquipmentConst.PICK_BARON_CAPITAL_DESERT;
-            case at.KINGDOM_ID:
+            case rt.KINGDOM_ID:
               return EquipmentConst.PICK_BARON_CAPITAL_VULCAN;
           }
           return -1;
@@ -83431,80 +83546,80 @@ and limitations under the License.
         EquipmentConst
       );
     })();
-    ((B.NORMAL_CRAFT_COUNT = 3),
-      (B.SUPER_CRAFT_COUNT = 6),
-      (B.EQUIPMENT_SIZE_NORMAL = 400),
-      (B.EQUIPMENT_SIZE_MAX = 420),
-      (B.UNDEFINED_WEARER_ID = -1),
-      (B.BARON_WEARER_ID = 1),
-      (B.COMMANDER_WEARER_ID = 2),
-      (B.SLOT_ARMOR = 1),
-      (B.SLOT_WEAPON = 2),
-      (B.SLOT_HELMET = 3),
-      (B.SLOT_ARTIFACT = 4),
-      (B.SLOT_SKIN = 5),
-      (B.SLOT_HERO = 6),
-      (B.RARENESS_UNIQUE = 0),
-      (B.RARENESS_COMMON = 1),
-      (B.RARENESS_RARE = 2),
-      (B.RARENESS_EPIC = 3),
-      (B.RARENESS_LEGENDARY = 4),
-      (B.RARENESS_RELIC = 5),
-      (B.RARENESS_HERO_UNIQUE = 10),
-      (B.RARENESS_HERO_COMMON = 11),
-      (B.RARENESS_HERO_RARE = 12),
-      (B.RARENESS_HERO_EPIC = 13),
-      (B.RARENESS_HERO_LEGENDARY = 14),
-      (B.RARENESS_HERO_RELIC = 15),
-      (B.RARENESS_HERO_BEGINN = 10),
-      (B.PRICE_COMMON = 10),
-      (B.PRICE_TORARE = 25),
-      (B.PRICE_RARE = 500),
-      (B.PRICE_TOEPIC = 2500),
-      (B.PRICE_EPIC = 4e3),
-      (B.PRICE_TOLEGENDARY = 2e4),
-      (B.PRICE_LEGENDARY = 25e3),
-      (B.PICK_BARON_CLASSIC = 0),
-      (B.PICK_BARON_ICE = 1),
-      (B.PICK_BARON_DESERT = 2),
-      (B.PICK_BARON_VULCAN = 3),
-      (B.PICK_BARON_CAPITAL_CLASSIC = 4),
-      (B.PICK_BARON_FACTION = 5),
-      (B.PICK_BARON_A1 = 6),
-      (B.PICK_BARON_A2 = 7),
-      (B.PICK_BARON_A3 = 8),
-      (B.PICK_BARON_METROPOL = 9),
-      (B.PICK_BARON_CAPITAL_ICE = 10),
-      (B.PICK_BARON_CAPITAL_DESERT = 11),
-      (B.PICK_BARON_CAPITAL_VULCAN = 12),
-      (B.PICK_BARON_ISLAND = 13),
-      (B.BARON_BOSS_DUNGEON = -51),
-      (B.WOLFKING_BARON = -214),
-      (B.BARON_FACTION_RED = -101),
-      (B.BARON_FACTION_BLUE = -102),
-      (B.NO_ENCHANTMENT = 0),
-      (B.MAX_ENCHANTMENTLEVEL_COMMON = 3),
-      (B.MAX_ENCHANTMENTLEVEL_RARE = 8),
-      (B.MAX_ENCHANTMENTLEVEL_EPIC = 12),
-      (B.MAX_ENCHANTMENTLEVEL_LEGENDARY = 16),
-      (B.MAX_ENCHANTMENTLEVEL_UNIQUE = 20),
-      (B.MAX_ENCHANTMENTLEVEL_RELIC = 50),
-      (B.LORD_NAME_MIN_LENGTH = 3),
-      (B.LORD_NAME_MAX_LENGTH = 15),
-      (B.EQUIPMENT_TYPE_ID_GENERATED = 0),
-      (B.EQUIPMENT_TYPE_ID_UNIQUE = 1),
-      (B.EQUIPMENT_TYPE_ID_UNIQUE_TEMPORARY = 2),
-      (B.EQUIPMENT_TYPE_ID_RELIC = 3),
-      (t.EquipmentConst = B),
-      (B.__class = "EquipmentConst"));
-    var N = (function () {
+    ((N.NORMAL_CRAFT_COUNT = 3),
+      (N.SUPER_CRAFT_COUNT = 6),
+      (N.EQUIPMENT_SIZE_NORMAL = 400),
+      (N.EQUIPMENT_SIZE_MAX = 420),
+      (N.UNDEFINED_WEARER_ID = -1),
+      (N.BARON_WEARER_ID = 1),
+      (N.COMMANDER_WEARER_ID = 2),
+      (N.SLOT_ARMOR = 1),
+      (N.SLOT_WEAPON = 2),
+      (N.SLOT_HELMET = 3),
+      (N.SLOT_ARTIFACT = 4),
+      (N.SLOT_SKIN = 5),
+      (N.SLOT_HERO = 6),
+      (N.RARENESS_UNIQUE = 0),
+      (N.RARENESS_COMMON = 1),
+      (N.RARENESS_RARE = 2),
+      (N.RARENESS_EPIC = 3),
+      (N.RARENESS_LEGENDARY = 4),
+      (N.RARENESS_RELIC = 5),
+      (N.RARENESS_HERO_UNIQUE = 10),
+      (N.RARENESS_HERO_COMMON = 11),
+      (N.RARENESS_HERO_RARE = 12),
+      (N.RARENESS_HERO_EPIC = 13),
+      (N.RARENESS_HERO_LEGENDARY = 14),
+      (N.RARENESS_HERO_RELIC = 15),
+      (N.RARENESS_HERO_BEGINN = 10),
+      (N.PRICE_COMMON = 10),
+      (N.PRICE_TORARE = 25),
+      (N.PRICE_RARE = 500),
+      (N.PRICE_TOEPIC = 2500),
+      (N.PRICE_EPIC = 4e3),
+      (N.PRICE_TOLEGENDARY = 2e4),
+      (N.PRICE_LEGENDARY = 25e3),
+      (N.PICK_BARON_CLASSIC = 0),
+      (N.PICK_BARON_ICE = 1),
+      (N.PICK_BARON_DESERT = 2),
+      (N.PICK_BARON_VULCAN = 3),
+      (N.PICK_BARON_CAPITAL_CLASSIC = 4),
+      (N.PICK_BARON_FACTION = 5),
+      (N.PICK_BARON_A1 = 6),
+      (N.PICK_BARON_A2 = 7),
+      (N.PICK_BARON_A3 = 8),
+      (N.PICK_BARON_METROPOL = 9),
+      (N.PICK_BARON_CAPITAL_ICE = 10),
+      (N.PICK_BARON_CAPITAL_DESERT = 11),
+      (N.PICK_BARON_CAPITAL_VULCAN = 12),
+      (N.PICK_BARON_ISLAND = 13),
+      (N.BARON_BOSS_DUNGEON = -51),
+      (N.WOLFKING_BARON = -214),
+      (N.BARON_FACTION_RED = -101),
+      (N.BARON_FACTION_BLUE = -102),
+      (N.NO_ENCHANTMENT = 0),
+      (N.MAX_ENCHANTMENTLEVEL_COMMON = 3),
+      (N.MAX_ENCHANTMENTLEVEL_RARE = 8),
+      (N.MAX_ENCHANTMENTLEVEL_EPIC = 12),
+      (N.MAX_ENCHANTMENTLEVEL_LEGENDARY = 16),
+      (N.MAX_ENCHANTMENTLEVEL_UNIQUE = 20),
+      (N.MAX_ENCHANTMENTLEVEL_RELIC = 50),
+      (N.LORD_NAME_MIN_LENGTH = 3),
+      (N.LORD_NAME_MAX_LENGTH = 15),
+      (N.EQUIPMENT_TYPE_ID_GENERATED = 0),
+      (N.EQUIPMENT_TYPE_ID_UNIQUE = 1),
+      (N.EQUIPMENT_TYPE_ID_UNIQUE_TEMPORARY = 2),
+      (N.EQUIPMENT_TYPE_ID_RELIC = 3),
+      (t.EquipmentConst = N),
+      (N.__class = "EquipmentConst"));
+    var B = (function () {
       return function EventAutoScalingConst() {};
     })();
-    ((N.DIFFICULTY_NOT_SELECTED = -1),
-      (N.CLASSIC_EVENT_DIFFICULTY = 0),
-      (N.ANY_EVENT_DIFFICULTY = 1),
-      (t.EventAutoScalingConst = N),
-      (N.__class = "EventAutoScalingConst"));
+    ((B.DIFFICULTY_NOT_SELECTED = -1),
+      (B.CLASSIC_EVENT_DIFFICULTY = 0),
+      (B.ANY_EVENT_DIFFICULTY = 1),
+      (t.EventAutoScalingConst = B),
+      (B.__class = "EventAutoScalingConst"));
     var P = (function () {
       function EventConst() {}
       return (
@@ -83923,6 +84038,7 @@ and limitations under the License.
       (P.EVENTTYPE_CARNIVAL_GACHA = 135),
       (P.EVENTTYPE_CONVERSION_PRIVATE_PRIME_TIME_EVENT = 136),
       (P.EVENTTYPE_ALLIANCE_RAID_BOSS_VENDOR = 138),
+      (P.EVENTTYPE_JADE_GACHA = 139),
       (P.EVENTTYPE_ISLAND_KINGDOM = 102),
       (P.EVENTTYPE_RED_ALIEN_INVASION_ALLIANCE = 103),
       (P.EVENTTYPE_PRIME_SALES_FUSION_RECHARGE = 104),
@@ -84000,10 +84116,10 @@ and limitations under the License.
             : FactionConst.BLUE_FACTION;
         }),
         (FactionConst.getMapWidth = function () {
-          return et.SECTOR_WIDTH * FactionConst.MAP_WIDTH_IN_SECTORS;
+          return tt.SECTOR_WIDTH * FactionConst.MAP_WIDTH_IN_SECTORS;
         }),
         (FactionConst.getMapHeight = function () {
-          return et.SECTOR_HEIGHT * FactionConst.MAP_HEIGHT_IN_SECTORS;
+          return tt.SECTOR_HEIGHT * FactionConst.MAP_HEIGHT_IN_SECTORS;
         }),
         (FactionConst.getSectorSeed = function (e, t, n) {
           return e + 15 * t + 31 * n;
@@ -84023,12 +84139,12 @@ and limitations under the License.
         (FactionConst.upperLeftWorldXFromAbsoluteCampX = function (e) {
           var t = (e / FactionConst.SECTOR_WIDTH_IN_CAMPS) | 0,
             n = e % FactionConst.SECTOR_WIDTH_IN_CAMPS;
-          return t * et.SECTOR_WIDTH + n * FactionConst.CAMP_SPOT_WIDTH;
+          return t * tt.SECTOR_WIDTH + n * FactionConst.CAMP_SPOT_WIDTH;
         }),
         (FactionConst.upperLeftWorldYFromAbsoluteCampY = function (e) {
           var t = (e / FactionConst.SECTOR_HEIGHT_IN_CAMPS) | 0,
             n = e % FactionConst.SECTOR_HEIGHT_IN_CAMPS;
-          return t * et.SECTOR_HEIGHT + n * FactionConst.CAMP_SPOT_HEIGHT;
+          return t * tt.SECTOR_HEIGHT + n * FactionConst.CAMP_SPOT_HEIGHT;
         }),
         (FactionConst.getMoraleModifier = function (e) {
           return e >= 0
@@ -84726,6 +84842,9 @@ and limitations under the License.
       (q.BLACK_FRIDAY_GACHA_EVENT = 87),
       (q.CARNIVAL_GACHA_EVENT = 88),
       (q.ALLIANCE_RAID_EVENT = 89),
+      (q.ALLIANCE_BATTLE_GROUND_ALLIANCE_JADE = 90),
+      (q.ALLIANCE_BATTLE_GROUND_PLAYER_JADE = 91),
+      (q.JADE_GACHA_EVENT = 92),
       (q.INVALID_HIGHSCORE_LIST_ID = -1),
       (q.INVALID_RANK = 0),
       (q.NO_ENTRIES = 0),
@@ -85398,6 +85517,9 @@ and limitations under the License.
       (ne.SUBTYPE_SUBSCRIPTION_EXPIRED = 1),
       (ne.SUBTYPE_SUBSCRIPTION_REWARD = 2),
       (ne.SUBTYPE_META_DATA_SPLITTER = "#"),
+      (ne.SPECIAL_ID_JADE_PHASE_TWO_STARTED = 70),
+      (ne.SPECIAL_ID_JADE_PHASE_TWO_WARNING = 71),
+      (ne.SPECIAL_ID_TRADE_REPORT = 72),
       (ne.SUBJECT_SEPARATOR = "+"),
       (ne.SUBTYPE_POPUP_REGISTRATION_GIFT = 0),
       (ne.SUBTYPE_POPUP_FACEBOOK_CONNECTION = 1),
@@ -85477,11 +85599,11 @@ and limitations under the License.
           switch (e) {
             case Ze.KINGDOM_ID:
               return OutpostConst.CAPITAL_CLASSIC_DEFAULT_OWNER_ID;
-            case nt.KINGDOM_ID:
+            case it.KINGDOM_ID:
               return OutpostConst.CAPITAL_ICE_DEFAULT_OWNER_ID;
-            case tt.KINGDOM_ID:
+            case nt.KINGDOM_ID:
               return OutpostConst.CAPITAL_DESSERT_DEFAULT_OWNER_ID;
-            case at.KINGDOM_ID:
+            case rt.KINGDOM_ID:
               return OutpostConst.CAPITAL_VOLCANO_DEFAULT_OWNER_ID;
             default:
               return OutpostConst.CAPITAL_CLASSIC_DEFAULT_OWNER_ID;
@@ -85499,11 +85621,11 @@ and limitations under the License.
           switch (e) {
             case Ze.KINGDOM_ID:
               return OutpostConst.LABORATORY_CLASSIC_DEFAULT_OWNER_ID;
-            case nt.KINGDOM_ID:
+            case it.KINGDOM_ID:
               return OutpostConst.LABORATORY_ICE_OWNER_ID;
-            case tt.KINGDOM_ID:
+            case nt.KINGDOM_ID:
               return OutpostConst.LABORATORY_DESERT_OWNER_ID;
-            case at.KINGDOM_ID:
+            case rt.KINGDOM_ID:
               return OutpostConst.LABORATORY_VOLCANO_OWNER_ID;
             default:
               return OutpostConst.LABORATORY_CLASSIC_DEFAULT_OWNER_ID;
@@ -85555,6 +85677,8 @@ and limitations under the License.
       (ae.LABORATORY_DEFAULT_LEVEL = 70),
       (ae.ALLIANCE_BATTLE_GROUND_DEFAULT_OWNER_ID = -480),
       (ae.ALLIANCE_BATTLE_GROUND_UNSPAWNED_AREA_ID = -481),
+      (ae.PALACE_FORTRESS_DEFAULT_OWNER_ID = -482),
+      (ae.OASIS_SETTLEMENT_DEFAULT_OWNER_ID = -483),
       (ae.LANDMARK_DEFAULT_LEVEL = 70),
       (ae.RESOURCE_ISLE_DEFAULT_LEVEL = 70),
       (t.OutpostConst = ae),
@@ -86523,6 +86647,8 @@ and limitations under the License.
       (pe.PUSHTYPE_ID_UPDATE_AVAILABLE = 1010),
       (pe.PUSHTYPE_ID_PRIVATE_PRIMETIME = 1039),
       (pe.PUSHTYPE_ID_GLOBAL_PRIMETIME = 1040),
+      (pe.PUSHTYPE_ID_JADE_PHASE_TWO_WARNING = 1052),
+      (pe.PUSHTYPE_ID_JADE_PHASE_TWO_STARTED = 1053),
       (pe.PUSHTYPE_ID_UPGRADE = 2e3),
       (pe.PUSHTYPE_ID_DESTRUCTION = 2001),
       (pe.PUSHTYPE_ID_BUILDUP = 2002),
@@ -86690,7 +86816,7 @@ and limitations under the License.
       return (
         (ResearchConst.getFastCompleteCostC2 = function (e, t) {
           return (
-            0 | Math.ceil(((1 * e) / 60) * S.getInstantCostC2PerMinuteFor(t))
+            0 | Math.ceil(((1 * e) / 60) * T.getInstantCostC2PerMinuteFor(t))
           );
         }),
         (ResearchConst.RESOURCE_TYPES_TO_MODIFY_$LI$ = function () {
@@ -86716,7 +86842,7 @@ and limitations under the License.
       );
     })();
     ((t.ResearchConst = fe), (fe.__class = "ResearchConst"));
-    var Se = (function () {
+    var Te = (function () {
       function ResourceCartConst() {}
       return (
         (ResourceCartConst.CHARGETIME_$LI$ = function () {
@@ -86729,10 +86855,10 @@ and limitations under the License.
         ResourceCartConst
       );
     })();
-    ((Se.MIN_LEVEL = 5),
-      (t.ResourceCartConst = Se),
-      (Se.__class = "ResourceCartConst"));
-    var Te = (function () {
+    ((Te.MIN_LEVEL = 5),
+      (t.ResourceCartConst = Te),
+      (Te.__class = "ResourceCartConst"));
+    var Se = (function () {
       function ResourceConst() {}
       return (
         (ResourceConst.RESOURCE_FACTORS_$LI$ = function () {
@@ -86767,28 +86893,28 @@ and limitations under the License.
         ResourceConst
       );
     })();
-    ((Te.PRODUCTION_INTERVAL = 3600),
-      (Te.NO_RIOT = 0),
-      (Te.RIOT_INCREASE = 5),
-      (Te.PRICE_FOR_PACKAGE = 1),
-      (Te.PRICE_FOR_BUILDING = 2),
-      (Te.WOOD_FACTOR = 0.25),
-      (Te.STONE_FACTOR = 0.22),
-      (Te.FOOD_FACTOR = 0.19),
-      (Te.COAL_FACTOR = 0.41),
-      (Te.OIL_FACTOR = 0.57),
-      (Te.GLASS_FACTOR = 0.79),
-      (Te.IRON_FACTOR = 1.5),
-      (Te.AQUAMARINE_FACTOR = 1e3),
-      (Te.MEAD_FACTOR = 0.25),
-      (Te.HONEY_FACTOR = 0.19),
-      (Te.BEEF_FACTOR = 0.25),
-      (Te.ONE_CLICK_FACTOR = 1.12),
-      (Te.MEAD_HOHEY_UNLOCK_PLAYER_LEGEND_LEVEL = 650),
-      (Te.BEEF_UNLOCK_PLAYER_LEGEND_LEVEL = 650),
-      (Te.MIN_LEVEL_FOR_RESOURCE_TRADER_BUTTON_FOR_PACKAGES = 70),
-      (t.ResourceConst = Te),
-      (Te.__class = "ResourceConst"));
+    ((Se.PRODUCTION_INTERVAL = 3600),
+      (Se.NO_RIOT = 0),
+      (Se.RIOT_INCREASE = 5),
+      (Se.PRICE_FOR_PACKAGE = 1),
+      (Se.PRICE_FOR_BUILDING = 2),
+      (Se.WOOD_FACTOR = 0.25),
+      (Se.STONE_FACTOR = 0.22),
+      (Se.FOOD_FACTOR = 0.19),
+      (Se.COAL_FACTOR = 0.41),
+      (Se.OIL_FACTOR = 0.57),
+      (Se.GLASS_FACTOR = 0.79),
+      (Se.IRON_FACTOR = 1.5),
+      (Se.AQUAMARINE_FACTOR = 1e3),
+      (Se.MEAD_FACTOR = 0.25),
+      (Se.HONEY_FACTOR = 0.19),
+      (Se.BEEF_FACTOR = 0.25),
+      (Se.ONE_CLICK_FACTOR = 1.12),
+      (Se.MEAD_HOHEY_UNLOCK_PLAYER_LEGEND_LEVEL = 650),
+      (Se.BEEF_UNLOCK_PLAYER_LEGEND_LEVEL = 650),
+      (Se.MIN_LEVEL_FOR_RESOURCE_TRADER_BUTTON_FOR_PACKAGES = 70),
+      (t.ResourceConst = Se),
+      (Se.__class = "ResourceConst"));
     var ye = (function () {
       return function RewardConst() {};
     })();
@@ -86806,7 +86932,7 @@ and limitations under the License.
       return (
         (SceatSkillConst.getFastCompleteCostC2 = function (e, t) {
           return (
-            0 | Math.ceil(((1 * e) / 60) * S.getInstantCostC2PerMinuteFor(t))
+            0 | Math.ceil(((1 * e) / 60) * T.getInstantCostC2PerMinuteFor(t))
           );
         }),
         SceatSkillConst
@@ -87048,9 +87174,10 @@ and limitations under the License.
       (Re.AQUAMARINE_SPENT = 19),
       (Re.AQUAMARINE_LOST_PVP = 20),
       (Re.AQUAMARINE_FIRST_POINTS_TIMESTAMP = 21),
+      (Re.CONTRIBUTION_TO_ALLIANCE_JADE = 22),
       (t.StatisticsConst = Re),
       (Re.__class = "StatisticsConst"));
-    var Be = (function () {
+    var Ne = (function () {
       function SubscriptionConst() {}
       return (
         (SubscriptionConst.PLAYER_TYPE_PACKAGES_$LI$ = function () {
@@ -87067,21 +87194,21 @@ and limitations under the License.
         SubscriptionConst
       );
     })();
-    ((Be.PLAYER_SUBSCRIPTION_PACKAGE_TYPE_ID = 1),
-      (Be.ALLIANCE_SUBSCRIPTION_PACKAGE_TYPE_ID = 2),
-      (Be.PLAYER_SUBSCRIPTION_PREMIUM_PACKAGE_TYPE_ID = 3),
-      (Be.PLAYER_SUBSCRIPTION_BARON_ADVISOR_PACKAGE_TYPE_ID = 4),
-      (t.SubscriptionConst = Be),
-      (Be.__class = "SubscriptionConst"));
-    var Ne = (function () {
+    ((Ne.PLAYER_SUBSCRIPTION_PACKAGE_TYPE_ID = 1),
+      (Ne.ALLIANCE_SUBSCRIPTION_PACKAGE_TYPE_ID = 2),
+      (Ne.PLAYER_SUBSCRIPTION_PREMIUM_PACKAGE_TYPE_ID = 3),
+      (Ne.PLAYER_SUBSCRIPTION_BARON_ADVISOR_PACKAGE_TYPE_ID = 4),
+      (t.SubscriptionConst = Ne),
+      (Ne.__class = "SubscriptionConst"));
+    var Be = (function () {
       return function SurveyConst() {};
     })();
-    ((Ne.MAX_ANSWER_LENGTH = 1e3),
-      (Ne.QUESTION_TYPE_TEXT = 0),
-      (Ne.QUESTION_TYPE_RADIO = 1),
-      (Ne.QUESTION_TYPE_CHECKBOX = 2),
-      (t.SurveyConst = Ne),
-      (Ne.__class = "SurveyConst"));
+    ((Be.MAX_ANSWER_LENGTH = 1e3),
+      (Be.QUESTION_TYPE_TEXT = 0),
+      (Be.QUESTION_TYPE_RADIO = 1),
+      (Be.QUESTION_TYPE_CHECKBOX = 2),
+      (t.SurveyConst = Be),
+      (Be.__class = "SurveyConst"));
     var Pe = (function () {
       function TaxConst() {}
       return (
@@ -87755,6 +87882,7 @@ and limitations under the License.
       (ze.GATE_LEVEL = "gateLevel"),
       (ze.MOAT_BONUS = "moatBonus"),
       (ze.MOAT_LEVEL = "moatLevel"),
+      (ze.KEEP_LEVEL = "keepLevel"),
       (ze.TOWER_LEVEL = "towerLevel"),
       (ze.TOOL_TYP = "typ"),
       (ze.DELETE_AFTER_BATTLE = "deleteToolAfterBattle"),
@@ -88495,9 +88623,9 @@ and limitations under the License.
       (ze.TITLE_FAME_AND_LOOT_ENEMY_BOOST = "fameAndLootEnemyBoost"),
       (ze.ALLIANCEBUFFS = "alliancebuff"),
       (ze.ALLIANCEBUFF_ID = "allianceBuffID"),
-      (ze.ALLIANCEBUFF_SERIES_ID = "allianceBuffSeriesID"),
-      (ze.ALLIANCEBUFF_LEVEL = "level"));
-    ((ze.ALLIANCEBUFF_MAXLEVEL = "maxLevel"),
+      (ze.ALLIANCEBUFF_SERIES_ID = "allianceBuffSeriesID"));
+    ((ze.ALLIANCEBUFF_LEVEL = "level"),
+      (ze.ALLIANCEBUFF_MAXLEVEL = "maxLevel"),
       (ze.ALLIANCEBUFF_MEMBERCOUNT = "memberCount"),
       (ze.ALLIANCEBUFF_COST_WOOD = "costWood"),
       (ze.ALLIANCEBUFF_COST_STONE = "costStone"),
@@ -88830,6 +88958,7 @@ and limitations under the License.
       (ze.CURRENCY_BOOST = "currencyBooster"),
       (ze.CURRENCY_BOOST_NAME = "currencyBoosterName"),
       (ze.JSON_KEY = "JSONKey"),
+      (ze.CURRENCY_SIZE = "currencySize"),
       (ze.CURRENCY_RANDOM_BONUS = "currencyRandomBonus"),
       (ze.CURRENCY_RANDOM_BONUS_NAME = "RandomBonusName"),
       (ze.CURRENCY_COLLECT_TASK_TYPE = "currencyCollectTaskType"),
@@ -89071,6 +89200,9 @@ and limitations under the License.
       (ze.ALLIANCE_BATTLE_GROUND_SETTING = "allianceBattleGroundSetting"),
       (ze.ALLIANCE_BATTLE_GROUND_PREBUILT_CASTLE =
         "allianceBattleGroundPreBuiltCastle"),
+      (ze.MINIMUM_REQUIRED_BUILDING_WOD_IDS = "minimumRequiredBuildingWodIDs"),
+      (ze.MIN_LEVEL_TO_SEE_EVENT = "minLevelToSeeEvent"),
+      (ze.MAX_PARTICIPATING_ALLIANCES = "maxParticipatingAlliances"),
       (ze.SKIN_ID = "skinID"),
       (ze.ALLIANCE_BATTLE_GROUND_SKIN = "allianceBattleGroundSkin"),
       (ze.ALLIANCE_BATTLE_GROUND_SCORING = "allianceBattleGroundScoring"),
@@ -89095,12 +89227,63 @@ and limitations under the License.
       (ze.ALLIANCE_CURRENCY_ID = "allianceCurrencyID"),
       (ze.IS_HIDDEN_ON_BATTLE_GROUND = "hiddenBattleGround"),
       (ze.ONLY_BATTLE_GROUND_SCORING_ID = "onlyBattleGroundScoringID"),
+      (ze.ALLIANCE_BATTLE_GROUND_SCORING_IDS =
+        "allianceBattleGroundScoringIDs"),
       (ze.ALLIANCE_CURRENCY_LOOT_FACTOR_MIN = "allianceCurrencyLootFactorMin"),
       (ze.ALLIANCE_REWARD_SET_ID = "allianceRewardSetID"),
       (ze.PLAYER_REWARD_SET_ID = "playerRewardSetID"),
       (ze.ALLIANCE_REWARD_ID = "allianceRewardID"),
       (ze.ALLIANCE_RANK_POINTS = "allianceRankPoints"),
       (ze.ALLIANCE_BATTLE_GROUND_TOWER = "allianceTower"),
+      (ze.ALLIANCE_CITADEL = "allianceCitadel"),
+      (ze.ALLIANCE_CITADEL_ID = "allianceCitadelID"),
+      (ze.CITADEL_EARLY_CONVERSION_RATIO = "earlyConversionRatio"),
+      (ze.CITADEL_RADIUS = "radius"),
+      (ze.CITADEL_PROTECTION_MODE_DURATION = "protectionModeDuration"),
+      (ze.CITADEL_EXPOSED_STATUETTES_PERCENTAGE =
+        "exposedStatuettesPercentage"),
+      (ze.CITADEL_SCATTER_WEIGHTS = "scatterWeights"),
+      (ze.ALLIANCE_BATTLE_GROUND_PHASE_TRIGGER =
+        "allianceBattleGroundPhaseTrigger"),
+      (ze.PHASE_TRIGGER_ID = "phaseTriggerID"),
+      (ze.PHASE_TRIGGER_IDS = "phaseTriggerIDs"),
+      (ze.LOOTABLE_CURRENCY_IDS = "lootableCurrencyIDs"),
+      (ze.STATUETTES_VISUALIZATION_THRESHOLDS =
+        "statuettesVisualizationThresholds"),
+      (ze.PHASE_TRIGGER_TYPE = "type"),
+      (ze.PHASE_TRIGGER_TIMER_OFFSET = "timerOffset"),
+      (ze.PHASE_TRIGGER_WARNING_LEAD_TIME = "warningLeadTime"),
+      (ze.PHASE_TRIGGER_CITADEL_LEVEL = "citadelLevel"),
+      (ze.PHASE_TRIGGER_ALLIANCE_SHARE = "allianceShare"),
+      (ze.PHASE_TRIGGER_MIN_ALLIANCES = "minAlliances"),
+      (ze.PHASE_TRIGGER_EVALUATION_DELAY = "evaluationDelay"),
+      (ze.RESOURCE_CAMP = "resourceCamp"),
+      (ze.RESOURCE_CAMP_ID = "resourceCampID"),
+      (ze.RESOURCE_CAMP_TYPE_ID = "resourceCampTypeID"),
+      (ze.LOOT_POOL_CURRENCY_ID = "lootPoolCurrencyID"),
+      (ze.LOOT_POOL_CAPACITY = "lootPoolCapacity"),
+      (ze.LOOT_POOL_COOLDOWN_SECONDS = "cooldownSeconds"),
+      (ze.LOOT_POOL_SCOPE = "scope"),
+      (ze.LOOT_POOL_MULTIPLIER = "lootPoolMultiplier"),
+      (ze.LOOT_POOL_CURRENCY_MULTIPLIER = "lootPoolCurrencyMultiplier"),
+      (ze.ALLIANCE_BATTLEGROUND_AREA_TYPE_SPAWN =
+        "allianceBattlegroundAreaTypeSpawn"),
+      (ze.ALLIANCE_BATTLEGROUND_AREA_TYPE_SPAWN_ID =
+        "allianceBattlegroundAreaTypeSpawnID"),
+      (ze.TRADING_CAMP = "tradingCamp"),
+      (ze.TRADING_CAMP_ID = "tradingCampID"),
+      (ze.TRADING_CAMP_TYPE_ID = "tradingCampTypeID"),
+      (ze.TRADE_GROUP_ID = "tradeGroupID"),
+      (ze.RESOURCE_LIMIT = "resourceLimit"),
+      (ze.MAX_ARMY_SIZE = "maxArmySize"),
+      (ze.TRAVEL_COST_MULTIPLIER = "travelCostMultiplier"),
+      (ze.SPEED_MULTIPLIER = "speedMultiplier"),
+      (ze.TRADE = "trade"),
+      (ze.TRADE_ID = "tradeID"),
+      (ze.MAIN_REWARD_ID = "mainRewardID"),
+      (ze.SECONDARY_REWARD_ID = "secondaryRewardID"),
+      (ze.RESOURCE_CONSUMED = "resourceConsumed"),
+      (ze.LOOT_CAPACITY_COST = "lootCapacityCost"),
       (ze.DIALOG_STATISTIC_IDS = "dialogStatisticIDs"),
       (ze.ALLIANCE_BATTLE_GROUND_TOWER_ID = "allianceTowerID"),
       (ze.TOWER_BASE_POINTS = "addAllianceTowerPoints"),
@@ -89274,8 +89457,8 @@ and limitations under the License.
       (ze.RARITY = "rarity"),
       (ze.REWARD_CATEGORY = "rewardCategory"),
       (ze.GENERAL = "general"),
-      (ze.GENERAL_ID = "generalID"),
-      (ze.MIN_GENERAL_STAR_TIER = "minGeneralStarTier"),
+      (ze.GENERAL_ID = "generalID"));
+    ((ze.MIN_GENERAL_STAR_TIER = "minGeneralStarTier"),
       (ze.GENERAL_RARITY = "generalRarity"),
       (ze.GENERAL_RARITY_ID = "generalRarityID"),
       (ze.MAX_STAR_LEVEL = "maxStarLevel"),
@@ -89325,8 +89508,8 @@ and limitations under the License.
       (ze.XP_AMOUNT = "xpAmount"),
       (ze.XP_PER_ITEM_ID = "xpPerItemID"),
       (ze.MESSAGE_RESTRICTION_ID = "messageRestrictionID"),
-      (ze.MESSAGE_TYPE = "messageType"));
-    ((ze.DAILY_LIMIT_PER_PLAYER = "dailyLimitPerPlayer"),
+      (ze.MESSAGE_TYPE = "messageType"),
+      (ze.DAILY_LIMIT_PER_PLAYER = "dailyLimitPerPlayer"),
       (ze.MIN_LEVEL_GLOBAL_SERVER = "minLevelGlobalServer"),
       (ze.MESSAGE_RESTRICTION = "messageRestriction"),
       (ze.CROSSPLAY_ID = "crossplayID"),
@@ -90151,6 +90334,227 @@ and limitations under the License.
       (Qe.__class = "WorldClassicBattleGroundHiddenStar"),
       (Qe.__interfaces = ["IAreaMap"]));
     var $e = (function () {
+      function WorldClassicBattleGroundJade() {}
+      return (
+        (WorldClassicBattleGroundJade.OUTPOST_TYPE_COUNT_$LI$ = function () {
+          return (
+            null == WorldClassicBattleGroundJade.OUTPOST_TYPE_COUNT &&
+              (WorldClassicBattleGroundJade.OUTPOST_TYPE_COUNT = [
+                0, 0, 0, 0, 0, 0, 0, 0,
+              ]),
+            WorldClassicBattleGroundJade.OUTPOST_TYPE_COUNT
+          );
+        }),
+        (WorldClassicBattleGroundJade.AREA_MAP_$LI$ = function () {
+          return (
+            null == WorldClassicBattleGroundJade.AREA_MAP &&
+              (WorldClassicBattleGroundJade.AREA_MAP = [
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0,
+                ],
+                [
+                  0, 45, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 45, 0,
+                  0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45,
+                  0, 0, 0, 44, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 45, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 44, 0, 0, 0, 45, 0, 0,
+                  0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 1, 0, 0, 0, 1,
+                  0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0,
+                  0, 1, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 1, 0, 0, 0, 1,
+                  0, 0, 0, 1, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45,
+                ],
+                [
+                  0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0,
+                  0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0,
+                  0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0,
+                  1, 0, 0, 0, 1, 0, 0, 0, 45, 0, 0, 0, 45, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1,
+                  0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0,
+                  0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 44, 0, 1, 0, 0, 0, 1, 0, 0, 0, 46,
+                  0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0,
+                  1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0,
+                  0, 0, 1, 0, 0, 0, 1, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 44, 0, 0, 0, 45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0,
+                  0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0,
+                  0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0,
+                  0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0,
+                ],
+                [
+                  45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 1, 0, 0, 0, 1,
+                  0, 0, 0, 1, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+                  0, 1, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 44, 0, 1, 0, 0, 0, 1,
+                  0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0,
+                  0, 45, 0, 0, 0, 44, 0, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 45, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 44, 0, 0, 0,
+                  45, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 44, 0,
+                ],
+                [
+                  0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+                [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ],
+              ]),
+            WorldClassicBattleGroundJade.AREA_MAP
+          );
+        }),
+        (WorldClassicBattleGroundJade.prototype.getAreaMap = function () {
+          return WorldClassicBattleGroundJade.AREA_MAP_$LI$();
+        }),
+        (WorldClassicBattleGroundJade.prototype.getKingdomId = function () {
+          return WorldClassicBattleGroundJade.KINGDOM_ID;
+        }),
+        (WorldClassicBattleGroundJade.prototype.isClassicWorld = function () {
+          return !0;
+        }),
+        (WorldClassicBattleGroundJade.prototype.isDessertWorld = function () {
+          return !1;
+        }),
+        (WorldClassicBattleGroundJade.prototype.isIceWorld = function () {
+          return !1;
+        }),
+        (WorldClassicBattleGroundJade.prototype.isVolcanoWorld = function () {
+          return !1;
+        }),
+        (WorldClassicBattleGroundJade.prototype.isIslandWorld = function () {
+          return !1;
+        }),
+        (WorldClassicBattleGroundJade.prototype.getTypeCount = function () {
+          return WorldClassicBattleGroundJade.OUTPOST_TYPE_COUNT_$LI$();
+        }),
+        (WorldClassicBattleGroundJade.prototype.getActiveTypeCount =
+          function () {
+            return WorldClassicBattleGroundJade.OUTPOST_TYPE_COUNT_$LI$();
+          }),
+        (WorldClassicBattleGroundJade.prototype.isExtension = function () {
+          return WorldClassicBattleGroundJade.IS_EXTENSION;
+        }),
+        WorldClassicBattleGroundJade
+      );
+    })();
+    (($e.KINGDOM_ID = 0),
+      ($e.IS_EXTENSION = !0),
+      ($e.SECTOR_COUNT = 225),
+      ($e.SECTOR_COUNT_ON_TEST = 24),
+      ($e.WOOD_PRODUCERS = 0),
+      ($e.STONE_PRODUCERS = 0),
+      ($e.FOOD_PRODUCERS = 0),
+      ($e.IRON_PRODUCERS = 0),
+      (t.WorldClassicBattleGroundJade = $e),
+      ($e.__class = "WorldClassicBattleGroundJade"),
+      ($e.__interfaces = ["IAreaMap"]));
+    var Je = (function () {
       function WorldClassicBattleGroundLineBreak() {}
       return (
         (WorldClassicBattleGroundLineBreak.OUTPOST_TYPE_COUNT_$LI$ =
@@ -90397,16 +90801,16 @@ and limitations under the License.
         WorldClassicBattleGroundLineBreak
       );
     })();
-    (($e.KINGDOM_ID = 0),
-      ($e.IS_EXTENSION = !0),
-      ($e.WOOD_PRODUCERS = 3),
-      ($e.STONE_PRODUCERS = 3),
-      ($e.FOOD_PRODUCERS = 3),
-      ($e.IRON_PRODUCERS = 2),
-      (t.WorldClassicBattleGroundLineBreak = $e),
-      ($e.__class = "WorldClassicBattleGroundLineBreak"),
-      ($e.__interfaces = ["IAreaMap"]));
-    var Je = (function () {
+    ((Je.KINGDOM_ID = 0),
+      (Je.IS_EXTENSION = !0),
+      (Je.WOOD_PRODUCERS = 3),
+      (Je.STONE_PRODUCERS = 3),
+      (Je.FOOD_PRODUCERS = 3),
+      (Je.IRON_PRODUCERS = 2),
+      (t.WorldClassicBattleGroundLineBreak = Je),
+      (Je.__class = "WorldClassicBattleGroundLineBreak"),
+      (Je.__interfaces = ["IAreaMap"]));
+    var et = (function () {
       function WorldClassicBattleGroundTowers() {}
       return (
         (WorldClassicBattleGroundTowers.OUTPOST_TYPE_COUNT_$LI$ = function () {
@@ -90616,16 +91020,16 @@ and limitations under the License.
         WorldClassicBattleGroundTowers
       );
     })();
-    ((Je.KINGDOM_ID = 0),
-      (Je.IS_EXTENSION = !0),
-      (Je.WOOD_PRODUCERS = 3),
-      (Je.STONE_PRODUCERS = 3),
-      (Je.FOOD_PRODUCERS = 3),
-      (Je.IRON_PRODUCERS = 2),
-      (t.WorldClassicBattleGroundTowers = Je),
-      (Je.__class = "WorldClassicBattleGroundTowers"),
-      (Je.__interfaces = ["IAreaMap"]));
-    var et = (function () {
+    ((et.KINGDOM_ID = 0),
+      (et.IS_EXTENSION = !0),
+      (et.WOOD_PRODUCERS = 3),
+      (et.STONE_PRODUCERS = 3),
+      (et.FOOD_PRODUCERS = 3),
+      (et.IRON_PRODUCERS = 2),
+      (t.WorldClassicBattleGroundTowers = et),
+      (et.__class = "WorldClassicBattleGroundTowers"),
+      (et.__interfaces = ["IAreaMap"]));
+    var tt = (function () {
       function WorldConst() {}
       return (
         (WorldConst.CLIENT_GAA_SIDE_LENGTH_$LI$ = function () {
@@ -90666,10 +91070,10 @@ and limitations under the License.
             null == WorldConst.WORLD_IDS &&
               (WorldConst.WORLD_IDS = [
                 Ze.KINGDOM_ID,
-                tt.KINGDOM_ID,
                 nt.KINGDOM_ID,
-                at.KINGDOM_ID,
                 it.KINGDOM_ID,
+                rt.KINGDOM_ID,
+                st.KINGDOM_ID,
                 U.KINGDOM_ID,
               ]),
             WorldConst.WORLD_IDS
@@ -90687,94 +91091,97 @@ and limitations under the License.
         (WorldConst.isLaboratoryKingdom = function (e) {
           return (
             Ze.KINGDOM_ID === e ||
+            it.KINGDOM_ID === e ||
             nt.KINGDOM_ID === e ||
-            tt.KINGDOM_ID === e ||
-            at.KINGDOM_ID === e
+            rt.KINGDOM_ID === e
           );
         }),
         WorldConst
       );
     })();
-    ((et.SECTOR_WIDTH = 13),
-      (et.SECTOR_HEIGHT = 13),
-      (et.AREA_TYPE_EMPTY = 0),
-      (et.AREA_TYPE_CASTLE = 1),
-      (et.AREA_TYPE_DUNGEON = 2),
-      (et.AREA_TYPE_CAPITAL = 3),
-      (et.AREA_TYPE_OUTPOST = 4),
-      (et.AREA_TYPE_TREASURE_DUNGEON = 7),
-      (et.AREA_TYPE_TREASURE_CAMP = 8),
-      (et.AREA_TYPE_SHADOW_AREA = 9),
-      (et.AREA_TYPE_VILLAGE = 10),
-      (et.AREA_TYPE_BOSS_DUNGEON = 11),
-      (et.AREA_TYPE_KINGDOM_CASTLE = 12),
-      (et.AREA_TYPE_EVENT_DUNGEON = 13),
-      (et.AREA_TYPE_NO_LANDMARK = 14),
-      (et.AREA_TYPE_FACTION_CAMP = 15),
-      (et.AREA_TYPE_FACTION_VILLAGE = 16),
-      (et.AREA_TYPE_FACTION_TOWER = 17),
-      (et.AREA_TYPE_FACTION_CAPITAL = 18),
-      (et.AREA_TYPE_PLAGUE_AREA = 19),
-      (et.AREA_TYPE_TROOP_HOSTEL = 20),
-      (et.AREA_TYPE_ALIEN_CAMP = 21),
-      (et.AREA_TYPE_METROPOL = 22),
-      (et.AREA_TYPE_KINGS_TOWER = 23),
-      (et.AREA_TYPE_ISLE_RESOURCE = 24),
-      (et.AREA_TYPE_ISLE_DUNGEON = 25),
-      (et.AREA_TYPE_MONUMENT = 26),
-      (et.AREA_TYPE_NOMAD_CAMP = 27),
-      (et.AREA_TYPE_LABORATORY = 28),
-      (et.AREA_TYPE_SAMURAI_CAMP = 29),
-      (et.AREA_TYPE_FACTION_INVASION_CAMP = 30),
-      (et.AREA_TYPE_DYNAMIC = 31),
-      (et.AREA_TYPE_SAMURAI_ALIEN_CAMP = 33),
-      (et.AREA_TYPE_RED_ALIEN_CAMP = 34),
-      (et.AREA_TYPE_ALLIANCE_NOMAD_CAMP = 35),
-      (et.AREA_TYPE_DAIMYO_CASTLE = 37),
-      (et.AREA_TYPE_DAIMYO_TOWNSHIP = 38),
-      (et.AREA_TYPE_ALLIANCE_BATTLE_GROUND_RESOURCE_TOWER = 40),
-      (et.AREA_TYPE_ALLIANCE_BATTLE_GROUND_TOWER = 41),
-      (et.AREA_TYPE_WOLF_KING = 42),
-      (et.AREA_TYPE_ARE_PORTAL = 43),
-      (et.AREA_TYPE_NO_OUTPOST = 99),
-      (et.VILLAGE_TYPE_WOOD = 0),
-      (et.VILLAGE_TYPE_STONE = 1),
-      (et.VILLAGE_TYPE_FOOD = 2),
-      (et.VILLAGE_TYPE_AQUAMARINE = 3),
-      (et.VILLAGE_TYPE_WOOD_NON_PREMIUM = 4),
-      (et.VILLAGE_TYPE_STONE_NON_PREMIUM = 5),
-      (et.VILLAGE_TYPE_AQUAMARINE_NON_PREMIUM = 6),
-      (et.VILLAGE_TYPE_COAL = 7),
-      (et.VILLAGE_TYPE_OIL = 8),
-      (et.VILLAGE_TYPE_GLASS = 9),
-      (et.VILLAGE_TYPE_IRON = 10),
-      (et.MONUMENT_TYPE_SMALL = 0),
-      (et.MONUMENT_TYPE_BIG = 1),
-      (et.LOOKUP_MAP_SIZE = 39),
-      (et.CAPITAL_RANDOM_POS_OFFSET_XY1 = 5),
-      (et.CAPITAL_RANDOM_POS_OFFSET_XY2 = 8),
-      (et.SEED_VALUE_1 = 7),
-      (et.SEED_VALUE_2 = 923),
-      (et.CASTLES_PER_SECTOR = 14),
-      (et.ALIEN_CAMPS_PER_SECTOR = 4),
-      (et.NOMAD_CAMPS_PER_SECTOR = 4),
-      (et.SAMURAI_CAMPS_PER_SECTOR = 4),
-      (et.RED_FACTION_INVASION_CAMPS_PER_SECTOR = 5),
-      (et.BLUE_FACTION_INVASION_CAMPS_PER_SECTOR = 5),
-      (et.DAIMYO_CASTLES_PER_SECTOR = 2),
-      (et.DAIMYO_TOWNSHIPS_PER_SECTOR = 2),
-      (et.ARE_PORTALS_PER_SECTOR = 1),
-      (et.ALLIANCE_NOMAD_CAMPS_PER_SECTOR = 1),
-      (et.ALLIANCE_SAMURAI_CAMPS_PER_SECTOR = 0),
-      (et.BLUE_ALLIANCE_FACTION_INVASION_CAMPS_PER_SECTOR = 0),
-      (et.RED_ALLIANCE_FACTION_INVASION_CAMPS_PER_SECTOR = 0),
-      (et.ZERO_ALLIANCE_CAMPS_PER_SECTOR = 0),
-      (et.SECTOR_COUNT = 99),
-      (et.SECTOR_COUNT_ON_TEST = 9),
-      (et.AREA_ID_DYNAMIC_WORLDMAPOBJECT = -1),
-      (t.WorldConst = et),
-      (et.__class = "WorldConst"));
-    var tt = (function () {
+    ((tt.SECTOR_WIDTH = 13),
+      (tt.SECTOR_HEIGHT = 13),
+      (tt.AREA_TYPE_EMPTY = 0),
+      (tt.AREA_TYPE_CASTLE = 1),
+      (tt.AREA_TYPE_DUNGEON = 2),
+      (tt.AREA_TYPE_CAPITAL = 3),
+      (tt.AREA_TYPE_OUTPOST = 4),
+      (tt.AREA_TYPE_TREASURE_DUNGEON = 7),
+      (tt.AREA_TYPE_TREASURE_CAMP = 8),
+      (tt.AREA_TYPE_SHADOW_AREA = 9),
+      (tt.AREA_TYPE_VILLAGE = 10),
+      (tt.AREA_TYPE_BOSS_DUNGEON = 11),
+      (tt.AREA_TYPE_KINGDOM_CASTLE = 12),
+      (tt.AREA_TYPE_EVENT_DUNGEON = 13),
+      (tt.AREA_TYPE_NO_LANDMARK = 14),
+      (tt.AREA_TYPE_FACTION_CAMP = 15),
+      (tt.AREA_TYPE_FACTION_VILLAGE = 16),
+      (tt.AREA_TYPE_FACTION_TOWER = 17),
+      (tt.AREA_TYPE_FACTION_CAPITAL = 18),
+      (tt.AREA_TYPE_PLAGUE_AREA = 19),
+      (tt.AREA_TYPE_TROOP_HOSTEL = 20),
+      (tt.AREA_TYPE_ALIEN_CAMP = 21),
+      (tt.AREA_TYPE_METROPOL = 22),
+      (tt.AREA_TYPE_KINGS_TOWER = 23),
+      (tt.AREA_TYPE_ISLE_RESOURCE = 24),
+      (tt.AREA_TYPE_ISLE_DUNGEON = 25),
+      (tt.AREA_TYPE_MONUMENT = 26),
+      (tt.AREA_TYPE_NOMAD_CAMP = 27),
+      (tt.AREA_TYPE_LABORATORY = 28),
+      (tt.AREA_TYPE_SAMURAI_CAMP = 29),
+      (tt.AREA_TYPE_FACTION_INVASION_CAMP = 30),
+      (tt.AREA_TYPE_DYNAMIC = 31),
+      (tt.AREA_TYPE_SAMURAI_ALIEN_CAMP = 33),
+      (tt.AREA_TYPE_RED_ALIEN_CAMP = 34),
+      (tt.AREA_TYPE_ALLIANCE_NOMAD_CAMP = 35),
+      (tt.AREA_TYPE_DAIMYO_CASTLE = 37),
+      (tt.AREA_TYPE_DAIMYO_TOWNSHIP = 38),
+      (tt.AREA_TYPE_ALLIANCE_BATTLE_GROUND_RESOURCE_TOWER = 40),
+      (tt.AREA_TYPE_ALLIANCE_BATTLE_GROUND_TOWER = 41),
+      (tt.AREA_TYPE_WOLF_KING = 42),
+      (tt.AREA_TYPE_ARE_PORTAL = 43),
+      (tt.AREA_TYPE_OASIS_SETTLEMENT = 44),
+      (tt.AREA_TYPE_PALACE_FORTRESS = 45),
+      (tt.AREA_TYPE_CITADEL = 46),
+      (tt.AREA_TYPE_NO_OUTPOST = 99),
+      (tt.VILLAGE_TYPE_WOOD = 0),
+      (tt.VILLAGE_TYPE_STONE = 1),
+      (tt.VILLAGE_TYPE_FOOD = 2),
+      (tt.VILLAGE_TYPE_AQUAMARINE = 3),
+      (tt.VILLAGE_TYPE_WOOD_NON_PREMIUM = 4),
+      (tt.VILLAGE_TYPE_STONE_NON_PREMIUM = 5),
+      (tt.VILLAGE_TYPE_AQUAMARINE_NON_PREMIUM = 6),
+      (tt.VILLAGE_TYPE_COAL = 7),
+      (tt.VILLAGE_TYPE_OIL = 8),
+      (tt.VILLAGE_TYPE_GLASS = 9),
+      (tt.VILLAGE_TYPE_IRON = 10),
+      (tt.MONUMENT_TYPE_SMALL = 0),
+      (tt.MONUMENT_TYPE_BIG = 1),
+      (tt.LOOKUP_MAP_SIZE = 39),
+      (tt.CAPITAL_RANDOM_POS_OFFSET_XY1 = 5),
+      (tt.CAPITAL_RANDOM_POS_OFFSET_XY2 = 8),
+      (tt.SEED_VALUE_1 = 7),
+      (tt.SEED_VALUE_2 = 923),
+      (tt.CASTLES_PER_SECTOR = 14),
+      (tt.ALIEN_CAMPS_PER_SECTOR = 4),
+      (tt.NOMAD_CAMPS_PER_SECTOR = 4),
+      (tt.SAMURAI_CAMPS_PER_SECTOR = 4),
+      (tt.RED_FACTION_INVASION_CAMPS_PER_SECTOR = 5),
+      (tt.BLUE_FACTION_INVASION_CAMPS_PER_SECTOR = 5),
+      (tt.DAIMYO_CASTLES_PER_SECTOR = 2),
+      (tt.DAIMYO_TOWNSHIPS_PER_SECTOR = 2),
+      (tt.ARE_PORTALS_PER_SECTOR = 1),
+      (tt.ALLIANCE_NOMAD_CAMPS_PER_SECTOR = 1),
+      (tt.ALLIANCE_SAMURAI_CAMPS_PER_SECTOR = 0),
+      (tt.BLUE_ALLIANCE_FACTION_INVASION_CAMPS_PER_SECTOR = 0),
+      (tt.RED_ALLIANCE_FACTION_INVASION_CAMPS_PER_SECTOR = 0),
+      (tt.ZERO_ALLIANCE_CAMPS_PER_SECTOR = 0),
+      (tt.SECTOR_COUNT = 99),
+      (tt.SECTOR_COUNT_ON_TEST = 9),
+      (tt.AREA_ID_DYNAMIC_WORLDMAPOBJECT = -1),
+      (t.WorldConst = tt),
+      (tt.__class = "WorldConst"));
+    var nt = (function () {
       function WorldDessert() {}
       return (
         (WorldDessert.VILLAGE_TYPE_COUNT_$LI$ = function () {
@@ -90981,17 +91388,17 @@ and limitations under the License.
         WorldDessert
       );
     })();
-    ((tt.KINGDOM_ID = 1),
-      (tt.IS_EXTENSION = !1),
-      (tt.WOOD_PRODUCERS = 1),
-      (tt.STONE_PRODUCERS = 1),
-      (tt.FOOD_PRODUCERS = 2),
-      (tt.BEEF_PRODUCERS = 2),
-      (tt.OIL_PRODUCERS = 2),
-      (t.WorldDessert = tt),
-      (tt.__class = "WorldDessert"),
-      (tt.__interfaces = ["IAreaMap"]));
-    var nt = (function () {
+    ((nt.KINGDOM_ID = 1),
+      (nt.IS_EXTENSION = !1),
+      (nt.WOOD_PRODUCERS = 1),
+      (nt.STONE_PRODUCERS = 1),
+      (nt.FOOD_PRODUCERS = 2),
+      (nt.BEEF_PRODUCERS = 2),
+      (nt.OIL_PRODUCERS = 2),
+      (t.WorldDessert = nt),
+      (nt.__class = "WorldDessert"),
+      (nt.__interfaces = ["IAreaMap"]));
+    var it = (function () {
       function WorldIce() {}
       return (
         (WorldIce.VILLAGE_TYPE_COUNT_$LI$ = function () {
@@ -91198,18 +91605,18 @@ and limitations under the License.
         WorldIce
       );
     })();
-    ((nt.KINGDOM_ID = 2),
-      (nt.IS_EXTENSION = !1),
-      (nt.WOOD_PRODUCERS = 2),
-      (nt.STONE_PRODUCERS = 2),
-      (nt.FOOD_PRODUCERS = 2),
-      (nt.BEEF_PRODUCERS = 2),
-      (nt.COAL_PRODUCERS = 2),
-      (nt.ADDITIONAL_KINGDOM_CASTLES_COUNT = 2),
-      (t.WorldIce = nt),
-      (nt.__class = "WorldIce"),
-      (nt.__interfaces = ["IAreaMap"]));
-    var it = (function () {
+    ((it.KINGDOM_ID = 2),
+      (it.IS_EXTENSION = !1),
+      (it.WOOD_PRODUCERS = 2),
+      (it.STONE_PRODUCERS = 2),
+      (it.FOOD_PRODUCERS = 2),
+      (it.BEEF_PRODUCERS = 2),
+      (it.COAL_PRODUCERS = 2),
+      (it.ADDITIONAL_KINGDOM_CASTLES_COUNT = 2),
+      (t.WorldIce = it),
+      (it.__class = "WorldIce"),
+      (it.__interfaces = ["IAreaMap"]));
+    var st = (function () {
       function WorldIsland() {}
       return (
         (WorldIsland.ISLE_TYPE_COUNT_$LI$ = function () {
@@ -91418,20 +91825,20 @@ and limitations under the License.
         WorldIsland
       );
     })();
-    ((it.KINGDOM_ID = 4),
-      (it.IS_EXTENSION = !1),
-      (it.HARD_R_ISLES_BELOW_ID = 4),
-      (it.HARD_R_ISLES_APPEAR_PERCENTAGE = 20),
-      (it.EASY_R_ISLES_APPEAR_PERCENTAGE = 40),
-      (it.WOOD_PRODUCERS = 3),
-      (it.STONE_PRODUCERS = 3),
-      (it.FOOD_PRODUCERS = 2),
-      (it.BEEF_PRODUCERS = 2),
-      (t.WorldIsland = it),
-      (it.__class = "WorldIsland"),
-      (it.__interfaces = ["IAreaMap"]));
-    var st,
-      at = (function () {
+    ((st.KINGDOM_ID = 4),
+      (st.IS_EXTENSION = !1),
+      (st.HARD_R_ISLES_BELOW_ID = 4),
+      (st.HARD_R_ISLES_APPEAR_PERCENTAGE = 20),
+      (st.EASY_R_ISLES_APPEAR_PERCENTAGE = 40),
+      (st.WOOD_PRODUCERS = 3),
+      (st.STONE_PRODUCERS = 3),
+      (st.FOOD_PRODUCERS = 2),
+      (st.BEEF_PRODUCERS = 2),
+      (t.WorldIsland = st),
+      (st.__class = "WorldIsland"),
+      (st.__interfaces = ["IAreaMap"]));
+    var at,
+      rt = (function () {
         function WorldVolcano() {}
         return (
           (WorldVolcano.VILLAGE_TYPE_COUNT_$LI$ = function () {
@@ -91639,16 +92046,16 @@ and limitations under the License.
           WorldVolcano
         );
       })();
-    ((at.KINGDOM_ID = 3),
-      (at.IS_EXTENSION = !1),
-      (at.WOOD_PRODUCERS = 1),
-      (at.STONE_PRODUCERS = 1),
-      (at.FOOD_PRODUCERS = 2),
-      (at.BEEF_PRODUCERS = 2),
-      (at.GLASS_PRODUCERS = 2),
-      (t.WorldVolcano = at),
-      (at.__class = "WorldVolcano"),
-      (at.__interfaces = ["IAreaMap"]),
+    ((rt.KINGDOM_ID = 3),
+      (rt.IS_EXTENSION = !1),
+      (rt.WOOD_PRODUCERS = 1),
+      (rt.STONE_PRODUCERS = 1),
+      (rt.FOOD_PRODUCERS = 2),
+      (rt.BEEF_PRODUCERS = 2),
+      (rt.GLASS_PRODUCERS = 2),
+      (t.WorldVolcano = rt),
+      (rt.__class = "WorldVolcano"),
+      (rt.__interfaces = ["IAreaMap"]),
       i.POTION_TO_DURATION_$LI$(),
       i.POTION_TO_BOOST_$LI$(),
       i.POTION_TO_INGREDIENT_TO_COST_$LI$(),
@@ -91699,10 +92106,10 @@ and limitations under the License.
       g.ITEMS_LEFTWALL_UNITS_$LI$(),
       g.LEVELS_LEFTWALL_TOOLS_$LI$(),
       g.ITEMS_LEFTWALL_TOOLS_$LI$(),
-      S.FREE_SKIP_TIME_$LI$(),
-      S.UNLOCK_DURATION_$LI$(),
-      T.SLOT_TYPE_COUNTS_$LI$(),
-      T.MAX_SLOTS_$LI$(),
+      T.FREE_SKIP_TIME_$LI$(),
+      T.UNLOCK_DURATION_$LI$(),
+      S.SLOT_TYPE_COUNTS_$LI$(),
+      S.MAX_SLOTS_$LI$(),
       y.RANDOM_REWARD_STEPS_$LI$(),
       y.REWARD_STEPS_$LI$(),
       A.LEVELS_RIGHTWALL_FACTION_$LI$(),
@@ -91734,9 +92141,9 @@ and limitations under the License.
       A.LEVELS_KEEP_$LI$(),
       A.ITEMS_KEEP_$LI$(),
       b.COOLDOWN_$LI$(),
-      B.PER_TEN_THOUSAND_$LI$(),
-      B.SLOT_IDS_FOR_GEMS_$LI$(),
-      B.SLOT_IDS_$LI$(),
+      N.PER_TEN_THOUSAND_$LI$(),
+      N.SLOT_IDS_FOR_GEMS_$LI$(),
+      N.SLOT_IDS_$LI$(),
       P.QUEST_SKIP_AUTO_START_EVENTS_$LI$(),
       P.LUCKY_WHEEL_EVENT_TYPES_$LI$(),
       P.EVENT_TYPES_FOR_OFFICERS_SCHOOL_$LI$(),
@@ -91845,12 +92252,12 @@ and limitations under the License.
       Ce.RELOCATION_COST_C2_$LI$(),
       Ce.RELOCATION_DURATION_$LI$(),
       fe.RESOURCE_TYPES_TO_MODIFY_$LI$(),
-      Se.CHARGETIME_$LI$(),
-      Te.RESOURCE_FACTORS_$LI$(),
+      Te.CHARGETIME_$LI$(),
+      Se.RESOURCE_FACTORS_$LI$(),
       be.SABOTAGE_PROTECTION_WINDOW_$LI$(),
       be.MAX_SABOTAGE_COOLDOWN_$LI$(),
       be.SPY_VALIDITY_$LI$(),
-      Be.PLAYER_TYPE_PACKAGES_$LI$(),
+      Ne.PLAYER_TYPE_PACKAGES_$LI$(),
       Pe.COLLECTOR_LOSS_$LI$(),
       Pe.START_COST_C1_PERC_$LI$(),
       Pe.START_COST_C2_$LI$(),
@@ -91873,18 +92280,20 @@ and limitations under the License.
       $e.OUTPOST_TYPE_COUNT_$LI$(),
       Je.AREA_MAP_$LI$(),
       Je.OUTPOST_TYPE_COUNT_$LI$(),
-      et.WORLD_IDS_$LI$(),
-      et.OUTPOST_TYPE_LIST_$LI$(),
-      et.ALIEN_CAMP_AREA_TYPES_$LI$(),
-      et.CLIENT_GAA_SIDE_LENGTH_$LI$(),
-      tt.AREA_MAP_$LI$(),
-      tt.VILLAGE_TYPE_COUNT_$LI$(),
+      et.AREA_MAP_$LI$(),
+      et.OUTPOST_TYPE_COUNT_$LI$(),
+      tt.WORLD_IDS_$LI$(),
+      tt.OUTPOST_TYPE_LIST_$LI$(),
+      tt.ALIEN_CAMP_AREA_TYPES_$LI$(),
+      tt.CLIENT_GAA_SIDE_LENGTH_$LI$(),
       nt.AREA_MAP_$LI$(),
       nt.VILLAGE_TYPE_COUNT_$LI$(),
       it.AREA_MAP_$LI$(),
-      it.ISLE_TYPE_COUNT_$LI$(),
-      at.AREA_MAP_$LI$(),
-      at.VILLAGE_TYPE_COUNT_$LI$(),
+      it.VILLAGE_TYPE_COUNT_$LI$(),
+      st.AREA_MAP_$LI$(),
+      st.ISLE_TYPE_COUNT_$LI$(),
+      rt.AREA_MAP_$LI$(),
+      rt.VILLAGE_TYPE_COUNT_$LI$(),
       (function (e) {
         ((e[(e.ALL_OK = 0)] = "ALL_OK"),
           (e[(e.GENERAL_ERROR = 1)] = "GENERAL_ERROR"),
@@ -92432,15 +92841,29 @@ and limitations under the License.
           (e[(e.TOWER_DEPLETED = 1009)] = "TOWER_DEPLETED"),
           (e[(e.INVALID_LANGUAGE = 1010)] = "INVALID_LANGUAGE"),
           (e[(e.ALLIANCE_LANGUAGE_CHANGE_NOT_ALLOWED = 1011)] =
-            "ALLIANCE_LANGUAGE_CHANGE_NOT_ALLOWED"));
-      })(st || (st = {})),
-      (t.ERROR = st),
+            "ALLIANCE_LANGUAGE_CHANGE_NOT_ALLOWED"),
+          (e[(e.BATTLEGROUND_LEVEL_TOO_LOW = 1012)] =
+            "BATTLEGROUND_LEVEL_TOO_LOW"),
+          (e[(e.BATTLEGROUND_MISSING_REQUIRED_BUILDINGS = 1013)] =
+            "BATTLEGROUND_MISSING_REQUIRED_BUILDINGS"),
+          (e[(e.BATTLEGROUND_SERVER_FULL = 1014)] = "BATTLEGROUND_SERVER_FULL"),
+          (e[(e.BATTLEGROUND_OUTSIDE_TERRITORY = 1015)] =
+            "BATTLEGROUND_OUTSIDE_TERRITORY"),
+          (e[(e.BATTLEGROUND_CITADEL_MAX_LEVEL = 1016)] =
+            "BATTLEGROUND_CITADEL_MAX_LEVEL"),
+          (e[(e.BATTLEGROUND_NO_CITADEL = 1017)] = "BATTLEGROUND_NO_CITADEL"),
+          (e[(e.BATTLEGROUND_TRADE_NOT_OFFERED = 1018)] =
+            "BATTLEGROUND_TRADE_NOT_OFFERED"),
+          (e[(e.BATTLEGROUND_TRADE_OVER_LOOT_CAPACITY = 1019)] =
+            "BATTLEGROUND_TRADE_OVER_LOOT_CAPACITY"));
+      })(at || (at = {})),
+      (t.ERROR = at),
       (function (e) {
         e.getErrorText = function getErrorText(t) {
           return e[t];
         };
-      })(st || (st = {})),
-      (t.ERROR = st));
+      })(at || (at = {})),
+      (t.ERROR = at));
   },
   function (e, t, n) {
     "use strict";
@@ -92462,11 +92885,11 @@ and limitations under the License.
       E = n(23),
       C = n(771),
       f = n(338),
-      S = n(3),
-      T = n(2),
+      T = n(3),
+      S = n(2),
       y = n(55),
       I = n(339),
-      v = T.getLogger("CoreJS.BasicCacheBreakerSwf"),
+      v = S.getLogger("CoreJS.BasicCacheBreakerSwf"),
       A = (function () {
         function BasicCacheBreakerSwf() {
           ((this._accountCookieInizialized = !1),
@@ -92543,8 +92966,8 @@ and limitations under the License.
               (this.env.featureBranchEnvironment = o));
           }),
           (BasicCacheBreakerSwf.prototype.initializeLogger = function () {
-            T.CoreLoggerConfigurator.setLevel(
-              this.env.isTest ? T.LoggingLevel.DEBUG : T.LoggingLevel.WARN,
+            S.CoreLoggerConfigurator.setLevel(
+              this.env.isTest ? S.LoggingLevel.DEBUG : S.LoggingLevel.WARN,
             );
           }),
           (BasicCacheBreakerSwf.prototype.initializeStats = function () {
@@ -92585,9 +93008,9 @@ and limitations under the License.
             var e = this;
             return (
               v.info("loadHref"),
-              S.ExternalInterface.available
+              T.ExternalInterface.available
                 ? new Promise(function (t, n) {
-                    S.ExternalInterface.asyncCall("ggsGetHref")
+                    T.ExternalInterface.asyncCall("ggsGetHref")
                       .then(function (n) {
                         (v.info(n), (e.env.href = n), t());
                       })
@@ -92603,9 +93026,9 @@ and limitations under the License.
             var e = this;
             return (
               v.info("loadReferrer"),
-              S.ExternalInterface.available
+              T.ExternalInterface.available
                 ? new Promise(function (t, n) {
-                    S.ExternalInterface.asyncCall("ggsGetReferrer")
+                    T.ExternalInterface.asyncCall("ggsGetReferrer")
                       .then(function (n) {
                         v.info(n);
                         var i = new URL(n);
@@ -92659,7 +93082,7 @@ and limitations under the License.
           (BasicCacheBreakerSwf.prototype.loadDataFromIntegrationPage =
             function () {
               var e = this;
-              return S.ExternalInterface.available
+              return T.ExternalInterface.available
                 ? new Promise(function (t) {
                     e.loadPageIntegrationCookies()
                       .then(function (e) {
@@ -92678,10 +93101,10 @@ and limitations under the License.
           (BasicCacheBreakerSwf.prototype.loadPageIntegrationCookies =
             function () {
               return new Promise(function (e, t) {
-                S.ExternalInterface.asyncCall("ggsGetAutologinData")
+                T.ExternalInterface.asyncCall("ggsGetAutologinData")
                   .then(function (t) {
                     var n;
-                    (S.ExternalInterface.call("ggsRemoveAutologinData"),
+                    (T.ExternalInterface.call("ggsRemoveAutologinData"),
                     (n = t) &&
                       null != n.instanceId &&
                       null != n.playerId &&
@@ -92715,7 +93138,7 @@ and limitations under the License.
             this.env.initCampaignVars(
               new s.CampaignVarsVO(
                 this.env.urlVariables.urlParams,
-                S.getQualifiedClassName(this),
+                T.getQualifiedClassName(this),
                 s.CampaignVarsVO.SOURCE_URL_PARAMETER,
               ),
             );
@@ -92740,7 +93163,7 @@ and limitations under the License.
               this.env.networkId,
               this.env.referrer,
               this.env.accountId,
-              S.Capabilities.language,
+              T.Capabilities.language,
             ),
               o.TrackingCache.getInstance().useTestValidationServer(
                 p.paramToBool(
@@ -92784,7 +93207,7 @@ and limitations under the License.
                 (e.versionUrl = c.PathProvider.instance.versionURL),
                 (e.zoneCapacityUrl =
                   c.PathProvider.instance.zoneCapacitiesConfigURL),
-                (e.browserLanguage = S.Capabilities.language),
+                (e.browserLanguage = T.Capabilities.language),
                 (e.timezoneOffset = l.TimezoneUtil.getUTCTimezoneWithoutDST()),
                 (e.countryCodeFromNetworkCookie =
                   m.BasicModel.networkCookie.country),
@@ -119805,12 +120228,12 @@ and limitations under the License.
                             return { type: "elementFormat", key: e, val: t };
                           },
                           f = "selectordinal",
-                          S = {
+                          T = {
                             type: "literal",
                             value: "selectordinal",
                             description: '"selectordinal"',
                           },
-                          T = "select",
+                          S = "select",
                           y = {
                             type: "literal",
                             value: "select",
@@ -119844,10 +120267,10 @@ and limitations under the License.
                           R = function (e, t) {
                             return { key: e, val: t };
                           },
-                          B = function (e) {
+                          N = function (e) {
                             return e;
                           },
-                          N = "=",
+                          B = "=",
                           P = {
                             type: "literal",
                             value: "=",
@@ -119974,8 +120397,8 @@ and limitations under the License.
                             value: "[ \\t\\n\\r]",
                             description: "[ \\t\\n\\r]",
                           },
-                          Se = 0,
                           Te = 0,
+                          Se = 0,
                           ye = { line: 1, column: 1, seenCR: !1 },
                           Ie = 0,
                           ve = [],
@@ -119991,9 +120414,9 @@ and limitations under the License.
                         }
                         function peg$computePosDetails(t) {
                           return (
-                            Te !== t &&
-                              (Te > t &&
-                                ((Te = 0),
+                            Se !== t &&
+                              (Se > t &&
+                                ((Se = 0),
                                 (ye = { line: 1, column: 1, seenCR: !1 })),
                               (function advance(t, n, i) {
                                 var s, a;
@@ -120009,14 +120432,14 @@ and limitations under the License.
                                         (t.column = 1),
                                         (t.seenCR = !0))
                                       : (t.column++, (t.seenCR = !1));
-                              })(ye, Te, t),
-                              (Te = t)),
+                              })(ye, Se, t),
+                              (Se = t)),
                             ye
                           );
                         }
                         function peg$fail(e) {
-                          Se < Ie ||
-                            (Se > Ie && ((Ie = Se), (ve = [])), ve.push(e));
+                          Te < Ie ||
+                            (Te > Ie && ((Ie = Te), (ve = [])), ve.push(e));
                         }
                         function peg$buildException(t, n, i) {
                           var s = peg$computePosDetails(i),
@@ -120115,7 +120538,7 @@ and limitations under the License.
                         function peg$parsemessageFormatPattern() {
                           var e, t;
                           for (
-                            Se,
+                            Te,
                               e = [],
                               (t = peg$parsemessageFormatElement()) === i &&
                                 (t = peg$parsestring()) === i &&
@@ -120131,44 +120554,44 @@ and limitations under the License.
                         function peg$parsemessageFormatElement() {
                           var t, n, s, a, r, g;
                           return (
-                            (t = Se),
-                            123 === e.charCodeAt(Se)
-                              ? ((n = l), Se++)
+                            (t = Te),
+                            123 === e.charCodeAt(Te)
+                              ? ((n = l), Te++)
                               : ((n = i), 0 === Ae && peg$fail(u)),
                             n !== i &&
                             peg$parse_() !== i &&
                             (s = peg$parseid()) !== i
-                              ? ((a = Se),
-                                44 === e.charCodeAt(Se)
-                                  ? ((r = c), Se++)
+                              ? ((a = Te),
+                                44 === e.charCodeAt(Te)
+                                  ? ((r = c), Te++)
                                   : ((r = i), 0 === Ae && peg$fail(m)),
                                 r !== i && (g = peg$parseelementFormat()) !== i
                                   ? (a = r = [r, g])
-                                  : ((Se = a), (a = o)),
+                                  : ((Te = a), (a = o)),
                                 a === i && (a = _),
                                 a !== i && (r = peg$parse_()) !== i
-                                  ? (125 === e.charCodeAt(Se)
-                                      ? ((g = d), Se++)
+                                  ? (125 === e.charCodeAt(Te)
+                                      ? ((g = d), Te++)
                                       : ((g = i), 0 === Ae && peg$fail(h)),
                                     g !== i
                                       ? ((n = p(s, a)), (t = n))
-                                      : ((Se = t), (t = o)))
-                                  : ((Se = t), (t = o)))
-                              : ((Se = t), (t = o)),
+                                      : ((Te = t), (t = o)))
+                                  : ((Te = t), (t = o)))
+                              : ((Te = t), (t = o)),
                             t
                           );
                         }
                         function peg$parseelementFormat() {
                           var t, n, s, a, r, l;
                           if (
-                            ((t = Se),
+                            ((t = Te),
                             (n = peg$parse_()) !== i
-                              ? (e.substr(Se, 6) === g
-                                  ? ((s = g), (Se += 6))
+                              ? (e.substr(Te, 6) === g
+                                  ? ((s = g), (Te += 6))
                                   : ((s = i), 0 === Ae && peg$fail(E)),
                                 s !== i && (a = peg$parse_()) !== i
-                                  ? (44 === e.charCodeAt(Se)
-                                      ? ((r = c), Se++)
+                                  ? (44 === e.charCodeAt(Te)
+                                      ? ((r = c), Te++)
                                       : ((r = i), 0 === Ae && peg$fail(m)),
                                     r !== i &&
                                     peg$parse_() !== i &&
@@ -120176,18 +120599,18 @@ and limitations under the License.
                                       i &&
                                     peg$parse_() !== i
                                       ? ((n = C(s, l)), (t = n))
-                                      : ((Se = t), (t = o)))
-                                  : ((Se = t), (t = o)))
-                              : ((Se = t), (t = o)),
+                                      : ((Te = t), (t = o)))
+                                  : ((Te = t), (t = o)))
+                              : ((Te = t), (t = o)),
                             t === i &&
-                              ((t = Se),
+                              ((t = Te),
                               (n = peg$parse_()) !== i
-                                ? (e.substr(Se, 13) === f
-                                    ? ((s = f), (Se += 13))
-                                    : ((s = i), 0 === Ae && peg$fail(S)),
+                                ? (e.substr(Te, 13) === f
+                                    ? ((s = f), (Te += 13))
+                                    : ((s = i), 0 === Ae && peg$fail(T)),
                                   s !== i && (a = peg$parse_()) !== i
-                                    ? (44 === e.charCodeAt(Se)
-                                        ? ((r = c), Se++)
+                                    ? (44 === e.charCodeAt(Te)
+                                        ? ((r = c), Te++)
                                         : ((r = i), 0 === Ae && peg$fail(m)),
                                       r !== i &&
                                       peg$parse_() !== i &&
@@ -120195,18 +120618,18 @@ and limitations under the License.
                                         i &&
                                       peg$parse_() !== i
                                         ? ((n = C(s, l)), (t = n))
-                                        : ((Se = t), (t = o)))
-                                    : ((Se = t), (t = o)))
-                                : ((Se = t), (t = o)),
+                                        : ((Te = t), (t = o)))
+                                    : ((Te = t), (t = o)))
+                                : ((Te = t), (t = o)),
                               t === i &&
-                                ((t = Se),
+                                ((t = Te),
                                 (n = peg$parse_()) !== i
-                                  ? (e.substr(Se, 6) === T
-                                      ? ((s = T), (Se += 6))
+                                  ? (e.substr(Te, 6) === S
+                                      ? ((s = S), (Te += 6))
                                       : ((s = i), 0 === Ae && peg$fail(y)),
                                     s !== i && (a = peg$parse_()) !== i
-                                      ? (44 === e.charCodeAt(Se)
-                                          ? ((r = c), Se++)
+                                      ? (44 === e.charCodeAt(Te)
+                                          ? ((r = c), Te++)
                                           : ((r = i), 0 === Ae && peg$fail(m)),
                                         r !== i &&
                                         peg$parse_() !== i &&
@@ -120214,7 +120637,7 @@ and limitations under the License.
                                           (function peg$parseselectFormatPattern() {
                                             var e, t;
                                             if (
-                                              (Se,
+                                              (Te,
                                               (e = []),
                                               (t = peg$parseselectForm()) !== i)
                                             )
@@ -120226,12 +120649,12 @@ and limitations under the License.
                                           })()) !== i &&
                                         peg$parse_() !== i
                                           ? ((n = C(s, l)), (t = n))
-                                          : ((Se = t), (t = o)))
-                                      : ((Se = t), (t = o)))
-                                  : ((Se = t), (t = o)),
+                                          : ((Te = t), (t = o)))
+                                      : ((Te = t), (t = o)))
+                                  : ((Te = t), (t = o)),
                                 t === i)))
                           )
-                            if (((t = Se), (n = peg$parse_()) !== i))
+                            if (((t = Te), (n = peg$parse_()) !== i))
                               if ((s = peg$parseid()) !== i) {
                                 for (
                                   a = [], r = peg$parseargStylePattern();
@@ -120240,35 +120663,35 @@ and limitations under the License.
                                   (a.push(r), (r = peg$parseargStylePattern()));
                                 a !== i
                                   ? ((n = I(s, a)), (t = n))
-                                  : ((Se = t), (t = o));
-                              } else ((Se = t), (t = o));
-                            else ((Se = t), (t = o));
+                                  : ((Te = t), (t = o));
+                              } else ((Te = t), (t = o));
+                            else ((Te = t), (t = o));
                           return t;
                         }
                         function peg$parsepluralFormatPattern() {
                           var t, n, s, a;
                           if (
-                            ((t = Se),
+                            ((t = Te),
                             (n = (function peg$parseoffsetPattern() {
                               var t, n, s, a, r;
                               return (
-                                (t = Se),
+                                (t = Te),
                                 (n = peg$parse_()) !== i
-                                  ? (e.substr(Se, 6) === A
-                                      ? ((s = A), (Se += 6))
+                                  ? (e.substr(Te, 6) === A
+                                      ? ((s = A), (Te += 6))
                                       : ((s = i), 0 === Ae && peg$fail(O)),
                                     s !== i && peg$parse_() !== i
-                                      ? (58 === e.charCodeAt(Se)
-                                          ? ((a = L), Se++)
+                                      ? (58 === e.charCodeAt(Te)
+                                          ? ((a = L), Te++)
                                           : ((a = i), 0 === Ae && peg$fail(D)),
                                         a !== i &&
                                         peg$parse_() !== i &&
                                         (r = peg$parsedigits()) !== i &&
                                         peg$parse_() !== i
                                           ? ((n = b(r)), (t = n))
-                                          : ((Se = t), (t = o)))
-                                      : ((Se = t), (t = o)))
-                                  : ((Se = t), (t = o)),
+                                          : ((Te = t), (t = o)))
+                                      : ((Te = t), (t = o)))
+                                  : ((Te = t), (t = o)),
                                 t
                               );
                             })()) === i && (n = _),
@@ -120280,99 +120703,99 @@ and limitations under the License.
                             else s = o;
                             s !== i
                               ? ((n = v(n, s)), (t = n))
-                              : ((Se = t), (t = o));
-                          } else ((Se = t), (t = o));
+                              : ((Te = t), (t = o));
+                          } else ((Te = t), (t = o));
                           return t;
                         }
                         function peg$parsepluralForm() {
                           var t, n, s, a, r, _;
                           return (
-                            (t = Se),
+                            (t = Te),
                             (n = peg$parse_()) !== i &&
                             (s = (function peg$parsepluralKey() {
                               var t, n, s;
                               return (
-                                (t = Se),
-                                (n = peg$parseid()) !== i && (n = B(n)),
+                                (t = Te),
+                                (n = peg$parseid()) !== i && (n = N(n)),
                                 (t = n) === i &&
-                                  ((t = Se),
-                                  61 === e.charCodeAt(Se)
-                                    ? ((n = N), Se++)
+                                  ((t = Te),
+                                  61 === e.charCodeAt(Te)
+                                    ? ((n = B), Te++)
                                     : ((n = i), 0 === Ae && peg$fail(P)),
                                   n !== i && (s = peg$parsedigits()) !== i
                                     ? ((n = b(s)), (t = n))
-                                    : ((Se = t), (t = o))),
+                                    : ((Te = t), (t = o))),
                                 t
                               );
                             })()) !== i &&
                             peg$parse_() !== i
-                              ? (123 === e.charCodeAt(Se)
-                                  ? ((a = l), Se++)
+                              ? (123 === e.charCodeAt(Te)
+                                  ? ((a = l), Te++)
                                   : ((a = i), 0 === Ae && peg$fail(u)),
                                 a !== i &&
                                 peg$parse_() !== i &&
                                 (r = peg$parsemessageFormatPattern()) !== i &&
                                 peg$parse_() !== i
-                                  ? (125 === e.charCodeAt(Se)
-                                      ? ((_ = d), Se++)
+                                  ? (125 === e.charCodeAt(Te)
+                                      ? ((_ = d), Te++)
                                       : ((_ = i), 0 === Ae && peg$fail(h)),
                                     _ !== i
                                       ? ((n = R(s, r)), (t = n))
-                                      : ((Se = t), (t = o)))
-                                  : ((Se = t), (t = o)))
-                              : ((Se = t), (t = o)),
+                                      : ((Te = t), (t = o)))
+                                  : ((Te = t), (t = o)))
+                              : ((Te = t), (t = o)),
                             t
                           );
                         }
                         function peg$parseselectForm() {
                           var t, n, s, a, r, _;
                           return (
-                            (t = Se),
+                            (t = Te),
                             (n = peg$parse_()) !== i &&
                             (s = peg$parseid()) !== i &&
                             peg$parse_() !== i
-                              ? (123 === e.charCodeAt(Se)
-                                  ? ((a = l), Se++)
+                              ? (123 === e.charCodeAt(Te)
+                                  ? ((a = l), Te++)
                                   : ((a = i), 0 === Ae && peg$fail(u)),
                                 a !== i &&
                                 peg$parse_() !== i &&
                                 (r = peg$parsemessageFormatPattern()) !== i &&
                                 peg$parse_() !== i
-                                  ? (125 === e.charCodeAt(Se)
-                                      ? ((_ = d), Se++)
+                                  ? (125 === e.charCodeAt(Te)
+                                      ? ((_ = d), Te++)
                                       : ((_ = i), 0 === Ae && peg$fail(h)),
                                     _ !== i
                                       ? ((n = R(s, r)), (t = n))
-                                      : ((Se = t), (t = o)))
-                                  : ((Se = t), (t = o)))
-                              : ((Se = t), (t = o)),
+                                      : ((Te = t), (t = o)))
+                                  : ((Te = t), (t = o)))
+                              : ((Te = t), (t = o)),
                             t
                           );
                         }
                         function peg$parseargStylePattern() {
                           var t, n, s, a;
                           return (
-                            (t = Se),
+                            (t = Te),
                             (n = peg$parse_()) !== i
-                              ? (44 === e.charCodeAt(Se)
-                                  ? ((s = c), Se++)
+                              ? (44 === e.charCodeAt(Te)
+                                  ? ((s = c), Te++)
                                   : ((s = i), 0 === Ae && peg$fail(m)),
                                 s !== i &&
                                 peg$parse_() !== i &&
                                 (a = peg$parseid()) !== i &&
                                 peg$parse_() !== i
                                   ? ((n = U(a)), (t = n))
-                                  : ((Se = t), (t = o)))
-                              : ((Se = t), (t = o)),
+                                  : ((Te = t), (t = o)))
+                              : ((Te = t), (t = o)),
                             t
                           );
                         }
                         function peg$parseoctothorpe() {
                           var t;
                           return (
-                            Se,
-                            35 === e.charCodeAt(Se)
-                              ? ((t = G), Se++)
+                            Te,
+                            35 === e.charCodeAt(Te)
+                              ? ((t = G), Te++)
                               : ((t = i), 0 === Ae && peg$fail(F)),
                             t !== i && (t = k()),
                             t
@@ -120381,7 +120804,7 @@ and limitations under the License.
                         function peg$parsestring() {
                           var e, t;
                           if (
-                            (Se,
+                            (Te,
                             (e = []),
                             (t = peg$parsechars()) === i &&
                               (t = peg$parsewhitespace()),
@@ -120396,33 +120819,33 @@ and limitations under the License.
                         }
                         function peg$parseid() {
                           var t, n, s, a, r, l, u;
-                          if ((Ae++, (t = Se), (n = peg$parse_()) !== i)) {
+                          if ((Ae++, (t = Te), (n = peg$parse_()) !== i)) {
                             if (
-                              ((s = Se),
-                              (a = Se),
-                              W.test(e.charAt(Se))
-                                ? ((r = e.charAt(Se)), Se++)
+                              ((s = Te),
+                              (a = Te),
+                              W.test(e.charAt(Te))
+                                ? ((r = e.charAt(Te)), Te++)
                                 : ((r = i), 0 === Ae && peg$fail(H)),
                               r !== i)
                             ) {
                               for (
                                 l = [],
-                                  V.test(e.charAt(Se))
-                                    ? ((u = e.charAt(Se)), Se++)
+                                  V.test(e.charAt(Te))
+                                    ? ((u = e.charAt(Te)), Te++)
                                     : ((u = i), 0 === Ae && peg$fail(j));
                                 u !== i;
                               )
                                 (l.push(u),
-                                  V.test(e.charAt(Se))
-                                    ? ((u = e.charAt(Se)), Se++)
+                                  V.test(e.charAt(Te))
+                                    ? ((u = e.charAt(Te)), Te++)
                                     : ((u = i), 0 === Ae && peg$fail(j)));
-                              l !== i ? (a = r = [r, l]) : ((Se = a), (a = o));
-                            } else ((Se = a), (a = o));
-                            (a !== i && (a = e.substring(s, Se)),
+                              l !== i ? (a = r = [r, l]) : ((Te = a), (a = o));
+                            } else ((Te = a), (a = o));
+                            (a !== i && (a = e.substring(s, Te)),
                               (s = a) !== i && (a = peg$parse_()) !== i
                                 ? ((n = q(s)), (t = n))
-                                : ((Se = t), (t = o)));
-                          } else ((Se = t), (t = o));
+                                : ((Te = t), (t = o)));
+                          } else ((Te = t), (t = o));
                           return (
                             Ae--,
                             t === i && ((n = i), 0 === Ae && peg$fail(x)),
@@ -120431,7 +120854,7 @@ and limitations under the License.
                         }
                         function peg$parsechars() {
                           var e, t;
-                          if ((Se, (e = []), (t = peg$parsechar()) !== i))
+                          if ((Te, (e = []), (t = peg$parsechar()) !== i))
                             for (; t !== i;) (e.push(t), (t = peg$parsechar()));
                           else e = o;
                           return (e !== i && (e = K(e)), e);
@@ -120439,39 +120862,39 @@ and limitations under the License.
                         function peg$parsechar() {
                           var t, n, s, a, r, l;
                           return (
-                            (t = Se),
-                            Y.test(e.charAt(Se))
-                              ? ((n = e.charAt(Se)), Se++)
+                            (t = Te),
+                            Y.test(e.charAt(Te))
+                              ? ((n = e.charAt(Te)), Te++)
                               : ((n = i), 0 === Ae && peg$fail(z)),
                             n !== i && (n = Z(n)),
                             (t = n) === i &&
-                              ((t = Se),
-                              e.substr(Se, 2) === X
-                                ? ((n = X), (Se += 2))
+                              ((t = Te),
+                              e.substr(Te, 2) === X
+                                ? ((n = X), (Te += 2))
                                 : ((n = i), 0 === Ae && peg$fail(Q)),
                               n !== i && (n = $()),
                               (t = n) === i &&
-                                ((t = Se),
-                                e.substr(Se, 2) === J
-                                  ? ((n = J), (Se += 2))
+                                ((t = Te),
+                                e.substr(Te, 2) === J
+                                  ? ((n = J), (Te += 2))
                                   : ((n = i), 0 === Ae && peg$fail(ee)),
                                 n !== i && (n = te()),
                                 (t = n) === i &&
-                                  ((t = Se),
-                                  e.substr(Se, 2) === ne
-                                    ? ((n = ne), (Se += 2))
+                                  ((t = Te),
+                                  e.substr(Te, 2) === ne
+                                    ? ((n = ne), (Te += 2))
                                     : ((n = i), 0 === Ae && peg$fail(ie)),
                                   n !== i && (n = se()),
                                   (t = n) === i &&
-                                    ((t = Se),
-                                    e.substr(Se, 2) === ae
-                                      ? ((n = ae), (Se += 2))
+                                    ((t = Te),
+                                    e.substr(Te, 2) === ae
+                                      ? ((n = ae), (Te += 2))
                                       : ((n = i), 0 === Ae && peg$fail(re)),
                                     n !== i && (n = oe()),
                                     (t = n) === i &&
-                                      ((t = Se),
-                                      e.substr(Se, 2) === le
-                                        ? ((n = le), (Se += 2))
+                                      ((t = Te),
+                                      e.substr(Te, 2) === le
+                                        ? ((n = le), (Te += 2))
                                         : ((n = i), 0 === Ae && peg$fail(ue)),
                                       n !== i &&
                                       (s = peg$parsehexDigit()) !== i &&
@@ -120479,24 +120902,24 @@ and limitations under the License.
                                       (r = peg$parsehexDigit()) !== i &&
                                       (l = peg$parsehexDigit()) !== i
                                         ? ((n = _e(s, a, r, l)), (t = n))
-                                        : ((Se = t), (t = o))))))),
+                                        : ((Te = t), (t = o))))))),
                             t
                           );
                         }
                         function peg$parsedigits() {
                           var t, n;
                           if (
-                            (Se,
+                            (Te,
                             (t = []),
-                            ce.test(e.charAt(Se))
-                              ? ((n = e.charAt(Se)), Se++)
+                            ce.test(e.charAt(Te))
+                              ? ((n = e.charAt(Te)), Te++)
                               : ((n = i), 0 === Ae && peg$fail(me)),
                             n !== i)
                           )
                             for (; n !== i;)
                               (t.push(n),
-                                ce.test(e.charAt(Se))
-                                  ? ((n = e.charAt(Se)), Se++)
+                                ce.test(e.charAt(Te))
+                                  ? ((n = e.charAt(Te)), Te++)
                                   : ((n = i), 0 === Ae && peg$fail(me)));
                           else t = o;
                           return (t !== i && (t = de(t)), t);
@@ -120504,8 +120927,8 @@ and limitations under the License.
                         function peg$parsehexDigit() {
                           var t;
                           return (
-                            he.test(e.charAt(Se))
-                              ? ((t = e.charAt(Se)), Se++)
+                            he.test(e.charAt(Te))
+                              ? ((t = e.charAt(Te)), Te++)
                               : ((t = i), 0 === Ae && peg$fail(pe)),
                             t
                           );
@@ -120513,7 +120936,7 @@ and limitations under the License.
                         function peg$parse_() {
                           var e, t, n;
                           for (
-                            Ae++, e = Se, t = [], n = peg$parsewhitespace();
+                            Ae++, e = Te, t = [], n = peg$parsewhitespace();
                             n !== i;
                           )
                             (t.push(n), (n = peg$parsewhitespace()));
@@ -120528,16 +120951,16 @@ and limitations under the License.
                         function peg$parsewhitespace() {
                           var t;
                           return (
-                            Ce.test(e.charAt(Se))
-                              ? ((t = e.charAt(Se)), Se++)
+                            Ce.test(e.charAt(Te))
+                              ? ((t = e.charAt(Te)), Te++)
                               : ((t = i), 0 === Ae && peg$fail(fe)),
                             t
                           );
                         }
-                        if ((t = a()) !== i && Se === e.length) return t;
+                        if ((t = a()) !== i && Te === e.length) return t;
                         throw (
                           t !== i &&
-                            Se < e.length &&
+                            Te < e.length &&
                             peg$fail({
                               type: "end",
                               description: "end of input",
@@ -120998,13 +121421,13 @@ and limitations under the License.
                   t.replace(/\.(#+|0*[0-9]|0+[0-9]?)/g, s)
                 );
               },
-              S = function (e, t) {
+              T = function (e, t) {
                 var n,
                   i = {};
                 for (n in e) t.test(n) && (i[n] = e[n]);
                 return i;
               },
-              T =
+              S =
                 /[\0-#%-\*,-;\?-\]_a-\{\}\x7F-\xA1\xA7\xAA\xAB\xAD\xB2\xB3\xB5-\xB7\xB9-\xD6\xD8-\xF6\xF8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0300-\u0374\u0376-\u0383\u0386-\u03F5\u03F7-\u0481\u0483-\u058C\u0590-\u0605\u0609\u060A\u060C\u060D\u0610-\u06DD\u06DF-\u06E8\u06EA-\u06FC\u06FF-\u07F5\u07F7-\u07FD\u0800-\u09F1\u09F4-\u09F9\u09FC-\u0AF0\u0AF2-\u0B6F\u0B71-\u0BF2\u0BFB-\u0C7E\u0C80-\u0D4E\u0D50-\u0D78\u0D7A-\u0E3E\u0E40-\u0F00\u0F04-\u0F12\u0F14\u0F18\u0F19\u0F20-\u0F33\u0F35\u0F37\u0F39-\u0FBD\u0FC6\u0FCD\u0FD0-\u0FD4\u0FD9-\u109D\u10A0-\u138F\u139A-\u166C\u166E-\u17DA\u17DC-\u193F\u1941-\u19DD\u1A00-\u1B60\u1B6B-\u1B73\u1B7D-\u1FBC\u1FBE\u1FC2-\u1FCC\u1FD0-\u1FDC\u1FE0-\u1FEC\u1FF0-\u1FFC\u1FFF-\u2043\u2045-\u2051\u2053-\u2079\u207D-\u2089\u208D-\u209F\u20C0-\u20FF\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2150-\u2189\u218C-\u218F\u2308-\u230B\u2329\u232A\u2427-\u243F\u244B-\u249B\u24EA-\u24FF\u2768-\u2793\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2B74\u2B75\u2B96\u2C00-\u2CE4\u2CEB-\u2E4F\u2E52-\u2E7F\u2E9A\u2EF4-\u2EFF\u2FD6-\u2FEF\u2FFC-\u3003\u3005-\u3011\u3014-\u301F\u3021-\u3035\u3038-\u303D\u3040-\u309A\u309D-\u318F\u3192-\u3195\u31A0-\u31BF\u31E4-\u31FF\u321F-\u3229\u3248-\u324F\u3251-\u325F\u3280-\u3289\u32B1-\u32BF\u3400-\u4DBF\u4E00-\uA48F\uA4C7-\uA6FF\uA717-\uA71F\uA722-\uA788\uA78B-\uA827\uA82C-\uA835\uA83A-\uAA76\uAA7A-\uAB5A\uAB5C-\uAB69\uAB6C-\uD7FF\uE000-\uFB28\uFB2A-\uFBB1\uFBC2-\uFDFB\uFDFE-\uFE61\uFE63\uFE67\uFE68\uFE6A-\uFF03\uFF05-\uFF0A\uFF0C-\uFF1B\uFF1F-\uFF3D\uFF3F\uFF41-\uFF5B\uFF5D\uFF5F-\uFFDF\uFFE7\uFFEF-\uFFFB\uFFFE\uFFFF]|\uD800[\uDC00-\uDD36\uDD40-\uDD78\uDD8A\uDD8B\uDD8F\uDD9D-\uDD9F\uDDA1-\uDDCF\uDDFD-\uDFFF]|[\uD801\uD803\uD804\uD806\uD808-\uD819\uD81B-\uD82E\uD830-\uD833\uD837\uD839\uD83A\uD83F-\uDBFF][\uDC00-\uDFFF]|\uD802[\uDC00-\uDC76\uDC79-\uDEC7\uDEC9-\uDFFF]|\uD805[\uDC00-\uDF3E\uDF40-\uDFFF]|\uD807[\uDC00-\uDFD4\uDFF2-\uDFFF]|\uD81A[\uDC00-\uDF3B\uDF40-\uDF44\uDF46-\uDFFF]|\uD82F[\uDC00-\uDC9B\uDC9D-\uDFFF]|\uD834[\uDCF6-\uDCFF\uDD27\uDD28\uDD65-\uDD69\uDD6D-\uDD82\uDD85-\uDD8B\uDDAA-\uDDAD\uDDE9-\uDDFF\uDE42-\uDE44\uDE46-\uDEFF\uDF57-\uDFFF]|\uD835[\uDC00-\uDEC0\uDEC2-\uDEDA\uDEDC-\uDEFA\uDEFC-\uDF14\uDF16-\uDF34\uDF36-\uDF4E\uDF50-\uDF6E\uDF70-\uDF88\uDF8A-\uDFA8\uDFAA-\uDFC2\uDFC4-\uDFFF]|\uD836[\uDE00-\uDE36\uDE3B-\uDE6C\uDE75\uDE84\uDE87-\uDFFF]|\uD838[\uDC00-\uDD4E\uDD50-\uDEFE\uDF00-\uDFFF]|\uD83B[\uDC00-\uDCAB\uDCAD-\uDCAF\uDCB1-\uDD2D\uDD2F-\uDEEF\uDEF2-\uDFFF]|\uD83C[\uDC2C-\uDC2F\uDC94-\uDC9F\uDCAF\uDCB0\uDCC0\uDCD0\uDCF6-\uDD0C\uDDAE-\uDDE5\uDE03-\uDE0F\uDE3C-\uDE3F\uDE49-\uDE4F\uDE52-\uDE5F\uDE66-\uDEFF]|\uD83D[\uDED8-\uDEDF\uDEED-\uDEEF\uDEFD-\uDEFF\uDF74-\uDF7F\uDFD9-\uDFDF\uDFEC-\uDFFF]|\uD83E[\uDC0C-\uDC0F\uDC48-\uDC4F\uDC5A-\uDC5F\uDC88-\uDC8F\uDCAE\uDCAF\uDCB2-\uDCFF\uDD79\uDDCC\uDE54-\uDE5F\uDE6E\uDE6F\uDE75-\uDE77\uDE7B-\uDE7F\uDE87-\uDE8F\uDEA9-\uDEAF\uDEB7-\uDEBF\uDEC3-\uDECF\uDED7-\uDEFF\uDF93\uDFCB-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/,
               y =
                 /[\0-\x1F!-#%-\*,-;\?-\]_a-\{\}\x7F-\x9F\xA1\xA7\xAA\xAB\xAD\xB2\xB3\xB5-\xB7\xB9-\xD6\xD8-\xF6\xF8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0300-\u0374\u0376-\u0383\u0386-\u03F5\u03F7-\u0481\u0483-\u058C\u0590-\u0605\u0609\u060A\u060C\u060D\u0610-\u06DD\u06DF-\u06E8\u06EA-\u06FC\u06FF-\u07F5\u07F7-\u07FD\u0800-\u09F1\u09F4-\u09F9\u09FC-\u0AF0\u0AF2-\u0B6F\u0B71-\u0BF2\u0BFB-\u0C7E\u0C80-\u0D4E\u0D50-\u0D78\u0D7A-\u0E3E\u0E40-\u0F00\u0F04-\u0F12\u0F14\u0F18\u0F19\u0F20-\u0F33\u0F35\u0F37\u0F39-\u0FBD\u0FC6\u0FCD\u0FD0-\u0FD4\u0FD9-\u109D\u10A0-\u138F\u139A-\u166C\u166E-\u167F\u1681-\u17DA\u17DC-\u193F\u1941-\u19DD\u1A00-\u1B60\u1B6B-\u1B73\u1B7D-\u1FBC\u1FBE\u1FC2-\u1FCC\u1FD0-\u1FDC\u1FE0-\u1FEC\u1FF0-\u1FFC\u1FFF\u200B-\u2027\u202A-\u202E\u2030-\u2043\u2045-\u2051\u2053-\u205E\u2060-\u2079\u207D-\u2089\u208D-\u209F\u20C0-\u20FF\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2150-\u2189\u218C-\u218F\u2308-\u230B\u2329\u232A\u2427-\u243F\u244B-\u249B\u24EA-\u24FF\u2768-\u2793\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2B74\u2B75\u2B96\u2C00-\u2CE4\u2CEB-\u2E4F\u2E52-\u2E7F\u2E9A\u2EF4-\u2EFF\u2FD6-\u2FEF\u2FFC-\u2FFF\u3001-\u3003\u3005-\u3011\u3014-\u301F\u3021-\u3035\u3038-\u303D\u3040-\u309A\u309D-\u318F\u3192-\u3195\u31A0-\u31BF\u31E4-\u31FF\u321F-\u3229\u3248-\u324F\u3251-\u325F\u3280-\u3289\u32B1-\u32BF\u3400-\u4DBF\u4E00-\uA48F\uA4C7-\uA6FF\uA717-\uA71F\uA722-\uA788\uA78B-\uA827\uA82C-\uA835\uA83A-\uAA76\uAA7A-\uAB5A\uAB5C-\uAB69\uAB6C-\uD7FF\uE000-\uFB28\uFB2A-\uFBB1\uFBC2-\uFDFB\uFDFE-\uFE61\uFE63\uFE67\uFE68\uFE6A-\uFF03\uFF05-\uFF0A\uFF0C-\uFF1B\uFF1F-\uFF3D\uFF3F\uFF41-\uFF5B\uFF5D\uFF5F-\uFFDF\uFFE7\uFFEF-\uFFFB\uFFFE\uFFFF]|\uD800[\uDC00-\uDD36\uDD40-\uDD78\uDD8A\uDD8B\uDD8F\uDD9D-\uDD9F\uDDA1-\uDDCF\uDDFD-\uDFFF]|[\uD801\uD803\uD804\uD806\uD808-\uD819\uD81B-\uD82E\uD830-\uD833\uD837\uD839\uD83A\uD83F-\uDBFF][\uDC00-\uDFFF]|\uD802[\uDC00-\uDC76\uDC79-\uDEC7\uDEC9-\uDFFF]|\uD805[\uDC00-\uDF3E\uDF40-\uDFFF]|\uD807[\uDC00-\uDFD4\uDFF2-\uDFFF]|\uD81A[\uDC00-\uDF3B\uDF40-\uDF44\uDF46-\uDFFF]|\uD82F[\uDC00-\uDC9B\uDC9D-\uDFFF]|\uD834[\uDCF6-\uDCFF\uDD27\uDD28\uDD65-\uDD69\uDD6D-\uDD82\uDD85-\uDD8B\uDDAA-\uDDAD\uDDE9-\uDDFF\uDE42-\uDE44\uDE46-\uDEFF\uDF57-\uDFFF]|\uD835[\uDC00-\uDEC0\uDEC2-\uDEDA\uDEDC-\uDEFA\uDEFC-\uDF14\uDF16-\uDF34\uDF36-\uDF4E\uDF50-\uDF6E\uDF70-\uDF88\uDF8A-\uDFA8\uDFAA-\uDFC2\uDFC4-\uDFFF]|\uD836[\uDE00-\uDE36\uDE3B-\uDE6C\uDE75\uDE84\uDE87-\uDFFF]|\uD838[\uDC00-\uDD4E\uDD50-\uDEFE\uDF00-\uDFFF]|\uD83B[\uDC00-\uDCAB\uDCAD-\uDCAF\uDCB1-\uDD2D\uDD2F-\uDEEF\uDEF2-\uDFFF]|\uD83C[\uDC2C-\uDC2F\uDC94-\uDC9F\uDCAF\uDCB0\uDCC0\uDCD0\uDCF6-\uDD0C\uDDAE-\uDDE5\uDE03-\uDE0F\uDE3C-\uDE3F\uDE49-\uDE4F\uDE52-\uDE5F\uDE66-\uDEFF]|\uD83D[\uDED8-\uDEDF\uDEED-\uDEEF\uDEFD-\uDEFF\uDF74-\uDF7F\uDFD9-\uDFDF\uDFEC-\uDFFF]|\uD83E[\uDC0C-\uDC0F\uDC48-\uDC4F\uDC5A-\uDC5F\uDC88-\uDC8F\uDCAE\uDCAF\uDCB2-\uDCFF\uDD79\uDDCC\uDE54-\uDE5F\uDE6E\uDE6F\uDE75-\uDE77\uDE7B-\uDE7F\uDE87-\uDE8F\uDEA9-\uDEAF\uDEB7-\uDEBF\uDEC3-\uDECF\uDED7-\uDEFF\uDF93\uDFCB-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/,
@@ -121013,7 +121436,7 @@ and limitations under the License.
                   s,
                   r,
                   o,
-                  l = { "[:digit:]": /\d/, "[:^S:]": T, "[[:^S:]&[:^Z:]]": y };
+                  l = { "[:digit:]": /\d/, "[:^S:]": S, "[[:^S:]&[:^Z:]]": y };
                 return (
                   "code" === n.style
                     ? (r = e)
@@ -121158,13 +121581,13 @@ and limitations under the License.
                           return (
                             (n = f(e, n, t)),
                             {
-                              displayNames: S(
+                              displayNames: T(
                                 t.main(["numbers/currencies", e]),
                                 /^displayName/,
                               ),
                               pattern: n,
                               unitPatterns: (function (e) {
-                                return S(
+                                return T(
                                   e.main([
                                     "numbers",
                                     "currencyFormats-numberSystem-" + a(e),
@@ -121254,8 +121677,8 @@ and limitations under the License.
               E = t._validateDefaultLocale,
               C = t._validateParameterPresence,
               f = t._validateParameterType,
-              S = t._validateParameterTypePlainObject,
-              T = t._validateParameterTypeString,
+              T = t._validateParameterTypePlainObject,
+              S = t._validateParameterTypeString,
               y = function (e, t) {
                 f(e, t, void 0 === e || e instanceof Date, "Date");
               },
@@ -121361,7 +121784,7 @@ and limitations under the License.
                 }
                 return s;
               },
-              B = function (e, t) {
+              N = function (e, t) {
                 var n,
                   i,
                   s,
@@ -121385,14 +121808,14 @@ and limitations under the License.
                 }
                 return s;
               },
-              N = function (e, t) {
+              B = function (e, t) {
                 var i,
                   a,
                   r,
                   o,
                   l,
                   u,
-                  _ = B;
+                  _ = N;
                 function combineDateTime(e, n, i) {
                   return s(
                     t.main(["dates/calendars/gregorian/dateTimeFormats", e]),
@@ -121805,13 +122228,13 @@ and limitations under the License.
             return (
               (t.loadTimeZone = function (t) {
                 var n = { "globalize-iana": t };
-                (C(t, "json"), S(t, "json"), e.load(n));
+                (C(t, "json"), T(t, "json"), e.load(n));
               }),
               (t.dateFormatter = t.prototype.dateFormatter =
                 function (e) {
                   var t, n, i;
                   return (
-                    S(e, "options"),
+                    T(e, "options"),
                     optionsHasStyle((e = e || {})) || (e.skeleton = "yMd"),
                     (t = [e]),
                     (i = (function (e) {
@@ -121826,18 +122249,18 @@ and limitations under the License.
               (t.dateToPartsFormatter = t.prototype.dateToPartsFormatter =
                 function (e) {
                   var t, n, a, r, o, u, c, p, g;
-                  (S(e, "options"),
+                  (T(e, "options"),
                     (n = this.cldr),
                     optionsHasStyle((e = e || {})) || (e.skeleton = "yMd"),
                     validateOptionsPreset(e),
                     E(n),
                     (p = e.timeZone),
-                    T(p, "options.timeZone"),
+                    S(p, "options.timeZone"),
                     (t = [e]),
                     n.on("get", validateRequiredCldr),
                     p && ((g = validateRequiredIana(p)), n.on("get", g)));
                   try {
-                    (validateOptionsSkeleton((o = N(e, n)), e.skeleton),
+                    (validateOptionsSkeleton((o = B(e, n)), e.skeleton),
                       (u = (function (e, t, n) {
                         var a = {
                             numberFormatters: {},
@@ -122283,18 +122706,18 @@ and limitations under the License.
               (t.dateParser = t.prototype.dateParser =
                 function (e) {
                   var t, n, u, _, h, p, g, f;
-                  (S(e, "options"),
+                  (T(e, "options"),
                     (n = this.cldr),
                     optionsHasStyle((e = e || {})) || (e.skeleton = "yMd"),
                     validateOptionsPreset(e),
                     E(n),
                     (g = e.timeZone),
-                    T(g, "options.timeZone"),
+                    S(g, "options.timeZone"),
                     (t = [e]));
                   try {
                     (n.on("get", validateRequiredCldr),
                       g && n.on("get", validateRequiredIana(g)),
-                      validateOptionsSkeleton((h = N(e, n)), e.skeleton),
+                      validateOptionsSkeleton((h = B(e, n)), e.skeleton),
                       (f = (function (e, t, n) {
                         var u,
                           _ = { pattern: r(e) },
@@ -122468,24 +122891,24 @@ and limitations under the License.
                                     break;
                                   }
                                   var f,
-                                    S = t.main([
+                                    T = t.main([
                                       "dates/timeZoneNames/zone",
                                       n,
                                       "exemplarCity",
                                     ]);
                                   (3 === g &&
-                                    (S ||
-                                      (S = t.main([
+                                    (T ||
+                                      (T = t.main([
                                         "dates/timeZoneNames/zone/Etc/Unknown/exemplarCity",
                                       ])),
-                                    (f = S)),
-                                    S &&
+                                    (f = T)),
+                                    T &&
                                       4 === g &&
                                       (f = s(
                                         t.main(
                                           "dates/timeZoneNames/regionFormat",
                                         ),
-                                        [S],
+                                        [T],
                                       )),
                                     f &&
                                       ((f = r(f)),
@@ -122563,7 +122986,7 @@ and limitations under the License.
                       return function dateParser(s) {
                         return (
                           C(s, "value"),
-                          T(s, "value"),
+                          S(s, "value"),
                           (function (e, t, n) {
                             var s,
                               a,
@@ -123094,7 +123517,7 @@ and limitations under the License.
                 }),
               (t.parseDate = t.prototype.parseDate =
                 function (e, t) {
-                  return (C(e, "value"), T(e, "value"), this.dateParser(t)(e));
+                  return (C(e, "value"), S(e, "value"), this.dateParser(t)(e));
                 }),
               t
             );
@@ -123850,8 +124273,8 @@ and limitations under the License.
         E = "[object Function]",
         C = "[object GeneratorFunction]",
         f = "[object Map]",
-        S = "[object Number]",
-        T = "[object Object]",
+        T = "[object Number]",
+        S = "[object Object]",
         y = "[object RegExp]",
         I = "[object Set]",
         v = "[object String]",
@@ -123861,9 +124284,9 @@ and limitations under the License.
         D = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
         b = /^\w*$/,
         R = /^\./,
-        B =
+        N =
           /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
-        N = /^\s+|\s+$/g,
+        B = /^\s+|\s+$/g,
         P = /\\(\\)?/g,
         M = /^[-+]0x[0-9a-f]+$/i,
         U = /^0b[01]+$/i,
@@ -123890,8 +124313,8 @@ and limitations under the License.
           w[g] =
           w[E] =
           w[f] =
-          w[S] =
           w[T] =
+          w[S] =
           w[y] =
           w[I] =
           w[v] =
@@ -123984,8 +124407,8 @@ and limitations under the License.
         Ee = toSource(ce),
         Ce = toSource(me),
         fe = toSource(de),
-        Se = toSource(he),
-        Te = toSource(pe),
+        Te = toSource(he),
+        Se = toSource(pe),
         ye = ae ? ae.prototype : void 0,
         Ie = ye ? ye.valueOf : void 0,
         ve = ye ? ye.toString : void 0;
@@ -124062,10 +124485,10 @@ and limitations under the License.
                   u = De(t),
                   _ = d,
                   c = d;
-                l || (_ = (_ = Ae(e)) == m ? T : _);
-                u || (c = (c = Ae(t)) == m ? T : c);
-                var E = _ == T && !isHostObject(e),
-                  C = c == T && !isHostObject(t),
+                l || (_ = (_ = Ae(e)) == m ? S : _);
+                u || (c = (c = Ae(t)) == m ? S : c);
+                var E = _ == S && !isHostObject(e),
+                  C = c == S && !isHostObject(t),
                   D = _ == c;
                 if (D && !E)
                   return (
@@ -124088,7 +124511,7 @@ and limitations under the License.
                               );
                             case h:
                             case p:
-                            case S:
+                            case T:
                               return eq(+e, +t);
                             case g:
                               return e.name == t.name && e.message == t.message;
@@ -124118,9 +124541,9 @@ and limitations under the License.
                   var b = E && ne.call(e, "__wrapped__"),
                     R = C && ne.call(t, "__wrapped__");
                   if (b || R) {
-                    var B = b ? e.value() : e,
-                      N = R ? t.value() : t;
-                    return (a || (a = new Stack()), n(B, N, i, s, a));
+                    var N = b ? e.value() : e,
+                      B = R ? t.value() : t;
+                    return (a || (a = new Stack()), n(N, B, i, s, a));
                   }
                 }
                 if (!D) return !1;
@@ -124154,15 +124577,15 @@ and limitations under the License.
                     }
                     if (h && !p) {
                       var f = e.constructor,
-                        S = t.constructor;
-                      f != S &&
+                        T = t.constructor;
+                      f != T &&
                         "constructor" in e &&
                         "constructor" in t &&
                         !(
                           "function" == typeof f &&
                           f instanceof f &&
-                          "function" == typeof S &&
-                          S instanceof S
+                          "function" == typeof T &&
+                          T instanceof T
                         ) &&
                         (h = !1);
                     }
@@ -124492,7 +124915,7 @@ and limitations under the License.
         (pe && "[object WeakMap]" != Ae(new pe()))) &&
         (Ae = function (e) {
           var t = ie.call(e),
-            n = t == T ? e.constructor : void 0,
+            n = t == S ? e.constructor : void 0,
             i = n ? toSource(n) : void 0;
           if (i)
             switch (i) {
@@ -124502,9 +124925,9 @@ and limitations under the License.
                 return f;
               case fe:
                 return "[object Promise]";
-              case Se:
-                return I;
               case Te:
+                return I;
+              case Se:
                 return "[object WeakMap]";
             }
           return t;
@@ -124523,7 +124946,7 @@ and limitations under the License.
         var t = [];
         return (
           R.test(e) && t.push(""),
-          e.replace(B, function (e, n, i, s) {
+          e.replace(N, function (e, n, i, s) {
             t.push(i ? s.replace(P, "$1") : n || e);
           }),
           t
@@ -124577,7 +125000,7 @@ and limitations under the License.
                           e = isObject(t) ? t + "" : t;
                         }
                         if ("string" != typeof e) return 0 === e ? e : +e;
-                        e = e.replace(N, "");
+                        e = e.replace(B, "");
                         var n = U.test(e);
                         return n || F.test(e)
                           ? x(e.slice(2), n ? 2 : 8)
@@ -125020,8 +125443,8 @@ and limitations under the License.
       E = n(11),
       C = n(8),
       f = n(364),
-      S = n(366),
-      T = n(370),
+      T = n(366),
+      S = n(370),
       y = n(374),
       I = n(176),
       v = n(375),
@@ -125031,8 +125454,8 @@ and limitations under the License.
       D = n(379),
       b = n(382),
       R = n(383),
-      B = n(384),
-      N = n(385),
+      N = n(384),
+      B = n(385),
       P = n(387),
       M = n(388),
       U = n(389),
@@ -125081,19 +125504,19 @@ and limitations under the License.
       Ee = createjs.TimerEvent,
       Ce = n(414),
       fe = n(774),
-      Se = n(775),
-      Te = ae.getLogger("BasicFrameOne"),
+      Te = n(775),
+      Se = ae.getLogger("BasicFrameOne"),
       ye = (function (e) {
         function BasicFrameOne(t) {
           var n = e.call(this, t) || this;
           return (
             (n.preloaderUpdateTimer = new ne.Timer(100)),
-            Te.debug("BasicFrameOne constructor"),
+            Se.debug("BasicFrameOne constructor"),
             (n.worldAssignemnt = window.ggs.worldAssignment),
             Z.BasicModel.instanceProxy.setWorldAssignementFacade(
               n.worldAssignemnt.facade,
             ),
-            Te.debug(n.worldAssignemnt),
+            Se.debug(n.worldAssignemnt),
             n.onAddedToStage(),
             m.PerformanceMonitoringService.getInstance().init(
               c.PerformanceMonitoringEnvTypeEnum.Web,
@@ -125181,7 +125604,7 @@ and limitations under the License.
                     e.loadVersion());
                 })
                 .catch(function (e) {
-                  Te.debug("Error in Localization loader: " + e);
+                  Se.debug("Error in Localization loader: " + e);
                 }));
           }),
           (BasicFrameOne.prototype.onFlushFailedAfterPending = function () {
@@ -125214,19 +125637,19 @@ and limitations under the License.
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_IDENTITY_MANAGEMENT,
-                T.BasicIdentityManagementCommand,
+                S.BasicIdentityManagementCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_HANDLE_IDENTITY_MANAGEMENT_ERROR,
-                S.BasicHandleIdentityManagementErrorCommand,
+                T.BasicHandleIdentityManagementErrorCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_CHECK_AGE_GATE_ACTIVITY,
-                B.BasicCheckAgeGateActivityCommand,
+                N.BasicCheckAgeGateActivityCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_VALIDATE_AGE,
-                N.BasicValidateAgeCommand,
+                B.BasicValidateAgeCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_TRACK_REGISTRATION_DATA,
@@ -125305,7 +125728,7 @@ and limitations under the License.
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.GAMESIGHT_CALL_GGS_TRACK_EVENT,
-                Se.GamesightTrackEventCommand,
+                Te.GamesightTrackEventCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_RELOAD_PAGE_WITH_ZONE_ID,
@@ -125352,7 +125775,7 @@ and limitations under the License.
                 .loadVersionJson(V.PathProvider.instance.versionURL)
                 .then(this.bindFunction(this.onVersionsInitialized))
                 .catch(function (e) {
-                  return Te.warn("loadingVersionJSON failed " + e);
+                  return Se.warn("loadingVersionJSON failed " + e);
                 }));
           }),
           (BasicFrameOne.prototype.onVersionsInitialized = function () {
@@ -125435,12 +125858,12 @@ and limitations under the License.
               $.BasicLanguageFontManager.getInstance().loadFontsByLanguage());
           }),
           (BasicFrameOne.prototype.onFontsLoaded = function (e) {
-            (Te.debug("onFontsLoaded ", "::", e),
+            (Se.debug("onFontsLoaded ", "::", e),
               $.BasicLanguageFontManager.getInstance().removeEventListener(
                 K.LanguageDataEvent.FONT_LOAD_COMPLETE,
                 this.bindFunction(this.onFontsLoaded),
               ),
-              Te.debug(
+              Se.debug(
                 "useLegacyFontManagement -> Update all GoodgameTextFields",
               ),
               o.GoodgameTextFieldManager.getInstance().updateTextInAllTextFields());
@@ -125578,7 +126001,7 @@ and limitations under the License.
                 null != i
                   ? (i.downloadRate =
                       Z.BasicModel.basicLoaderData.downloadRateFrameOne)
-                  : Te.error("cannot retrive ConnectionTrackingEvent"));
+                  : Se.error("cannot retrive ConnectionTrackingEvent"));
               var a = new n(this.preloaderView);
               (this.addChild(a), a.onAddedToStage());
             }
@@ -127953,8 +128376,8 @@ and limitations under the License.
       E = n(436),
       C = n(437),
       f = n(438),
-      S = n(443),
-      T = n(445),
+      T = n(443),
+      S = n(445),
       y = n(446),
       I = n(30),
       v = (function (e) {
@@ -127990,7 +128413,7 @@ and limitations under the License.
               ),
               t.set(
                 r.BasicSmartfoxConstants.S2C_VERIFY_PLAYER_MAIL_EVENT,
-                new T.VPMCommand(),
+                new S.VPMCommand(),
               ),
               t.set(
                 r.BasicSmartfoxConstants.S2C_LOST_PASSWORD_EVENT,
@@ -128011,7 +128434,7 @@ and limitations under the License.
               ),
               t.set(
                 r.BasicSmartfoxConstants.S2C_TEST_CASE_INFO,
-                new S.TCICommand(),
+                new T.TCICommand(),
               ),
               t.set(
                 r.BasicSmartfoxConstants.S2C_GET_PLAYER_INFO,
@@ -132113,7 +132536,7 @@ and limitations under the License.
     var C = n(74);
     t.GoodgamePartners = C.GoodgamePartners;
     var f = h.getLogger("BasicEnvironmentGlobals"),
-      S = (function () {
+      T = (function () {
         function BasicEnvironmentGlobals() {
           ((this._forceInstanceConnect = !1),
             (this._defaultInstance = 0),
@@ -133994,7 +134417,7 @@ and limitations under the License.
           BasicEnvironmentGlobals
         );
       })();
-    t.BasicEnvironmentGlobals = S;
+    t.BasicEnvironmentGlobals = T;
   },
   function (e, t, n) {
     "use strict";
@@ -134230,19 +134653,19 @@ and limitations under the License.
               var E = p.add(g),
                 C = p.subtract(g),
                 f = a.interpolate(n, p, o.shaftPosition),
-                S = s.GeomUtil.getLineIntersection(c, d, f, E),
-                T = s.GeomUtil.getLineIntersection(m, h, f, C),
+                T = s.GeomUtil.getLineIntersection(c, d, f, E),
+                S = s.GeomUtil.getLineIntersection(m, h, f, C),
                 y = a.interpolate(n, p, o.edgeControlPosition),
                 I = _.clone();
               I.normalize(u * o.edgeControlSize);
               var v = y.add(I),
                 A = y.subtract(I);
               (e.moveTo(c.x, c.y),
-                e.lineTo(S.x, S.y),
+                e.lineTo(T.x, T.y),
                 e.lineTo(E.x, E.y),
                 e.curveTo(v.x, v.y, n.x, n.y),
                 e.curveTo(A.x, A.y, C.x, C.y),
-                e.lineTo(T.x, T.y),
+                e.lineTo(S.x, S.y),
                 e.lineTo(m.x, m.y),
                 e.lineTo(c.x, c.y));
             }
@@ -134271,24 +134694,24 @@ and limitations under the License.
               var E = p.add(g),
                 C = p.subtract(g),
                 f = a.interpolate(n, p, o.shaftPosition),
-                S = s.GeomUtil.getLineIntersection(c, d, f, E),
-                T = s.GeomUtil.getLineIntersection(m, h, f, C),
-                y = GraphicsUtil.getCurveControlPoint(c, S),
-                I = GraphicsUtil.getCurveControlPoint(m, T),
+                T = s.GeomUtil.getLineIntersection(c, d, f, E),
+                S = s.GeomUtil.getLineIntersection(m, h, f, C),
+                y = GraphicsUtil.getCurveControlPoint(c, T),
+                I = GraphicsUtil.getCurveControlPoint(m, S),
                 v = a.interpolate(n, p, o.edgeControlPosition),
                 A = _.clone();
               A.normalize(u * o.edgeControlSize);
               var O = v.add(A),
                 L = v.subtract(A);
               (e.moveTo(c.x, c.y),
-                e.curveTo(y.x, y.y, S.x, S.y),
+                e.curveTo(y.x, y.y, T.x, T.y),
                 e.lineTo(E.x, E.y),
                 e.curveTo(O.x, O.y, n.x, n.y),
                 e.curveTo(L.x, L.y, C.x, C.y),
-                e.lineTo(T.x, T.y),
+                e.lineTo(S.x, S.y),
                 e.curveTo(I.x, I.y, m.x, m.y),
                 e.lineTo(c.x, c.y));
-              var D = [c, S, E, n, , C, T, m];
+              var D = [c, T, E, n, , C, S, m];
               return GraphicsUtil.getBoundsByPoints(D);
             }
           }),
@@ -143270,11 +143693,11 @@ and limitations under the License.
             })(n[r])));
         return StackFrame;
       });
-      var S = {};
+      var T = {};
       !(function (e, t) {
         "use strict";
-        "object" == typeof S
-          ? (S = t(f))
+        "object" == typeof T
+          ? (T = t(f))
           : (e.ErrorStackParser = t(e.StackFrame));
       })(this, function ErrorStackParser(e) {
         "use strict";
@@ -143431,11 +143854,11 @@ and limitations under the License.
           },
         };
       });
-      var T = {};
+      var S = {};
       !(function (e, t) {
         "use strict";
-        "object" == typeof T
-          ? (T = t(f))
+        "object" == typeof S
+          ? (S = t(f))
           : (e.StackGenerator = t(e.StackFrame));
       })(this, function (e) {
         return {
@@ -143632,8 +144055,8 @@ and limitations under the License.
           n =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
         return C(e)
-          ? S.parse(e).slice(t)
-          : v(T.backtrace(), function (e) {
+          ? T.parse(e).slice(t)
+          : v(S.backtrace(), function (e) {
               return -1 === (e.functionName || "").indexOf("StackGenerator$$");
             }).slice(1 + n);
       }),
@@ -143655,15 +144078,15 @@ and limitations under the License.
           }
         }));
       var R = A,
-        B = function pad(e, t) {
+        N = function pad(e, t) {
           var n = "000000000" + e;
           return n.substr(n.length - t);
         },
-        N = "object" == typeof window ? window : self,
+        B = "object" == typeof window ? window : self,
         P = 0;
-      for (var M in N) Object.hasOwnProperty.call(N, M) && P++;
+      for (var M in B) Object.hasOwnProperty.call(B, M) && P++;
       var U = navigator.mimeTypes ? navigator.mimeTypes.length : 0,
-        G = B(
+        G = N(
           (U + navigator.userAgent.length).toString(36) + P.toString(36),
           4,
         ),
@@ -143675,11 +144098,11 @@ and limitations under the License.
         x = 36,
         W = Math.pow(x, w);
       function randomBlock() {
-        return B(((Math.random() * W) << 0).toString(x), w);
+        return N(((Math.random() * W) << 0).toString(x), w);
       }
       function cuid() {
         var e = new Date().getTime().toString(x),
-          t = B(
+          t = N(
             (function safeCounter() {
               return ((k = k < W ? k : 0), ++k - 1);
             })().toString(x),
@@ -144135,7 +144558,7 @@ and limitations under the License.
             return e;
           },
         fe = s.isoDate,
-        Se = {
+        Te = {
           init: function (e) {
             (e.config.beforeSend.unshift(function (e) {
               e.device = Ce(
@@ -144156,11 +144579,11 @@ and limitations under the License.
               }));
           },
         },
-        Te = {},
+        Se = {},
         ye = s.reduce,
         Ie = /^.*<script.*?>/,
         ve = /<\/script>.*$/,
-        Ae = ((Te = {
+        Ae = ((Se = {
           init: function (e) {
             var t = "",
               n = !1,
@@ -144333,15 +144756,15 @@ and limitations under the License.
                   "hashchange",
                   function (t) {
                     var n = t.oldURL
-                      ? { from: Be(t.oldURL), to: Be(t.newURL), state: Pe() }
-                      : { to: Be(window.location.href) };
+                      ? { from: Ne(t.oldURL), to: Ne(t.newURL), state: Pe() }
+                      : { to: Ne(window.location.href) };
                     e.leaveBreadcrumb("Hash changed", n, "navigation");
                   },
                   !0,
                 ),
                 window.history.replaceState &&
-                  Ne(e, window.history, "replaceState"),
-                window.history.pushState && Ne(e, window.history, "pushState"),
+                  Be(e, window.history, "replaceState"),
+                window.history.pushState && Be(e, window.history, "pushState"),
                 e.leaveBreadcrumb("Bugsnag loaded", {}, "navigation"));
             }
           },
@@ -144355,17 +144778,17 @@ and limitations under the License.
             },
           },
         },
-        Be = function (e) {
+        Ne = function (e) {
           var t = document.createElement("A");
           return ((t.href = e), "" + t.pathname + t.search + t.hash);
         },
-        Ne = function (e, t, n) {
+        Be = function (e, t, n) {
           var i = t[n];
           ((t[n] = function (s, a, r) {
             (e.leaveBreadcrumb(
               "History " + n,
               (function (e, t, n) {
-                var i = Be(window.location.href);
+                var i = Ne(window.location.href);
                 return {
                   title: t,
                   state: e,
@@ -144584,7 +145007,7 @@ and limitations under the License.
             },
             a = void 0;
           (n && C(n)
-            ? ((a = new e.BugsnagReport(n.name, n.message, S.parse(n), s)),
+            ? ((a = new e.BugsnagReport(n.name, n.message, T.parse(n), s)),
               i && (a.stacktrace = st(a.stacktrace, rt(n), [])))
             : (a = new e.BugsnagReport(
                 n && n.name ? n.name : "UnhandledRejection",
@@ -144840,7 +145263,7 @@ and limitations under the License.
           return "http:" === t ? e.replace(/^https:/, "http:") : e;
         }),
         ft = s.isoDate,
-        St = {
+        Tt = {
           sendReport: function (e, t, n) {
             var i =
               arguments.length > 3 && void 0 !== arguments[3]
@@ -144886,7 +145309,7 @@ and limitations under the License.
             }
           },
         },
-        Tt = {},
+        St = {},
         yt =
           Object.assign ||
           function (e) {
@@ -144900,8 +145323,8 @@ and limitations under the License.
         It = s.map,
         vt = s.reduce,
         At = yt({}, u.schema, _e),
-        Ot = [ot, it, Se, Ee, Ke, re, me, Me, Re, Oe, Te, Qe, be, Je];
-      Tt = function (e) {
+        Ot = [ot, it, Te, Ee, Ke, re, me, Me, Re, Oe, Se, Qe, be, Je];
+      St = function (e) {
         var t =
           arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
         "string" == typeof e && (e = { apiKey: e });
@@ -144942,15 +145365,15 @@ and limitations under the License.
             i,
           );
         return (
-          s.transport(window.XDomainRequest ? pt : St),
+          s.transport(window.XDomainRequest ? pt : Tt),
           s.configure(e),
           It(n, function (e) {
             return s._logger.warn(e);
           }),
-          s.use(Se),
+          s.use(Te),
           s.use(Ee),
           s.use(Ke),
-          s.use(Te),
+          s.use(Se),
           s.use(re),
           s.use(Qe),
           s.use(be),
@@ -144975,9 +145398,9 @@ and limitations under the License.
               (n || !/^dev(elopment)?$/.test(e.releaseStage));
       };
       return (
-        (Tt.Bugsnag = { Client: se, Report: R, Session: j, Breadcrumb: r }),
-        (Tt.default = Tt),
-        Tt
+        (St.Bugsnag = { Client: se, Report: R, Session: j, Breadcrumb: r }),
+        (St.default = St),
+        St
       );
     })();
   },
@@ -146692,8 +147115,8 @@ and limitations under the License.
       E = /^-?0[x][0-9a-fA-F]+$/,
       C = /^0[0-7]+$/,
       f = /^-?0[0-7]+$/,
-      S = /^(?![eE])[0-9]*(?:\.[0-9]*)?(?:[eE][+-]?[0-9]+)?$/,
-      T = /^[a-zA-Z_][a-zA-Z_0-9]*$/,
+      T = /^(?![eE])[0-9]*(?:\.[0-9]*)?(?:[eE][+-]?[0-9]+)?$/,
+      S = /^[a-zA-Z_][a-zA-Z_0-9]*$/,
       y = /^(?:\.?[a-zA-Z_][a-zA-Z_0-9]*)(?:\.[a-zA-Z_][a-zA-Z_0-9]*)*$/,
       I = /^(?:\.[a-zA-Z_][a-zA-Z_0-9]*)+$/;
     function parse(e, t, n) {
@@ -146705,8 +147128,8 @@ and limitations under the License.
         D,
         b = i(e, n.alternateCommentMode || !1),
         R = b.next,
-        B = b.push,
-        N = b.peek,
+        N = b.push,
+        B = b.peek,
         P = b.skip,
         M = b.cmnt,
         U = !0,
@@ -146739,7 +147162,7 @@ and limitations under the License.
           t = [];
         do {
           if ('"' !== (e = R()) && "'" !== e) throw illegal(e);
-          (t.push(R()), P(e), (e = N()));
+          (t.push(R()), P(e), (e = B()));
         } while ('"' === e || "'" === e);
         return t.join("");
       }
@@ -146748,7 +147171,7 @@ and limitations under the License.
         switch (t) {
           case "'":
           case '"':
-            return (B(t), readString());
+            return (N(t), readString());
           case "true":
           case "TRUE":
             return !0;
@@ -146776,7 +147199,7 @@ and limitations under the License.
             if (h.test(e)) return n * parseInt(e, 10);
             if (g.test(e)) return n * parseInt(e, 16);
             if (C.test(e)) return n * parseInt(e, 8);
-            if (S.test(e)) return n * parseFloat(e);
+            if (T.test(e)) return n * parseFloat(e);
             throw illegal(e, "number", t);
           })(t, !0);
         } catch (n) {
@@ -146787,7 +147210,7 @@ and limitations under the License.
       function readRanges(e, t) {
         var n, i;
         do {
-          !t || ('"' !== (n = N()) && "'" !== n)
+          !t || ('"' !== (n = B()) && "'" !== n)
             ? e.push([(i = parseId(R())), P("to", !0) ? parseId(R()) : i])
             : e.push(readString());
         } while (P(",", !0));
@@ -146815,7 +147238,7 @@ and limitations under the License.
       }
       function parseImport() {
         var e,
-          t = N();
+          t = B();
         switch (t) {
           case "weak":
             ((e = O || (O = [])), R());
@@ -146841,7 +147264,7 @@ and limitations under the License.
           case "message":
             return (
               (function parseType(e, t) {
-                if (!T.test((t = R()))) throw illegal(t, "type name");
+                if (!S.test((t = R()))) throw illegal(t, "type name");
                 var n = new a(t);
                 (ifBlock(n, function parseType_block(e) {
                   if (!parseCommon(n, e))
@@ -146856,7 +147279,7 @@ and limitations under the License.
                           if (!y.test(n)) throw illegal(n, "type");
                           P(">");
                           var i = R();
-                          if (!T.test(i)) throw illegal(i, "name");
+                          if (!S.test(i)) throw illegal(i, "name");
                           P("=");
                           var s = new o(k(i), parseId(R()), t, n);
                           (ifBlock(
@@ -146879,12 +147302,12 @@ and limitations under the License.
                         break;
                       case "oneof":
                         !(function parseOneOf(e, t) {
-                          if (!T.test((t = R()))) throw illegal(t, "name");
+                          if (!S.test((t = R()))) throw illegal(t, "name");
                           var n = new l(k(t));
                           (ifBlock(n, function parseOneOf_block(e) {
                             "option" === e
                               ? (parseOption(n, e), P(";"))
-                              : (B(e), parseField(n, "optional"));
+                              : (N(e), parseField(n, "optional"));
                           }),
                             e.add(n));
                         })(n, e);
@@ -146897,7 +147320,7 @@ and limitations under the License.
                         break;
                       default:
                         if (!G || !y.test(e)) throw illegal(e);
-                        (B(e), parseField(n, "optional"));
+                        (N(e), parseField(n, "optional"));
                     }
                 }),
                   e.add(n));
@@ -146907,7 +147330,7 @@ and limitations under the License.
           case "enum":
             return (
               (function parseEnum(e, t) {
-                if (!T.test((t = R()))) throw illegal(t, "name");
+                if (!S.test((t = R()))) throw illegal(t, "name");
                 var n = new u(t);
                 (ifBlock(n, function parseEnum_block(e) {
                   switch (e) {
@@ -146919,7 +147342,7 @@ and limitations under the License.
                       break;
                     default:
                       !(function parseEnumValue(e, t) {
-                        if (!T.test(t)) throw illegal(t, "name");
+                        if (!S.test(t)) throw illegal(t, "name");
                         P("=");
                         var n = parseId(R(), !0),
                           i = {};
@@ -146944,14 +147367,14 @@ and limitations under the License.
           case "service":
             return (
               (function parseService(e, t) {
-                if (!T.test((t = R()))) throw illegal(t, "service name");
+                if (!S.test((t = R()))) throw illegal(t, "service name");
                 var n = new _(t);
                 (ifBlock(n, function parseService_block(e) {
                   if (!parseCommon(n, e)) {
                     if ("rpc" !== e) throw illegal(e);
                     !(function parseMethod(e, t) {
                       var n = t;
-                      if (!T.test((t = R()))) throw illegal(t, "name");
+                      if (!S.test((t = R()))) throw illegal(t, "name");
                       var i,
                         s,
                         a,
@@ -146993,7 +147416,7 @@ and limitations under the License.
                       break;
                     default:
                       if (!G || !y.test(t)) throw illegal(t);
-                      (B(t), parseField(e, "optional", n));
+                      (N(t), parseField(e, "optional", n));
                   }
                 });
               })(e, t),
@@ -147019,7 +147442,7 @@ and limitations under the License.
         if ("group" !== i) {
           if (!y.test(i)) throw illegal(i, "type");
           var s = R();
-          if (!T.test(s)) throw illegal(s, "name");
+          if (!S.test(s)) throw illegal(s, "name");
           ((s = k(s)), P("="));
           var o = new r(s, parseId(R()), i, t, n);
           (ifBlock(
@@ -147040,7 +147463,7 @@ and limitations under the License.
         } else
           (function parseGroup(e, t) {
             var n = R();
-            if (!T.test(n)) throw illegal(n, "name");
+            if (!S.test(n)) throw illegal(n, "name");
             var i = d.lcFirst(n);
             n === i && (n = d.ucFirst(n));
             P("=");
@@ -147073,7 +147496,7 @@ and limitations under the License.
         (n &&
           (P(")"),
           (i = "(" + i + ")"),
-          (t = N()),
+          (t = B()),
           I.test(t) && ((i += t), R())),
           P("="),
           parseOptionValue(e, i));
@@ -147081,11 +147504,11 @@ and limitations under the License.
       function parseOptionValue(e, t) {
         if (P("{", !0))
           do {
-            if (!T.test((D = R()))) throw illegal(D, "name");
-            ("{" === N()
+            if (!S.test((D = R()))) throw illegal(D, "name");
+            ("{" === B()
               ? parseOptionValue(e, t + "." + D)
               : (P(":"),
-                "{" === N()
+                "{" === B()
                   ? parseOptionValue(e, t + "." + D)
                   : setOption(e, t + "." + D, readValue(!0))),
               P(",", !0));
@@ -147216,4 +147639,4 @@ and limitations under the License.
       }));
   },
 ]);
-//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/dll/ggs.dll.1510ece3613739fd91ea.js.map
+//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/dll/ggs.dll.b68ed9c3af90ea1e396d.js.map
