@@ -5,8 +5,8 @@
     "-- End Header --"
   ],
   "versionInfo": {
-    "version": { "@value": "790.02" },
-    "date": { "@value": "17/11/2026 14:13:03" }
+    "version": { "@value": "790.03" },
+    "date": { "@value": "19/11/2026 16:30:53" }
   },
   "buildings": [
     {
@@ -411549,7 +411549,7 @@
       "comment2": "PvE Commander - Bronze Set",
       "setID": "1103",
       "neededItems": "2",
-      "effects": "453&1000"
+      "effects": "451&216+1000"
     },
     {
       "ID": "685",
@@ -411613,7 +411613,7 @@
       "comment2": "PvE Commander - Silver Set",
       "setID": "1104",
       "neededItems": "2",
-      "effects": "453&1250"
+      "effects": "451&216+1250"
     },
     {
       "ID": "693",
@@ -411677,7 +411677,7 @@
       "comment2": "PvE Commander - Gold Set",
       "setID": "1105",
       "neededItems": "2",
-      "effects": "453&1500"
+      "effects": "451&216+1500"
     },
     {
       "ID": "701",
@@ -654211,7 +654211,7 @@
     },
     {
       "gemID": "540",
-      "comment1": "BronzeConquerorJade",
+      "comment1": "BronzeConquerorJadeheart",
       "reuseAssetOfGemID": "515",
       "gemLevelID": "0",
       "wearerID": "2",
@@ -654233,7 +654233,7 @@
     },
     {
       "gemID": "542",
-      "comment1": "BronzeConquerorSeal",
+      "comment1": "BronzeConquerorWarseal",
       "reuseAssetOfGemID": "517",
       "gemLevelID": "0",
       "wearerID": "2",
@@ -654255,7 +654255,7 @@
     },
     {
       "gemID": "544",
-      "comment1": "SilverConquerorJade",
+      "comment1": "SilverConquerorJadeheart",
       "reuseAssetOfGemID": "519",
       "gemLevelID": "0",
       "wearerID": "2",
@@ -654277,7 +654277,7 @@
     },
     {
       "gemID": "546",
-      "comment1": "SilverConquerorSeal",
+      "comment1": "SilverConquerorWarseal",
       "reuseAssetOfGemID": "521",
       "gemLevelID": "0",
       "wearerID": "2",
@@ -654299,7 +654299,7 @@
     },
     {
       "gemID": "548",
-      "comment1": "GoldConquerorJade",
+      "comment1": "GoldConquerorJadeheart",
       "reuseAssetOfGemID": "523",
       "gemLevelID": "0",
       "wearerID": "2",
@@ -654321,7 +654321,7 @@
     },
     {
       "gemID": "550",
-      "comment1": "GoldConquerorSeal",
+      "comment1": "GoldConquerorWarseal",
       "reuseAssetOfGemID": "525",
       "gemLevelID": "0",
       "wearerID": "2",
@@ -654343,7 +654343,7 @@
     },
     {
       "gemID": "552",
-      "comment1": "BronzeWardenJade",
+      "comment1": "BronzeWardenJadeheart",
       "reuseAssetOfGemID": "515",
       "gemLevelID": "0",
       "wearerID": "1",
@@ -654365,7 +654365,7 @@
     },
     {
       "gemID": "554",
-      "comment1": "BronzeWardenAbacus",
+      "comment1": "BronzeWardenTallyboard",
       "reuseAssetOfGemID": "517",
       "gemLevelID": "0",
       "wearerID": "1",
@@ -654387,7 +654387,7 @@
     },
     {
       "gemID": "556",
-      "comment1": "SilverWardenJade",
+      "comment1": "SilverWardenJadeheart",
       "reuseAssetOfGemID": "519",
       "gemLevelID": "0",
       "wearerID": "1",
@@ -654409,7 +654409,7 @@
     },
     {
       "gemID": "558",
-      "comment1": "SilverWardenAbacus",
+      "comment1": "SilverWardenTallyboard",
       "reuseAssetOfGemID": "521",
       "gemLevelID": "0",
       "wearerID": "1",
@@ -654431,7 +654431,7 @@
     },
     {
       "gemID": "560",
-      "comment1": "GoldWardenJade",
+      "comment1": "GoldWardenJadeheart",
       "reuseAssetOfGemID": "523",
       "gemLevelID": "0",
       "wearerID": "1",
@@ -654453,7 +654453,7 @@
     },
     {
       "gemID": "562",
-      "comment1": "GoldWardenAbacus",
+      "comment1": "GoldWardenTallyboard",
       "reuseAssetOfGemID": "525",
       "gemLevelID": "0",
       "wearerID": "1",
@@ -654475,7 +654475,7 @@
     },
     {
       "gemID": "564",
-      "comment1": "BronzeFortressBreakerJade",
+      "comment1": "BronzeFortressBreakerJadeheart",
       "reuseAssetOfGemID": "515",
       "gemLevelID": "0",
       "wearerID": "2",
@@ -654497,7 +654497,7 @@
     },
     {
       "gemID": "566",
-      "comment1": "BronzeFortressBreakerSeal",
+      "comment1": "BronzeFortressBreakerWarseal",
       "reuseAssetOfGemID": "517",
       "gemLevelID": "0",
       "wearerID": "2",
@@ -654519,7 +654519,7 @@
     },
     {
       "gemID": "568",
-      "comment1": "SilverFortressBreakerJade",
+      "comment1": "SilverFortressBreakerJadeheart",
       "reuseAssetOfGemID": "519",
       "gemLevelID": "0",
       "wearerID": "2",
@@ -654541,7 +654541,7 @@
     },
     {
       "gemID": "570",
-      "comment1": "SilverFortressBreakerSeal",
+      "comment1": "SilverFortressBreakerWarseal",
       "reuseAssetOfGemID": "521",
       "gemLevelID": "0",
       "wearerID": "2",
@@ -654563,7 +654563,7 @@
     },
     {
       "gemID": "572",
-      "comment1": "GoldFortressBreakerJade",
+      "comment1": "GoldFortressBreakerJadeheart",
       "reuseAssetOfGemID": "523",
       "gemLevelID": "0",
       "wearerID": "2",
@@ -654585,7 +654585,7 @@
     },
     {
       "gemID": "574",
-      "comment1": "GoldFortressBreakerSeal",
+      "comment1": "GoldFortressBreakerWarseal",
       "reuseAssetOfGemID": "525",
       "gemLevelID": "0",
       "wearerID": "2",
@@ -977778,7 +977778,7 @@
       "entryID": "8078",
       "tombolaID": "218",
       "rewardCategory": "4",
-      "rewardIDs": "20800",
+      "rewardIDs": "20824",
       "shares": "13000"
     },
     {

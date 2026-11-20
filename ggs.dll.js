@@ -53683,7 +53683,7 @@ and limitations under the License.
         }),
         (InterfaceVersions.prototype.fill = function () {
           ((this.assets.CastleInterfaceElements =
-            "interface/CastleInterfaceElements/CastleInterfaceElements--1794235489609"),
+            "interface/CastleInterfaceElements/CastleInterfaceElements--1795089203528"),
             (this.assets.CastleStartscreen5 =
               "interface/CastleStartscreen5/CastleStartscreen5--1776346071201"),
             (this.assets.CastleStartscreen4 =
@@ -53734,6 +53734,20 @@ and limitations under the License.
         (ItemVersions.prototype.fill = function () {
           ((this.assets.Deco_Building_springBonfire =
             "itemassets/Building/Deco/Deco_Building_springBonfire/Deco_Building_springBonfire--1616681902168"),
+            (this.assets.Deco_Building_exaltedThroneoftheCommunity =
+              "itemassets/Building/Deco/EffectDecos/BtHJade/Deco_Building_exaltedThroneoftheCommunity/Deco_Building_exaltedThroneoftheCommunity--1795089203528"),
+            (this.assets.Deco_Building_exaltedScorpionTemple =
+              "itemassets/Building/Deco/EffectDecos/BtHJade/Deco_Building_exaltedScorpionTemple/Deco_Building_exaltedScorpionTemple--1795089203528"),
+            (this.assets.Deco_Building_exaltedSagaoftheTerrorBird =
+              "itemassets/Building/Deco/EffectDecos/BtHJade/Deco_Building_exaltedSagaoftheTerrorBird/Deco_Building_exaltedSagaoftheTerrorBird--1795089203528"),
+            (this.assets.Deco_Building_exaltedKingsCrypt =
+              "itemassets/Building/Deco/EffectDecos/BtHJade/Deco_Building_exaltedKingsCrypt/Deco_Building_exaltedKingsCrypt--1795089203528"),
+            (this.assets.Collectable_AllianceLayout_22 =
+              "itemassets/Collectables/allianceLayout/Collectable_AllianceLayout_22/Collectable_AllianceLayout_22--1794998033896"),
+            (this.assets.Collectable_AllianceLayout_21 =
+              "itemassets/Collectables/allianceLayout/Collectable_AllianceLayout_21/Collectable_AllianceLayout_21--1794998033896"),
+            (this.assets.Collectable_AllianceLayout_20 =
+              "itemassets/Collectables/allianceLayout/Collectable_AllianceLayout_20/Collectable_AllianceLayout_20--1794998033896"),
             (this.assets.Icon_BetaTestServerBanner =
               "itemassets/StatusIcons/Icon_BetaTestServerBanner/Icon_BetaTestServerBanner--1794576745427"),
             (this.assets.Effect_Icon_810 =
@@ -54241,7 +54255,7 @@ and limitations under the License.
             (this.assets.CastleAllianceBattleGroundStarter_Jade =
               "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundStarter_Jade/CastleAllianceBattleGroundStarter_Jade--1794235489609"),
             (this.assets.CastleAllianceBattleGroundPreBuildCastleJade =
-              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundPreBuildCastleJade/CastleAllianceBattleGroundPreBuildCastleJade--1794409756437"),
+              "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundPreBuildCastleJade/CastleAllianceBattleGroundPreBuildCastleJade--1795089203528"),
             (this.assets.CastleAllianceBattleGroundEvent_Blue =
               "itemassets/Dialogs/AllianceBattleGrounds/CastleAllianceBattleGroundEvent_Blue/CastleAllianceBattleGroundEvent_Blue--1794577900778"),
             (this.assets.CastleAllianceBattleGroundBuyInfo_Blue =
@@ -55317,9 +55331,9 @@ and limitations under the License.
             (this.assets.Item_Gem_Unique_480 =
               "itemassets/Equipment/UniqueGems/Item_Gem_Unique_480/Item_Gem_Unique_480--1770306950688"),
             (this.assets.Item_Gem_Unique_479 =
-              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_479/Item_Gem_Unique_479--1770306950688"),
-            (this.assets.Item_Gem_Unique_478 =
-              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_478/Item_Gem_Unique_478--1770306950688"),
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_479/Item_Gem_Unique_479--1770306950688"));
+          ((this.assets.Item_Gem_Unique_478 =
+            "itemassets/Equipment/UniqueGems/Item_Gem_Unique_478/Item_Gem_Unique_478--1770306950688"),
             (this.assets.Hero_Unique_1459 =
               "itemassets/Equipment/Heroes/Hero_Unique_1459/Hero_Unique_1459--1770306950688"),
             (this.assets.Hero_Unique_1454 =
@@ -55331,9 +55345,9 @@ and limitations under the License.
             (this.assets.AllianceRaidEventMainExt_Feb26 =
               "itemassets/Dialogs/Events/AllianceRaidEvent/AllianceRaidEventMainExt_Feb26/AllianceRaidEventMainExt_Feb26--1771581829894"),
             (this.assets.AllianceRaidEventBG_FungalSwarm =
-              "itemassets/Dialogs/Events/AllianceRaidEvent/Backgrounds/AllianceRaidEventBG_FungalSwarm/AllianceRaidEventBG_FungalSwarm--1770300088084"));
-          ((this.assets.GeneralPortrait_133 =
-            "itemassets/General/Portrait/GeneralPortrait_133/GeneralPortrait_133--1770040338308"),
+              "itemassets/Dialogs/Events/AllianceRaidEvent/Backgrounds/AllianceRaidEventBG_FungalSwarm/AllianceRaidEventBG_FungalSwarm--1770300088084"),
+            (this.assets.GeneralPortrait_133 =
+              "itemassets/General/Portrait/GeneralPortrait_133/GeneralPortrait_133--1770040338308"),
             (this.assets.GeneralPortrait_132 =
               "itemassets/General/Portrait/GeneralPortrait_132/GeneralPortrait_132--1770040338308"),
             (this.assets.GeneralPortrait_131 =
@@ -56917,9 +56931,9 @@ and limitations under the License.
             (this.assets.Eventunit_Unit_BavarianBrewer =
               "itemassets/Units/Eventunit/Eventunit_Unit_BavarianBrewer/Eventunit_Unit_BavarianBrewer--1725355383633"),
             (this.assets.ConstructionItem_OctoberfestHunter =
-              "itemassets/ConstructionItems/ConstructionItem_OctoberfestHunter/ConstructionItem_OctoberfestHunter--1725355383633"),
-            (this.assets.ConstructionItem_OctoberfestGuardhouse =
-              "itemassets/ConstructionItems/ConstructionItem_OctoberfestGuardhouse/ConstructionItem_OctoberfestGuardhouse--1725355383633"),
+              "itemassets/ConstructionItems/ConstructionItem_OctoberfestHunter/ConstructionItem_OctoberfestHunter--1725355383633"));
+          ((this.assets.ConstructionItem_OctoberfestGuardhouse =
+            "itemassets/ConstructionItems/ConstructionItem_OctoberfestGuardhouse/ConstructionItem_OctoberfestGuardhouse--1725355383633"),
             (this.assets.Hunter_Building_octoberfestHunter =
               "itemassets/Building/Hunter/Hunter_Building_octoberfestHunter/Hunter_Building_octoberfestHunter--1725355383633"),
             (this.assets.Guardpost_Building_octoberfestGuardhouse =
@@ -56931,9 +56945,9 @@ and limitations under the License.
             (this.assets.FoodDistrict_Building_Level1 =
               "itemassets/Building/FoodDistrict/FoodDistrict_Building_Level1/FoodDistrict_Building_Level1--1725024635501"),
             (this.assets.Btn_BestsellerShop_Oktoberfest2024 =
-              "itemassets/StatusIcons/Btn_BestsellerShop_Oktoberfest2024/Btn_BestsellerShop_Oktoberfest2024--1725012300183"));
-          ((this.assets.PivatePrimeDayDynamicDialog_TeaserImage_42 =
-            "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TeaserImages/PivatePrimeDayDynamicDialog_TeaserImage_42/PivatePrimeDayDynamicDialog_TeaserImage_42--1725012300183"),
+              "itemassets/StatusIcons/Btn_BestsellerShop_Oktoberfest2024/Btn_BestsellerShop_Oktoberfest2024--1725012300183"),
+            (this.assets.PivatePrimeDayDynamicDialog_TeaserImage_42 =
+              "itemassets/Dialogs/PrivateOffer/CastlePrivatePrimeDayDynamicDialog/TeaserImages/PivatePrimeDayDynamicDialog_TeaserImage_42/PivatePrimeDayDynamicDialog_TeaserImage_42--1725012300183"),
             (this.assets.PrimeTimeDialog_Oktoberfest2024 =
               "itemassets/Dialogs/PrimeTimeSkins/PrimeTimeDialog_Oktoberfest2024/PrimeTimeDialog_Oktoberfest2024--1728568345182"),
             (this.assets.PrimeTimeDialog_Halloween2024 =
@@ -58517,9 +58531,9 @@ and limitations under the License.
             (this.assets.Collectable_Currency_GenXP10000 =
               "itemassets/Collectables/Generals/Collectable_Currency_GenXP10000/Collectable_Currency_GenXP10000--1662467132958"),
             (this.assets.Collectable_Currency_GenXP1000 =
-              "itemassets/Collectables/Generals/Collectable_Currency_GenXP1000/Collectable_Currency_GenXP1000--1662467132958"),
-            (this.assets.GeneralsHubLootChances =
-              "itemassets/Dialogs/Generals/GeneralsHub/GeneralsHubLootChances/GeneralsHubLootChances--1660232168765"),
+              "itemassets/Collectables/Generals/Collectable_Currency_GenXP1000/Collectable_Currency_GenXP1000--1662467132958"));
+          ((this.assets.GeneralsHubLootChances =
+            "itemassets/Dialogs/Generals/GeneralsHub/GeneralsHubLootChances/GeneralsHubLootChances--1660232168765"),
             (this.assets.Collectable_Currency_PrincessToken =
               "itemassets/Collectables/Generals/Collectable_Currency_PrincessToken/Collectable_Currency_PrincessToken--1662468894539"),
             (this.assets.Collectable_Currency_KnightToken =
@@ -58531,9 +58545,9 @@ and limitations under the License.
             (this.assets.Metropol_Mapobject_Special_CyberBaron =
               "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_CyberBaron/Metropol_Mapobject_Special_CyberBaron--1660123017859"),
             (this.assets.Capital_Mapobject_Special_CyberBaron =
-              "itemassets/Worldmap/WorldmapObjects/Landmarks/Capital_Mapobject_Special_CyberBaron/Capital_Mapobject_Special_CyberBaron--1660123017859"));
-          ((this.assets.Castle_Mapobject_Special_CyberBaron =
-            "itemassets/Worldmap/WorldmapObjects/Castles/Castle_Mapobject_Special_CyberBaron/Castle_Mapobject_Special_CyberBaron--1660123017859"),
+              "itemassets/Worldmap/WorldmapObjects/Landmarks/Capital_Mapobject_Special_CyberBaron/Capital_Mapobject_Special_CyberBaron--1660123017859"),
+            (this.assets.Castle_Mapobject_Special_CyberBaron =
+              "itemassets/Worldmap/WorldmapObjects/Castles/Castle_Mapobject_Special_CyberBaron/Castle_Mapobject_Special_CyberBaron--1660123017859"),
             (this.assets.Outpost_Mapobject_Special_CyberGeneral =
               "itemassets/Worldmap/WorldmapObjects/Outposts/Outpost_Mapobject_Special_CyberGeneral/Outpost_Mapobject_Special_CyberGeneral--1660054109001"),
             (this.assets.Metropol_Mapobject_Special_CyberGeneral =
@@ -60117,9 +60131,9 @@ and limitations under the License.
             (this.assets.ConstructionItem_WinterResearchtower =
               "itemassets/ConstructionItems/ConstructionItem_WinterResearchtower/ConstructionItem_WinterResearchtower--1606904532755"),
             (this.assets.Researchtower_Building_winterResearchtower =
-              "itemassets/Building/Researchtower/Researchtower_Building_winterResearchtower/Researchtower_Building_winterResearchtower--1606904532755"),
-            (this.assets.Deco_Building_TerrorGold =
-              "itemassets/Building/Deco/Deco_Building_TerrorGold/Deco_Building_TerrorGold--1606904532755"),
+              "itemassets/Building/Researchtower/Researchtower_Building_winterResearchtower/Researchtower_Building_winterResearchtower--1606904532755"));
+          ((this.assets.Deco_Building_TerrorGold =
+            "itemassets/Building/Deco/Deco_Building_TerrorGold/Deco_Building_TerrorGold--1606904532755"),
             (this.assets.Deco_Building_TerrorBlue =
               "itemassets/Building/Deco/Deco_Building_TerrorBlue/Deco_Building_TerrorBlue--1606904532755"),
             (this.assets.Deco_Building_StormIslandWhale =
@@ -60131,9 +60145,9 @@ and limitations under the License.
             (this.assets.Deco_Building_StormIslandCrab =
               "itemassets/Building/Deco/Deco_Building_StormIslandCrab/Deco_Building_StormIslandCrab--1606752868278"),
             (this.assets.AquamarineRelic_Building_Level3 =
-              "itemassets/Building/AquamarineRelic/AquamarineRelic_Building_Level3/AquamarineRelic_Building_Level3--1606752868278"));
-          ((this.assets.AquamarineRelic_Building_Level2 =
-            "itemassets/Building/AquamarineRelic/AquamarineRelic_Building_Level2/AquamarineRelic_Building_Level2--1606752868278"),
+              "itemassets/Building/AquamarineRelic/AquamarineRelic_Building_Level3/AquamarineRelic_Building_Level3--1606752868278"),
+            (this.assets.AquamarineRelic_Building_Level2 =
+              "itemassets/Building/AquamarineRelic/AquamarineRelic_Building_Level2/AquamarineRelic_Building_Level2--1606752868278"),
             (this.assets.AquamarineRelic_Building_Level1 =
               "itemassets/Building/AquamarineRelic/AquamarineRelic_Building_Level1/AquamarineRelic_Building_Level1--1606752868278"),
             (this.assets.EventPackageBundle_Temporary =
@@ -61717,9 +61731,9 @@ and limitations under the License.
             (this.assets.Deco_Building_EternityGarden =
               "itemassets/Building/Deco/Deco_Building_EternityGarden/Deco_Building_EternityGarden--1573584429307"),
             (this.assets.Deco_Building_Excalibur =
-              "itemassets/Building/Deco/Deco_Building_Excalibur/Deco_Building_Excalibur--1573584429307"),
-            (this.assets.Deco_Building_Fairground =
-              "itemassets/Building/Deco/Deco_Building_Fairground/Deco_Building_Fairground--1637749533631"),
+              "itemassets/Building/Deco/Deco_Building_Excalibur/Deco_Building_Excalibur--1573584429307"));
+          ((this.assets.Deco_Building_Fairground =
+            "itemassets/Building/Deco/Deco_Building_Fairground/Deco_Building_Fairground--1637749533631"),
             (this.assets.Deco_Building_FalconersOutpost =
               "itemassets/Building/Deco/Deco_Building_FalconersOutpost/Deco_Building_FalconersOutpost--1573584429307"),
             (this.assets.Deco_Building_Fieldkitchen =
@@ -61731,9 +61745,9 @@ and limitations under the License.
             (this.assets.Deco_Building_Flagpole =
               "itemassets/Building/Deco/Deco_Building_Flagpole/Deco_Building_Flagpole--1573584429307"),
             (this.assets.Deco_Building_FlatEarth =
-              "itemassets/Building/Deco/Deco_Building_FlatEarth/Deco_Building_FlatEarth--1573584429307"));
-          ((this.assets.Deco_Building_FlightNomadPrincess =
-            "itemassets/Building/Deco/Deco_Building_FlightNomadPrincess/Deco_Building_FlightNomadPrincess--1573584429307"),
+              "itemassets/Building/Deco/Deco_Building_FlatEarth/Deco_Building_FlatEarth--1573584429307"),
+            (this.assets.Deco_Building_FlightNomadPrincess =
+              "itemassets/Building/Deco/Deco_Building_FlightNomadPrincess/Deco_Building_FlightNomadPrincess--1573584429307"),
             (this.assets.Deco_Building_FountainEvil =
               "itemassets/Building/Deco/Deco_Building_FountainEvil/Deco_Building_FountainEvil--1573584429307"),
             (this.assets.Deco_Building_FountainGood =
@@ -63317,9 +63331,9 @@ and limitations under the License.
             (this.assets.DetailView_Endnode_Event73 =
               "itemassets/CastleDetailView/DetailView_Endnode_Event73/DetailView_Endnode_Event73--1573584429307"),
             (this.assets.DetailView_EventDungeon_3 =
-              "itemassets/CastleDetailView/DetailView_EventDungeon_3/DetailView_EventDungeon_3--1573584429307"),
-            (this.assets.DetailView_EventDungeon_4 =
-              "itemassets/CastleDetailView/DetailView_EventDungeon_4/DetailView_EventDungeon_4--1573584429307"),
+              "itemassets/CastleDetailView/DetailView_EventDungeon_3/DetailView_EventDungeon_3--1573584429307"));
+          ((this.assets.DetailView_EventDungeon_4 =
+            "itemassets/CastleDetailView/DetailView_EventDungeon_4/DetailView_EventDungeon_4--1573584429307"),
             (this.assets.DetailView_EventDungeon =
               "itemassets/CastleDetailView/DetailView_EventDungeon/DetailView_EventDungeon--1573584429307"),
             (this.assets.DetailView_KhanCamp =
@@ -63331,9 +63345,9 @@ and limitations under the License.
             (this.assets.DetailView_Moralbooster_Event73 =
               "itemassets/CastleDetailView/DetailView_Moralbooster_Event73/DetailView_Moralbooster_Event73--1573584429307"),
             (this.assets.DetailView_NomadCamp =
-              "itemassets/CastleDetailView/DetailView_NomadCamp/DetailView_NomadCamp--1573584429307"));
-          ((this.assets.DetailView_RoyalCapital =
-            "itemassets/CastleDetailView/DetailView_RoyalCapital/DetailView_RoyalCapital--1573584429307"),
+              "itemassets/CastleDetailView/DetailView_NomadCamp/DetailView_NomadCamp--1573584429307"),
+            (this.assets.DetailView_RoyalCapital =
+              "itemassets/CastleDetailView/DetailView_RoyalCapital/DetailView_RoyalCapital--1573584429307"),
             (this.assets.DetailView_SamuraiCamp =
               "itemassets/CastleDetailView/DetailView_SamuraiCamp/DetailView_SamuraiCamp--1573584429307"),
             (this.assets.DetailView_Shapeshifter =
@@ -64917,9 +64931,9 @@ and limitations under the License.
             (this.assets.WorldCupFlagTeam13 =
               "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam13/WorldCupFlagTeam13--1573584429307"),
             (this.assets.WorldCupFlagTeam14 =
-              "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam14/WorldCupFlagTeam14--1573584429307"),
-            (this.assets.WorldCupFlagTeam15 =
-              "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam15/WorldCupFlagTeam15--1573584429307"),
+              "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam14/WorldCupFlagTeam14--1573584429307"));
+          ((this.assets.WorldCupFlagTeam15 =
+            "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam15/WorldCupFlagTeam15--1573584429307"),
             (this.assets.WorldCupFlagTeam16 =
               "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam16/WorldCupFlagTeam16--1573584429307"),
             (this.assets.WorldCupFlagTeam17 =
@@ -64931,9 +64945,9 @@ and limitations under the License.
             (this.assets.WorldCupFlagTeam2 =
               "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam2/WorldCupFlagTeam2--1573584429307"),
             (this.assets.WorldCupFlagTeam20 =
-              "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam20/WorldCupFlagTeam20--1573584429307"));
-          ((this.assets.WorldCupFlagTeam21 =
-            "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam21/WorldCupFlagTeam21--1573584429307"),
+              "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam20/WorldCupFlagTeam20--1573584429307"),
+            (this.assets.WorldCupFlagTeam21 =
+              "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam21/WorldCupFlagTeam21--1573584429307"),
             (this.assets.WorldCupFlagTeam22 =
               "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam22/WorldCupFlagTeam22--1573584429307"),
             (this.assets.WorldCupFlagTeam23 =
@@ -66517,9 +66531,9 @@ and limitations under the License.
             (this.assets.Effect_Icon_200 =
               "itemassets/Effects/Effect_Icon_200/Effect_Icon_200--1573584429307"),
             (this.assets.Effect_Icon_21 =
-              "itemassets/Effects/Effect_Icon_21/Effect_Icon_21--1573584429307"),
-            (this.assets.Effect_Icon_22 =
-              "itemassets/Effects/Effect_Icon_22/Effect_Icon_22--1573584429307"),
+              "itemassets/Effects/Effect_Icon_21/Effect_Icon_21--1573584429307"));
+          ((this.assets.Effect_Icon_22 =
+            "itemassets/Effects/Effect_Icon_22/Effect_Icon_22--1573584429307"),
             (this.assets.Effect_Icon_25 =
               "itemassets/Effects/Effect_Icon_25/Effect_Icon_25--1573584429307"),
             (this.assets.Effect_Icon_26 =
@@ -66531,9 +66545,9 @@ and limitations under the License.
             (this.assets.Effect_Icon_281 =
               "itemassets/Effects/Effect_Icon_281/Effect_Icon_281--1573584429307"),
             (this.assets.Effect_Icon_282 =
-              "itemassets/Effects/Effect_Icon_282/Effect_Icon_282--1573584429307"));
-          ((this.assets.Effect_Icon_283 =
-            "itemassets/Effects/Effect_Icon_283/Effect_Icon_283--1573584429307"),
+              "itemassets/Effects/Effect_Icon_282/Effect_Icon_282--1573584429307"),
+            (this.assets.Effect_Icon_283 =
+              "itemassets/Effects/Effect_Icon_283/Effect_Icon_283--1573584429307"),
             (this.assets.Effect_Icon_284 =
               "itemassets/Effects/Effect_Icon_284/Effect_Icon_284--1573584429307"),
             (this.assets.Effect_Icon_286 =
@@ -68117,9 +68131,9 @@ and limitations under the License.
             (this.assets.Item_Unique_98 =
               "itemassets/Equipment/Uniques/Item_Unique_98/Item_Unique_98--1573584429307"),
             (this.assets.Item_Unique_99 =
-              "itemassets/Equipment/Uniques/Item_Unique_99/Item_Unique_99--1573584429307"),
-            (this.assets.Item_Weapon01_LV1 =
-              "itemassets/Equipment/Weapons/Item_Weapon01_LV1/Item_Weapon01_LV1--1573584429307"),
+              "itemassets/Equipment/Uniques/Item_Unique_99/Item_Unique_99--1573584429307"));
+          ((this.assets.Item_Weapon01_LV1 =
+            "itemassets/Equipment/Weapons/Item_Weapon01_LV1/Item_Weapon01_LV1--1573584429307"),
             (this.assets.Item_Weapon01_LV2 =
               "itemassets/Equipment/Weapons/Item_Weapon01_LV2/Item_Weapon01_LV2--1573584429307"),
             (this.assets.Item_Weapon01_LV3 =
@@ -68131,9 +68145,9 @@ and limitations under the License.
             (this.assets.Item_Weapon02_LV2 =
               "itemassets/Equipment/Weapons/Item_Weapon02_LV2/Item_Weapon02_LV2--1573584429307"),
             (this.assets.Item_Weapon02_LV3 =
-              "itemassets/Equipment/Weapons/Item_Weapon02_LV3/Item_Weapon02_LV3--1573584429307"));
-          ((this.assets.Item_Weapon02_LV4 =
-            "itemassets/Equipment/Weapons/Item_Weapon02_LV4/Item_Weapon02_LV4--1573584429307"),
+              "itemassets/Equipment/Weapons/Item_Weapon02_LV3/Item_Weapon02_LV3--1573584429307"),
+            (this.assets.Item_Weapon02_LV4 =
+              "itemassets/Equipment/Weapons/Item_Weapon02_LV4/Item_Weapon02_LV4--1573584429307"),
             (this.assets.Item_Weapon03_LV1 =
               "itemassets/Equipment/Weapons/Item_Weapon03_LV1/Item_Weapon03_LV1--1573584429307"),
             (this.assets.Item_Weapon03_LV2 =
@@ -69717,9 +69731,9 @@ and limitations under the License.
             (this.assets.Castle_Eiland_Neg_Flag_VIP =
               "itemassets/Worldmap/WorldmapObjects/Castles/Eiland_Titles/Castle_Eiland_Neg_Flag_VIP/Castle_Eiland_Neg_Flag_VIP--1573584429307"),
             (this.assets.Castle_Eiland_Neg_Title =
-              "itemassets/Worldmap/WorldmapObjects/Castles/Eiland_Titles/Castle_Eiland_Neg_Title/Castle_Eiland_Neg_Title--1573584429307"),
-            (this.assets.Castle_Eiland_Pos_Flag_Default =
-              "itemassets/Worldmap/WorldmapObjects/Castles/Eiland_Titles/Castle_Eiland_Pos_Flag_Default/Castle_Eiland_Pos_Flag_Default--1573584429307"),
+              "itemassets/Worldmap/WorldmapObjects/Castles/Eiland_Titles/Castle_Eiland_Neg_Title/Castle_Eiland_Neg_Title--1573584429307"));
+          ((this.assets.Castle_Eiland_Pos_Flag_Default =
+            "itemassets/Worldmap/WorldmapObjects/Castles/Eiland_Titles/Castle_Eiland_Pos_Flag_Default/Castle_Eiland_Pos_Flag_Default--1573584429307"),
             (this.assets.Castle_Eiland_Pos_Flag_Premium =
               "itemassets/Worldmap/WorldmapObjects/Castles/Eiland_Titles/Castle_Eiland_Pos_Flag_Premium/Castle_Eiland_Pos_Flag_Premium--1573584429307"),
             (this.assets.Castle_Eiland_Pos_Flag_VIP =
@@ -69731,9 +69745,9 @@ and limitations under the License.
             (this.assets.RelocationRuin_Mapobject =
               "itemassets/Worldmap/WorldmapObjects/Castles/RelocationRuin_Mapobject/RelocationRuin_Mapobject--1573584429307"),
             (this.assets.RelocationSet_Mapobject =
-              "itemassets/Worldmap/WorldmapObjects/Castles/RelocationSet_Mapobject/RelocationSet_Mapobject--1573584429307"));
-          ((this.assets.Ruin_Mapobject =
-            "itemassets/Worldmap/WorldmapObjects/Castles/Ruin_Mapobject/Ruin_Mapobject--1573584429307"),
+              "itemassets/Worldmap/WorldmapObjects/Castles/RelocationSet_Mapobject/RelocationSet_Mapobject--1573584429307"),
+            (this.assets.Ruin_Mapobject =
+              "itemassets/Worldmap/WorldmapObjects/Castles/Ruin_Mapobject/Ruin_Mapobject--1573584429307"),
             (this.assets.UnderConstruction_Mapobject =
               "itemassets/Worldmap/WorldmapObjects/Castles/UnderConstruction_Mapobject/UnderConstruction_Mapobject--1573584429307"),
             (this.assets.Castle_Mapobject_Special_Underworld_1 =
@@ -147639,4 +147653,4 @@ and limitations under the License.
       }));
   },
 ]);
-//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/dll/ggs.dll.b68ed9c3af90ea1e396d.js.map
+//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/dll/ggs.dll.94613e03c7b319c5f63d.js.map
