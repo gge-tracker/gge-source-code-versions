@@ -631,7 +631,7 @@ and limitations under the License.
               });
             f.globals = s;
             var S = [0, 0, 1, 1],
-              y = T(
+              I = T(
                 "easing.Ease",
                 function (e, t, n, i) {
                   ((this._func = e),
@@ -641,8 +641,8 @@ and limitations under the License.
                 },
                 !0,
               ),
-              I = (y.map = {}),
-              v = (y.register = function (e, t, n, i) {
+              y = (I.map = {}),
+              v = (I.register = function (e, t, n, i) {
                 for (
                   var s,
                     a,
@@ -660,13 +660,13 @@ and limitations under the License.
                     --r > -1;
                   )
                     ((o = _[r]),
-                      (I[a + "." + o] =
-                        I[o + a] =
+                      (y[a + "." + o] =
+                        y[o + a] =
                         s[o] =
                           e.getRatio ? e : e[o] || new e()));
               });
             for (
-              (o = y.prototype)._calcEnd = !1,
+              (o = I.prototype)._calcEnd = !1,
                 o.getRatio = function (e) {
                   if (this._func)
                     return (
@@ -699,15 +699,15 @@ and limitations under the License.
               --r > -1;
             )
               ((o = a[r] + ",Power" + r),
-                v(new y(null, null, 1, r), o, "easeOut", !0),
+                v(new I(null, null, 1, r), o, "easeOut", !0),
                 v(
-                  new y(null, null, 2, r),
+                  new I(null, null, 2, r),
                   o,
                   "easeIn" + (0 === r ? ",easeNone" : ""),
                 ),
-                v(new y(null, null, 3, r), o, "easeInOut"));
-            ((I.linear = d.easing.Linear.easeIn),
-              (I.swing = d.easing.Quad.easeInOut));
+                v(new I(null, null, 3, r), o, "easeInOut"));
+            ((y.linear = d.easing.Linear.easeIn),
+              (y.swing = d.easing.Quad.easeInOut));
             var A = T("events.EventDispatcher", function (e) {
               ((this._listeners = {}), (this._eventTarget = e || this));
             });
@@ -1310,7 +1310,7 @@ and limitations under the License.
                   null),
               (o._notifyPluginsOfEnabled = o._lazy = !1),
               (P.version = "2.0.2"),
-              (P.defaultEase = o._ease = new y(null, null, 1, 1)),
+              (P.defaultEase = o._ease = new I(null, null, 1, 1)),
               (P.defaultOverwrite = "auto"),
               (P.ticker = l),
               (P.autoSleep = 120),
@@ -1721,11 +1721,11 @@ and limitations under the License.
               if (
                 ((this._ease = _ =
                   _
-                    ? _ instanceof y
+                    ? _ instanceof I
                       ? _
                       : "function" == typeof _
-                        ? new y(_, r.easeParams)
-                        : I[_] || P.defaultEase
+                        ? new I(_, r.easeParams)
+                        : y[_] || P.defaultEase
                     : P.defaultEase),
                 r.easeParams instanceof Array &&
                   _.config &&
@@ -2392,10 +2392,10 @@ and limitations under the License.
     t.navigateToURL = T.navigateToURL;
     var S = n(563);
     t.describeType = S.describeType;
-    var y = n(564);
-    t.getSize = y.getSize;
-    var I = n(61);
-    t.currentBrowserInfo = I.currentBrowserInfo;
+    var I = n(564);
+    t.getSize = I.getSize;
+    var y = n(61);
+    t.currentBrowserInfo = y.currentBrowserInfo;
     var v = n(565);
     t.MobileHelper = v.MobileHelper;
     var A = n(566);
@@ -2504,10 +2504,10 @@ and limitations under the License.
     t.MouseCursorData = Te.MouseCursorData;
     var Se = n(594);
     t.Shader = Se.Shader;
-    var ye = n(595);
-    t.ExternalInterface = ye.ExternalInterface;
-    var Ie = n(596);
-    t.DoNotInstantiate = Ie.DoNotInstantiate;
+    var Ie = n(595);
+    t.ExternalInterface = Ie.ExternalInterface;
+    var ye = n(596);
+    t.DoNotInstantiate = ye.DoNotInstantiate;
     var ve = n(597);
     t.URLLoaderDataFormat = ve.URLLoaderDataFormat;
     var Ae = n(598);
@@ -4168,8 +4168,8 @@ and limitations under the License.
       f = n(303),
       T = n(304),
       S = n(305),
-      y = n(3),
-      I = n(2),
+      I = n(3),
+      y = n(2),
       v = n(4),
       A = n(34),
       O = n(134),
@@ -4178,7 +4178,7 @@ and limitations under the License.
       b = n(293),
       R = n(306),
       N = n(728),
-      B = I.getLogger("Tracking.TrackingCache"),
+      B = y.getLogger("Tracking.TrackingCache"),
       P = (function () {
         function TrackingCache(e, t) {
           (void 0 === e && (e = new s.TrackingVerifier()),
@@ -4299,11 +4299,11 @@ and limitations under the License.
                   : this.testServer +
                     "events/invalid?reason=" +
                     encodeURIComponent(i.message);
-              new a.TrackingLoader(new y.URLRequest(s, n, "POST"));
+              new a.TrackingLoader(new I.URLRequest(s, n, "POST"));
             }
             return (
               new a.TrackingLoader(
-                new y.URLRequest(
+                new I.URLRequest(
                   S.TrackingConstants.JSON_TRACKING_URL,
                   n,
                   "POST",
@@ -4447,11 +4447,11 @@ and limitations under the License.
     t.DateTimeStyle = T.DateTimeStyle;
     var S = n(320);
     t.ProcessorTypeConstants = S.ProcessorTypeConstants;
-    var y = n(322);
-    t.CLDRJSONData = y.CLDRJSONData;
-    var I = n(765);
-    ((t.instanceOfLanguageData = I.instanceOfLanguageData),
-      (t.instanceOfLanguageMetaData = I.instanceOfLanguageMetaData));
+    var I = n(322);
+    t.CLDRJSONData = I.CLDRJSONData;
+    var y = n(765);
+    ((t.instanceOfLanguageData = y.instanceOfLanguageData),
+      (t.instanceOfLanguageMetaData = y.instanceOfLanguageMetaData));
     var v = n(321);
     t.TextsParser = v.TextsParser;
     var A = n(766);
@@ -6156,10 +6156,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicSmartfoxConstants = T.BasicSmartfoxConstants;
     var S = n(780);
     t.BasicSoundController = S.BasicSoundController;
-    var y = n(372);
-    t.LicenseRefresher = y.LicenseRefresher;
-    var I = n(307);
-    t.PaymentHashRefresher = I.PaymentHashRefresher;
+    var I = n(372);
+    t.LicenseRefresher = I.LicenseRefresher;
+    var y = n(307);
+    t.PaymentHashRefresher = y.PaymentHashRefresher;
     var v = n(421);
     t.ShutDownControlTimer = v.ShutDownControlTimer;
     var A = n(781);
@@ -6271,12 +6271,12 @@ PERFORMANCE OF THIS SOFTWARE.
     var Se = n(820);
     t.PrivateOfferInterfaceButtonClientCommand =
       Se.PrivateOfferInterfaceButtonClientCommand;
-    var ye = n(821);
+    var Ie = n(821);
     t.PrivateOfferIsoObjectClientCommand =
-      ye.PrivateOfferIsoObjectClientCommand;
-    var Ie = n(822);
+      Ie.PrivateOfferIsoObjectClientCommand;
+    var ye = n(822);
     t.PrivateOfferOfferDialogClientCommand =
-      Ie.PrivateOfferOfferDialogClientCommand;
+      ye.PrivateOfferOfferDialogClientCommand;
     var ve = n(823);
     t.PrivateOfferQuestDialogClientCommand =
       ve.PrivateOfferQuestDialogClientCommand;
@@ -6390,11 +6390,11 @@ PERFORMANCE OF THIS SOFTWARE.
     t.JavascriptFunctionName = Tt.JavascriptFunctionName;
     var St = n(309);
     t.JavascriptCallDefaultVO = St.JavascriptCallDefaultVO;
-    var yt = n(380);
+    var It = n(380);
     t.JavascriptCallOnLoginCompleteFactory =
-      yt.JavascriptCallOnLoginCompleteFactory;
-    var It = n(381);
-    t.JavascriptCallOnLoginCompleteVO = It.JavascriptCallOnLoginCompleteVO;
+      It.JavascriptCallOnLoginCompleteFactory;
+    var yt = n(381);
+    t.JavascriptCallOnLoginCompleteVO = yt.JavascriptCallOnLoginCompleteVO;
     var vt = n(833);
     t.JavascriptCallOnRegisterCompleteFactory =
       vt.JavascriptCallOnRegisterCompleteFactory;
@@ -6501,10 +6501,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicAchievementData = Tn.BasicAchievementData;
     var Sn = n(460);
     t.BasicData = Sn.BasicData;
-    var yn = n(84);
-    t.BasicDialogHandler = yn.BasicDialogHandler;
-    var In = n(850);
-    t.BasicFontData = In.BasicFontData;
+    var In = n(84);
+    t.BasicDialogHandler = In.BasicDialogHandler;
+    var yn = n(850);
+    t.BasicFontData = yn.BasicFontData;
     var vn = n(371);
     t.BasicIdentityManagementData = vn.BasicIdentityManagementData;
     var An = n(402);
@@ -6614,11 +6614,11 @@ PERFORMANCE OF THIS SOFTWARE.
     t.BasicReconnectDialogProperties = Ti.BasicReconnectDialogProperties;
     var Si = n(454);
     t.BasicRegisterDialogProperties = Si.BasicRegisterDialogProperties;
-    var yi = n(65);
-    t.BasicStandardOkDialogProperties = yi.BasicStandardOkDialogProperties;
-    var Ii = n(448);
+    var Ii = n(65);
+    t.BasicStandardOkDialogProperties = Ii.BasicStandardOkDialogProperties;
+    var yi = n(448);
     t.BasicStandardYesNoDialogProperties =
-      Ii.BasicStandardYesNoDialogProperties;
+      yi.BasicStandardYesNoDialogProperties;
     var vi = n(866);
     t.ExtraScreenMovieClip = vi.ExtraScreenMovieClip;
     var Ai = n(327);
@@ -6728,10 +6728,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.FileErrorLOFactory = Ts.FileErrorLOFactory;
     var Ss = n(882);
     t.GameVersionErrorFactory = Ss.GameVersionErrorFactory;
-    var ys = n(286);
-    t.HTTPErrorLOFactory = ys.HTTPErrorLOFactory;
-    var Is = n(63);
-    t.IOErrorLOFactory = Is.IOErrorLOFactory;
+    var Is = n(286);
+    t.HTTPErrorLOFactory = Is.HTTPErrorLOFactory;
+    var ys = n(63);
+    t.IOErrorLOFactory = ys.IOErrorLOFactory;
     var vs = n(180);
     t.InstanceErrorLOFactory = vs.InstanceErrorLOFactory;
     var As = n(883);
@@ -6841,10 +6841,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.PathfindingHeuristicEuclidian = Ta.PathfindingHeuristicEuclidian;
     var Sa = n(909);
     t.PathfindingHeuristicManhattan = Sa.PathfindingHeuristicManhattan;
-    var ya = n(910);
-    t.PathfindingHeuristicNone = ya.PathfindingHeuristicNone;
-    var Ia = n(474);
-    t.BasicPrivateOfferVO = Ia.BasicPrivateOfferVO;
+    var Ia = n(910);
+    t.PathfindingHeuristicNone = Ia.PathfindingHeuristicNone;
+    var ya = n(474);
+    t.BasicPrivateOfferVO = ya.BasicPrivateOfferVO;
     var va = n(473);
     t.BasicPrivateOfferVOFactory = va.BasicPrivateOfferVOFactory;
     var Aa = n(22);
@@ -6961,11 +6961,11 @@ PERFORMANCE OF THIS SOFTWARE.
     t.AbstractClipSource = Tr.AbstractClipSource;
     var Sr = n(127);
     t.FlattenedImage = Sr.FlattenedImage;
-    var yr = n(495);
-    t.FrameStrip = yr.FrameStrip;
-    var Ir = n(493);
+    var Ir = n(495);
+    t.FrameStrip = Ir.FrameStrip;
+    var yr = n(493);
     t.ContinueLoadingTexturePackerClipSource =
-      Ir.ContinueLoadingTexturePackerClipSource;
+      yr.ContinueLoadingTexturePackerClipSource;
     var vr = n(197);
     t.DisplayObjectClipSource = vr.DisplayObjectClipSource;
     var Ar = n(196);
@@ -7068,10 +7068,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.MouseOverSignal = To.MouseOverSignal;
     var So = n(351);
     t.RemovedFromStageSignal = So.RemovedFromStageSignal;
-    var yo = n(352);
-    t.ScrollSignal = yo.ScrollSignal;
-    var Io = n(353);
-    t.TextInputSignal = Io.TextInputSignal;
+    var Io = n(352);
+    t.ScrollSignal = Io.ScrollSignal;
+    var yo = n(353);
+    t.TextInputSignal = yo.TextInputSignal;
     var vo = n(291);
     t.ABTestTimeoutTrackingEvent = vo.ABTestTimeoutTrackingEvent;
     var Ao = n(304);
@@ -7180,10 +7180,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.TimezoneUtil = Tl.TimezoneUtil;
     var Sl = n(966);
     t.TypeUtil = Sl.TypeUtil;
-    var yl = n(967);
-    t.UncaughtErrorEventHandler = yl.UncaughtErrorEventHandler;
-    var Il = n(968);
-    t.UrlUtil = Il.UrlUtil;
+    var Il = n(967);
+    t.UncaughtErrorEventHandler = Il.UncaughtErrorEventHandler;
+    var yl = n(968);
+    t.UrlUtil = yl.UrlUtil;
     var vl = n(969);
     t.ZipUtil = vl.ZipUtil;
     var Al = n(970);
@@ -8065,10 +8065,10 @@ PERFORMANCE OF THIS SOFTWARE.
     t.LongTermPointEventTotalPoints = T;
     var S = n(670);
     t.LuckyWheelSpin = S;
-    var y = n(671);
-    t.MessageSent = y;
-    var I = n(672);
-    t.MinuteSkips = I;
+    var I = n(671);
+    t.MessageSent = I;
+    var y = n(672);
+    t.MinuteSkips = y;
     var v = n(673);
     t.PaymentRewardGrant = v;
     var A = n(674);
@@ -15743,7 +15743,7 @@ PERFORMANCE OF THIS SOFTWARE.
               S = function (e, t) {
                 return t.main(["numbers/symbols-numberSystem-" + E(t), e]);
               },
-              y = {
+              I = {
                 ".": "decimal",
                 ",": "group",
                 "%": "percentSign",
@@ -15752,7 +15752,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 E: "exponential",
                 "‰": "perMille",
               },
-              I = function (e) {
+              y = function (e) {
                 return isNaN(e) ? NaN : Math[e < 0 ? "ceil" : "floor"](e);
               },
               v = function (e, t, n) {
@@ -15770,7 +15770,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   (r = a[10]),
                   (_ =
                     "truncate" === (_ = (_ = n.round) || "round")
-                      ? I
+                      ? y
                       : Math[_]),
                   ((l = function (e, t) {
                     var n, i;
@@ -15811,7 +15811,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     (function (e) {
                       var t,
                         n = {};
-                      for (t in y) n[t] = S(y[t], e);
+                      for (t in I) n[t] = S(I[t], e);
                       return n;
                     })(t),
                     C(t),
@@ -15971,7 +15971,7 @@ PERFORMANCE OF THIS SOFTWARE.
                               f,
                               T,
                               S,
-                              I,
+                              y,
                               v,
                               A,
                               O,
@@ -16000,7 +16000,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                 : (e < 0
                                     ? ((C = t[12]), (g = t[13]), (v = t[14]))
                                     : ((C = t[11]), (g = t[0]), (v = t[10])),
-                                  (g = (I = function (e) {
+                                  (g = (y = function (e) {
                                     var t = "integer",
                                       n = [];
                                     return (
@@ -16016,7 +16016,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                                     return (
                                                       "." === e &&
                                                         (t = "fraction"),
-                                                      s(n, y[e], A[e]),
+                                                      s(n, I[e], A[e]),
                                                       ""
                                                     );
                                                   },
@@ -16038,7 +16038,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                       n
                                     );
                                   })(g)),
-                                  (v = I(v)),
+                                  (v = y(v)),
                                   isFinite(e)
                                     ? (-1 !== C.indexOf("%")
                                         ? (e *= 100)
@@ -16163,7 +16163,7 @@ PERFORMANCE OF THIS SOFTWARE.
                                             e.join(".")
                                           );
                                         })(e, E, S)),
-                                      g.concat(I(e), v))
+                                      g.concat(y(e), v))
                                     : g.concat(
                                         { type: "infinity", value: r },
                                         v,
@@ -16211,7 +16211,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         C,
                         f,
                         T,
-                        I,
+                        y,
                         A,
                         O,
                         L = v(e, t, n);
@@ -16221,7 +16221,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         (d = L[5]),
                         (m = L[6]),
                         (T = L[8]),
-                        (I = L[9]),
+                        (y = L[9]),
                         (A = D(L[10])),
                         (p = D(L[13])),
                         (g = D(L[14])),
@@ -16235,7 +16235,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           (function (e) {
                             var t,
                               n = {};
-                            for (t in y) n[S(y[t], e)] = t;
+                            for (t in I) n[S(I[t], e)] = t;
                             return n;
                           })(t),
                           function (e) {
@@ -16269,15 +16269,15 @@ PERFORMANCE OF THIS SOFTWARE.
                         T &&
                           (C =
                             "(" +
-                            (i = I
+                            (i = y
                               ? r +
                                 "{1," +
-                                I +
+                                y +
                                 "}((" +
                                 o +
                                 r +
                                 "{" +
-                                I +
+                                y +
                                 "})*(" +
                                 o +
                                 r +
@@ -17391,20 +17391,20 @@ PERFORMANCE OF THIS SOFTWARE.
                     this._cycle * (this._totalDuration + this._repeatDelay)));
               }
               if (this._cycle !== S && !this._locked) {
-                var y = this._yoyo && 0 != (1 & S),
-                  I = y === (this._yoyo && 0 != (1 & this._cycle)),
+                var I = this._yoyo && 0 != (1 & S),
+                  y = I === (this._yoyo && 0 != (1 & this._cycle)),
                   v = this._totalTime,
                   A = this._cycle,
                   O = this._rawPrevTime,
                   L = this._time;
                 if (
                   ((this._totalTime = S * p),
-                  this._cycle < S ? (y = !y) : (this._totalTime += p),
+                  this._cycle < S ? (I = !I) : (this._totalTime += p),
                   (this._time = d),
                   (this._rawPrevTime = 0 === p ? f - 1e-4 : f),
                   (this._cycle = S),
                   (this._locked = !0),
-                  (d = y ? 0 : p),
+                  (d = I ? 0 : p),
                   this.render(d, t, 0 === p),
                   t ||
                     this._gc ||
@@ -17416,10 +17416,10 @@ PERFORMANCE OF THIS SOFTWARE.
                 )
                   return;
                 if (
-                  (I &&
+                  (y &&
                     ((this._cycle = S),
                     (this._locked = !0),
-                    (d = y ? p + 1e-4 : -1e-4),
+                    (d = I ? p + 1e-4 : -1e-4),
                     this.render(d, !0, !1)),
                   (this._locked = !1),
                   this._paused && !T)
@@ -17697,8 +17697,8 @@ PERFORMANCE OF THIS SOFTWARE.
           f = /(?:\+=|\-=|\-|\b)[\d\-\.]+[a-zA-Z0-9]*(?:%|\b)/gi,
           T = /(?![+-]?\d*\.?\d+|[+-]|e[+-]\d+)[^0-9]/g,
           S = /(?:\d|\-|\+|=|#|\.)*/g,
-          y = /opacity *= *([^)]*)/i,
-          I = /opacity:([^;]*)/i,
+          I = /opacity *= *([^)]*)/i,
+          y = /opacity:([^;]*)/i,
           v = /alpha\(opacity *=.+?\)/i,
           A = /^(rgb|hsl)/,
           O = /([A-Z])/g,
@@ -17749,7 +17749,7 @@ PERFORMANCE OF THIS SOFTWARE.
             );
           })(),
           K = function (e) {
-            return y.test(
+            return I.test(
               "string" == typeof e
                 ? e
                 : (e.currentStyle ? e.currentStyle.filter : e.style.filter) ||
@@ -18366,8 +18366,8 @@ PERFORMANCE OF THIS SOFTWARE.
               f,
               T,
               S,
-              y,
               I,
+              y,
               v,
               A,
               O,
@@ -18393,11 +18393,11 @@ PERFORMANCE OF THIS SOFTWARE.
               m < N;
               m++
             )
-              if (((f = b[m]), (T = R[m] + ""), (I = parseFloat(f)) || 0 === I))
+              if (((f = b[m]), (T = R[m] + ""), (y = parseFloat(f)) || 0 === y))
                 o.appendXtra(
                   "",
-                  I,
-                  oe(T, I),
+                  y,
+                  oe(T, y),
                   T.replace(C, ""),
                   !(!B || -1 === T.indexOf("px")) && Math.round,
                   !0,
@@ -18460,14 +18460,14 @@ PERFORMANCE OF THIS SOFTWARE.
                         ))),
                   (he.lastIndex = 0));
               else if ((S = f.match(E))) {
-                if (!(y = T.match(C)) || y.length !== S.length) return o;
+                if (!(I = T.match(C)) || I.length !== S.length) return o;
                 for (h = 0, d = 0; d < S.length; d++)
                   ((O = S[d]),
                     (A = f.indexOf(O, h)),
                     o.appendXtra(
                       f.substr(h, A - h),
                       Number(O),
-                      oe(y[d], O),
+                      oe(I[d], O),
                       "",
                       !(!B || "px" !== f.substr(A + O.length, 2)) && Math.round,
                       0 === d,
@@ -18530,7 +18530,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 : ((r["xs" + o] += t + (i || "")), r)
             );
           }));
-        var ye = function (e, t) {
+        var Ie = function (e, t) {
             ((t = t || {}),
               (this.p = (t.prefix && X(e)) || e),
               (o[e] = o[this.p] = this),
@@ -18544,7 +18544,7 @@ PERFORMANCE OF THIS SOFTWARE.
               (this.dflt = t.defaultValue),
               (this.pr = t.priority || 0));
           },
-          Ie = (V._registerComplexSpecialProp = function (e, t, n) {
+          ye = (V._registerComplexSpecialProp = function (e, t, n) {
             "object" != typeof t && (t = { parser: n });
             var i,
               s = e.split(","),
@@ -18552,12 +18552,12 @@ PERFORMANCE OF THIS SOFTWARE.
             for (n = n || [a], i = 0; i < s.length; i++)
               ((t.prefix = 0 === i && t.prefix),
                 (t.defaultValue = n[i] || a),
-                new ye(s[i], t));
+                new Ie(s[i], t));
           }),
           ve = (V._registerPluginProp = function (e) {
             if (!o[e]) {
               var t = e.charAt(0).toUpperCase() + e.substr(1) + "Plugin";
-              Ie(e, {
+              ye(e, {
                 parser: function (e, n, i, s, a, l, u) {
                   var _ = r.com.greensock.plugins[t];
                   return _
@@ -18567,7 +18567,7 @@ PERFORMANCE OF THIS SOFTWARE.
               });
             }
           });
-        (((l = ye.prototype).parseComplex = function (e, t, n, i, s, a) {
+        (((l = Ie.prototype).parseComplex = function (e, t, n, i, s, a) {
           var r,
             o,
             l,
@@ -18609,7 +18609,7 @@ PERFORMANCE OF THIS SOFTWARE.
             );
           }),
           (a.registerSpecialProp = function (e, t, n) {
-            Ie(e, {
+            ye(e, {
               parser: function (e, i, s, a, r, o, l) {
                 var u = new Ce(e, s, 0, 0, r, 2, s, !1, n);
                 return ((u.plugin = o), (u.setRatio = t(e, i, a._tween, s)), u);
@@ -18679,7 +18679,7 @@ PERFORMANCE OF THIS SOFTWARE.
               f,
               T,
               S = e._gsTransform,
-              y = je(e, !0);
+              I = je(e, !0);
             (S && ((f = S.xOrigin), (T = S.yOrigin)),
               (!i || (o = i.split(" ")).length < 2) &&
                 (0 === (d = e.getBBox()).x &&
@@ -18716,13 +18716,13 @@ PERFORMANCE OF THIS SOFTWARE.
               (n.xOrigin = _ = parseFloat(o[0])),
               (n.yOrigin = c = parseFloat(o[1])),
               i &&
-                y !== Ve &&
-                ((m = y[0]),
-                (d = y[1]),
-                (h = y[2]),
-                (p = y[3]),
-                (g = y[4]),
-                (E = y[5]),
+                I !== Ve &&
+                ((m = I[0]),
+                (d = I[1]),
+                (h = I[2]),
+                (p = I[3]),
+                (g = I[4]),
+                (E = I[5]),
                 (C = m * p - d * h) &&
                   ((l = _ * (p / C) + c * (-h / C) + (h * E - p * g) / C),
                   (u = _ * (-d / C) + c * (m / C) - (m * E - d * g) / C),
@@ -18734,8 +18734,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 s || (!1 !== s && !1 !== a.defaultSmoothOrigin)
                   ? ((l = _ - f),
                     (u = c - T),
-                    (S.xOffset += l * y[0] + u * y[2] - l),
-                    (S.yOffset += l * y[1] + u * y[3] - u))
+                    (S.xOffset += l * I[0] + u * I[2] - l),
+                    (S.yOffset += l * I[1] + u * I[3] - u))
                   : (S.xOffset = S.yOffset = 0)),
               r || e.setAttribute("data-svg-origin", o.join(" ")));
           },
@@ -18888,8 +18888,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   f,
                   T,
                   S = r[0],
-                  y = r[1],
-                  I = r[2],
+                  I = r[1],
+                  y = r[2],
                   v = r[3],
                   A = r[4],
                   O = r[5],
@@ -18919,24 +18919,24 @@ PERFORMANCE OF THIS SOFTWARE.
                     (A = g),
                     (O = E),
                     (L = C)),
-                  (F = Math.atan2(-I, N)),
+                  (F = Math.atan2(-y, N)),
                   (m.rotationY = F * G),
                   F &&
-                    ((E = y * (f = Math.cos(-F)) - R * (T = Math.sin(-F))),
-                    (C = I * f - N * T),
-                    (R = y * T + R * f),
-                    (N = I * T + N * f),
+                    ((E = I * (f = Math.cos(-F)) - R * (T = Math.sin(-F))),
+                    (C = y * f - N * T),
+                    (R = I * T + R * f),
+                    (N = y * T + N * f),
                     (U = v * T + U * f),
                     (S = g = S * f - b * T),
-                    (y = E),
-                    (I = C)),
-                  (F = Math.atan2(y, S)),
+                    (I = E),
+                    (y = C)),
+                  (F = Math.atan2(I, S)),
                   (m.rotation = F * G),
                   F &&
-                    ((g = S * (f = Math.cos(F)) + y * (T = Math.sin(F))),
+                    ((g = S * (f = Math.cos(F)) + I * (T = Math.sin(F))),
                     (E = A * f + O * T),
                     (C = b * f + R * T),
-                    (y = y * f - S * T),
+                    (I = I * f - S * T),
                     (O = O * f - A * T),
                     (R = R * f - b * T),
                     (S = g),
@@ -18948,14 +18948,14 @@ PERFORMANCE OF THIS SOFTWARE.
                     (m.rotationY = 180 - m.rotationY)),
                   (F = Math.atan2(A, O)),
                   (m.scaleX =
-                    ((1e5 * Math.sqrt(S * S + y * y + I * I) + 0.5) | 0) / 1e5),
+                    ((1e5 * Math.sqrt(S * S + I * I + y * y) + 0.5) | 0) / 1e5),
                   (m.scaleY =
                     ((1e5 * Math.sqrt(O * O + L * L) + 0.5) | 0) / 1e5),
                   (m.scaleZ =
                     ((1e5 * Math.sqrt(b * b + R * R + N * N) + 0.5) | 0) / 1e5),
                   (S /= m.scaleX),
                   (A /= m.scaleY),
-                  (y /= m.scaleX),
+                  (I /= m.scaleX),
                   (O /= m.scaleY),
                   Math.abs(F) > 2e-5
                     ? ((m.skewX = F * G),
@@ -18968,7 +18968,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   (m.z = M),
                   m.svg &&
                     ((m.x -= m.xOrigin - (m.xOrigin * S - m.yOrigin * A)),
-                    (m.y -= m.yOrigin - (m.yOrigin * y - m.xOrigin * O))));
+                    (m.y -= m.yOrigin - (m.yOrigin * I - m.xOrigin * O))));
               } else if (
                 !Me ||
                 s ||
@@ -19080,12 +19080,12 @@ PERFORMANCE OF THIS SOFTWARE.
                     0 === l &&
                     1 === u &&
                     ((E && -1 === C.indexOf("Dx=0, Dy=0")) ||
-                      (y.test(t) && 100 !== parseFloat(RegExp.$1)) ||
+                      (I.test(t) && 100 !== parseFloat(RegExp.$1)) ||
                       (-1 === t.indexOf(t.indexOf("Alpha")) &&
                         _.removeAttribute("filter")))),
                 !E)
               ) {
-                var I,
+                var y,
                   v,
                   A,
                   O = h < 8 ? 1 : -1;
@@ -19106,9 +19106,9 @@ PERFORMANCE OF THIS SOFTWARE.
                 )
                   ((A =
                     (n =
-                      -1 !== (I = c[(v = se[Se])]).indexOf("px")
-                        ? parseFloat(I)
-                        : J(this.t, v, parseFloat(I), I.replace(S, "")) ||
+                      -1 !== (y = c[(v = se[Se])]).indexOf("px")
+                        ? parseFloat(y)
+                        : J(this.t, v, parseFloat(y), y.replace(S, "")) ||
                           0) !== i[v]
                       ? Se < 2
                         ? -i.ieOffsetX
@@ -19147,23 +19147,23 @@ PERFORMANCE OF THIS SOFTWARE.
                   f,
                   T,
                   S,
-                  y,
-                  I = this.data,
+                  I,
+                  y = this.data,
                   v = this.t.style,
-                  A = I.rotation,
-                  O = I.rotationX,
-                  L = I.rotationY,
-                  D = I.scaleX,
-                  b = I.scaleY,
-                  R = I.scaleZ,
-                  N = I.x,
-                  B = I.y,
-                  P = I.z,
-                  M = I.svg,
-                  G = I.perspective,
-                  F = I.force3D,
-                  k = I.skewY,
-                  w = I.skewX;
+                  A = y.rotation,
+                  O = y.rotationX,
+                  L = y.rotationY,
+                  D = y.scaleX,
+                  b = y.scaleY,
+                  R = y.scaleZ,
+                  N = y.x,
+                  B = y.y,
+                  P = y.z,
+                  M = y.svg,
+                  G = y.perspective,
+                  F = y.force3D,
+                  k = y.skewY,
+                  w = y.skewX;
                 if (
                   (k && ((w += k), (A += k)),
                   !(
@@ -19184,13 +19184,13 @@ PERFORMANCE OF THIS SOFTWARE.
                   A || w || M
                     ? ((A *= U),
                       (S = w * U),
-                      (y = 1e5),
+                      (I = 1e5),
                       (n = Math.cos(A) * D),
                       (a = Math.sin(A) * D),
                       (i = Math.sin(A - S) * -b),
                       (r = Math.cos(A - S) * b),
                       S &&
-                        "simple" === I.skewType &&
+                        "simple" === y.skewType &&
                         ((t = Math.tan(S - k * U)),
                         (i *= t = Math.sqrt(1 + t * t)),
                         (r *= t),
@@ -19200,28 +19200,28 @@ PERFORMANCE OF THIS SOFTWARE.
                           (a *= t))),
                       M &&
                         ((N +=
-                          I.xOrigin -
-                          (I.xOrigin * n + I.yOrigin * i) +
-                          I.xOffset),
+                          y.xOrigin -
+                          (y.xOrigin * n + y.yOrigin * i) +
+                          y.xOffset),
                         (B +=
-                          I.yOrigin -
-                          (I.xOrigin * a + I.yOrigin * r) +
-                          I.yOffset),
+                          y.yOrigin -
+                          (y.xOrigin * a + y.yOrigin * r) +
+                          y.yOffset),
                         Ae &&
-                          (I.xPercent || I.yPercent) &&
+                          (y.xPercent || y.yPercent) &&
                           ((g = this.t.getBBox()),
-                          (N += 0.01 * I.xPercent * g.width),
-                          (B += 0.01 * I.yPercent * g.height)),
+                          (N += 0.01 * y.xPercent * g.width),
+                          (B += 0.01 * y.yPercent * g.height)),
                         N < (g = 1e-6) && N > -g && (N = 0),
                         B < g && B > -g && (B = 0)),
                       (T =
-                        ((n * y) | 0) / y +
+                        ((n * I) | 0) / I +
                         "," +
-                        ((a * y) | 0) / y +
+                        ((a * I) | 0) / I +
                         "," +
-                        ((i * y) | 0) / y +
+                        ((i * I) | 0) / I +
                         "," +
-                        ((r * y) | 0) / y +
+                        ((r * I) | 0) / I +
                         "," +
                         N +
                         "," +
@@ -19230,19 +19230,19 @@ PERFORMANCE OF THIS SOFTWARE.
                       M && Ae
                         ? this.t.setAttribute("transform", "matrix(" + T)
                         : (v[Ne] =
-                            (I.xPercent || I.yPercent
+                            (y.xPercent || y.yPercent
                               ? "translate(" +
-                                I.xPercent +
+                                y.xPercent +
                                 "%," +
-                                I.yPercent +
+                                y.yPercent +
                                 "%) matrix("
                               : "matrix(") + T))
                     : (v[Ne] =
-                        (I.xPercent || I.yPercent
+                        (y.xPercent || y.yPercent
                           ? "translate(" +
-                            I.xPercent +
+                            y.xPercent +
                             "%," +
-                            I.yPercent +
+                            y.yPercent +
                             "%) matrix("
                           : "matrix(") +
                         D +
@@ -19258,7 +19258,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     (m &&
                       (D < (g = 1e-4) && D > -g && (D = R = 2e-5),
                       b < g && b > -g && (b = R = 2e-5),
-                      !G || I.z || I.rotationX || I.rotationY || (G = 0)),
+                      !G || y.z || y.rotationX || y.rotationY || (G = 0)),
                     A || w)
                   )
                     ((A *= U),
@@ -19268,11 +19268,11 @@ PERFORMANCE OF THIS SOFTWARE.
                         ((A -= w * U),
                         (E = Math.cos(A)),
                         (C = Math.sin(A)),
-                        "simple" === I.skewType &&
+                        "simple" === y.skewType &&
                           ((t = Math.tan((w - k) * U)),
                           (E *= t = Math.sqrt(1 + t * t)),
                           (C *= t),
-                          I.skewY &&
+                          y.skewY &&
                             ((t = Math.tan(k * U)),
                             (n *= t = Math.sqrt(1 + t * t)),
                             (a *= t)))),
@@ -19281,11 +19281,11 @@ PERFORMANCE OF THIS SOFTWARE.
                   else {
                     if (!(L || O || 1 !== R || G || M))
                       return void (v[Ne] =
-                        (I.xPercent || I.yPercent
+                        (y.xPercent || y.yPercent
                           ? "translate(" +
-                            I.xPercent +
+                            y.xPercent +
                             "%," +
-                            I.yPercent +
+                            y.yPercent +
                             "%) translate3d("
                           : "translate3d(") +
                         N +
@@ -19302,7 +19302,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   ((_ = 1),
                     (s = o = l = u = c = d = 0),
                     (h = G ? -1 / G : 0),
-                    (p = I.zOrigin),
+                    (p = y.zOrigin),
                     (g = 1e-6),
                     ",",
                     "0",
@@ -19334,22 +19334,22 @@ PERFORMANCE OF THIS SOFTWARE.
                       (p && ((N += s * -p), (B += o * -p), (P += _ * -p + p)),
                       M &&
                         ((N +=
-                          I.xOrigin -
-                          (I.xOrigin * n + I.yOrigin * i) +
-                          I.xOffset),
+                          y.xOrigin -
+                          (y.xOrigin * n + y.yOrigin * i) +
+                          y.xOffset),
                         (B +=
-                          I.yOrigin -
-                          (I.xOrigin * a + I.yOrigin * r) +
-                          I.yOffset)),
+                          y.yOrigin -
+                          (y.xOrigin * a + y.yOrigin * r) +
+                          y.yOffset)),
                       N < g && N > -g && (N = "0"),
                       B < g && B > -g && (B = "0"),
                       P < g && P > -g && (P = 0)),
                     (T =
-                      I.xPercent || I.yPercent
+                      y.xPercent || y.yPercent
                         ? "translate(" +
-                          I.xPercent +
+                          y.xPercent +
                           "%," +
-                          I.yPercent +
+                          y.yPercent +
                           "%) matrix3d("
                         : "matrix3d("),
                     (T +=
@@ -19402,7 +19402,7 @@ PERFORMANCE OF THIS SOFTWARE.
           l.yOffset =
             0),
           (l.scaleX = l.scaleY = l.scaleZ = 1),
-          Ie(
+          ye(
             "transform,scale,scaleX,scaleY,scaleZ,x,y,z,rotation,rotationX,rotationY,rotationZ,skewX,skewY,shortRotation,shortRotationX,shortRotationY,shortRotationZ,transformOrigin,svgOrigin,transformPerspective,directionalRotation,parseTransform,force3D,skewType,xPercent,yPercent,smoothOrigin",
             {
               parser: function (e, t, i, s, r, o, l) {
@@ -19421,8 +19421,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   f,
                   T,
                   S,
-                  y = e._gsTransform,
-                  I = e.style,
+                  I = e._gsTransform,
+                  y = e.style,
                   v = Re.length,
                   A = l,
                   O = {},
@@ -19576,7 +19576,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     (r = fe(
                       L,
                       "xOrigin",
-                      (y ? L : c).xOrigin,
+                      (I ? L : c).xOrigin,
                       c.xOrigin,
                       r,
                       "transformOrigin",
@@ -19584,7 +19584,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     (r = fe(
                       L,
                       "yOrigin",
-                      (y ? L : c).yOrigin,
+                      (I ? L : c).yOrigin,
                       c.yOrigin,
                       r,
                       "transformOrigin",
@@ -19593,7 +19593,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       ((r = fe(
                         L,
                         "xOffset",
-                        y ? C : L.xOffset,
+                        I ? C : L.xOffset,
                         L.xOffset,
                         r,
                         "transformOrigin",
@@ -19601,7 +19601,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       (r = fe(
                         L,
                         "yOffset",
-                        y ? f : L.yOffset,
+                        I ? f : L.yOffset,
                         L.yOffset,
                         r,
                         "transformOrigin",
@@ -19612,8 +19612,8 @@ PERFORMANCE OF THIS SOFTWARE.
                       ? ((h = !0),
                         (S = Pe),
                         (D = (D || $(e, S, n, !1, "50% 50%")) + ""),
-                        ((r = new Ce(I, S, 0, 0, r, -1, "transformOrigin")).b =
-                          I[S]),
+                        ((r = new Ce(y, S, 0, 0, r, -1, "transformOrigin")).b =
+                          y[S]),
                         (r.plugin = o),
                         Me
                           ? ((m = L.zOrigin),
@@ -19642,14 +19642,14 @@ PERFORMANCE OF THIS SOFTWARE.
               prefix: !0,
             },
           ),
-          Ie("boxShadow", {
+          ye("boxShadow", {
             defaultValue: "0px 0px 0px 0px #999",
             prefix: !0,
             color: !0,
             multi: !0,
             keyword: "inset",
           }),
-          Ie("borderRadius", {
+          ye("borderRadius", {
             defaultValue: "0px",
             parser: function (e, i, s, a, r, o) {
               i = this.format(i);
@@ -19667,8 +19667,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 f,
                 T,
                 S,
-                y,
                 I,
+                y,
                 v = [
                   "borderTopLeftRadius",
                   "borderTopRightRadius",
@@ -19699,13 +19699,13 @@ PERFORMANCE OF THIS SOFTWARE.
                   "" === C && (C = t[s] || f),
                   C !== f &&
                     ((S = J(e, "borderLeft", h, f)),
-                    (y = J(e, "borderTop", h, f)),
+                    (I = J(e, "borderTop", h, f)),
                     "%" === C
-                      ? ((m = (S / g) * 100 + "%"), (c = (y / E) * 100 + "%"))
+                      ? ((m = (S / g) * 100 + "%"), (c = (I / E) * 100 + "%"))
                       : "em" === C
-                        ? ((m = S / (I = J(e, "borderLeft", 1, "em")) + "em"),
-                          (c = y / I + "em"))
-                        : ((m = S + "px"), (c = y + "px")),
+                        ? ((m = S / (y = J(e, "borderLeft", 1, "em")) + "em"),
+                          (c = I / y + "em"))
+                        : ((m = S + "px"), (c = I + "px")),
                     T &&
                       ((d = parseFloat(m) + p + C),
                       (_ = parseFloat(c) + p + C))),
@@ -19715,7 +19715,7 @@ PERFORMANCE OF THIS SOFTWARE.
             prefix: !0,
             formatter: pe("0px 0px 0px 0px", !1, !0),
           }),
-          Ie(
+          ye(
             "borderBottomLeftRadius,borderBottomRightRadius,borderTopLeftRadius,borderTopRightRadius",
             {
               defaultValue: "0px",
@@ -19734,7 +19734,7 @@ PERFORMANCE OF THIS SOFTWARE.
               formatter: pe("0px 0px", !1, !0),
             },
           ),
-          Ie("backgroundPosition", {
+          ye("backgroundPosition", {
             defaultValue: "0 0",
             parser: function (e, t, i, s, a, r) {
               var o,
@@ -19785,7 +19785,7 @@ PERFORMANCE OF THIS SOFTWARE.
             },
             formatter: re,
           }),
-          Ie("backgroundSize", {
+          ye("backgroundSize", {
             defaultValue: "0 0",
             formatter: function (e) {
               return "co" === (e += "").substr(0, 2)
@@ -19793,18 +19793,18 @@ PERFORMANCE OF THIS SOFTWARE.
                 : re(-1 === e.indexOf(" ") ? e + " " + e : e);
             },
           }),
-          Ie("perspective", { defaultValue: "0px", prefix: !0 }),
-          Ie("perspectiveOrigin", { defaultValue: "50% 50%", prefix: !0 }),
-          Ie("transformStyle", { prefix: !0 }),
-          Ie("backfaceVisibility", { prefix: !0 }),
-          Ie("userSelect", { prefix: !0 }),
-          Ie("margin", {
+          ye("perspective", { defaultValue: "0px", prefix: !0 }),
+          ye("perspectiveOrigin", { defaultValue: "50% 50%", prefix: !0 }),
+          ye("transformStyle", { prefix: !0 }),
+          ye("backfaceVisibility", { prefix: !0 }),
+          ye("userSelect", { prefix: !0 }),
+          ye("margin", {
             parser: ge("marginTop,marginRight,marginBottom,marginLeft"),
           }),
-          Ie("padding", {
+          ye("padding", {
             parser: ge("paddingTop,paddingRight,paddingBottom,paddingLeft"),
           }),
-          Ie("clip", {
+          ye("clip", {
             defaultValue: "rect(0px,0px,0px,0px)",
             parser: function (e, t, i, s, a, r) {
               var o, l, u;
@@ -19829,17 +19829,17 @@ PERFORMANCE OF THIS SOFTWARE.
               );
             },
           }),
-          Ie("textShadow", {
+          ye("textShadow", {
             defaultValue: "0px 0px 0px #999",
             color: !0,
             multi: !0,
           }),
-          Ie("autoRound,strictUnits", {
+          ye("autoRound,strictUnits", {
             parser: function (e, t, n, i, s) {
               return s;
             },
           }),
-          Ie("border", {
+          ye("border", {
             defaultValue: "0px solid #000",
             parser: function (e, t, i, s, a, r) {
               var o = $(e, "borderTopWidth", n, !1, "0px"),
@@ -19875,12 +19875,12 @@ PERFORMANCE OF THIS SOFTWARE.
               );
             },
           }),
-          Ie("borderWidth", {
+          ye("borderWidth", {
             parser: ge(
               "borderTopWidth,borderRightWidth,borderBottomWidth,borderLeftWidth",
             ),
           }),
-          Ie("float,cssFloat,styleFloat", {
+          ye("float,cssFloat,styleFloat", {
             parser: function (e, t, n, i, s, a) {
               var r = e.style,
                 o = "cssFloat" in r ? "cssFloat" : "styleFloat";
@@ -19903,9 +19903,9 @@ PERFORMANCE OF THIS SOFTWARE.
               -1 === i.indexOf("pacity")
                 ? (0 === s && this.xn1) ||
                   (n.filter = i + " alpha(opacity=" + s + ")")
-                : (n.filter = i.replace(y, "opacity=" + s))));
+                : (n.filter = i.replace(I, "opacity=" + s))));
         };
-        Ie("opacity,alpha,autoAlpha", {
+        ye("opacity,alpha,autoAlpha", {
           defaultValue: "1",
           parser: function (e, t, i, s, a, r) {
             var o = parseFloat($(e, "opacity", n, !1, "1")),
@@ -19972,7 +19972,7 @@ PERFORMANCE OF THIS SOFTWARE.
               this.t.getAttribute("class") !== this.e &&
                 this.t.setAttribute("class", this.e);
           };
-        Ie("className", {
+        ye("className", {
           parser: function (t, i, s, a, r, o, l) {
             var u,
               _,
@@ -20045,7 +20045,7 @@ PERFORMANCE OF THIS SOFTWARE.
           }
         };
         for (
-          Ie("clearProps", {
+          ye("clearProps", {
             parser: function (t, n, i, s, a) {
               return (
                 ((a = new Ce(t, i, 0, 0, a, 2)).setRatio = Qe),
@@ -20083,7 +20083,7 @@ PERFORMANCE OF THIS SOFTWARE.
               f,
               T,
               S,
-              y,
+              I,
               v,
               A,
               O = i.style;
@@ -20097,7 +20097,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 (h = te(i, n)),
                 (O.cssText = f + ";" + r),
                 (h = ne(i, h, te(i)).difs),
-                !q && I.test(r) && (h.opacity = parseFloat(RegExp.$1)),
+                !q && y.test(r) && (h.opacity = parseFloat(RegExp.$1)),
                 (r = h),
                 (O.cssText = f)),
               r.className
@@ -20120,7 +20120,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     ? c &&
                       ((_ = !0),
                       "" === O.zIndex &&
-                        (("auto" !== (y = $(i, "zIndex", n)) && "" !== y) ||
+                        (("auto" !== (I = $(i, "zIndex", n)) && "" !== I) ||
                           this._addLazySet(O, "zIndex", 0)),
                       d &&
                         this._addLazySet(
@@ -20579,13 +20579,13 @@ PERFORMANCE OF THIS SOFTWARE.
           f,
           T,
           S,
-          y = e.length - 1,
-          I = 0,
+          I = e.length - 1,
+          y = 0,
           v = e[0].a;
-        for (l = 0; l < y; l++)
-          ((u = (d = e[I]).a),
+        for (l = 0; l < I; l++)
+          ((u = (d = e[y]).a),
             (_ = d.d),
-            (m = e[I + 1].d),
+            (m = e[y + 1].d),
             s
               ? ((f = a[l]),
                 (S = (((T = r[l]) + f) * t * 0.25) / (i ? 0.5 : o[l] || 0.5)),
@@ -20609,18 +20609,18 @@ PERFORMANCE OF THIS SOFTWARE.
             (d.ba = v - u),
             n
               ? ((C = c(u, v, E, _)),
-                e.splice(I, 1, C[0], C[1], C[2], C[3]),
-                (I += 4))
-              : I++,
+                e.splice(y, 1, C[0], C[1], C[2], C[3]),
+                (y += 4))
+              : y++,
             (v = p));
-        (((d = e[I]).b = v),
+        (((d = e[y]).b = v),
           (d.c = v + 0.4 * (d.d - v)),
           (d.da = d.d - d.a),
           (d.ca = d.c - d.a),
           (d.ba = v - d.a),
           n &&
             ((C = c(d.a, v, d.c, d.d)),
-            e.splice(I, 1, C[0], C[1], C[2], C[3])));
+            e.splice(y, 1, C[0], C[1], C[2], C[3])));
       },
       d = function (e, t, n, i) {
         var s,
@@ -20658,7 +20658,7 @@ PERFORMANCE OF THIS SOFTWARE.
           f,
           T = {},
           S = [],
-          y = u || e[0];
+          I = u || e[0];
         for (c in ((s =
           "string" == typeof s
             ? "," + s + ","
@@ -20668,7 +20668,7 @@ PERFORMANCE OF THIS SOFTWARE.
           S.push(c);
         if (e.length > 1) {
           for (f = e[e.length - 1], C = !0, _ = S.length; --_ > -1;)
-            if (((c = S[_]), Math.abs(y[c] - f[c]) > 0.05)) {
+            if (((c = S[_]), Math.abs(I[c] - f[c]) > 0.05)) {
               C = !1;
               break;
             }
@@ -20960,14 +20960,14 @@ PERFORMANCE OF THIS SOFTWARE.
               f,
               T,
               S,
-              y,
-              I = this._autoRotate;
-            for (i = I.length; --i > -1;)
-              ((a = I[i][2]),
-                (S = I[i][3] || 0),
-                (y = !0 === I[i][4] ? 1 : s),
-                (r = this._beziers[I[i][0]]),
-                (g = this._beziers[I[i][1]]),
+              I,
+              y = this._autoRotate;
+            for (i = y.length; --i > -1;)
+              ((a = y[i][2]),
+                (S = y[i][3] || 0),
+                (I = !0 === y[i][4] ? 1 : s),
+                (r = this._beziers[y[i][0]]),
+                (g = this._beziers[y[i][1]]),
                 r &&
                   g &&
                   ((r = r[t]),
@@ -20979,7 +20979,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   (C += ((T = g.b + (g.c - g.b) * o) - C) * o),
                   (T += (g.c + (g.d - g.c) * o - T) * o),
                   (l = p
-                    ? Math.atan2(T - C, f - E) * y + S
+                    ? Math.atan2(T - C, f - E) * I + S
                     : this._initialRotations[i]),
                   this._mod[a] && (l = this._mod[a](l, h)),
                   d[a] ? h[a](l) : (h[a] = l)));
@@ -24689,13 +24689,13 @@ PERFORMANCE OF THIS SOFTWARE.
               if (E.stage && E.stage.name === t.BG_STAGE)
                 return u && !e.mouseChildren ? e : E;
               var S = E.width / E.scaleX,
-                y = E.height / E.scaleY,
-                I = E.getConcatenatedDisplayProps(E._props),
-                v = I.matrix;
+                I = E.height / E.scaleY,
+                y = E.getConcatenatedDisplayProps(E._props),
+                v = y.matrix;
               if (
                 (C &&
                   (v.appendMatrix(C.getMatrix(C._props.matrix)),
-                  (I.alpha = C.alpha)),
+                  (y.alpha = C.alpha)),
                 v.scale(d, h),
                 (v.tx = v.tx * d),
                 (v.ty = v.ty * h),
@@ -24725,10 +24725,10 @@ PERFORMANCE OF THIS SOFTWARE.
                   }
                   O &&
                     D.bounds &&
-                    ((S = D.bounds.width), (y = D.bounds.height));
+                    ((S = D.bounds.width), (I = D.bounds.height));
                 }
                 if (O) {
-                  ((S *= Math.abs(v.a)), (y *= Math.abs(v.d)));
+                  ((S *= Math.abs(v.a)), (I *= Math.abs(v.d)));
                   var N,
                     B,
                     P =
@@ -24737,9 +24737,9 @@ PERFORMANCE OF THIS SOFTWARE.
                         : a.defaultCenterHittestArea;
                   if (
                     ((N = Math.abs(v.tx + 0.5 * S * Math.sign(v.a) - r)),
-                    (B = Math.abs(v.ty + 0.5 * y * Math.sign(v.d) - o)),
-                    (L = N < S * P && B < y * P),
-                    !(N < 0.5 * S && B < 0.5 * y))
+                    (B = Math.abs(v.ty + 0.5 * I * Math.sign(v.d) - o)),
+                    (L = N < S * P && B < I * P),
+                    !(N < 0.5 * S && B < 0.5 * I))
                   )
                     continue;
                   if (
@@ -24750,7 +24750,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
               }
               if (
-                ((n.globalAlpha = I.alpha),
+                ((n.globalAlpha = y.alpha),
                 n.setTransform(v.a, v.b, v.c, v.d, v.tx - r, v.ty - o),
                 (C || E).draw(n),
                 !e._testHit(n))
@@ -26754,8 +26754,8 @@ PERFORMANCE OF THIS SOFTWARE.
       f = n(353),
       T = n(354),
       S = n(2),
-      y = n(355),
-      I = n(3),
+      I = n(355),
+      y = n(3),
       v = S.getLogger("GoodgameTextField"),
       A = (function () {
         function GoodgameTextField(e) {
@@ -26775,7 +26775,7 @@ PERFORMANCE OF THIS SOFTWARE.
             (v.debug("useDefaultStrategy "),
               this._availableStrategies[0] ||
                 (this._availableStrategies[0] =
-                  new y.GGSTextFieldDefaultStrategy(this)),
+                  new I.GGSTextFieldDefaultStrategy(this)),
               this.activateStrategy(this._availableStrategies[0]));
           }),
           (GoodgameTextField.prototype.activateStrategy = function (e) {
@@ -27046,7 +27046,7 @@ PERFORMANCE OF THIS SOFTWARE.
               return this._model.color;
             },
             set: function (e) {
-              this._model.color = I.ColorTransform.colorNumToString(e);
+              this._model.color = y.ColorTransform.colorNumToString(e);
             },
             enumerable: !0,
             configurable: !0,
@@ -33258,7 +33258,7 @@ and limitations under the License.
         ),
         T = c.splice,
         S = getNative(u, "Map"),
-        y = getNative(Object, "create");
+        I = getNative(Object, "create");
       function Hash(e) {
         var t = -1,
           n = e ? e.length : 0;
@@ -33363,14 +33363,14 @@ and limitations under the License.
         return !!e && ("object" == t || "function" == t);
       }
       ((Hash.prototype.clear = function hashClear() {
-        this.__data__ = y ? y(null) : {};
+        this.__data__ = I ? I(null) : {};
       }),
         (Hash.prototype.delete = function hashDelete(e) {
           return this.has(e) && delete this.__data__[e];
         }),
         (Hash.prototype.get = function hashGet(e) {
           var t = this.__data__;
-          if (y) {
+          if (I) {
             var n = t[e];
             return n === i ? void 0 : n;
           }
@@ -33378,10 +33378,10 @@ and limitations under the License.
         }),
         (Hash.prototype.has = function hashHas(e) {
           var t = this.__data__;
-          return y ? void 0 !== t[e] : E.call(t, e);
+          return I ? void 0 !== t[e] : E.call(t, e);
         }),
         (Hash.prototype.set = function hashSet(e, t) {
-          return ((this.__data__[e] = y && void 0 === t ? i : t), this);
+          return ((this.__data__[e] = I && void 0 === t ? i : t), this);
         }),
         (ListCache.prototype.clear = function listCacheClear() {
           this.__data__ = [];
@@ -36193,8 +36193,8 @@ and limitations under the License.
         T = E.ERR_METHOD_NOT_IMPLEMENTED,
         S = E.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
       n(94)(Readable, r);
-      var y = p.errorOrDestroy,
-        I = ["error", "close", "destroy", "pause", "resume"];
+      var I = p.errorOrDestroy,
+        y = ["error", "close", "destroy", "pause", "resume"];
       function ReadableState(e, t, i) {
         ((s = s || n(76)),
           (e = e || {}),
@@ -36276,7 +36276,7 @@ and limitations under the License.
             })(r, t)),
           a)
         )
-          y(e, a);
+          I(e, a);
         else if (r.objectMode || (t && t.length > 0))
           if (
             ("string" == typeof t ||
@@ -36287,8 +36287,8 @@ and limitations under the License.
               })(t)),
             i)
           )
-            r.endEmitted ? y(e, new S()) : addChunk(e, r, t, !0);
-          else if (r.ended) y(e, new f());
+            r.endEmitted ? I(e, new S()) : addChunk(e, r, t, !0);
+          else if (r.ended) I(e, new f());
           else {
             if (r.destroyed) return !1;
             ((r.reading = !1),
@@ -36534,7 +36534,7 @@ and limitations under the License.
         );
       }),
         (Readable.prototype._read = function (e) {
-          y(this, new T("_read()"));
+          I(this, new T("_read()"));
         }),
         (Readable.prototype.pipe = function (e, t) {
           var n = this,
@@ -36609,7 +36609,7 @@ and limitations under the License.
             (u("onerror", t),
               unpipe(),
               e.removeListener("error", onerror),
-              0 === a(e, "error") && y(e, t));
+              0 === a(e, "error") && I(e, t));
           }
           function onclose() {
             (e.removeListener("finish", onfinish), unpipe());
@@ -36755,8 +36755,8 @@ and limitations under the License.
                   return e[t].apply(e, arguments);
                 };
               })(s));
-          for (var a = 0; a < I.length; a++)
-            e.on(I[a], this.emit.bind(this, I[a]));
+          for (var a = 0; a < y.length; a++)
+            e.on(y[a], this.emit.bind(this, y[a]));
           return (
             (this._read = function (t) {
               (u("wrapped _read", t), i && ((i = !1), e.resume()));
@@ -53373,7 +53373,7 @@ and limitations under the License.
                       c.apply(d || u.callbackScope || this, m || l));
                   },
                   S = u.cycle,
-                  y = u.startAt && u.startAt.cycle;
+                  I = u.startAt && u.startAt.cycle;
                 for (
                   r(s) ||
                     ("string" == typeof s && (s = i.default.selector(s) || s),
@@ -53391,10 +53391,10 @@ and limitations under the License.
                       (t(p, s, g),
                       null != p.duration &&
                         ((o = p.duration), delete p.duration)),
-                    y)
+                    I)
                   ) {
-                    for (E in ((y = p.startAt = {}), u.startAt))
-                      y[E] = u.startAt[E];
+                    for (E in ((I = p.startAt = {}), u.startAt))
+                      I[E] = u.startAt[E];
                     t(p.startAt, s, g);
                   }
                   ((p.delay = C + (p.delay || 0)),
@@ -53734,6 +53734,262 @@ and limitations under the License.
         (ItemVersions.prototype.fill = function () {
           ((this.assets.Deco_Building_springBonfire =
             "itemassets/Building/Deco/Deco_Building_springBonfire/Deco_Building_springBonfire--1616681902168"),
+            (this.assets.Item_Unique_1707 =
+              "itemassets/Equipment/Uniques/Item_Unique_1707/Item_Unique_1707--1795449845241"),
+            (this.assets.Item_Unique_1706 =
+              "itemassets/Equipment/Uniques/Item_Unique_1706/Item_Unique_1706--1795449845241"),
+            (this.assets.Item_Unique_1705 =
+              "itemassets/Equipment/Uniques/Item_Unique_1705/Item_Unique_1705--1795449845241"),
+            (this.assets.Item_Unique_1704 =
+              "itemassets/Equipment/Uniques/Item_Unique_1704/Item_Unique_1704--1795449845241"),
+            (this.assets.Item_Unique_1703 =
+              "itemassets/Equipment/Uniques/Item_Unique_1703/Item_Unique_1703--1795449845241"),
+            (this.assets.Item_Unique_1702 =
+              "itemassets/Equipment/Uniques/Item_Unique_1702/Item_Unique_1702--1795449845241"),
+            (this.assets.Item_Unique_1701 =
+              "itemassets/Equipment/Uniques/Item_Unique_1701/Item_Unique_1701--1795449845241"),
+            (this.assets.Item_Unique_1700 =
+              "itemassets/Equipment/Uniques/Item_Unique_1700/Item_Unique_1700--1795449845241"),
+            (this.assets.Item_Unique_1699 =
+              "itemassets/Equipment/Uniques/Item_Unique_1699/Item_Unique_1699--1795449845241"),
+            (this.assets.Item_Unique_1698 =
+              "itemassets/Equipment/Uniques/Item_Unique_1698/Item_Unique_1698--1795449845241"),
+            (this.assets.Item_Unique_1697 =
+              "itemassets/Equipment/Uniques/Item_Unique_1697/Item_Unique_1697--1795449845241"),
+            (this.assets.Item_Unique_1696 =
+              "itemassets/Equipment/Uniques/Item_Unique_1696/Item_Unique_1696--1795449845241"),
+            (this.assets.Item_Unique_1695 =
+              "itemassets/Equipment/Uniques/Item_Unique_1695/Item_Unique_1695--1795449845241"),
+            (this.assets.Item_Unique_1694 =
+              "itemassets/Equipment/Uniques/Item_Unique_1694/Item_Unique_1694--1795449845241"),
+            (this.assets.Item_Unique_1693 =
+              "itemassets/Equipment/Uniques/Item_Unique_1693/Item_Unique_1693--1795449845241"),
+            (this.assets.Item_Unique_1692 =
+              "itemassets/Equipment/Uniques/Item_Unique_1692/Item_Unique_1692--1795449845241"),
+            (this.assets.Item_Unique_1691 =
+              "itemassets/Equipment/Uniques/Item_Unique_1691/Item_Unique_1691--1795449845241"),
+            (this.assets.Item_Unique_1690 =
+              "itemassets/Equipment/Uniques/Item_Unique_1690/Item_Unique_1690--1795449845241"),
+            (this.assets.Item_Unique_1689 =
+              "itemassets/Equipment/Uniques/Item_Unique_1689/Item_Unique_1689--1795449845241"),
+            (this.assets.Item_Unique_1688 =
+              "itemassets/Equipment/Uniques/Item_Unique_1688/Item_Unique_1688--1795449845241"),
+            (this.assets.Item_Unique_1687 =
+              "itemassets/Equipment/Uniques/Item_Unique_1687/Item_Unique_1687--1795449845241"),
+            (this.assets.Item_Unique_1686 =
+              "itemassets/Equipment/Uniques/Item_Unique_1686/Item_Unique_1686--1795449845241"),
+            (this.assets.Item_Unique_1685 =
+              "itemassets/Equipment/Uniques/Item_Unique_1685/Item_Unique_1685--1795449845241"),
+            (this.assets.Item_Unique_1684 =
+              "itemassets/Equipment/Uniques/Item_Unique_1684/Item_Unique_1684--1795449845241"),
+            (this.assets.Item_Unique_1683 =
+              "itemassets/Equipment/Uniques/Item_Unique_1683/Item_Unique_1683--1795449845241"),
+            (this.assets.Item_Unique_1682 =
+              "itemassets/Equipment/Uniques/Item_Unique_1682/Item_Unique_1682--1795449845241"),
+            (this.assets.Item_Unique_1681 =
+              "itemassets/Equipment/Uniques/Item_Unique_1681/Item_Unique_1681--1795449845241"),
+            (this.assets.Item_Unique_1680 =
+              "itemassets/Equipment/Uniques/Item_Unique_1680/Item_Unique_1680--1795449845241"),
+            (this.assets.Item_Unique_1679 =
+              "itemassets/Equipment/Uniques/Item_Unique_1679/Item_Unique_1679--1795449845241"),
+            (this.assets.Item_Unique_1678 =
+              "itemassets/Equipment/Uniques/Item_Unique_1678/Item_Unique_1678--1795449845241"),
+            (this.assets.Item_Unique_1677 =
+              "itemassets/Equipment/Uniques/Item_Unique_1677/Item_Unique_1677--1795449845241"),
+            (this.assets.Item_Unique_1676 =
+              "itemassets/Equipment/Uniques/Item_Unique_1676/Item_Unique_1676--1795449845241"),
+            (this.assets.Item_Unique_1675 =
+              "itemassets/Equipment/Uniques/Item_Unique_1675/Item_Unique_1675--1795449845241"),
+            (this.assets.Item_Unique_1674 =
+              "itemassets/Equipment/Uniques/Item_Unique_1674/Item_Unique_1674--1795449845241"),
+            (this.assets.Item_Unique_1673 =
+              "itemassets/Equipment/Uniques/Item_Unique_1673/Item_Unique_1673--1795449845241"),
+            (this.assets.Item_Unique_1672 =
+              "itemassets/Equipment/Uniques/Item_Unique_1672/Item_Unique_1672--1795449845241"),
+            (this.assets.Item_Unique_1671 =
+              "itemassets/Equipment/Uniques/Item_Unique_1671/Item_Unique_1671--1795449845241"),
+            (this.assets.Item_Unique_1670 =
+              "itemassets/Equipment/Uniques/Item_Unique_1670/Item_Unique_1670--1795449845241"),
+            (this.assets.Item_Unique_1669 =
+              "itemassets/Equipment/Uniques/Item_Unique_1669/Item_Unique_1669--1795449845241"),
+            (this.assets.Item_Unique_1668 =
+              "itemassets/Equipment/Uniques/Item_Unique_1668/Item_Unique_1668--1795449845241"),
+            (this.assets.Item_Unique_1667 =
+              "itemassets/Equipment/Uniques/Item_Unique_1667/Item_Unique_1667--1795449845241"),
+            (this.assets.Item_Unique_1666 =
+              "itemassets/Equipment/Uniques/Item_Unique_1666/Item_Unique_1666--1795449845241"),
+            (this.assets.Item_Unique_1665 =
+              "itemassets/Equipment/Uniques/Item_Unique_1665/Item_Unique_1665--1795449845241"),
+            (this.assets.Item_Unique_1664 =
+              "itemassets/Equipment/Uniques/Item_Unique_1664/Item_Unique_1664--1795449845241"),
+            (this.assets.Item_Unique_1663 =
+              "itemassets/Equipment/Uniques/Item_Unique_1663/Item_Unique_1663--1795449845241"),
+            (this.assets.Item_Unique_1662 =
+              "itemassets/Equipment/Uniques/Item_Unique_1662/Item_Unique_1662--1795449845241"),
+            (this.assets.Item_Unique_1661 =
+              "itemassets/Equipment/Uniques/Item_Unique_1661/Item_Unique_1661--1795449845241"),
+            (this.assets.Item_Unique_1660 =
+              "itemassets/Equipment/Uniques/Item_Unique_1660/Item_Unique_1660--1795449845241"),
+            (this.assets.Item_Unique_1659 =
+              "itemassets/Equipment/Uniques/Item_Unique_1659/Item_Unique_1659--1795449845241"),
+            (this.assets.Item_Unique_1658 =
+              "itemassets/Equipment/Uniques/Item_Unique_1658/Item_Unique_1658--1795449845241"),
+            (this.assets.Item_Unique_1657 =
+              "itemassets/Equipment/Uniques/Item_Unique_1657/Item_Unique_1657--1795449845241"),
+            (this.assets.Item_Unique_1656 =
+              "itemassets/Equipment/Uniques/Item_Unique_1656/Item_Unique_1656--1795449845241"),
+            (this.assets.Item_Unique_1655 =
+              "itemassets/Equipment/Uniques/Item_Unique_1655/Item_Unique_1655--1795449845241"),
+            (this.assets.Item_Unique_1654 =
+              "itemassets/Equipment/Uniques/Item_Unique_1654/Item_Unique_1654--1795449845241"),
+            (this.assets.Item_Unique_1653 =
+              "itemassets/Equipment/Uniques/Item_Unique_1653/Item_Unique_1653--1795449845241"),
+            (this.assets.Item_Unique_1652 =
+              "itemassets/Equipment/Uniques/Item_Unique_1652/Item_Unique_1652--1795449845241"),
+            (this.assets.Item_Unique_1651 =
+              "itemassets/Equipment/Uniques/Item_Unique_1651/Item_Unique_1651--1795449845241"),
+            (this.assets.Item_Unique_1650 =
+              "itemassets/Equipment/Uniques/Item_Unique_1650/Item_Unique_1650--1795449845241"),
+            (this.assets.Item_Unique_1649 =
+              "itemassets/Equipment/Uniques/Item_Unique_1649/Item_Unique_1649--1795449845241"),
+            (this.assets.Item_Unique_1648 =
+              "itemassets/Equipment/Uniques/Item_Unique_1648/Item_Unique_1648--1795449845241"),
+            (this.assets.Item_Unique_1647 =
+              "itemassets/Equipment/Uniques/Item_Unique_1647/Item_Unique_1647--1795449845241"),
+            (this.assets.Item_Unique_1646 =
+              "itemassets/Equipment/Uniques/Item_Unique_1646/Item_Unique_1646--1795449845241"),
+            (this.assets.Item_Unique_1645 =
+              "itemassets/Equipment/Uniques/Item_Unique_1645/Item_Unique_1645--1795449845241"),
+            (this.assets.Item_Unique_1644 =
+              "itemassets/Equipment/Uniques/Item_Unique_1644/Item_Unique_1644--1795449845241"),
+            (this.assets.Item_Unique_1643 =
+              "itemassets/Equipment/Uniques/Item_Unique_1643/Item_Unique_1643--1795449845241"),
+            (this.assets.Item_Unique_1642 =
+              "itemassets/Equipment/Uniques/Item_Unique_1642/Item_Unique_1642--1795449845241"),
+            (this.assets.Item_Unique_1641 =
+              "itemassets/Equipment/Uniques/Item_Unique_1641/Item_Unique_1641--1795449845241"),
+            (this.assets.Item_Unique_1640 =
+              "itemassets/Equipment/Uniques/Item_Unique_1640/Item_Unique_1640--1795449845241"),
+            (this.assets.Item_Unique_1639 =
+              "itemassets/Equipment/Uniques/Item_Unique_1639/Item_Unique_1639--1795449845241"),
+            (this.assets.Item_Unique_1638 =
+              "itemassets/Equipment/Uniques/Item_Unique_1638/Item_Unique_1638--1795449845241"),
+            (this.assets.Item_Unique_1637 =
+              "itemassets/Equipment/Uniques/Item_Unique_1637/Item_Unique_1637--1795449845241"),
+            (this.assets.Item_Unique_1636 =
+              "itemassets/Equipment/Uniques/Item_Unique_1636/Item_Unique_1636--1795449845241"),
+            (this.assets.Item_Unique_1635 =
+              "itemassets/Equipment/Uniques/Item_Unique_1635/Item_Unique_1635--1795449845241"),
+            (this.assets.Item_Unique_1634 =
+              "itemassets/Equipment/Uniques/Item_Unique_1634/Item_Unique_1634--1795449845241"),
+            (this.assets.Item_Unique_1633 =
+              "itemassets/Equipment/Uniques/Item_Unique_1633/Item_Unique_1633--1795449845241"),
+            (this.assets.Item_Unique_1632 =
+              "itemassets/Equipment/Uniques/Item_Unique_1632/Item_Unique_1632--1795449845241"),
+            (this.assets.Item_Unique_1631 =
+              "itemassets/Equipment/Uniques/Item_Unique_1631/Item_Unique_1631--1795449845241"),
+            (this.assets.Item_Unique_1630 =
+              "itemassets/Equipment/Uniques/Item_Unique_1630/Item_Unique_1630--1795449845241"),
+            (this.assets.Item_Unique_1629 =
+              "itemassets/Equipment/Uniques/Item_Unique_1629/Item_Unique_1629--1795449845241"),
+            (this.assets.Item_Unique_1628 =
+              "itemassets/Equipment/Uniques/Item_Unique_1628/Item_Unique_1628--1795449845241"),
+            (this.assets.Item_Unique_1627 =
+              "itemassets/Equipment/Uniques/Item_Unique_1627/Item_Unique_1627--1795449845241"),
+            (this.assets.Item_Unique_1626 =
+              "itemassets/Equipment/Uniques/Item_Unique_1626/Item_Unique_1626--1795449845241"),
+            (this.assets.Item_Unique_1625 =
+              "itemassets/Equipment/Uniques/Item_Unique_1625/Item_Unique_1625--1795449845241"),
+            (this.assets.Item_Unique_1624 =
+              "itemassets/Equipment/Uniques/Item_Unique_1624/Item_Unique_1624--1795449845241"),
+            (this.assets.Item_Unique_1623 =
+              "itemassets/Equipment/Uniques/Item_Unique_1623/Item_Unique_1623--1795449845241"),
+            (this.assets.Item_Unique_1622 =
+              "itemassets/Equipment/Uniques/Item_Unique_1622/Item_Unique_1622--1795449845241"),
+            (this.assets.Item_Unique_1621 =
+              "itemassets/Equipment/Uniques/Item_Unique_1621/Item_Unique_1621--1795449845241"),
+            (this.assets.Item_Unique_1620 =
+              "itemassets/Equipment/Uniques/Item_Unique_1620/Item_Unique_1620--1795449845241"),
+            (this.assets.Item_Unique_1619 =
+              "itemassets/Equipment/Uniques/Item_Unique_1619/Item_Unique_1619--1795449845241"),
+            (this.assets.Item_Unique_1618 =
+              "itemassets/Equipment/Uniques/Item_Unique_1618/Item_Unique_1618--1795449845241"),
+            (this.assets.Item_Unique_1617 =
+              "itemassets/Equipment/Uniques/Item_Unique_1617/Item_Unique_1617--1795449845241"),
+            (this.assets.Item_Unique_1616 =
+              "itemassets/Equipment/Uniques/Item_Unique_1616/Item_Unique_1616--1795449845241"),
+            (this.assets.Item_Gem_Unique_574 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_574/Item_Gem_Unique_574--1795449845241"),
+            (this.assets.Item_Gem_Unique_573 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_573/Item_Gem_Unique_573--1795449845241"),
+            (this.assets.Item_Gem_Unique_572 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_572/Item_Gem_Unique_572--1795449845241"),
+            (this.assets.Item_Gem_Unique_571 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_571/Item_Gem_Unique_571--1795449845241"),
+            (this.assets.Item_Gem_Unique_570 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_570/Item_Gem_Unique_570--1795449845241"),
+            (this.assets.Item_Gem_Unique_569 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_569/Item_Gem_Unique_569--1795449845241"),
+            (this.assets.Item_Gem_Unique_568 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_568/Item_Gem_Unique_568--1795449845241"),
+            (this.assets.Item_Gem_Unique_567 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_567/Item_Gem_Unique_567--1795449845241"),
+            (this.assets.Item_Gem_Unique_566 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_566/Item_Gem_Unique_566--1795449845241"),
+            (this.assets.Item_Gem_Unique_565 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_565/Item_Gem_Unique_565--1795449845241"),
+            (this.assets.Item_Gem_Unique_564 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_564/Item_Gem_Unique_564--1795449845241"),
+            (this.assets.Item_Gem_Unique_563 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_563/Item_Gem_Unique_563--1795449845241"),
+            (this.assets.Item_Gem_Unique_562 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_562/Item_Gem_Unique_562--1795449845241"),
+            (this.assets.Item_Gem_Unique_561 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_561/Item_Gem_Unique_561--1795449845241"),
+            (this.assets.Item_Gem_Unique_560 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_560/Item_Gem_Unique_560--1795449845241"),
+            (this.assets.Item_Gem_Unique_559 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_559/Item_Gem_Unique_559--1795449845241"),
+            (this.assets.Item_Gem_Unique_558 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_558/Item_Gem_Unique_558--1795449845241"),
+            (this.assets.Item_Gem_Unique_557 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_557/Item_Gem_Unique_557--1795449845241"),
+            (this.assets.Item_Gem_Unique_556 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_556/Item_Gem_Unique_556--1795449845241"),
+            (this.assets.Item_Gem_Unique_555 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_555/Item_Gem_Unique_555--1795449845241"),
+            (this.assets.Item_Gem_Unique_554 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_554/Item_Gem_Unique_554--1795449845241"),
+            (this.assets.Item_Gem_Unique_553 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_553/Item_Gem_Unique_553--1795449845241"),
+            (this.assets.Item_Gem_Unique_552 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_552/Item_Gem_Unique_552--1795449845241"),
+            (this.assets.Item_Gem_Unique_551 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_551/Item_Gem_Unique_551--1795449845241"),
+            (this.assets.Item_Gem_Unique_550 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_550/Item_Gem_Unique_550--1795449845241"),
+            (this.assets.Item_Gem_Unique_549 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_549/Item_Gem_Unique_549--1795449845241"),
+            (this.assets.Item_Gem_Unique_548 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_548/Item_Gem_Unique_548--1795449845241"),
+            (this.assets.Item_Gem_Unique_547 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_547/Item_Gem_Unique_547--1795449845241"),
+            (this.assets.Item_Gem_Unique_546 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_546/Item_Gem_Unique_546--1795449845241"),
+            (this.assets.Item_Gem_Unique_545 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_545/Item_Gem_Unique_545--1795449845241"),
+            (this.assets.Item_Gem_Unique_544 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_544/Item_Gem_Unique_544--1795449845241"),
+            (this.assets.Item_Gem_Unique_543 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_543/Item_Gem_Unique_543--1795449845241"),
+            (this.assets.Item_Gem_Unique_542 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_542/Item_Gem_Unique_542--1795449845241"),
+            (this.assets.Item_Gem_Unique_541 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_541/Item_Gem_Unique_541--1795449845241"),
+            (this.assets.Item_Gem_Unique_540 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_540/Item_Gem_Unique_540--1795449845241"),
+            (this.assets.Item_Gem_Unique_539 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_539/Item_Gem_Unique_539--1795449845241"),
             (this.assets.Deco_Building_exaltedThroneoftheCommunity =
               "itemassets/Building/Deco/EffectDecos/BtHJade/Deco_Building_exaltedThroneoftheCommunity/Deco_Building_exaltedThroneoftheCommunity--1795089203528"),
             (this.assets.Deco_Building_exaltedScorpionTemple =
@@ -55075,9 +55331,9 @@ and limitations under the License.
             (this.assets.InnerDistrict_Building_HoL8InnerDistrictNightTier1 =
               "itemassets/Building/InnerDistrict/InnerDistrict_Building_HoL8InnerDistrictNightTier1/InnerDistrict_Building_HoL8InnerDistrictNightTier1--1775656492819"),
             (this.assets.InnerDistrict_Building_HoL8InnerDistrictDayTier3 =
-              "itemassets/Building/InnerDistrict/InnerDistrict_Building_HoL8InnerDistrictDayTier3/InnerDistrict_Building_HoL8InnerDistrictDayTier3--1775656492819"),
-            (this.assets.InnerDistrict_Building_HoL8InnerDistrictDayTier2 =
-              "itemassets/Building/InnerDistrict/InnerDistrict_Building_HoL8InnerDistrictDayTier2/InnerDistrict_Building_HoL8InnerDistrictDayTier2--1775656492819"),
+              "itemassets/Building/InnerDistrict/InnerDistrict_Building_HoL8InnerDistrictDayTier3/InnerDistrict_Building_HoL8InnerDistrictDayTier3--1775656492819"));
+          ((this.assets.InnerDistrict_Building_HoL8InnerDistrictDayTier2 =
+            "itemassets/Building/InnerDistrict/InnerDistrict_Building_HoL8InnerDistrictDayTier2/InnerDistrict_Building_HoL8InnerDistrictDayTier2--1775656492819"),
             (this.assets.InnerDistrict_Building_HoL8InnerDistrictDayTier1 =
               "itemassets/Building/InnerDistrict/InnerDistrict_Building_HoL8InnerDistrictDayTier1/InnerDistrict_Building_HoL8InnerDistrictDayTier1--1775656492819"),
             (this.assets.FoodDistrict_Building_HoL8FoodDistrictNightTier3 =
@@ -55331,9 +55587,9 @@ and limitations under the License.
             (this.assets.Item_Gem_Unique_480 =
               "itemassets/Equipment/UniqueGems/Item_Gem_Unique_480/Item_Gem_Unique_480--1770306950688"),
             (this.assets.Item_Gem_Unique_479 =
-              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_479/Item_Gem_Unique_479--1770306950688"));
-          ((this.assets.Item_Gem_Unique_478 =
-            "itemassets/Equipment/UniqueGems/Item_Gem_Unique_478/Item_Gem_Unique_478--1770306950688"),
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_479/Item_Gem_Unique_479--1770306950688"),
+            (this.assets.Item_Gem_Unique_478 =
+              "itemassets/Equipment/UniqueGems/Item_Gem_Unique_478/Item_Gem_Unique_478--1770306950688"),
             (this.assets.Hero_Unique_1459 =
               "itemassets/Equipment/Heroes/Hero_Unique_1459/Hero_Unique_1459--1770306950688"),
             (this.assets.Hero_Unique_1454 =
@@ -56675,9 +56931,9 @@ and limitations under the License.
             (this.assets.Metropol_Mapobject_Special_GrandIceDagger =
               "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_GrandIceDagger/Metropol_Mapobject_Special_GrandIceDagger--1737122885151"),
             (this.assets.Metropol_Mapobject_Special_GrandFeatherCrest =
-              "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_GrandFeatherCrest/Metropol_Mapobject_Special_GrandFeatherCrest--1737122885151"),
-            (this.assets.Metropol_Mapobject_Special_GrandCloverEmblem =
-              "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_GrandCloverEmblem/Metropol_Mapobject_Special_GrandCloverEmblem--1737122885151"),
+              "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_GrandFeatherCrest/Metropol_Mapobject_Special_GrandFeatherCrest--1737122885151"));
+          ((this.assets.Metropol_Mapobject_Special_GrandCloverEmblem =
+            "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_GrandCloverEmblem/Metropol_Mapobject_Special_GrandCloverEmblem--1737122885151"),
             (this.assets.Metropol_Mapobject_Special_GrandAmethystLotus =
               "itemassets/Worldmap/WorldmapObjects/Landmarks/Metropol_Mapobject_Special_GrandAmethystLotus/Metropol_Mapobject_Special_GrandAmethystLotus--1737122885151"),
             (this.assets.Capital_Mapobject_Special_GrandSapphireBrooch =
@@ -56931,9 +57187,9 @@ and limitations under the License.
             (this.assets.Eventunit_Unit_BavarianBrewer =
               "itemassets/Units/Eventunit/Eventunit_Unit_BavarianBrewer/Eventunit_Unit_BavarianBrewer--1725355383633"),
             (this.assets.ConstructionItem_OctoberfestHunter =
-              "itemassets/ConstructionItems/ConstructionItem_OctoberfestHunter/ConstructionItem_OctoberfestHunter--1725355383633"));
-          ((this.assets.ConstructionItem_OctoberfestGuardhouse =
-            "itemassets/ConstructionItems/ConstructionItem_OctoberfestGuardhouse/ConstructionItem_OctoberfestGuardhouse--1725355383633"),
+              "itemassets/ConstructionItems/ConstructionItem_OctoberfestHunter/ConstructionItem_OctoberfestHunter--1725355383633"),
+            (this.assets.ConstructionItem_OctoberfestGuardhouse =
+              "itemassets/ConstructionItems/ConstructionItem_OctoberfestGuardhouse/ConstructionItem_OctoberfestGuardhouse--1725355383633"),
             (this.assets.Hunter_Building_octoberfestHunter =
               "itemassets/Building/Hunter/Hunter_Building_octoberfestHunter/Hunter_Building_octoberfestHunter--1725355383633"),
             (this.assets.Guardpost_Building_octoberfestGuardhouse =
@@ -58275,9 +58531,9 @@ and limitations under the License.
             (this.assets.Guardpost_Building_SpookyGuardhouse =
               "itemassets/Building/Guardpost/Guardpost_Building_SpookyGuardhouse/Guardpost_Building_SpookyGuardhouse--1662989229831"),
             (this.assets.Deco_Building_PumpkinPlaza =
-              "itemassets/Building/Deco/Deco_Building_PumpkinPlaza/Deco_Building_PumpkinPlaza--1662989229831"),
-            (this.assets.Deco_Building_DeathMask =
-              "itemassets/Building/Deco/Deco_Building_DeathMask/Deco_Building_DeathMask--1662989229831"),
+              "itemassets/Building/Deco/Deco_Building_PumpkinPlaza/Deco_Building_PumpkinPlaza--1662989229831"));
+          ((this.assets.Deco_Building_DeathMask =
+            "itemassets/Building/Deco/Deco_Building_DeathMask/Deco_Building_DeathMask--1662989229831"),
             (this.assets.CollectorTeaserImage_small_Halloween_2021 =
               "itemassets/Dialogs/Events/CollectorEvent/Skins/CollectorTeaserImage_small_Halloween_2021/CollectorTeaserImage_small_Halloween_2021--1662978945441"),
             (this.assets.GeneralIntroductionCinematicsPlaylistExt =
@@ -58531,9 +58787,9 @@ and limitations under the License.
             (this.assets.Collectable_Currency_GenXP10000 =
               "itemassets/Collectables/Generals/Collectable_Currency_GenXP10000/Collectable_Currency_GenXP10000--1662467132958"),
             (this.assets.Collectable_Currency_GenXP1000 =
-              "itemassets/Collectables/Generals/Collectable_Currency_GenXP1000/Collectable_Currency_GenXP1000--1662467132958"));
-          ((this.assets.GeneralsHubLootChances =
-            "itemassets/Dialogs/Generals/GeneralsHub/GeneralsHubLootChances/GeneralsHubLootChances--1660232168765"),
+              "itemassets/Collectables/Generals/Collectable_Currency_GenXP1000/Collectable_Currency_GenXP1000--1662467132958"),
+            (this.assets.GeneralsHubLootChances =
+              "itemassets/Dialogs/Generals/GeneralsHub/GeneralsHubLootChances/GeneralsHubLootChances--1660232168765"),
             (this.assets.Collectable_Currency_PrincessToken =
               "itemassets/Collectables/Generals/Collectable_Currency_PrincessToken/Collectable_Currency_PrincessToken--1662468894539"),
             (this.assets.Collectable_Currency_KnightToken =
@@ -59875,9 +60131,9 @@ and limitations under the License.
             (this.assets.LongTermPeHighScoreDialog_D =
               "itemassets/Dialogs/Events/LongTermPointEvent/HighScore/LongTermPeHighScoreDialog_D/LongTermPeHighScoreDialog_D--1619680926738"),
             (this.assets.CastleGenericHighscore_D =
-              "itemassets/Dialogs/Events/GenericHighscore/CastleGenericHighscore_D/CastleGenericHighscore_D--1620737354225"),
-            (this.assets.Castle_Mapobject_Special_Underworld_6 =
-              "itemassets/Worldmap/WorldmapObjects/Castles/Underworld_Special/Castle_Mapobject_Special_Underworld_6/Castle_Mapobject_Special_Underworld_6--1619519310225"),
+              "itemassets/Dialogs/Events/GenericHighscore/CastleGenericHighscore_D/CastleGenericHighscore_D--1620737354225"));
+          ((this.assets.Castle_Mapobject_Special_Underworld_6 =
+            "itemassets/Worldmap/WorldmapObjects/Castles/Underworld_Special/Castle_Mapobject_Special_Underworld_6/Castle_Mapobject_Special_Underworld_6--1619519310225"),
             (this.assets.Dworkshop_Building_tropicalSummerDefensiveWorkshop =
               "itemassets/Building/Dworkshop/Dworkshop_Building_tropicalSummerDefensiveWorkshop/Dworkshop_Building_tropicalSummerDefensiveWorkshop--1619080567508"),
             (this.assets.Outpost_Mapobject_Special_BaronDucky =
@@ -60131,9 +60387,9 @@ and limitations under the License.
             (this.assets.ConstructionItem_WinterResearchtower =
               "itemassets/ConstructionItems/ConstructionItem_WinterResearchtower/ConstructionItem_WinterResearchtower--1606904532755"),
             (this.assets.Researchtower_Building_winterResearchtower =
-              "itemassets/Building/Researchtower/Researchtower_Building_winterResearchtower/Researchtower_Building_winterResearchtower--1606904532755"));
-          ((this.assets.Deco_Building_TerrorGold =
-            "itemassets/Building/Deco/Deco_Building_TerrorGold/Deco_Building_TerrorGold--1606904532755"),
+              "itemassets/Building/Researchtower/Researchtower_Building_winterResearchtower/Researchtower_Building_winterResearchtower--1606904532755"),
+            (this.assets.Deco_Building_TerrorGold =
+              "itemassets/Building/Deco/Deco_Building_TerrorGold/Deco_Building_TerrorGold--1606904532755"),
             (this.assets.Deco_Building_TerrorBlue =
               "itemassets/Building/Deco/Deco_Building_TerrorBlue/Deco_Building_TerrorBlue--1606904532755"),
             (this.assets.Deco_Building_StormIslandWhale =
@@ -61475,9 +61731,9 @@ and limitations under the License.
             (this.assets.AllianceCity_DefenceWorkshop_Level2_ShopIcon =
               "itemassets/Building/AllianceCity/ShopIcons/AllianceCity_DefenceWorkshop_Level2_ShopIcon/AllianceCity_DefenceWorkshop_Level2_ShopIcon--1573584429307"),
             (this.assets.AllianceCity_Gate_Level1_ShopIcon =
-              "itemassets/Building/AllianceCity/ShopIcons/AllianceCity_Gate_Level1_ShopIcon/AllianceCity_Gate_Level1_ShopIcon--1573584429307"),
-            (this.assets.AllianceCity_Gate_Level2_ShopIcon =
-              "itemassets/Building/AllianceCity/ShopIcons/AllianceCity_Gate_Level2_ShopIcon/AllianceCity_Gate_Level2_ShopIcon--1573584429307"),
+              "itemassets/Building/AllianceCity/ShopIcons/AllianceCity_Gate_Level1_ShopIcon/AllianceCity_Gate_Level1_ShopIcon--1573584429307"));
+          ((this.assets.AllianceCity_Gate_Level2_ShopIcon =
+            "itemassets/Building/AllianceCity/ShopIcons/AllianceCity_Gate_Level2_ShopIcon/AllianceCity_Gate_Level2_ShopIcon--1573584429307"),
             (this.assets.AllianceCity_Gate_Royal_ShopIcon =
               "itemassets/Building/AllianceCity/ShopIcons/AllianceCity_Gate_Royal_ShopIcon/AllianceCity_Gate_Royal_ShopIcon--1573584429307"),
             (this.assets.AllianceCity_Keep_Level1_ShopIcon =
@@ -61731,9 +61987,9 @@ and limitations under the License.
             (this.assets.Deco_Building_EternityGarden =
               "itemassets/Building/Deco/Deco_Building_EternityGarden/Deco_Building_EternityGarden--1573584429307"),
             (this.assets.Deco_Building_Excalibur =
-              "itemassets/Building/Deco/Deco_Building_Excalibur/Deco_Building_Excalibur--1573584429307"));
-          ((this.assets.Deco_Building_Fairground =
-            "itemassets/Building/Deco/Deco_Building_Fairground/Deco_Building_Fairground--1637749533631"),
+              "itemassets/Building/Deco/Deco_Building_Excalibur/Deco_Building_Excalibur--1573584429307"),
+            (this.assets.Deco_Building_Fairground =
+              "itemassets/Building/Deco/Deco_Building_Fairground/Deco_Building_Fairground--1637749533631"),
             (this.assets.Deco_Building_FalconersOutpost =
               "itemassets/Building/Deco/Deco_Building_FalconersOutpost/Deco_Building_FalconersOutpost--1573584429307"),
             (this.assets.Deco_Building_Fieldkitchen =
@@ -63075,9 +63331,9 @@ and limitations under the License.
             (this.assets.Stable_Building_Level3 =
               "itemassets/Building/Stable/Stable_Building_Level3/Stable_Building_Level3--1637749533631"),
             (this.assets.Stable_Building_piratesStable =
-              "itemassets/Building/Stable/Stable_Building_piratesStable/Stable_Building_piratesStable--1573584429307"),
-            (this.assets.Stable_Building_transylvanianStables =
-              "itemassets/Building/Stable/Stable_Building_transylvanianStables/Stable_Building_transylvanianStables--1573584429307"),
+              "itemassets/Building/Stable/Stable_Building_piratesStable/Stable_Building_piratesStable--1573584429307"));
+          ((this.assets.Stable_Building_transylvanianStables =
+            "itemassets/Building/Stable/Stable_Building_transylvanianStables/Stable_Building_transylvanianStables--1573584429307"),
             (this.assets.Stonemason_Building_elvenStonemason =
               "itemassets/Building/Stonemason/Stonemason_Building_elvenStonemason/Stonemason_Building_elvenStonemason--1573584429307"),
             (this.assets.Stonemason_Building_graniteRockStonemason =
@@ -63331,9 +63587,9 @@ and limitations under the License.
             (this.assets.DetailView_Endnode_Event73 =
               "itemassets/CastleDetailView/DetailView_Endnode_Event73/DetailView_Endnode_Event73--1573584429307"),
             (this.assets.DetailView_EventDungeon_3 =
-              "itemassets/CastleDetailView/DetailView_EventDungeon_3/DetailView_EventDungeon_3--1573584429307"));
-          ((this.assets.DetailView_EventDungeon_4 =
-            "itemassets/CastleDetailView/DetailView_EventDungeon_4/DetailView_EventDungeon_4--1573584429307"),
+              "itemassets/CastleDetailView/DetailView_EventDungeon_3/DetailView_EventDungeon_3--1573584429307"),
+            (this.assets.DetailView_EventDungeon_4 =
+              "itemassets/CastleDetailView/DetailView_EventDungeon_4/DetailView_EventDungeon_4--1573584429307"),
             (this.assets.DetailView_EventDungeon =
               "itemassets/CastleDetailView/DetailView_EventDungeon/DetailView_EventDungeon--1573584429307"),
             (this.assets.DetailView_KhanCamp =
@@ -64675,9 +64931,9 @@ and limitations under the License.
             (this.assets.CastlePaymentRewardSpecialOfferBloodcrow =
               "itemassets/Dialogs/Events/PaymentReward/CastlePaymentRewardSpecialOfferBloodcrow/CastlePaymentRewardSpecialOfferBloodcrow--1573584429307"),
             (this.assets.CastlePaymentRewardSpecialOfferChristmas =
-              "itemassets/Dialogs/Events/PaymentReward/CastlePaymentRewardSpecialOfferChristmas/CastlePaymentRewardSpecialOfferChristmas--1573584429307"),
-            (this.assets.CastlePaymentRewardSpecialOfferComponents =
-              "itemassets/Dialogs/Events/PaymentReward/CastlePaymentRewardSpecialOfferComponents/CastlePaymentRewardSpecialOfferComponents--1573584429307"),
+              "itemassets/Dialogs/Events/PaymentReward/CastlePaymentRewardSpecialOfferChristmas/CastlePaymentRewardSpecialOfferChristmas--1573584429307"));
+          ((this.assets.CastlePaymentRewardSpecialOfferComponents =
+            "itemassets/Dialogs/Events/PaymentReward/CastlePaymentRewardSpecialOfferComponents/CastlePaymentRewardSpecialOfferComponents--1573584429307"),
             (this.assets.CastlePaymentRewardSpecialOfferDefense =
               "itemassets/Dialogs/Events/PaymentReward/CastlePaymentRewardSpecialOfferDefense/CastlePaymentRewardSpecialOfferDefense--1573584429307"),
             (this.assets.CastlePaymentRewardSpecialOfferEaster =
@@ -64931,9 +65187,9 @@ and limitations under the License.
             (this.assets.WorldCupFlagTeam13 =
               "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam13/WorldCupFlagTeam13--1573584429307"),
             (this.assets.WorldCupFlagTeam14 =
-              "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam14/WorldCupFlagTeam14--1573584429307"));
-          ((this.assets.WorldCupFlagTeam15 =
-            "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam15/WorldCupFlagTeam15--1573584429307"),
+              "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam14/WorldCupFlagTeam14--1573584429307"),
+            (this.assets.WorldCupFlagTeam15 =
+              "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam15/WorldCupFlagTeam15--1573584429307"),
             (this.assets.WorldCupFlagTeam16 =
               "itemassets/Dialogs/Events/WorldCup/flags/WorldCupFlagTeam16/WorldCupFlagTeam16--1573584429307"),
             (this.assets.WorldCupFlagTeam17 =
@@ -66275,9 +66531,9 @@ and limitations under the License.
             (this.assets.SagaMapHighlights13 =
               "itemassets/Dialogs/Questbook/SagaMapHighlights13/SagaMapHighlights13--1573584429307"),
             (this.assets.SagaMapHighlights14 =
-              "itemassets/Dialogs/Questbook/SagaMapHighlights14/SagaMapHighlights14--1573584429307"),
-            (this.assets.SagaMapHighlights15 =
-              "itemassets/Dialogs/Questbook/SagaMapHighlights15/SagaMapHighlights15--1573584429307"),
+              "itemassets/Dialogs/Questbook/SagaMapHighlights14/SagaMapHighlights14--1573584429307"));
+          ((this.assets.SagaMapHighlights15 =
+            "itemassets/Dialogs/Questbook/SagaMapHighlights15/SagaMapHighlights15--1573584429307"),
             (this.assets.SagaMapHighlights16 =
               "itemassets/Dialogs/Questbook/SagaMapHighlights16/SagaMapHighlights16--1573584429307"),
             (this.assets.SagaMapHighlights17 =
@@ -66531,9 +66787,9 @@ and limitations under the License.
             (this.assets.Effect_Icon_200 =
               "itemassets/Effects/Effect_Icon_200/Effect_Icon_200--1573584429307"),
             (this.assets.Effect_Icon_21 =
-              "itemassets/Effects/Effect_Icon_21/Effect_Icon_21--1573584429307"));
-          ((this.assets.Effect_Icon_22 =
-            "itemassets/Effects/Effect_Icon_22/Effect_Icon_22--1573584429307"),
+              "itemassets/Effects/Effect_Icon_21/Effect_Icon_21--1573584429307"),
+            (this.assets.Effect_Icon_22 =
+              "itemassets/Effects/Effect_Icon_22/Effect_Icon_22--1573584429307"),
             (this.assets.Effect_Icon_25 =
               "itemassets/Effects/Effect_Icon_25/Effect_Icon_25--1573584429307"),
             (this.assets.Effect_Icon_26 =
@@ -67875,9 +68131,9 @@ and limitations under the License.
             (this.assets.Item_Unique_558 =
               "itemassets/Equipment/Uniques/Item_Unique_558/Item_Unique_558--1573584429307"),
             (this.assets.Item_Unique_559 =
-              "itemassets/Equipment/Uniques/Item_Unique_559/Item_Unique_559--1573584429307"),
-            (this.assets.Item_Unique_56 =
-              "itemassets/Equipment/Uniques/Item_Unique_56/Item_Unique_56--1573584429307"),
+              "itemassets/Equipment/Uniques/Item_Unique_559/Item_Unique_559--1573584429307"));
+          ((this.assets.Item_Unique_56 =
+            "itemassets/Equipment/Uniques/Item_Unique_56/Item_Unique_56--1573584429307"),
             (this.assets.Item_Unique_560 =
               "itemassets/Equipment/Uniques/Item_Unique_560/Item_Unique_560--1573584429307"),
             (this.assets.Item_Unique_561 =
@@ -68131,9 +68387,9 @@ and limitations under the License.
             (this.assets.Item_Unique_98 =
               "itemassets/Equipment/Uniques/Item_Unique_98/Item_Unique_98--1573584429307"),
             (this.assets.Item_Unique_99 =
-              "itemassets/Equipment/Uniques/Item_Unique_99/Item_Unique_99--1573584429307"));
-          ((this.assets.Item_Weapon01_LV1 =
-            "itemassets/Equipment/Weapons/Item_Weapon01_LV1/Item_Weapon01_LV1--1573584429307"),
+              "itemassets/Equipment/Uniques/Item_Unique_99/Item_Unique_99--1573584429307"),
+            (this.assets.Item_Weapon01_LV1 =
+              "itemassets/Equipment/Weapons/Item_Weapon01_LV1/Item_Weapon01_LV1--1573584429307"),
             (this.assets.Item_Weapon01_LV2 =
               "itemassets/Equipment/Weapons/Item_Weapon01_LV2/Item_Weapon01_LV2--1573584429307"),
             (this.assets.Item_Weapon01_LV3 =
@@ -69475,9 +69731,9 @@ and limitations under the License.
             (this.assets.Eventunit_Unit_Slingshotmarksman =
               "itemassets/Units/Eventunit/Eventunit_Unit_Slingshotmarksman/Eventunit_Unit_Slingshotmarksman--1573584429307"),
             (this.assets.Eventunit_Unit_Spearthrower =
-              "itemassets/Units/Eventunit/Eventunit_Unit_Spearthrower/Eventunit_Unit_Spearthrower--1573584429307"),
-            (this.assets.Eventunit_Unit_StpatricksDefenderMelee =
-              "itemassets/Units/Eventunit/Eventunit_Unit_StpatricksDefenderMelee/Eventunit_Unit_StpatricksDefenderMelee--1573584429307"),
+              "itemassets/Units/Eventunit/Eventunit_Unit_Spearthrower/Eventunit_Unit_Spearthrower--1573584429307"));
+          ((this.assets.Eventunit_Unit_StpatricksDefenderMelee =
+            "itemassets/Units/Eventunit/Eventunit_Unit_StpatricksDefenderMelee/Eventunit_Unit_StpatricksDefenderMelee--1573584429307"),
             (this.assets.Eventunit_Unit_StpatricksDefenderRange =
               "itemassets/Units/Eventunit/Eventunit_Unit_StpatricksDefenderRange/Eventunit_Unit_StpatricksDefenderRange--1573584429307"),
             (this.assets.Eventunit_Unit_Tentacle =
@@ -69731,9 +69987,9 @@ and limitations under the License.
             (this.assets.Castle_Eiland_Neg_Flag_VIP =
               "itemassets/Worldmap/WorldmapObjects/Castles/Eiland_Titles/Castle_Eiland_Neg_Flag_VIP/Castle_Eiland_Neg_Flag_VIP--1573584429307"),
             (this.assets.Castle_Eiland_Neg_Title =
-              "itemassets/Worldmap/WorldmapObjects/Castles/Eiland_Titles/Castle_Eiland_Neg_Title/Castle_Eiland_Neg_Title--1573584429307"));
-          ((this.assets.Castle_Eiland_Pos_Flag_Default =
-            "itemassets/Worldmap/WorldmapObjects/Castles/Eiland_Titles/Castle_Eiland_Pos_Flag_Default/Castle_Eiland_Pos_Flag_Default--1573584429307"),
+              "itemassets/Worldmap/WorldmapObjects/Castles/Eiland_Titles/Castle_Eiland_Neg_Title/Castle_Eiland_Neg_Title--1573584429307"),
+            (this.assets.Castle_Eiland_Pos_Flag_Default =
+              "itemassets/Worldmap/WorldmapObjects/Castles/Eiland_Titles/Castle_Eiland_Pos_Flag_Default/Castle_Eiland_Pos_Flag_Default--1573584429307"),
             (this.assets.Castle_Eiland_Pos_Flag_Premium =
               "itemassets/Worldmap/WorldmapObjects/Castles/Eiland_Titles/Castle_Eiland_Pos_Flag_Premium/Castle_Eiland_Pos_Flag_Premium--1573584429307"),
             (this.assets.Castle_Eiland_Pos_Flag_VIP =
@@ -74994,8 +75250,8 @@ and limitations under the License.
       f = createjs.Shape,
       T = createjs.DisplayObject,
       S = createjs.Text,
-      y = createjs.Point,
-      I = createjs.Stage,
+      I = createjs.Point,
+      y = createjs.Stage,
       v = n(603),
       A = createjs.FocusEvent,
       O = createjs.MouseEvent.STAGE_MOUSE_DOWN,
@@ -75049,8 +75305,8 @@ and limitations under the License.
           (t._height = 100),
           (t.isDefaultText = !1),
           (t._htmlTextFieldElement = null),
-          (t.mouseDownPoint = new y()),
-          (t.mouseUpPoint = new y()),
+          (t.mouseDownPoint = new I()),
+          (t.mouseUpPoint = new I()),
           (t.inputTextFieldService = v.InputTextFieldService.singleton()),
           (t._links = []),
           (t._hoveredLinkIndex = -1),
@@ -76567,13 +76823,13 @@ and limitations under the License.
                     C++
                   ) {
                     var T = f[C],
-                      y = T[0];
+                      I = T[0];
                     if (
                       ((p = g),
                       (h += T[1]),
                       (g = n + m.measureText(h).width) > e.x)
                     )
-                      return e.x - p > g - e.x ? a + y + 1 : a + y;
+                      return e.x - p > g - e.x ? a + I + 1 : a + I;
                   }
                   F.error(
                     "did not find character boundary for cursor, even though it should be inside this token",
@@ -76586,11 +76842,11 @@ and limitations under the License.
                   (a += characters(c.text).length),
                   t.drawingTokens.indexOf(c) === t.drawingTokens.length - 1)
                 )
-                  if ((I = l()) > -1) return I;
+                  if ((y = l()) > -1) return y;
                 break;
               case "set-x-y":
-                var I;
-                if (a > 0) if ((I = l()) > -1) return I;
+                var y;
+                if (a > 0) if ((y = l()) > -1) return y;
                 ((n = c.x), (i = c.x), (s = c.y), (r = a));
                 break;
               case "advance-x":
@@ -76618,7 +76874,7 @@ and limitations under the License.
             (c.currentBrowserInfo.isMobile &&
               (TextField.isMobileKeyboardShown = !0),
               this.dispatchEvent(A.FOCUS_IN));
-            for (var e = this.scaleY, t = this.parent; t && !(t instanceof I);)
+            for (var e = this.scaleY, t = this.parent; t && !(t instanceof y);)
               ((e *= t.scaleY), (t = t.parent));
             ((this._htmlTextFieldElement.style.display = "block"),
               (this._htmlTextFieldElement.style.font =
@@ -76960,8 +77216,8 @@ and limitations under the License.
         f = "[object Object]",
         T = "[object Proxy]",
         S = "[object RegExp]",
-        y = "[object Set]",
-        I = "[object String]",
+        I = "[object Set]",
+        y = "[object String]",
         v = "[object Symbol]",
         A = "[object Undefined]",
         O = "[object ArrayBuffer]",
@@ -76991,8 +77247,8 @@ and limitations under the License.
           R[E] =
           R[f] =
           R[S] =
-          R[y] =
           R[I] =
+          R[y] =
           R["[object WeakMap]"] =
             !1));
       var N = "object" == typeof e && e && e.Object === Object && e,
@@ -77117,8 +77373,8 @@ and limitations under the License.
       function arrayLikeKeys(e, t) {
         var n = Se(e),
           i = !n && Te(e),
-          s = !n && !i && ye(e),
-          a = !n && !i && !s && Ie(e),
+          s = !n && !i && Ie(e),
+          a = !n && !i && !s && ye(e),
           r = n || i || s || a,
           o = r
             ? (function baseTimes(e, t) {
@@ -77179,14 +77435,14 @@ and limitations under the License.
                   T = (p = p == l ? f : p) == f,
                   A = (C = C == l ? f : C) == f,
                   D = p == C;
-                if (D && ye(e)) {
-                  if (!ye(t)) return !1;
+                if (D && Ie(e)) {
+                  if (!Ie(t)) return !1;
                   ((_ = !0), (T = !1));
                 }
                 if (D && !T)
                   return (
                     o || (o = new Stack()),
-                    _ || Ie(e)
+                    _ || ye(e)
                       ? equalArrays(e, t, n, i, s, o)
                       : (function equalByTag(e, t, n, i, s, o, l) {
                           switch (n) {
@@ -77209,11 +77465,11 @@ and limitations under the License.
                             case d:
                               return e.name == t.name && e.message == t.message;
                             case S:
-                            case I:
+                            case y:
                               return e == t + "";
                             case g:
                               var u = mapToArray;
-                            case y:
+                            case I:
                               var _ = i & a;
                               if (
                                 (u || (u = setToArray), e.size != t.size && !_)
@@ -77534,7 +77790,7 @@ and limitations under the License.
       ((ae && fe(new ae(new ArrayBuffer(1))) != L) ||
         (re && fe(new re()) != g) ||
         (oe && "[object Promise]" != fe(oe.resolve())) ||
-        (le && fe(new le()) != y) ||
+        (le && fe(new le()) != I) ||
         (ue && "[object WeakMap]" != fe(new ue()))) &&
         (fe = function (e) {
           var t = baseGetTag(e),
@@ -77549,7 +77805,7 @@ and limitations under the License.
               case de:
                 return "[object Promise]";
               case he:
-                return y;
+                return I;
               case pe:
                 return "[object WeakMap]";
             }
@@ -77567,7 +77823,7 @@ and limitations under the License.
               );
             },
         Se = Array.isArray;
-      var ye =
+      var Ie =
         ie ||
         function stubFalse() {
           return !1;
@@ -77587,7 +77843,7 @@ and limitations under the License.
       function isObjectLike(e) {
         return null != e && "object" == typeof e;
       }
-      var Ie = w
+      var ye = w
         ? (function baseUnary(e) {
             return function (t) {
               return e(t);
@@ -77894,23 +78150,23 @@ and limitations under the License.
         f = Math.round(1.2 * (E + 1) + C),
         T = -(Math.max(p, 1) - 1) * f,
         S = [],
-        y = [S];
+        I = [S];
       ("textWidth" !== _ && (_ -= a.TEXT_GUTTER_WIDTH),
         (h -= 2 * a.TEXT_GUTTER_WIDTH));
-      for (var I = 0, v = n, A = [], O = 0, L = t; O < L.length; O++) {
+      for (var y = 0, v = n, A = [], O = 0, L = t; O < L.length; O++) {
         var D = L[O];
         switch (D.type) {
           case "newline":
             (S.push({ type: "plain", text: "\n", width: 0 }),
               (S = []),
-              y.push(S),
-              (I = 0));
+              I.push(S),
+              (y = 0));
             break;
           case "plain":
             r.applyFormat(e, v, c);
             var b = D.text,
               R = e.measureText(b).width;
-            if (d && "number" == typeof _ && I + R > _) {
+            if (d && "number" == typeof _ && y + R > _) {
               var N = b.split(/([ \t\n\x0B\f\r-])/);
               ((N = N.filter(function (e) {
                 return "" != e;
@@ -77933,11 +78189,11 @@ and limitations under the License.
               for (var B = 0, P = N; B < P.length; B++) {
                 var M = P[B],
                   U = e.measureText(M).width;
-                I + U > _ && " " != M && ((S = []), y.push(S), (I = 0));
+                y + U > _ && " " != M && ((S = []), I.push(S), (y = 0));
                 var G = { type: "plain", text: M, width: U };
-                (S.push(G), (I += G.width));
+                (S.push(G), (y += G.width));
               }
-            } else (S.push({ type: "plain", text: b, width: R }), (I += R));
+            } else (S.push({ type: "plain", text: b, width: R }), (y += R));
             break;
           case "push-format-augmentation":
             ((A = A.concat([v])),
@@ -77953,9 +78209,9 @@ and limitations under the License.
             S.push(D);
         }
       }
-      var F = Math.max.apply(Math, y.map(lineTextWidth)),
+      var F = Math.max.apply(Math, I.map(lineTextWidth)),
         k = (_ = "number" == typeof _ ? _ : F) + 2 * a.TEXT_GUTTER_WIDTH,
-        w = y.map(function (e, t) {
+        w = I.map(function (e, t) {
           var n;
           if (v.align === s.TextFormatAlign.CENTER) {
             var i = lineTextWidth(e);
@@ -78128,7 +78384,7 @@ and limitations under the License.
       var f = Object.prototype.toString,
         T = C.Symbol,
         S = T ? T.prototype : void 0,
-        y = S ? S.toString : void 0;
+        I = S ? S.toString : void 0;
       function baseToString(e) {
         if ("string" == typeof e) return e;
         if (
@@ -78142,7 +78398,7 @@ and limitations under the License.
             );
           })(e)
         )
-          return y ? y.call(e) : "";
+          return I ? I.call(e) : "";
         var t = e + "";
         return "0" == t && 1 / e == -n ? "-0" : t;
       }
@@ -78242,7 +78498,7 @@ and limitations under the License.
       var f = Object.prototype.toString,
         T = C.Symbol,
         S = T ? T.prototype : void 0,
-        y = S ? S.toString : void 0;
+        I = S ? S.toString : void 0;
       function baseToString(e) {
         if ("string" == typeof e) return e;
         if (
@@ -78256,7 +78512,7 @@ and limitations under the License.
             );
           })(e)
         )
-          return y ? y.call(e) : "";
+          return I ? I.call(e) : "";
         var t = e + "";
         return "0" == t && 1 / e == -n ? "-0" : t;
       }
@@ -81523,7 +81779,7 @@ and limitations under the License.
       function ConditionConst() {}
       return (
         (ConditionConst.calculateSpyCount = function (e) {
-          return Math.min(y.MAX_SPY_COUNT, 0 | Math.ceil((e - 4) / 10));
+          return Math.min(I.MAX_SPY_COUNT, 0 | Math.ceil((e - 4) / 10));
         }),
         (ConditionConst.amountOfTaxesToCollect = function (e) {
           return 10 * (0 | Math.round((150 * Math.exp(0.052 * e) - 170) / 10));
@@ -82693,7 +82949,7 @@ and limitations under the License.
       (S.INVENTORY_HARDCAP = 6e3),
       (t.ConstructionItemConst = S),
       (S.__class = "ConstructionItemConst"));
-    var y = (function () {
+    var I = (function () {
       function DailyQuestConst() {}
       return (
         (DailyQuestConst.REWARD_STEPS_$LI$ = function () {
@@ -82713,22 +82969,22 @@ and limitations under the License.
         DailyQuestConst
       );
     })();
-    ((y.MIN_LEVEL = 6),
-      (y.MAX_SPY_COUNT = 5),
-      (y.RUBY_STEP = 12),
-      (y.ACTIVITIES_PER_DAY = 12),
-      (y.TEMP_SERVER_ACTIVITIES_PER_DAY = 3),
-      (t.DailyQuestConst = y),
-      (y.__class = "DailyQuestConst"));
-    var I = (function () {
+    ((I.MIN_LEVEL = 6),
+      (I.MAX_SPY_COUNT = 5),
+      (I.RUBY_STEP = 12),
+      (I.ACTIVITIES_PER_DAY = 12),
+      (I.TEMP_SERVER_ACTIVITIES_PER_DAY = 3),
+      (t.DailyQuestConst = I),
+      (I.__class = "DailyQuestConst"));
+    var y = (function () {
       return function DaimyoConst() {};
     })();
-    ((I.DAIMYO_CASTLES_PER_PLAYER = 4),
-      (I.DAIMYO_TOWNSHIPS_PER_PLAYER = 4),
-      (I.DAIMYO_BARON_LOOK_ID = 1002),
-      (I.DAIMYO_GENERAL_LOOK_ID = 1003),
-      (t.DaimyoConst = I),
-      (I.__class = "DaimyoConst"));
+    ((y.DAIMYO_CASTLES_PER_PLAYER = 4),
+      (y.DAIMYO_TOWNSHIPS_PER_PLAYER = 4),
+      (y.DAIMYO_BARON_LOOK_ID = 1002),
+      (y.DAIMYO_GENERAL_LOOK_ID = 1003),
+      (t.DaimyoConst = y),
+      (y.__class = "DaimyoConst"));
     var v = (function () {
       function DecorationConst() {}
       return (
@@ -83031,10 +83287,10 @@ and limitations under the License.
             for (var T = 0; T < 3; T++)
               ((p[T] = 0 === o ? 0 : (c * p[T]) / E), (h[T] = u[T] - p[T]));
           for (var S = 0; S < 3; S++) ((m[S] = 0 | h[S]), (d[S] = 0 | p[S]));
-          for (var y = new Array(3), I = 0; I < 3; I++) y[I] = h[I] - m[I];
+          for (var I = new Array(3), y = 0; y < 3; y++) I[y] = h[y] - m[y];
           for (var v = new Array(3), A = 0; A < 3; A++) v[A] = p[A] - d[A];
           for (
-            var O = (y[0] + y[1] + y[2] + 0.5) | 0,
+            var O = (I[0] + I[1] + I[2] + 0.5) | 0,
               L = (v[0] + v[1] + v[2] + 0.49999) | 0,
               D = new Array(3),
               b = 0;
@@ -83043,7 +83299,7 @@ and limitations under the License.
           )
             D[b] = m[b] + d[b] === u[b];
           for (
-            var R, N = DefenseConst.getIndicesOfMaxToMinSorting(y), B = 0;
+            var R, N = DefenseConst.getIndicesOfMaxToMinSorting(I), B = 0;
             B < 3 && ((R = N[B]), !(O <= 0));
             B++
           )
@@ -86929,19 +87185,19 @@ and limitations under the License.
       (Se.MIN_LEVEL_FOR_RESOURCE_TRADER_BUTTON_FOR_PACKAGES = 70),
       (t.ResourceConst = Se),
       (Se.__class = "ResourceConst"));
-    var ye = (function () {
+    var Ie = (function () {
       return function RewardConst() {};
     })();
-    ((ye.PLAYER = 0),
-      (ye.ALLIANCE = 1),
-      (ye.ALLIANCE_MEMBER = 2),
-      (ye.DECO_GRANT_TYPE_NORMAL = 0),
-      (ye.DECO_GRANT_TYPE_GLOBAL = 1),
-      (ye.DECO_GRANT_TYPE_AREA_SPECIFIC = 2),
-      (ye.OFFER_ID_FOR_C2_INVITER_REWARD = 2209),
-      (t.RewardConst = ye),
-      (ye.__class = "RewardConst"));
-    var Ie = (function () {
+    ((Ie.PLAYER = 0),
+      (Ie.ALLIANCE = 1),
+      (Ie.ALLIANCE_MEMBER = 2),
+      (Ie.DECO_GRANT_TYPE_NORMAL = 0),
+      (Ie.DECO_GRANT_TYPE_GLOBAL = 1),
+      (Ie.DECO_GRANT_TYPE_AREA_SPECIFIC = 2),
+      (Ie.OFFER_ID_FOR_C2_INVITER_REWARD = 2209),
+      (t.RewardConst = Ie),
+      (Ie.__class = "RewardConst"));
+    var ye = (function () {
       function SceatSkillConst() {}
       return (
         (SceatSkillConst.getFastCompleteCostC2 = function (e, t) {
@@ -86952,7 +87208,7 @@ and limitations under the License.
         SceatSkillConst
       );
     })();
-    ((t.SceatSkillConst = Ie), (Ie.__class = "SceatSkillConst"));
+    ((t.SceatSkillConst = ye), (ye.__class = "SceatSkillConst"));
     var ve = (function () {
       function SeasonConst() {}
       return (
@@ -92124,8 +92380,8 @@ and limitations under the License.
       T.UNLOCK_DURATION_$LI$(),
       S.SLOT_TYPE_COUNTS_$LI$(),
       S.MAX_SLOTS_$LI$(),
-      y.RANDOM_REWARD_STEPS_$LI$(),
-      y.REWARD_STEPS_$LI$(),
+      I.RANDOM_REWARD_STEPS_$LI$(),
+      I.REWARD_STEPS_$LI$(),
       A.LEVELS_RIGHTWALL_FACTION_$LI$(),
       A.ITEMS_RIGHTWALL_FACTION_$LI$(),
       A.LEVELS_MIDDLEWALL_FACTION_$LI$(),
@@ -92901,8 +93157,8 @@ and limitations under the License.
       f = n(338),
       T = n(3),
       S = n(2),
-      y = n(55),
-      I = n(339),
+      I = n(55),
+      y = n(339),
       v = S.getLogger("CoreJS.BasicCacheBreakerSwf"),
       A = (function () {
         function BasicCacheBreakerSwf() {
@@ -92986,7 +93242,7 @@ and limitations under the License.
           }),
           (BasicCacheBreakerSwf.prototype.initializeStats = function () {
             if (this.env.isTest) {
-              var e = new I();
+              var e = new y();
               (document.body.appendChild(e.dom),
                 createjs.Ticker.addEventListener("tick", function () {
                   e.update();
@@ -93071,7 +93327,7 @@ and limitations under the License.
                       ),
                     (e.env.isFirstVisitOfGGS =
                       e.env.accountCookie.isNewAccount),
-                    e.env.accountCookie.cdn !== y.CDN.None &&
+                    e.env.accountCookie.cdn !== I.CDN.None &&
                       (e.env.customCDN = e.env.accountCookie.cdn),
                     t());
                 }));
@@ -93189,7 +93445,7 @@ and limitations under the License.
             var e = this;
             v.info("start World Assignment");
             var t = this.createWorldAssignmentConfig();
-            ((this._worldAssignment = new y.WorldAssignment()),
+            ((this._worldAssignment = new I.WorldAssignment()),
               this._worldAssignment.initialize(t),
               this._worldAssignment
                 .start(
@@ -93206,7 +93462,7 @@ and limitations under the License.
           (BasicCacheBreakerSwf.prototype.createWorldAssignmentConfig =
             function () {
               v.debug("env.isTest " + this.env.isTest);
-              var e = new y.WorldAssignmentGlobals();
+              var e = new I.WorldAssignmentGlobals();
               return (
                 (e.isTestEnvironment = this.env.isTest),
                 (e.forceToShowTestServers =
@@ -93293,7 +93549,7 @@ and limitations under the License.
               this.loadGame());
           }),
           (BasicCacheBreakerSwf.prototype.onWorldAssignmentFail = function (e) {
-            var t = e.id || y.WorldAssignmentErrorCodes.UNKNOWN_ERROR,
+            var t = e.id || I.WorldAssignmentErrorCodes.UNKNOWN_ERROR,
               n = e.message;
             (v.error("WorldAssignment failed: " + n + " (error id " + t + ")"),
               E.ExternalLog.logger.log(
@@ -120248,12 +120504,12 @@ and limitations under the License.
                             description: '"selectordinal"',
                           },
                           S = "select",
-                          y = {
+                          I = {
                             type: "literal",
                             value: "select",
                             description: '"select"',
                           },
-                          I = function (e, t) {
+                          y = function (e, t) {
                             return { type: "elementFormat", key: e, val: t };
                           },
                           v = function (e, t) {
@@ -120413,8 +120669,8 @@ and limitations under the License.
                           },
                           Te = 0,
                           Se = 0,
-                          ye = { line: 1, column: 1, seenCR: !1 },
-                          Ie = 0,
+                          Ie = { line: 1, column: 1, seenCR: !1 },
+                          ye = 0,
                           ve = [],
                           Ae = 0;
                         if ("startRule" in n) {
@@ -120431,7 +120687,7 @@ and limitations under the License.
                             Se !== t &&
                               (Se > t &&
                                 ((Se = 0),
-                                (ye = { line: 1, column: 1, seenCR: !1 })),
+                                (Ie = { line: 1, column: 1, seenCR: !1 })),
                               (function advance(t, n, i) {
                                 var s, a;
                                 for (s = n; s < i; s++)
@@ -120446,14 +120702,14 @@ and limitations under the License.
                                         (t.column = 1),
                                         (t.seenCR = !0))
                                       : (t.column++, (t.seenCR = !1));
-                              })(ye, Se, t),
+                              })(Ie, Se, t),
                               (Se = t)),
-                            ye
+                            Ie
                           );
                         }
                         function peg$fail(e) {
-                          Te < Ie ||
-                            (Te > Ie && ((Ie = Te), (ve = [])), ve.push(e));
+                          Te < ye ||
+                            (Te > ye && ((ye = Te), (ve = [])), ve.push(e));
                         }
                         function peg$buildException(t, n, i) {
                           var s = peg$computePosDetails(i),
@@ -120640,7 +120896,7 @@ and limitations under the License.
                                 (n = peg$parse_()) !== i
                                   ? (e.substr(Te, 6) === S
                                       ? ((s = S), (Te += 6))
-                                      : ((s = i), 0 === Ae && peg$fail(y)),
+                                      : ((s = i), 0 === Ae && peg$fail(I)),
                                     s !== i && (a = peg$parse_()) !== i
                                       ? (44 === e.charCodeAt(Te)
                                           ? ((r = c), Te++)
@@ -120676,7 +120932,7 @@ and limitations under the License.
                                 )
                                   (a.push(r), (r = peg$parseargStylePattern()));
                                 a !== i
-                                  ? ((n = I(s, a)), (t = n))
+                                  ? ((n = y(s, a)), (t = n))
                                   : ((Te = t), (t = o));
                               } else ((Te = t), (t = o));
                             else ((Te = t), (t = o));
@@ -120979,7 +121235,7 @@ and limitations under the License.
                               type: "end",
                               description: "end of input",
                             }),
-                          peg$buildException(null, ve, Ie)
+                          peg$buildException(null, ve, ye)
                         );
                       },
                     }
@@ -121443,14 +121699,14 @@ and limitations under the License.
               },
               S =
                 /[\0-#%-\*,-;\?-\]_a-\{\}\x7F-\xA1\xA7\xAA\xAB\xAD\xB2\xB3\xB5-\xB7\xB9-\xD6\xD8-\xF6\xF8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0300-\u0374\u0376-\u0383\u0386-\u03F5\u03F7-\u0481\u0483-\u058C\u0590-\u0605\u0609\u060A\u060C\u060D\u0610-\u06DD\u06DF-\u06E8\u06EA-\u06FC\u06FF-\u07F5\u07F7-\u07FD\u0800-\u09F1\u09F4-\u09F9\u09FC-\u0AF0\u0AF2-\u0B6F\u0B71-\u0BF2\u0BFB-\u0C7E\u0C80-\u0D4E\u0D50-\u0D78\u0D7A-\u0E3E\u0E40-\u0F00\u0F04-\u0F12\u0F14\u0F18\u0F19\u0F20-\u0F33\u0F35\u0F37\u0F39-\u0FBD\u0FC6\u0FCD\u0FD0-\u0FD4\u0FD9-\u109D\u10A0-\u138F\u139A-\u166C\u166E-\u17DA\u17DC-\u193F\u1941-\u19DD\u1A00-\u1B60\u1B6B-\u1B73\u1B7D-\u1FBC\u1FBE\u1FC2-\u1FCC\u1FD0-\u1FDC\u1FE0-\u1FEC\u1FF0-\u1FFC\u1FFF-\u2043\u2045-\u2051\u2053-\u2079\u207D-\u2089\u208D-\u209F\u20C0-\u20FF\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2150-\u2189\u218C-\u218F\u2308-\u230B\u2329\u232A\u2427-\u243F\u244B-\u249B\u24EA-\u24FF\u2768-\u2793\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2B74\u2B75\u2B96\u2C00-\u2CE4\u2CEB-\u2E4F\u2E52-\u2E7F\u2E9A\u2EF4-\u2EFF\u2FD6-\u2FEF\u2FFC-\u3003\u3005-\u3011\u3014-\u301F\u3021-\u3035\u3038-\u303D\u3040-\u309A\u309D-\u318F\u3192-\u3195\u31A0-\u31BF\u31E4-\u31FF\u321F-\u3229\u3248-\u324F\u3251-\u325F\u3280-\u3289\u32B1-\u32BF\u3400-\u4DBF\u4E00-\uA48F\uA4C7-\uA6FF\uA717-\uA71F\uA722-\uA788\uA78B-\uA827\uA82C-\uA835\uA83A-\uAA76\uAA7A-\uAB5A\uAB5C-\uAB69\uAB6C-\uD7FF\uE000-\uFB28\uFB2A-\uFBB1\uFBC2-\uFDFB\uFDFE-\uFE61\uFE63\uFE67\uFE68\uFE6A-\uFF03\uFF05-\uFF0A\uFF0C-\uFF1B\uFF1F-\uFF3D\uFF3F\uFF41-\uFF5B\uFF5D\uFF5F-\uFFDF\uFFE7\uFFEF-\uFFFB\uFFFE\uFFFF]|\uD800[\uDC00-\uDD36\uDD40-\uDD78\uDD8A\uDD8B\uDD8F\uDD9D-\uDD9F\uDDA1-\uDDCF\uDDFD-\uDFFF]|[\uD801\uD803\uD804\uD806\uD808-\uD819\uD81B-\uD82E\uD830-\uD833\uD837\uD839\uD83A\uD83F-\uDBFF][\uDC00-\uDFFF]|\uD802[\uDC00-\uDC76\uDC79-\uDEC7\uDEC9-\uDFFF]|\uD805[\uDC00-\uDF3E\uDF40-\uDFFF]|\uD807[\uDC00-\uDFD4\uDFF2-\uDFFF]|\uD81A[\uDC00-\uDF3B\uDF40-\uDF44\uDF46-\uDFFF]|\uD82F[\uDC00-\uDC9B\uDC9D-\uDFFF]|\uD834[\uDCF6-\uDCFF\uDD27\uDD28\uDD65-\uDD69\uDD6D-\uDD82\uDD85-\uDD8B\uDDAA-\uDDAD\uDDE9-\uDDFF\uDE42-\uDE44\uDE46-\uDEFF\uDF57-\uDFFF]|\uD835[\uDC00-\uDEC0\uDEC2-\uDEDA\uDEDC-\uDEFA\uDEFC-\uDF14\uDF16-\uDF34\uDF36-\uDF4E\uDF50-\uDF6E\uDF70-\uDF88\uDF8A-\uDFA8\uDFAA-\uDFC2\uDFC4-\uDFFF]|\uD836[\uDE00-\uDE36\uDE3B-\uDE6C\uDE75\uDE84\uDE87-\uDFFF]|\uD838[\uDC00-\uDD4E\uDD50-\uDEFE\uDF00-\uDFFF]|\uD83B[\uDC00-\uDCAB\uDCAD-\uDCAF\uDCB1-\uDD2D\uDD2F-\uDEEF\uDEF2-\uDFFF]|\uD83C[\uDC2C-\uDC2F\uDC94-\uDC9F\uDCAF\uDCB0\uDCC0\uDCD0\uDCF6-\uDD0C\uDDAE-\uDDE5\uDE03-\uDE0F\uDE3C-\uDE3F\uDE49-\uDE4F\uDE52-\uDE5F\uDE66-\uDEFF]|\uD83D[\uDED8-\uDEDF\uDEED-\uDEEF\uDEFD-\uDEFF\uDF74-\uDF7F\uDFD9-\uDFDF\uDFEC-\uDFFF]|\uD83E[\uDC0C-\uDC0F\uDC48-\uDC4F\uDC5A-\uDC5F\uDC88-\uDC8F\uDCAE\uDCAF\uDCB2-\uDCFF\uDD79\uDDCC\uDE54-\uDE5F\uDE6E\uDE6F\uDE75-\uDE77\uDE7B-\uDE7F\uDE87-\uDE8F\uDEA9-\uDEAF\uDEB7-\uDEBF\uDEC3-\uDECF\uDED7-\uDEFF\uDF93\uDFCB-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/,
-              y =
+              I =
                 /[\0-\x1F!-#%-\*,-;\?-\]_a-\{\}\x7F-\x9F\xA1\xA7\xAA\xAB\xAD\xB2\xB3\xB5-\xB7\xB9-\xD6\xD8-\xF6\xF8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0300-\u0374\u0376-\u0383\u0386-\u03F5\u03F7-\u0481\u0483-\u058C\u0590-\u0605\u0609\u060A\u060C\u060D\u0610-\u06DD\u06DF-\u06E8\u06EA-\u06FC\u06FF-\u07F5\u07F7-\u07FD\u0800-\u09F1\u09F4-\u09F9\u09FC-\u0AF0\u0AF2-\u0B6F\u0B71-\u0BF2\u0BFB-\u0C7E\u0C80-\u0D4E\u0D50-\u0D78\u0D7A-\u0E3E\u0E40-\u0F00\u0F04-\u0F12\u0F14\u0F18\u0F19\u0F20-\u0F33\u0F35\u0F37\u0F39-\u0FBD\u0FC6\u0FCD\u0FD0-\u0FD4\u0FD9-\u109D\u10A0-\u138F\u139A-\u166C\u166E-\u167F\u1681-\u17DA\u17DC-\u193F\u1941-\u19DD\u1A00-\u1B60\u1B6B-\u1B73\u1B7D-\u1FBC\u1FBE\u1FC2-\u1FCC\u1FD0-\u1FDC\u1FE0-\u1FEC\u1FF0-\u1FFC\u1FFF\u200B-\u2027\u202A-\u202E\u2030-\u2043\u2045-\u2051\u2053-\u205E\u2060-\u2079\u207D-\u2089\u208D-\u209F\u20C0-\u20FF\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2150-\u2189\u218C-\u218F\u2308-\u230B\u2329\u232A\u2427-\u243F\u244B-\u249B\u24EA-\u24FF\u2768-\u2793\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2B74\u2B75\u2B96\u2C00-\u2CE4\u2CEB-\u2E4F\u2E52-\u2E7F\u2E9A\u2EF4-\u2EFF\u2FD6-\u2FEF\u2FFC-\u2FFF\u3001-\u3003\u3005-\u3011\u3014-\u301F\u3021-\u3035\u3038-\u303D\u3040-\u309A\u309D-\u318F\u3192-\u3195\u31A0-\u31BF\u31E4-\u31FF\u321F-\u3229\u3248-\u324F\u3251-\u325F\u3280-\u3289\u32B1-\u32BF\u3400-\u4DBF\u4E00-\uA48F\uA4C7-\uA6FF\uA717-\uA71F\uA722-\uA788\uA78B-\uA827\uA82C-\uA835\uA83A-\uAA76\uAA7A-\uAB5A\uAB5C-\uAB69\uAB6C-\uD7FF\uE000-\uFB28\uFB2A-\uFBB1\uFBC2-\uFDFB\uFDFE-\uFE61\uFE63\uFE67\uFE68\uFE6A-\uFF03\uFF05-\uFF0A\uFF0C-\uFF1B\uFF1F-\uFF3D\uFF3F\uFF41-\uFF5B\uFF5D\uFF5F-\uFFDF\uFFE7\uFFEF-\uFFFB\uFFFE\uFFFF]|\uD800[\uDC00-\uDD36\uDD40-\uDD78\uDD8A\uDD8B\uDD8F\uDD9D-\uDD9F\uDDA1-\uDDCF\uDDFD-\uDFFF]|[\uD801\uD803\uD804\uD806\uD808-\uD819\uD81B-\uD82E\uD830-\uD833\uD837\uD839\uD83A\uD83F-\uDBFF][\uDC00-\uDFFF]|\uD802[\uDC00-\uDC76\uDC79-\uDEC7\uDEC9-\uDFFF]|\uD805[\uDC00-\uDF3E\uDF40-\uDFFF]|\uD807[\uDC00-\uDFD4\uDFF2-\uDFFF]|\uD81A[\uDC00-\uDF3B\uDF40-\uDF44\uDF46-\uDFFF]|\uD82F[\uDC00-\uDC9B\uDC9D-\uDFFF]|\uD834[\uDCF6-\uDCFF\uDD27\uDD28\uDD65-\uDD69\uDD6D-\uDD82\uDD85-\uDD8B\uDDAA-\uDDAD\uDDE9-\uDDFF\uDE42-\uDE44\uDE46-\uDEFF\uDF57-\uDFFF]|\uD835[\uDC00-\uDEC0\uDEC2-\uDEDA\uDEDC-\uDEFA\uDEFC-\uDF14\uDF16-\uDF34\uDF36-\uDF4E\uDF50-\uDF6E\uDF70-\uDF88\uDF8A-\uDFA8\uDFAA-\uDFC2\uDFC4-\uDFFF]|\uD836[\uDE00-\uDE36\uDE3B-\uDE6C\uDE75\uDE84\uDE87-\uDFFF]|\uD838[\uDC00-\uDD4E\uDD50-\uDEFE\uDF00-\uDFFF]|\uD83B[\uDC00-\uDCAB\uDCAD-\uDCAF\uDCB1-\uDD2D\uDD2F-\uDEEF\uDEF2-\uDFFF]|\uD83C[\uDC2C-\uDC2F\uDC94-\uDC9F\uDCAF\uDCB0\uDCC0\uDCD0\uDCF6-\uDD0C\uDDAE-\uDDE5\uDE03-\uDE0F\uDE3C-\uDE3F\uDE49-\uDE4F\uDE52-\uDE5F\uDE66-\uDEFF]|\uD83D[\uDED8-\uDEDF\uDEED-\uDEEF\uDEFD-\uDEFF\uDF74-\uDF7F\uDFD9-\uDFDF\uDFEC-\uDFFF]|\uD83E[\uDC0C-\uDC0F\uDC48-\uDC4F\uDC5A-\uDC5F\uDC88-\uDC8F\uDCAE\uDCAF\uDCB2-\uDCFF\uDD79\uDDCC\uDE54-\uDE5F\uDE6E\uDE6F\uDE75-\uDE77\uDE7B-\uDE7F\uDE87-\uDE8F\uDEA9-\uDEAF\uDEB7-\uDEBF\uDEC3-\uDECF\uDED7-\uDEFF\uDF93\uDFCB-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/,
-              I = function (e, t, n) {
+              y = function (e, t, n) {
                 var i,
                   s,
                   r,
                   o,
-                  l = { "[:digit:]": /\d/, "[:^S:]": S, "[[:^S:]&[:^Z:]]": y };
+                  l = { "[:digit:]": /\d/, "[:^S:]": S, "[[:^S:]&[:^Z:]]": I };
                 return (
                   "code" === n.style
                     ? (r = e)
@@ -121588,8 +121844,8 @@ and limitations under the License.
                       s.on("get", validateRequiredCldr));
                     try {
                       _ = {
-                        accounting: I,
-                        code: I,
+                        accounting: y,
+                        code: y,
                         name: function (e, t) {
                           var n = r("decimal", t);
                           return (
@@ -121612,7 +121868,7 @@ and limitations under the License.
                             }
                           );
                         },
-                        symbol: I,
+                        symbol: y,
                       }[h](e, s, t);
                     } finally {
                       s.off("get", validateRequiredCldr);
@@ -121693,10 +121949,10 @@ and limitations under the License.
               f = t._validateParameterType,
               T = t._validateParameterTypePlainObject,
               S = t._validateParameterTypeString,
-              y = function (e, t) {
+              I = function (e, t) {
                 f(e, t, void 0 === e || e instanceof Date, "Date");
               },
-              I = "GyYuUrQqMLlwWEecdDFghHKkmsSAzZOvVXx"
+              y = "GyYuUrQqMLlwWEecdDFghHKkmsSAzZOvVXx"
                 .split("")
                 .reduce(function (e, t, n) {
                   return ((e[t] = n), e);
@@ -121841,7 +122097,7 @@ and limitations under the License.
                     if (
                       ((function validateSkeleton(e) {
                         var t,
-                          i = I;
+                          i = y;
                         (e.replace(
                           /[^GyYuUrQqMLlwWEecdDFghHKkmsSAzZOvVXx]/,
                           function (t) {
@@ -122513,7 +122769,7 @@ and limitations under the License.
                       return function dateToPartsFormatter(n) {
                         return (
                           C(n, "value"),
-                          y(n, "value"),
+                          I(n, "value"),
                           (function (e, t, n) {
                             var i = [],
                               s = n.timeSeparator;
@@ -123517,7 +123773,7 @@ and limitations under the License.
                 function (e, t) {
                   return (
                     C(e, "value"),
-                    y(e, "value"),
+                    I(e, "value"),
                     this.dateFormatter(t)(e)
                   );
                 }),
@@ -123525,7 +123781,7 @@ and limitations under the License.
                 function (e, t) {
                   return (
                     C(e, "value"),
-                    y(e, "value"),
+                    I(e, "value"),
                     this.dateToPartsFormatter(t)(e)
                   );
                 }),
@@ -124289,8 +124545,8 @@ and limitations under the License.
         f = "[object Map]",
         T = "[object Number]",
         S = "[object Object]",
-        y = "[object RegExp]",
-        I = "[object Set]",
+        I = "[object RegExp]",
+        y = "[object Set]",
         v = "[object String]",
         A = "[object Symbol]",
         O = "[object ArrayBuffer]",
@@ -124329,8 +124585,8 @@ and limitations under the License.
           w[f] =
           w[T] =
           w[S] =
-          w[y] =
           w[I] =
+          w[y] =
           w[v] =
           w["[object WeakMap]"] =
             !1));
@@ -124423,9 +124679,9 @@ and limitations under the License.
         fe = toSource(de),
         Te = toSource(he),
         Se = toSource(pe),
-        ye = ae ? ae.prototype : void 0,
-        Ie = ye ? ye.valueOf : void 0,
-        ve = ye ? ye.toString : void 0;
+        Ie = ae ? ae.prototype : void 0,
+        ye = Ie ? Ie.valueOf : void 0,
+        ve = Ie ? Ie.toString : void 0;
       function Hash(e) {
         var t = -1,
           n = e ? e.length : 0;
@@ -124529,12 +124785,12 @@ and limitations under the License.
                               return eq(+e, +t);
                             case g:
                               return e.name == t.name && e.message == t.message;
-                            case y:
+                            case I:
                             case v:
                               return e == t + "";
                             case f:
                               var u = mapToArray;
-                            case I:
+                            case y:
                               var _ = a & o;
                               if (
                                 (u || (u = setToArray), e.size != t.size && !_)
@@ -124546,7 +124802,7 @@ and limitations under the License.
                               var m = equalArrays(u(e), u(t), i, s, a, l);
                               return (l.delete(e), m);
                             case A:
-                              if (Ie) return Ie.call(e) == Ie.call(t);
+                              if (ye) return ye.call(e) == ye.call(t);
                           }
                           return !1;
                         })(e, t, _, n, i, s, a)
@@ -124925,7 +125181,7 @@ and limitations under the License.
       ((ce && Ae(new ce(new ArrayBuffer(1))) != L) ||
         (me && Ae(new me()) != f) ||
         (de && "[object Promise]" != Ae(de.resolve())) ||
-        (he && Ae(new he()) != I) ||
+        (he && Ae(new he()) != y) ||
         (pe && "[object WeakMap]" != Ae(new pe()))) &&
         (Ae = function (e) {
           var t = ie.call(e),
@@ -124940,7 +125196,7 @@ and limitations under the License.
               case fe:
                 return "[object Promise]";
               case Te:
-                return I;
+                return y;
               case Se:
                 return "[object WeakMap]";
             }
@@ -125459,8 +125715,8 @@ and limitations under the License.
       f = n(364),
       T = n(366),
       S = n(370),
-      y = n(374),
-      I = n(176),
+      I = n(374),
+      y = n(176),
       v = n(375),
       A = n(376),
       O = n(377),
@@ -125520,7 +125776,7 @@ and limitations under the License.
       fe = n(774),
       Te = n(775),
       Se = ae.getLogger("BasicFrameOne"),
-      ye = (function (e) {
+      Ie = (function (e) {
         function BasicFrameOne(t) {
           var n = e.call(this, t) || this;
           return (
@@ -125647,7 +125903,7 @@ and limitations under the License.
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_UPDATE_NETWORK,
-                I.BasicNetworkUpdateCommand,
+                y.BasicNetworkUpdateCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_IDENTITY_MANAGEMENT,
@@ -125734,7 +125990,7 @@ and limitations under the License.
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.COMMAND_INIT_ZONE_CAPACITY,
-                y.BasicInitZoneCapacityCommand,
+                I.BasicInitZoneCapacityCommand,
               ),
               h.CommandController.instance.registerCommand(
                 C.BasicController.GTM_CALL_GGS_TRACK_EVENT,
@@ -126088,7 +126344,7 @@ and limitations under the License.
           BasicFrameOne
         );
       })(ge);
-    t.BasicFrameOne = ye;
+    t.BasicFrameOne = Ie;
   },
   function (e, n, i) {
     var s;
@@ -128392,8 +128648,8 @@ and limitations under the License.
       f = n(438),
       T = n(443),
       S = n(445),
-      y = n(446),
-      I = n(30),
+      I = n(446),
+      y = n(30),
       v = (function (e) {
         function BasicInitServerCommands() {
           var t = (null !== e && e.apply(this, arguments)) || this;
@@ -128402,7 +128658,7 @@ and limitations under the License.
         return (
           i.__extends(BasicInitServerCommands, e),
           (BasicInitServerCommands.prototype.execute = function (e) {
-            (void 0 === e && (e = null), I.debug("BasicInitServerCommands"));
+            (void 0 === e && (e = null), y.debug("BasicInitServerCommands"));
             var t = a.BasicController.commandDict;
             (t.set(r.BasicSmartfoxConstants.S2C_CASH_HASH, new u.GCHCommand()),
               t.set(
@@ -128464,7 +128720,7 @@ and limitations under the License.
               ),
               t.set(
                 r.BasicSmartfoxConstants.S2C_VERSION_CHECK,
-                new y.VCKCommand(),
+                new I.VCKCommand(),
               ));
           }),
           BasicInitServerCommands
@@ -134669,11 +134925,11 @@ and limitations under the License.
                 f = a.interpolate(n, p, o.shaftPosition),
                 T = s.GeomUtil.getLineIntersection(c, d, f, E),
                 S = s.GeomUtil.getLineIntersection(m, h, f, C),
-                y = a.interpolate(n, p, o.edgeControlPosition),
-                I = _.clone();
-              I.normalize(u * o.edgeControlSize);
-              var v = y.add(I),
-                A = y.subtract(I);
+                I = a.interpolate(n, p, o.edgeControlPosition),
+                y = _.clone();
+              y.normalize(u * o.edgeControlSize);
+              var v = I.add(y),
+                A = I.subtract(y);
               (e.moveTo(c.x, c.y),
                 e.lineTo(T.x, T.y),
                 e.lineTo(E.x, E.y),
@@ -134710,20 +134966,20 @@ and limitations under the License.
                 f = a.interpolate(n, p, o.shaftPosition),
                 T = s.GeomUtil.getLineIntersection(c, d, f, E),
                 S = s.GeomUtil.getLineIntersection(m, h, f, C),
-                y = GraphicsUtil.getCurveControlPoint(c, T),
-                I = GraphicsUtil.getCurveControlPoint(m, S),
+                I = GraphicsUtil.getCurveControlPoint(c, T),
+                y = GraphicsUtil.getCurveControlPoint(m, S),
                 v = a.interpolate(n, p, o.edgeControlPosition),
                 A = _.clone();
               A.normalize(u * o.edgeControlSize);
               var O = v.add(A),
                 L = v.subtract(A);
               (e.moveTo(c.x, c.y),
-                e.curveTo(y.x, y.y, T.x, T.y),
+                e.curveTo(I.x, I.y, T.x, T.y),
                 e.lineTo(E.x, E.y),
                 e.curveTo(O.x, O.y, n.x, n.y),
                 e.curveTo(L.x, L.y, C.x, C.y),
                 e.lineTo(S.x, S.y),
-                e.curveTo(I.x, I.y, m.x, m.y),
+                e.curveTo(y.x, y.y, m.x, m.y),
                 e.lineTo(c.x, c.y));
               var D = [c, T, E, n, , C, S, m];
               return GraphicsUtil.getBoundsByPoints(D);
@@ -143902,7 +144158,7 @@ and limitations under the License.
           },
         };
       });
-      var y =
+      var I =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -143912,7 +144168,7 @@ and limitations under the License.
             }
             return e;
           },
-        I = s.reduce,
+        y = s.reduce,
         v = s.filter,
         A = (function () {
           function BugsnagReport(e, t) {
@@ -143942,7 +144198,7 @@ and limitations under the License.
               (this.metaData = {}),
               (this.request = void 0),
               (this.severity = this._handledState.severity),
-              (this.stacktrace = I(
+              (this.stacktrace = y(
                 n,
                 function (e, t) {
                   var n = O(t);
@@ -143989,7 +144245,7 @@ and limitations under the License.
                       (n = t)),
                     n
                       ? (this.metaData[e] || (this.metaData[e] = {}),
-                        (this.metaData[e] = y({}, this.metaData[e], n)),
+                        (this.metaData[e] = I({}, this.metaData[e], n)),
                         this)
                       : this);
             }),
@@ -144594,8 +144850,8 @@ and limitations under the License.
           },
         },
         Se = {},
-        ye = s.reduce,
-        Ie = /^.*<script.*?>/,
+        Ie = s.reduce,
+        ye = /^.*<script.*?>/,
         ve = /<\/script>.*$/,
         Ae = ((Se = {
           init: function (e) {
@@ -144619,7 +144875,7 @@ and limitations under the License.
                   o = Ae(r, a.lineNumber - 1),
                   l = o.script,
                   u = o.start,
-                  _ = ye(
+                  _ = Ie(
                     l,
                     function (e, t, n) {
                       return Math.abs(u + n + 1 - a.lineNumber) > 10
@@ -144634,11 +144890,11 @@ and limitations under the License.
           },
         }).extractScriptContent = function (e, t) {
           for (var n = t; n < e.length && !ve.test(e[n]);) n++;
-          for (var i = n; n > 0 && !Ie.test(e[n]);) n--;
+          for (var i = n; n > 0 && !ye.test(e[n]);) n--;
           var s = n,
             a = e.slice(s, i + 1);
           return (
-            (a[0] = a[0].replace(Ie, "")),
+            (a[0] = a[0].replace(ye, "")),
             (a[a.length - 1] = a[a.length - 1].replace(ve, "")),
             { script: a, start: s }
           );
@@ -145324,7 +145580,7 @@ and limitations under the License.
           },
         },
         St = {},
-        yt =
+        It =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -145334,9 +145590,9 @@ and limitations under the License.
             }
             return e;
           },
-        It = s.map,
+        yt = s.map,
         vt = s.reduce,
-        At = yt({}, u.schema, _e),
+        At = It({}, u.schema, _e),
         Ot = [ot, it, Te, Ee, Ke, re, me, Me, Re, Oe, Se, Qe, be, Je];
       St = function (e) {
         var t =
@@ -145366,7 +145622,7 @@ and limitations under the License.
         var i = vt(
             [].concat(Ot).concat(t),
             function (e, t) {
-              return t.configSchema ? yt({}, e, t.configSchema) : e;
+              return t.configSchema ? It({}, e, t.configSchema) : e;
             },
             At,
           ),
@@ -145381,7 +145637,7 @@ and limitations under the License.
         return (
           s.transport(window.XDomainRequest ? pt : Tt),
           s.configure(e),
-          It(n, function (e) {
+          yt(n, function (e) {
             return s._logger.warn(e);
           }),
           s.use(Te),
@@ -145397,7 +145653,7 @@ and limitations under the License.
           Lt(s.config, "interactionBreadcrumbsEnabled") && s.use(Oe),
           Lt(s.config, "networkBreadcrumbsEnabled") && s.use(Me),
           Lt(s.config, "consoleBreadcrumbsEnabled", !1) && s.use(me),
-          It(t, function (e) {
+          yt(t, function (e) {
             return s.use(e);
           }),
           s.config.autoCaptureSessions ? s.startSession() : s
@@ -147131,8 +147387,8 @@ and limitations under the License.
       f = /^-?0[0-7]+$/,
       T = /^(?![eE])[0-9]*(?:\.[0-9]*)?(?:[eE][+-]?[0-9]+)?$/,
       S = /^[a-zA-Z_][a-zA-Z_0-9]*$/,
-      y = /^(?:\.?[a-zA-Z_][a-zA-Z_0-9]*)(?:\.[a-zA-Z_][a-zA-Z_0-9]*)*$/,
-      I = /^(?:\.[a-zA-Z_][a-zA-Z_0-9]*)+$/;
+      I = /^(?:\.?[a-zA-Z_][a-zA-Z_0-9]*)(?:\.[a-zA-Z_][a-zA-Z_0-9]*)*$/,
+      y = /^(?:\.[a-zA-Z_][a-zA-Z_0-9]*)+$/;
     function parse(e, t, n) {
       (t instanceof s || ((n = t), (t = new s())), n || (n = parse.defaults));
       var v,
@@ -147217,7 +147473,7 @@ and limitations under the License.
             throw illegal(e, "number", t);
           })(t, !0);
         } catch (n) {
-          if (e && y.test(t)) return t;
+          if (e && I.test(t)) return t;
           throw illegal(t, "value");
         }
       }
@@ -147247,7 +147503,7 @@ and limitations under the License.
       }
       function parsePackage() {
         if (void 0 !== v) throw illegal("package");
-        if (((v = R()), !y.test(v))) throw illegal(v, "name");
+        if (((v = R()), !I.test(v))) throw illegal(v, "name");
         ((F = F.define(v)), P(";"));
       }
       function parseImport() {
@@ -147290,7 +147546,7 @@ and limitations under the License.
                           if (void 0 === m.mapKey[t]) throw illegal(t, "type");
                           P(",");
                           var n = R();
-                          if (!y.test(n)) throw illegal(n, "type");
+                          if (!I.test(n)) throw illegal(n, "type");
                           P(">");
                           var i = R();
                           if (!S.test(i)) throw illegal(i, "name");
@@ -147333,7 +147589,7 @@ and limitations under the License.
                         readRanges(n.reserved || (n.reserved = []), !0);
                         break;
                       default:
-                        if (!G || !y.test(e)) throw illegal(e);
+                        if (!G || !I.test(e)) throw illegal(e);
                         (N(e), parseField(n, "optional"));
                     }
                 }),
@@ -147395,13 +147651,13 @@ and limitations under the License.
                         r,
                         o = t;
                       (P("("), P("stream", !0) && (s = !0));
-                      if (!y.test((t = R()))) throw illegal(t);
+                      if (!I.test((t = R()))) throw illegal(t);
                       ((i = t),
                         P(")"),
                         P("returns"),
                         P("("),
                         P("stream", !0) && (r = !0));
-                      if (!y.test((t = R()))) throw illegal(t);
+                      if (!I.test((t = R()))) throw illegal(t);
                       ((a = t), P(")"));
                       var l = new c(o, n, i, a, s, r);
                       (ifBlock(l, function parseMethod_block(e) {
@@ -147419,7 +147675,7 @@ and limitations under the License.
           case "extend":
             return (
               (function parseExtension(e, t) {
-                if (!y.test((t = R()))) throw illegal(t, "reference");
+                if (!I.test((t = R()))) throw illegal(t, "reference");
                 var n = t;
                 ifBlock(null, function parseExtension_block(t) {
                   switch (t) {
@@ -147429,7 +147685,7 @@ and limitations under the License.
                       parseField(e, t, n);
                       break;
                     default:
-                      if (!G || !y.test(t)) throw illegal(t);
+                      if (!G || !I.test(t)) throw illegal(t);
                       (N(t), parseField(e, "optional", n));
                   }
                 });
@@ -147454,7 +147710,7 @@ and limitations under the License.
       function parseField(e, t, n) {
         var i = R();
         if ("group" !== i) {
-          if (!y.test(i)) throw illegal(i, "type");
+          if (!I.test(i)) throw illegal(i, "type");
           var s = R();
           if (!S.test(s)) throw illegal(s, "name");
           ((s = k(s)), P("="));
@@ -147505,13 +147761,13 @@ and limitations under the License.
       }
       function parseOption(e, t) {
         var n = P("(", !0);
-        if (!y.test((t = R()))) throw illegal(t, "name");
+        if (!I.test((t = R()))) throw illegal(t, "name");
         var i = t;
         (n &&
           (P(")"),
           (i = "(" + i + ")"),
           (t = B()),
-          I.test(t) && ((i += t), R())),
+          y.test(t) && ((i += t), R())),
           P("="),
           parseOptionValue(e, i));
       }
@@ -147653,4 +147909,4 @@ and limitations under the License.
       }));
   },
 ]);
-//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/dll/ggs.dll.94613e03c7b319c5f63d.js.map
+//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/dll/ggs.dll.b0936cf830f96901fca8.js.map

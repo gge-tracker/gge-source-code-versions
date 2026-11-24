@@ -8816,126 +8816,6 @@
   function (e, t, i) {
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
-    var n = i(0),
-      o = i(2),
-      a = i(1),
-      s = i(1),
-      r = i(1),
-      l = i(1),
-      c = i(3),
-      u = i(3),
-      d = i(4),
-      p = (function (e) {
-        function CastleStandardOkDialog(t) {
-          void 0 === t && (t = null);
-          var i = this;
-          return (
-            CONSTRUCTOR_HACK,
-            ((i =
-              e.call(
-                this,
-                null != t
-                  ? t
-                  : new (a.getDefinitionByName("CastleStandardOk"))(),
-              ) || this).itxt_title = i.textFieldManager.registerTextField(
-              i.standardDialog.txt_title,
-              new u.TextVO(""),
-            )),
-            (i.itxt_copy = i.textFieldManager.registerTextField(
-              i.standardDialog.txt_copy,
-              new u.TextVO(""),
-            )),
-            (i.itxt_copy.autoFitToBounds = !0),
-            (i.standardDialog.btn_label.visible = !1),
-            i
-          );
-        }
-        return (
-          n.__extends(CastleStandardOkDialog, e),
-          (CastleStandardOkDialog.prototype.applyProperties = function () {
-            (this.standardDialog &&
-              this.standardDialog.btn_ok &&
-              this.standardDialogProperties &&
-              (this.standardDialog.btn_ok.label =
-                this.standardDialogProperties.buttonLabel_ok),
-              this.itxt_title &&
-                l.instanceOfClass(this.itxt_title.textContentVO, "TextVO") &&
-                this.standardDialogProperties &&
-                (this.itxt_title.textContentVO.stringValue = c.Localize.text(
-                  this.standardDialogProperties.title,
-                )),
-              this.itxt_copy &&
-                l.instanceOfClass(this.itxt_copy.textContentVO, "TextVO") &&
-                (this.itxt_copy.textContentVO.stringValue = c.Localize.text(
-                  this.getDialogMessage(),
-                )));
-          }),
-          (CastleStandardOkDialog.prototype.getDialogMessage = function () {
-            return this.standardDialogProperties
-              ? this.standardDialogProperties.copy
-              : " ";
-          }),
-          (CastleStandardOkDialog.prototype.onClick = function (t) {
-            switch ((e.prototype.onClick.call(this, t), t.target)) {
-              case this.standardDialog.btn_close:
-                (this.standardDialogProperties &&
-                  null != this.standardDialogProperties.functionCancel &&
-                  this.standardDialogProperties.functionCancel(null),
-                  this.hide());
-                break;
-              case this.standardDialog.btn_ok:
-                (this.hide(),
-                  this.standardDialogProperties &&
-                    null != this.standardDialogProperties.functionOk &&
-                    this.standardDialogProperties.functionOk(null));
-            }
-          }),
-          (CastleStandardOkDialog.prototype.onKeyUp = function (e) {
-            (e.key != s.Keyboard.ENTER && e.key != s.Keyboard.ESCAPE) ||
-              !this.standardDialogProperties ||
-              "SERVER MESSAGE" != this.standardDialogProperties.title ||
-              this.hide();
-          }),
-          (CastleStandardOkDialog.prototype.hide = function () {
-            ((d.CastleModel.userData.blockDialogs = !1),
-              e.prototype.hide.call(this));
-          }),
-          Object.defineProperty(
-            CastleStandardOkDialog.prototype,
-            "standardDialogProperties",
-            {
-              get: function () {
-                return this.properties;
-              },
-              enumerable: !0,
-              configurable: !0,
-            },
-          ),
-          Object.defineProperty(
-            CastleStandardOkDialog.prototype,
-            "standardDialog",
-            {
-              get: function () {
-                return this.disp;
-              },
-              enumerable: !0,
-              configurable: !0,
-            },
-          ),
-          (CastleStandardOkDialog.__initialize_static_members = function () {
-            CastleStandardOkDialog.NAME =
-              o.CommonDialogNames.StandardOkDialog_NAME;
-          }),
-          CastleStandardOkDialog
-        );
-      })(i(235).CastleDialog);
-    ((t.CastleStandardOkDialog = p),
-      r.classImplementsInterfaces(p, "ICollectableRendererList"),
-      p.__initialize_static_members());
-  },
-  function (e, t, i) {
-    "use strict";
-    Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(2),
       o = i(5),
       a = i(5),
@@ -9113,6 +8993,126 @@
         );
       })();
     t.ABGHelper = d;
+  },
+  function (e, t, i) {
+    "use strict";
+    Object.defineProperty(t, "__esModule", { value: !0 });
+    var n = i(0),
+      o = i(2),
+      a = i(1),
+      s = i(1),
+      r = i(1),
+      l = i(1),
+      c = i(3),
+      u = i(3),
+      d = i(4),
+      p = (function (e) {
+        function CastleStandardOkDialog(t) {
+          void 0 === t && (t = null);
+          var i = this;
+          return (
+            CONSTRUCTOR_HACK,
+            ((i =
+              e.call(
+                this,
+                null != t
+                  ? t
+                  : new (a.getDefinitionByName("CastleStandardOk"))(),
+              ) || this).itxt_title = i.textFieldManager.registerTextField(
+              i.standardDialog.txt_title,
+              new u.TextVO(""),
+            )),
+            (i.itxt_copy = i.textFieldManager.registerTextField(
+              i.standardDialog.txt_copy,
+              new u.TextVO(""),
+            )),
+            (i.itxt_copy.autoFitToBounds = !0),
+            (i.standardDialog.btn_label.visible = !1),
+            i
+          );
+        }
+        return (
+          n.__extends(CastleStandardOkDialog, e),
+          (CastleStandardOkDialog.prototype.applyProperties = function () {
+            (this.standardDialog &&
+              this.standardDialog.btn_ok &&
+              this.standardDialogProperties &&
+              (this.standardDialog.btn_ok.label =
+                this.standardDialogProperties.buttonLabel_ok),
+              this.itxt_title &&
+                l.instanceOfClass(this.itxt_title.textContentVO, "TextVO") &&
+                this.standardDialogProperties &&
+                (this.itxt_title.textContentVO.stringValue = c.Localize.text(
+                  this.standardDialogProperties.title,
+                )),
+              this.itxt_copy &&
+                l.instanceOfClass(this.itxt_copy.textContentVO, "TextVO") &&
+                (this.itxt_copy.textContentVO.stringValue = c.Localize.text(
+                  this.getDialogMessage(),
+                )));
+          }),
+          (CastleStandardOkDialog.prototype.getDialogMessage = function () {
+            return this.standardDialogProperties
+              ? this.standardDialogProperties.copy
+              : " ";
+          }),
+          (CastleStandardOkDialog.prototype.onClick = function (t) {
+            switch ((e.prototype.onClick.call(this, t), t.target)) {
+              case this.standardDialog.btn_close:
+                (this.standardDialogProperties &&
+                  null != this.standardDialogProperties.functionCancel &&
+                  this.standardDialogProperties.functionCancel(null),
+                  this.hide());
+                break;
+              case this.standardDialog.btn_ok:
+                (this.hide(),
+                  this.standardDialogProperties &&
+                    null != this.standardDialogProperties.functionOk &&
+                    this.standardDialogProperties.functionOk(null));
+            }
+          }),
+          (CastleStandardOkDialog.prototype.onKeyUp = function (e) {
+            (e.key != s.Keyboard.ENTER && e.key != s.Keyboard.ESCAPE) ||
+              !this.standardDialogProperties ||
+              "SERVER MESSAGE" != this.standardDialogProperties.title ||
+              this.hide();
+          }),
+          (CastleStandardOkDialog.prototype.hide = function () {
+            ((d.CastleModel.userData.blockDialogs = !1),
+              e.prototype.hide.call(this));
+          }),
+          Object.defineProperty(
+            CastleStandardOkDialog.prototype,
+            "standardDialogProperties",
+            {
+              get: function () {
+                return this.properties;
+              },
+              enumerable: !0,
+              configurable: !0,
+            },
+          ),
+          Object.defineProperty(
+            CastleStandardOkDialog.prototype,
+            "standardDialog",
+            {
+              get: function () {
+                return this.disp;
+              },
+              enumerable: !0,
+              configurable: !0,
+            },
+          ),
+          (CastleStandardOkDialog.__initialize_static_members = function () {
+            CastleStandardOkDialog.NAME =
+              o.CommonDialogNames.StandardOkDialog_NAME;
+          }),
+          CastleStandardOkDialog
+        );
+      })(i(235).CastleDialog);
+    ((t.CastleStandardOkDialog = p),
+      r.classImplementsInterfaces(p, "ICollectableRendererList"),
+      p.__initialize_static_members());
   },
   function (e, t, i) {
     "use strict";
@@ -9992,7 +9992,7 @@
     var n = i(2),
       o = i(156),
       a = i(4),
-      s = i(39),
+      s = i(38),
       r = i(142),
       l = i(12),
       c = (function () {
@@ -13808,7 +13808,7 @@
       b = i(137),
       D = i(133),
       I = i(1002),
-      v = i(38),
+      v = i(39),
       T = i(220),
       S = i(1004),
       A = i(1006),
@@ -23575,7 +23575,7 @@
       _ = i(427),
       m = i(83),
       f = i(509),
-      E = i(39),
+      E = i(38),
       O = i(4),
       y = i(354),
       b = i(68),
@@ -28179,7 +28179,7 @@
       c = i(282),
       u = i(105),
       d = i(32),
-      p = i(39),
+      p = i(38),
       h = i(46),
       g = i(4),
       C = i(49),
@@ -30460,7 +30460,7 @@
       a = i(5),
       s = i(3),
       r = i(122),
-      l = i(39),
+      l = i(38),
       c = i(421),
       u = i(4),
       d = i(9),
@@ -30617,7 +30617,7 @@
       o = i(2152),
       a = i(2153),
       s = i(2154),
-      r = i(39),
+      r = i(38),
       l = (function () {
         function WorldmapObjectFactory() {}
         return (
@@ -30928,7 +30928,7 @@
       r = i(6),
       l = i(282),
       c = i(105),
-      u = i(39),
+      u = i(38),
       d = i(4),
       p = i(192),
       h = i(213),
@@ -33166,7 +33166,7 @@
       a = i(2),
       s = i(1),
       r = i(5),
-      l = i(39),
+      l = i(38),
       c = i(4),
       u = i(24),
       d = (function (e) {
@@ -49975,7 +49975,7 @@
       r = i(6),
       l = i(21),
       c = i(26),
-      u = i(39),
+      u = i(38),
       d = i(12),
       p = i(4),
       h = i(27),
@@ -58457,7 +58457,7 @@
       a = i(3),
       s = i(6),
       r = i(28),
-      l = i(39),
+      l = i(38),
       c = i(29),
       u = i(46),
       d = i(121),
@@ -61704,7 +61704,7 @@
       u = i(282),
       d = i(21),
       p = i(105),
-      h = i(39),
+      h = i(38),
       g = i(58),
       C = i(4),
       _ = i(2228),
@@ -68314,7 +68314,7 @@
       d = i(286),
       p = i(3),
       h = i(9),
-      g = i(38),
+      g = i(39),
       C = i(5),
       _ = i(1743),
       m = i(1744),
@@ -68684,7 +68684,7 @@
       te = i(1088),
       ie = i(3536),
       ne = i(1712),
-      oe = i(39),
+      oe = i(38),
       ae = i(563),
       se = i(3537),
       re = i(1713),
@@ -73468,6 +73468,28 @@
             }
           return null;
         }),
+        (CastleListVO.prototype.getCastellanAreaVOByID = function (e) {
+          var t = this.getCastleVOByID(e);
+          if (t) return t;
+          if (!(
+            g.ABGHelper.isOnABGAndJade &&
+            h.CastleModel.allianceBattlegroundData &&
+            h.CastleModel.worldmapData &&
+            h.CastleModel.worldmapData.areaTiles
+          ))
+            return null;
+          var i = h.CastleModel.allianceBattlegroundData.ownCitadelInfo;
+          if (!i) return null;
+          var n = h.CastleModel.worldmapData.areaTiles.getVOForAreaByXY(
+            i.posX,
+            i.posY,
+          );
+          return n &&
+            s.instanceOfClass(n, "AllianceCitadelMapobjectVO") &&
+            n.objectId == e
+            ? n
+            : null;
+        }),
         Object.defineProperty(CastleListVO.prototype, "ownerID", {
           get: function () {
             return this._ownerID;
@@ -73721,7 +73743,8 @@
       u = i(5),
       d = i(5),
       p = i(6),
-      h = i(4);
+      h = i(4),
+      g = i(38);
   },
   function (e, t, i) {
     "use strict";
@@ -78818,7 +78841,7 @@
       N = i(32),
       k = i(30),
       U = i(19),
-      G = i(39),
+      G = i(38),
       H = i(142),
       j = i(4),
       W = i(33),
@@ -87545,7 +87568,7 @@
       s = i(149),
       r = i(32),
       l = i(168),
-      c = i(39),
+      c = i(38),
       u = i(421),
       d = i(4),
       p = i(204),
@@ -100054,7 +100077,7 @@
         );
       })(i(11).CastleExternalDialog);
     t.BasicRenameDialog = g;
-    var C = i(38);
+    var C = i(39);
     (r.classImplementsInterfaces(g, "ICollectableRendererList"),
       g.__initialize_static_members());
   },
@@ -100158,7 +100181,7 @@
       c = i(427),
       u = i(28),
       d = i(100),
-      p = i(39),
+      p = i(38),
       h = i(29),
       g = i(46),
       C = i(4),
@@ -101101,7 +101124,7 @@
     ((t.OutpostMapobjectVO = E),
       a.classImplementsInterfaces(E, "IDetailViewAble", "IWorldmapObjectVO"));
     var O = i(94),
-      y = i(39);
+      y = i(38);
   },
   function (e, t, i) {
     "use strict";
@@ -101116,7 +101139,7 @@
       u = i(20),
       d = i(59),
       p = i(100),
-      h = i(39),
+      h = i(38),
       g = i(46),
       C = i(142),
       _ = i(4),
@@ -103528,7 +103551,7 @@
       l = i(2),
       c = i(1),
       u = i(156),
-      d = i(39),
+      d = i(38),
       p = i(46),
       h = i(24),
       g = (function () {
@@ -104410,7 +104433,7 @@
     var S = i(945),
       A = i(74),
       L = i(11),
-      P = i(38),
+      P = i(39),
       M = i(2342),
       R = i(2347);
     (l.classImplementsInterfaces(T, "ICollectableRendererList"),
@@ -108591,7 +108614,7 @@
       );
     })();
     t.ACastleLayoutStrategy = n;
-    var o = i(39),
+    var o = i(38),
       a = i(1840),
       s = i(3988),
       r = i(1843),
@@ -109650,7 +109673,7 @@
             "PrivateOfferFailedStandardDialog"),
           PrivateOfferFailedStandardDialog
         );
-      })(i(38).CastleStandardOkDialog);
+      })(i(39).CastleStandardOkDialog);
     ((t.PrivateOfferFailedStandardDialog = c),
       s.classImplementsInterfaces(c, "ICollectableRendererList"));
   },
@@ -109700,7 +109723,7 @@
       c = i(695),
       u = i(247),
       d = i(376),
-      p = i(39),
+      p = i(38),
       h = i(29),
       g = i(15),
       C = i(70),
@@ -111986,7 +112009,7 @@
       a = i(2),
       s = i(20),
       r = i(296),
-      l = i(39),
+      l = i(38),
       c = i(4),
       u = i(875),
       d = i(18),
@@ -112907,7 +112930,7 @@
       c = i(6),
       u = i(28),
       d = i(100),
-      p = i(39),
+      p = i(38),
       h = i(29),
       g = i(46),
       C = i(4),
@@ -115579,7 +115602,7 @@
       u = i(20),
       d = i(28),
       p = i(100),
-      h = i(39),
+      h = i(38),
       g = i(29),
       C = i(46),
       _ = i(4),
@@ -116931,7 +116954,7 @@
       j = i(2334),
       W = i(357),
       Y = i(137),
-      K = i(38),
+      K = i(39),
       z = i(169);
     d.classImplementsInterfaces(G, "ICollectableRendererList");
   },
@@ -126091,7 +126114,7 @@
       I = i(32),
       v = i(1665),
       T = i(189),
-      S = i(39),
+      S = i(38),
       A = i(46),
       L = i(12),
       P = i(4),
@@ -126559,11 +126582,13 @@
             var e;
             switch (this.currentCategory) {
               case K.CastleQuestData.CATEGORY_GREEN:
-                e = S.ABGHelper.isOnABGServer
-                  ? A.SpecialServerHelper.checkTextIDForSkinText(
-                      "dialog_questbook_help",
-                    )
-                  : "dialog_questbook_help_classic";
+                e = S.ABGHelper.isOnABGAndJade
+                  ? "dialog_questbook_help_jade"
+                  : S.ABGHelper.isOnABGServer
+                    ? A.SpecialServerHelper.checkTextIDForSkinText(
+                        "dialog_questbook_help",
+                      )
+                    : "dialog_questbook_help_classic";
                 break;
               case K.CastleQuestData.CATEGORY_ICE:
                 e = "dialog_questbook_help_ice";
@@ -127236,7 +127261,7 @@
       r = i(6),
       l = i(21),
       c = i(26),
-      u = i(39),
+      u = i(38),
       d = i(12),
       p = i(4),
       h = i(27),
@@ -128914,7 +128939,7 @@
       j = i(391),
       W = i(329),
       Y = i(241),
-      K = i(38),
+      K = i(39),
       z = i(169),
       q = i(113);
     d.classImplementsInterfaces(U, "ICollectableRendererList");
@@ -129659,7 +129684,7 @@
       T = i(1452),
       S = i(21),
       A = i(32),
-      L = i(39),
+      L = i(38),
       P = i(46),
       M = i(4),
       R = i(27),
@@ -130540,7 +130565,7 @@
       Y = i(9),
       K = i(74),
       z = i(449),
-      q = i(38),
+      q = i(39),
       X = i(169),
       Q = i(782),
       J = i(1146),
@@ -131417,7 +131442,7 @@
       X = i(410),
       Q = i(549),
       J = i(1742),
-      Z = i(39);
+      Z = i(38);
   },
   function (e, t, i) {
     "use strict";
@@ -134910,7 +134935,7 @@
       })(l.CastleGenericBannerMerchantDialog);
     t.CastleResourceMerchantEventDialog = c;
     var u = i(11),
-      d = i(38),
+      d = i(39),
       p = i(2680);
     (a.classImplementsInterfaces(c, "ICollectableRendererList"),
       c.__initialize_static_members());
@@ -134972,7 +134997,7 @@
       o = i(5),
       a = i(6),
       s = i(16),
-      r = i(39),
+      r = i(38),
       l = (function (e) {
         function ABGTowerConnectionVO() {
           var t = e.call(this) || this;
@@ -136552,7 +136577,7 @@
               w.instanceOfClass(this._currentLord, "BaronVO") &&
                 this._currentLord.lockedInCastleID >= 0)
             ) {
-              var t = y.CastleModel.userData.castleList.getCastleVOByID(
+              var t = y.CastleModel.userData.castleList.getCastellanAreaVOByID(
                 this._currentLord.lockedInCastleID,
               );
               if (t) {
@@ -136573,15 +136598,16 @@
                   (this.textFieldManager.registerTextField(
                     e.txt_value,
                     new O.TextVO(
-                      y.CastleModel.userData.castleList.getCastleVOByID(
+                      y.CastleModel.userData.castleList.getCastellanAreaVOByID(
                         this._currentLord.lockedInCastleID,
                       ).areaNameString,
                     ),
                     new d.InternalGGSTextFieldConfigVO(!0),
                   ).autoFitToBounds = !0));
-                var i = y.CastleModel.userData.castleList.getCastleVOByID(
-                  this._currentLord.lockedInCastleID,
-                );
+                var i =
+                  y.CastleModel.userData.castleList.getCastellanAreaVOByID(
+                    this._currentLord.lockedInCastleID,
+                  );
                 w.instanceOfClass(i, "CapitalMapobjectVO")
                   ? ((e.mc_CastleHolder.x = 40), (e.mc_CastleHolder.y = 8))
                   : w.instanceOfClass(i, "MetropolMapobjectVO")
@@ -137673,7 +137699,7 @@
       p = i(1276),
       h = i(42),
       g = i(47),
-      C = i(39),
+      C = i(38),
       _ = i(29),
       m = i(15),
       f = i(1277),
@@ -142145,7 +142171,7 @@
     t.CastleNewMessageDialog = D;
     var I = i(9),
       v = i(198),
-      T = i(38);
+      T = i(39);
     l.classImplementsInterfaces(D, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -143200,7 +143226,7 @@
       ee = i(1331),
       te = i(1332),
       ie = i(357),
-      ne = i(38),
+      ne = i(39),
       oe = i(944),
       ae = i(1337);
     u.classImplementsInterfaces(X, "ICollectableRendererList");
@@ -145878,7 +145904,7 @@
       d = i(26),
       p = i(30),
       h = i(19),
-      g = i(39),
+      g = i(38),
       C = i(12),
       _ = i(4),
       m = i(75),
@@ -148241,7 +148267,7 @@
     var n = i(579),
       o = i(2),
       a = i(9),
-      s = i(38),
+      s = i(39),
       r = i(3),
       l = i(69),
       c = i(18),
@@ -151249,7 +151275,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(39),
+      a = i(38),
       s = i(796),
       r = (function (e) {
         function BasicGateVE() {
@@ -151327,7 +151353,7 @@
     var n = i(0),
       o = i(1),
       a = i(6),
-      s = i(39),
+      s = i(38),
       r = i(123),
       l = i(63),
       c = (function (e) {
@@ -159425,7 +159451,7 @@
       u = i(3),
       d = i(6),
       p = i(20),
-      h = i(39),
+      h = i(38),
       g = i(142),
       C = i(177),
       _ = i(121),
@@ -165711,7 +165737,7 @@
   function (e) {
     e.exports = {
       name: "@goodgamestudios/empire-createjs-assets",
-      version: "1.2.1481",
+      version: "1.2.1482",
       main: "generated/index.js",
       types: "generated/index.d.ts",
       description: "CreateJS Assets for Empire HTML5",
@@ -165844,7 +165870,7 @@
   function (e) {
     e.exports = {
       name: "TranspilationEmpire",
-      version: "1.173.12",
+      version: "1.173.16",
       description: "Transpiled version of the Flash game",
       main: "index.js",
       repository:
@@ -166525,7 +166551,7 @@
       r = i(5),
       l = i(6),
       c = i(22),
-      u = i(39),
+      u = i(38),
       d = i(4),
       p = i(143),
       h = i(97),
@@ -171534,7 +171560,7 @@
       j = i(617),
       W = i(65),
       Y = i(74),
-      K = i(38);
+      K = i(39);
     c.classImplementsInterfaces(M, "ICollectableRendererList");
     var z = i(1);
     M.__initialize_static_members();
@@ -171929,7 +171955,7 @@
       l = i(3),
       c = i(6),
       u = i(83),
-      d = i(39),
+      d = i(38),
       p = i(4),
       h = i(60),
       g = i(112),
@@ -177628,7 +177654,7 @@
       l = i(3),
       c = i(2457),
       u = i(35),
-      d = i(39),
+      d = i(38),
       p = i(12),
       h = i(8),
       g = (function (e) {
@@ -179030,7 +179056,7 @@
       b = i(21),
       D = i(175),
       I = i(236),
-      v = i(39),
+      v = i(38),
       T = i(15),
       S = i(4),
       A = i(27),
@@ -181672,7 +181698,7 @@
       })(i(235).CastleDialog);
     t.CastleLostPasswordDialog = f;
     var E = i(9),
-      O = i(38);
+      O = i(39);
     (d.classImplementsInterfaces(f, "ICollectableRendererList"),
       f.__initialize_static_members());
   },
@@ -190986,7 +191012,7 @@
     ((t.AAutoRecruitmentCopyListItemVE = _),
       s.classImplementsInterfaces(_, "ICollectableRendererList"));
     var m = i(9),
-      f = i(38);
+      f = i(39);
   },
   function (e, t, i) {
     "use strict";
@@ -192362,7 +192388,7 @@
     var n = i(0),
       o = i(1),
       a = i(6),
-      s = i(39),
+      s = i(38),
       r = i(158),
       l = i(796),
       c = (function (e) {
@@ -194677,7 +194703,7 @@
       a = i(3),
       s = i(3),
       r = i(3),
-      l = i(39),
+      l = i(38),
       c = i(12),
       u = i(9),
       d = i(17),
@@ -197314,7 +197340,7 @@
       x = i(64),
       w = i(269),
       B = i(11),
-      F = i(38),
+      F = i(39),
       N = i(15),
       k = i(27);
     c.classImplementsInterfaces(L, "ICollectableRendererList");
@@ -198992,7 +199018,7 @@
       b = i(3776),
       D = i(329),
       I = i(1331),
-      v = i(38),
+      v = i(39),
       T = i(3777);
     (l.classImplementsInterfaces(O, "ICollectableRendererList"),
       O.__initialize_static_members());
@@ -200279,7 +200305,7 @@
       S = i(16),
       A = i(21),
       L = i(26),
-      P = i(39),
+      P = i(38),
       M = i(142),
       R = i(4),
       V = i(108),
@@ -202554,7 +202580,7 @@
     t.CastleCheatPanel = E;
     var O = i(56),
       y = i(3979),
-      b = i(38),
+      b = i(39),
       D = i(202),
       I = i(64),
       v = i(18),
@@ -203545,7 +203571,7 @@
       })(y.CastlePanel);
     t.CastleNavigationPanel = I;
     var v = i(9),
-      T = i(38),
+      T = i(39),
       S = i(3984),
       A = i(18);
   },
@@ -209900,7 +209926,7 @@
       r = i(32),
       l = i(83),
       c = i(509),
-      u = i(39),
+      u = i(38),
       d = i(15),
       p = i(4),
       h = i(414),
@@ -210857,7 +210883,7 @@
     t.FNMCommand = h;
     var g = i(31),
       C = i(9),
-      _ = i(38);
+      _ = i(39);
     s.classImplementsInterfaces(h, "IExecCommand");
   },
   function (e, t, i) {
@@ -215425,7 +215451,7 @@
       V = i(194),
       x = i(9),
       w = i(67),
-      B = i(38);
+      B = i(39);
     s.classImplementsInterfaces(A, "ICollectableRendererList");
   },
   function (e, t, i) {
@@ -228477,7 +228503,7 @@
       A = i(302),
       L = i(9),
       P = i(328),
-      M = i(38),
+      M = i(39),
       R = i(130),
       V = i(17),
       x = i(44),
@@ -236577,7 +236603,7 @@
     var n = i(0),
       o = i(1),
       a = i(3),
-      s = i(39),
+      s = i(38),
       r = i(12),
       l = (function (e) {
         function AllianceBattleGroundEventDialogOverviewRewardItem() {
@@ -237340,7 +237366,7 @@
       l = i(3),
       c = i(6),
       u = i(35),
-      d = i(39),
+      d = i(38),
       p = i(12),
       h = i(4),
       g = i(24),
@@ -237855,7 +237881,7 @@
       r = i(3),
       l = i(3),
       c = i(3),
-      u = i(39),
+      u = i(38),
       d = i(12),
       p = i(24),
       h = i(8),
@@ -238161,7 +238187,7 @@
       r = i(3),
       l = i(20),
       c = i(52),
-      u = i(39),
+      u = i(38),
       d = i(4),
       p = i(518),
       h = i(240),
@@ -263025,7 +263051,7 @@
     t.AAutoRecruitmentCopyDialog = I;
     var v = i(9),
       T = i(18),
-      S = i(38),
+      S = i(39),
       A = i(157),
       L = i(3018),
       P = i(3019),
@@ -267499,7 +267525,7 @@
     var n = i(0),
       o = i(1),
       a = i(6),
-      s = i(39),
+      s = i(38),
       r = (function (e) {
         function GuardTowerVE() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -271553,7 +271579,7 @@
     var n = i(2),
       o = i(3),
       a = i(6),
-      s = i(39),
+      s = i(38),
       r = i(3450),
       l = (function () {
         function AllianceBuffData(e) {
@@ -272066,7 +272092,7 @@
       O = i(1345),
       y = i(748),
       b = i(65),
-      D = i(38),
+      D = i(39),
       I = i(157);
     (s.classImplementsInterfaces(m, "ICollectableRendererList"),
       m.__initialize_static_members());
@@ -274993,6 +275019,12 @@
         }
         return (
           n.__extends(ModernOkBigBlueDialog, e),
+          (ModernOkBigBlueDialog.prototype.initLoaded = function (t) {
+            (void 0 === t && (t = null),
+              e.prototype.initLoaded.call(this, t),
+              this.bg &&
+                (this.bg.alpha = ModernOkBigBlueDialog.BACKGROUND_ALPHA));
+          }),
           (ModernOkBigBlueDialog.prototype.showLoaded = function (t) {
             (void 0 === t && (t = null),
               e.prototype.showLoaded.call(this),
@@ -275047,6 +275079,7 @@
             },
           ),
           (ModernOkBigBlueDialog.NAME = "ModernOkBigBlue"),
+          (ModernOkBigBlueDialog.BACKGROUND_ALPHA = 0.7),
           ModernOkBigBlueDialog
         );
       })(i(11).CastleExternalDialog);
@@ -289280,7 +289313,7 @@
       C = i(240),
       _ = i(357),
       m = i(356),
-      f = i(38),
+      f = i(39),
       E = i(169),
       O = i(116),
       y = i(106),
@@ -290034,7 +290067,7 @@
     t.CastleSurveyMessageDialog = L;
     var P = i(1133),
       M = i(9),
-      R = i(38);
+      R = i(39);
     r.classImplementsInterfaces(L, "ICollectableRendererList");
     var V = (function () {
       return function UserSurveySeenData() {
@@ -291070,7 +291103,7 @@
       _ = i(42),
       m = i(30),
       f = i(19),
-      E = i(39),
+      E = i(38),
       O = i(4),
       y = i(50),
       b = i(27),
@@ -291541,7 +291574,7 @@
       m = i(71),
       f = i(123),
       E = i(90),
-      O = i(39),
+      O = i(38),
       y = i(4),
       b = i(8),
       D = i(1841),
@@ -296047,7 +296080,7 @@
       u = i(21),
       d = i(32),
       p = i(347),
-      h = i(39),
+      h = i(38),
       g = i(15),
       C = i(4),
       _ = i(50),
@@ -296213,7 +296246,7 @@
       u = i(1736),
       d = i(21),
       p = i(347),
-      h = i(39),
+      h = i(38),
       g = i(4),
       C = i(27),
       _ = (function (e) {
@@ -296347,7 +296380,7 @@
       r = i(25),
       l = i(21),
       c = i(347),
-      u = i(39),
+      u = i(38),
       d = i(4),
       p = i(50),
       h = (function (e) {
@@ -301662,7 +301695,7 @@
       oe = i(187),
       ae = i(1900),
       se = i(980),
-      re = i(38),
+      re = i(39),
       le = i(342);
     $.__initialize_static_members();
   },
@@ -301692,7 +301725,7 @@
       o = i(1),
       a = i(20),
       s = i(16),
-      r = i(39),
+      r = i(38),
       l = i(816),
       c = createjs.Point,
       u = (function (e) {
@@ -302289,7 +302322,7 @@
       o = i(1),
       a = i(20),
       s = i(59),
-      r = i(39),
+      r = i(38),
       l = i(46),
       c = i(4),
       u = (function (e) {
@@ -309402,7 +309435,7 @@
       p = i(9),
       h = i(18),
       g = i(23),
-      C = i(38),
+      C = i(39),
       _ = i(4570),
       m = i(1169),
       f = i(4571),
@@ -318874,7 +318907,7 @@
       J = i(262),
       Z = i(242),
       $ = i(65),
-      ee = i(38),
+      ee = i(39),
       te = i(103),
       ie = i(440),
       ne = i(1976);
@@ -333205,7 +333238,7 @@
       R = i(165),
       V = i(2142),
       x = i(11),
-      w = i(38),
+      w = i(39),
       B = i(422),
       F = i(2679),
       N = i(27);
@@ -336686,7 +336719,7 @@
                 var t = this._lordPicker.selectedLord;
                 this._lordPicker.lordTooltipTrigger.setProperties(
                   this._lordPicker.selectedLord,
-                  d.CastleModel.userData.castleList.getCastleVOByID(
+                  d.CastleModel.userData.castleList.getCastellanAreaVOByID(
                     t.lockedInCastleID,
                   ),
                   null,
@@ -338009,10 +338042,10 @@
                     var e = this.lordVO;
                     return e.lockedInCastleID >= 0 &&
                       null !=
-                        d.CastleModel.userData.castleList.getCastleVOByID(
+                        d.CastleModel.userData.castleList.getCastellanAreaVOByID(
                           e.lockedInCastleID,
                         )
-                      ? d.CastleModel.userData.castleList.getCastleVOByID(
+                      ? d.CastleModel.userData.castleList.getCastellanAreaVOByID(
                           e.lockedInCastleID,
                         ).areaNameString
                       : c.Localize.text("baron_toolTip_isFree");
@@ -342112,7 +342145,7 @@
       f = i(1279),
       E = i(1280),
       O = i(296),
-      y = i(39),
+      y = i(38),
       b = i(4),
       D = i(27),
       I = i(211),
@@ -352462,7 +352495,7 @@
       _ = i(3),
       m = i(3),
       f = i(3),
-      E = i(39),
+      E = i(38),
       O = i(46),
       y = i(4),
       b = i(178),
@@ -355623,7 +355656,7 @@
       l = i(3),
       c = i(2361),
       u = i(35),
-      d = i(39),
+      d = i(38),
       p = i(4),
       h = i(8),
       g = i(34),
@@ -355968,7 +356001,7 @@
       c = i(3),
       u = i(28),
       d = i(21),
-      p = i(39),
+      p = i(38),
       h = i(4),
       g = i(77),
       C = i(8),
@@ -359111,7 +359144,7 @@
       d = i(3),
       p = i(2387),
       h = i(135),
-      g = i(39),
+      g = i(38),
       C = i(4),
       _ = i(8),
       m = i(34),
@@ -360051,7 +360084,7 @@
     t.CastleAllianceMessageToAllDialog = E;
     var O = i(9),
       y = i(198),
-      b = i(38);
+      b = i(39);
     (r.classImplementsInterfaces(E, "ICollectableRendererList"),
       E.__initialize_static_members());
   },
@@ -360532,7 +360565,7 @@
       p = i(3),
       h = i(6),
       g = i(20),
-      C = i(39),
+      C = i(38),
       _ = i(4),
       m = i(33),
       f = i(2402),
@@ -363271,7 +363304,7 @@
       h = i(219),
       g = i(2425),
       C = i(2426),
-      _ = i(39),
+      _ = i(38),
       m = i(4),
       f = i(197),
       E = i(8),
@@ -366946,7 +366979,7 @@
       g = i(6),
       C = i(55),
       _ = i(21),
-      m = i(39),
+      m = i(38),
       f = i(12),
       E = i(15),
       O = i(4),
@@ -367278,7 +367311,7 @@
       p = i(13),
       h = i(30),
       g = i(19),
-      C = i(39),
+      C = i(38),
       _ = i(12),
       m = i(4),
       f = i(44),
@@ -368442,7 +368475,7 @@
     var C = i(80),
       _ = i(13),
       m = i(14),
-      f = i(38),
+      f = i(39),
       E = i(612);
     a.classImplementsInterfaces(g, "ICollectableRendererList");
     var O = i(1),
@@ -369489,7 +369522,7 @@
       s = i(3),
       r = i(3),
       l = i(21),
-      c = i(39),
+      c = i(38),
       u = i(12),
       d = i(4),
       p = i(27),
@@ -370774,7 +370807,7 @@
       o = i(1),
       a = i(5),
       s = i(3),
-      r = i(39),
+      r = i(38),
       l = i(12),
       c = i(762),
       u = i(2482),
@@ -371083,7 +371116,7 @@
       o = i(1),
       a = i(5),
       s = i(3),
-      r = i(39),
+      r = i(38),
       l = i(12),
       c = i(762),
       u = i(2484),
@@ -371423,7 +371456,7 @@
       C = i(55),
       _ = i(1388),
       m = i(170),
-      f = i(39),
+      f = i(38),
       E = i(12),
       O = i(4),
       y = i(478),
@@ -372787,7 +372820,7 @@
     var A = i(194),
       L = i(1394),
       P = i(74),
-      M = i(38),
+      M = i(39),
       R = i(1395);
     c.classImplementsInterfaces(S, "ICastleSpyDialogState");
   },
@@ -373209,7 +373242,7 @@
     t.CastleSpyDialogSabotageState = D;
     var I = i(31),
       v = i(194),
-      T = i(38);
+      T = i(39);
     u.classImplementsInterfaces(D, "ICastleSpyDialogState");
   },
   function (e, t, i) {
@@ -373500,7 +373533,7 @@
     t.CastleSpyDialogSpyState = D;
     var I = i(31),
       v = i(187),
-      T = i(38);
+      T = i(39);
     c.classImplementsInterfaces(D, "ICastleSpyDialogState");
   },
   function (e, t, i) {
@@ -375429,7 +375462,7 @@
     t.CastleApplyForMembershipDialog = O;
     var y = i(9),
       b = i(198),
-      D = i(38);
+      D = i(39);
     (r.classImplementsInterfaces(O, "ICollectableRendererList"),
       O.__initialize_static_members());
   },
@@ -378091,7 +378124,7 @@
     t.CastleSaveAccountDialog = P;
     var M = i(9),
       R = i(18),
-      V = i(38),
+      V = i(39),
       x = i(157);
     l.classImplementsInterfaces(P, "ICollectableRendererList");
   },
@@ -381304,12 +381337,12 @@
             var t = this.lordScrollItemVO.lordVO;
             t.lockedInCastleID >= 0 &&
             null !=
-              r.CastleModel.userData.castleList.getCastleVOByID(
+              r.CastleModel.userData.castleList.getCastellanAreaVOByID(
                 t.lockedInCastleID,
               )
               ? this.setToolTipText(
                   new s.TextVO(
-                    r.CastleModel.userData.castleList.getCastleVOByID(
+                    r.CastleModel.userData.castleList.getCastellanAreaVOByID(
                       t.lockedInCastleID,
                     ).areaNameString,
                   ),
@@ -383207,7 +383240,7 @@
       })();
     t.FillCraftingGemStrategy = d;
     var p = i(9),
-      h = i(38),
+      h = i(39),
       g = i(250);
     a.classImplementsInterfaces(d, "IFillCraftingStrategy");
   },
@@ -384396,7 +384429,7 @@
       })();
     t.FillCraftingEquipmentStrategy = u;
     var d = i(9),
-      p = i(38);
+      p = i(39);
     (o.classImplementsInterfaces(u, "IFillCraftingStrategy"),
       u.__initialize_static_members());
   },
@@ -400142,7 +400175,7 @@
     t.CastlePremiumMarketPlaceDialogFlag = P;
     var M = i(9),
       R = i(65),
-      V = i(38),
+      V = i(39),
       x = i(169),
       w = i(2669);
     (l.classImplementsInterfaces(P, "ICollectableRendererList", "ISublayer"),
@@ -418757,7 +418790,7 @@
       c = i(5),
       u = i(5),
       d = i(6),
-      p = i(39),
+      p = i(38),
       h = i(46),
       g = i(4),
       C = i(156),
@@ -423239,7 +423272,7 @@
       d = i(5),
       p = i(427),
       h = i(55),
-      g = i(39),
+      g = i(38),
       C = i(4),
       _ = i(14),
       m = i(156),
@@ -426408,7 +426441,7 @@
       r = i(16),
       l = i(28),
       c = i(22),
-      u = i(39),
+      u = i(38),
       d = i(29),
       p = i(46),
       h = (function (e) {
@@ -428312,7 +428345,7 @@
       a = i(2),
       s = i(5),
       r = i(6),
-      l = i(39),
+      l = i(38),
       c = i(114),
       u = i(322),
       d = createjs.Point,
@@ -435958,7 +435991,7 @@
       M = i(23),
       R = i(67),
       V = i(269),
-      x = i(38),
+      x = i(39),
       w = i(1614),
       B = i(1615),
       F = i(450),
@@ -445368,7 +445401,7 @@
       _ = i(17),
       m = i(4),
       f = i(12),
-      E = i(38),
+      E = i(39),
       O = i(1487),
       y = i(9),
       b = i(448),
@@ -449642,7 +449675,7 @@
     var n = i(0),
       o = i(1),
       a = i(6),
-      s = i(39),
+      s = i(38),
       r = i(648),
       l = (function (e) {
         function EmptyTowerVE() {
@@ -458163,7 +458196,7 @@
       C = i(818),
       _ = i(4),
       m = i(9),
-      f = i(38),
+      f = i(39),
       E = i(1663),
       O = (function (e) {
         function CastleRegisterUserWithFacebookCommand() {
@@ -465507,7 +465540,7 @@
     var b = i(9),
       D = i(18),
       I = i(137),
-      v = i(38);
+      v = i(39);
     c.classImplementsInterfaces(y, "MovieClip");
   },
   function (e, t, i) {
@@ -466840,7 +466873,7 @@
     t.OpenEventAnnouncementDialogCommand = h;
     var g = i(51),
       C = i(9),
-      _ = i(38),
+      _ = i(39),
       m = i(3461);
     r.classImplementsInterfaces(h, "ISimpleCommand");
   },
@@ -474089,7 +474122,7 @@
       m = i(26),
       f = i(62),
       E = i(19),
-      O = i(39),
+      O = i(38),
       y = i(12),
       b = i(15),
       D = i(4),
@@ -474741,7 +474774,7 @@
       h = i(42),
       g = i(30),
       C = i(19),
-      _ = i(39),
+      _ = i(38),
       m = i(15),
       f = i(4),
       E = i(50),
@@ -475145,7 +475178,7 @@
       h = i(55),
       g = i(35),
       C = i(84),
-      _ = i(39),
+      _ = i(38),
       m = i(12),
       f = i(15),
       E = i(31),
@@ -476172,7 +476205,7 @@
       d = i(170),
       p = i(13),
       h = i(76),
-      g = i(39),
+      g = i(38),
       C = i(12),
       _ = i(4),
       m = i(50),
@@ -482973,7 +483006,7 @@
     var m = i(48),
       f = i(36),
       E = i(31),
-      O = i(38);
+      O = i(39);
     (s.classImplementsInterfaces(_, "ICollectableRendererList"),
       _.__initialize_static_members());
   },
@@ -497522,7 +497555,7 @@
       })(i(11).CastleExternalDialog);
     t.CastleKongregateRatingDialog = u;
     var d = i(9),
-      p = i(38),
+      p = i(39),
       h = i(1775);
     (a.classImplementsInterfaces(u, "ICollectableRendererList"),
       u.__initialize_static_members());
@@ -502864,7 +502897,7 @@
       le = i(18),
       ce = i(395),
       ue = i(130),
-      de = i(38),
+      de = i(39),
       pe = i(331),
       he = i(362),
       ge = i(672),
@@ -502883,7 +502916,7 @@
       Se = i(269),
       Ae = i(631),
       Le = i(844),
-      Pe = i(39),
+      Pe = i(38),
       Me = i(239),
       Re = i(323),
       Ve = i(111);
@@ -503480,7 +503513,7 @@
       })(i(11).CastleExternalDialog);
     t.CastleKingdomChooseLocalizationDialog = c;
     var u = i(9),
-      d = i(38);
+      d = i(39);
     (a.classImplementsInterfaces(c, "ICollectableRendererList"),
       c.__initialize_static_members());
   },
@@ -504633,7 +504666,7 @@
       })(_.CastleDialogSubLayer);
     t.CastleEilandRankingDialogPlayer = E;
     var O = i(9),
-      y = i(38),
+      y = i(39),
       b = i(3766);
     l.classImplementsInterfaces(E, "ICollectableRendererList", "ISublayer");
   },
@@ -514036,7 +514069,7 @@
       E = i(16),
       O = i(111),
       y = i(175),
-      b = i(39),
+      b = i(38),
       D = i(160),
       I = i(12),
       v = i(81),
@@ -514483,7 +514516,7 @@
       })(i(1124).CastlePostAttackDialog);
     t.CastlePostAttackHorseDialog = x;
     var w = i(9),
-      B = i(38);
+      B = i(39);
     a.classImplementsInterfaces(x, "ICollectableRendererList");
     var F = i(1);
   },
@@ -515722,7 +515755,7 @@
       r = i(3),
       l = i(3),
       c = i(6),
-      u = i(39),
+      u = i(38),
       d = i(12),
       p = i(4),
       h = i(50),
@@ -516208,7 +516241,7 @@
       r = i(3),
       l = i(3),
       c = i(6),
-      u = i(39),
+      u = i(38),
       d = i(12),
       p = i(4),
       h = i(50),
@@ -519865,7 +519898,7 @@
       a = i(2),
       s = i(1),
       r = i(6),
-      l = i(39),
+      l = i(38),
       c = i(4),
       u = i(121),
       d = (function (e) {
@@ -531175,7 +531208,7 @@
       z = i(1833),
       q = i(522),
       X = i(1023),
-      Q = i(38),
+      Q = i(39),
       J = i(350),
       Z = i(1016),
       $ = i(1494),
@@ -533179,7 +533212,7 @@
     t.CheatLocaQuestTextIDs = n;
     var o = i(1667),
       a = i(9),
-      s = i(38),
+      s = i(39),
       r = i(52),
       l = i(2),
       c = i(2),
@@ -533225,7 +533258,7 @@
     t.CheatUnitNameList = n;
     var o = i(56),
       a = i(9),
-      s = i(38),
+      s = i(39),
       r = i(4),
       l = i(2),
       c = i(1),
@@ -533976,7 +534009,7 @@
         );
       })();
     t.CastleUIComponentCreator = a;
-    var s = i(38),
+    var s = i(39),
       r = i(169),
       l = i(1839),
       c = i(550);
@@ -535400,7 +535433,7 @@
       a = i(5),
       s = i(1),
       r = i(123),
-      l = i(39),
+      l = i(38),
       c = i(4),
       u = (function (e) {
         function CastleLayoutIso() {
@@ -542515,7 +542548,7 @@
       l = i(296),
       c = i(35),
       u = i(26),
-      d = i(39),
+      d = i(38),
       p = i(15),
       h = i(4),
       g = i(9),
@@ -543163,7 +543196,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(3),
-      a = i(39),
+      a = i(38),
       s = (function (e) {
         function StatusIconBetaBanner() {
           return e.call(this, "Icon_BetaTestServerBanner", 2) || this;
@@ -552896,7 +552929,7 @@
       a = i(3),
       s = i(59),
       r = i(41),
-      l = i(39),
+      l = i(38),
       c = i(4),
       u = i(753),
       d = i(88),
@@ -553624,7 +553657,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(39),
+      a = i(38),
       s = i(1880),
       r = i(665),
       l = i(88),
@@ -553816,7 +553849,7 @@
       r = i(25),
       l = i(21),
       c = i(347),
-      u = i(39),
+      u = i(38),
       d = i(4),
       p = i(8),
       h = (function (e) {
@@ -554846,7 +554879,7 @@
       o = i(2),
       a = i(2),
       s = i(1),
-      r = i(39),
+      r = i(38),
       l = i(88),
       c = (function (e) {
         function BackToMainServerButton() {
@@ -555644,7 +555677,7 @@
     var n = i(0),
       o = i(1),
       a = i(59),
-      s = i(39),
+      s = i(38),
       r = i(4),
       l = i(447),
       c = i(1009),
@@ -556144,7 +556177,7 @@
       o = i(1),
       a = i(59),
       s = i(41),
-      r = i(39),
+      r = i(38),
       l = i(4),
       c = i(204),
       u = i(88),
@@ -556666,7 +556699,7 @@
       m = i(84),
       f = i(56),
       E = i(14),
-      O = i(38),
+      O = i(39),
       y = i(450),
       b = i(269);
   },
@@ -563233,7 +563266,7 @@
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
-      o = i(39),
+      o = i(38),
       a = (function (e) {
         function CastleLayoutWorldmap() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -563428,7 +563461,7 @@
       I = i(35),
       v = i(83),
       T = i(509),
-      S = i(39),
+      S = i(38),
       A = i(29),
       L = i(15),
       P = i(70),
@@ -564977,7 +565010,7 @@
       o = i(2),
       a = i(1),
       s = i(5),
-      r = i(39),
+      r = i(38),
       l = i(31),
       c = i(4),
       u = i(9),
@@ -572867,7 +572900,7 @@
       h = i(818),
       g = i(4),
       C = i(9),
-      _ = i(38),
+      _ = i(39),
       m = i(1663),
       f = (function (e) {
         function CastleRegisterUserCommand() {
@@ -575627,7 +575660,7 @@
       o = i(3),
       a = i(22),
       s = i(51),
-      r = i(39),
+      r = i(38),
       l = i(4),
       c = i(812),
       u = (function () {
@@ -586305,7 +586338,7 @@
       h = i(35),
       g = i(21),
       C = i(170),
-      _ = i(39),
+      _ = i(38),
       m = i(29),
       f = i(15),
       E = i(31),
@@ -590287,7 +590320,7 @@
     var p = i(51),
       h = i(13),
       g = i(9),
-      C = i(38),
+      C = i(39),
       _ = i(4493),
       m = i(150);
     (a.classImplementsInterfaces(d, "IEventOverviewable"),
@@ -603287,7 +603320,7 @@
     var f = i(84),
       E = i(36),
       O = i(11),
-      y = i(38),
+      y = i(39),
       b = i(230);
     (s.classImplementsInterfaces(m, "ICollectableRendererList"),
       m.__initialize_static_members());
@@ -612687,7 +612720,7 @@
       r = i(3),
       l = i(296),
       c = i(83),
-      u = i(39),
+      u = i(38),
       d = i(4),
       p = i(60),
       h = i(112),
@@ -615412,7 +615445,7 @@
       c = i(6),
       u = i(28),
       d = i(509),
-      p = i(39),
+      p = i(38),
       h = i(46),
       g = i(4),
       C = i(27),
@@ -617742,7 +617775,7 @@
       A = i(137),
       L = i(891),
       P = i(1002),
-      M = i(38),
+      M = i(39),
       R = i(1005),
       V = i(1004),
       x = i(1006);
@@ -617811,7 +617844,7 @@
             }),
           CastleFactionUnitLimitDialog
         );
-      })(i(38).CastleStandardOkDialog);
+      })(i(39).CastleStandardOkDialog);
     t.CastleFactionUnitLimitDialog = r;
     var l = i(84),
       c = i(36);
@@ -620485,7 +620518,7 @@
     t.CastleVCKCommand = r;
     var l = i(9),
       c = i(18),
-      u = i(38),
+      u = i(39),
       d = i(1137),
       p = i(4);
   },
@@ -620759,7 +620792,7 @@
     t.FCSCommand = C;
     var _ = i(31),
       m = i(9),
-      f = i(38),
+      f = i(39),
       E = i(169);
     r.classImplementsInterfaces(C, "IExecCommand");
   },
@@ -622475,7 +622508,7 @@
     t.SMGCommand = c;
     var u = i(9),
       d = i(1023),
-      p = i(38);
+      p = i(39);
     a.classImplementsInterfaces(c, "IExecCommand");
   },
   function (e, t, i) {
@@ -622598,7 +622631,7 @@
       })(u.CastleCommand);
     t.SSDCommand = d;
     var p = i(9),
-      h = i(38);
+      h = i(39);
     s.classImplementsInterfaces(d, "IExecCommand");
   },
   function (e, t, i) {
@@ -622952,7 +622985,7 @@
       })(_.CastleCommand);
     t.VCKLegacyCommand = m;
     var f = i(9),
-      E = i(38),
+      E = i(39),
       O = i(31);
     u.classImplementsInterfaces(m, "IExecCommand");
   },
@@ -623752,7 +623785,7 @@
       })(u.CastleCommand);
     t.ACDCommand = d;
     var p = i(9),
-      h = i(38);
+      h = i(39);
     a.classImplementsInterfaces(d, "IExecCommand");
   },
   function (e, t, i) {
@@ -624113,7 +624146,7 @@
       })(p.CastleCommand);
     t.ADPCommand = h;
     var g = i(9),
-      C = i(38);
+      C = i(39);
     a.classImplementsInterfaces(h, "IExecCommand");
   },
   function (e, t, i) {
@@ -624283,7 +624316,7 @@
     t.AFOCommand = C;
     var _ = i(9),
       m = i(130),
-      f = i(38);
+      f = i(39);
     a.classImplementsInterfaces(C, "IExecCommand");
   },
   function (e, t, i) {
@@ -624406,7 +624439,7 @@
       })(c.CastleCommand);
     t.AIPCommand = u;
     var d = i(9),
-      p = i(38);
+      p = i(39);
     a.classImplementsInterfaces(u, "IExecCommand");
   },
   function (e, t, i) {
@@ -624814,7 +624847,7 @@
       })(d.CastleCommand);
     t.ARMCommand = p;
     var h = i(9),
-      g = i(38);
+      g = i(39);
     a.classImplementsInterfaces(p, "IExecCommand");
   },
   function (e, t, i) {
@@ -625907,7 +625940,7 @@
       _ = i(18),
       m = i(152),
       f = i(130),
-      E = i(38);
+      E = i(39);
     a.classImplementsInterfaces(g, "IExecCommand");
   },
   function (e, t, i) {
@@ -626004,7 +626037,7 @@
       })(u.CastleCommand);
     t.SAACommand = d;
     var p = i(9),
-      h = i(38);
+      h = i(39);
     a.classImplementsInterfaces(d, "IExecCommand");
   },
   function (e, t, i) {
@@ -626640,7 +626673,7 @@
       })(p.CastleCommand);
     t.ACICommand = h;
     var g = i(9),
-      C = i(38);
+      C = i(39);
     a.classImplementsInterfaces(h, "IExecCommand");
   },
   function (e, t, i) {
@@ -627052,7 +627085,7 @@
       u = i(9),
       d = i(273),
       p = i(217),
-      h = i(38),
+      h = i(39),
       g = i(10),
       C = (function (e) {
         function GTICommand() {
@@ -634094,7 +634127,7 @@
       })(p.CastleCommand);
     t.HGHCommand = h;
     var g = i(9),
-      C = i(38);
+      C = i(39);
     a.classImplementsInterfaces(h, "IExecCommand");
   },
   function (e, t, i) {
@@ -634424,7 +634457,7 @@
       })(u.CastleCommand);
     t.HDUCommand = d;
     var p = i(9),
-      h = i(38);
+      h = i(39);
     a.classImplementsInterfaces(d, "IExecCommand");
   },
   function (e, t, i) {
@@ -634563,7 +634596,7 @@
       })(u.CastleCommand);
     t.HRACommand = d;
     var p = i(9),
-      h = i(38);
+      h = i(39);
     a.classImplementsInterfaces(d, "IExecCommand");
   },
   function (e, t, i) {
@@ -634643,7 +634676,7 @@
       })(d.CastleCommand);
     t.HRUCommand = p;
     var h = i(9),
-      g = i(38);
+      g = i(39);
     a.classImplementsInterfaces(p, "IExecCommand");
   },
   function (e, t, i) {
@@ -636317,7 +636350,7 @@
       h = i(4),
       g = i(49),
       C = i(9),
-      _ = i(38),
+      _ = i(39),
       m = i(908),
       f = i(907),
       E = i(1862),
@@ -636812,7 +636845,7 @@
       })(u.CastleCommand);
     t.MOSCommand = d;
     var p = i(9),
-      h = i(38);
+      h = i(39);
     a.classImplementsInterfaces(d, "IExecCommand");
   },
   function (e, t, i) {
@@ -637283,7 +637316,7 @@
       })(d.CastleCommand);
     t.BSDCommand = p;
     var h = i(9),
-      g = i(38);
+      g = i(39);
     a.classImplementsInterfaces(p, "IExecCommand");
   },
   function (e, t, i) {
@@ -638102,7 +638135,7 @@
       })(u.CastleCommand);
     t.SMSCommand = d;
     var p = i(9),
-      h = i(38);
+      h = i(39);
     a.classImplementsInterfaces(d, "IExecCommand");
   },
   function (e, t, i) {
@@ -638330,7 +638363,7 @@
       E = i(9),
       O = i(5054),
       y = i(137),
-      b = i(38),
+      b = i(39),
       D = i(67);
     a.classImplementsInterfaces(m, "IExecCommand");
   },
@@ -639309,7 +639342,7 @@
       l = i(7),
       c = i(4),
       u = i(9),
-      d = i(38),
+      d = i(39),
       p = i(1178),
       h = i(1179),
       g = i(10),
@@ -639494,7 +639527,7 @@
       l = i(7),
       c = i(4),
       u = i(9),
-      d = i(38),
+      d = i(39),
       p = i(1178),
       h = i(1179),
       g = i(10),
@@ -639765,7 +639798,7 @@
       })(d.CastleCommand);
     t.CRACommand = p;
     var h = i(9),
-      g = i(38),
+      g = i(39),
       C = i(1178);
     a.classImplementsInterfaces(p, "IExecCommand");
   },
@@ -642058,7 +642091,7 @@
       })(d.CastleCommand);
     t.DRLCommand = p;
     var h = i(9),
-      g = i(38),
+      g = i(39),
       C = i(1968);
     a.classImplementsInterfaces(p, "IExecCommand");
   },
@@ -642676,7 +642709,7 @@
     t.RSTCommand = p;
     var h = i(9),
       g = i(18),
-      C = i(38);
+      C = i(39);
     s.classImplementsInterfaces(p, "IExecCommand");
   },
   function (e, t, i) {
@@ -643780,7 +643813,7 @@
       o = i(1),
       a = i(5),
       s = i(7),
-      r = i(39),
+      r = i(38),
       l = i(10),
       c = (function (e) {
         function ABGPHCommand() {
@@ -644257,7 +644290,7 @@
       a = i(5),
       s = i(7),
       r = i(35),
-      l = i(39),
+      l = i(38),
       c = i(10),
       u = (function (e) {
         function ABGICommand() {
@@ -644684,7 +644717,7 @@
       s = i(5),
       r = i(6),
       l = i(7),
-      c = i(39),
+      c = i(38),
       u = i(142),
       d = i(10),
       p = (function (e) {
@@ -644795,7 +644828,7 @@
       r = i(894),
       l = i(10),
       c = i(9),
-      u = i(38),
+      u = i(39),
       d = i(2),
       p = i(3),
       h = (function (e) {
@@ -646507,7 +646540,7 @@
       })(d.CastleCommand);
     t.FSCCommand = p;
     var h = i(9),
-      g = i(38);
+      g = i(39);
     a.classImplementsInterfaces(p, "IExecCommand");
   },
   function (e, t, i) {
@@ -646766,7 +646799,7 @@
       })(p.CastleCommand);
     t.GPGCommand = h;
     var g = i(9),
-      C = i(38),
+      C = i(39),
       _ = i(5215);
     a.classImplementsInterfaces(h, "IExecCommand");
   },
@@ -648213,7 +648246,7 @@
       })(g.CastleCommand);
     t.SBPCommand = C;
     var _ = i(9),
-      m = i(38);
+      m = i(39);
     a.classImplementsInterfaces(C, "IExecCommand");
   },
   function (e, t, i) {
@@ -649429,7 +649462,7 @@
       })(d.CastleCommand);
     t.SSPCommand = p;
     var h = i(9),
-      g = i(38),
+      g = i(39),
       C = i(103);
     a.classImplementsInterfaces(p, "IExecCommand");
   },
@@ -650500,7 +650533,7 @@
       })(p.CastleCommand);
     t.TGTCommand = h;
     var g = i(9),
-      C = i(38);
+      C = i(39);
     s.classImplementsInterfaces(h, "IExecCommand");
   },
   function (e, t, i) {
@@ -650708,7 +650741,7 @@
     t.STICommand = h;
     var g = i(1125),
       C = i(9),
-      _ = i(38),
+      _ = i(39),
       m = i(5291);
     a.classImplementsInterfaces(h, "IExecCommand");
   },
@@ -652433,7 +652466,7 @@
       W = i(1144),
       Y = i(9),
       K = i(976),
-      z = i(39),
+      z = i(38),
       q = i(282);
     p.classImplementsInterfaces(G, "IExecCommand");
   },
@@ -660534,7 +660567,7 @@
       })(u.CastleCommand);
     t.WSPCommand = d;
     var p = i(9),
-      h = i(38);
+      h = i(39);
     a.classImplementsInterfaces(d, "IExecCommand");
   },
   function (e, t, i) {
@@ -660651,7 +660684,7 @@
       })(u.CastleCommand);
     t.BADCommand = d;
     var p = i(9),
-      h = i(38);
+      h = i(39);
     a.classImplementsInterfaces(d, "IExecCommand");
   },
   function (e, t, i) {
@@ -660943,7 +660976,7 @@
       u = i(4),
       d = i(229),
       p = i(9),
-      h = i(38),
+      h = i(39),
       g = i(5397),
       C = r.getLogger("Connection.CastleLoginCommand"),
       _ = (function (e) {
@@ -661242,7 +661275,7 @@
     t.CastleLostPasswordCommand = c;
     var u = i(9),
       d = i(18),
-      p = i(38);
+      p = i(39);
     r.classImplementsInterfaces(c, "ISimpleCommand");
   },
   function (e, t, i) {
@@ -668116,7 +668149,7 @@
       a = i(5),
       s = i(6),
       r = i(140),
-      l = i(39),
+      l = i(38),
       c = i(29),
       u = i(15),
       d = i(58),
@@ -668861,7 +668894,7 @@
       l = i(5476),
       c = i(1984),
       u = i(5477),
-      d = i(39),
+      d = i(38),
       p = i(15),
       h = i(353),
       g = i(184),
@@ -675856,7 +675889,7 @@
       o = i(3),
       a = i(96),
       s = i(99),
-      r = i(38),
+      r = i(39),
       l = i(2),
       c = (function (e) {
         function MessageAttackTheasholdVO() {
@@ -682961,7 +682994,7 @@
     t.CastleRebuyBoosterDialog = f;
     var E = i(31),
       O = i(9),
-      y = i(38);
+      y = i(39);
     (r.classImplementsInterfaces(f, "ICollectableRendererList"),
       f.__initialize_static_members());
   },
@@ -683044,7 +683077,7 @@
       c = i(5),
       u = i(3),
       d = i(6),
-      p = i(39),
+      p = i(38),
       h = i(46),
       g = i(142),
       C = i(31),
@@ -683820,7 +683853,7 @@
         );
       })(U.AMessageVO);
     t.MessageSpecialEventVO = G;
-    var H = i(38),
+    var H = i(39),
       j = i(5604),
       W = i(5605),
       Y = i(5606),
@@ -685682,7 +685715,7 @@
     var _ = i(31),
       m = i(18),
       f = i(11),
-      E = i(38);
+      E = i(39);
     (r.classImplementsInterfaces(C, "ICollectableRendererList"),
       C.__initialize_static_members());
   },
@@ -686609,7 +686642,7 @@
       a = i(3),
       s = i(3),
       r = i(21),
-      l = i(39),
+      l = i(38),
       c = i(12),
       u = i(4),
       d = i(27),
@@ -690925,7 +690958,7 @@
       u = i(1146),
       d = i(1863),
       p = i(4),
-      h = i(38),
+      h = i(39),
       g = i(2),
       C = i(2),
       _ = (function (e) {
@@ -697948,7 +697981,7 @@
         );
       })(u.ASpecialEventVO);
     t.FakeEventVO = d;
-    var p = i(38);
+    var p = i(39);
     a.classImplementsInterfaces(d, "IEventOverviewable");
   },
   function (e, t, i) {
@@ -707715,7 +707748,7 @@
     var _ = i(6),
       m = i(31),
       f = i(9),
-      E = i(38),
+      E = i(39),
       O = i(823),
       y = i(5775),
       b = i(1990),
@@ -716625,7 +716658,7 @@
       l = i(5863),
       c = i(5864),
       u = i(35),
-      d = i(39),
+      d = i(38),
       p = i(29),
       h = i(15),
       g = i(58),
@@ -718554,7 +718587,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 });
     var n = i(0),
       o = i(1),
-      a = i(39),
+      a = i(38),
       s = i(58),
       r = i(5881),
       l = (function (e) {
@@ -721263,4 +721296,4 @@
     t.ModernStartscreenComponent = p;
   },
 ]);
-//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/Game.bundle.b13ef28e9bb95fa622bd.js.map
+//# sourceMappingURL=https://s3-eu-west-1.amazonaws.com/com.ggs-unicorns.sourcemaps/Game.bundle.7fe30f1649d36a928f2b.js.map
